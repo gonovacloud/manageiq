@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Redhat::InfraManager::Template < ManageIQ::Providers::InfraManager::Template
-  include_concern 'ManageIQ::Providers::Redhat::InfraManager::VmOrTemplateShared'
+class NOVAHawk::Providers::Redhat::InfraManager::Template < NOVAHawk::Providers::InfraManager::Template
+  include_concern 'NOVAHawk::Providers::Redhat::InfraManager::VmOrTemplateShared'
 
   supports :provisioning do
     if ext_management_system

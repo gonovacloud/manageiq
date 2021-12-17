@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Vm::Operations::Guest
+module NOVAHawk::Providers::Redhat::InfraManager::Vm::Operations::Guest
   extend ActiveSupport::Concern
 
   included do

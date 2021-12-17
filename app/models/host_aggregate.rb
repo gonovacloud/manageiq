@@ -8,7 +8,7 @@ class HostAggregate < ApplicationRecord
 
   acts_as_miq_taggable
 
-  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "ManageIQ::Providers::CloudManager"
+  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "NOVAHawk::Providers::CloudManager"
 
   has_many   :host_aggregate_hosts, :dependent => :destroy
   has_many   :hosts,             :through => :host_aggregate_hosts

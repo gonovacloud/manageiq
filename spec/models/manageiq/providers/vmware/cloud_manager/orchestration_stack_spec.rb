@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack do
+describe NOVAHawk::Providers::Vmware::CloudManager::OrchestrationStack do
   let(:ems) { FactoryGirl.create(:ems_vmware_cloud) }
   let(:template) { FactoryGirl.create(:orchestration_template_vmware_cloud_with_content) }
   let(:orchestration_stack) do
@@ -33,7 +33,7 @@ describe ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack do
       let(:stack_option) { {:vdc_id => 'vdc_id'} }
 
       it 'creates a stack' do
-        stack = ManageIQ::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, stack_option)
+        stack = NOVAHawk::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, stack_option)
         expect(stack.class).to eq(described_class)
         expect(stack.name).to eq('mystack')
         expect(stack.ems_ref).to eq(the_raw_stack.id)
@@ -43,7 +43,7 @@ describe ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack do
         expect(orchestration_service).to receive(:instantiate_template).and_raise('bad request')
 
         expect do
-          ManageIQ::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, {})
+          NOVAHawk::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, {})
         end.to raise_error(MiqException::MiqOrchestrationProvisionError)
       end
     end

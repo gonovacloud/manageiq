@@ -6,7 +6,7 @@ module CinderManagerMixin
     # Should use has_many :storage_managers,
     has_one  :cinder_manager,
              :foreign_key => :parent_ems_id,
-             :class_name  => "ManageIQ::Providers::StorageManager::CinderManager",
+             :class_name  => "NOVAHawk::Providers::StorageManager::CinderManager",
              :autosave    => true,
              :dependent   => :destroy
 

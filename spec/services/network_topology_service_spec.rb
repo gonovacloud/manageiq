@@ -58,10 +58,10 @@ describe NetworkTopologyService do
       ems = FactoryGirl.create(:ems_openstack).network_manager
 
       allow(network_topology_service).to receive(:retrieve_providers).with(
-        anything, ManageIQ::Providers::NetworkManager
+        anything, NOVAHawk::Providers::NetworkManager
       ).and_return([ems])
       network_topology_service.instance_variable_set(:@providers,
-                                                     ManageIQ::Providers::NetworkManager.where(:id => ems.id))
+                                                     NOVAHawk::Providers::NetworkManager.where(:id => ems.id))
 
       expect(subject[:items]).to eq(
         "NetworkManager" + ems.compressed_id.to_s => {:name         => ems.name,

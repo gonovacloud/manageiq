@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Inflector
+module NOVAHawk::Providers::Inflector
   class ObjectNotNamespacedError < StandardError; end
 
   def self.provider_name(class_or_instance)
@@ -17,7 +17,7 @@ module ManageIQ::Providers::Inflector
       raise ObjectNotNamespacedError, "Cannot get provider module from non namespaced object #{original_object}"
     end
 
-    klass.parent == ManageIQ::Providers ? klass : provider_module(klass.parent, klass)
+    klass.parent == NOVAHawk::Providers ? klass : provider_module(klass.parent, klass)
   end
   private_class_method :provider_module
 end

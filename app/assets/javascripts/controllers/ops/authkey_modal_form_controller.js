@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('authkeyModalFormController', ['$modalInstance', 'ssh_params', function ($modalInstance, ssh_params) {
+NOVAHawk.angular.app.controller('authkeyModalFormController', ['$modalInstance', 'ssh_params', function ($modalInstance, ssh_params) {
   var $ctrl = this;
   $ctrl.ssh_params = ssh_params;
 

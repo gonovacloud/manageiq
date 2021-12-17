@@ -1,6 +1,6 @@
 require 'recursive-open-struct'
 
-describe ManageIQ::Providers::Kubernetes::ContainerManager::RefreshParser do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager::RefreshParser do
   let(:parser)  { described_class.new }
 
   describe "parse_namespace" do
@@ -842,7 +842,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::RefreshParser do
         },
         :namespace                  => nil,
         :resource_version           => '369104',
-        :type                       => 'ManageIQ::Providers::Kubernetes::ContainerManager::ContainerNode'
+        :type                       => 'NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerNode'
       })
     end
 
@@ -895,7 +895,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::RefreshParser do
         },
         :namespace                  => nil,
         :resource_version           => '3691041',
-        :type                       => 'ManageIQ::Providers::Kubernetes::ContainerManager::ContainerNode'
+        :type                       => 'NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerNode'
       })
     end
 
@@ -940,7 +940,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::RefreshParser do
           },
           :namespace            => nil,
           :resource_version     => '369104',
-          :type                 => 'ManageIQ::Providers::Kubernetes::ContainerManager::ContainerNode'
+          :type                 => 'NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerNode'
         })
     end
   end
@@ -996,7 +996,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::RefreshParser do
           :iscsi_lun               => nil,
           :iscsi_target_portal     => nil,
           :nfs_server              => nil,
-          :parent_type             => 'ManageIQ::Providers::ContainerManager',
+          :parent_type             => 'NOVAHawk::Providers::ContainerManager',
           :persistent_volume_claim => nil,
           :rbd_ceph_monitors       => '',
           :rbd_image               => nil,

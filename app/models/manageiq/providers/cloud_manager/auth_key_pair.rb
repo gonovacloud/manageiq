@@ -1,4 +1,4 @@
-class ManageIQ::Providers::CloudManager::AuthKeyPair < ::AuthPrivateKey
+class NOVAHawk::Providers::CloudManager::AuthKeyPair < ::AuthPrivateKey
   include AvailabilityMixin
 
   acts_as_miq_taggable

@@ -5,7 +5,7 @@ describe Authenticator::Ldap do
       :authentication => {
         :mode        => "ldap",
         :ldap_role   => true,
-        :user_suffix => "manageiq.org",
+        :user_suffix => "novahawk.org",
         :user_type   => "userprincipalname",
       }
     }

@@ -1,8 +1,8 @@
-class ManageIQ::Providers::Nuage::NetworkManager::RefreshWorker < ManageIQ::Providers::BaseManager::RefreshWorker
+class NOVAHawk::Providers::Nuage::NetworkManager::RefreshWorker < NOVAHawk::Providers::BaseManager::RefreshWorker
   require_nested :Runner
 
   def self.ems_class
-    ManageIQ::Providers::Nuage::NetworkManager
+    NOVAHawk::Providers::Nuage::NetworkManager
   end
 
   def self.settings_name

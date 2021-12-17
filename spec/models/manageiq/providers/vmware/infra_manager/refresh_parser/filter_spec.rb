@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::RefreshParser::Filter do
+describe NOVAHawk::Providers::Vmware::InfraManager::RefreshParser::Filter do
   context "filter_vc_data" do
     let(:ems) { FactoryGirl.create(:ems_vmware) }
 

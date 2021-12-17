@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe ManageIQ::Providers::Openstack::CloudManager::CloudVolumeBackup do
+describe NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeBackup do
   let(:ems) { FactoryGirl.create(:ems_openstack) }
   let(:tenant) { FactoryGirl.create(:cloud_tenant_openstack, :ext_management_system => ems) }
 

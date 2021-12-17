@@ -6,32 +6,32 @@ describe ProviderForemanController do
     @zone = EvmSpecHelper.local_miq_server.zone
     Tag.find_or_create_by(:name => tags.first)
 
-    @provider = ManageIQ::Providers::Foreman::Provider.create(:name => "testForeman", :url => "10.8.96.102", :zone => @zone)
-    @config_mgr = ManageIQ::Providers::Foreman::ConfigurationManager.find_by_provider_id(@provider.id)
-    @config_profile = ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile.create(:name        => "testprofile",
+    @provider = NOVAHawk::Providers::Foreman::Provider.create(:name => "testForeman", :url => "10.8.96.102", :zone => @zone)
+    @config_mgr = NOVAHawk::Providers::Foreman::ConfigurationManager.find_by_provider_id(@provider.id)
+    @config_profile = NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile.create(:name        => "testprofile",
                                                                                                       :description => "testprofile",
                                                                                                       :manager_id  => @config_mgr.id)
-    @config_profile2 = ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile.create(:name        => "testprofile2",
+    @config_profile2 = NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile.create(:name        => "testprofile2",
                                                                                                        :description => "testprofile2",
                                                                                                        :manager_id  => @config_mgr.id)
-    @configured_system = ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "test_configured_system",
+    @configured_system = NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "test_configured_system",
                                                                                                      :configuration_profile_id => @config_profile.id,
                                                                                                      :manager_id               => @config_mgr.id)
-    @configured_system2a = ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "test2a_configured_system",
+    @configured_system2a = NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "test2a_configured_system",
                                                                                                        :configuration_profile_id => @config_profile2.id,
                                                                                                        :manager_id               => @config_mgr.id)
-    @configured_system2b = ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "test2b_configured_system",
+    @configured_system2b = NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "test2b_configured_system",
                                                                                                        :configuration_profile_id => @config_profile2.id,
                                                                                                        :manager_id               => @config_mgr.id)
     @configured_system_unprovisioned =
-      ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "configured_system_unprovisioned",
+      NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "configured_system_unprovisioned",
                                                                                   :configuration_profile_id => nil,
                                                                                   :manager_id               => @config_mgr.id)
 
-    @provider2 = ManageIQ::Providers::Foreman::Provider.create(:name => "test2Foreman", :url => "10.8.96.103", :zone => @zone)
-    @config_mgr2 = ManageIQ::Providers::Foreman::ConfigurationManager.find_by_provider_id(@provider2.id)
+    @provider2 = NOVAHawk::Providers::Foreman::Provider.create(:name => "test2Foreman", :url => "10.8.96.103", :zone => @zone)
+    @config_mgr2 = NOVAHawk::Providers::Foreman::ConfigurationManager.find_by_provider_id(@provider2.id)
     @configured_system_unprovisioned2 =
-      ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "configured_system_unprovisioned2",
+      NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem.create(:hostname                 => "configured_system_unprovisioned2",
                                                                                   :configuration_profile_id => nil,
                                                                                   :manager_id               => @config_mgr2.id)
     controller.instance_variable_set(:@sb, :active_tree => :configuration_manager_providers_tree)
@@ -40,22 +40,22 @@ describe ProviderForemanController do
       cs.tag_with(tags, :namespace => '')
     end
 
-    @provider_ans = ManageIQ::Providers::AnsibleTower::Provider.create(:name => "ansibletest", :url => "10.8.96.108", :zone => @zone)
-    @config_ans = ManageIQ::Providers::AnsibleTower::ConfigurationManager.find_by_provider_id(@provider_ans.id)
+    @provider_ans = NOVAHawk::Providers::AnsibleTower::Provider.create(:name => "ansibletest", :url => "10.8.96.108", :zone => @zone)
+    @config_ans = NOVAHawk::Providers::AnsibleTower::ConfigurationManager.find_by_provider_id(@provider_ans.id)
 
-    @provider_ans2 = ManageIQ::Providers::AnsibleTower::Provider.create(:name => "ansibletest2", :url => "10.8.96.109", :zone => @zone)
-    @config_ans2 = ManageIQ::Providers::AnsibleTower::ConfigurationManager.find_by_provider_id(@provider_ans2.id)
+    @provider_ans2 = NOVAHawk::Providers::AnsibleTower::Provider.create(:name => "ansibletest2", :url => "10.8.96.109", :zone => @zone)
+    @config_ans2 = NOVAHawk::Providers::AnsibleTower::ConfigurationManager.find_by_provider_id(@provider_ans2.id)
 
-    @inventory_group = ManageIQ::Providers::ConfigurationManager::InventoryRootGroup.create(:name => "testinvgroup", :ems_id => @config_ans.id)
-    @inventory_group2 = ManageIQ::Providers::ConfigurationManager::InventoryRootGroup.create(:name => "testinvgroup2", :ems_id => @config_ans2.id)
-    @ans_configured_system = ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem.create(:hostname                => "ans_test_configured_system",
+    @inventory_group = NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup.create(:name => "testinvgroup", :ems_id => @config_ans.id)
+    @inventory_group2 = NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup.create(:name => "testinvgroup2", :ems_id => @config_ans2.id)
+    @ans_configured_system = NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem.create(:hostname                => "ans_test_configured_system",
                                                                                                               :inventory_root_group_id => @inventory_group.id,
                                                                                                               :manager_id              => @config_ans.id)
 
-    @ans_configured_system2a = ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem.create(:hostname                => "test2a_ans_configured_system",
+    @ans_configured_system2a = NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem.create(:hostname                => "test2a_ans_configured_system",
                                                                                                                 :inventory_root_group_id => @inventory_group.id,
                                                                                                                 :manager_id              => @config_ans.id)
-    @ans_configured_system2b = ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem.create(:hostname                => "test2b_ans_configured_system",
+    @ans_configured_system2b = NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem.create(:hostname                => "test2b_ans_configured_system",
                                                                                                                 :inventory_root_group_id => @inventory_group2.id,
                                                                                                                 :manager_id              => @config_ans2.id)
     @ans_job_template1 = FactoryGirl.create(:ansible_configuration_script, :name => "ConfigScript1", :manager_id => @config_ans.id)
@@ -168,8 +168,8 @@ describe ProviderForemanController do
   end
 
   it "#save_provider_foreman will not save with a duplicate name" do
-    ManageIQ::Providers::Foreman::Provider.create(:name => "test2Foreman", :url => "server1", :zone => @zone)
-    provider2 = ManageIQ::Providers::Foreman::Provider.new(:name => "test2Foreman", :url => "server2", :zone => @zone)
+    NOVAHawk::Providers::Foreman::Provider.create(:name => "test2Foreman", :url => "server1", :zone => @zone)
+    provider2 = NOVAHawk::Providers::Foreman::Provider.new(:name => "test2Foreman", :url => "server2", :zone => @zone)
     controller.instance_variable_set(:@provider_cfgmgmt, provider2)
     allow(controller).to receive(:render_flash)
     controller.save_provider_foreman
@@ -320,8 +320,8 @@ describe ProviderForemanController do
   end
 
   it "builds ansible tower child tree" do
-    config_ans = ManageIQ::Providers::AnsibleTower::ConfigurationManager.find_by(:provider_id => @provider_ans.id)
-    config_ans2 = ManageIQ::Providers::AnsibleTower::ConfigurationManager.find_by(:provider_id => @provider_ans2.id)
+    config_ans = NOVAHawk::Providers::AnsibleTower::ConfigurationManager.find_by(:provider_id => @provider_ans.id)
+    config_ans2 = NOVAHawk::Providers::AnsibleTower::ConfigurationManager.find_by(:provider_id => @provider_ans2.id)
     user = login_as user_with_feature(%w(configuration_manager_providers providers_accord configured_systems_filter_accord configuration_scripts_accord))
     allow(User).to receive(:current_user).and_return(user)
     controller.send(:build_configuration_manager_tree, :providers, :configuration_manager_providers_tree)
@@ -523,7 +523,7 @@ describe ProviderForemanController do
       allow(controller).to receive(:x_active_accord).and_return(:configuration_manager_providers)
       allow(controller).to receive(:build_listnav_search_list)
       controller.instance_variable_set(:@_params, :id => "configuration_manager_providers_accord")
-      expect(controller).to receive(:get_view).with("ManageIQ::Providers::ConfigurationManager", :dbname => :cm_providers).and_call_original
+      expect(controller).to receive(:get_view).with("NOVAHawk::Providers::ConfigurationManager", :dbname => :cm_providers).and_call_original
       controller.send(:accordion_select)
     end
 
@@ -543,7 +543,7 @@ describe ProviderForemanController do
       allow(controller).to receive(:x_active_tree).and_return(:configuration_scripts_tree)
       allow(controller).to receive(:x_active_accord).and_return(:configuration_scripts)
       controller.instance_variable_set(:@_params, :id => "configuration_scripts")
-      expect(controller).to receive(:get_view).with("ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript", :dbname => :configuration_scripts).and_call_original
+      expect(controller).to receive(:get_view).with("NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript", :dbname => :configuration_scripts).and_call_original
       controller.send(:accordion_select)
     end
   end
@@ -797,7 +797,7 @@ describe ProviderForemanController do
   end
 
   def inventory_group_key(inv_group)
-    ig =  ManageIQ::Providers::ConfigurationManager::InventoryGroup.where(:id => inv_group.id).first
+    ig =  NOVAHawk::Providers::ConfigurationManager::InventoryGroup.where(:id => inv_group.id).first
     "f-" + ApplicationRecord.compress_id(ig.id)
   end
 

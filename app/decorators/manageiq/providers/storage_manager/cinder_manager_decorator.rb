@@ -1,4 +1,4 @@
-class ManageIQ::Providers::StorageManager::CinderManagerDecorator < Draper::Decorator
+class NOVAHawk::Providers::StorageManager::CinderManagerDecorator < Draper::Decorator
   delegate_all
 
   def fonticon

@@ -189,7 +189,7 @@ module Spec
 
       def chart_with_namespace_prefix
         report = MiqReport.new(
-          :db          => "ManageIQ::Providers::InfraManager::Vm",
+          :db          => "NOVAHawk::Providers::InfraManager::Vm",
           :cols        => %w(os_image_name cpu_total_cores num_cpu),
           :include     => {"host" => {"columns" => %w(name)}},
           :col_order   => %w(os_image_name host.name cpu_total_cores num_cpu),
@@ -197,7 +197,7 @@ module Spec
           :order       => "Ascending",
           :sortby      => %w(host.name os_image_name),
           :group       => "y",
-          :graph       => {:type => "Bar", :mode => "values", :column => "ManageIQ::Providers::InfraManager::Vm-num_cpu:total", :count => 10, :other => true},
+          :graph       => {:type => "Bar", :mode => "values", :column => "NOVAHawk::Providers::InfraManager::Vm-num_cpu:total", :count => 10, :other => true},
           :dims        => 2,
           :col_options => {"name" => {:break_label => "Host / Node : Name: "}, "num_cpu" => {:grouping => [:total]}},
           :rpt_options => {:summary => {:hide_detail_rows => false}},

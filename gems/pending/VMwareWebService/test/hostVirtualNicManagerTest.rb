@@ -17,7 +17,7 @@ $log.add 'err_console'
 
 # $miq_wiredump = true
 
-# TARGET_HOST = "vi4esxm1.manageiq.com"
+# TARGET_HOST = "vi4esxm1.novahawk.com"
 TARGET_HOST = raise "please define"
 VNIC_DEV  = "vmk1"
 hMor = nil

@@ -1,10 +1,10 @@
-module ManageIQ
+module NOVAHawk
   module Providers
-    class Openstack::InfraManager::Refresher < ManageIQ::Providers::BaseManager::Refresher
+    class Openstack::InfraManager::Refresher < NOVAHawk::Providers::BaseManager::Refresher
       include ::EmsRefresh::Refreshers::EmsRefresherMixin
 
       def parse_legacy_inventory(ems)
-        ManageIQ::Providers::Openstack::InfraManager::RefreshParser.ems_inv_to_hashes(ems, refresher_options)
+        NOVAHawk::Providers::Openstack::InfraManager::RefreshParser.ems_inv_to_hashes(ems, refresher_options)
       end
 
       # TODO(lsmola) NetworkManager, remove this once we have a full representation of the NetworkManager.

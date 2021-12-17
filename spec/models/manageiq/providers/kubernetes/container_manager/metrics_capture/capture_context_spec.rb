@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::CaptureContext do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture::CaptureContext do
   @node = nil
 
   before(:each) do
@@ -39,7 +39,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::Capt
 
   it "will read hawkular status" do
     VCR.use_cassette("#{described_class.name.underscore}_status") do # , :record => :new_episodes) do
-      context = ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::CaptureContext.new(
+      context = NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture::CaptureContext.new(
         @node, @start_time, @end_time, @interval
       )
 
@@ -56,7 +56,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::Capt
   it "will read hawkular metrics" do
     @targets.each do |target_name, target|
       VCR.use_cassette("#{described_class.name.underscore}_#{target_name}_metrics") do # , :record => :new_episodes) do
-        context = ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::CaptureContext.new(
+        context = NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture::CaptureContext.new(
           target, @start_time, @end_time, @interval
         )
 

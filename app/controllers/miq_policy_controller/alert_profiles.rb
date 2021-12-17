@@ -367,7 +367,7 @@ module MiqPolicyController::AlertProfiles
       end
       assigned = @alert_profile.get_assigned_tos
       MiqQueue.put(
-        :class_name  => "ManageIQ::Providers::Hawkular::MiddlewareManager",
+        :class_name  => "NOVAHawk::Providers::Hawkular::MiddlewareManager",
         :method_name => "update_alert_profile",
         :args        => {
           :operation       => operation,

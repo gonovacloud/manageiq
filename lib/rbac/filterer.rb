@@ -593,7 +593,7 @@ module Rbac
         vcmeta = vcmeta_list.last
 
         if ([ExtManagementSystem, Host].any? { |x| vcmeta.kind_of?(x) } && klass <= VmOrTemplate) ||
-           (vcmeta.kind_of?(ManageIQ::Providers::NetworkManager)        && NETWORK_MODELS_FOR_BELONGSTO_FILTER.any? { |association_class| klass <= association_class.safe_constantize })
+           (vcmeta.kind_of?(NOVAHawk::Providers::NetworkManager)        && NETWORK_MODELS_FOR_BELONGSTO_FILTER.any? { |association_class| klass <= association_class.safe_constantize })
           vcmeta.send(association_name).to_a
         else
           vcmeta_list.grep(klass) + vcmeta.descendants.grep(klass)

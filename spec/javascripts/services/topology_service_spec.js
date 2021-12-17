@@ -13,7 +13,7 @@ describe('topologyService', function() {
         }
     };
 
-    beforeEach(module('ManageIQ'));
+    beforeEach(module('NOVAHawk'));
 
     beforeEach(inject(function(topologyService) {
       testService = topologyService;

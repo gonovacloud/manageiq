@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Nuage::NetworkManager::VsdClient::Rest
+class NOVAHawk::Providers::Nuage::NetworkManager::VsdClient::Rest
   include Vmdb::Logging
   def initialize(server, user, password)
     @server = server

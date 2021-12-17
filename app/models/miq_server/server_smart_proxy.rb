@@ -13,7 +13,7 @@ module MiqServer::ServerSmartProxy
 
     def use_broker_for_embedded_proxy?(type = nil)
       cores_settings = MiqServer.my_server.get_config("vmdb").config[:coresident_miqproxy].dup
-      result = ManageIQ::Providers::Vmware::InfraManager.use_vim_broker? && cores_settings[:use_vim_broker]
+      result = NOVAHawk::Providers::Vmware::InfraManager.use_vim_broker? && cores_settings[:use_vim_broker]
 
       # Check for a specific type (host/ems) if passed
       unless type.blank?
@@ -82,11 +82,11 @@ module MiqServer::ServerSmartProxy
       if ost.method_name == "scan_metadata"
         klass = ost.target_type.constantize
         target = klass.find(ost.target_id)
-        if target.kind_of?(ManageIQ::Providers::Openstack::CloudManager::Vm) ||
-           target.kind_of?(ManageIQ::Providers::Openstack::CloudManager::Template)
+        if target.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::Vm) ||
+           target.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::Template)
           timeout_adj = 4
-        elsif target.kind_of?(ManageIQ::Providers::Microsoft::InfraManager::Vm) ||
-              target.kind_of?(ManageIQ::Providers::Microsoft::InfraManager::Template)
+        elsif target.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager::Vm) ||
+              target.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager::Template)
           timeout_adj = 8
         end
       end

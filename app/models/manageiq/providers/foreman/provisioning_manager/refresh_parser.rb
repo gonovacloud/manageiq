@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Foreman
     class ProvisioningManager::RefreshParser
       include Vmdb::Logging

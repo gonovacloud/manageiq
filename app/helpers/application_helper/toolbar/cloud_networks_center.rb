@@ -17,7 +17,7 @@ class ApplicationHelper::Toolbar::CloudNetworksCenter < ApplicationHelper::Toolb
           ),
           separator,
           # TODO: Restore when cross controllers show_list issue fully in place
-          # https://github.com/ManageIQ/manageiq/pull/12551
+          # https://github.com/NOVAHawk/novahawk/pull/12551
           #button(
           #  :cloud_network_edit,
           #  'pficon pficon-edit fa-lg',

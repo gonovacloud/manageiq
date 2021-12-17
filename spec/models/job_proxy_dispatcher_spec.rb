@@ -28,7 +28,7 @@ describe JobProxyDispatcher do
       allow_any_instance_of(MiqServer).to receive_messages(:is_vix_disk? => true)
       allow_any_instance_of(MiqServer).to receive_messages(:is_a_proxy? => true)
       allow_any_instance_of(MiqServer).to receive_messages(:has_active_role? => true)
-      allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive_messages(:missing_credentials? => false)
+      allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive_messages(:missing_credentials? => false)
       allow_any_instance_of(Host).to receive_messages(:missing_credentials? => false)
 
       @hosts, @proxies, @storages, @vms, @repo_vms, @container_providers = build_entities(

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Azure::NetworkManager < ManageIQ::Providers::NetworkManager
+class NOVAHawk::Providers::Azure::NetworkManager < NOVAHawk::Providers::NetworkManager
   require_nested :CloudNetwork
   require_nested :CloudSubnet
   require_nested :FloatingIp
@@ -14,7 +14,7 @@ class ManageIQ::Providers::Azure::NetworkManager < ManageIQ::Providers::NetworkM
   require_nested :Refresher
   require_nested :SecurityGroup
 
-  include ManageIQ::Providers::Azure::ManagerMixin
+  include NOVAHawk::Providers::Azure::ManagerMixin
 
   # Auth and endpoints delegations, editing of this type of manager must be disabled
   delegate :authentication_check,
@@ -48,6 +48,6 @@ class ManageIQ::Providers::Azure::NetworkManager < ManageIQ::Providers::NetworkM
   end
 
   def description
-    ManageIQ::Providers::Azure::Regions.find_by_name(provider_region)[:description]
+    NOVAHawk::Providers::Azure::Regions.find_by_name(provider_region)[:description]
   end
 end

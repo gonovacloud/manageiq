@@ -1,12 +1,12 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the manageiq package.
+# This file is distributed under the same license as the novahawk package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: manageiq 1.0.0\n"
+"Project-Id-Version: novahawk 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-15 11:23+0100\n"
 "PO-Revision-Date: 2016-11-15 11:23+0100\n"
@@ -436,7 +436,7 @@ msgstr ""
 msgid "\"Error during repository fetch: #{err.message}\""
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/manager_mixin.rb:16
+#: ../app/models/novahawk/providers/azure/manager_mixin.rb:16
 msgid "\"Incorrect credentials - #{err.message}\""
 msgstr ""
 
@@ -468,7 +468,7 @@ msgstr ""
 msgid "\"Show policy details for #{h(item.name)}\""
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/manager_mixin.rb:23
+#: ../app/models/novahawk/providers/azure/manager_mixin.rb:23
 msgid "\"Unexpected response returned from system: #{err.message}\""
 msgstr ""
 
@@ -616,7 +616,7 @@ msgstr ""
 msgid "%{entry_point} Entry Point (NameSpace/Class/Instance)"
 msgstr ""
 
-#: ../app/models/manageiq/providers/vmware/infra_manager/provision_workflow/dialog_field_validation.rb:12
+#: ../app/models/novahawk/providers/vmware/infra_manager/provision_workflow/dialog_field_validation.rb:12
 msgid "%{field_required} for Non-DRS enabled cluster"
 msgstr ""
 
@@ -701,7 +701,7 @@ msgstr ""
 msgid "%{message} %{key}:[*] to [*]"
 msgstr ""
 
-#: ../app/models/cloud_subnet/operations.rb:37 ../app/models/cloud_network/operations.rb:38 ../app/models/cloud_volume/operations.rb:56 ../app/models/manageiq/providers/cloud_manager/auth_key_pair/operations.rb:34
+#: ../app/models/cloud_subnet/operations.rb:37 ../app/models/cloud_network/operations.rb:38 ../app/models/cloud_volume/operations.rb:56 ../app/models/novahawk/providers/cloud_manager/auth_key_pair/operations.rb:34
 msgid "%{message} is not available for %{name}."
 msgstr ""
 
@@ -1057,7 +1057,7 @@ msgstr ""
 msgid "%{name} Compare Report (* = Value does not match base)"
 msgstr ""
 
-#: ../app/models/manageiq/providers/ansible_tower/provider.rb:71
+#: ../app/models/novahawk/providers/ansible_tower/provider.rb:71
 msgid "%{name} Configuration Manager"
 msgstr ""
 
@@ -1085,7 +1085,7 @@ msgstr ""
 msgid "%{name} dashboard for user %{id} in group id %{current_group_id}"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/cloud_manager/orchestration_stack.rb:61
+#: ../app/models/novahawk/providers/azure/cloud_manager/orchestration_stack.rb:61
 msgid "%{name} does not exist on %{management}"
 msgstr ""
 
@@ -2399,7 +2399,7 @@ msgstr ""
 msgid "A User must be assigned to a Group"
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/provision/cloning.rb:13
+#: ../app/models/novahawk/providers/cloud_manager/provision/cloning.rb:13
 msgid "A VM with name: [%{name}] already exists"
 msgstr ""
 
@@ -4479,13 +4479,13 @@ msgstr ""
 msgid "Allocated Number of Virtual Machines"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate.yaml
 #. TRANSLATORS: file: product/views/Vm.yaml
 #. TRANSLATORS: file: product/views/VmOrTemplate-all_archived.yaml
@@ -4639,7 +4639,7 @@ msgstr ""
 msgid "Anonymous FTPs"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
 #: ../config/yaml_strings.rb:4820
 msgid "Ansible Tower Configured System"
 msgstr ""
@@ -4648,8 +4648,8 @@ msgstr ""
 msgid "Ansible Tower Configured Systems"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 #: ../config/dictionary_strings.rb:1476 ../config/yaml_strings.rb:3861
 msgid "Ansible Tower Job"
 msgstr ""
@@ -4663,18 +4663,18 @@ msgid "Ansible Tower Job Template: %{name}"
 msgstr ""
 
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
 #: ../app/controllers/provider_foreman_controller.rb:537 ../config/yaml_strings.rb:2624
 msgid "Ansible Tower Job Templates"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job (plural form)
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job (plural form)
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 #: ../config/dictionary_strings.rb:1478 ../config/yaml_strings.rb:3859
 msgid "Ansible Tower Jobs"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
 #: ../app/presenters/tree_builder_configuration_manager.rb:33 ../app/presenters/tree_builder_configuration_manager.rb:35 ../config/yaml_strings.rb:4293
 msgid "Ansible Tower Providers"
 msgstr ""
@@ -4941,11 +4941,11 @@ msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.column.v_arch
 #. TRANSLATORS: file: product/views/GuestApplication.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 #. TRANSLATORS: file: product/views/ProductUpdate.yaml
 #: ../app/helpers/vm_cloud_helper/textual_summary.rb:95 ../app/helpers/provider_foreman_helper.rb:86 ../app/helpers/provider_foreman_helper.rb:167 ../app/helpers/provider_foreman_helper.rb:213 ../config/dictionary_strings.rb:1000 ../config/yaml_strings.rb:3923
 msgid "Architecture"
@@ -5513,15 +5513,15 @@ msgstr ""
 msgid "AuditEvent|Userid"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:7
+#: ../app/models/novahawk/providers/azure/regions.rb:7
 msgid "Australia East"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:11
+#: ../app/models/novahawk/providers/azure/regions.rb:11
 msgid "Australia Southeast"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
 #: ../config/yaml_strings.rb:4269
 msgid "Auth Key Pair"
 msgstr ""
@@ -5531,13 +5531,13 @@ msgstr ""
 msgid "Auth Key Pairs"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
 #: ../config/yaml_strings.rb:4271
 msgid "AuthKeyPair"
 msgstr ""
 
 #: ../app/controllers/oauth_sessions_controller.rb:4
-msgid "Authenticated, please close tab to return to ManageIQ."
+msgid "Authenticated, please close tab to return to NOVAHawk."
 msgstr ""
 
 #: ../app/helpers/application_helper/toolbar/ems_container_center.rb:86 ../app/helpers/application_helper/toolbar/ems_infra_center.rb:95 ../app/helpers/application_helper/toolbar/ems_clouds_center.rb:84 ../app/helpers/application_helper/toolbar/ems_infras_center.rb:84 ../app/helpers/application_helper/toolbar/ems_cloud_center.rb:84 ../app/helpers/application_helper/toolbar/ems_middleware_center.rb:66 ../app/helpers/application_helper/toolbar/ems_middlewares_center.rb:69 ../app/helpers/application_helper/toolbar/ems_containers_center.rb:84 ../app/views/ops/_settings_authentication_tab.html.haml:7 ../app/views/ops/_settings_server_tab.html.haml:476 ../app/views/ops/_all_tabs.html.haml:27 ../config/model_attributes.rb:69
@@ -5895,9 +5895,9 @@ msgstr ""
 #. TRANSLATORS: file: product/views/AvailabilityZone.yaml
 #. TRANSLATORS: file: product/views/CloudVolume-based_volumes.yaml
 #. TRANSLATORS: file: product/views/CloudVolume.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 #: ../app/controllers/availability_zone_controller.rb:149 ../app/views/static/ems_cloud/arbitration_profile_edit.html.haml:79 ../config/dictionary_strings.rb:1262 ../config/dictionary_strings.rb:2068 ../config/yaml_strings.rb:3311
 msgid "Availability Zone"
 msgstr ""
@@ -6572,7 +6572,7 @@ msgstr ""
 msgid "Branches"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:15
+#: ../app/models/novahawk/providers/azure/regions.rb:15
 msgid "Brazil South"
 msgstr ""
 
@@ -6615,8 +6615,8 @@ msgid "Build Number"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 #: ../config/yaml_strings.rb:4679
 msgid "Build State"
 msgstr ""
@@ -7391,11 +7391,11 @@ msgstr ""
 msgid "Can not delete folder, one or more reports in the selected folder are not owned by your group"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:19
+#: ../app/models/novahawk/providers/azure/regions.rb:19
 msgid "Canada Central"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:23
+#: ../app/models/novahawk/providers/azure/regions.rb:23
 msgid "Canada East"
 msgstr ""
 
@@ -7545,11 +7545,11 @@ msgstr ""
 msgid "Cannot start log collection, requires a started server"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/infra_manager/host.rb:430
+#: ../app/models/novahawk/providers/openstack/infra_manager/host.rb:430
 msgid "Cannot start. Already on."
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/infra_manager/host.rb:442
+#: ../app/models/novahawk/providers/openstack/infra_manager/host.rb:442
 msgid "Cannot stop. Already off."
 msgstr ""
 
@@ -7932,11 +7932,11 @@ msgstr ""
 msgid "Central Admin has been disabled"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:27
+#: ../app/models/novahawk/providers/azure/regions.rb:27
 msgid "Central India"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:31
+#: ../app/models/novahawk/providers/azure/regions.rb:31
 msgid "Central US"
 msgstr ""
 
@@ -8933,22 +8933,22 @@ msgstr ""
 msgid "Cloud Network"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudNetwork
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudNetwork
 #: ../config/dictionary_strings.rb:1616
 msgid "Cloud Network (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudNetwork
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudNetwork
 #: ../config/dictionary_strings.rb:1660
 msgid "Cloud Network (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudNetwork
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork
 #: ../config/dictionary_strings.rb:1596
 msgid "Cloud Network (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork
 #: ../config/dictionary_strings.rb:1580
 msgid "Cloud Network (OpenStack)"
 msgstr ""
@@ -8957,29 +8957,29 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.table.cloud_network (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
 #. TRANSLATORS: file: product/views/CloudNetwork.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 #. TRANSLATORS: file: product/views/OrchestrationStack.yaml
 #: ../app/controllers/ems_common.rb:108 ../app/controllers/orchestration_stack_controller.rb:71 ../app/views/network_topology/show.html.haml:109 ../app/views/layouts/listnav/_orchestration_stack.html.haml:52 ../config/dictionary_strings.rb:1288 ../config/dictionary_strings.rb:2098 ../config/yaml_strings.rb:2193
 msgid "Cloud Networks"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudNetwork (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudNetwork (plural form)
 #: ../config/dictionary_strings.rb:1618
 msgid "Cloud Networks (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudNetwork (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudNetwork (plural form)
 #: ../config/dictionary_strings.rb:1662
 msgid "Cloud Networks (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudNetwork (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork (plural form)
 #: ../config/dictionary_strings.rb:1598
 msgid "Cloud Networks (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork (plural form)
-#. TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_openstack_infra_manager_cloud_networks
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork (plural form)
+#. TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_openstack_infra_manager_cloud_networks
 #: ../config/dictionary_strings.rb:1582 ../config/dictionary_strings.rb:2390
 msgid "Cloud Networks (OpenStack)"
 msgstr ""
@@ -9012,7 +9012,7 @@ msgstr ""
 msgid "Cloud Objects"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager
 #. TRANSLATORS: en.yml key: dictionary.table.ems_cloud
 #. TRANSLATORS: file: product/views/AvailabilityZone.yaml
 #. TRANSLATORS: file: product/views/CloudObjectStoreContainer-cloud_object_store_containers.yaml
@@ -9033,51 +9033,51 @@ msgstr ""
 msgid "Cloud Provider"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager
 #: ../config/dictionary_strings.rb:1584
 msgid "Cloud Provider (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager
 #: ../config/dictionary_strings.rb:1588
 msgid "Cloud Provider (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager
 #: ../config/dictionary_strings.rb:1572
 msgid "Cloud Provider (OpenStack)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager
 #: ../config/dictionary_strings.rb:1592
 msgid "Cloud Provider (VMware vCloud)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_cloud (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_clouds
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
 #: ../app/views/configuration/_ui_2.html.haml:175 ../config/dictionary_strings.rb:1482 ../config/dictionary_strings.rb:2214 ../config/dictionary_strings.rb:2216 ../config/yaml_strings.rb:306
 msgid "Cloud Providers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager (plural form)
 #: ../config/dictionary_strings.rb:1586
 msgid "Cloud Providers (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager (plural form)
 #: ../config/dictionary_strings.rb:1590
 msgid "Cloud Providers (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager (plural form)
 #: ../config/dictionary_strings.rb:1574
 msgid "Cloud Providers (OpenStack)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager (plural form)
 #: ../config/dictionary_strings.rb:1594
 msgid "Cloud Providers (VMware vCloud)"
 msgstr ""
@@ -9105,22 +9105,22 @@ msgstr ""
 msgid "Cloud Subnet"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudSubnet
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudSubnet
 #: ../config/dictionary_strings.rb:1620
 msgid "Cloud Subnet (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudSubnet
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudSubnet
 #: ../config/dictionary_strings.rb:1656
 msgid "Cloud Subnet (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudSubnet
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudSubnet
 #: ../config/dictionary_strings.rb:1672
 msgid "Cloud Subnet (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet
 #: ../config/dictionary_strings.rb:1688
 msgid "Cloud Subnet (OpenStack)"
 msgstr ""
@@ -9131,22 +9131,22 @@ msgstr ""
 msgid "Cloud Subnets"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudSubnet (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudSubnet (plural form)
 #: ../config/dictionary_strings.rb:1622
 msgid "Cloud Subnets (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudSubnet (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudSubnet (plural form)
 #: ../config/dictionary_strings.rb:1658
 msgid "Cloud Subnets (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudSubnet (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudSubnet (plural form)
 #: ../config/dictionary_strings.rb:1674
 msgid "Cloud Subnets (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet (plural form)
 #: ../config/dictionary_strings.rb:1690
 msgid "Cloud Subnets (OpenStack)"
 msgstr ""
@@ -9174,7 +9174,7 @@ msgstr ""
 msgid "Cloud Tenants"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_openstack_cloud_manager_cloud_tenant
+#. TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_openstack_cloud_manager_cloud_tenant
 #: ../config/dictionary_strings.rb:2392
 msgid "Cloud Tenants (OpenStack)"
 msgstr ""
@@ -9918,8 +9918,8 @@ msgstr ""
 #. TRANSLATORS: file: product/views/Host-hosts.yaml
 #. TRANSLATORS: file: product/views/Host.yaml
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 #. TRANSLATORS: file: product/views/Vm-all_vms.yaml
 #. TRANSLATORS: file: product/views/VmOrTemplate-all_archived.yaml
@@ -10343,13 +10343,13 @@ msgstr ""
 #. TRANSLATORS: file: product/views/Host-hosts.yaml
 #. TRANSLATORS: file: product/views/Host.yaml
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate.yaml
 #. TRANSLATORS: file: product/views/Vm-all_vms.yaml
@@ -10610,32 +10610,32 @@ msgstr ""
 msgid "Configuration Management Providers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ConfigurationManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ConfigurationManager
 #: ../config/dictionary_strings.rb:1464
 msgid "Configuration Manager"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager
 #: ../config/dictionary_strings.rb:1452
 msgid "Configuration Manager (Ansible Tower)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager
 #: ../config/dictionary_strings.rb:1460
 msgid "Configuration Manager (Foreman)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ConfigurationManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ConfigurationManager (plural form)
 #: ../config/dictionary_strings.rb:1466
 msgid "Configuration Managers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager (plural form)
 #: ../config/dictionary_strings.rb:1454
 msgid "Configuration Managers (Ansible Tower)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager (plural form)
 #: ../config/dictionary_strings.rb:1462
 msgid "Configuration Managers (Foreman)"
 msgstr ""
@@ -10644,12 +10644,12 @@ msgstr ""
 msgid "Configuration Organization"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 #: ../config/yaml_strings.rb:4856
 msgid "Configuration Profile"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_foreman_configuration_manager_configuration_profile
+#. TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_foreman_configuration_manager_configuration_profile
 #: ../config/dictionary_strings.rb:2386
 msgid "Configuration Profile (Foreman)"
 msgstr ""
@@ -10662,7 +10662,7 @@ msgstr ""
 msgid "Configuration Profile: %{name}"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_foreman_configuration_manager_configuration_profile (plural form)
+#. TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_foreman_configuration_manager_configuration_profile (plural form)
 #: ../config/dictionary_strings.rb:2388
 msgid "Configuration Profiles (Foreman)"
 msgstr ""
@@ -10732,9 +10732,9 @@ msgstr ""
 msgid "ConfigurationLocation|Title"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../config/yaml_strings.rb:4158
 msgid "ConfigurationManagerForeman"
 msgstr ""
@@ -10905,12 +10905,12 @@ msgstr ""
 msgid "Configured System"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem
 #: ../config/dictionary_strings.rb:1468
 msgid "Configured System (Ansible Tower)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem
 #: ../config/dictionary_strings.rb:1472
 msgid "Configured System (Foreman)"
 msgstr ""
@@ -10929,12 +10929,12 @@ msgstr ""
 msgid "Configured Systems"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem (plural form)
 #: ../config/dictionary_strings.rb:1470
 msgid "Configured Systems (Ansible Tower)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem (plural form)
 #: ../config/dictionary_strings.rb:1474
 msgid "Configured Systems (Foreman)"
 msgstr ""
@@ -10944,14 +10944,14 @@ msgid "Configured system"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 #: ../config/yaml_strings.rb:4667
 msgid "ConfiguredSystem"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 #: ../config/yaml_strings.rb:4671
 msgid "ConfiguredSystems"
 msgstr ""
@@ -11250,17 +11250,17 @@ msgstr ""
 msgid "Container Projects"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager
 #: ../config/dictionary_strings.rb:1600
 msgid "Container Provider (Kubernetes)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::OpenshiftEnterprise::ContainerManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager
 #: ../config/dictionary_strings.rb:1612
 msgid "Container Provider (OpenShift Container Platform)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openshift::ContainerManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openshift::ContainerManager
 #: ../config/dictionary_strings.rb:1608
 msgid "Container Provider (OpenShift Origin)"
 msgstr ""
@@ -11270,17 +11270,17 @@ msgstr ""
 msgid "Container Providers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager (plural form)
 #: ../config/dictionary_strings.rb:1602
 msgid "Container Providers (Kubernetes)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::OpenshiftEnterprise::ContainerManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager (plural form)
 #: ../config/dictionary_strings.rb:1614
 msgid "Container Providers (OpenShift Container Platform)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openshift::ContainerManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openshift::ContainerManager (plural form)
 #: ../config/dictionary_strings.rb:1610
 msgid "Container Providers (OpenShift Origin)"
 msgstr ""
@@ -13406,16 +13406,16 @@ msgstr ""
 msgid "Containers Explorer"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ContainerManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ContainerManager
 #. TRANSLATORS: en.yml key: dictionary.table.ems_container
 #: ../config/dictionary_strings.rb:1520 ../config/dictionary_strings.rb:2248
 msgid "Containers Provider"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ContainerManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ContainerManager (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_container (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_containers
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
 #: ../config/dictionary_strings.rb:1522 ../config/dictionary_strings.rb:2250 ../config/dictionary_strings.rb:2252 ../config/yaml_strings.rb:4310
 msgid "Containers Providers"
 msgstr ""
@@ -14126,7 +14126,7 @@ msgstr ""
 msgid "Create Datastores from File Shares"
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/auth_key_pair/operations.rb:29
+#: ../app/models/novahawk/providers/cloud_manager/auth_key_pair/operations.rb:29
 msgid "Create KeyPair Operation"
 msgstr ""
 
@@ -14288,9 +14288,9 @@ msgid "Created By"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/AutomationRequest.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/MiqRequest.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
@@ -15031,8 +15031,8 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.model.Storage
 #. TRANSLATORS: en.yml key: dictionary.table.storage
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 #. TRANSLATORS: file: product/views/Storage.yaml
 #. TRANSLATORS: file: product/views/StorageCluster.yaml
@@ -15128,7 +15128,7 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.table.storages
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
 #. TRANSLATORS: file: product/views/CimBaseStorageExtent.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 #. TRANSLATORS: file: product/views/OntapFileShare.yaml
 #. TRANSLATORS: file: product/views/OntapLogicalDisk.yaml
 #. TRANSLATORS: file: product/views/OntapStorageSystem.yaml
@@ -15554,7 +15554,7 @@ msgstr ""
 msgid "Delete Host Aggregates"
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/auth_key_pair/operations.rb:13
+#: ../app/models/novahawk/providers/cloud_manager/auth_key_pair/operations.rb:13
 msgid "Delete KeyPair Operation"
 msgstr ""
 
@@ -16218,8 +16218,8 @@ msgstr ""
 #. TRANSLATORS: file: product/views/GuestApplication.yaml
 #. TRANSLATORS: file: product/views/LdapRegion.yaml
 #. TRANSLATORS: file: product/views/LoadBalancer.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/MiqAction.yaml
 #. TRANSLATORS: file: product/views/MiqActionSet.yaml
 #. TRANSLATORS: file: product/views/MiqAeClass.yaml
@@ -16877,7 +16877,7 @@ msgstr ""
 msgid "Discovered"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 #: ../app/helpers/ems_swift_helper/textual_summary.rb:40 ../app/helpers/ems_network_helper/textual_summary.rb:43 ../app/helpers/ems_infra_helper/textual_summary.rb:37 ../app/helpers/ems_cinder_helper/textual_summary.rb:40 ../app/helpers/ems_storage_helper/textual_summary.rb:40 ../app/helpers/ems_cloud_helper/textual_summary.rb:60 ../config/yaml_strings.rb:4196
 msgid "Discovered IP Address"
 msgstr ""
@@ -18408,7 +18408,7 @@ msgstr ""
 msgid "Download this report in text format"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplateCfn.yaml
@@ -18667,10 +18667,10 @@ msgid "EVM Workers"
 msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.column.zone_name
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 #. TRANSLATORS: file: product/views/MiqSchedule.yaml
 #. TRANSLATORS: file: product/views/StorageManager.yaml
 #: ../config/dictionary_strings.rb:1142 ../config/yaml_strings.rb:4203
@@ -18681,15 +18681,15 @@ msgstr ""
 msgid "EVM log downloaded"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:35
+#: ../app/models/novahawk/providers/azure/regions.rb:35
 msgid "East Asia"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:39
+#: ../app/models/novahawk/providers/azure/regions.rb:39
 msgid "East US"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:43
+#: ../app/models/novahawk/providers/azure/regions.rb:43
 msgid "East US 2"
 msgstr ""
 
@@ -20742,7 +20742,7 @@ msgstr ""
 msgid "Editing tag mapping from label \"%{name}\""
 msgstr ""
 
-#: ../app/models/manageiq/providers/vmware/infra_manager/provision_workflow/dialog_field_validation.rb:10
+#: ../app/models/novahawk/providers/vmware/infra_manager/provision_workflow/dialog_field_validation.rb:10
 msgid "Either Host Name or Cluster Name is required"
 msgstr ""
 
@@ -20813,7 +20813,7 @@ msgstr ""
 msgid "Ems folder"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
 #: ../config/yaml_strings.rb:4535
 msgid "EmsCloud"
 msgstr ""
@@ -21214,7 +21214,7 @@ msgstr ""
 msgid "EmsCluster|V ram vr ratio"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
 #: ../config/yaml_strings.rb:4312
 msgid "EmsContainer"
 msgstr ""
@@ -21283,22 +21283,22 @@ msgstr ""
 msgid "EmsFolder|Updated on"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 #: ../config/yaml_strings.rb:4185
 msgid "EmsInfra"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 #: ../config/yaml_strings.rb:4596
 msgid "EmsMiddleware"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 #: ../config/yaml_strings.rb:4539
 msgid "EmsNetwork"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 #: ../config/yaml_strings.rb:4317
 msgid "EmsStorage"
 msgstr ""
@@ -21662,8 +21662,8 @@ msgstr ""
 
 #. TRANSLATORS: file: product/views/ConfigurationProfile.yaml
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 #: ../app/helpers/provider_foreman_helper.rb:62 ../app/helpers/provider_foreman_helper.rb:143 ../app/views/provider_foreman/_main.html.haml:9 ../app/views/provider_foreman/_main_configuration_profile.html.haml:9 ../config/yaml_strings.rb:3579
 msgid "Environment"
 msgstr ""
@@ -22144,7 +22144,7 @@ msgstr ""
 msgid "Event Monitor"
 msgstr ""
 
-#: ../app/models/manageiq/providers/base_manager/event_catcher.rb:14
+#: ../app/models/novahawk/providers/base_manager/event_catcher.rb:14
 msgid "Event Monitor for %{table}: %{name}"
 msgstr ""
 
@@ -23613,7 +23613,7 @@ msgstr ""
 msgid "Find Value Error: %{msg}"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
 #: ../config/yaml_strings.rb:4273
 msgid "Fingerprint"
 msgstr ""
@@ -23761,9 +23761,9 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.model.Flavor
 #. TRANSLATORS: en.yml key: dictionary.table.flavor
 #. TRANSLATORS: file: product/views/Flavor.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 #: ../app/controllers/flavor_controller.rb:99 ../app/views/static/ems_cloud/arbitration_profile_edit.html.haml:103 ../config/dictionary_strings.rb:1408 ../config/dictionary_strings.rb:2322 ../config/yaml_strings.rb:3906 ../config/model_attributes.rb:1490
 msgid "Flavor"
 msgstr ""
@@ -23866,12 +23866,12 @@ msgstr ""
 msgid "Floating IP"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::FloatingIp
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::FloatingIp
 #: ../config/dictionary_strings.rb:1684
 msgid "Floating IP (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::FloatingIp
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp
 #: ../config/dictionary_strings.rb:1680
 msgid "Floating IP (OpenStack)"
 msgstr ""
@@ -23882,12 +23882,12 @@ msgstr ""
 msgid "Floating IPs"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::FloatingIp (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::FloatingIp (plural form)
 #: ../config/dictionary_strings.rb:1686
 msgid "Floating IPs (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::FloatingIp (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp (plural form)
 #: ../config/dictionary_strings.rb:1682
 msgid "Floating IPs (OpenStack)"
 msgstr ""
@@ -23897,7 +23897,7 @@ msgstr ""
 msgid "Floating Ip"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::FloatingIp
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::FloatingIp
 #: ../config/dictionary_strings.rb:1648
 msgid "Floating Ip (Google)"
 msgstr ""
@@ -23906,7 +23906,7 @@ msgstr ""
 msgid "Floating Ips"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::FloatingIp (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::FloatingIp (plural form)
 #: ../config/dictionary_strings.rb:1650
 msgid "Floating Ips (Google)"
 msgstr ""
@@ -25019,8 +25019,8 @@ msgstr ""
 #. TRANSLATORS: file: product/views/Host-hosts.yaml
 #. TRANSLATORS: file: product/views/Host.yaml
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 #. TRANSLATORS: file: product/views/Vm-VmReconfigureRequest.yaml
 #. TRANSLATORS: file: product/views/Vm-all_vms.yaml
@@ -25117,7 +25117,7 @@ msgstr ""
 msgid "Host Default VNC Start Port"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/host_aggregate.rb:170 ../app/models/manageiq/providers/openstack/cloud_manager/host_aggregate.rb:200
+#: ../app/models/novahawk/providers/openstack/cloud_manager/host_aggregate.rb:170 ../app/models/novahawk/providers/openstack/cloud_manager/host_aggregate.rb:200
 msgid "Host ID cannot be nil"
 msgstr ""
 
@@ -25189,7 +25189,7 @@ msgstr ""
 msgid "Host aggregate host"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/host_aggregate.rb:172 ../app/models/manageiq/providers/openstack/cloud_manager/host_aggregate.rb:202
+#: ../app/models/novahawk/providers/openstack/cloud_manager/host_aggregate.rb:172 ../app/models/novahawk/providers/openstack/cloud_manager/host_aggregate.rb:202
 msgid "Host cannot be found"
 msgstr ""
 
@@ -25399,11 +25399,11 @@ msgid "Hosted Domain:"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 #. TRANSLATORS: file: product/views/MiqServer.yaml
 #. TRANSLATORS: file: product/views/StorageManager.yaml
 #: ../app/helpers/vm_helper/textual_summary.rb:95 ../app/helpers/storage_manager_helper/textual_summary.rb:15 ../app/helpers/provider_configuration_manager_helper.rb:14 ../app/helpers/provider_foreman_helper.rb:15 ../app/controllers/application_controller/miq_request_methods.rb:308 ../app/views/storage_manager/_form.html.haml:65 ../app/views/host/_config.html.haml:47 ../app/views/ops/_ldap_server_entries.html.haml:18 ../app/views/ops/_settings_server_tab.html.haml:16 ../app/views/ops/_server_desc.html.haml:9 ../app/views/ops/_ldap_domain_show.html.haml:255 ../app/views/ops/_diagnostics_database_tab.html.haml:35 ../app/views/ops/_selected_by_servers.html.haml:22 ../config/yaml_strings.rb:4194
@@ -25432,7 +25432,7 @@ msgstr ""
 #. TRANSLATORS: file: product/views/EmsCluster.yaml
 #. TRANSLATORS: file: product/views/Host-hosts.yaml
 #. TRANSLATORS: file: product/views/Host.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 #. TRANSLATORS: file: product/views/OntapFileShare.yaml
 #. TRANSLATORS: file: product/views/OntapLogicalDisk.yaml
 #. TRANSLATORS: file: product/views/OntapStorageSystem.yaml
@@ -25920,8 +25920,8 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.column.ipaddress
 #. TRANSLATORS: file: product/views/Host-hosts.yaml
 #. TRANSLATORS: file: product/views/Host.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 #. TRANSLATORS: file: product/views/MiqServer.yaml
 #: ../app/helpers/vm_cloud_helper/textual_summary.rb:64 ../app/helpers/storage_manager_helper/textual_summary.rb:19 ../app/helpers/provider_configuration_manager_helper.rb:25 ../app/helpers/container_group_helper/textual_summary.rb:94 ../app/helpers/vm_helper/textual_summary.rb:100 ../app/helpers/provider_foreman_helper.rb:26 ../app/helpers/host_helper/textual_summary.rb:119 ../app/helpers/ops_helper/textual_summary.rb:41 ../app/views/storage_manager/_form.html.haml:82 ../app/views/vm_common/_config.html.haml:202 ../app/views/host/_config.html.haml:63 ../app/views/ops/_settings_server_tab.html.haml:32 ../app/views/ops/_server_desc.html.haml:19 ../app/views/ops/_selected_by_servers.html.haml:35 ../config/dictionary_strings.rb:418 ../config/dictionary_strings.rb:422 ../config/yaml_strings.rb:4220
 msgid "IP Address"
@@ -25935,9 +25935,9 @@ msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.column.ip_addresses
 #. TRANSLATORS: en.yml key: dictionary.column.ipaddresses
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 #. TRANSLATORS: file: product/views/NetworkPort.yaml
 #. TRANSLATORS: file: product/views/Vm.yaml
 #. TRANSLATORS: file: product/views/VmOrTemplate-all_vms_and_templates.yaml
@@ -26047,7 +26047,7 @@ msgid "ISO Images"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ContainerImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 #: ../config/yaml_strings.rb:3866
 msgid "Id"
 msgstr ""
@@ -26072,7 +26072,7 @@ msgstr ""
 msgid "Illegal operator, '%{operator}'"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Template
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Template
 #. TRANSLATORS: en.yml key: dictionary.table.container_image
 #. TRANSLATORS: en.yml key: dictionary.table.template_cloud
 #. TRANSLATORS: file: product/views/Container.yaml
@@ -26124,14 +26124,14 @@ msgstr ""
 msgid "ImageRegistries"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Template (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Template (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.container_image (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.container_images
 #. TRANSLATORS: en.yml key: dictionary.table.template_cloud (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
 #. TRANSLATORS: file: product/views/ContainerProject.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
 #: ../app/controllers/vm_cloud_controller.rb:165 ../app/controllers/ems_common.rb:72 ../app/controllers/vm_common.rb:1248 ../app/views/layouts/listnav/_cloud_tenant.html.haml:42 ../app/views/configuration/_ui_2.html.haml:175 ../app/assets/javascripts/controllers/container_dashboard/util/charts-mixin.js:87 ../app/assets/javascripts/controllers/container_dashboard/util/dashboard-utils-factory.js:59 ../config/dictionary_strings.rb:1510 ../config/dictionary_strings.rb:2152 ../config/dictionary_strings.rb:2154 ../config/dictionary_strings.rb:2532 ../config/yaml_strings.rb:97
 msgid "Images"
 msgstr ""
@@ -26255,11 +26255,11 @@ msgstr ""
 msgid "Include Domain prefix in the path"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/manager_mixin.rb:18
+#: ../app/models/novahawk/providers/azure/manager_mixin.rb:18
 msgid "Incorrect credentials - check your Azure Client ID and Client Key"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/manager_mixin.rb:34
+#: ../app/models/novahawk/providers/azure/manager_mixin.rb:34
 msgid "Incorrect credentials - check your Azure Subscription ID"
 msgstr ""
 
@@ -26327,57 +26327,57 @@ msgstr ""
 msgid "Infrastructure Machine ID"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager
 #. TRANSLATORS: en.yml key: dictionary.table.ems_infra
 #: ../config/dictionary_strings.rb:1524 ../config/dictionary_strings.rb:2242
 msgid "Infrastructure Provider"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager
 #: ../config/dictionary_strings.rb:1548
 msgid "Infrastructure Provider (Microsoft)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager
 #: ../config/dictionary_strings.rb:1544
 msgid "Infrastructure Provider (OpenStack)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager
 #: ../config/dictionary_strings.rb:1552
 msgid "Infrastructure Provider (Red Hat)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager
 #: ../config/dictionary_strings.rb:1556
 msgid "Infrastructure Provider (VMware)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_infra (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_infras
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 #: ../app/views/configuration/_ui_2.html.haml:210 ../config/dictionary_strings.rb:1526 ../config/dictionary_strings.rb:2244 ../config/dictionary_strings.rb:2246 ../config/yaml_strings.rb:582
 msgid "Infrastructure Providers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager (plural form)
 #: ../config/dictionary_strings.rb:1550
 msgid "Infrastructure Providers (Microsoft)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager (plural form)
 #: ../config/dictionary_strings.rb:1546
 msgid "Infrastructure Providers (OpenStack)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager (plural form)
 #: ../config/dictionary_strings.rb:1554
 msgid "Infrastructure Providers (Red Hat)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager (plural form)
 #: ../config/dictionary_strings.rb:1558
 msgid "Infrastructure Providers (VMware)"
 msgstr ""
@@ -26487,7 +26487,7 @@ msgstr ""
 msgid "Installed"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Vm
 #. TRANSLATORS: en.yml key: dictionary.table.vm_cloud
 #: ../app/helpers/container_node_helper/textual_summary.rb:78 ../app/helpers/container_group_helper/textual_summary.rb:101 ../app/views/cloud_volume/attach.html.haml:16 ../app/views/cloud_volume/detach.html.haml:16 ../config/dictionary_strings.rb:1484 ../config/dictionary_strings.rb:2542
 msgid "Instance"
@@ -26497,27 +26497,27 @@ msgstr ""
 msgid "Instance \"%{name}\" does not have any associated Floating IPs"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::Vm
 #: ../config/dictionary_strings.rb:1500
 msgid "Instance (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::CloudManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::CloudManager::Vm
 #: ../config/dictionary_strings.rb:1488
 msgid "Instance (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::Vm
 #: ../config/dictionary_strings.rb:1496
 msgid "Instance (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::Vm
 #: ../config/dictionary_strings.rb:1492
 msgid "Instance (OpenStack)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::Vm
 #: ../config/dictionary_strings.rb:1504
 msgid "Instance (VMware vCloud)"
 msgstr ""
@@ -26557,7 +26557,7 @@ msgstr ""
 msgid "Instance name"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Vm (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.vm_cloud (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.vm_clouds
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
@@ -26568,10 +26568,10 @@ msgstr ""
 #. TRANSLATORS: file: product/views/Flavor.yaml
 #. TRANSLATORS: file: product/views/HostAggregate.yaml
 #. TRANSLATORS: file: product/views/LoadBalancer.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 #. TRANSLATORS: file: product/views/MiqAeInstance.yaml
 #. TRANSLATORS: file: product/views/NetworkRouter.yaml
 #. TRANSLATORS: file: product/views/OrchestrationStack.yaml
@@ -26584,27 +26584,27 @@ msgstr ""
 msgid "Instances (%{count})"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1502
 msgid "Instances (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::CloudManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::CloudManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1490
 msgid "Instances (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1498
 msgid "Instances (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1494
 msgid "Instances (OpenStack)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1506
 msgid "Instances (VMware vCloud)"
 msgstr ""
@@ -26615,7 +26615,7 @@ msgid "Instances Accordion"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
 #: ../config/yaml_strings.rb:4315
 msgid "Instances and Images"
 msgstr ""
@@ -26757,7 +26757,7 @@ msgstr ""
 msgid "Invalid sort_order type <%{value}> specified."
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager_InventoryGroup.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager_InventoryGroup.yaml
 #: ../config/yaml_strings.rb:4410
 msgid "InventoryGroup"
 msgstr ""
@@ -26778,7 +26778,7 @@ msgstr ""
 msgid "Is Unrecoverable"
 msgstr ""
 
-#: ../app/models/manageiq/providers/google/cloud_manager/refresh_parser.rb:252
+#: ../app/models/novahawk/providers/google/cloud_manager/refresh_parser.rb:252
 msgid "Is VM Preemptible"
 msgstr ""
 
@@ -26874,11 +26874,11 @@ msgstr ""
 msgid "JVM Non Heap Used"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:47
+#: ../app/models/novahawk/providers/azure/regions.rb:47
 msgid "Japan East"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:51
+#: ../app/models/novahawk/providers/azure/regions.rb:51
 msgid "Japan West"
 msgstr ""
 
@@ -26886,17 +26886,17 @@ msgstr ""
 msgid "Job"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript
 #: ../config/dictionary_strings.rb:1456
 msgid "Job Template (Ansible Tower)"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
 #: ../config/yaml_strings.rb:4075
 msgid "Job Templates"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript (plural form)
 #: ../config/dictionary_strings.rb:1458
 msgid "Job Templates (Ansible Tower)"
 msgstr ""
@@ -27337,13 +27337,13 @@ msgstr ""
 #. TRANSLATORS: file: product/views/Host-hosts.yaml
 #. TRANSLATORS: file: product/views/Host.yaml
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate.yaml
 #. TRANSLATORS: file: product/views/Storage.yaml
@@ -27371,8 +27371,8 @@ msgid "Last Checked for updates"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 #: ../config/yaml_strings.rb:4675
 msgid "Last Checkin"
 msgstr ""
@@ -27456,9 +27456,9 @@ msgstr ""
 msgid "Last Refresh"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../config/yaml_strings.rb:4170
 msgid "Last Refresh Date"
 msgstr ""
@@ -27927,17 +27927,17 @@ msgstr ""
 msgid "Load Balancer"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::LoadBalancer
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::LoadBalancer
 #: ../config/dictionary_strings.rb:1624
 msgid "Load Balancer (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::LoadBalancer
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::LoadBalancer
 #: ../config/dictionary_strings.rb:1640
 msgid "Load Balancer (Google)"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 #: ../app/helpers/vm_helper/textual_summary.rb:111 ../config/yaml_strings.rb:4308
 msgid "Load Balancer Status"
 msgstr ""
@@ -27948,12 +27948,12 @@ msgstr ""
 msgid "Load Balancers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::LoadBalancer (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::LoadBalancer (plural form)
 #: ../config/dictionary_strings.rb:1626
 msgid "Load Balancers (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::LoadBalancer (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::LoadBalancer (plural form)
 #: ../config/dictionary_strings.rb:1642
 msgid "Load Balancers (Google)"
 msgstr ""
@@ -28015,7 +28015,7 @@ msgstr ""
 msgid "LoadBalancer"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::LoadBalancer
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer
 #: ../config/dictionary_strings.rb:1668
 msgid "LoadBalancer (Microsoft Azure)"
 msgstr ""
@@ -28204,7 +28204,7 @@ msgstr ""
 msgid "LoadBalancerPool|Total vms"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::LoadBalancer (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer (plural form)
 #: ../config/dictionary_strings.rb:1670
 msgid "LoadBalancers (Microsoft Azure)"
 msgstr ""
@@ -28839,11 +28839,11 @@ msgid "Manage quotas for %{model} \"%{name}\" was cancelled by the user"
 msgstr ""
 
 #: ../app/controllers/ops_controller/diagnostics.rb:888
-msgid "ManageIQ"
+msgid "NOVAHawk"
 msgstr ""
 
 #: ../app/helpers/ui_constants.rb:104
-msgid "ManageIQ-Blue"
+msgid "NOVAHawk-Blue"
 msgstr ""
 
 #: ../app/controllers/application_controller/ci_processing.rb:2511
@@ -30889,16 +30889,16 @@ msgstr ""
 msgid "Middleware Messagings"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::MiddlewareManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::MiddlewareManager
 #. TRANSLATORS: en.yml key: dictionary.table.ems_middleware
 #: ../config/dictionary_strings.rb:1536 ../config/dictionary_strings.rb:2254
 msgid "Middleware Provider"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::MiddlewareManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::MiddlewareManager (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_middleware (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.ems_middlewares
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 #: ../app/views/configuration/_ui_2.html.haml:146 ../config/dictionary_strings.rb:1538 ../config/dictionary_strings.rb:2256 ../config/dictionary_strings.rb:2258 ../config/yaml_strings.rb:4594
 msgid "Middleware Providers"
 msgstr ""
@@ -31195,7 +31195,7 @@ msgstr ""
 msgid "Migrate VMs to another Host/Datastore"
 msgstr ""
 
-#: ../app/models/manageiq/providers/microsoft/infra_manager/vm.rb:4 ../app/models/manageiq/providers/openstack/cloud_manager/vm/operations/relocation.rb:9
+#: ../app/models/novahawk/providers/microsoft/infra_manager/vm.rb:4 ../app/models/novahawk/providers/openstack/cloud_manager/vm/operations/relocation.rb:9
 msgid "Migrate operation is not supported."
 msgstr ""
 
@@ -34600,7 +34600,7 @@ msgstr ""
 msgid "Must be a number (greater than 0)"
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/provision/volume_attachment.rb:3 ../app/models/manageiq/providers/cloud_manager/provision/volume_attachment.rb:7
+#: ../app/models/novahawk/providers/cloud_manager/provision/volume_attachment.rb:3 ../app/models/novahawk/providers/cloud_manager/provision/volume_attachment.rb:7
 msgid "Must be implemented in subclass"
 msgstr ""
 
@@ -34710,24 +34710,24 @@ msgstr ""
 #. TRANSLATORS: file: product/views/IsoDatastore.yaml
 #. TRANSLATORS: file: product/views/LdapRegion.yaml
 #. TRANSLATORS: file: product/views/LoadBalancer.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager_InventoryGroup.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager_InventoryGroup.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/MiqActionSet.yaml
 #. TRANSLATORS: file: product/views/MiqAeInstance.yaml
 #. TRANSLATORS: file: product/views/MiqDialog.yaml
@@ -34990,12 +34990,12 @@ msgstr ""
 msgid "Network Management Provider"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::NetworkManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::NetworkManager
 #: ../app/views/network_router/new.html.haml:16 ../app/views/cloud_subnet/new.html.haml:16 ../app/views/cloud_network/new.html.haml:16 ../config/dictionary_strings.rb:1540
 msgid "Network Manager"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::NetworkManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::NetworkManager (plural form)
 #: ../config/dictionary_strings.rb:1542
 msgid "Network Managers"
 msgstr ""
@@ -35010,22 +35010,22 @@ msgstr ""
 msgid "Network Port"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::NetworkPort
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::NetworkPort
 #: ../config/dictionary_strings.rb:1712
 msgid "Network Port (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkPort
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkPort
 #: ../config/dictionary_strings.rb:1644
 msgid "Network Port (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::NetworkPort
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::NetworkPort
 #: ../config/dictionary_strings.rb:1716
 msgid "Network Port (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkPort
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort
 #: ../config/dictionary_strings.rb:1720
 msgid "Network Port (OpenStack)"
 msgstr ""
@@ -35036,22 +35036,22 @@ msgstr ""
 msgid "Network Ports"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::NetworkPort (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::NetworkPort (plural form)
 #: ../config/dictionary_strings.rb:1714
 msgid "Network Ports (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkPort (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkPort (plural form)
 #: ../config/dictionary_strings.rb:1646
 msgid "Network Ports (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::NetworkPort (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::NetworkPort (plural form)
 #: ../config/dictionary_strings.rb:1718
 msgid "Network Ports (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkPort (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort (plural form)
 #: ../config/dictionary_strings.rb:1722
 msgid "Network Ports (OpenStack)"
 msgstr ""
@@ -35071,12 +35071,12 @@ msgstr ""
 msgid "Network Provider"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager
 #: ../config/dictionary_strings.rb:1632
 msgid "Network Provider (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager
 #: ../config/dictionary_strings.rb:1576
 msgid "Network Provider (OpenStack)"
 msgstr ""
@@ -35087,17 +35087,17 @@ msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.table.ems_network (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 #: ../config/dictionary_strings.rb:2266 ../config/yaml_strings.rb:2130
 msgid "Network Providers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager (plural form)
 #: ../config/dictionary_strings.rb:1634
 msgid "Network Providers (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager (plural form)
 #: ../config/dictionary_strings.rb:1578
 msgid "Network Providers (OpenStack)"
 msgstr ""
@@ -35108,12 +35108,12 @@ msgstr ""
 msgid "Network Router"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkRouter
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkRouter
 #: ../config/dictionary_strings.rb:1652
 msgid "Network Router (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter
 #: ../config/dictionary_strings.rb:1692
 msgid "Network Router (OpenStack)"
 msgstr ""
@@ -35128,12 +35128,12 @@ msgstr ""
 msgid "Network Routers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkRouter (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkRouter (plural form)
 #: ../config/dictionary_strings.rb:1654
 msgid "Network Routers (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter (plural form)
 #: ../config/dictionary_strings.rb:1694
 msgid "Network Routers (OpenStack)"
 msgstr ""
@@ -36119,7 +36119,7 @@ msgstr ""
 msgid "No conditions defined. This policy is unconditional and will ALWAYS return true."
 msgstr ""
 
-#: ../app/models/host.rb:768 ../app/models/host.rb:789 ../app/models/mixins/file_depot_mixin.rb:74 ../app/models/manageiq/providers/azure/manager_mixin.rb:5
+#: ../app/models/host.rb:768 ../app/models/host.rb:789 ../app/models/mixins/file_depot_mixin.rb:74 ../app/models/novahawk/providers/azure/manager_mixin.rb:5
 msgid "No credentials defined"
 msgstr ""
 
@@ -36454,11 +36454,11 @@ msgstr ""
 msgid "Normal Operating Ranges (up to 30 days' data)"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:55
+#: ../app/models/novahawk/providers/azure/regions.rb:55
 msgid "North Central US"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:59
+#: ../app/models/novahawk/providers/azure/regions.rb:59
 msgid "North Europe"
 msgstr ""
 
@@ -39083,26 +39083,26 @@ msgstr ""
 msgid "Orange"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::OrchestrationStack
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::OrchestrationStack
 #. TRANSLATORS: en.yml key: dictionary.model.OrchestrationStack
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 #. TRANSLATORS: file: product/views/OrchestrationStack.yaml
 #: ../app/views/ems_infra/scaling.html.haml:14 ../app/views/ems_infra/scaledown.html.haml:14 ../config/dictionary_strings.rb:1516 ../config/dictionary_strings.rb:1914 ../config/yaml_strings.rb:4015
 msgid "Orchestration Stack"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack
 #: ../config/dictionary_strings.rb:1708
 msgid "Orchestration Stack (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::OrchestrationStack
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack
 #: ../config/dictionary_strings.rb:1704
 msgid "Orchestration Stack (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack
 #: ../config/dictionary_strings.rb:1696 ../config/dictionary_strings.rb:1700
 msgid "Orchestration Stack (OpenStack)"
 msgstr ""
@@ -39111,25 +39111,25 @@ msgstr ""
 msgid "Orchestration Stack is already retired"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::OrchestrationStack (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::OrchestrationStack (plural form)
 #. TRANSLATORS: en.yml key: dictionary.model.OrchestrationStack (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
 #: ../app/controllers/orchestration_stack_controller.rb:24 ../config/dictionary_strings.rb:1518 ../config/dictionary_strings.rb:1916 ../config/yaml_strings.rb:1854
 msgid "Orchestration Stacks"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack (plural form)
 #: ../config/dictionary_strings.rb:1710
 msgid "Orchestration Stacks (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::OrchestrationStack (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack (plural form)
 #: ../config/dictionary_strings.rb:1706
 msgid "Orchestration Stacks (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack (plural form)
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack (plural form)
 #: ../config/dictionary_strings.rb:1698 ../config/dictionary_strings.rb:1702
 msgid "Orchestration Stacks (OpenStack)"
 msgstr ""
@@ -39201,7 +39201,7 @@ msgstr ""
 msgid "Orchestration template \"%{name}\" is read-only and cannot be edited."
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 #. TRANSLATORS: file: product/views/OrchestrationStack.yaml
 #: ../config/yaml_strings.rb:4018
 msgid "OrchestrationStack"
@@ -40005,7 +40005,7 @@ msgstr ""
 msgid "Pause Instance"
 msgstr ""
 
-#: ../app/models/miq_template/operations.rb:19 ../app/models/manageiq/providers/google/cloud_manager/vm/operations/power.rb:7 ../app/models/manageiq/providers/google/cloud_manager/vm/operations/power.rb:15 ../app/models/manageiq/providers/azure/cloud_manager/vm/operations/power.rb:17
+#: ../app/models/miq_template/operations.rb:19 ../app/models/novahawk/providers/google/cloud_manager/vm/operations/power.rb:7 ../app/models/novahawk/providers/google/cloud_manager/vm/operations/power.rb:15 ../app/models/novahawk/providers/azure/cloud_manager/vm/operations/power.rb:17
 msgid "Pause Operation"
 msgstr ""
 
@@ -40555,7 +40555,7 @@ msgstr ""
 msgid "Perform SmartState Analysis on this Template?"
 msgstr ""
 
-#: ../app/helpers/application_helper/toolbar/x_vm_center.rb:19 ../app/models/manageiq/providers/redhat/infra_manager/vm_or_template_shared/scanning.rb:50
+#: ../app/helpers/application_helper/toolbar/x_vm_center.rb:19 ../app/models/novahawk/providers/redhat/infra_manager/vm_or_template_shared/scanning.rb:50
 msgid "Perform SmartState Analysis on this VM"
 msgstr ""
 
@@ -40840,7 +40840,7 @@ msgstr ""
 msgid "Pod"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager::ContainerGroup
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerGroup
 #: ../config/dictionary_strings.rb:1604
 msgid "Pod (Kubernetes)"
 msgstr ""
@@ -40877,7 +40877,7 @@ msgstr ""
 msgid "Pods"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager::ContainerGroup (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerGroup (plural form)
 #: ../config/dictionary_strings.rb:1606
 msgid "Pods (Kubernetes)"
 msgstr ""
@@ -41067,8 +41067,8 @@ msgstr ""
 
 #. TRANSLATORS: file: product/views/ContainerImageRegistry.yaml
 #. TRANSLATORS: file: product/views/FirewallRule.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 #. TRANSLATORS: file: product/views/StorageManager.yaml
 #: ../app/helpers/container_service_helper/textual_summary.rb:18 ../app/helpers/storage_manager_helper/textual_summary.rb:27 ../app/views/storage_manager/_form.html.haml:99 ../app/views/ems_container/_form_fields.html.haml:24 ../app/views/ems_middleware/_form_fields.html.haml:24 ../app/views/ops/_ldap_server_entries.html.haml:22 ../app/views/ops/_settings_server_tab.html.haml:403 ../app/views/ops/_ldap_domain_show.html.haml:259 ../app/views/ops/_settings_replication_tab.html.haml:144 ../app/views/security_group/_main.html.haml:20 ../config/yaml_strings.rb:3750
 msgid "Port"
@@ -41476,7 +41476,7 @@ msgid "Provide this item?"
 msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.model.ExtManagementSystem
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::BaseManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::BaseManager
 #. TRANSLATORS: file: product/timelines/miq_reports/tl_events_daily.yaml
 #. TRANSLATORS: file: product/timelines/miq_reports/tl_events_hourly.yaml
 #. TRANSLATORS: file: product/views/ContainerBuild.yaml
@@ -41489,11 +41489,11 @@ msgstr ""
 #. TRANSLATORS: file: product/views/ContainerRoute.yaml
 #. TRANSLATORS: file: product/views/ContainerService.yaml
 #. TRANSLATORS: file: product/views/ContainerTemplate.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiddlewareDomain.yaml
 #. TRANSLATORS: file: product/views/MiddlewareServer.yaml
 #. TRANSLATORS: file: product/views/OrchestrationStack.yaml
@@ -41503,9 +41503,9 @@ msgstr ""
 msgid "Provider"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../config/yaml_strings.rb:4162
 msgid "Provider Name"
 msgstr ""
@@ -41541,10 +41541,10 @@ msgid "Provider: "
 msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.model.ExtManagementSystem (plural form)
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::BaseManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::BaseManager (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../app/presenters/menu/default_menu.rb:51 ../app/presenters/menu/default_menu.rb:68 ../app/presenters/menu/default_menu.rb:103 ../app/presenters/menu/default_menu.rb:142 ../app/presenters/menu/default_menu.rb:160 ../app/controllers/provider_foreman_controller.rb:529 ../app/controllers/provider_foreman_controller.rb:1187 ../app/views/report/_form_filter_chargeback.html.haml:137 ../app/assets/javascripts/controllers/container_dashboard/util/dashboard-utils-factory.js:4 ../app/assets/javascripts/controllers/ems_infra_dashboard/util/infra-dashboard-utils-factory.js:4 ../config/dictionary_strings.rb:1384 ../config/dictionary_strings.rb:1450 ../config/yaml_strings.rb:1924
 msgid "Providers"
 msgstr ""
@@ -41639,7 +41639,7 @@ msgstr ""
 msgid "Provision Request Templates do not support the execute method."
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/provision/cloning.rb:11
+#: ../app/models/novahawk/providers/cloud_manager/provision/cloning.rb:11
 msgid "Provision Request's Destination Name cannot be blank"
 msgstr ""
 
@@ -42678,7 +42678,7 @@ msgstr ""
 msgid "Refresh Widgets"
 msgstr ""
 
-#: ../app/models/manageiq/providers/base_manager/refresh_worker.rb:14
+#: ../app/models/novahawk/providers/base_manager/refresh_worker.rb:14
 msgid "Refresh Worker for %{table}: %{name}"
 msgstr ""
 
@@ -42914,14 +42914,14 @@ msgstr ""
 #. TRANSLATORS: file: product/views/Host-hosts.yaml
 #. TRANSLATORS: file: product/views/Host.yaml
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 #. TRANSLATORS: file: product/views/MiqRequest.yaml
 #. TRANSLATORS: file: product/views/MiqServer.yaml
 #. TRANSLATORS: file: product/views/OntapFileShare.yaml
@@ -42938,9 +42938,9 @@ msgstr ""
 msgid "Region"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../config/yaml_strings.rb:4174
 msgid "Region Description"
 msgstr ""
@@ -44417,11 +44417,11 @@ msgstr ""
 msgid "Request to Publish VMs to a Template"
 msgstr ""
 
-#: ../app/models/vm_or_template/operations/snapshot.rb:131 ../app/models/manageiq/providers/redhat/infra_manager/vm/operations/snapshot.rb:32
+#: ../app/models/vm_or_template/operations/snapshot.rb:131 ../app/models/novahawk/providers/redhat/infra_manager/vm/operations/snapshot.rb:32
 msgid "Requested VM snapshot not found, unable to RevertTo snapshot"
 msgstr ""
 
-#: ../app/models/vm_or_template/operations/snapshot.rb:42 ../app/models/manageiq/providers/redhat/infra_manager/vm/operations/snapshot.rb:24
+#: ../app/models/vm_or_template/operations/snapshot.rb:42 ../app/models/novahawk/providers/redhat/infra_manager/vm/operations/snapshot.rb:24
 msgid "Requested VM snapshot not found, unable to remove snapshot"
 msgstr ""
 
@@ -44875,12 +44875,12 @@ msgstr ""
 msgid "ResourcePool|Vapp"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::VirtualTemplate
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::VirtualTemplate
 #: ../config/dictionary_strings.rb:1512
 msgid "Resourceless Server Template"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::VirtualTemplate (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::VirtualTemplate (plural form)
 #: ../config/dictionary_strings.rb:1514
 msgid "Resourceless Server Templates"
 msgstr ""
@@ -45343,7 +45343,7 @@ msgstr ""
 msgid "Roll Up Performance"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
 #: ../app/helpers/vm_cloud_helper/textual_summary.rb:317 ../config/yaml_strings.rb:4592
 msgid "Root Device Type"
 msgstr ""
@@ -46130,22 +46130,22 @@ msgstr ""
 msgid "Security Group"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::SecurityGroup
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::SecurityGroup
 #: ../config/dictionary_strings.rb:1628
 msgid "Security Group (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::SecurityGroup
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::SecurityGroup
 #: ../config/dictionary_strings.rb:1636
 msgid "Security Group (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::SecurityGroup
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::SecurityGroup
 #: ../config/dictionary_strings.rb:1676
 msgid "Security Group (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::SecurityGroup
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::SecurityGroup
 #: ../config/dictionary_strings.rb:1664
 msgid "Security Group (OpenStack)"
 msgstr ""
@@ -46153,28 +46153,28 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.model.SecurityGroup (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.security_group (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 #. TRANSLATORS: file: product/views/OrchestrationStack.yaml
 #: ../app/presenters/menu/default_menu.rb:164 ../app/controllers/ems_common.rb:103 ../app/controllers/vm_common.rb:514 ../app/views/network_topology/show.html.haml:71 ../app/views/layouts/listnav/_orchestration_stack.html.haml:46 ../app/views/layouts/listnav/_cloud_tenant.html.haml:28 ../config/dictionary_strings.rb:1976 ../config/dictionary_strings.rb:2500 ../config/yaml_strings.rb:2162
 msgid "Security Groups"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::SecurityGroup (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::SecurityGroup (plural form)
 #: ../config/dictionary_strings.rb:1630
 msgid "Security Groups (Amazon)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::SecurityGroup (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::SecurityGroup (plural form)
 #: ../config/dictionary_strings.rb:1638
 msgid "Security Groups (Google)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::SecurityGroup (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::SecurityGroup (plural form)
 #: ../config/dictionary_strings.rb:1678
 msgid "Security Groups (Microsoft Azure)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::SecurityGroup (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::SecurityGroup (plural form)
 #: ../config/dictionary_strings.rb:1666
 msgid "Security Groups (OpenStack)"
 msgstr ""
@@ -47700,7 +47700,7 @@ msgstr ""
 msgid "Shelve Offload Instance"
 msgstr ""
 
-#: ../app/models/manageiq/providers/google/cloud_manager/vm/operations/power.rb:23
+#: ../app/models/novahawk/providers/google/cloud_manager/vm/operations/power.rb:23
 msgid "Shelve Offload Operation"
 msgstr ""
 
@@ -47720,7 +47720,7 @@ msgstr ""
 msgid "Shelve Offload this Instance?"
 msgstr ""
 
-#: ../app/models/manageiq/providers/google/cloud_manager/vm/operations/power.rb:19
+#: ../app/models/novahawk/providers/google/cloud_manager/vm/operations/power.rb:19
 msgid "Shelve Operation"
 msgstr ""
 
@@ -49455,15 +49455,15 @@ msgstr ""
 msgid "Source template [%{name}] was not found"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:63
+#: ../app/models/novahawk/providers/azure/regions.rb:63
 msgid "South Central US"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:67
+#: ../app/models/novahawk/providers/azure/regions.rb:67
 msgid "South East Asia"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:71
+#: ../app/models/novahawk/providers/azure/regions.rb:71
 msgid "South India"
 msgstr ""
 
@@ -49775,11 +49775,11 @@ msgstr ""
 #. TRANSLATORS: file: product/views/CloudVolumeBackup.yaml
 #. TRANSLATORS: file: product/views/CloudVolumeSnapshot-cloud_volume_snapshots.yaml
 #. TRANSLATORS: file: product/views/CloudVolumeSnapshot.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #. TRANSLATORS: file: product/views/MiddlewareDeployment.yaml
 #. TRANSLATORS: file: product/views/MiqProvision.yaml
 #. TRANSLATORS: file: product/views/MiqReportResult-all.yaml
@@ -49806,7 +49806,7 @@ msgstr ""
 msgid "Status Phase"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 #. TRANSLATORS: file: product/views/OrchestrationStack.yaml
 #: ../config/yaml_strings.rb:4021
 msgid "Status Reason"
@@ -50024,24 +50024,24 @@ msgstr ""
 msgid "Storage Clusters"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager
 #. TRANSLATORS: en.yml key: dictionary.model.StorageManager
 #. TRANSLATORS: file: product/views/StorageManager.yaml
 #: ../config/dictionary_strings.rb:1724 ../config/dictionary_strings.rb:2014 ../config/yaml_strings.rb:4717
 msgid "Storage Manager"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::CinderManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::CinderManager
 #: ../config/dictionary_strings.rb:1728
 msgid "Storage Manager (Cinder)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::SwiftManager
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::SwiftManager
 #: ../config/dictionary_strings.rb:1732
 msgid "Storage Manager (Swift)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager (plural form)
 #. TRANSLATORS: en.yml key: dictionary.model.StorageManager (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.storage_managers
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
@@ -50049,12 +50049,12 @@ msgstr ""
 msgid "Storage Managers"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::CinderManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::CinderManager (plural form)
 #: ../config/dictionary_strings.rb:1730
 msgid "Storage Managers (Cinder)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::SwiftManager (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::SwiftManager (plural form)
 #: ../config/dictionary_strings.rb:1734
 msgid "Storage Managers (Swift)"
 msgstr ""
@@ -50084,7 +50084,7 @@ msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.table.ems_storage (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 #: ../app/presenters/menu/default_menu.rb:176 ../config/dictionary_strings.rb:2270 ../config/yaml_strings.rb:3061
 msgid "Storage Providers"
 msgstr ""
@@ -50655,7 +50655,7 @@ msgstr ""
 msgid "Subnetpool"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 #. TRANSLATORS: file: product/views/NetworkPort.yaml
 #: ../app/presenters/menu/default_menu.rb:162 ../app/controllers/vm_common.rb:522 ../config/yaml_strings.rb:4531
 msgid "Subnets"
@@ -50778,7 +50778,7 @@ msgstr ""
 msgid "Suspend Middleware Server"
 msgstr ""
 
-#: ../app/models/miq_template/operations.rb:15 ../app/models/manageiq/providers/google/cloud_manager/vm/operations/power.rb:3 ../app/models/manageiq/providers/google/cloud_manager/vm/operations/power.rb:11
+#: ../app/models/miq_template/operations.rb:15 ../app/models/novahawk/providers/google/cloud_manager/vm/operations/power.rb:3 ../app/models/novahawk/providers/google/cloud_manager/vm/operations/power.rb:11
 msgid "Suspend Operation"
 msgstr ""
 
@@ -51329,7 +51329,7 @@ msgstr ""
 msgid "Tasks for %{name}"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Template
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Template
 #. TRANSLATORS: en.yml key: dictionary.table.container_template
 #. TRANSLATORS: en.yml key: dictionary.table.template_infra
 #: ../app/views/static/deploy_containers_provider/deploy-provider-details-create-vms.html.haml:40 ../app/views/static/deploy_containers_provider/deploy-provider-details-create-vms.html.haml:117 ../app/views/configuration/_ui_1.html.haml:25 ../config/dictionary_strings.rb:1532 ../config/dictionary_strings.rb:2198 ../config/dictionary_strings.rb:2534
@@ -51345,7 +51345,7 @@ msgstr ""
 msgid "Template Analysis"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 #: ../config/yaml_strings.rb:3863
 msgid "Template Name"
 msgstr ""
@@ -51354,7 +51354,7 @@ msgstr ""
 msgid "Template Selection"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplateCfn.yaml
@@ -51368,13 +51368,13 @@ msgstr ""
 msgid "Template:"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Template (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Template (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.container_template (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.container_templates
 #. TRANSLATORS: en.yml key: dictionary.table.template_infra (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate.yaml
 #: ../app/controllers/miq_template_controller.rb:22 ../app/controllers/ems_common.rb:76 ../app/controllers/vm_common.rb:1262 ../app/controllers/application_controller/miq_request_methods.rb:615 ../app/controllers/host_controller.rb:98 ../app/controllers/vm_infra_controller.rb:32 ../app/views/layouts/listnav/_ems_infra.html.haml:70 ../app/views/layouts/listnav/_host.html.haml:136 ../app/views/configuration/_ui_2.html.haml:210 ../app/assets/javascripts/controllers/ems_infra_dashboard/util/infra-dashboard-utils-factory.js:43 ../config/dictionary_strings.rb:1534 ../config/dictionary_strings.rb:2200 ../config/dictionary_strings.rb:2202 ../config/dictionary_strings.rb:2536 ../config/yaml_strings.rb:59
@@ -51427,11 +51427,11 @@ msgstr ""
 msgid "Tenant Quota"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager.rb:39
+#: ../app/models/novahawk/providers/openstack/cloud_manager.rb:39
 msgid "Tenant mapping is disabled on the Provider"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager.rb:41
+#: ../app/models/novahawk/providers/openstack/cloud_manager.rb:41
 msgid "Tenant mapping is supported only when CloudTenant exists on the CloudManager"
 msgstr ""
 
@@ -51643,11 +51643,11 @@ msgstr ""
 msgid "The Host Default VNC Port Range ending port must be equal to or higher than the starting point"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/vm/resize.rb:8
+#: ../app/models/novahawk/providers/openstack/cloud_manager/vm/resize.rb:8
 msgid "The Instance cannot be resized, current state has to be active or shutoff."
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/auth_key_pair.rb:17
+#: ../app/models/novahawk/providers/openstack/cloud_manager/auth_key_pair.rb:17
 msgid "The Keypair is not connected to an active %{table}"
 msgstr ""
 
@@ -51687,7 +51687,7 @@ msgstr ""
 msgid "The VM is not connected to an active »Cloud/Infrastructure Providers«"
 msgstr ""
 
-#: ../app/models/manageiq/providers/google/cloud_manager/vm/operations/guest.rb:7 ../app/models/manageiq/providers/openstack/cloud_manager/vm/operations/guest.rb:7 ../app/models/manageiq/providers/azure/cloud_manager/vm/operations/power.rb:7 ../app/models/manageiq/providers/vmware/infra_manager/vm/operations/guest.rb:7
+#: ../app/models/novahawk/providers/google/cloud_manager/vm/operations/guest.rb:7 ../app/models/novahawk/providers/openstack/cloud_manager/vm/operations/guest.rb:7 ../app/models/novahawk/providers/azure/cloud_manager/vm/operations/power.rb:7 ../app/models/novahawk/providers/vmware/infra_manager/vm/operations/guest.rb:7
 msgid "The VM is not powered on"
 msgstr ""
 
@@ -51719,7 +51719,7 @@ msgstr ""
 msgid "The number of Masters must be 1, 3, or 5"
 msgstr ""
 
-#: ../app/models/manageiq/providers/redhat/infra_manager/vm.rb:19
+#: ../app/models/novahawk/providers/redhat/infra_manager/vm.rb:19
 msgid "The provider does not support reconfigure disks"
 msgstr ""
 
@@ -51841,7 +51841,7 @@ msgstr ""
 msgid "The user's role is not authorized for any access, please contact the administrator!"
 msgstr ""
 
-#: ../app/models/manageiq/providers/redhat/infra_manager/vm.rb:17
+#: ../app/models/novahawk/providers/redhat/infra_manager/vm.rb:17
 msgid "The virtual machine is not associated with a provider"
 msgstr ""
 
@@ -51869,7 +51869,7 @@ msgstr ""
 msgid "The widget \"%{widget_name}\" is already part of the edited dashboard"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/vm/associate_ip.rb:8
+#: ../app/models/novahawk/providers/openstack/cloud_manager/vm/associate_ip.rb:8
 msgid "There are no %{floating_ips} available to this %{instance}."
 msgstr ""
 
@@ -51904,7 +51904,7 @@ msgstr ""
 msgid "Thin Provisioning Used"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/vm/associate_ip.rb:17
+#: ../app/models/novahawk/providers/openstack/cloud_manager/vm/associate_ip.rb:17
 msgid "This %{instance} does not have any associated %{floating_ips}"
 msgstr ""
 
@@ -52044,7 +52044,7 @@ msgstr ""
 msgid "This element should be removed and recreated or you can report the error to your %{product} administrator."
 msgstr ""
 
-#: ../app/models/manageiq/providers/redhat/infra_manager/api_integration.rb:233
+#: ../app/models/novahawk/providers/redhat/infra_manager/api_integration.rb:233
 msgid "This feature is not supported by the api version of the provider"
 msgstr ""
 
@@ -52427,7 +52427,7 @@ msgstr ""
 msgid "Total CPUs"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../config/yaml_strings.rb:4938
 msgid "Total Configuration Profiles"
 msgstr ""
@@ -52441,10 +52441,10 @@ msgid "Total Configured Memory"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ConfigurationProfile.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager_InventoryGroup.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager_InventoryGroup.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../config/yaml_strings.rb:3574
 msgid "Total Configured Systems"
 msgstr ""
@@ -52537,8 +52537,8 @@ msgstr ""
 
 #. TRANSLATORS: en.yml key: dictionary.column.v_total_snapshots
 #. TRANSLATORS: file: product/views/InstanceOrImage.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 #. TRANSLATORS: file: product/views/MiqTemplate.yaml
 #. TRANSLATORS: file: product/views/Vm-all_vms.yaml
@@ -52768,20 +52768,20 @@ msgstr ""
 #. TRANSLATORS: file: product/views/CloudVolume.yaml
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
 #. TRANSLATORS: file: product/views/ContainerService.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 #. TRANSLATORS: file: product/views/MiqAction.yaml
 #. TRANSLATORS: file: product/views/MiqEvent-actions.yaml
 #. TRANSLATORS: file: product/views/MiqWidget-all.yaml
@@ -52851,9 +52851,9 @@ msgstr ""
 msgid "URI is required"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 #: ../app/views/static/deploy_containers_provider/deploy-provider-config-auth-settings.html.haml:122 ../config/yaml_strings.rb:4166
 msgid "URL"
 msgstr ""
@@ -52874,11 +52874,11 @@ msgstr ""
 msgid "US Folio - 8.5in x 13.0in"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:75
+#: ../app/models/novahawk/providers/azure/regions.rb:75
 msgid "US Gov Iowa"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:79
+#: ../app/models/novahawk/providers/azure/regions.rb:79
 msgid "US Gov Virginia"
 msgstr ""
 
@@ -53337,9 +53337,9 @@ msgid "Updated - %{update_time}, Last valid connection - %{valid_time}"
 msgstr ""
 
 #. TRANSLATORS: file: product/views/ChargebackRate.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 #. TRANSLATORS: file: product/views/OrchestrationTemplateCfn.yaml
@@ -54188,7 +54188,7 @@ msgstr ""
 msgid "Username must be entered to perform LDAP Group Look Up"
 msgstr ""
 
-#: ../app/models/manageiq/providers/ansible_tower/provider.rb:44
+#: ../app/models/novahawk/providers/ansible_tower/provider.rb:44
 msgid "Username or password is not valid"
 msgstr ""
 
@@ -54547,7 +54547,7 @@ msgstr ""
 msgid "VM data will be collected for VMs under selected %{hosts} only. Data is collected for a %{cluster} and all of its %{hosts} when at least one %{host} is selected."
 msgstr ""
 
-#: ../app/models/vm_or_template/operations.rb:58 ../app/models/manageiq/providers/azure/cloud_manager/vm/operations.rb:7
+#: ../app/models/vm_or_template/operations.rb:58 ../app/models/novahawk/providers/azure/cloud_manager/vm/operations.rb:7
 msgid "VM has no %{table}, unable to destroy VM"
 msgstr ""
 
@@ -54746,9 +54746,9 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.table.vms
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
 #. TRANSLATORS: file: product/views/CimBaseStorageExtent.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 #. TRANSLATORS: file: product/views/OntapFileShare.yaml
 #. TRANSLATORS: file: product/views/OntapLogicalDisk.yaml
 #. TRANSLATORS: file: product/views/OntapStorageSystem.yaml
@@ -54791,7 +54791,7 @@ msgstr ""
 msgid "VMs And Templates"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
 #. TRANSLATORS: file: product/views/VmOrTemplate-all_archived.yaml
 #. TRANSLATORS: file: product/views/VmOrTemplate-all_orphaned.yaml
 #. TRANSLATORS: file: product/views/VmOrTemplate-all_vms_and_templates.yaml
@@ -54800,13 +54800,13 @@ msgstr ""
 msgid "VMs and Templates"
 msgstr ""
 
-#: ../app/models/manageiq/providers/redhat/infra_manager/vm_or_template_shared/scanning.rb:42
+#: ../app/models/novahawk/providers/redhat/infra_manager/vm_or_template_shared/scanning.rb:42
 msgid ""
 "VMs must be scanned from an EVM server whose host is attached to the same\n"
 "  storage as the VM unless overridden via SmartProxy affinity.\n"
 "  Please verify that:\n"
-"  1) Direct LUNs are attached to ManageIQ appliance\n"
-"  2) Management Relationship is set for the ManageIQ appliance"
+"  1) Direct LUNs are attached to NOVAHawk appliance\n"
+"  2) Management Relationship is set for the NOVAHawk appliance"
 msgstr ""
 
 #: ../app/views/vm_common/_main.html.haml:16 ../app/views/vm_cloud/_main.html.haml:17
@@ -55900,7 +55900,7 @@ msgstr ""
 msgid "Virtual Hardware Version"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Vm
 #. TRANSLATORS: en.yml key: dictionary.table.vm_infra
 #. TRANSLATORS: en.yml key: dictionary.table.vm_or_template
 #: ../app/helpers/container_node_helper/textual_summary.rb:78 ../app/helpers/container_group_helper/textual_summary.rb:101 ../app/helpers/middleware_server_helper/textual_summary.rb:60 ../config/dictionary_strings.rb:1528 ../config/dictionary_strings.rb:2548 ../config/dictionary_strings.rb:2552
@@ -55917,17 +55917,17 @@ msgstr ""
 msgid "Virtual Machine %{subject} has been retired."
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager::Vm
 #: ../config/dictionary_strings.rb:1564
 msgid "Virtual Machine (Microsoft)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager::Vm
 #: ../config/dictionary_strings.rb:1568
 msgid "Virtual Machine (Red Hat)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager::Vm
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager::Vm
 #: ../config/dictionary_strings.rb:1560
 msgid "Virtual Machine (VMware)"
 msgstr ""
@@ -55937,7 +55937,7 @@ msgstr ""
 msgid "Virtual Machine Views"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Vm (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.vm_infra (plural form)
 #. TRANSLATORS: en.yml key: dictionary.table.vm_or_template (plural form)
 #. TRANSLATORS: file: db/fixtures/miq_product_features.yml
@@ -55949,17 +55949,17 @@ msgstr ""
 msgid "Virtual Machines"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1566
 msgid "Virtual Machines (Microsoft)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1570
 msgid "Virtual Machines (Red Hat)"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager::Vm (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager::Vm (plural form)
 #: ../config/dictionary_strings.rb:1562
 msgid "Virtual Machines (VMware)"
 msgstr ""
@@ -55973,7 +55973,7 @@ msgstr ""
 msgid "Virtual Templates"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
 #: ../app/helpers/vm_cloud_helper/textual_summary.rb:311 ../config/yaml_strings.rb:4590
 msgid "Virtualization Type"
 msgstr ""
@@ -57842,23 +57842,23 @@ msgstr ""
 msgid "Weeks"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:91
+#: ../app/models/novahawk/providers/azure/regions.rb:91
 msgid "West Central US"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:83
+#: ../app/models/novahawk/providers/azure/regions.rb:83
 msgid "West Europe"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:87
+#: ../app/models/novahawk/providers/azure/regions.rb:87
 msgid "West India"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:95
+#: ../app/models/novahawk/providers/azure/regions.rb:95
 msgid "West US"
 msgstr ""
 
-#: ../app/models/manageiq/providers/azure/regions.rb:99
+#: ../app/models/novahawk/providers/azure/regions.rb:99
 msgid "West US 2"
 msgstr ""
 
@@ -57876,7 +57876,7 @@ msgstr ""
 msgid "When configuring a VNC Proxy, both Address and Port are required"
 msgstr ""
 
-#: ../app/models/manageiq/providers/google/cloud_manager/refresh_parser.rb:253
+#: ../app/models/novahawk/providers/google/cloud_manager/refresh_parser.rb:253
 msgid "Whether or not the VM is 'preemptible'. See https://cloud.google.com/compute/docs/instances/preemptible for more details."
 msgstr ""
 
@@ -58136,11 +58136,11 @@ msgstr ""
 #. TRANSLATORS: en.yml key: dictionary.table.zone
 #. TRANSLATORS: file: product/views/ConfigurationProfile.yaml
 #. TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 #. TRANSLATORS: file: product/views/MiqServer.yaml
 #. TRANSLATORS: file: product/views/VmdbDatabaseConnection.yaml
 #: ../app/helpers/storage_manager_helper/textual_summary.rb:31 ../app/helpers/provider_configuration_manager_helper.rb:41 ../app/helpers/provider_foreman_helper.rb:52 ../app/helpers/provider_foreman_helper.rb:133 ../app/views/ems_infra/_form.html.haml:92 ../app/views/storage_manager/_form.html.haml:116 ../app/views/shared/views/ems_common/_form.html.haml:120 ../app/views/shared/views/ems_common/angular/_form.html.haml:295 ../app/views/ems_container/_form.html.haml:75 ../app/views/provider_foreman/_form.html.haml:77 ../app/views/ems_middleware/_form.html.haml:74 ../app/views/ops/rhn/_server_table.html.haml:91 ../app/views/ops/_schedule_show.html.haml:246 ../app/views/ops/_all_tabs.html.haml:8 ../app/views/ops/_ldap_region_show.html.haml:44 ../app/views/ops/_ldap_region_form.html.haml:55 ../app/views/miq_task/_tasks_options.html.haml:16 ../app/views/report/_report_info.html.haml:160 ../app/views/report/_show_schedule.html.haml:120 ../config/dictionary_strings.rb:2058 ../config/dictionary_strings.rb:2444 ../config/dictionary_strings.rb:2562 ../config/yaml_strings.rb:3589 ../config/model_attributes.rb:4584
@@ -58424,7 +58424,7 @@ msgstr ""
 msgid "clear"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/cloud_volume_snapshot.rb:37
+#: ../app/models/novahawk/providers/openstack/cloud_manager/cloud_volume_snapshot.rb:37
 msgid "cloud_volume cannot be nil"
 msgstr ""
 
@@ -58473,11 +58473,11 @@ msgstr ""
 msgid "down"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/host_aggregate.rb:34
+#: ../app/models/novahawk/providers/openstack/cloud_manager/host_aggregate.rb:34
 msgid "ems cannot be found"
 msgstr ""
 
-#: ../app/models/manageiq/providers/openstack/cloud_manager/host_aggregate.rb:32
+#: ../app/models/novahawk/providers/openstack/cloud_manager/host_aggregate.rb:32
 msgid "ems cannot be nil"
 msgstr ""
 
@@ -58509,7 +58509,7 @@ msgstr ""
 msgid "expression malformed,  must contain one of 'checkall', 'checkany', 'checkcount'"
 msgstr ""
 
-#: ../app/models/cloud_subnet.rb:59 ../app/models/cloud_volume.rb:34 ../app/models/cloud_network.rb:57 ../app/models/cloud_tenant.rb:42 ../app/models/manageiq/providers/openstack/cloud_manager/cloud_volume_snapshot.rb:39
+#: ../app/models/cloud_subnet.rb:59 ../app/models/cloud_volume.rb:34 ../app/models/cloud_network.rb:57 ../app/models/cloud_tenant.rb:42 ../app/models/novahawk/providers/openstack/cloud_manager/cloud_volume_snapshot.rb:39
 msgid "ext_management_system cannot be nil"
 msgstr ""
 
@@ -58645,7 +58645,7 @@ msgstr ""
 msgid "must be implemented in a subclass"
 msgstr ""
 
-#: ../app/models/manageiq/providers/base_manager/event_catcher/runner.rb:57 ../app/models/manageiq/providers/base_manager/event_catcher/runner.rb:62 ../app/models/manageiq/providers/base_manager/event_catcher/runner.rb:118 ../app/models/manageiq/providers/base_manager/event_catcher/runner.rb:122 ../app/models/manageiq/providers/base_manager/event_catcher/runner.rb:135
+#: ../app/models/novahawk/providers/base_manager/event_catcher/runner.rb:57 ../app/models/novahawk/providers/base_manager/event_catcher/runner.rb:62 ../app/models/novahawk/providers/base_manager/event_catcher/runner.rb:118 ../app/models/novahawk/providers/base_manager/event_catcher/runner.rb:122 ../app/models/novahawk/providers/base_manager/event_catcher/runner.rb:135
 msgid "must be implemented in subclass"
 msgstr ""
 
@@ -58681,7 +58681,7 @@ msgstr ""
 msgid "no connection source available"
 msgstr ""
 
-#: ../app/models/mixins/vim_connect_mixin.rb:4 ../app/models/netapp_remote_service.rb:528 ../app/models/miq_smis_agent.rb:116 ../app/models/manageiq/providers/ansible_tower/provider.rb:29
+#: ../app/models/mixins/vim_connect_mixin.rb:4 ../app/models/netapp_remote_service.rb:528 ../app/models/miq_smis_agent.rb:116 ../app/models/novahawk/providers/ansible_tower/provider.rb:29
 msgid "no credentials defined"
 msgstr ""
 
@@ -58689,7 +58689,7 @@ msgstr ""
 msgid "no credentials defined for %{type} %{name}"
 msgstr ""
 
-#: ../app/models/manageiq/providers/storage_manager/swift_manager.rb:32 ../app/models/manageiq/providers/storage_manager/cinder_manager.rb:39
+#: ../app/models/novahawk/providers/storage_manager/swift_manager.rb:32 ../app/models/novahawk/providers/storage_manager/cinder_manager.rb:39
 msgid "no parent_manager to ems"
 msgstr ""
 
@@ -58709,7 +58709,7 @@ msgstr ""
 msgid "normal"
 msgstr ""
 
-#: ../app/models/manageiq/providers/microsoft/infra_manager/template.rb:6 ../app/models/manageiq/providers/google/cloud_manager/template.rb:6 ../app/models/manageiq/providers/redhat/infra_manager/template.rb:8 ../app/models/manageiq/providers/openstack/cloud_manager/template.rb:15 ../app/models/manageiq/providers/azure/cloud_manager/template.rb:8 ../app/models/manageiq/providers/vmware/infra_manager/template.rb:8
+#: ../app/models/novahawk/providers/microsoft/infra_manager/template.rb:6 ../app/models/novahawk/providers/google/cloud_manager/template.rb:6 ../app/models/novahawk/providers/redhat/infra_manager/template.rb:8 ../app/models/novahawk/providers/openstack/cloud_manager/template.rb:15 ../app/models/novahawk/providers/azure/cloud_manager/template.rb:8 ../app/models/novahawk/providers/vmware/infra_manager/template.rb:8
 msgid "not connected to ems"
 msgstr ""
 
@@ -58717,7 +58717,7 @@ msgstr ""
 msgid "not implemented in %{class_name}"
 msgstr ""
 
-#: ../app/helpers/middleware_server_helper/textual_summary.rb:20 ../app/helpers/middleware_server_helper/textual_summary.rb:32 ../app/helpers/middleware_server_helper/textual_summary.rb:47 ../app/models/manageiq/providers/hawkular/middleware_manager/refresh_parser.rb:275
+#: ../app/helpers/middleware_server_helper/textual_summary.rb:20 ../app/helpers/middleware_server_helper/textual_summary.rb:32 ../app/helpers/middleware_server_helper/textual_summary.rb:47 ../app/models/novahawk/providers/hawkular/middleware_manager/refresh_parser.rb:275
 msgid "not yet available"
 msgstr ""
 
@@ -58813,7 +58813,7 @@ msgstr ""
 msgid "raise_created_event must be implemented in a subclass"
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/vm.rb:132
+#: ../app/models/novahawk/providers/cloud_manager/vm.rb:132
 msgid "raw_associate_floating_ip must be implemented in a subclass"
 msgstr ""
 
@@ -58833,7 +58833,7 @@ msgstr ""
 msgid "raw_delete_cloud_tenant must be implemented in a subclass"
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/auth_key_pair/operations.rb:9
+#: ../app/models/novahawk/providers/cloud_manager/auth_key_pair/operations.rb:9
 msgid "raw_delete_key_pair must be implemented in a subclass"
 msgstr ""
 
@@ -58857,7 +58857,7 @@ msgstr ""
 msgid "raw_delete_volume must be implemented in a subclass"
 msgstr ""
 
-#: ../app/models/manageiq/providers/cloud_manager/vm.rb:140
+#: ../app/models/novahawk/providers/cloud_manager/vm.rb:140
 msgid "raw_disassociate_floating_ip must be implemented in a subclass"
 msgstr ""
 
@@ -58969,7 +58969,7 @@ msgstr ""
 msgid "stopping"
 msgstr ""
 
-#: ../app/models/manageiq/providers/redhat/infra_manager/vm.rb:15
+#: ../app/models/novahawk/providers/redhat/infra_manager/vm.rb:15
 msgid "storage is missing"
 msgstr ""
 
@@ -59058,22 +59058,22 @@ msgstr ""
 msgid "vApp"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #: ../config/yaml_strings.rb:4640
 msgid "vApp Orchestration Template"
 msgstr ""
 
-#. TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+#. TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 #: ../config/yaml_strings.rb:4638
 msgid "vApp Orchestration Templates"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate
 #: ../config/dictionary_strings.rb:1938
 msgid "vApp Template"
 msgstr ""
 
-#. TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate (plural form)
+#. TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate (plural form)
 #: ../app/presenters/tree_builder_orchestration_templates.rb:42 ../app/presenters/tree_builder_orchestration_templates.rb:44 ../config/dictionary_strings.rb:1940
 msgid "vApp Templates"
 msgstr ""

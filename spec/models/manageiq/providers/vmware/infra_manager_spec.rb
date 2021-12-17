@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager do
+describe NOVAHawk::Providers::Vmware::InfraManager do
   it ".ems_type" do
     expect(described_class.ems_type).to eq('vmwarews')
   end
@@ -9,7 +9,7 @@ describe ManageIQ::Providers::Vmware::InfraManager do
 
   describe ".metrics_collector_queue_name" do
     it "returns the correct queue name" do
-      worker_queue = ManageIQ::Providers::Vmware::InfraManager::MetricsCollectorWorker.default_queue_name
+      worker_queue = NOVAHawk::Providers::Vmware::InfraManager::MetricsCollectorWorker.default_queue_name
       expect(described_class.metrics_collector_queue_name).to eq(worker_queue)
     end
   end
@@ -119,7 +119,7 @@ describe ManageIQ::Providers::Vmware::InfraManager do
   def assert_event_catcher_restart_queued
     q = MiqQueue.where(:method_name => "stop_event_monitor")
     expect(q.length).to eq(1)
-    expect(q[0].class_name).to eq("ManageIQ::Providers::Vmware::InfraManager")
+    expect(q[0].class_name).to eq("NOVAHawk::Providers::Vmware::InfraManager")
     expect(q[0].instance_id).to eq(@ems.id)
     expect(q[0].role).to eq("event")
   end

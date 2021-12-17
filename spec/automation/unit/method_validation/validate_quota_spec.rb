@@ -12,7 +12,7 @@ describe "Quota Validation" do
              "quota_used_yaml=#{@quota_used}&" \
              "Tenant::quota_source=#{@tenant.id}&" \
              "quota_requested_yaml=#{@quota_requested}" if provision_request
-    MiqAeEngine.instantiate("/ManageIQ/system/request/Call_Instance?namespace=System/CommonMethods&" \
+    MiqAeEngine.instantiate("/NOVAHawk/system/request/Call_Instance?namespace=System/CommonMethods&" \
                             "class=QuotaMethods&instance=validate_quota&#{attrs.join('&')}", @user)
   end
 

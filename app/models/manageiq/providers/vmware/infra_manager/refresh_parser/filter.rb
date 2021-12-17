@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::InfraManager
+class NOVAHawk::Providers::Vmware::InfraManager
   module RefreshParser::Filter
     def filter_vc_data(ems, target)
       log_header = "EMS: [#{ems.name}], id: [#{ems.id}]"

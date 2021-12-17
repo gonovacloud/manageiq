@@ -6,7 +6,7 @@ module C3Helper
       javascript_tag(<<-EOJ)
 $.get("#{url}").success(function(data) {
   var chart = c3.generate(chartData(data.miqChart, data, { bindto: "##{chart_id}" }));
-  ManageIQ.charts.c3["#{chart_id}"] = chart;
+  NOVAHawk.charts.c3["#{chart_id}"] = chart;
   miqSparkleOff();
 });
 EOJ
@@ -19,7 +19,7 @@ EOJ
       javascript_tag(<<-EOJ)
 var data = #{data.to_json};
 var chart = c3.generate(chartData('#{data[:miqChart]}', data, { bindto: "##{chart_id}" }));
-ManageIQ.charts.c3["#{chart_id}"] = chart;
+NOVAHawk.charts.c3["#{chart_id}"] = chart;
 EOJ
   end
 end

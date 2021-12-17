@@ -1,5 +1,5 @@
 describe EmsEvent do
-  let(:data_dir) { Rails.root.join("spec/models/manageiq/providers/vmware/infra_manager/event_data") }
+  let(:data_dir) { Rails.root.join("spec/models/novahawk/providers/vmware/infra_manager/event_data") }
 
   context ".add_vc" do
     before(:each) do
@@ -26,7 +26,7 @@ describe EmsEvent do
         :source            => "VC",
         :message           => "User logged event: EVM SmartState Analysis completed for VM [tch-UBUNTU-904-LTS-DESKTOP]",
         :timestamp         => Time.parse("2010-08-24T01:08:10.396636Z"),
-        :username          => "MANAGEIQ\\thennessy",
+        :username          => "novahawk\\thennessy",
 
         :ems_id            => @ems.id,
         :vm_or_template_id => @vm1.id,

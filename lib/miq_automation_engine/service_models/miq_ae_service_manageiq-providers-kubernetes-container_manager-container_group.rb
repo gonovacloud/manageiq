@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Kubernetes_ContainerManager_ContainerGroup < MiqAeServiceProvider
+  class MiqAeServiceNOVAHawk_Providers_Kubernetes_ContainerManager_ContainerGroup < MiqAeServiceProvider
   end
 end

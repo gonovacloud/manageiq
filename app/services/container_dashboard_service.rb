@@ -4,7 +4,7 @@ class ContainerDashboardService
 
   def initialize(provider_id, controller)
     @provider_id = provider_id
-    @ems = ManageIQ::Providers::ContainerManager.find(@provider_id) unless @provider_id.blank?
+    @ems = NOVAHawk::Providers::ContainerManager.find(@provider_id) unless @provider_id.blank?
     @controller = controller
   end
 
@@ -82,11 +82,11 @@ class ContainerDashboardService
   end
 
   def providers
-    provider_classes_to_ui_types = ManageIQ::Providers::ContainerManager.subclasses.each_with_object({}) { |subclass, h|
+    provider_classes_to_ui_types = NOVAHawk::Providers::ContainerManager.subclasses.each_with_object({}) { |subclass, h|
       name = subclass.name.split('::')[2]
       h[subclass.name] = name.to_sym
     }
-    providers = @ems.present? ? {@ems.type => 1} : ManageIQ::Providers::ContainerManager.group(:type).count
+    providers = @ems.present? ? {@ems.type => 1} : NOVAHawk::Providers::ContainerManager.group(:type).count
 
     result = {}
     providers.each do |provider, count|
@@ -189,7 +189,7 @@ class ContainerDashboardService
   def hourly_network_metrics
     hourly_network_trend = Hash.new(0)
     MetricRollup.with_interval_and_time_range("hourly", (1.day.ago.beginning_of_hour.utc)..(Time.now.utc))
-                .where(:resource => (@ems || ManageIQ::Providers::ContainerManager.all)).each do |m|
+                .where(:resource => (@ems || NOVAHawk::Providers::ContainerManager.all)).each do |m|
       hour = m.timestamp.beginning_of_hour.utc
       hourly_network_trend[hour] += m.net_usage_rate_average if m.net_usage_rate_average.present?
     end
@@ -263,7 +263,7 @@ class ContainerDashboardService
     tp = TimeProfile.profile_for_user_tz(current_user.id, current_user.get_timezone) || TimeProfile.default_time_profile
 
     @daily_metrics ||= Metric::Helper.find_for_interval_name('daily', tp)
-                                     .where(:resource => (@ems || ManageIQ::Providers::ContainerManager.all))
+                                     .where(:resource => (@ems || NOVAHawk::Providers::ContainerManager.all))
                                      .where('timestamp > ?', 30.days.ago.utc).order('timestamp')
   end
 end

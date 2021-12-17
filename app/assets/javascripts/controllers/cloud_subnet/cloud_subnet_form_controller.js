@@ -1,11 +1,11 @@
-ManageIQ.angular.app.controller('cloudSubnetFormController', ['$http', '$scope', 'cloudSubnetFormId', 'miqService', function($http, $scope, cloudSubnetFormId, miqService) {
+NOVAHawk.angular.app.controller('cloudSubnetFormController', ['$http', '$scope', 'cloudSubnetFormId', 'miqService', function($http, $scope, cloudSubnetFormId, miqService) {
   $scope.cloudSubnetModel = { name: '', ems_id: '', cloud_tenant_id: '', network_id: '' };
   $scope.formId = cloudSubnetFormId;
   $scope.afterGet = false;
   $scope.modelCopy = angular.copy( $scope.cloudSubnetModel );
   $scope.model = "cloudSubnetModel";
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   if (cloudSubnetFormId == 'new') {
     $scope.cloudSubnetModel.name = "";

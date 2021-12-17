@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionWorkflow < MiqProvisionConfiguredSystemWorkflow
+class NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionWorkflow < MiqProvisionConfiguredSystemWorkflow
   def self.default_dialog_file
     'miq_provision_configured_system_foreman_dialogs'
   end

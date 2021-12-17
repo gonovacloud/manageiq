@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::CloudManager::ProvisionWorkflow do
+describe NOVAHawk::Providers::Openstack::CloudManager::ProvisionWorkflow do
   include Spec::Support::WorkflowHelper
 
   let(:admin)    { FactoryGirl.create(:user_with_group) }

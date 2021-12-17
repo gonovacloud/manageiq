@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Kubernetes::ContainerManager < ManageIQ::Providers::ContainerManager
+class NOVAHawk::Providers::Kubernetes::ContainerManager < NOVAHawk::Providers::ContainerManager
   require_nested :Container
   require_nested :ContainerGroup
   require_nested :ContainerNode
@@ -13,7 +13,7 @@ class ManageIQ::Providers::Kubernetes::ContainerManager < ManageIQ::Providers::C
   require_nested :Refresher
   require_nested :Scanning
 
-  include ManageIQ::Providers::Kubernetes::ContainerManagerMixin
+  include NOVAHawk::Providers::Kubernetes::ContainerManagerMixin
 
   DEFAULT_PORT = 6443
   default_value_for :port, DEFAULT_PORT
@@ -22,7 +22,7 @@ class ManageIQ::Providers::Kubernetes::ContainerManager < ManageIQ::Providers::C
   # (parsers, events, etc.). It should be explicitly selected here and not
   # decided by the user nor out of control in the defaults of kubeclient gem
   # because it's not guaranteed that the next default version will work with
-  # our specific code in ManageIQ.
+  # our specific code in NOVAHawk.
   delegate :api_version, :to => :class
 
   def api_version=(_value)
@@ -46,6 +46,6 @@ class ManageIQ::Providers::Kubernetes::ContainerManager < ManageIQ::Providers::C
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcher
+    NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcher
   end
 end

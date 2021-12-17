@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('arbitrationProfileFormController', ['$scope', '$location', 'arbitrationProfileFormId', 'miqService', 'postService', 'API', 'arbitrationProfileDataFactory', function($scope, $location, arbitrationProfileFormId, miqService, postService, API, arbitrationProfileDataFactory) {
+NOVAHawk.angular.app.controller('arbitrationProfileFormController', ['$scope', '$location', 'arbitrationProfileFormId', 'miqService', 'postService', 'API', 'arbitrationProfileDataFactory', function($scope, $location, arbitrationProfileFormId, miqService, postService, API, arbitrationProfileDataFactory) {
   var init = function() {
     $scope.arbitrationProfileModel = {
       name: '',
@@ -14,7 +14,7 @@ ManageIQ.angular.app.controller('arbitrationProfileFormController', ['$scope', '
     $scope.formId    = arbitrationProfileFormId;
     $scope.afterGet  = false;
     $scope.model     = "arbitrationProfileModel";
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
 
     if (arbitrationProfileFormId == 'new') {
       $scope.newRecord = true;

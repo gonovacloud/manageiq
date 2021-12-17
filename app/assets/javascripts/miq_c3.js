@@ -1,10 +1,10 @@
 /* global chartData miqBuildChartMenuEx miqSparkleOff */
 
 function load_c3_charts() {
-  for (var set in ManageIQ.charts.chartData) {
-    for (var i = 0; i < ManageIQ.charts.chartData[set].length; i++) {
+  for (var set in NOVAHawk.charts.chartData) {
+    for (var i = 0; i < NOVAHawk.charts.chartData[set].length; i++) {
       var chart_id = "miq_chart_" + set + "_" + i.toString();
-      var data = ManageIQ.charts.chartData[set][i];
+      var data = NOVAHawk.charts.chartData[set][i];
       if (data != null) {
         load_c3_chart(data.xml, chart_id);
 
@@ -52,7 +52,7 @@ function load_c3_chart(data, chart_id, height) {
   };
   var chart = c3.generate(generate_args);
 
-  ManageIQ.charts.c3[chart_id] = chart;
+  NOVAHawk.charts.c3[chart_id] = chart;
 };
 
 
@@ -72,7 +72,7 @@ function recalculateChartYAxisLabels (id) {
     return;
   }
 
-  var format = ManageIQ.charts.chartData.candu[this.config.bindto.split('_').pop()].xml.miq.format;
+  var format = NOVAHawk.charts.chartData.candu[this.config.bindto.split('_').pop()].xml.miq.format;
   var tmpMin = getChartFormatedValueWithFormat(format, minMax[0]);
   var tmpMax = getChartFormatedValueWithFormat(format, minMax[1]);
   var minShowed = tmpMin[0];
@@ -92,12 +92,12 @@ function recalculateChartYAxisLabels (id) {
 
 function validatePrecision(minShowed, maxShowed, format, min, max) {
   if (min === max) {
-    return {'changed' : false, 'format' : ManageIQ.charts.formatters[format.function].c3(format.options)}
+    return {'changed' : false, 'format' : NOVAHawk.charts.formatters[format.function].c3(format.options)}
   }
   var recalculated = recalculatePrecision(minShowed, maxShowed, format, min, max);
   return {
     'changed' : recalculated.changed,
-    'format'  : ManageIQ.charts.formatters[recalculated.format.function].c3(recalculated.format.options)
+    'format'  : NOVAHawk.charts.formatters[recalculated.format.function].c3(recalculated.format.options)
   }
 }
 
@@ -147,11 +147,11 @@ function getChartColumnDataValues(columns) {
 }
 
 function getChartFormatedValue(format, value) {
-  return numeral(ManageIQ.charts.formatters[format.function].c3(format.options)(value).split(/[^0-9\,\.]/)[0]).value();
+  return numeral(NOVAHawk.charts.formatters[format.function].c3(format.options)(value).split(/[^0-9\,\.]/)[0]).value();
 }
 
 function getChartFormatedValueWithFormat(format, value) {
-  var tmp = /^([0-9\,\.]+)(.*)/.exec(ManageIQ.charts.formatters[format.function].c3(format.options)(value));
+  var tmp = /^([0-9\,\.]+)(.*)/.exec(NOVAHawk.charts.formatters[format.function].c3(format.options)(value));
   return [numeral(tmp[1]).value(), tmp[2]];
 }
 

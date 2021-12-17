@@ -75,7 +75,7 @@ class MiqHostProvisionWorkflow < MiqRequestWorkflow
   def allowed_ems(_options = {})
     result = {}
 
-    ManageIQ::Providers::Vmware::InfraManager.select("id, name").each do |e|
+    NOVAHawk::Providers::Vmware::InfraManager.select("id, name").each do |e|
       result[e.id] = e.name
     end
     result

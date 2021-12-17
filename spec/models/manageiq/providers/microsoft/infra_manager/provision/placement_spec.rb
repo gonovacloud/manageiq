@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Microsoft::InfraManager::Provision do
+describe NOVAHawk::Providers::Microsoft::InfraManager::Provision do
   context "::Placement" do
     before do
       ems      = FactoryGirl.create(:ems_microsoft_with_authentication)

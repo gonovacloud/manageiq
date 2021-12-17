@@ -4,11 +4,11 @@ class ChangeOptionsInMiqAlert < ActiveRecord::Migration
   end
 
   def up
-    say_with_time("Replacing instances of 'alert@manageiq.com' from canned Alerts with ''") do
+    say_with_time("Replacing instances of 'alert@novahawk.com' from canned Alerts with ''") do
       MiqAlert.all.each do |a|
         value = a.options
         email_to = [:notifications, :email, :to]
-        if value.fetch_path(email_to) == ['alert@manageiq.com']
+        if value.fetch_path(email_to) == ['alert@novahawk.com']
           value.store_path(email_to, '')
           a.save
         end

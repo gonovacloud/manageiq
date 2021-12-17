@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter < ::NetworkRouter
+class NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter < ::NetworkRouter
   include ProviderObjectMixin
   include AsyncDeleteMixin
 

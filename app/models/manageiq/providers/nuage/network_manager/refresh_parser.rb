@@ -1,6 +1,6 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Nuage::NetworkManager::RefreshParser
-    include ManageIQ::Providers::Nuage::RefreshParserCommon::HelperMethods
+    include NOVAHawk::Providers::Nuage::RefreshParserCommon::HelperMethods
     include Vmdb::Logging
 
     def self.ems_inv_to_hashes(ems, options = nil)
@@ -133,15 +133,15 @@ module ManageIQ::Providers
 
     class << self
       def cloud_subnet_type
-        "ManageIQ::Providers::Nuage::NetworkManager::CloudSubnet"
+        "NOVAHawk::Providers::Nuage::NetworkManager::CloudSubnet"
       end
 
       def network_group_type
-        "ManageIQ::Providers::Nuage::NetworkManager::NetworkGroup"
+        "NOVAHawk::Providers::Nuage::NetworkManager::NetworkGroup"
       end
 
       def security_group_type
-        'ManageIQ::Providers::Nuage::NetworkManager::SecurityGroup'
+        'NOVAHawk::Providers::Nuage::NetworkManager::SecurityGroup'
       end
     end
   end

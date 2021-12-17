@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Google_CloudManager_CloudVolumeSnapshot < MiqAeServiceCloudVolumeSnapshot
+  class MiqAeServiceNOVAHawk_Providers_Google_CloudManager_CloudVolumeSnapshot < MiqAeServiceCloudVolumeSnapshot
   end
 end

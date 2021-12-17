@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google::CloudManager::Vm::Operations::Power
+module NOVAHawk::Providers::Google::CloudManager::Vm::Operations::Power
   def validate_suspend
     validate_unsupported(_("Suspend Operation"))
   end

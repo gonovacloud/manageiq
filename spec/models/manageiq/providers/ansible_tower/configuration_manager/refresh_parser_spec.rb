@@ -1,6 +1,6 @@
 require 'ansible_tower_client'
 
-describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshParser do
+describe NOVAHawk::Providers::AnsibleTower::ConfigurationManager::RefreshParser do
   let(:connection) do
     double(:connection,
            :api => double(:api,
@@ -28,9 +28,9 @@ describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshParser 
     expect(parser.instance_variable_get(:@data)[:configured_systems].first).to eq(
       :counterpart          => nil,
       :hostname             => "host1",
-      :inventory_root_group => {:ems_ref => "1", :name => "inventory1", :type => "ManageIQ::Providers::ConfigurationManager::InventoryRootGroup"},
+      :inventory_root_group => {:ems_ref => "1", :name => "inventory1", :type => "NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup"},
       :manager_ref          => "1",
-      :type                 => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem",
+      :type                 => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem",
       :virtual_instance_ref => "vmwareVm-1",
     )
     expect(parser.instance_variable_get(:@data)[:configured_systems].last).to have_attributes(
@@ -41,11 +41,11 @@ describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshParser 
     expect(parser.instance_variable_get(:@data)[:configuration_scripts].count).to eq(2)
     expect(parser.instance_variable_get(:@data)[:configuration_scripts].first).to eq(
       :description          => "description1",
-      :inventory_root_group => {:type => "ManageIQ::Providers::ConfigurationManager::InventoryRootGroup", :ems_ref => "1", :name => "inventory1"},
+      :inventory_root_group => {:type => "NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup", :ems_ref => "1", :name => "inventory1"},
       :manager_ref          => "1",
       :name                 => "template1",
       :survey_spec          => "some_hash_payload",
-      :type                 => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript",
+      :type                 => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript",
       :variables            => "some_json_payload",
     )
 
@@ -53,7 +53,7 @@ describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshParser 
     expect(parser.instance_variable_get(:@data)[:ems_folders].first).to eq(
       :ems_ref => "1",
       :name    => "inventory1",
-      :type    => "ManageIQ::Providers::ConfigurationManager::InventoryRootGroup"
+      :type    => "NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup"
     )
   end
 end

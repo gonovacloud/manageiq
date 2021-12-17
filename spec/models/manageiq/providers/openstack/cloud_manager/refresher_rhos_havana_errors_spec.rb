@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::CloudManager::Refresher do
+describe NOVAHawk::Providers::Openstack::CloudManager::Refresher do
   before(:each) do
     EmsRefresh.debug_failures = false
 
@@ -24,7 +24,7 @@ describe ManageIQ::Providers::Openstack::CloudManager::Refresher do
   end
 
   def refresh_ems(ems, error)
-    allow(ManageIQ::Providers::Openstack::CloudManager::RefreshParser)
+    allow(NOVAHawk::Providers::Openstack::CloudManager::RefreshParser)
       .to receive(:ems_inv_to_hashes).and_raise(Excon::Errors::BadRequest.new(error))
     expect do
       EmsRefresh.refresh(ems)

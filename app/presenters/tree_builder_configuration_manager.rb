@@ -1,13 +1,13 @@
 class TreeBuilderConfigurationManager < TreeBuilder
-  has_kids_for ManageIQ::Providers::Foreman::ConfigurationManager, [:x_get_tree_cmf_kids]
-  has_kids_for ManageIQ::Providers::AnsibleTower::ConfigurationManager, [:x_get_tree_cmat_kids]
-  has_kids_for ManageIQ::Providers::ConfigurationManager::InventoryRootGroup, [:x_get_tree_igf_kids]
+  has_kids_for NOVAHawk::Providers::Foreman::ConfigurationManager, [:x_get_tree_cmf_kids]
+  has_kids_for NOVAHawk::Providers::AnsibleTower::ConfigurationManager, [:x_get_tree_cmat_kids]
+  has_kids_for NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup, [:x_get_tree_igf_kids]
   has_kids_for ConfigurationProfile, [:x_get_tree_cpf_kids]
 
   private
 
   def tree_init_options(_tree_name)
-    {:leaf     => "ManageIQ::Providers::ConfigurationManager"}
+    {:leaf     => "NOVAHawk::Providers::ConfigurationManager"}
   end
 
   def set_locals_for_render
@@ -39,7 +39,7 @@ class TreeBuilderConfigurationManager < TreeBuilder
 
   def x_get_tree_cmat_kids(object, count_only)
     count_only_or_objects_filtered(count_only,
-                                   ManageIQ::Providers::ConfigurationManager::InventoryGroup.where(:ems_id => object[:id]),
+                                   NOVAHawk::Providers::ConfigurationManager::InventoryGroup.where(:ems_id => object[:id]),
                                    "name", :match_via_descendants => ConfiguredSystem)
   end
 
@@ -85,8 +85,8 @@ class TreeBuilderConfigurationManager < TreeBuilder
   def x_get_tree_custom_kids(object_hash, count_only, _options)
     objects =
       case object_hash[:id]
-      when "fr" then ManageIQ::Providers::Foreman::ConfigurationManager
-      when "at" then ManageIQ::Providers::AnsibleTower::ConfigurationManager
+      when "fr" then NOVAHawk::Providers::Foreman::ConfigurationManager
+      when "at" then NOVAHawk::Providers::AnsibleTower::ConfigurationManager
       end
     count_only_or_objects_filtered(count_only, objects, "name", :match_via_descendants => ConfiguredSystem)
   end

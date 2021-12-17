@@ -126,7 +126,7 @@ class CloudVolumeController < ApplicationController
       @showtype = @display
     when "instances"
       title = ui_lookup(:tables => "vm_cloud")
-      kls   = ManageIQ::Providers::CloudManager::Vm
+      kls   = NOVAHawk::Providers::CloudManager::Vm
       drop_breadcrumb(
         :name => _("%{name} (All %{title})") % {:name => @volume.name, :title => title},
         :url  => "/cloud_volume/show/#{@volume.id}?display=#{@display}"

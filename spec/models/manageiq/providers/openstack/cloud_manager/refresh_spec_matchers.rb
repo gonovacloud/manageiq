@@ -7,7 +7,7 @@ module Openstack
     # If the list of hashes have different indexes than the methods of the objects, specify the
     # the third parameter. E.g. {:index => method_name}, you can specify only indexes, that are different
     #
-    # If the list of hashes have different values than in the input, e.g. for neutron ManageIQ renames
+    # If the list of hashes have different values than in the input, e.g. for neutron NOVAHawk renames
     # ingress/egress to inbound/outbound, we can list it in the dictionary. Translate from test data
     # to value in object. SO if test data has 'ingress' and object 'inboud', we send fourth parameter
     # {'ingress' => 'inboud'}. List all values from your test data you need. You can scope it by key too
@@ -17,7 +17,7 @@ module Openstack
     # that is used in Refresh parser code, should be used here.
     #
     # If some attributes are not modelled on ManagaIQ side, we can ommit them from comparing. Though
-    # in ideal world this should not happen. ManageIQ should model all attributes.
+    # in ideal world this should not happen. NOVAHawk should model all attributes.
     def comparable_objects_with_hashes(real_objects, expected_data, key_translate_table = {},
                                        value_translate_table = {}, key_blacklist = [])
       # Select all used keys in the data, without keys for internal references, starting with __

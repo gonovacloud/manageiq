@@ -115,26 +115,26 @@ module ApplicationController::Compare
     render :update do |page|
       page << javascript_prologue
       if @sb[:miq_temp_params] == "different"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'compare_all');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'compare_all');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'compare_same');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'compare_same');"
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'compare_diff');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'compare_diff');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'compare_all');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'compare_all');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'compare_same');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'compare_same');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'compare_diff');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'compare_diff');"
       elsif @sb[:miq_temp_params] == "same"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'compare_all');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'compare_all');"
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'compare_same');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'compare_same');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'compare_diff');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'compare_diff');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'compare_all');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'compare_all');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'compare_same');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'compare_same');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'compare_diff');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'compare_diff');"
       else
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'compare_all');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'compare_all');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'compare_same');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'compare_same');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'compare_diff');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'compare_diff');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'compare_all');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'compare_all');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'compare_same');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'compare_same');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'compare_diff');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'compare_diff');"
       end
       page.replace_html("main_div", :partial => "layouts/compare")  # Replace the main div area contents
       page << "miqSparkle(false);"
@@ -167,15 +167,15 @@ module ApplicationController::Compare
     render :update do |page|
       page << javascript_prologue
       if @compressed
-        page << "ManageIQ.toolbars.enableItem('#view_tb', 'compare_expanded');"
-        page << "ManageIQ.toolbars.unmarkItem('#view_tb', 'compare_expanded');"
-        page << "ManageIQ.toolbars.disableItem('#view_tb', 'compare_compressed');"
-        page << "ManageIQ.toolbars.markItem('#view_tb', 'compare_compressed');"
+        page << "NOVAHawk.toolbars.enableItem('#view_tb', 'compare_expanded');"
+        page << "NOVAHawk.toolbars.unmarkItem('#view_tb', 'compare_expanded');"
+        page << "NOVAHawk.toolbars.disableItem('#view_tb', 'compare_compressed');"
+        page << "NOVAHawk.toolbars.markItem('#view_tb', 'compare_compressed');"
       else
-        page << "ManageIQ.toolbars.disableItem('#view_tb', 'compare_expanded');"
-        page << "ManageIQ.toolbars.markItem('#view_tb', 'compare_expanded');"
-        page << "ManageIQ.toolbars.enableItem('#view_tb', 'compare_compressed');"
-        page << "ManageIQ.toolbars.unmarkItem('#view_tb', 'compare_compressed');"
+        page << "NOVAHawk.toolbars.disableItem('#view_tb', 'compare_expanded');"
+        page << "NOVAHawk.toolbars.markItem('#view_tb', 'compare_expanded');"
+        page << "NOVAHawk.toolbars.enableItem('#view_tb', 'compare_compressed');"
+        page << "NOVAHawk.toolbars.unmarkItem('#view_tb', 'compare_compressed');"
       end
       page.replace_html("main_div", :partial => "layouts/compare")  # Replace the main div area contents
       page << "miqSparkle(false);"
@@ -192,15 +192,15 @@ module ApplicationController::Compare
     render :update do |page|
       page << javascript_prologue
       if @exists_mode
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'comparemode_details');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'comparemode_details');"
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'comparemode_exists');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'comparemode_exists');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'comparemode_details');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'comparemode_details');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'comparemode_exists');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'comparemode_exists');"
       else
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'comparemode_details');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'comparemode_details');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'comparemode_exists');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'comparemode_exists');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'comparemode_details');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'comparemode_details');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'comparemode_exists');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'comparemode_exists');"
       end
       page.replace_html("main_div", :partial => "layouts/compare")  # Replace the main div area contents
       page << "miqSparkle(false);"
@@ -596,26 +596,26 @@ module ApplicationController::Compare
     render :update do |page|
       page << javascript_prologue
       if @sb[:miq_drift_params] == "different"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'drift_all');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'drift_all');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'drift_same');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'drift_same');"
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'drift_diff');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'drift_diff');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'drift_all');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'drift_all');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'drift_same');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'drift_same');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'drift_diff');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'drift_diff');"
       elsif @sb[:miq_drift_params] == "same"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'drift_all');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'drift_all');"
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'drift_same');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'drift_same');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'drift_diff');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'drift_diff');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'drift_all');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'drift_all');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'drift_same');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'drift_same');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'drift_diff');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'drift_diff');"
       else
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'drift_all');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'drift_all');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'drift_diff');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'drift_diff');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'drift_same');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'drift_same');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'drift_all');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'drift_all');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'drift_diff');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'drift_diff');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'drift_same');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'drift_same');"
       end
       page.replace_html("main_div", :partial => "layouts/compare") # Replace the main div area contents
       page << "miqSparkle(false);"
@@ -680,15 +680,15 @@ module ApplicationController::Compare
     render :update do |page|
       page << javascript_prologue
       if @exists_mode
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'driftmode_details');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'driftmode_details');"
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'driftmode_exists');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'driftmode_exists');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'driftmode_details');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'driftmode_details');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'driftmode_exists');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'driftmode_exists');"
       else
-        page << "ManageIQ.toolbars.disableItem('#center_tb', 'driftmode_details');"
-        page << "ManageIQ.toolbars.markItem('#center_tb', 'driftmode_details');"
-        page << "ManageIQ.toolbars.enableItem('#center_tb', 'driftmode_exists');"
-        page << "ManageIQ.toolbars.unmarkItem('#center_tb', 'driftmode_exists');"
+        page << "NOVAHawk.toolbars.disableItem('#center_tb', 'driftmode_details');"
+        page << "NOVAHawk.toolbars.markItem('#center_tb', 'driftmode_details');"
+        page << "NOVAHawk.toolbars.enableItem('#center_tb', 'driftmode_exists');"
+        page << "NOVAHawk.toolbars.unmarkItem('#center_tb', 'driftmode_exists');"
       end
       page.replace_html("main_div", :partial => "layouts/compare") # Replace the main div area contents
       page << "miqSparkle(false);"
@@ -704,15 +704,15 @@ module ApplicationController::Compare
     render :update do |page|
       page << javascript_prologue
       if @compressed
-        page << "ManageIQ.toolbars.enableItem('#view_tb', 'drift_expanded');"
-        page << "ManageIQ.toolbars.unmarkItem('#view_tb', 'drift_expanded');"
-        page << "ManageIQ.toolbars.disableItem('#view_tb', 'drift_compressed');"
-        page << "ManageIQ.toolbars.markItem('#view_tb', 'drift_compressed');"
+        page << "NOVAHawk.toolbars.enableItem('#view_tb', 'drift_expanded');"
+        page << "NOVAHawk.toolbars.unmarkItem('#view_tb', 'drift_expanded');"
+        page << "NOVAHawk.toolbars.disableItem('#view_tb', 'drift_compressed');"
+        page << "NOVAHawk.toolbars.markItem('#view_tb', 'drift_compressed');"
       else
-        page << "ManageIQ.toolbars.disableItem('#view_tb', 'drift_expanded');"
-        page << "ManageIQ.toolbars.markItem('#view_tb', 'drift_expanded');"
-        page << "ManageIQ.toolbars.enableItem('#view_tb', 'drift_compressed');"
-        page << "ManageIQ.toolbars.unmarkItem('#view_tb', 'drift_compressed');"
+        page << "NOVAHawk.toolbars.disableItem('#view_tb', 'drift_expanded');"
+        page << "NOVAHawk.toolbars.markItem('#view_tb', 'drift_expanded');"
+        page << "NOVAHawk.toolbars.enableItem('#view_tb', 'drift_compressed');"
+        page << "NOVAHawk.toolbars.unmarkItem('#view_tb', 'drift_compressed');"
       end
       page.replace_html("main_div", :partial => "layouts/compare") # Replace the main div area contents
       page << "miqSparkle(false);"

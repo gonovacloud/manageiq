@@ -1,5 +1,5 @@
 describe('toolbarController', function () {
-  beforeEach(module('ManageIQ.toolbar'));
+  beforeEach(module('NOVAHawk.toolbar'));
 
   var middleware_toolbar_list = getJSONFixture('toolbar_middleware_server_list.json');
   var middleware_toolbar_detail = getJSONFixture('toolbar_middleware_server_detail.json');
@@ -83,7 +83,7 @@ describe('toolbarController', function () {
      })
 
      it('should call update toolbar', function() {
-       ManageIQ.angular.rxSubject.onNext({update: 'someButton', type: 'hidden', value: true})
+       NOVAHawk.angular.rxSubject.onNext({update: 'someButton', type: 'hidden', value: true})
        expect($controller.onUpdateItem).toHaveBeenCalled();
      })
    });

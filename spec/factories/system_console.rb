@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory(:system_console) do
-    host_name 'manageiq.org'
+    host_name 'novahawk.org'
     port '80'
     ssl false
     protocol :vnc

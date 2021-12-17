@@ -1,4 +1,4 @@
-class ManageIQ::Providers::BaseManager::RefreshWorker::Runner < ::MiqQueueWorkerBase::Runner
+class NOVAHawk::Providers::BaseManager::RefreshWorker::Runner < ::MiqQueueWorkerBase::Runner
   OPTIONS_PARSER_SETTINGS = ::MiqWorker::Runner::OPTIONS_PARSER_SETTINGS + [
     [:ems_id, 'EMS Instance ID', String],
   ]

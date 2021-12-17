@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::ProvisionViaIso::StateMachine
+module NOVAHawk::Providers::Redhat::InfraManager::ProvisionViaIso::StateMachine
   def configure_destination
     attach_floppy_payload
     signal :boot_from_cdrom

@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class ConfigurationManagerDecorator < Draper::Decorator
     delegate_all
 

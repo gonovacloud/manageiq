@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Hawkular::MiddlewareManager::AlertProfileManager
     require 'hawkular/hawkular_client'
 

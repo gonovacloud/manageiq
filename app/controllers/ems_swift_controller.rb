@@ -9,7 +9,7 @@ class EmsSwiftController < ApplicationController
   after_action :set_session_data
 
   def self.model
-    ManageIQ::Providers::StorageManager::SwiftManager
+    NOVAHawk::Providers::StorageManager::SwiftManager
   end
 
   def self.table_name

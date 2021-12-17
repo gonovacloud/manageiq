@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Kubernetes::ContainerManager::RefreshWorker < ManageIQ::Providers::BaseManager::RefreshWorker
+class NOVAHawk::Providers::Kubernetes::ContainerManager::RefreshWorker < NOVAHawk::Providers::BaseManager::RefreshWorker
   require_nested :Runner
   def self.ems_class
-    ManageIQ::Providers::Kubernetes::ContainerManager
+    NOVAHawk::Providers::Kubernetes::ContainerManager
   end
 end

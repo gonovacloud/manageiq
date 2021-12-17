@@ -1,3 +1,3 @@
-module ManageIQ::Providers::Openshift::ContainerManager::EventParser
-  include ManageIQ::Providers::Kubernetes::ContainerManager::EventParserMixin
+module NOVAHawk::Providers::Openshift::ContainerManager::EventParser
+  include NOVAHawk::Providers::Kubernetes::ContainerManager::EventParserMixin
 end

@@ -1,5 +1,5 @@
 # We run puma through rails server with options here:
-# https://github.com/ManageIQ/manageiq/blob/2920f76fe609147a6e7c68245a3717d55a7ece7e/app/models/mixins/miq_web_server_worker_mixin.rb#L162-L175
+# https://github.com/NOVAHawk/novahawk/blob/2920f76fe609147a6e7c68245a3717d55a7ece7e/app/models/mixins/miq_web_server_worker_mixin.rb#L162-L175
 #
 # Note, Rails::Server and Rack::Server don't expose all puma/thin web server options.
 #

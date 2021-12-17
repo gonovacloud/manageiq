@@ -23,7 +23,7 @@ module MiqProvisionMixin
     "ResourceGroup"                                  => [:resource_groups,         :resource_group],
     "FloatingIp"                                     => [:floating_ip_addresses,   :floating_ip_address],
     "Flavor"                                         => [:instance_types,          :instance_type],
-    "ManageIQ::Providers::CloudManager::AuthKeyPair" => [:guest_access_key_pairs,  :guest_access_key_pair]
+    "NOVAHawk::Providers::CloudManager::AuthKeyPair" => [:guest_access_key_pairs,  :guest_access_key_pair]
   }.freeze
 
   def tag_ids
@@ -336,8 +336,8 @@ module MiqProvisionMixin
   end
 
   def resource_class(rsc)
-    if rsc.kind_of?(MiqAeMethodService::MiqAeServiceManageIQ_Providers_CloudManager_AuthKeyPair)
-      return 'ManageIQ::Providers::CloudManager::AuthKeyPair'
+    if rsc.kind_of?(MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_CloudManager_AuthKeyPair)
+      return 'NOVAHawk::Providers::CloudManager::AuthKeyPair'
     end
     $1 if rsc.class.base_class.name =~ /::MiqAeService(.*)/
   end

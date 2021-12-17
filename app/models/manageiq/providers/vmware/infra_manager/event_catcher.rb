@@ -1,3 +1,3 @@
-class ManageIQ::Providers::Vmware::InfraManager::EventCatcher < ManageIQ::Providers::BaseManager::EventCatcher
+class NOVAHawk::Providers::Vmware::InfraManager::EventCatcher < NOVAHawk::Providers::BaseManager::EventCatcher
   require_nested :Runner
 end

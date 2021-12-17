@@ -3,7 +3,7 @@ describe('bootstrapTreeController', function() {
   var allNodes, innerNode;
   var onNodeSelectedCallback = function() {};
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, _$controller_, _$httpBackend_, _bootstrapTreeSubscriptionService_) {
     $scope = $rootScope.$new();

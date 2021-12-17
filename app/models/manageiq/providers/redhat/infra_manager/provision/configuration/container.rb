@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Provision::Configuration::Container
+module NOVAHawk::Providers::Redhat::InfraManager::Provision::Configuration::Container
   private
 
   def configure_container_description(rhevm_vm)

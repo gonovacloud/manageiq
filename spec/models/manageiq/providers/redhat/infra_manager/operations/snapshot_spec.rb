@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Vm::Operations::Snapshot do
+describe NOVAHawk::Providers::Redhat::InfraManager::Vm::Operations::Snapshot do
   describe 'calling snapshot operations' do
     let(:vm) { FactoryGirl.create(:vm_redhat) }
     let!(:snapshot) { double("snapshot", :id => 1, :uid_ems => 'ems_id_111') }

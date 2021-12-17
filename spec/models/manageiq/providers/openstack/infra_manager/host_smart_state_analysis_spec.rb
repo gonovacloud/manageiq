@@ -118,7 +118,7 @@ describe Host do
       it "should collect br-tun" do
         network_port = host.network_ports.where(:name => "br-tun").first
         expect(network_port.attributes).to include(
-          "type"                           => "ManageIQ::Providers::Openstack::NetworkManager::NetworkPort",
+          "type"                           => "NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort",
           "name"                           => "br-tun",
           "ems_ref"                        => nil,
           "mac_address"                    => "c2:88:60:f8:76:47",
@@ -142,7 +142,7 @@ describe Host do
         network_port = host.network_ports.where(:name => "vlan10").first
 
         expect(network_port.attributes).to include(
-          "type"                           => "ManageIQ::Providers::Openstack::NetworkManager::NetworkPort",
+          "type"                           => "NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort",
           "name"                           => "vlan10",
           "ems_ref"                        => nil,
           "mac_address"                    => "be:0b:0f:3d:3e:97",
@@ -167,7 +167,7 @@ describe Host do
         network_port = host.network_ports.where(:name => "br-ex,eth0").first
 
         expect(network_port.attributes).to include(
-          "type"                           => "ManageIQ::Providers::Openstack::NetworkManager::NetworkPort",
+          "type"                           => "NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort",
           "name"                           => "br-ex,eth0",
           "ems_ref"                        => nil,
           "mac_address"                    => "00:f9:e4:fe:20:68",

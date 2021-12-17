@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Google::CloudManager < ManageIQ::Providers::CloudManager
+class NOVAHawk::Providers::Google::CloudManager < NOVAHawk::Providers::CloudManager
   require_nested :AvailabilityZone
   require_nested :EventCatcher
   require_nested :EventParser
@@ -14,7 +14,7 @@ class ManageIQ::Providers::Google::CloudManager < ManageIQ::Providers::CloudMana
   require_nested :VirtualTemplate
   require_nested :Vm
 
-  include ManageIQ::Providers::Google::ManagerMixin
+  include NOVAHawk::Providers::Google::ManagerMixin
 
   supports :provisioning
   supports :regions
@@ -23,7 +23,7 @@ class ManageIQ::Providers::Google::CloudManager < ManageIQ::Providers::CloudMana
   before_update :ensure_managers_zone_and_provider_region
 
   def ensure_network_manager
-    build_network_manager(:type => 'ManageIQ::Providers::Google::NetworkManager') unless network_manager
+    build_network_manager(:type => 'NOVAHawk::Providers::Google::NetworkManager') unless network_manager
   end
 
   def self.ems_type
@@ -58,10 +58,10 @@ class ManageIQ::Providers::Google::CloudManager < ManageIQ::Providers::CloudMana
     supported_auth_types.include?(authtype.to_s)
   end
 
-  validates :provider_region, :inclusion => {:in => ManageIQ::Providers::Google::Regions.names}
+  validates :provider_region, :inclusion => {:in => NOVAHawk::Providers::Google::Regions.names}
 
   def description
-    ManageIQ::Providers::Google::Regions.find_by_name(provider_region)[:description]
+    NOVAHawk::Providers::Google::Regions.find_by_name(provider_region)[:description]
   end
 
   # Operations

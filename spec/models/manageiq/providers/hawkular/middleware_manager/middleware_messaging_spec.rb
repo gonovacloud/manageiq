@@ -1,7 +1,7 @@
 require_relative 'hawkular_helper'
 # VCR Cassettes: Hawkular Services 0.0.13.Final-SNAPSHOT (commit 3cef2062513f4d949aa21a90db51f9cd105cf329)
 
-describe ManageIQ::Providers::Hawkular::MiddlewareManager::MiddlewareMessaging do
+describe NOVAHawk::Providers::Hawkular::MiddlewareManager::MiddlewareMessaging do
   vcr_cassete_name = described_class.name.underscore.to_s
 
   let(:ems_hawkular) do

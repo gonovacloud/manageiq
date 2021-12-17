@@ -1,8 +1,8 @@
-class ManageIQ::Providers::Azure::NetworkManager::RefreshWorker < ::MiqEmsRefreshWorker
+class NOVAHawk::Providers::Azure::NetworkManager::RefreshWorker < ::MiqEmsRefreshWorker
   require_nested :Runner
 
   def self.ems_class
-    ManageIQ::Providers::Azure::NetworkManager
+    NOVAHawk::Providers::Azure::NetworkManager
   end
 
   def self.settings_name

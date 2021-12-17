@@ -1,4 +1,4 @@
-module ManageIQ::Providers::CloudManager::AuthKeyPair::Operations
+module NOVAHawk::Providers::CloudManager::AuthKeyPair::Operations
   def self.included(base)
     base.send :include, InstanceMethods
     base.extend ClassMethods

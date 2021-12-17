@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::NetworkManager::NetworkRouter < ::NetworkRouter
+class NOVAHawk::Providers::Google::NetworkManager::NetworkRouter < ::NetworkRouter
 end

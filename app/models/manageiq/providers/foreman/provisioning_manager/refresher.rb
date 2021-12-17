@@ -1,6 +1,6 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Foreman
-    class ProvisioningManager::Refresher < ManageIQ::Providers::BaseManager::Refresher
+    class ProvisioningManager::Refresher < NOVAHawk::Providers::BaseManager::Refresher
       include ::EmsRefresh::Refreshers::EmsRefresherMixin
 
       def parse_legacy_inventory(manager)

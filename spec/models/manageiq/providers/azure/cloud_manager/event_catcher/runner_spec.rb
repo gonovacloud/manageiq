@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Azure::CloudManager::EventCatcher::Runner do
+describe NOVAHawk::Providers::Azure::CloudManager::EventCatcher::Runner do
   context "parsing properties" do
     let(:ems) { FactoryGirl.create(:ems_azure_with_authentication) }
     let(:catcher) { described_class.new(:ems_id => ems.id) }
@@ -10,7 +10,7 @@ describe ManageIQ::Providers::Azure::CloudManager::EventCatcher::Runner do
     end
 
     before do
-      allow_any_instance_of(ManageIQ::Providers::Azure::CloudManager).to receive_messages(:authentication_check => [true, ""])
+      allow_any_instance_of(NOVAHawk::Providers::Azure::CloudManager).to receive_messages(:authentication_check => [true, ""])
       allow_any_instance_of(MiqWorker::Runner).to receive(:worker_initialization)
     end
 

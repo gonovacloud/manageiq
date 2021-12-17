@@ -1,1 +1,1 @@
-::MiqProvisionInfraWorkflow = ::ManageIQ::Providers::InfraManager::ProvisionWorkflow
+::MiqProvisionInfraWorkflow = ::NOVAHawk::Providers::InfraManager::ProvisionWorkflow

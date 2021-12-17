@@ -1,4 +1,4 @@
-module ManageIQ
+module NOVAHawk
   module Providers::Google
     module Regions
       # From https://cloud.google.com/compute/docs/zones

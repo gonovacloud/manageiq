@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::Provision::VolumeAttachment
+module NOVAHawk::Providers::Openstack::CloudManager::Provision::VolumeAttachment
   def create_requested_volumes(requested_volumes)
     volumes_attrs_list = [default_volume_attributes]
 

@@ -45,7 +45,7 @@ describe EmsCloudController do
           "ssh_keypair_userid"   => "",
           "ssh_keypair_password" => "[FILTERED]"
         }
-      end.to change { ManageIQ::Providers::Amazon::CloudManager.count }.by(1)
+      end.to change { NOVAHawk::Providers::Amazon::CloudManager.count }.by(1)
     end
 
     it 'creates and updates an authentication record on post' do
@@ -65,7 +65,7 @@ describe EmsCloudController do
       end.to change { Authentication.count }.by(1)
 
       expect(response.status).to eq(200)
-      openstack = ManageIQ::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
+      openstack = NOVAHawk::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
       expect(openstack.authentications.size).to eq(1)
 
       expect do
@@ -159,7 +159,7 @@ describe EmsCloudController do
       }
 
       expect(response.status).to eq(200)
-      openstack = ManageIQ::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
+      openstack = NOVAHawk::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
       get :ems_cloud_form_fields, :params => { "id" => openstack.id }
       expect(response.status).to eq(200)
       expect(response.body).to include('"name":"foo_openstack"')
@@ -182,7 +182,7 @@ describe EmsCloudController do
     it "creates openstack cloud manager with attributes from form" do
       post :create, :params => openstack_form_params
 
-      openstack = ManageIQ::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
+      openstack = NOVAHawk::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
 
       expect(openstack.zone.name).to eq(zone.name)
       expect(openstack.name).to eq("foo_openstack")
@@ -194,7 +194,7 @@ describe EmsCloudController do
     it "updates openstack cloud manager's attribute tenant_mapping_enabled" do
       post :create, :params => openstack_form_params
 
-      openstack = ManageIQ::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
+      openstack = NOVAHawk::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
       openstack_form_params[:id] = openstack.id
       openstack_form_params[:button] = "save"
       openstack_form_params[:tenant_mapping_enabled] = "off"
@@ -219,7 +219,7 @@ describe EmsCloudController do
       }
 
       expect(response.status).to eq(200)
-      expect(ManageIQ::Providers::Openstack::CloudManager.with_hostname('host_openstack')
+      expect(NOVAHawk::Providers::Openstack::CloudManager.with_hostname('host_openstack')
                                                          .with_port('5000')
                                                          .where(:name => 'foo_openstack')
                                                          .count).to eq(1)
@@ -249,7 +249,7 @@ describe EmsCloudController do
       }
 
       expect(response.status).to eq(200)
-      openstack = ManageIQ::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
+      openstack = NOVAHawk::Providers::Openstack::CloudManager.where(:name => "foo_openstack").first
       show_link_actual_path = controller.send(:show_link, openstack)
       expect(show_link_actual_path).to eq("/ems_cloud/#{openstack.id}")
 
@@ -266,7 +266,7 @@ describe EmsCloudController do
   end
 
   context "#build_credentials only contains credentials that it supports and has a username for in params" do
-    let(:mocked_ems)    { double(ManageIQ::Providers::Openstack::CloudManager) }
+    let(:mocked_ems)    { double(NOVAHawk::Providers::Openstack::CloudManager) }
     let(:default_creds) { {:userid => "default_userid", :password => "default_password"} }
     let(:amqp_creds)    { {:userid => "amqp_userid",    :password => "amqp_password"} }
 
@@ -296,7 +296,7 @@ describe EmsCloudController do
   end
 
   context "#update_ems_button_validate" do
-    let(:mocked_ems) { double(ManageIQ::Providers::Openstack::CloudManager, :id => 1) }
+    let(:mocked_ems) { double(NOVAHawk::Providers::Openstack::CloudManager, :id => 1) }
     it "calls authentication_check with save = false if validation is done for an existing record" do
       allow(controller).to receive(:set_ems_record_vars)
       allow(controller).to receive(:render)

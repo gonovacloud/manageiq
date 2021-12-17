@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::ProvisionViaPxe do
+describe NOVAHawk::Providers::Redhat::InfraManager::ProvisionViaPxe do
   context "A new provision request," do
     before(:each) do
       @os = OperatingSystem.new(:product_name => 'Microsoft Windows')

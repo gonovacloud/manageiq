@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class InfraManager < BaseManager
     require_nested :Template
     require_nested :ProvisionWorkflow

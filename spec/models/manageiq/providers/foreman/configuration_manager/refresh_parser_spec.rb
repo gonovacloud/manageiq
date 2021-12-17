@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Foreman::ConfigurationManager::RefreshParser do
+describe NOVAHawk::Providers::Foreman::ConfigurationManager::RefreshParser do
   let(:date1)   { "2014-11-07T20:41:21Z" }
   let(:parser)  { described_class.new }
   let(:flavors) { {"10" => "110", "20" => "120", "30" => "130"} }

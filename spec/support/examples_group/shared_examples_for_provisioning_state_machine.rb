@@ -46,7 +46,7 @@ end
 
 shared_examples_for "End-to-end State Machine Run" do
   it "Completes Successfully" do
-    expect(task).to be_kind_of(ManageIQ::Providers::Redhat::InfraManager::Provision)
+    expect(task).to be_kind_of(NOVAHawk::Providers::Redhat::InfraManager::Provision)
     task.options[:vm_target_name] = options[:vm_target_name] # HACK: Automate usually does this
 
     @queue           = []

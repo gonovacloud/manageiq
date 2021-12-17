@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('vmCloudLiveMigrateFormController', ['$http', '$scope', 'vmCloudLiveMigrateFormId', 'miqService', function($http, $scope, vmCloudLiveMigrateFormId, miqService) {
+NOVAHawk.angular.app.controller('vmCloudLiveMigrateFormController', ['$http', '$scope', 'vmCloudLiveMigrateFormId', 'miqService', function($http, $scope, vmCloudLiveMigrateFormId, miqService) {
   $scope.vmCloudModel = {
     auto_select_host:    true,
     cluster_id:          null,
@@ -12,7 +12,7 @@ ManageIQ.angular.app.controller('vmCloudLiveMigrateFormController', ['$http', '$
   $scope.formId = vmCloudLiveMigrateFormId;
   $scope.modelCopy = angular.copy( $scope.vmCloudModel );
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   $http.get('/vm_cloud/live_migrate_form_fields/' + vmCloudLiveMigrateFormId).success(function(data) {
     $scope.clusters = data.clusters;

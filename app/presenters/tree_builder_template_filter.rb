@@ -1,6 +1,6 @@
 class TreeBuilderTemplateFilter < TreeBuilderVmsFilter
   def tree_init_options(tree_name)
-    super.update(:leaf => 'ManageIQ::Providers::InfraManager::Template')
+    super.update(:leaf => 'NOVAHawk::Providers::InfraManager::Template')
   end
 
   def set_locals_for_render

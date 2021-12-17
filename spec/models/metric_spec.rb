@@ -38,12 +38,12 @@ describe Metric do
       context "executing capture_targets" do
         it "should find enabled targets" do
           targets = Metric::Targets.capture_targets
-          assert_infra_targets_enabled targets, %w(ManageIQ::Providers::Vmware::InfraManager::Vm Host Host ManageIQ::Providers::Vmware::InfraManager::Vm Host Storage)
+          assert_infra_targets_enabled targets, %w(NOVAHawk::Providers::Vmware::InfraManager::Vm Host Host NOVAHawk::Providers::Vmware::InfraManager::Vm Host Storage)
         end
 
         it "should find enabled targets excluding storages" do
           targets = Metric::Targets.capture_targets(nil, :exclude_storages => true)
-          assert_infra_targets_enabled targets, %w(ManageIQ::Providers::Vmware::InfraManager::Vm Host Host ManageIQ::Providers::Vmware::InfraManager::Vm Host)
+          assert_infra_targets_enabled targets, %w(NOVAHawk::Providers::Vmware::InfraManager::Vm Host Host NOVAHawk::Providers::Vmware::InfraManager::Vm Host)
         end
 
         it "should find enabled targets excluding vms" do
@@ -201,7 +201,7 @@ describe Metric do
           msg = MiqQueue.first
           expect(msg.priority).to eq(MiqQueue::HIGH_PRIORITY)
           expect(msg.instance_id).to eq(@vm.id)
-          expect(msg.class_name).to eq("ManageIQ::Providers::Vmware::InfraManager::Vm")
+          expect(msg.class_name).to eq("NOVAHawk::Providers::Vmware::InfraManager::Vm")
         end
 
         context "with an existing queue item at a lower priority" do
@@ -216,7 +216,7 @@ describe Metric do
             msg = MiqQueue.first
             expect(msg.priority).to eq(MiqQueue::HIGH_PRIORITY)
             expect(msg.instance_id).to eq(@vm.id)
-            expect(msg.class_name).to eq("ManageIQ::Providers::Vmware::InfraManager::Vm")
+            expect(msg.class_name).to eq("NOVAHawk::Providers::Vmware::InfraManager::Vm")
           end
         end
 
@@ -232,7 +232,7 @@ describe Metric do
             msg = MiqQueue.first
             expect(msg.priority).to eq(MiqQueue::MAX_PRIORITY)
             expect(msg.instance_id).to eq(@vm.id)
-            expect(msg.class_name).to eq("ManageIQ::Providers::Vmware::InfraManager::Vm")
+            expect(msg.class_name).to eq("NOVAHawk::Providers::Vmware::InfraManager::Vm")
           end
         end
       end
@@ -245,8 +245,8 @@ describe Metric do
 
       context "and a fake vim handle" do
         before(:each) do
-          allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive(:connect).and_return(FakeMiqVimHandle.new)
-          allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive(:disconnect).and_return(true)
+          allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive(:connect).and_return(FakeMiqVimHandle.new)
+          allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive(:disconnect).and_return(true)
         end
 
         context "collecting vm realtime data" do
@@ -365,11 +365,11 @@ describe Metric do
               q = q_all.shift
               expect(q.class_name).to eq("MiqAlert")
               expect(q.method_name).to eq("evaluate_alerts")
-              expect(q.args).to eq([["ManageIQ::Providers::Vmware::InfraManager::Vm", @vm.id], @alarm_event, {}])
+              expect(q.args).to eq([["NOVAHawk::Providers::Vmware::InfraManager::Vm", @vm.id], @alarm_event, {}])
             else
               expect(MiqQueue.count).to eq(2)
             end
-            assert_queue_items_are_hourly_rollups(q_all, "2011-08-12T20:00:00Z", @vm.id, "ManageIQ::Providers::Vmware::InfraManager::Vm")
+            assert_queue_items_are_hourly_rollups(q_all, "2011-08-12T20:00:00Z", @vm.id, "NOVAHawk::Providers::Vmware::InfraManager::Vm")
           end
         end
       end
@@ -383,7 +383,7 @@ describe Metric do
         it "should have queued rollups for vm hourly" do
           q_all = MiqQueue.order(:id)
           expect(q_all.length).to eq(2)
-          assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "ManageIQ::Providers::Vmware::InfraManager::Vm")
+          assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "NOVAHawk::Providers::Vmware::InfraManager::Vm")
         end
 
         context "twice" do
@@ -394,7 +394,7 @@ describe Metric do
           it "should have one set of queued rollups" do
             q_all = MiqQueue.order(:id)
             expect(q_all.length).to eq(2)
-            assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "ManageIQ::Providers::Vmware::InfraManager::Vm")
+            assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "NOVAHawk::Providers::Vmware::InfraManager::Vm")
           end
         end
       end
@@ -790,7 +790,7 @@ describe Metric do
         end
 
         it "should calculate the correct right-size values" do
-          allow(ManageIQ::Providers::Vmware::InfraManager::Vm).to receive(:mem_recommendation_minimum).and_return(0)
+          allow(NOVAHawk::Providers::Vmware::InfraManager::Vm).to receive(:mem_recommendation_minimum).and_return(0)
 
           @vm1.generate_vim_performance_operating_range(@time_profile)
           @vm2.generate_vim_performance_operating_range(@time_profile)
@@ -1129,7 +1129,7 @@ describe Metric do
       context "executing capture_targets" do
         it "should find enabled targets" do
           targets = Metric::Targets.capture_targets
-          assert_cloud_targets_enabled targets, %w(ManageIQ::Providers::Openstack::CloudManager::Vm ManageIQ::Providers::Openstack::CloudManager::Vm ManageIQ::Providers::Openstack::CloudManager::Vm ManageIQ::Providers::Openstack::CloudManager::Vm ManageIQ::Providers::Openstack::CloudManager::Vm)
+          assert_cloud_targets_enabled targets, %w(NOVAHawk::Providers::Openstack::CloudManager::Vm NOVAHawk::Providers::Openstack::CloudManager::Vm NOVAHawk::Providers::Openstack::CloudManager::Vm NOVAHawk::Providers::Openstack::CloudManager::Vm NOVAHawk::Providers::Openstack::CloudManager::Vm)
         end
 
         it "should find no enabled targets excluding vms" do
@@ -1168,7 +1168,7 @@ describe Metric do
         it "should have queued rollups for vm hourly" do
           q_all = MiqQueue.order(:id)
           expect(q_all.length).to eq(2)
-          assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "ManageIQ::Providers::Openstack::CloudManager::Vm")
+          assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "NOVAHawk::Providers::Openstack::CloudManager::Vm")
         end
 
         context "twice" do
@@ -1179,7 +1179,7 @@ describe Metric do
           it "should have one set of queued rollups" do
             q_all = MiqQueue.order(:id)
             expect(q_all.length).to eq(2)
-            assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "ManageIQ::Providers::Openstack::CloudManager::Vm")
+            assert_queue_items_are_hourly_rollups(q_all, "2010-04-14T21:00:00Z", @vm.id, "NOVAHawk::Providers::Openstack::CloudManager::Vm")
           end
         end
       end

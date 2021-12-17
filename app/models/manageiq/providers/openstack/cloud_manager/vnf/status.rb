@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::Vnf::Status < ::OrchestrationStack::Status
+class NOVAHawk::Providers::Openstack::CloudManager::Vnf::Status < ::OrchestrationStack::Status
   def succeeded?
     status.downcase == "active"
   end

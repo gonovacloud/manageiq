@@ -107,7 +107,7 @@ describe EmsInfraController do
       @ems = FactoryGirl.create(:ems_openstack_infra_with_stack)
       @orchestration_stack_parameter_compute = FactoryGirl.create(:orchestration_stack_parameter_openstack_infra_compute)
 
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_status).and_return(["CREATE_COMPLETE", nil])
     end
 
@@ -129,9 +129,9 @@ describe EmsInfraController do
     end
 
     it "when values are changed, and values do not exceed number of hosts available" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_update_stack)
-      expect_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      expect_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .not_to receive(:queue_post_scaledown_task)
       post :scaling, :params => { :id => @ems.id, :scale => "", :orchestration_stack_id => @ems.orchestration_stacks.first.id,
            @orchestration_stack_parameter_compute.name => 2 }
@@ -150,7 +150,7 @@ describe EmsInfraController do
     end
 
     it "when patch operation fails, an error message should be displayed" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_update_stack) { raise _("my error") }
       post :scaling, :params => { :id => @ems.id, :scale => "", :orchestration_stack_id => @ems.orchestration_stacks.first.id,
            @orchestration_stack_parameter_compute.name => 2 }
@@ -160,7 +160,7 @@ describe EmsInfraController do
     end
 
     it "when operation in progress, an error message should be displayed" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_status).and_return(["CREATE_IN_PROGRESS", nil])
       post :scaling, :params => { :id => @ems.id, :scale => "", :orchestration_stack_id => @ems.orchestration_stacks.first.id,
            @orchestration_stack_parameter_compute.name => 2 }
@@ -176,7 +176,7 @@ describe EmsInfraController do
       stub_user(:features => :all)
       @ems = FactoryGirl.create(:ems_openstack_infra_with_stack_and_compute_nodes)
 
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_status).and_return(["CREATE_COMPLETE", nil])
     end
 
@@ -198,9 +198,9 @@ describe EmsInfraController do
     end
 
     it "when values are changed, and selected host is in correct state" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_update_stack)
-      expect_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      expect_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:queue_post_scaledown_task)
       post :scaledown, :params => {:id => @ems.id, :scaledown => "",
            :orchestration_stack_id => @ems.orchestration_stacks.first.id, :host_ids => [@ems.hosts[1].id]}
@@ -219,7 +219,7 @@ describe EmsInfraController do
     end
 
     it "when patch operation fails, an error message should be displayed" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_update_stack) { raise _("my error") }
       post :scaledown, :params => {:id => @ems.id, :scaledown => "",
            :orchestration_stack_id => @ems.orchestration_stacks.first.id, :host_ids => [@ems.hosts[1].id]}
@@ -229,7 +229,7 @@ describe EmsInfraController do
     end
 
     it "when operation in progress, an error message should be displayed" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack)
         .to receive(:raw_status).and_return(["CREATE_IN_PROGRESS", nil])
       post :scaledown, :params => {:id => @ems.id, :scaledown => "",
            :orchestration_stack_id => @ems.orchestration_stacks.first.id, :host_ids => [@ems.hosts[1].id]}
@@ -244,7 +244,7 @@ describe EmsInfraController do
     before do
       stub_user(:features => :all)
       @ems = FactoryGirl.create(:ems_openstack_infra_with_stack_and_compute_nodes)
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager)
         .to receive(:openstack_handle).and_return([])
       allow_any_instance_of(EmsInfraController)
         .to receive(:parse_json).and_return("{\"nodes\": []}")
@@ -252,9 +252,9 @@ describe EmsInfraController do
     end
 
     it "when success expected" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager)
         .to receive(:workflow_service).and_return([])
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager)
         .to receive(:register_and_configure_nodes).and_return("SUCCESS")
       post :register_nodes, :params => {:id => @ems.id, :nodes_json => @nodes_example, :register => 1}
       expect(controller.send(:flash_errors?)).to be_falsey
@@ -271,7 +271,7 @@ describe EmsInfraController do
     end
 
     it "when failure expected, workflow cannot be executed" do
-      allow_any_instance_of(ManageIQ::Providers::Openstack::InfraManager)
+      allow_any_instance_of(NOVAHawk::Providers::Openstack::InfraManager)
         .to receive(:workflow_service).and_return([])
       post :register_nodes, :params => {:id => @ems.id, :nodes_json => @nodes_example, :register => 1}
       expect(controller.send(:flash_errors?)).to be_truthy
@@ -367,7 +367,7 @@ describe EmsInfraController do
       end
 
       it "retains the name field when server emstype is selected from the dropdown" do
-        ems = ManageIQ::Providers::InfraManager.new
+        ems = NOVAHawk::Providers::InfraManager.new
         controller.instance_variable_set(:@ems, ems)
         controller.send(:set_form_vars)
         edit = controller.instance_variable_get(:@edit)
@@ -471,7 +471,7 @@ describe EmsInfraController do
           "default_password"          => "[FILTERED]",
           "default_verify"            => "[FILTERED]"
         }
-      end.to change { ManageIQ::Providers::Microsoft::InfraManager.count }.by(1)
+      end.to change { NOVAHawk::Providers::Microsoft::InfraManager.count }.by(1)
     end
 
     it 'creates and updates an authentication record on post' do
@@ -491,7 +491,7 @@ describe EmsInfraController do
       end.to change { Authentication.count }.by(1)
 
       expect(response.status).to eq(200)
-      scvmm = ManageIQ::Providers::Microsoft::InfraManager.where(:name => "foo_scvmm").first
+      scvmm = NOVAHawk::Providers::Microsoft::InfraManager.where(:name => "foo_scvmm").first
       expect(scvmm.authentications.size).to eq(1)
 
       expect do
@@ -578,7 +578,7 @@ describe EmsInfraController do
           "ssh_keypair_password"          => "[FILTERED]",
           "ssh_keypair_verify"            => "[FILTERED]"
         }
-      end.to change { ManageIQ::Providers::Openstack::InfraManager.count }.by(1)
+      end.to change { NOVAHawk::Providers::Openstack::InfraManager.count }.by(1)
     end
 
     it 'creates and updates an authentication record on post' do
@@ -611,7 +611,7 @@ describe EmsInfraController do
       end.to change { Authentication.count }.by(3)
 
       expect(response.status).to eq(200)
-      openstack = ManageIQ::Providers::Openstack::InfraManager.where(:name => "foo_openstack").first
+      openstack = NOVAHawk::Providers::Openstack::InfraManager.where(:name => "foo_openstack").first
       expect(openstack.authentications.size).to eq(3)
 
       expect do
@@ -637,7 +637,7 @@ describe EmsInfraController do
       allow(controller).to receive(:check_privileges).and_return(true)
       allow(controller).to receive(:assert_privileges).and_return(true)
       login_as FactoryGirl.create(:user, :features => "ems_infra_new")
-      allow_any_instance_of(ManageIQ::Providers::Redhat::InfraManager)
+      allow_any_instance_of(NOVAHawk::Providers::Redhat::InfraManager)
         .to receive(:supported_api_versions).and_return([3, 4])
     end
 
@@ -669,7 +669,7 @@ describe EmsInfraController do
     it 'creates on post' do
       expect do
         create
-      end.to change { ManageIQ::Providers::Redhat::InfraManager.where("name" => creation_params["name"]).count }.by(1)
+      end.to change { NOVAHawk::Providers::Redhat::InfraManager.where("name" => creation_params["name"]).count }.by(1)
     end
 
     it 'creates authentication records on post' do
@@ -678,13 +678,13 @@ describe EmsInfraController do
       end.to change { Authentication.count }.by(2)
 
       expect(response.status).to eq(200)
-      rhevm = ManageIQ::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
+      rhevm = NOVAHawk::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
       expect(rhevm.authentications.size).to eq(2)
     end
 
     it 'updates authentication records on post' do
       create
-      rhevm = ManageIQ::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
+      rhevm = NOVAHawk::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
       expect do
         post :update, :params => {
           "id"               => rhevm.id,
@@ -706,13 +706,13 @@ describe EmsInfraController do
       it 'creates endpoints records on post' do
         create
         expect(response.status).to eq(200)
-        rhevm = ManageIQ::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
+        rhevm = NOVAHawk::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
         expect(rhevm.endpoints.size).to eq(2)
       end
 
       it 'updates metrics endpoint records on post when button is "save"' do
         create
-        rhevm = ManageIQ::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
+        rhevm = NOVAHawk::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
 
         updated_metrics_params = { "default_hostname"      => "host_rhevm",
                                    "metrics_hostname"      => "foo_metrics.com",
@@ -733,8 +733,8 @@ describe EmsInfraController do
 
       it 'tries to varify with the right params on post when button is "validate"' do
         create
-        rhevm = ManageIQ::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
-        expect_any_instance_of(ManageIQ::Providers::Redhat::InfraManager).to receive(:authentication_check)
+        rhevm = NOVAHawk::Providers::Redhat::InfraManager.where(:name => "foo_rhevm").first
+        expect_any_instance_of(NOVAHawk::Providers::Redhat::InfraManager).to receive(:authentication_check)
           .with("metrics",
                 hash_including(:save => false, :database => creation_params["metrics_database_name"]))
         post :update, creation_params.merge(:button => "validate", :cred_type => "metrics", :id => rhevm.id)
@@ -764,7 +764,7 @@ describe EmsInfraController do
           "default_password" => "[FILTERED]",
           "default_verify"   => "[FILTERED]"
         }
-      end.to change { ManageIQ::Providers::Vmware::InfraManager.count }.by(1)
+      end.to change { NOVAHawk::Providers::Vmware::InfraManager.count }.by(1)
     end
 
     it 'creates and updates an authentication record on post' do
@@ -783,7 +783,7 @@ describe EmsInfraController do
       end.to change { Authentication.count }.by(1)
 
       expect(response.status).to eq(200)
-      vmware = ManageIQ::Providers::Vmware::InfraManager.where(:name => "foo_vmware").first
+      vmware = NOVAHawk::Providers::Vmware::InfraManager.where(:name => "foo_vmware").first
       expect(vmware.authentications.size).to eq(1)
 
       expect do

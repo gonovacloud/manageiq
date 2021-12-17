@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Azure::NetworkManager::EventCatcher < ::MiqEventCatcher
+class NOVAHawk::Providers::Azure::NetworkManager::EventCatcher < ::MiqEventCatcher
   def self.ems_class
-    ManageIQ::Providers::Azure::NetworkManager
+    NOVAHawk::Providers::Azure::NetworkManager
   end
 
   def self.settings_name

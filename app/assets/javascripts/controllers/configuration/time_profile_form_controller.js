@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('timeProfileFormController', ['$http', '$scope', 'timeProfileFormId', 'miqService', function($http, $scope, timeProfileFormId, miqService) {
+NOVAHawk.angular.app.controller('timeProfileFormController', ['$http', '$scope', 'timeProfileFormId', 'miqService', function($http, $scope, timeProfileFormId, miqService) {
   var init = function() {
     $scope.timeProfileModel = {
       description: '',
@@ -27,7 +27,7 @@ ManageIQ.angular.app.controller('timeProfileFormController', ['$http', '$scope',
     $scope.modelCopy = angular.copy( $scope.timeProfileModel );
     $scope.model = 'timeProfileModel';
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
 
     miqService.sparkleOn();
     $http.get('/configuration/time_profile_form_fields/' + timeProfileFormId).success(function(data) {

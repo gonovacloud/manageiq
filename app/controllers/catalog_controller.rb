@@ -48,7 +48,7 @@ class CatalogController < ApplicationController
     'OrchestrationTemplateHot'                                         => "othot",
     'OrchestrationTemplateAzure'                                       => "otazu",
     'OrchestrationTemplateVnfd'                                        => "otvnf",
-    'ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate' => "otvap"
+    'NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate' => "otvap"
   }.freeze
 
   def x_button
@@ -393,7 +393,7 @@ class CatalogController < ApplicationController
       end
       if changed != session[:changed]
         session[:changed] = changed
-        page << "ManageIQ.changes = true;"
+        page << "NOVAHawk.changes = true;"
         page << javascript_for_miq_button_visibility(changed)
       end
       page << "miqSparkle(false);"
@@ -459,7 +459,7 @@ class CatalogController < ApplicationController
       page.replace_html("resources_info_div", :partial => "form_resources_info")
       if changed != session[:changed]
         session[:changed] = changed
-        page << "ManageIQ.changes = true;"
+        page << "NOVAHawk.changes = true;"
         page << javascript_for_miq_button_visibility(changed)
       end
       page << "miqSparkle(false);"
@@ -1092,7 +1092,7 @@ class CatalogController < ApplicationController
   def ot_add_submit_save
     assert_privileges("orchestration_template_add")
     load_edit("ot_add__new", "replace_cell__explorer")
-    if !%w(OrchestrationTemplateHot OrchestrationTemplateCfn OrchestrationTemplateAzure OrchestrationTemplateVnfd ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate).include?(@edit[:new][:type])
+    if !%w(OrchestrationTemplateHot OrchestrationTemplateCfn OrchestrationTemplateAzure OrchestrationTemplateVnfd NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate).include?(@edit[:new][:type])
       render_flash(_("\"%{type}\" is not a valid Orchestration Template type") % {:type => @edit[:new][:type]}, :error)
     elsif params[:content].nil? || params[:content].strip == ""
       render_flash(_("Error during Orchestration Template creation: new template content cannot be empty"), :error)
@@ -1511,7 +1511,7 @@ class CatalogController < ApplicationController
 
   def available_ansible_tower_managers
     @edit[:new][:available_managers] =
-      ManageIQ::Providers::AnsibleTower::ConfigurationManager.all.collect { |t| [t.name, t.id] }.sort
+      NOVAHawk::Providers::AnsibleTower::ConfigurationManager.all.collect { |t| [t.name, t.id] }.sort
     @edit[:new][:template_id] = @record.job_template.try(:id)
     @edit[:new][:manager_id] = @record.job_template.try(:manager).try(:id)
     available_ansible_tower_job_templates(@edit[:new][:manager_id]) if @edit[:new][:manager_id]

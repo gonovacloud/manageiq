@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::EventParser do
+describe NOVAHawk::Providers::Vmware::InfraManager::EventParser do
   EPV_DATA_DIR = File.expand_path(File.join(File.dirname(__FILE__), "event_data"))
 
   context ".event_to_hash" do
@@ -15,13 +15,13 @@ describe ManageIQ::Providers::Vmware::InfraManager::EventParser do
         :timestamp    => "2010-08-24T01:08:10.396636Z",
         :full_data    => event,
         :ems_id       => 12345,
-        :username     => "MANAGEIQ\\thennessy",
+        :username     => "novahawk\\thennessy",
 
         :vm_ems_ref   => "vm-106741",
         :vm_name      => "tch-UBUNTU-904-LTS-DESKTOP",
         :vm_location  => "[msan2] tch-UBUNTU-904-LTS-DESKTOP/tch-UBUNTU-904-LTS-DESKTOP.vmx",
         :host_ems_ref => "host-106569",
-        :host_name    => "yoda.manageiq.com",
+        :host_name    => "yoda.novahawk.com",
       )
 
       expect(data[:full_data]).to    be_instance_of VimHash

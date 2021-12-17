@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Provision do
+describe NOVAHawk::Providers::Vmware::InfraManager::Provision do
   context "::StateMachine" do
     before do
       ems      = FactoryGirl.create(:ems_vmware_with_authentication)

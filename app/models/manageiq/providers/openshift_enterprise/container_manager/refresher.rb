@@ -1,2 +1,2 @@
-class ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::Refresher < ManageIQ::Providers::Openshift::ContainerManager::Refresher
+class NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::Refresher < NOVAHawk::Providers::Openshift::ContainerManager::Refresher
 end

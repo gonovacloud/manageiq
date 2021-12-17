@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Redhat::InfraManager < ManageIQ::Providers::InfraManager
+class NOVAHawk::Providers::Redhat::InfraManager < NOVAHawk::Providers::InfraManager
   require_nested  :EventCatcher
   require_nested  :EventParser
   require_nested  :RefreshWorker

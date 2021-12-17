@@ -1,7 +1,7 @@
 describe('miqDBBackupService', function() {
   var testService;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function(miqDBBackupService) {
     testService = miqDBBackupService;

@@ -1,6 +1,6 @@
 describe('miqrequired initialization', function() {
   var $scope, form;
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
   beforeEach(inject(function($compile, $rootScope) {
     $scope = $rootScope;
     var element = angular.element(

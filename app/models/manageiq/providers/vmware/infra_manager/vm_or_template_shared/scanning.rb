@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::VmOrTemplateShared::Scanning
+module NOVAHawk::Providers::Vmware::InfraManager::VmOrTemplateShared::Scanning
   extend ActiveSupport::Concern
 
   included do

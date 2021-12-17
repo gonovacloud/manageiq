@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google::CloudManager::Vm::Operations
+module NOVAHawk::Providers::Google::CloudManager::Vm::Operations
   extend ActiveSupport::Concern
 
   include_concern 'Guest'

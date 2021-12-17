@@ -5,7 +5,7 @@ require 'blackbox/xmlStorage'
 require 'metadata/VmConfig/VmConfig'
 require 'digest/md5'
 
-module Manageiq
+module novahawk
   class BlackBox
     GLOBAL_CONFIG_FILE = "/miq.yml"
 
@@ -38,7 +38,7 @@ module Manageiq
     end
 
     def self.vmId(vmName)
-      Manageiq::BlackBox.new(vmName).vmId
+      novahawk::BlackBox.new(vmName).vmId
     end
 
     def vmId=(uuid)

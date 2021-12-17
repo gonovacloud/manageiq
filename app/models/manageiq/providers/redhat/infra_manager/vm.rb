@@ -1,8 +1,8 @@
-class ManageIQ::Providers::Redhat::InfraManager::Vm < ManageIQ::Providers::InfraManager::Vm
+class NOVAHawk::Providers::Redhat::InfraManager::Vm < NOVAHawk::Providers::InfraManager::Vm
   include_concern 'Operations'
   include_concern 'RemoteConsole'
   include_concern 'Reconfigure'
-  include_concern 'ManageIQ::Providers::Redhat::InfraManager::VmOrTemplateShared'
+  include_concern 'NOVAHawk::Providers::Redhat::InfraManager::VmOrTemplateShared'
 
   supports :migrate do
     if blank? || orphaned? || archived?

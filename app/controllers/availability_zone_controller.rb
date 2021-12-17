@@ -38,14 +38,14 @@ class AvailabilityZoneController < ApplicationController
       drop_breadcrumb(:name => _("%{name} (%{table}(s))") % {:name  => @availability_zone.name,
                                                              :table => ui_lookup(:table => "ems_cloud")},
                       :url  => "/availability_zone/show/#{@availability_zone.id}?display=ems_cloud")
-      @view, @pages = get_view(ManageIQ::Providers::CloudManager, :parent => @availability_zone)  # Get the records (into a view) and the paginator
+      @view, @pages = get_view(NOVAHawk::Providers::CloudManager, :parent => @availability_zone)  # Get the records (into a view) and the paginator
       @showtype = "ems_cloud"
 
     when "instances"
       title = ui_lookup(:tables => "vm_cloud")
       drop_breadcrumb(:name => _("%{name} (All %{title})") % {:name => @availability_zone.name, :title => title},
                       :url  => "/availability_zone/show/#{@availability_zone.id}?display=#{@display}")
-      @view, @pages = get_view(ManageIQ::Providers::CloudManager::Vm, :parent => @availability_zone)  # Get the records (into a view) and the paginator
+      @view, @pages = get_view(NOVAHawk::Providers::CloudManager::Vm, :parent => @availability_zone)  # Get the records (into a view) and the paginator
       @showtype = @display
 
     when "cloud_volumes"

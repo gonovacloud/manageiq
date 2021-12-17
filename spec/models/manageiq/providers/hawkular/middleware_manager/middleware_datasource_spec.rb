@@ -2,7 +2,7 @@ require_relative 'hawkular_helper'
 
 # VCR Cassettes: Hawkular Services 0.0.13.Final-SNAPSHOT (commit 3cef2062513f4d949aa21a90db51f9cd105cf329)
 
-describe ManageIQ::Providers::Hawkular::MiddlewareManager::MiddlewareDatasource do
+describe NOVAHawk::Providers::Hawkular::MiddlewareManager::MiddlewareDatasource do
 
   let(:ems_hawkular) do
     _guid, _server, zone = EvmSpecHelper.create_guid_miq_server_zone

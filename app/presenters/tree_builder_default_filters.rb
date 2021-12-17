@@ -9,10 +9,10 @@ class TreeBuilderDefaultFilters < TreeBuilder
     :miqtemplate                                   => %w(Services Workloads Templates\ &\ Images),
     :storage                                       => %w(Infrastructure Datastores),
     :vm                                            => %w(Services Workloads VMs\ &\ Instances),
-    :"manageiq::providers::cloudmanager::template" => %w(Cloud Instances Images),
-    :"manageiq::providers::inframanager::template" => %w(Infrastructure Virtual\ Machines Templates),
-    :"manageiq::providers::cloudmanager::vm"       => %w(Cloud Instances Instances),
-    :"manageiq::providers::inframanager::vm"       => %w(Infrastructure Virtual\ Machines VMs)
+    :"novahawk::providers::cloudmanager::template" => %w(Cloud Instances Images),
+    :"novahawk::providers::inframanager::template" => %w(Infrastructure Virtual\ Machines Templates),
+    :"novahawk::providers::cloudmanager::vm"       => %w(Cloud Instances Instances),
+    :"novahawk::providers::inframanager::vm"       => %w(Infrastructure Virtual\ Machines VMs)
   }.freeze
 
   def prepare_data(data)

@@ -1,8 +1,8 @@
-describe ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate do
+describe NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate do
   describe ".eligible_manager_types" do
     it "lists the classes of eligible managers" do
-      ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate.eligible_manager_types.each do |klass|
-        expect(klass <= ManageIQ::Providers::Vmware::CloudManager).to be_truthy
+      NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate.eligible_manager_types.each do |klass|
+        expect(klass <= NOVAHawk::Providers::Vmware::CloudManager).to be_truthy
       end
     end
   end
@@ -11,7 +11,7 @@ describe ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate do
 
   describe '#validate_format' do
     it 'passes validation if no content' do
-      template = ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate.new
+      template = NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate.new
       expect(template.validate_format).to be_nil
     end
 
@@ -20,7 +20,7 @@ describe ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate do
     end
 
     it 'fails validations with incorrect OVF content' do
-      template = ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate.new(:content => "Invalid String")
+      template = NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate.new(:content => "Invalid String")
       expect(template.validate_format).not_to be_nil
     end
   end

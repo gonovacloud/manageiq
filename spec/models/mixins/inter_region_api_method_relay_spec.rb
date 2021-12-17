@@ -169,7 +169,7 @@ describe InterRegionApiMethodRelay do
       let(:region_number)     { ApplicationRecord.my_region_number }
       let(:region_seq_start)  { ApplicationRecord.rails_sequence_start }
       let(:request_user)      { "test_user" }
-      let(:api_connection)    { double("ManageIQ::API::Client connection") }
+      let(:api_connection)    { double("NOVAHawk::API::Client connection") }
       let(:region_auth_token) { double("MiqRegion API auth token") }
 
       before do
@@ -182,7 +182,7 @@ describe InterRegionApiMethodRelay do
         end
 
         it "opens an api connection to that address when the server has an ip address" do
-          require "manageiq-api-client"
+          require "novahawk-api-client"
 
           server.ipaddress = "192.0.2.1"
           server.save!
@@ -195,7 +195,7 @@ describe InterRegionApiMethodRelay do
             :miqtoken => region_auth_token,
             :ssl      => {:verify => false}
           }
-          expect(ManageIQ::API::Client).to receive(:new).with(client_connection_hash).and_return(api_connection)
+          expect(NOVAHawk::API::Client).to receive(:new).with(client_connection_hash).and_return(api_connection)
           described_class.api_client_connection_for_region(region_number)
         end
 
@@ -217,8 +217,8 @@ describe InterRegionApiMethodRelay do
     describe ".exec_api_call" do
       let(:region)         { 0 }
       let(:action)         { :the_action }
-      let(:api_connection) { double("ManageIQ::API::Client Connection") }
-      let(:api_collection) { double("ManageIQ::API::Client Collection") }
+      let(:api_connection) { double("NOVAHawk::API::Client Connection") }
+      let(:api_collection) { double("NOVAHawk::API::Client Collection") }
 
       before do
         expect(described_class).to receive(:api_client_connection_for_region).with(region).and_return(api_connection)

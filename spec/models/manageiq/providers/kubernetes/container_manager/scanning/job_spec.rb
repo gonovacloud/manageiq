@@ -17,7 +17,7 @@ class MockKubeClient
     RecursiveOpenStruct.new(
       :metadata => {
         :annotations => {
-          'manageiq.org/jobid' => '5'
+          'novahawk.org/jobid' => '5'
         }
       }
     )
@@ -64,7 +64,7 @@ class MockImageInspectorClient
   end
 end
 
-describe ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager::Scanning::Job do
   context "SmartState Analysis Methods" do
     before(:each) do
       EvmSpecHelper.create_guid_miq_server_zone
@@ -200,7 +200,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job do
         @job.signal(:start)
         expect(@job.state).to eq 'finished'
         expect(@job.status).to eq 'error'
-        expect(@job.message).to eq "pod creation for [management-infra/manageiq-img-scan-#{@job.guid[0..4]}] failed"
+        expect(@job.message).to eq "pod creation for [management-infra/novahawk-img-scan-#{@job.guid[0..4]}] failed"
       end
     end
 

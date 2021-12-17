@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::CloudVolume < ::CloudVolume
+class NOVAHawk::Providers::Openstack::CloudManager::CloudVolume < ::CloudVolume
   include_concern 'Operations'
 
   include SupportsFeatureMixin
@@ -114,11 +114,11 @@ class ManageIQ::Providers::Openstack::CloudManager::CloudVolume < ::CloudVolume
   end
 
   def create_volume_snapshot(options)
-    ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot.create_snapshot(self, options)
+    NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot.create_snapshot(self, options)
   end
 
   def create_volume_snapshot_queue(userid, options)
-    ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot
+    NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot
       .create_snapshot_queue(userid, self, options)
   end
 

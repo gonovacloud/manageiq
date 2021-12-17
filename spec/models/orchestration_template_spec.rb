@@ -86,8 +86,8 @@ describe OrchestrationTemplate do
 
     before do
       allow(OrchestrationTemplate).to receive_messages(:eligible_manager_types =>
-                                                         [ManageIQ::Providers::Amazon::CloudManager,
-                                                          ManageIQ::Providers::Openstack::CloudManager])
+                                                         [NOVAHawk::Providers::Amazon::CloudManager,
+                                                          NOVAHawk::Providers::Openstack::CloudManager])
       @template = FactoryGirl.create(:orchestration_template)
       @aws = FactoryGirl.create(:ems_amazon, :tenant => other_tenant)
       @openstack = FactoryGirl.create(:ems_openstack, :tenant => tenant)

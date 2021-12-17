@@ -1432,7 +1432,7 @@ module ReportController::Reports::Editor
 
   def cb_entities_by_provider
     @edit[:cb_providers] = { :container_project => {}, :container_image => {} }
-    ManageIQ::Providers::ContainerManager.includes(:container_projects, :container_images).all.each do |provider|
+    NOVAHawk::Providers::ContainerManager.includes(:container_projects, :container_images).all.each do |provider|
       @edit[:cb_providers][:container_project][provider.name] = provider.id
       @edit[:cb_providers][:container_image][provider.name] = provider.id
     end

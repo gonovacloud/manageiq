@@ -6,9 +6,9 @@ describe SetCorrectStiTypeOnOpenstackInfraMiqTemplate do
 
   let(:ems_row_entries) do
     [
-      {:type => "ManageIQ::Providers::Openstack::InfraManager"},
-      {:type => "ManageIQ::Providers::Openstack::CloudManager"},
-      {:type => "ManageIQ::Providers::AnotherManager"}
+      {:type => "NOVAHawk::Providers::Openstack::InfraManager"},
+      {:type => "NOVAHawk::Providers::Openstack::CloudManager"},
+      {:type => "NOVAHawk::Providers::AnotherManager"}
     ]
   end
 
@@ -17,26 +17,26 @@ describe SetCorrectStiTypeOnOpenstackInfraMiqTemplate do
       {
         :ems      => ems_row_entries[0],
         :name     => "template_1",
-        :type_in  => 'ManageIQ::Providers::Openstack::CloudManager::Template',
-        :type_out => 'ManageIQ::Providers::Openstack::InfraManager::Template'
+        :type_in  => 'NOVAHawk::Providers::Openstack::CloudManager::Template',
+        :type_out => 'NOVAHawk::Providers::Openstack::InfraManager::Template'
       },
       {
         :ems      => ems_row_entries[0],
         :name     => "template_2",
-        :type_in  => 'ManageIQ::Providers::Openstack::CloudManager::Template',
-        :type_out => 'ManageIQ::Providers::Openstack::InfraManager::Template'
+        :type_in  => 'NOVAHawk::Providers::Openstack::CloudManager::Template',
+        :type_out => 'NOVAHawk::Providers::Openstack::InfraManager::Template'
       },
       {
         :ems      => ems_row_entries[1],
         :name     => "template_3",
-        :type_in  => 'ManageIQ::Providers::Openstack::CloudManager::Template',
-        :type_out => 'ManageIQ::Providers::Openstack::CloudManager::Template'
+        :type_in  => 'NOVAHawk::Providers::Openstack::CloudManager::Template',
+        :type_out => 'NOVAHawk::Providers::Openstack::CloudManager::Template'
       },
       {
         :ems      => ems_row_entries[2],
         :name     => "template_4",
-        :type_in  => 'ManageIQ::Providers::AnyManager::Template',
-        :type_out => 'ManageIQ::Providers::AnyManager::Template'
+        :type_in  => 'NOVAHawk::Providers::AnyManager::Template',
+        :type_out => 'NOVAHawk::Providers::AnyManager::Template'
       },
     ]
   end

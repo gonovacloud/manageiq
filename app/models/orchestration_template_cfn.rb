@@ -35,7 +35,7 @@ class OrchestrationTemplateCfn < OrchestrationTemplate
   end
 
   def self.eligible_manager_types
-    @eligible_manager_types ||= [ManageIQ::Providers::Openstack::CloudManager]
+    @eligible_manager_types ||= [NOVAHawk::Providers::Openstack::CloudManager]
   end
 
   # return the parsing error message if not valid JSON; otherwise nil

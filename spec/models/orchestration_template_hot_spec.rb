@@ -2,7 +2,7 @@ describe OrchestrationTemplateHot do
   describe ".eligible_manager_types" do
     it "lists the classes of eligible managers" do
       OrchestrationTemplateHot.eligible_manager_types.each do |klass|
-        expect(klass <= ManageIQ::Providers::Openstack::CloudManager).to be_truthy
+        expect(klass <= NOVAHawk::Providers::Openstack::CloudManager).to be_truthy
       end
     end
   end

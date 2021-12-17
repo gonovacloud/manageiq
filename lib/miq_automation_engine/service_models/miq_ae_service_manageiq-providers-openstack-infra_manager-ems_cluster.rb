@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Openstack_InfraManager_EmsCluster < MiqAeServiceEmsCluster
+  class MiqAeServiceNOVAHawk_Providers_Openstack_InfraManager_EmsCluster < MiqAeServiceEmsCluster
   end
 end

@@ -7,29 +7,29 @@ describe SetCorrectStiTypeAndEmsIdOnOpenstackCloudSubnet do
 
   let(:ems_row_entries) do
     [
-      {:type => "ManageIQ::Providers::Openstack::CloudManager"},
-      {:type => "ManageIQ::Providers::Openstack::InfraManager"},
-      {:type => "ManageIQ::Providers::Amazon::CloudManager"},
-      {:type => "ManageIQ::Providers::AnotherManager::CloudManager"}
+      {:type => "NOVAHawk::Providers::Openstack::CloudManager"},
+      {:type => "NOVAHawk::Providers::Openstack::InfraManager"},
+      {:type => "NOVAHawk::Providers::Amazon::CloudManager"},
+      {:type => "NOVAHawk::Providers::AnotherManager::CloudManager"}
     ]
   end
 
   let(:ems_network_row_entries) do
     [
       {
-        :type       => "ManageIQ::Providers::Openstack::NetworkManager",
+        :type       => "NOVAHawk::Providers::Openstack::NetworkManager",
         :parent_ems => ems_row_entries[0]
       },
       {
-        :type       => "ManageIQ::Providers::Openstack::NetworkManager",
+        :type       => "NOVAHawk::Providers::Openstack::NetworkManager",
         :parent_ems => ems_row_entries[1]
       },
       {
-        :type       => "ManageIQ::Providers::Amazon::NetworkManager",
+        :type       => "NOVAHawk::Providers::Amazon::NetworkManager",
         :parent_ems => ems_row_entries[2]
       },
       {
-        :type       => "ManageIQ::Providers::AnotherManager::NetworkManager",
+        :type       => "NOVAHawk::Providers::AnotherManager::NetworkManager",
         :parent_ems => ems_row_entries[3]
       }
     ]
@@ -40,17 +40,17 @@ describe SetCorrectStiTypeAndEmsIdOnOpenstackCloudSubnet do
       {
         :ems  => ems_network_row_entries[0],
         :name => "network_1",
-        :type => 'ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private',
+        :type => 'NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private',
       },
       {
         :ems  => ems_network_row_entries[1],
         :name => "network_2",
-        :type => 'ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private',
+        :type => 'NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private',
       },
       {
         :ems  => ems_network_row_entries[2],
         :name => "network_3",
-        :type => 'ManageIQ::Providers::Amazon::CloudManager::CloudNetwork',
+        :type => 'NOVAHawk::Providers::Amazon::CloudManager::CloudNetwork',
       },
       {
         :ems  => ems_network_row_entries[3],
@@ -60,7 +60,7 @@ describe SetCorrectStiTypeAndEmsIdOnOpenstackCloudSubnet do
       {
         :ems  => ems_network_row_entries[3],
         :name => "network_5",
-        :type => 'ManageIQ::Providers::AnyManager::CloudNetwork',
+        :type => 'NOVAHawk::Providers::AnyManager::CloudNetwork',
       },
     ]
   end
@@ -70,22 +70,22 @@ describe SetCorrectStiTypeAndEmsIdOnOpenstackCloudSubnet do
       {
         :cloud_network => network_row_entries[0],
         :name          => "subnet_1",
-        :type_in       => 'ManageIQ::Providers::Openstack::CloudManager::CloudSubnet',
-        :type_out      => 'ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet',
+        :type_in       => 'NOVAHawk::Providers::Openstack::CloudManager::CloudSubnet',
+        :type_out      => 'NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet',
         :ems_out       => ems_network_row_entries[0]
       },
       {
         :cloud_network => network_row_entries[1],
         :name          => "subnet_2",
-        :type_in       => 'ManageIQ::Providers::Openstack::InfraManager::CloudSubnet',
-        :type_out      => 'ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet',
+        :type_in       => 'NOVAHawk::Providers::Openstack::InfraManager::CloudSubnet',
+        :type_out      => 'NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet',
         :ems_out       => ems_network_row_entries[1]
       },
       {
         :cloud_network => network_row_entries[2],
         :name          => "subnet_3",
-        :type_in       => 'ManageIQ::Providers::Amazon::CloudManager::CloudSubnet',
-        :type_out      => 'ManageIQ::Providers::Amazon::CloudManager::CloudSubnet',
+        :type_in       => 'NOVAHawk::Providers::Amazon::CloudManager::CloudSubnet',
+        :type_out      => 'NOVAHawk::Providers::Amazon::CloudManager::CloudSubnet',
         :ems_out       => nil
       },
       {
@@ -98,8 +98,8 @@ describe SetCorrectStiTypeAndEmsIdOnOpenstackCloudSubnet do
       {
         :cloud_network => network_row_entries[4],
         :name          => "subnet_5",
-        :type_in       => 'ManageIQ::Providers::AnyManager::CloudSubnet',
-        :type_out      => 'ManageIQ::Providers::AnyManager::CloudSubnet',
+        :type_in       => 'NOVAHawk::Providers::AnyManager::CloudSubnet',
+        :type_out      => 'NOVAHawk::Providers::AnyManager::CloudSubnet',
         :ems_out       => nil
       },
     ]

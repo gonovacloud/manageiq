@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork < ::CloudNetwork
+class NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork < ::CloudNetwork
   include SupportsFeatureMixin
 
   supports :create

@@ -1,7 +1,7 @@
 # Message format description:
 # https://pubs.vmware.com/vca/index.jsp#com.vmware.vcloud.api.doc_56/GUID-7C1F16FF-C530-404E-8533-329670B20A19.html
 
-class ManageIQ::Providers::Vmware::CloudManager::EventCatcher::Event
+class NOVAHawk::Providers::Vmware::CloudManager::EventCatcher::Event
   attr_accessor :payload, :metadata, :delivery_info
 
   TYPE_KEY              = 'notification.type'.freeze

@@ -1,7 +1,7 @@
 # TODO: remove the module and just make this:
-# class ManageIQ::Providers::Hawkular::MiddlewareManager < ManageIQ::Providers::MiddlewareManager
-module ManageIQ::Providers
-  class Hawkular::MiddlewareManager < ManageIQ::Providers::MiddlewareManager
+# class NOVAHawk::Providers::Hawkular::MiddlewareManager < NOVAHawk::Providers::MiddlewareManager
+module NOVAHawk::Providers
+  class Hawkular::MiddlewareManager < NOVAHawk::Providers::MiddlewareManager
     require 'hawkular/hawkular_client'
 
     require_nested :AlertManager
@@ -393,7 +393,7 @@ module ManageIQ::Providers
     end
 
     def self.event_monitor_class
-      ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher
+      NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher
     end
 
     # To blacklist defined event types by default add them here...
@@ -434,11 +434,11 @@ module ManageIQ::Providers
     end
 
     def alert_manager
-      @alert_manager ||= ManageIQ::Providers::Hawkular::MiddlewareManager::AlertManager.new(self)
+      @alert_manager ||= NOVAHawk::Providers::Hawkular::MiddlewareManager::AlertManager.new(self)
     end
 
     def alert_profile_manager
-      @alert_profile_manager ||= ManageIQ::Providers::Hawkular::MiddlewareManager::AlertProfileManager.new(self)
+      @alert_profile_manager ||= NOVAHawk::Providers::Hawkular::MiddlewareManager::AlertProfileManager.new(self)
     end
 
     private

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Provision do
+describe NOVAHawk::Providers::Redhat::InfraManager::Provision do
   context "::Placement" do
     before do
       ems      = FactoryGirl.create(:ems_redhat_with_authentication)

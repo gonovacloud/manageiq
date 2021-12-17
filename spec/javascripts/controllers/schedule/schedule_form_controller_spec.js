@@ -1,7 +1,7 @@
 describe('scheduleFormController', function() {
   var $scope, $controller, $httpBackend, miqService, timerOptionService, oneMonthAgo;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, _$controller_, _$httpBackend_, _miqService_, _timerOptionService_) {
     miqService = _miqService_;

@@ -1,3 +1,3 @@
-module ManageIQ::Providers::Vmware::CloudManager::Vm::Operations
+module NOVAHawk::Providers::Vmware::CloudManager::Vm::Operations
   include_concern 'Power'
 end

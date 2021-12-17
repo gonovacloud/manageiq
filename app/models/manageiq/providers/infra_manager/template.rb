@@ -1,8 +1,8 @@
-class ManageIQ::Providers::InfraManager::Template < MiqTemplate
+class NOVAHawk::Providers::InfraManager::Template < MiqTemplate
   default_value_for :cloud, false
 
   def self.eligible_for_provisioning
-    super.where(:type => %w(ManageIQ::Providers::Redhat::InfraManager::Template ManageIQ::Providers::Vmware::InfraManager::Template ManageIQ::Providers::Microsoft::InfraManager::Template))
+    super.where(:type => %w(NOVAHawk::Providers::Redhat::InfraManager::Template NOVAHawk::Providers::Vmware::InfraManager::Template NOVAHawk::Providers::Microsoft::InfraManager::Template))
   end
 
   private

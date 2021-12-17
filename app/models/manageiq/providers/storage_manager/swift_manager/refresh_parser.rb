@@ -1,5 +1,5 @@
-module ManageIQ::Providers
-  class StorageManager::SwiftManager::RefreshParser < ManageIQ::Providers::CloudManager::RefreshParser
+module NOVAHawk::Providers
+  class StorageManager::SwiftManager::RefreshParser < NOVAHawk::Providers::CloudManager::RefreshParser
     extend ActiveSupport::Concern
     include Vmdb::Logging
 

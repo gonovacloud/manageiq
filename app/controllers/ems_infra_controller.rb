@@ -8,7 +8,7 @@ class EmsInfraController < ApplicationController
   after_action :set_session_data
 
   def self.model
-    ManageIQ::Providers::InfraManager
+    NOVAHawk::Providers::InfraManager
   end
 
   def self.table_name
@@ -36,7 +36,7 @@ class EmsInfraController < ApplicationController
     redirect_to ems_infra_path(params[:id]) if params[:cancel]
 
     drop_breadcrumb(:name => _("Scale Infrastructure Provider"), :url => "/ems_infra/scaling")
-    @infra = ManageIQ::Providers::Openstack::InfraManager.find(params[:id])
+    @infra = NOVAHawk::Providers::Openstack::InfraManager.find(params[:id])
     # TODO: Currently assumes there is a single stack per infrastructure provider. This should
     # be improved to support multiple stacks.
     @stack = @infra.direct_orchestration_stacks.first
@@ -51,7 +51,7 @@ class EmsInfraController < ApplicationController
 
     scale_parameters = params.select { |k, _v| k.include?('::count') || k.include?('Count') }.to_unsafe_h
     assigned_hosts = scale_parameters.values.sum(&:to_i)
-    infra = ManageIQ::Providers::Openstack::InfraManager.find(params[:id])
+    infra = NOVAHawk::Providers::Openstack::InfraManager.find(params[:id])
     if assigned_hosts > infra.hosts.count
       # Validate number of selected hosts is not more than available
       log_and_flash_message(_("Assigning %{hosts} but only have %{hosts_count} hosts available.") % {:hosts => assigned_hosts, :hosts_count => infra.hosts.count.to_s})
@@ -77,7 +77,7 @@ class EmsInfraController < ApplicationController
     @in_a_form = true
 
     drop_breadcrumb(:name => _("Scale Infrastructure Provider Down"), :url => "/ems_infra/scaling")
-    @infra = ManageIQ::Providers::Openstack::InfraManager.find(params[:id])
+    @infra = NOVAHawk::Providers::Openstack::InfraManager.find(params[:id])
     # TODO: Currently assumes there is a single stack per infrastructure provider. This should
     # be improved to support multiple stacks.
     @stack = @infra.direct_orchestration_stacks.first
@@ -119,7 +119,7 @@ class EmsInfraController < ApplicationController
     @in_a_form = true
     drop_breadcrumb(:name => _("Register Nodes"), :url => "/ems_infra/register_nodes")
 
-    @infra = ManageIQ::Providers::Openstack::InfraManager.find(params[:id])
+    @infra = NOVAHawk::Providers::Openstack::InfraManager.find(params[:id])
 
     if params[:register]
       if params[:nodes_json].nil? || params[:nodes_json][:file].nil?

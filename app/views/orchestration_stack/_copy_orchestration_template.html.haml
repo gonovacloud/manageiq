@@ -43,6 +43,6 @@
   = render :partial => "layouts/angular/x_edit_buttons_angular"
 
 :javascript
-  ManageIQ.editor.refresh();
-  ManageIQ.angular.app.value('stackId', #{@record.id});
+  NOVAHawk.editor.refresh();
+  NOVAHawk.angular.app.value('stackId', #{@record.id});
   miq_bootstrap('#form_div');

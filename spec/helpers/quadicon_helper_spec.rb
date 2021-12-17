@@ -107,7 +107,7 @@ describe QuadiconHelper do
       subject { helper.render_quadicon(item) }
 
       let(:item) do
-        FactoryGirl.build(:vm_vmware) # => ManageIQ::Providers::Vmware::InfraManager::Vm.name)
+        FactoryGirl.build(:vm_vmware) # => NOVAHawk::Providers::Vmware::InfraManager::Vm.name)
       end
 
       it "renders quadicon for a vmware vm" do

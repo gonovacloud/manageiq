@@ -316,9 +316,9 @@ module REXML
           "display_time" => Time.now.getutc.iso8601,
         # TODO: Namespaces are causing an error during find_first below,
         #        namely during MIQExtract and the extraction of product keys
-        #           "xmlns" => "http://www.manageiq.com/xsd",
+        #           "xmlns" => "http://www.novahawk.com/xsd",
         #           "xmlns:xsi" => "http://www.w3.org/2001/XMLSchema-instance",
-        #           "xsi:schemaLocation" => "http://www.manageiq.com/xsd",
+        #           "xsi:schemaLocation" => "http://www.novahawk.com/xsd",
         )
         xml.root.add_attributes(rootAttrs) if rootAttrs
       end

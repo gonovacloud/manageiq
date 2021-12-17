@@ -143,7 +143,7 @@
   </wsdl:binding>
   <wsdl:service name="ServiceNow_sc_task">
     <wsdl:port name="ServiceNowSoap" binding="sncns:ServiceNowSoap">
-      <soap:address location="https://manageiqdemo.service-now.com/sc_task.do?displayvariables=true&amp;displayvalue=all&amp;SOAP"/>
+      <soap:address location="https://novahawkdemo.service-now.com/sc_task.do?displayvariables=true&amp;displayvalue=all&amp;SOAP"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

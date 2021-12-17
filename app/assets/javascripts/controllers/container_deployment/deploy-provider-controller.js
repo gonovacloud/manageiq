@@ -1,10 +1,10 @@
-miqHttpInject(angular.module('miq.containers.providersModule', ['ui.bootstrap', 'patternfly', 'miq.dialogs', 'miq.wizard', 'ManageIQ', 'miq.api'])).controller('containers.deployProviderController',
+miqHttpInject(angular.module('miq.containers.providersModule', ['ui.bootstrap', 'patternfly', 'miq.dialogs', 'miq.wizard', 'NOVAHawk', 'miq.api'])).controller('containers.deployProviderController',
   ['$rootScope', '$scope', 'miqService', 'API',
   function($rootScope, $scope, miqService, API) {
     'use strict';
 
     $scope.showDeploymentWizard = false;
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
     $scope.data = {};
     $scope.nodeData = {
       allNodes: [],

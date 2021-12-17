@@ -120,9 +120,9 @@ module ProcessTasksMixin
         raise "Failed to establish API connection to region #{region}"
       end
 
-      require 'manageiq-api-client'
+      require 'novahawk-api-client'
 
-      ManageIQ::API::Client.new(
+      NOVAHawk::API::Client.new(
         :url      => "https://#{hostname}",
         :miqtoken => MiqRegion.api_system_auth_token_for_region(region, user),
         :ssl      => {:verify => false}

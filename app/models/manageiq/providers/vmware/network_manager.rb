@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::NetworkManager < ManageIQ::Providers::NetworkManager
+class NOVAHawk::Providers::Vmware::NetworkManager < NOVAHawk::Providers::NetworkManager
   require_nested :CloudNetwork
   require_nested :CloudSubnet
   require_nested :NetworkPort
@@ -6,7 +6,7 @@ class ManageIQ::Providers::Vmware::NetworkManager < ManageIQ::Providers::Network
   require_nested :RefreshWorker
   require_nested :Refresher
 
-  include ManageIQ::Providers::Vmware::ManagerAuthMixin
+  include NOVAHawk::Providers::Vmware::ManagerAuthMixin
 
   # Auth and endpoints delegations, editing of this type of manager must be disabled
   delegate :authentication_check,

@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Google_CloudManager_Provision < MiqAeServiceManageIQ_Providers_CloudManager_Provision
+  class MiqAeServiceNOVAHawk_Providers_Google_CloudManager_Provision < MiqAeServiceNOVAHawk_Providers_CloudManager_Provision
   end
 end

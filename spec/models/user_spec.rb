@@ -9,7 +9,7 @@ describe User do
     end
 
     it "should invalidate incorrect email address" do
-      expect(FactoryGirl.build(:user, :email => "thisguy@@manageiq.com")).not_to be_valid
+      expect(FactoryGirl.build(:user, :email => "thisguy@@novahawk.com")).not_to be_valid
     end
 
     it "should validate email address with a value of nil" do
@@ -17,7 +17,7 @@ describe User do
     end
 
     it "should save proper email address" do
-      expect(FactoryGirl.build(:user, :email => "that.guy@manageiq.com")).to be_valid
+      expect(FactoryGirl.build(:user, :email => "that.guy@novahawk.com")).to be_valid
     end
   end
 
@@ -138,19 +138,19 @@ describe User do
 
   context "#authorize_ldap" do
     before(:each) do
-      @fq_user = "thin1@manageiq.com"
+      @fq_user = "thin1@novahawk.com"
       @task = MiqTask.create(:name => "LDAP User Authorization of '#{@fq_user}'", :userid => @fq_user)
       @auth_config =
         {:authentication => {:ldapport => "389",
-                             :basedn => "dc=manageiq,dc=com",
+                             :basedn => "dc=novahawk,dc=com",
                              :follow_referrals => false,
                              :get_direct_groups => true,
-                             :bind_dn => "evm_demo@manageiq.com",
+                             :bind_dn => "evm_demo@novahawk.com",
                              :mode => "ldap", :user_proxies => [{}],
                              :user_type => "userprincipalname",
                              :bind_pwd => "blah",
                              :ldap_role => true,
-                             :user_suffix => "manageiq.com",
+                             :user_suffix => "novahawk.com",
                              :group_memberships_max_depth => 2,
                              :ldaphost => ["192.168.254.15"]}
         }

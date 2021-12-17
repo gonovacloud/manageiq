@@ -1,21 +1,21 @@
 {
-  "name": "manageiq",
+  "name": "novahawk",
   "version": "1.0.0",
-  "description": "ManageIQ Cloud Management Platform",
+  "description": "NOVAHawk Cloud Management Platform",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ManageIQ/manageiq.git"
+    "url": "git+https://github.com/NOVAHawk/novahawk.git"
   },
-  "author": "ManageIQ",
+  "author": "NOVAHawk",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/ManageIQ/manageiq/issues"
+    "url": "https://github.com/NOVAHawk/novahawk/issues"
   },
-  "homepage": "https://github.com/ManageIQ/manageiq#readme",
+  "homepage": "https://github.com/NOVAHawk/novahawk#readme",
   "devDependencies": {
     "babel-eslint": "^6.0.4",
     "eslint": "^2.10.2",

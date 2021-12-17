@@ -1,4 +1,4 @@
-class ManageIQ::Providers::ConfigurationManager < ::ExtManagementSystem
+class NOVAHawk::Providers::ConfigurationManager < ::ExtManagementSystem
   require_nested :InventoryGroup
   require_nested :InventoryRootGroup
 

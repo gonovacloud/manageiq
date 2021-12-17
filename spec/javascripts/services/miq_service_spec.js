@@ -1,7 +1,7 @@
 describe('miqService', function() {
   var testService;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function(miqService) {
     testService = miqService;
@@ -29,7 +29,7 @@ describe('miqService', function() {
   describe('#buildCalendar', function() {
     it('sets up the date from', function() {
       testService.buildCalendar(2014, 2, 3);
-      expect(window.ManageIQ.calendar.calDateFrom).toEqual(new Date(2014, 2, 3));
+      expect(window.NOVAHawk.calendar.calDateFrom).toEqual(new Date(2014, 2, 3));
     });
 
     it('calls the global build calendar function', function() {

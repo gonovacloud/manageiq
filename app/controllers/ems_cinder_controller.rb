@@ -9,7 +9,7 @@ class EmsCinderController < ApplicationController
   after_action :set_session_data
 
   def self.model
-    ManageIQ::Providers::StorageManager::CinderManager
+    NOVAHawk::Providers::StorageManager::CinderManager
   end
 
   def self.table_name

@@ -13,7 +13,7 @@ describe OrchestrationStackController do
 
       before do
         session[:settings] = {
-          :views => {:manageiq_providers_cloudmanager_vm => "grid"}
+          :views => {:novahawk_providers_cloudmanager_vm => "grid"}
         }
         get :show, :params => {:id => record.id, :display => "instances"}
       end
@@ -34,7 +34,7 @@ describe OrchestrationStackController do
 
       before do
         session[:settings] = {
-          :views => {:manageiq_providers_cloudmanager_vm => "grid"}
+          :views => {:novahawk_providers_cloudmanager_vm => "grid"}
         }
         get :show, :params => {:id => record.id}
       end
@@ -54,7 +54,7 @@ describe OrchestrationStackController do
 
       before do
         session[:settings] = {
-          :views => {:manageiq_providers_cloudmanager_vm => "grid"}
+          :views => {:novahawk_providers_cloudmanager_vm => "grid"}
         }
         get :show, :params => {:id => record.id, :display => "stack_orchestration_template"}
       end

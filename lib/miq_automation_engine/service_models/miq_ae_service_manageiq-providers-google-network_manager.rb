@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Google_NetworkManager < MiqAeServiceManageIQ_Providers_NetworkManager
+  class MiqAeServiceNOVAHawk_Providers_Google_NetworkManager < MiqAeServiceNOVAHawk_Providers_NetworkManager
   end
 end

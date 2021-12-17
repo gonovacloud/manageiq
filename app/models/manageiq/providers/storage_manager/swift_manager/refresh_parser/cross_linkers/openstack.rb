@@ -1,4 +1,4 @@
-module ManageIQ::Providers::StorageManager::SwiftManager::RefreshParser::CrossLinkers
+module NOVAHawk::Providers::StorageManager::SwiftManager::RefreshParser::CrossLinkers
   class Openstack
     include Vmdb::Logging
 

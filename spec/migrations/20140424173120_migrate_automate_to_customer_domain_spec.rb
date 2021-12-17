@@ -39,7 +39,7 @@ describe MigrateAutomateToCustomerDomain do
       end
 
       it 'with existing domain' do
-        miq_ae_namespace_stub.create!(:name => 'ManageIQ', :priority => 0)
+        miq_ae_namespace_stub.create!(:name => 'NOVAHawk', :priority => 0)
         test_ns = miq_ae_namespace_stub.create!(:name => 'ns_test')
 
         migrate
@@ -111,14 +111,14 @@ describe MigrateAutomateToCustomerDomain do
       end
 
       it 'with existing domain' do
-        miq_ae_namespace_stub.create!(:name => 'ManageIQ', :priority => 0)
+        miq_ae_namespace_stub.create!(:name => 'NOVAHawk', :priority => 0)
         domain     = miq_ae_namespace_stub.create!(:name => 'Customer', :priority => 1)
         test_ns    = miq_ae_namespace_stub.create!(:name => 'ns_test',  :parent_id => domain.id)
 
         migrate
 
         expect(miq_ae_namespace_stub.where(:name => 'Customer').first).to     be_nil
-        expect(miq_ae_namespace_stub.where(:name => 'ManageIQ').first).not_to be_nil
+        expect(miq_ae_namespace_stub.where(:name => 'NOVAHawk').first).not_to be_nil
 
         test_ns.reload
         expect(test_ns.parent_id).to be_nil

@@ -22,11 +22,11 @@ FactoryGirl.define do
   factory(:template_cloud, :class => "TemplateCloud", :parent => :template) { cloud true }
   factory(:template_infra, :class => "TemplateInfra", :parent => :template)
 
-  factory :template_openstack, :class => "ManageIQ::Providers::Openstack::CloudManager::Template", :parent => :template_cloud do
+  factory :template_openstack, :class => "NOVAHawk::Providers::Openstack::CloudManager::Template", :parent => :template_cloud do
     vendor "openstack"
   end
 
-  factory :template_amazon, :class => "ManageIQ::Providers::Amazon::CloudManager::Template", :parent => :template_cloud do
+  factory :template_amazon, :class => "NOVAHawk::Providers::Amazon::CloudManager::Template", :parent => :template_cloud do
     location { |x| "#{x.name}/#{x.name}.img.manifest.xml" }
     vendor   "amazon"
   end

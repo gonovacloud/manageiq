@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('startFormDiv', ['$timeout', function($timeout) {
+NOVAHawk.angular.app.directive('startFormDiv', ['$timeout', function($timeout) {
   return {
     link: function(scope, _elem, attr) {
       scope.$watch(scope['afterGet'], function() {

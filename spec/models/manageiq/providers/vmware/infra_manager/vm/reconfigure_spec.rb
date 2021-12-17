@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Vm::Reconfigure do
+describe NOVAHawk::Providers::Vmware::InfraManager::Vm::Reconfigure do
   let(:vm) do
     FactoryGirl.create(
       :vm_vmware,

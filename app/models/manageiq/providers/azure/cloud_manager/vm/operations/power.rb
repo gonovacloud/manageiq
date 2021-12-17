@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::CloudManager::Vm::Operations::Power
+module NOVAHawk::Providers::Azure::CloudManager::Vm::Operations::Power
   extend ActiveSupport::Concern
 
   included do

@@ -1,6 +1,6 @@
 DEPLOYMENT_TYPES = {
-  :origin               => "ManageIQ::Providers::Openshift::ContainerManager",
-  :openshift_enterprise => "ManageIQ::Providers::OpenshiftEnterprise::ContainerManager",
+  :origin               => "NOVAHawk::Providers::Openshift::ContainerManager",
+  :openshift_enterprise => "NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager",
 }. freeze
 PROVIDER_PORT = "8443".freeze
 SERVICE_ACOUNT_NAME = "management-admin".freeze

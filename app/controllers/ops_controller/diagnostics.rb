@@ -234,8 +234,8 @@ module OpsController::Diagnostics
       page << javascript_prologue
       page.replace("flash_msg_divcu_repair", :partial => "layouts/flash_msg", :locals => {:div_num => "cu_repair"})
       page.replace_html("diagnostics_cu_repair", :partial => "diagnostics_cu_repair_tab")
-      page << "ManageIQ.calendar.calDateFrom = null;"
-      page << "ManageIQ.calendar.calDateTo = new Date();"
+      page << "NOVAHawk.calendar.calDateFrom = null;"
+      page << "NOVAHawk.calendar.calDateTo = new Date();"
       page << "miqBuildCalendar();"
       if @edit[:new][:start_date] == "" || @edit[:new][:end_date] == ""
         page << javascript_for_miq_button_visibility(false)
@@ -270,8 +270,8 @@ module OpsController::Diagnostics
       page << javascript_prologue
       page.replace("flash_msg_divcu_repair", :partial => "layouts/flash_msg", :locals => {:div_num => "cu_repair"})
       page.replace_html("diagnostics_cu_repair", :partial => "diagnostics_cu_repair_tab")
-      page << "ManageIQ.calendar.calDateFrom = null;"
-      page << "ManageIQ.calendar.calDateTo = new Date();"
+      page << "NOVAHawk.calendar.calDateFrom = null;"
+      page << "NOVAHawk.calendar.calDateTo = new Date();"
       page << "miqBuildCalendar();"
       page << "miqSparkle(false);"
       # disable button
@@ -884,7 +884,7 @@ module OpsController::Diagnostics
         if @sb[:active_tab] == "diagnostics_evm_log"
           @log = $log.contents(120, 1000)
           add_flash(_("Logs for this %{product} Server are not available for viewing") % {:product => I18n.t('product.name')}, :warning) if @log.blank?
-          @msg_title = _("ManageIQ")
+          @msg_title = _("NOVAHawk")
           @refresh_action = "refresh_log"
           @download_action = "fetch_log"
         elsif @sb[:active_tab] == "diagnostics_audit_log"

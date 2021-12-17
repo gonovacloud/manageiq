@@ -146,12 +146,12 @@ $(document).ready(function () {
     event.stopPropagation();
   });
 
-  ManageIQ.observeDate = function(el) {
+  NOVAHawk.observeDate = function(el) {
     miqSendDateRequest(el);
   };
 
   $(document).on('changeDate clearDate', '[data-miq_observe_date]', function() {
-    ManageIQ.observeDate($(this));
+    NOVAHawk.observeDate($(this));
   });
 
   // Run this last to be sure all other UJS bindings have been run in case the focus field is observed

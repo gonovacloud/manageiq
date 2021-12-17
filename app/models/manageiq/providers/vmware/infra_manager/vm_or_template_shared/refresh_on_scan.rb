@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::VmOrTemplateShared::RefreshOnScan
+module NOVAHawk::Providers::Vmware::InfraManager::VmOrTemplateShared::RefreshOnScan
   def refresh_on_scan
     refresh_advanced_settings
   end

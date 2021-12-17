@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::CloudManager::OrchestrationStack do
+describe NOVAHawk::Providers::CloudManager::OrchestrationStack do
   let!(:root_stack) do
     FactoryGirl.create(:orchestration_stack_cloud).tap do |stack|
       FactoryGirl.create(:vm_cloud, :orchestration_stack => stack)

@@ -41,7 +41,7 @@ sortby:
 - vm.managed.department
 - vm_name
 headers: 
-- ManageIQ Tag Department
+- NOVAHawk Tag Department
 - VM Name
 - Time Stamp
 - Initiated By

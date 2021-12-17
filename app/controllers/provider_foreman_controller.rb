@@ -6,7 +6,7 @@ class ProviderForemanController < ApplicationController
   after_action :set_session_data
 
   def self.model
-    ManageIQ::Providers::ConfigurationManager
+    NOVAHawk::Providers::ConfigurationManager
   end
 
   def self.table_name
@@ -18,17 +18,17 @@ class ProviderForemanController < ApplicationController
   }.freeze
 
   def self.model_to_name(provmodel)
-    if provmodel.include?("ManageIQ::Providers::AnsibleTower")
+    if provmodel.include?("NOVAHawk::Providers::AnsibleTower")
       Dictionary.gettext('ansible_tower', :type => :ui_title, :translate => false)
-    elsif provmodel.include?("ManageIQ::Providers::Foreman")
+    elsif provmodel.include?("NOVAHawk::Providers::Foreman")
       Dictionary.gettext('foreman', :type => :ui_title, :translate => false)
     end
   end
 
   def self.model_to_type_name(provmodel)
-    if provmodel.include?("ManageIQ::Providers::AnsibleTower")
+    if provmodel.include?("NOVAHawk::Providers::AnsibleTower")
       'ansible_tower'
-    elsif provmodel.include?("ManageIQ::Providers::Foreman")
+    elsif provmodel.include?("NOVAHawk::Providers::Foreman")
       'foreman'
     end
   end
@@ -51,7 +51,7 @@ class ProviderForemanController < ApplicationController
 
   def new
     assert_privileges("provider_foreman_add_provider")
-    @provider_cfgmgmt = ManageIQ::Providers::ConfigurationManager.new
+    @provider_cfgmgmt = NOVAHawk::Providers::ConfigurationManager.new
     @provider_types = ["Ansible Tower", ui_lookup(:ui_title => 'foreman')]
     @server_zones = Zone.in_my_region.order('lower(description)').pluck(:description, :name)
     render_form
@@ -69,7 +69,7 @@ class ProviderForemanController < ApplicationController
     else
       assert_privileges("provider_foreman_edit_provider")
       manager_id            = from_cid(params[:miq_grid_checks] || params[:id] || find_checked_items[0])
-      @provider_cfgmgmt     = find_record(ManageIQ::Providers::ConfigurationManager, manager_id)
+      @provider_cfgmgmt     = find_record(NOVAHawk::Providers::ConfigurationManager, manager_id)
       @providerdisplay_type = model_to_name(@provider_cfgmgmt.type)
       render_form
     end
@@ -79,7 +79,7 @@ class ProviderForemanController < ApplicationController
     assert_privileges("provider_foreman_delete_provider") # TODO: Privelege name should match generic ways from Infra and Cloud
     checked_items = find_checked_items # TODO: Checked items are managers, not providers.  Make them providers
     checked_items.push(params[:id]) if checked_items.empty? && params[:id]
-    providers = Rbac.filtered(ManageIQ::Providers::ConfigurationManager.where(:id => checked_items).includes(:provider).collect(&:provider))
+    providers = Rbac.filtered(NOVAHawk::Providers::ConfigurationManager.where(:id => checked_items).includes(:provider).collect(&:provider))
     if providers.empty?
       add_flash(_("No %{model} were selected for %{task}") % {:model => ui_lookup(:tables => "providers"), :task => "deletion"}, :error)
     else
@@ -144,7 +144,7 @@ class ProviderForemanController < ApplicationController
       tagging_edit('ConfiguredSystem', false)
     when :configuration_scripts
       assert_privileges("configuration_script_tag") 
-      tagging_edit('ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript', false)
+      tagging_edit('NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript', false)
     end
     render_tagging_form
   end
@@ -213,7 +213,7 @@ class ProviderForemanController < ApplicationController
                              :zone => Zone.in_my_region.size >= 1 ? Zone.in_my_region.first.name : nil
                            } if params[:id] == "new"
 
-    config_mgr = find_record(ManageIQ::Providers::ConfigurationManager, params[:id])
+    config_mgr = find_record(NOVAHawk::Providers::ConfigurationManager, params[:id])
     provider   = config_mgr.provider
 
     render :json => {:provtype   => model_to_name(config_mgr.type),
@@ -367,15 +367,15 @@ class ProviderForemanController < ApplicationController
   def configuration_manager_providers_tree_rec
     nodes = x_node.split('-')
     case nodes.first
-    when "root" then find_record(ManageIQ::Providers::ConfigurationManager, params[:id])
-    when "fr"   then find_record(ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile, params[:id])
-    when "at"   then find_record(ManageIQ::Providers::ConfigurationManager::InventoryGroup, params[:id])
-    when "f"    then find_record(ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem, params[:id])
-    when "cp"   then find_record(ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem, params[:id])
+    when "root" then find_record(NOVAHawk::Providers::ConfigurationManager, params[:id])
+    when "fr"   then find_record(NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile, params[:id])
+    when "at"   then find_record(NOVAHawk::Providers::ConfigurationManager::InventoryGroup, params[:id])
+    when "f"    then find_record(NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem, params[:id])
+    when "cp"   then find_record(NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem, params[:id])
     when "xx" then
       case nodes.second
-      when "at" then find_record(ManageIQ::Providers::AnsibleTower::ConfigurationManager, params[:id])
-      when "fr" then find_record(ManageIQ::Providers::Foreman::ConfigurationManager, params[:id])
+      when "at" then find_record(NOVAHawk::Providers::AnsibleTower::ConfigurationManager, params[:id])
+      when "fr" then find_record(NOVAHawk::Providers::Foreman::ConfigurationManager, params[:id])
       when "csa", "csf" then find_record(ConfiguredSystem, params[:id])
       end
     end
@@ -393,7 +393,7 @@ class ProviderForemanController < ApplicationController
     nodes = x_node.split('-')
     case nodes.first
     when "root", "at", "cf"
-      find_record(ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript, params[:id])
+      find_record(NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript, params[:id])
     end
   end
 
@@ -504,11 +504,11 @@ class ProviderForemanController < ApplicationController
 
   def find_or_build_provider
     @provider_cfgmgmt   = provider_class_from_provtype.new if params[:id] == "new"
-    @provider_cfgmgmt ||= find_record(ManageIQ::Providers::ConfigurationManager, params[:id]).provider # TODO: Why is params[:id] an ExtManagementSystem ID instead of Provider ID?
+    @provider_cfgmgmt ||= find_record(NOVAHawk::Providers::ConfigurationManager, params[:id]).provider # TODO: Why is params[:id] an ExtManagementSystem ID instead of Provider ID?
   end
 
   def provider_class_from_provtype
-    params[:provtype] == 'Ansible Tower' ? ManageIQ::Providers::AnsibleTower::Provider : ManageIQ::Providers::Foreman::Provider
+    params[:provtype] == 'Ansible Tower' ? NOVAHawk::Providers::AnsibleTower::Provider : NOVAHawk::Providers::Foreman::Provider
   end
 
   def sync_form_to_instance
@@ -560,13 +560,13 @@ class ProviderForemanController < ApplicationController
     end
 
     case model
-    when "ManageIQ::Providers::Foreman::ConfigurationManager", "ManageIQ::Providers::AnsibleTower::ConfigurationManager"
+    when "NOVAHawk::Providers::Foreman::ConfigurationManager", "NOVAHawk::Providers::AnsibleTower::ConfigurationManager"
       provider_list(id, model)
     when "ConfigurationProfile"
       configuration_profile_node(id, model)
     when "EmsFolder"
       inventory_group_node(id, model)
-    when "ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem", "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem", "ConfiguredSystem"
+    when "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem", "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem", "ConfiguredSystem"
       configured_system_list(id, model)
     when "ConfigurationScript"
       configuration_scripts_list(id, model)
@@ -600,7 +600,7 @@ class ProviderForemanController < ApplicationController
     else
       @no_checkboxes = true
       case @record.type
-      when "ManageIQ::Providers::Foreman::ConfigurationManager"
+      when "NOVAHawk::Providers::Foreman::ConfigurationManager"
         options = {:model => "ConfigurationProfile", :match_via_descendants => ConfiguredSystem, :where_clause => ["manager_id IN (?)", provider.id]}
         process_show_list(options)
         add_unassigned_configuration_profile_record(provider.id)
@@ -608,8 +608,8 @@ class ProviderForemanController < ApplicationController
         @right_cell_text = _("%{model} \"%{name}\"") %
         {:name => provider.name,
          :model => "#{ui_lookup(:tables => "configuration_profile")} under #{record_model} Provider"}
-      when "ManageIQ::Providers::AnsibleTower::ConfigurationManager"
-        options = {:model => "ManageIQ::Providers::ConfigurationManager::InventoryGroup", :match_via_descendants => ConfiguredSystem, :where_clause => ["ems_id IN (?)", provider.id]}
+      when "NOVAHawk::Providers::AnsibleTower::ConfigurationManager"
+        options = {:model => "NOVAHawk::Providers::ConfigurationManager::InventoryGroup", :match_via_descendants => ConfiguredSystem, :where_clause => ["ems_id IN (?)", provider.id]}
         process_show_list(options)
         record_model = ui_lookup(:model => model_to_name(model || TreeBuilder.get_model_for_prefix(@nodetype)))
         @right_cell_text = _("%{model} \"%{name}\"") %
@@ -620,7 +620,7 @@ class ProviderForemanController < ApplicationController
 
   def cs_provider_node(provider)
     options = {
-      :model => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript",
+      :model => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript",
       :match_via_descendants => ConfigurationScript,
       :where_clause => ["manager_id IN (?)", provider.id]
     }
@@ -664,7 +664,7 @@ class ProviderForemanController < ApplicationController
   end
 
   def inventory_group_node(id, model)
-    @record = @inventory_group_record = find_record(ManageIQ::Providers::ConfigurationManager::InventoryGroup, id) if model
+    @record = @inventory_group_record = find_record(NOVAHawk::Providers::ConfigurationManager::InventoryGroup, id) if model
 
     if @inventory_group_record.nil?
       self.x_node = "root"
@@ -715,14 +715,14 @@ class ProviderForemanController < ApplicationController
   end
 
   def configuration_script_node(id, model)
-    @record = @configuration_script_record = find_record(ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript, id)
+    @record = @configuration_script_record = find_record(NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript, id)
     display_node(id, model)
   end
 
   def default_node
     return unless x_node == "root"
     if x_active_tree == :configuration_manager_providers_tree
-      options = {:model => "ManageIQ::Providers::ConfigurationManager"}
+      options = {:model => "NOVAHawk::Providers::ConfigurationManager"}
       process_show_list(options)
       @right_cell_text = _("All Configuration Management Providers")
     elsif x_active_tree == :cs_filter_tree
@@ -730,7 +730,7 @@ class ProviderForemanController < ApplicationController
       process_show_list(options)
       @right_cell_text = _("All Configured Systems")
     elsif x_active_tree == :configuration_scripts_tree
-      options = {:model => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript"}
+      options = {:model => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript"}
       process_show_list(options)
       @right_cell_text = _("All Ansible Tower Job Templates")
     end
@@ -853,14 +853,14 @@ class ProviderForemanController < ApplicationController
   def foreman_provider_record?(node = x_node)
     node = node.split("-").last if node.split("-").first == 'xx'
     type, _id = node.split("-")
-    type && ["ManageIQ::Providers::Foreman::ConfigurationManager"].include?(TreeBuilder.get_model_for_prefix(type))
+    type && ["NOVAHawk::Providers::Foreman::ConfigurationManager"].include?(TreeBuilder.get_model_for_prefix(type))
   end
 
   def ansible_tower_cfgmgr_record?(node = x_node)
-    return @record.kind_of?(ManageIQ::Providers::AnsibleTower::ConfigurationManager) if @record
+    return @record.kind_of?(NOVAHawk::Providers::AnsibleTower::ConfigurationManager) if @record
 
     type, _id = node.split("-")
-    type && ["ManageIQ::Providers::AnsibleTower::ConfigurationManager"].include?(TreeBuilder.get_model_for_prefix(type))
+    type && ["NOVAHawk::Providers::AnsibleTower::ConfigurationManager"].include?(TreeBuilder.get_model_for_prefix(type))
   end
 
   def provider_record?(node = x_node)
@@ -1189,7 +1189,7 @@ class ProviderForemanController < ApplicationController
 
   def configscript_service_dialog
     assert_privileges("configscript_service_dialog")
-    cs = ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript.find_by_id(params[:id])
+    cs = NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript.find_by_id(params[:id])
     @edit = {:new    => {:dialog_name => ""},
              :key    => "cs_edit__#{cs.id}",
              :rec_id => cs.id}

@@ -2,7 +2,7 @@ describe PxeMenuPxelinux do
   before(:each) do
     @contents = <<-PXEMENU
 default vesamenu.c32
-Menu Title ManageIQ TFTP Boot Menu
+Menu Title NOVAHawk TFTP Boot Menu
 
 label iPXE
  menu default
@@ -64,7 +64,7 @@ PXEMENU
 
     @contents2 = <<-PXEMENU
 default vesamenu.c32
-Menu Title ManageIQ TFTP Boot Menu
+Menu Title NOVAHawk TFTP Boot Menu
 
 label RHEL6
   menu label RHEL6

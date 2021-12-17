@@ -1,3 +1,3 @@
-class ManageIQ::Providers::StorageManager::CinderManager::RefreshWorker::Runner <
-  ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+class NOVAHawk::Providers::StorageManager::CinderManager::RefreshWorker::Runner <
+  NOVAHawk::Providers::BaseManager::RefreshWorker::Runner
 end

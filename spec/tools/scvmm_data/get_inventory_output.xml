@@ -64,8 +64,8 @@
               </Props>
             </Obj>
             <G N="UserRoleId">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
-            <S N="FullyQualifiedDomainName">SCVMM1111.manageiq.com</S>
-            <S N="FQDN">SCVMM1111.manageiq.com</S>
+            <S N="FullyQualifiedDomainName">SCVMM1111.novahawk.com</S>
+            <S N="FQDN">SCVMM1111.novahawk.com</S>
             <Obj N="Channel" RefId="5">
               <TN RefId="5">
                 <T>Microsoft.VirtualManager.Remoting.IVirtualManagerService</T>
@@ -91,10 +91,10 @@
             <S N="MinimumSupportedGuestAgentVersion">3.0.1469.0</S>
             <B N="LibraryRefresherEnabled">true</B>
             <U32 N="LibraryRefresherFrequency">1</U32>
-            <S N="DatabaseServerName">SCVMM1111.manageiq.com</S>
+            <S N="DatabaseServerName">SCVMM1111.novahawk.com</S>
             <S N="DatabaseInstanceName">SCVMM1111</S>
             <S N="DatabaseName">VirtualManagerDB</S>
-            <S N="ConnectedUserName">MANAGEIQ\vmm</S>
+            <S N="ConnectedUserName">novahawk\vmm</S>
             <Obj N="ConnectedUserGroups" RefId="7">
               <TN RefId="7">
                 <T>Microsoft.VirtualManager.Remoting.AccountCollection</T>
@@ -129,7 +129,7 @@
                     <T>Microsoft.SystemCenter.VirtualMachineManager.ClientObject</T>
                     <T>System.Object</T>
                   </TN>
-                  <ToString>SCVMM1111.manageiq.com</ToString>
+                  <ToString>SCVMM1111.novahawk.com</ToString>
                   <Props>
                     <S N="StateString">Responding</S>
                     <S N="RoleString">Library, VMM Server</S>
@@ -137,12 +137,12 @@
                     <S N="VersionState">UpToDate</S>
                     <S N="VersionStateString">Up-to-date</S>
                     <B N="MarkedForDeletion">false</B>
-                    <S N="Name">SCVMM1111.manageiq.com</S>
+                    <S N="Name">SCVMM1111.novahawk.com</S>
                     <Nil N="MostRecentTaskID" />
                     <Nil N="MostRecentTaskUIState" />
                     <Nil N="MostRecentTask" />
-                    <S N="FullyQualifiedDomainName">SCVMM1111.manageiq.com</S>
-                    <S N="FQDN">SCVMM1111.manageiq.com</S>
+                    <S N="FullyQualifiedDomainName">SCVMM1111.novahawk.com</S>
+                    <S N="FQDN">SCVMM1111.novahawk.com</S>
                     <S N="ComputerName">SCVMM1111</S>
                     <S N="Description">Virtual Machine Manager Library Files</S>
                     <Version N="AgentVersion">3.2.7510.0</Version>
@@ -159,7 +159,7 @@
                 </Obj>
               </LST>
             </Obj>
-            <S N="VMMServiceAccount">MANAGEIQ\VMM</S>
+            <S N="VMMServiceAccount">novahawk\VMM</S>
             <B N="IsHighlyAvailable">false</B>
             <Nil N="FailoverVMMNodes" />
             <Nil N="ActiveVMMNode" />
@@ -227,9 +227,9 @@
                       <T>Microsoft.SystemCenter.VirtualMachineManager.ClientObject</T>
                       <T>System.Object</T>
                     </TN>
-                    <ToString>hyperv-h01.manageiq.com</ToString>
+                    <ToString>hyperv-h01.novahawk.com</ToString>
                     <Props>
-                      <S N="RunAsAccount">MANAGEIQ\Administrator</S>
+                      <S N="RunAsAccount">novahawk\Administrator</S>
                       <G N="MostRecentTaskID">c403eee5-67de-4eba-bd1a-9abed973f13c</G>
                       <S N="MostRecentTaskUIState">Failed</S>
                       <S N="MostRecentTask">Refresh virtual machine properties</S>
@@ -237,10 +237,10 @@
                       <S N="OverallState">OK</S>
                       <S N="CommunicationStateString">Responding</S>
                       <S N="CommunicationState">Responding</S>
-                      <S N="Name">hyperv-h01.manageiq.com</S>
-                      <S N="FullyQualifiedDomainName">hyperv-h01.manageiq.com</S>
+                      <S N="Name">hyperv-h01.novahawk.com</S>
+                      <S N="FullyQualifiedDomainName">hyperv-h01.novahawk.com</S>
                       <S N="ComputerName">hyperv-h01</S>
-                      <S N="DomainName">manageiq.com</S>
+                      <S N="DomainName">novahawk.com</S>
                       <S N="Description"></S>
                       <S N="RemoteUserName"></S>
                       <B N="OverrideHostGroupReserves">false</B>
@@ -344,8 +344,8 @@
                       <U64 N="MinimumMemoryPerVM">32</U64>
                       <U64 N="SuggestedMaximumMemoryPerVM">512</U64>
                       <DT N="ModifiedTime">2014-06-04T08:55:26.5415125-07:00</DT>
-                      <S N="Agent">hyperv-h01.manageiq.com</S>
-                      <S N="ManagedComputer">hyperv-h01.manageiq.com</S>
+                      <S N="Agent">hyperv-h01.novahawk.com</S>
+                      <S N="ManagedComputer">hyperv-h01.novahawk.com</S>
                       <Obj N="VMs" RefId="23">
                         <TN RefId="16">
                           <T>System.Collections.Generic.List`1[[Microsoft.SystemCenter.VirtualMachineManager.VM, Microsoft.SystemCenter.VirtualMachineManager, Version=1.0.523.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35]]</T>
@@ -525,7 +525,7 @@
                       <S N="MostRecentTaskIfLocal">Refresh virtual machine properties</S>
                     </Props>
                     <MS>
-                      <S N="FQDN">hyperv-h01.manageiq.com</S>
+                      <S N="FQDN">hyperv-h01.novahawk.com</S>
                       <U16 N="LogicalCPUCount">16</U16>
                       <U32 N="CPUSpeed">2394</U32>
                       <S N="CPUModel">Xeon</S>
@@ -648,8 +648,8 @@
                       <S N="Profile">Administrator</S>
                       <Ref N="UserRole" RefId="3" />
                       <G N="UserRoleId">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
-                      <S N="FullyQualifiedDomainName">SCVMM1111.manageiq.com</S>
-                      <S N="FQDN">SCVMM1111.manageiq.com</S>
+                      <S N="FullyQualifiedDomainName">SCVMM1111.novahawk.com</S>
+                      <S N="FQDN">SCVMM1111.novahawk.com</S>
                       <Ref N="Channel" RefId="5" />
                       <Ref N="ObjectCache" RefId="6" />
                       <S N="OpsMgrServer">scomgr</S>
@@ -661,10 +661,10 @@
                       <S N="MinimumSupportedGuestAgentVersion">3.0.1469.0</S>
                       <B N="LibraryRefresherEnabled">true</B>
                       <U32 N="LibraryRefresherFrequency">1</U32>
-                      <S N="DatabaseServerName">SCVMM1111.manageiq.com</S>
+                      <S N="DatabaseServerName">SCVMM1111.novahawk.com</S>
                       <S N="DatabaseInstanceName">SCVMM1111</S>
                       <S N="DatabaseName">VirtualManagerDB</S>
-                      <S N="ConnectedUserName">MANAGEIQ\vmm</S>
+                      <S N="ConnectedUserName">novahawk\vmm</S>
                       <Ref N="ConnectedUserGroups" RefId="7" />
                       <S N="UserName">Windows User</S>
                       <S N="CompanyName"></S>
@@ -678,7 +678,7 @@
                           <Ref RefId="10" />
                         </LST>
                       </Obj>
-                      <S N="VMMServiceAccount">MANAGEIQ\VMM</S>
+                      <S N="VMMServiceAccount">novahawk\VMM</S>
                       <B N="IsHighlyAvailable">false</B>
                       <Nil N="FailoverVMMNodes" />
                       <Nil N="ActiveVMMNode" />
@@ -1025,9 +1025,9 @@
                   <B N="InUse">false</B>
                   <Obj N="VMHost" RefId="65">
                     <TNRef RefId="14" />
-                    <ToString>NYBronagh.manageiq.com</ToString>
+                    <ToString>NYBronagh.novahawk.com</ToString>
                     <Props>
-                      <S N="RunAsAccount">MANAGEIQ\bsorota</S>
+                      <S N="RunAsAccount">novahawk\bsorota</S>
                       <G N="MostRecentTaskID">979712cb-cead-4ef0-9eeb-c0cdcc602f82</G>
                       <S N="MostRecentTaskUIState">Failed</S>
                       <S N="MostRecentTask">Refresh Performance Data</S>
@@ -1035,10 +1035,10 @@
                       <S N="OverallState">OK</S>
                       <S N="CommunicationStateString">Responding</S>
                       <S N="CommunicationState">Responding</S>
-                      <S N="Name">NYBronagh.manageiq.com</S>
-                      <S N="FullyQualifiedDomainName">NYBronagh.manageiq.com</S>
+                      <S N="Name">NYBronagh.novahawk.com</S>
+                      <S N="FullyQualifiedDomainName">NYBronagh.novahawk.com</S>
                       <S N="ComputerName">NYBronagh</S>
-                      <S N="DomainName">manageiq.com</S>
+                      <S N="DomainName">novahawk.com</S>
                       <S N="Description"></S>
                       <S N="RemoteUserName"></S>
                       <B N="OverrideHostGroupReserves">false</B>
@@ -1095,7 +1095,7 @@
                         <LST />
                       </Obj>
                       <S N="VMHostGroup">All Hosts</S>
-                      <S N="HostCluster">US_East.manageiq.com</S>
+                      <S N="HostCluster">US_East.novahawk.com</S>
                       <B N="RemoteConnectEnabled">true</B>
                       <U32 N="RemoteConnectPort">2179</U32>
                       <B N="SecureRemoteConnectEnabled">false</B>
@@ -1140,8 +1140,8 @@
                       <U64 N="MinimumMemoryPerVM">32</U64>
                       <U64 N="SuggestedMaximumMemoryPerVM">512</U64>
                       <DT N="ModifiedTime">2014-06-04T08:55:28.9755442-07:00</DT>
-                      <S N="Agent">NYBronagh.manageiq.com</S>
-                      <S N="ManagedComputer">NYBronagh.manageiq.com</S>
+                      <S N="Agent">NYBronagh.novahawk.com</S>
+                      <S N="ManagedComputer">NYBronagh.novahawk.com</S>
                       <Obj N="VMs" RefId="72">
                         <TNRef RefId="16" />
                         <LST>
@@ -1251,7 +1251,7 @@
                       <S N="MostRecentTaskIfLocal">Refresh Performance Data</S>
                     </Props>
                     <MS>
-                      <S N="FQDN">NYBronagh.manageiq.com</S>
+                      <S N="FQDN">NYBronagh.novahawk.com</S>
                       <U16 N="LogicalCPUCount">4</U16>
                       <U32 N="CPUSpeed">2128</U32>
                       <S N="CPUModel">Pentium</S>
@@ -1359,9 +1359,9 @@
                   <B N="InUse">false</B>
                   <Obj N="VMHost" RefId="88">
                     <TNRef RefId="14" />
-                    <ToString>SFBronagh.manageiq.com</ToString>
+                    <ToString>SFBronagh.novahawk.com</ToString>
                     <Props>
-                      <S N="RunAsAccount">MANAGEIQ\bsorota</S>
+                      <S N="RunAsAccount">novahawk\bsorota</S>
                       <G N="MostRecentTaskID">4c99265a-e470-4718-a845-7946648cf97f</G>
                       <S N="MostRecentTaskUIState">Failed</S>
                       <S N="MostRecentTask">Refresh virtual machine properties</S>
@@ -1369,10 +1369,10 @@
                       <S N="OverallState">OK</S>
                       <S N="CommunicationStateString">Responding</S>
                       <S N="CommunicationState">Responding</S>
-                      <S N="Name">SFBronagh.manageiq.com</S>
-                      <S N="FullyQualifiedDomainName">SFBronagh.manageiq.com</S>
+                      <S N="Name">SFBronagh.novahawk.com</S>
+                      <S N="FullyQualifiedDomainName">SFBronagh.novahawk.com</S>
                       <S N="ComputerName">SFBronagh</S>
-                      <S N="DomainName">manageiq.com</S>
+                      <S N="DomainName">novahawk.com</S>
                       <S N="Description"></S>
                       <S N="RemoteUserName"></S>
                       <B N="OverrideHostGroupReserves">false</B>
@@ -1429,7 +1429,7 @@
                         <LST />
                       </Obj>
                       <S N="VMHostGroup">All Hosts</S>
-                      <S N="HostCluster">US_East.manageiq.com</S>
+                      <S N="HostCluster">US_East.novahawk.com</S>
                       <B N="RemoteConnectEnabled">true</B>
                       <U32 N="RemoteConnectPort">2179</U32>
                       <B N="SecureRemoteConnectEnabled">false</B>
@@ -1474,8 +1474,8 @@
                       <U64 N="MinimumMemoryPerVM">32</U64>
                       <U64 N="SuggestedMaximumMemoryPerVM">512</U64>
                       <DT N="ModifiedTime">2014-06-04T08:56:07.5300507-07:00</DT>
-                      <S N="Agent">SFBronagh.manageiq.com</S>
-                      <S N="ManagedComputer">SFBronagh.manageiq.com</S>
+                      <S N="Agent">SFBronagh.novahawk.com</S>
+                      <S N="ManagedComputer">SFBronagh.novahawk.com</S>
                       <Obj N="VMs" RefId="95">
                         <TNRef RefId="16" />
                         <LST>
@@ -1598,7 +1598,7 @@
                       <S N="MostRecentTaskIfLocal">Refresh virtual machine properties</S>
                     </Props>
                     <MS>
-                      <S N="FQDN">SFBronagh.manageiq.com</S>
+                      <S N="FQDN">SFBronagh.novahawk.com</S>
                       <U16 N="LogicalCPUCount">4</U16>
                       <U32 N="CPUSpeed">2128</U32>
                       <S N="CPUModel">Pentium</S>
@@ -1701,11 +1701,11 @@
                         <T>Microsoft.SystemCenter.VirtualMachineManager.ClientObject</T>
                         <T>System.Object</T>
                       </TN>
-                      <ToString>US_East.manageiq.com</ToString>
+                      <ToString>US_East.novahawk.com</ToString>
                       <Props>
-                        <S N="Name">US_East.manageiq.com</S>
+                        <S N="Name">US_East.novahawk.com</S>
                         <S N="ClusterName">US_East</S>
-                        <S N="DomainName">manageiq.com</S>
+                        <S N="DomainName">novahawk.com</S>
                         <S N="Description"></S>
                         <Obj N="HostGroup" RefId="113">
                           <TN RefId="32">
@@ -1768,13 +1768,13 @@
                                 <T>System.Object</T>
                               </TN>
                               <LST>
-                                <S>US_East.manageiq.com</S>
+                                <S>US_East.novahawk.com</S>
                               </LST>
                             </Obj>
                             <Obj N="ChildClusters" RefId="120">
                               <TNRef RefId="35" />
                               <LST>
-                                <S>US_East.manageiq.com</S>
+                                <S>US_East.novahawk.com</S>
                               </LST>
                             </Obj>
                             <B N="IsUnencryptedFileTransferEnabled">false</B>
@@ -1938,11 +1938,11 @@
                             <T>Microsoft.SystemCenter.VirtualMachineManager.ClientObject</T>
                             <T>System.Object</T>
                           </TN>
-                          <ToString>MANAGEIQ\bsorota</ToString>
+                          <ToString>novahawk\bsorota</ToString>
                           <Props>
-                            <S N="Name">MANAGEIQ\bsorota</S>
+                            <S N="Name">novahawk\bsorota</S>
                             <S N="UserName">bsorota</S>
-                            <S N="Domain">MANAGEIQ</S>
+                            <S N="Domain">novahawk</S>
                             <B N="Enabled">true</B>
                             <B N="IsBuiltIn">false</B>
                             <Obj N="GrantedToList" RefId="136">
@@ -1954,7 +1954,7 @@
                             </Obj>
                             <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                             <Ref N="UserRole" RefId="3" />
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="ObjectType">RunAsAccount</S>
                             <S N="Accessibility">Public</S>
                             <B N="IsViewOnly">false</B>
@@ -2352,13 +2352,13 @@
                                 <Nil N="ComplianceStatus" />
                                 <Nil N="Tag" />
                                 <B N="HasProductKey">false</B>
-                                <S N="Location">\\SCVMM1111.manageiq.com\LocalTenantLibrary\WS2008R2CoreClo\WS2008R2Corex64Ent.vhd</S>
+                                <S N="Location">\\SCVMM1111.novahawk.com\LocalTenantLibrary\WS2008R2CoreClo\WS2008R2Corex64Ent.vhd</S>
                                 <Nil N="Release" />
                                 <S N="State">Normal</S>
                                 <G N="LibraryShareId">7d4c9f9f-1549-47f4-9624-126009f6303f</G>
-                                <S N="SharePath">\\SCVMM1111.manageiq.com\LocalTenantLibrary\WS2008R2CoreClo\WS2008R2Corex64Ent.vhd</S>
+                                <S N="SharePath">\\SCVMM1111.novahawk.com\LocalTenantLibrary\WS2008R2CoreClo\WS2008R2Corex64Ent.vhd</S>
                                 <Nil N="FileShare" />
-                                <S N="Directory">\\SCVMM1111.manageiq.com\LocalTenantLibrary\WS2008R2CoreClo</S>
+                                <S N="Directory">\\SCVMM1111.novahawk.com\LocalTenantLibrary\WS2008R2CoreClo</S>
                                 <I64 N="Size">3449503232</I64>
                                 <B N="IsOrphaned">false</B>
                                 <Nil N="FamilyName" />
@@ -2369,9 +2369,9 @@
                                 <Nil N="Classification" />
                                 <G N="HostId">ee9530bc-9329-49ab-b0c2-07c8ac6fd188</G>
                                 <S N="HostType">LibraryServer</S>
-                                <S N="HostName">SCVMM1111.manageiq.com</S>
+                                <S N="HostName">SCVMM1111.novahawk.com</S>
                                 <Nil N="VMHost" />
-                                <S N="LibraryServer">SCVMM1111.manageiq.com</S>
+                                <S N="LibraryServer">SCVMM1111.novahawk.com</S>
                                 <Nil N="CloudId" />
                                 <Nil N="Cloud" />
                                 <S N="LibraryGroup"></S>
@@ -2475,8 +2475,8 @@
                                 <D N="RequiredBandwidth">0</D>
                                 <S N="VirtualNetworkAdapterType">Synthetic</S>
                                 <Nil N="VmwAdapterIndex" />
-                                <S N="LogicalNetwork">manageiq</S>
-                                <S N="VMNetwork">manageiq</S>
+                                <S N="LogicalNetwork">novahawk</S>
+                                <S N="VMNetwork">novahawk</S>
                                 <Nil N="VMNetworkServiceSetting" />
                                 <Nil N="VMSubnet" />
                                 <Nil N="PortClassification" />
@@ -2932,7 +2932,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\svc_spf</S>
+                        <S N="Owner">novahawk\svc_spf</S>
                         <Obj N="ObjectType" RefId="185">
                           <TNRef RefId="30" />
                           <ToString>Template</ToString>
@@ -3261,8 +3261,8 @@
                                 <D N="RequiredBandwidth">0</D>
                                 <S N="VirtualNetworkAdapterType">Synthetic</S>
                                 <Nil N="VmwAdapterIndex" />
-                                <S N="LogicalNetwork">manageiq</S>
-                                <S N="VMNetwork">manageiq</S>
+                                <S N="LogicalNetwork">novahawk</S>
+                                <S N="VMNetwork">novahawk</S>
                                 <Nil N="VMNetworkServiceSetting" />
                                 <Nil N="VMSubnet" />
                                 <Nil N="PortClassification" />
@@ -3442,7 +3442,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\svc_spf</S>
+                        <S N="Owner">novahawk\svc_spf</S>
                         <Obj N="ObjectType" RefId="227">
                           <TNRef RefId="30" />
                           <ToString>Template</ToString>
@@ -3826,8 +3826,8 @@
                                 <D N="RequiredBandwidth">0</D>
                                 <S N="VirtualNetworkAdapterType">Synthetic</S>
                                 <Nil N="VmwAdapterIndex" />
-                                <S N="LogicalNetwork">manageiq</S>
-                                <S N="VMNetwork">manageiq</S>
+                                <S N="LogicalNetwork">novahawk</S>
+                                <S N="VMNetwork">novahawk</S>
                                 <Nil N="VMNetworkServiceSetting" />
                                 <Nil N="VMSubnet" />
                                 <Nil N="PortClassification" />
@@ -4007,7 +4007,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\svc_spf</S>
+                        <S N="Owner">novahawk\svc_spf</S>
                         <Obj N="ObjectType" RefId="271">
                           <TNRef RefId="30" />
                           <ToString>Template</ToString>
@@ -4286,13 +4286,13 @@
                                 <Nil N="ComplianceStatus" />
                                 <Nil N="Tag" />
                                 <B N="HasProductKey">false</B>
-                                <S N="Location">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\WS2008R2CoreClo2\WS2008R2Corex64Ent.vhd</S>
+                                <S N="Location">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\WS2008R2CoreClo2\WS2008R2Corex64Ent.vhd</S>
                                 <Nil N="Release" />
                                 <S N="State">Normal</S>
                                 <G N="LibraryShareId">579271a7-0f57-482a-84d8-12a65ea81a18</G>
-                                <S N="SharePath">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\WS2008R2CoreClo2\WS2008R2Corex64Ent.vhd</S>
+                                <S N="SharePath">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\WS2008R2CoreClo2\WS2008R2Corex64Ent.vhd</S>
                                 <Nil N="FileShare" />
-                                <S N="Directory">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\WS2008R2CoreClo2</S>
+                                <S N="Directory">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\WS2008R2CoreClo2</S>
                                 <I64 N="Size">3449503232</I64>
                                 <B N="IsOrphaned">false</B>
                                 <Nil N="FamilyName" />
@@ -4303,9 +4303,9 @@
                                 <Nil N="Classification" />
                                 <G N="HostId">ee9530bc-9329-49ab-b0c2-07c8ac6fd188</G>
                                 <S N="HostType">LibraryServer</S>
-                                <S N="HostName">SCVMM1111.manageiq.com</S>
+                                <S N="HostName">SCVMM1111.novahawk.com</S>
                                 <Nil N="VMHost" />
-                                <S N="LibraryServer">SCVMM1111.manageiq.com</S>
+                                <S N="LibraryServer">SCVMM1111.novahawk.com</S>
                                 <Nil N="CloudId" />
                                 <Nil N="Cloud" />
                                 <S N="LibraryGroup"></S>
@@ -4572,7 +4572,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\svc_spf</S>
+                        <S N="Owner">novahawk\svc_spf</S>
                         <Obj N="ObjectType" RefId="315">
                           <TNRef RefId="30" />
                           <ToString>Template</ToString>
@@ -4876,13 +4876,13 @@
                                 <Nil N="ComplianceStatus" />
                                 <Nil N="Tag" />
                                 <B N="HasProductKey">false</B>
-                                <S N="Location">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\Blank Disk - Small.vhd</S>
+                                <S N="Location">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\Blank Disk - Small.vhd</S>
                                 <Nil N="Release" />
                                 <S N="State">Normal</S>
                                 <G N="LibraryShareId">579271a7-0f57-482a-84d8-12a65ea81a18</G>
-                                <S N="SharePath">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\Blank Disk - Small.vhd</S>
+                                <S N="SharePath">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\Blank Disk - Small.vhd</S>
                                 <Nil N="FileShare" />
-                                <S N="Directory">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs</S>
+                                <S N="Directory">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs</S>
                                 <I64 N="Size">35328</I64>
                                 <B N="IsOrphaned">false</B>
                                 <Nil N="FamilyName" />
@@ -4893,9 +4893,9 @@
                                 <Nil N="Classification" />
                                 <G N="HostId">ee9530bc-9329-49ab-b0c2-07c8ac6fd188</G>
                                 <S N="HostType">LibraryServer</S>
-                                <S N="HostName">SCVMM1111.manageiq.com</S>
+                                <S N="HostName">SCVMM1111.novahawk.com</S>
                                 <Nil N="VMHost" />
-                                <S N="LibraryServer">SCVMM1111.manageiq.com</S>
+                                <S N="LibraryServer">SCVMM1111.novahawk.com</S>
                                 <Nil N="CloudId" />
                                 <Nil N="Cloud" />
                                 <S N="LibraryGroup"></S>
@@ -5162,7 +5162,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\svc_spf</S>
+                        <S N="Owner">novahawk\svc_spf</S>
                         <Obj N="ObjectType" RefId="360">
                           <TNRef RefId="30" />
                           <ToString>Template</ToString>
@@ -5486,9 +5486,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-05T14:05:41.21-07:00</DT>
                             <DT N="EndTime">2014-05-05T14:05:45.2-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="385">
                               <TN RefId="90">
@@ -5756,7 +5756,7 @@
                                 <Ref N="Classification" RefId="50" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -6013,7 +6013,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -6025,7 +6025,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="423">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -6251,9 +6251,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-04-30T14:05:40.197-07:00</DT>
                             <DT N="EndTime">2014-04-30T14:05:44.677-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="445">
                               <TNRef RefId="90" />
@@ -6490,7 +6490,7 @@
                                 <Ref N="Classification" RefId="50" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -6747,7 +6747,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -6759,7 +6759,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="482">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -6985,9 +6985,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-21T16:32:08.127-07:00</DT>
                             <DT N="EndTime">2014-05-21T16:32:08.157-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="504">
                               <TNRef RefId="90" />
@@ -7414,7 +7414,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">NYBronagh.manageiq.com</S>
+                        <S N="HostName">NYBronagh.novahawk.com</S>
                         <Ref N="VMHost" RefId="65" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -7688,9 +7688,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-13T13:04:23.123-07:00</DT>
                             <DT N="EndTime">2014-05-13T13:04:30.863-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="562">
                               <TNRef RefId="90" />
@@ -7952,7 +7952,7 @@
                                 <Ref N="Classification" RefId="50" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -8242,7 +8242,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -8254,7 +8254,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="602">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -8480,9 +8480,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-23T07:48:15.233-07:00</DT>
                             <DT N="EndTime">2014-05-23T07:48:15.29-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Discover Virtual Machine Removed</S>
                             <Obj N="Steps" RefId="624">
                               <TNRef RefId="90" />
@@ -8724,7 +8724,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -8981,7 +8981,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <G N="CloudId">e48f11e7-8e46-4b26-a8c2-caf971b50c6a</G>
@@ -9092,7 +9092,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="672">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -9318,9 +9318,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-15T19:55:45.96-07:00</DT>
                             <DT N="EndTime">2014-05-15T19:55:49.543-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="694">
                               <TNRef RefId="90" />
@@ -9562,7 +9562,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">a78af7bf-469b-4823-b71a-5de4017b4266</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">NYBronagh.manageiq.com</S>
+                                <S N="HostName">NYBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="65" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -9819,7 +9819,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">NYBronagh.manageiq.com</S>
+                        <S N="HostName">NYBronagh.novahawk.com</S>
                         <Ref N="VMHost" RefId="65" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -9831,7 +9831,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="731">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -9877,7 +9877,7 @@
                       <TNRef RefId="78" />
                       <ToString>WS2008R2Corex64Ent</ToString>
                       <Props>
-                        <S N="VMCPath">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Machines\6201A666-1D7A-4AAB-8472-FA34401AC21F.exp</S>
+                        <S N="VMCPath">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Machines\6201A666-1D7A-4AAB-8472-FA34401AC21F.exp</S>
                         <B N="MarkedAsTemplate">false</B>
                         <Nil N="OwnerIdentifier" />
                         <S N="VMId">6201A666-1D7A-4AAB-8472-FA34401AC21F</S>
@@ -9908,7 +9908,7 @@
                           <ToString>PowerOff</ToString>
                           <I32>1</I32>
                         </Obj>
-                        <S N="HostGroupPath">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
+                        <S N="HostGroupPath">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
                         <I64 N="TotalSize">2600901632</I64>
                         <I32 N="MemoryAssignedMB">2048</I32>
                         <I16 N="MemoryAvailablePercentage">0</I16>
@@ -10057,9 +10057,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-05T08:46:29.67-07:00</DT>
                             <DT N="EndTime">2014-05-05T08:46:29.937-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Change properties of virtual machine</S>
                             <Obj N="Steps" RefId="753">
                               <TNRef RefId="90" />
@@ -10101,7 +10101,7 @@
                             <B N="IsFullyCached">true</B>
                           </Props>
                         </Obj>
-                        <S N="Location">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
+                        <S N="Location">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
                         <DT N="CreationTime">2013-12-03T13:32:18.207-08:00</DT>
                         <Ref N="OperatingSystem" RefId="507" />
                         <B N="HasVMAdditions">false</B>
@@ -10282,13 +10282,13 @@
                                 <Nil N="ComplianceStatus" />
                                 <Nil N="Tag" />
                                 <B N="HasProductKey">false</B>
-                                <S N="Location">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Hard Disks\WS2008R2Corex64Ent.vhd</S>
+                                <S N="Location">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Hard Disks\WS2008R2Corex64Ent.vhd</S>
                                 <Nil N="Release" />
                                 <S N="State">Normal</S>
                                 <G N="LibraryShareId">579271a7-0f57-482a-84d8-12a65ea81a18</G>
-                                <S N="SharePath">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Hard Disks\WS2008R2Corex64Ent.vhd</S>
+                                <S N="SharePath">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Hard Disks\WS2008R2Corex64Ent.vhd</S>
                                 <Nil N="FileShare" />
-                                <S N="Directory">\\SCVMM1111.manageiq.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Hard Disks</S>
+                                <S N="Directory">\\SCVMM1111.novahawk.com\MSSCVMMLibrary\VHDs\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Hard Disks</S>
                                 <I64 N="Size">2600901632</I64>
                                 <B N="IsOrphaned">false</B>
                                 <Nil N="FamilyName" />
@@ -10299,9 +10299,9 @@
                                 <Nil N="Classification" />
                                 <G N="HostId">ee9530bc-9329-49ab-b0c2-07c8ac6fd188</G>
                                 <S N="HostType">LibraryServer</S>
-                                <S N="HostName">SCVMM1111.manageiq.com</S>
+                                <S N="HostName">SCVMM1111.novahawk.com</S>
                                 <Nil N="VMHost" />
-                                <S N="LibraryServer">SCVMM1111.manageiq.com</S>
+                                <S N="LibraryServer">SCVMM1111.novahawk.com</S>
                                 <Nil N="CloudId" />
                                 <Nil N="Cloud" />
                                 <S N="LibraryGroup"></S>
@@ -10527,7 +10527,7 @@
                           <ToString>LibraryServer</ToString>
                           <I32>18</I32>
                         </Obj>
-                        <S N="HostName">SCVMM1111.manageiq.com</S>
+                        <S N="HostName">SCVMM1111.novahawk.com</S>
                         <Nil N="VMHost" />
                         <Obj N="LibraryServer" RefId="786">
                           <TN RefId="102">
@@ -10535,14 +10535,14 @@
                             <T>Microsoft.SystemCenter.VirtualMachineManager.ClientObject</T>
                             <T>System.Object</T>
                           </TN>
-                          <ToString>SCVMM1111.manageiq.com</ToString>
+                          <ToString>SCVMM1111.novahawk.com</ToString>
                           <Props>
-                            <S N="Name">SCVMM1111.manageiq.com</S>
+                            <S N="Name">SCVMM1111.novahawk.com</S>
                             <S N="Status">Responding</S>
-                            <S N="FullyQualifiedDomainName">SCVMM1111.manageiq.com</S>
-                            <S N="FQDN">SCVMM1111.manageiq.com</S>
+                            <S N="FullyQualifiedDomainName">SCVMM1111.novahawk.com</S>
+                            <S N="FQDN">SCVMM1111.novahawk.com</S>
                             <S N="ComputerName">SCVMM1111</S>
-                            <S N="DomainName">manageiq.com</S>
+                            <S N="DomainName">novahawk.com</S>
                             <Ref N="ManagedComputer" RefId="10" />
                             <S N="Description">Virtual Machine Manager server as library server</S>
                             <S N="LibraryGroup"></S>
@@ -10838,9 +10838,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-06-02T07:23:09.473-07:00</DT>
                             <DT N="EndTime">2014-06-02T07:23:14.603-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Change properties of virtual machine</S>
                             <Obj N="Steps" RefId="813">
                               <TNRef RefId="90" />
@@ -11082,7 +11082,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -11372,7 +11372,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -11384,7 +11384,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="852">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -11610,9 +11610,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-13T13:04:24.047-07:00</DT>
                             <DT N="EndTime">2014-05-13T13:04:29.177-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="874">
                               <TNRef RefId="90" />
@@ -11849,7 +11849,7 @@
                                 <Ref N="Classification" RefId="50" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -12106,7 +12106,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -12118,7 +12118,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="911">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -12164,7 +12164,7 @@
                       <TNRef RefId="78" />
                       <ToString>WS2008R2Corex64Ent</ToString>
                       <Props>
-                        <S N="VMCPath">\\SCVMM1111.manageiq.com\LocalTenantLibrary\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Machines\6201A666-1D7A-4AAB-8472-FA34401AC21F.exp</S>
+                        <S N="VMCPath">\\SCVMM1111.novahawk.com\LocalTenantLibrary\WS2008R2Corex64Ent\WS2008R2Corex64Ent\Virtual Machines\6201A666-1D7A-4AAB-8472-FA34401AC21F.exp</S>
                         <B N="MarkedAsTemplate">false</B>
                         <Nil N="OwnerIdentifier" />
                         <S N="VMId">6201A666-1D7A-4AAB-8472-FA34401AC21F</S>
@@ -12195,7 +12195,7 @@
                           <ToString>PowerOff</ToString>
                           <I32>1</I32>
                         </Obj>
-                        <S N="HostGroupPath">\\SCVMM1111.manageiq.com\LocalTenantLibrary\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
+                        <S N="HostGroupPath">\\SCVMM1111.novahawk.com\LocalTenantLibrary\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
                         <I64 N="TotalSize">0</I64>
                         <I32 N="MemoryAssignedMB">2048</I32>
                         <I16 N="MemoryAvailablePercentage">0</I16>
@@ -12344,9 +12344,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-05T08:46:03.23-07:00</DT>
                             <DT N="EndTime">2014-05-05T08:46:04.443-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Change properties of virtual machine</S>
                             <Obj N="Steps" RefId="933">
                               <TNRef RefId="90" />
@@ -12388,7 +12388,7 @@
                             <B N="IsFullyCached">true</B>
                           </Props>
                         </Obj>
-                        <S N="Location">\\SCVMM1111.manageiq.com\LocalTenantLibrary\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
+                        <S N="Location">\\SCVMM1111.novahawk.com\LocalTenantLibrary\WS2008R2Corex64Ent\WS2008R2Corex64Ent</S>
                         <DT N="CreationTime">2013-12-03T13:31:50.137-08:00</DT>
                         <Ref N="OperatingSystem" RefId="507" />
                         <B N="HasVMAdditions">false</B>
@@ -12719,7 +12719,7 @@
                           <ToString>LibraryServer</ToString>
                           <I32>18</I32>
                         </Obj>
-                        <S N="HostName">SCVMM1111.manageiq.com</S>
+                        <S N="HostName">SCVMM1111.novahawk.com</S>
                         <Nil N="VMHost" />
                         <Ref N="LibraryServer" RefId="786" />
                         <Nil N="CloudId" />
@@ -12957,9 +12957,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-16T10:03:44.14-07:00</DT>
                             <DT N="EndTime">2014-05-16T10:03:47.397-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="986">
                               <TNRef RefId="90" />
@@ -13201,7 +13201,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">bc416160-cd8b-45c4-be2a-14c3a5cf6f77</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">SFBronagh.manageiq.com</S>
+                                <S N="HostName">SFBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="88" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -13458,7 +13458,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">SFBronagh.manageiq.com</S>
+                        <S N="HostName">SFBronagh.novahawk.com</S>
                         <Ref N="VMHost" RefId="88" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -13470,7 +13470,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="1023">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -13726,9 +13726,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-13T13:04:19.91-07:00</DT>
                             <DT N="EndTime">2014-05-13T13:04:24.397-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="1047">
                               <TNRef RefId="90" />
@@ -13965,7 +13965,7 @@
                                 <Ref N="Classification" RefId="50" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -14224,7 +14224,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -14236,7 +14236,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="1084">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -14462,9 +14462,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-13T13:04:26.397-07:00</DT>
                             <DT N="EndTime">2014-05-13T13:04:27.58-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="1106">
                               <TNRef RefId="90" />
@@ -14706,7 +14706,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -14963,7 +14963,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -15094,7 +15094,7 @@
                           <ToString>HyperV</ToString>
                           <I32>2</I32>
                         </Obj>
-                        <S N="ComputerNameString">SCVMM1111.manageiq.com</S>
+                        <S N="ComputerNameString">SCVMM1111.novahawk.com</S>
                         <S N="CreationSource">Unknown source object</S>
                         <B N="IsUndergoingLiveMigration">false</B>
                         <S N="SourceObjectType">Unknown source object</S>
@@ -15231,9 +15231,9 @@
                             <S N="ErrorInfo">CapabilityProfileCanOnlyBeSetOnCloudVm (22005)</S>
                             <DT N="StartTime">2014-05-19T11:00:09.147-07:00</DT>
                             <DT N="EndTime">2014-05-19T11:00:10.457-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Change properties of virtual machine</S>
                             <Obj N="Steps" RefId="1167">
                               <TNRef RefId="90" />
@@ -15323,7 +15323,7 @@
                         </Obj>
                         <Nil N="FirstBootDevice" />
                         <Nil N="SecureBootEnabled" />
-                        <S N="ComputerName">SCVMM1111.manageiq.com</S>
+                        <S N="ComputerName">SCVMM1111.novahawk.com</S>
                         <B N="UseHardwareAssistedVirtualization">true</B>
                         <Obj N="SANStatus" RefId="1175">
                           <TNRef RefId="39" />
@@ -15475,7 +15475,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -15794,7 +15794,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -16036,9 +16036,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-21T06:35:37.557-07:00</DT>
                             <DT N="EndTime">2014-05-21T06:35:39.093-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Discover New Virtual Machine</S>
                             <Obj N="Steps" RefId="1229">
                               <TNRef RefId="90" />
@@ -16440,7 +16440,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">SFBronagh.manageiq.com</S>
+                        <S N="HostName">SFBronagh.novahawk.com</S>
                         <Ref N="VMHost" RefId="88" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -16708,9 +16708,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-06-02T07:57:54.083-07:00</DT>
                             <DT N="EndTime">2014-06-02T07:57:54.15-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh Virtual Machine State</S>
                             <Obj N="Steps" RefId="1286">
                               <TNRef RefId="90" />
@@ -16952,7 +16952,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -17211,7 +17211,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -17223,7 +17223,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="1323">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -17333,7 +17333,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -17565,9 +17565,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-13T13:04:19.05-07:00</DT>
                             <DT N="EndTime">2014-05-13T13:04:23.467-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="1353">
                               <TNRef RefId="90" />
@@ -17804,7 +17804,7 @@
                                 <Ref N="Classification" RefId="50" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -18061,7 +18061,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -18073,7 +18073,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="1390">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -18299,9 +18299,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-16T14:43:01.857-07:00</DT>
                             <DT N="EndTime">2014-05-16T14:43:01.897-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh Virtual Machine State</S>
                             <Obj N="Steps" RefId="1412">
                               <TNRef RefId="90" />
@@ -18538,7 +18538,7 @@
                                 <Ref N="Classification" RefId="50" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -18795,7 +18795,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -18807,7 +18807,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="1449">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -19033,9 +19033,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-06-02T09:46:43.807-07:00</DT>
                             <DT N="EndTime">2014-06-02T09:46:43.857-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh Virtual Machine State</S>
                             <Obj N="Steps" RefId="1471">
                               <TNRef RefId="90" />
@@ -19275,7 +19275,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -19532,7 +19532,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -19544,7 +19544,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="1507">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -19770,9 +19770,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-15T12:48:22.43-07:00</DT>
                             <DT N="EndTime">2014-05-15T12:48:22.48-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh Virtual Machine State</S>
                             <Obj N="Steps" RefId="1529">
                               <TNRef RefId="90" />
@@ -20012,7 +20012,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -20269,7 +20269,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <G N="CloudId">7a4b6987-eb13-4d86-a6f4-f7427d01f7fb</G>
@@ -20355,7 +20355,7 @@
                         </Obj>
                         <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                         <Ref N="UserRole" RefId="3" />
-                        <S N="Owner">MANAGEIQ\vmm</S>
+                        <S N="Owner">novahawk\vmm</S>
                         <Obj N="ObjectType" RefId="1576">
                           <TNRef RefId="30" />
                           <ToString>VM</ToString>
@@ -20581,9 +20581,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-21T06:36:16.117-07:00</DT>
                             <DT N="EndTime">2014-05-21T06:36:18.013-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Discover New Virtual Machine</S>
                             <Obj N="Steps" RefId="1598">
                               <TNRef RefId="90" />
@@ -20985,7 +20985,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">SFBronagh.manageiq.com</S>
+                        <S N="HostName">SFBronagh.novahawk.com</S>
                         <Ref N="VMHost" RefId="88" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -21405,7 +21405,7 @@
                                 <Ref N="Classification" RefId="40" />
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -21662,7 +21662,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">hyperv-h01.manageiq.com</S>
+                        <S N="HostName">hyperv-h01.novahawk.com</S>
                         <Ref N="VMHost" RefId="16" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -21900,9 +21900,9 @@
                             <S N="ErrorInfo">Success (0)</S>
                             <DT N="StartTime">2014-05-21T16:32:07.53-07:00</DT>
                             <DT N="EndTime">2014-05-21T16:32:07.757-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine</S>
                             <Obj N="Steps" RefId="1706">
                               <TNRef RefId="90" />
@@ -22304,7 +22304,7 @@
                           <ToString>VMHost</ToString>
                           <I32>9</I32>
                         </Obj>
-                        <S N="HostName">NYBronagh.manageiq.com</S>
+                        <S N="HostName">NYBronagh.novahawk.com</S>
                         <Ref N="VMHost" RefId="65" />
                         <Nil N="LibraryServer" />
                         <Nil N="CloudId" />
@@ -22713,7 +22713,7 @@
                     <S N="Key">Properties</S>
                     <Obj N="Value" RefId="1776">
                       <TNRef RefId="14" />
-                      <ToString>SFBronagh.manageiq.com</ToString>
+                      <ToString>SFBronagh.novahawk.com</ToString>
                       <Props>
                         <Ref N="RunAsAccount" RefId="135" />
                         <G N="MostRecentTaskID">4c99265a-e470-4718-a845-7946648cf97f</G>
@@ -22735,9 +22735,9 @@
                             <S N="ErrorInfo">HostAgentWSManError (2927); HR: 0x803381FA</S>
                             <DT N="StartTime">2014-05-15T13:38:10.96-07:00</DT>
                             <DT N="EndTime">2014-05-15T13:38:11.03-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine properties</S>
                             <Obj N="Steps" RefId="1779">
                               <TNRef RefId="90" />
@@ -22768,7 +22768,7 @@
                             <Nil N="Target" />
                             <S N="ResultObjectType">VMHost</S>
                             <S N="ResultObjectTypeName">Host</S>
-                            <S N="ResultName">SFBronagh.manageiq.com</S>
+                            <S N="ResultName">SFBronagh.novahawk.com</S>
                             <B N="IsRestartable">false</B>
                             <B N="IsStoppable">false</B>
                             <Ref N="ServerConnection" RefId="43" />
@@ -22801,10 +22801,10 @@
                           <ToString>Responding</ToString>
                           <By>0</By>
                         </Obj>
-                        <S N="Name">SFBronagh.manageiq.com</S>
-                        <S N="FullyQualifiedDomainName">SFBronagh.manageiq.com</S>
+                        <S N="Name">SFBronagh.novahawk.com</S>
+                        <S N="FullyQualifiedDomainName">SFBronagh.novahawk.com</S>
                         <S N="ComputerName">SFBronagh</S>
-                        <S N="DomainName">manageiq.com</S>
+                        <S N="DomainName">novahawk.com</S>
                         <S N="Description"></S>
                         <S N="RemoteUserName"></S>
                         <B N="OverrideHostGroupReserves">false</B>
@@ -22886,11 +22886,11 @@
                         <Ref N="VMHostGroup" RefId="113" />
                         <Obj N="HostCluster" RefId="1788">
                           <TNRef RefId="31" />
-                          <ToString>US_East.manageiq.com</ToString>
+                          <ToString>US_East.novahawk.com</ToString>
                           <Props>
-                            <S N="Name">US_East.manageiq.com</S>
+                            <S N="Name">US_East.novahawk.com</S>
                             <S N="ClusterName">US_East</S>
-                            <S N="DomainName">manageiq.com</S>
+                            <S N="DomainName">novahawk.com</S>
                             <S N="Description"></S>
                             <Ref N="HostGroup" RefId="113" />
                             <U32 N="ClusterReserve">1</U32>
@@ -23036,7 +23036,7 @@
                         <DT N="ModifiedTime">2014-06-04T08:56:07.5300507-07:00</DT>
                         <Obj N="Agent" RefId="1801">
                           <TNRef RefId="10" />
-                          <ToString>SFBronagh.manageiq.com</ToString>
+                          <ToString>SFBronagh.novahawk.com</ToString>
                           <Props>
                             <S N="StateString">Responding</S>
                             <S N="RoleString">Host</S>
@@ -23044,12 +23044,12 @@
                             <S N="VersionState">UpToDate</S>
                             <S N="VersionStateString">Up-to-date</S>
                             <B N="MarkedForDeletion">false</B>
-                            <S N="Name">SFBronagh.manageiq.com</S>
+                            <S N="Name">SFBronagh.novahawk.com</S>
                             <Nil N="MostRecentTaskID" />
                             <Nil N="MostRecentTaskUIState" />
                             <Nil N="MostRecentTask" />
-                            <S N="FullyQualifiedDomainName">SFBronagh.manageiq.com</S>
-                            <S N="FQDN">SFBronagh.manageiq.com</S>
+                            <S N="FullyQualifiedDomainName">SFBronagh.novahawk.com</S>
+                            <S N="FQDN">SFBronagh.novahawk.com</S>
                             <S N="ComputerName">SFBronagh</S>
                             <S N="Description"></S>
                             <Version N="AgentVersion">3.2.7510.0</Version>
@@ -23283,7 +23283,7 @@
                                 </Obj>
                                 <G N="HostId">bc416160-cd8b-45c4-be2a-14c3a5cf6f77</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">SFBronagh.manageiq.com</S>
+                                <S N="HostName">SFBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="88" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -23295,7 +23295,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">WestCoast_Sales</S>
@@ -23525,7 +23525,7 @@
                                 </Obj>
                                 <G N="HostId">bc416160-cd8b-45c4-be2a-14c3a5cf6f77</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">SFBronagh.manageiq.com</S>
+                                <S N="HostName">SFBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="88" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -23767,7 +23767,7 @@
                                 </Obj>
                                 <G N="HostId">bc416160-cd8b-45c4-be2a-14c3a5cf6f77</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">SFBronagh.manageiq.com</S>
+                                <S N="HostName">SFBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="88" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -24479,7 +24479,7 @@
                             <U32 N="DisplayableErrorCode">1204</U32>
                             <S N="ErrorCodeString">1204</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveHBA ; Message : The server SFBronagh.manageiq.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveHBA ; Message : The server SFBronagh.novahawk.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -24488,7 +24488,7 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server SFBronagh.manageiq.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
+                            <S N="Problem">The server SFBronagh.novahawk.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
                             <S N="CloudProblem">The server does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
                             <S N="RecommendedAction">Transfer the virtual machine over the LAN.</S>
                             <S N="RecommendedActionCLI">Transfer the virtual machine over the LAN.</S>
@@ -24500,7 +24500,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">SFBronagh.manageiq.com</S>
+                                  <S N="Value">SFBronagh.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -24517,7 +24517,7 @@
                             <U32 N="DisplayableErrorCode">1231</U32>
                             <S N="ErrorCodeString">1231</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveIscsiInitiator ; Message : The server SFBronagh.manageiq.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveIscsiInitiator ; Message : The server SFBronagh.novahawk.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -24526,7 +24526,7 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server SFBronagh.manageiq.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used.</S>
+                            <S N="Problem">The server SFBronagh.novahawk.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used.</S>
                             <S N="CloudProblem">The server does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used.</S>
                             <S N="RecommendedAction">Transfer the virtual machine over the LAN.</S>
                             <S N="RecommendedActionCLI">Transfer the virtual machine over the LAN.</S>
@@ -24538,7 +24538,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">SFBronagh.manageiq.com</S>
+                                  <S N="Value">SFBronagh.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -24555,7 +24555,7 @@
                             <U32 N="DisplayableErrorCode">1252</U32>
                             <S N="ErrorCodeString">1252</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployHostIsNotNPIVCapable ; Message : The server SFBronagh.manageiq.com does not have an HBA which supports NPIV. ; Recommended Action : If server SFBronagh.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployHostIsNotNPIVCapable ; Message : The server SFBronagh.novahawk.com does not have an HBA which supports NPIV. ; Recommended Action : If server SFBronagh.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -24564,10 +24564,10 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server SFBronagh.manageiq.com does not have an HBA which supports NPIV.</S>
+                            <S N="Problem">The server SFBronagh.novahawk.com does not have an HBA which supports NPIV.</S>
                             <S N="CloudProblem">The server does not have an HBA which supports NPIV.</S>
-                            <S N="RecommendedAction">If server SFBronagh.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
-                            <S N="RecommendedActionCLI">If server SFBronagh.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="RecommendedAction">If server SFBronagh.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="RecommendedActionCLI">If server SFBronagh.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
                             <I32 N="DetailedCode">0</I32>
                             <S N="DetailedSource">None</S>
                             <Nil N="ExceptionDetails" />
@@ -24576,7 +24576,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">SFBronagh.manageiq.com</S>
+                                  <S N="Value">SFBronagh.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -24609,7 +24609,7 @@
                         <Ref N="MostRecentTaskIfLocal" RefId="1778" />
                       </Props>
                       <MS>
-                        <S N="FQDN">SFBronagh.manageiq.com</S>
+                        <S N="FQDN">SFBronagh.novahawk.com</S>
                         <U16 N="LogicalCPUCount">4</U16>
                         <U32 N="CPUSpeed">2128</U32>
                         <S N="CPUModel">Pentium</S>
@@ -24885,7 +24885,7 @@
                     <S N="Key">Properties</S>
                     <Obj N="Value" RefId="1932">
                       <TNRef RefId="14" />
-                      <ToString>NYBronagh.manageiq.com</ToString>
+                      <ToString>NYBronagh.novahawk.com</ToString>
                       <Props>
                         <Ref N="RunAsAccount" RefId="135" />
                         <G N="MostRecentTaskID">979712cb-cead-4ef0-9eeb-c0cdcc602f82</G>
@@ -24907,9 +24907,9 @@
                             <S N="ErrorInfo">HostAgentWSmanConnectionFailed (2916); HR: 0x80338126</S>
                             <DT N="StartTime">2014-05-20T12:43:52.85-07:00</DT>
                             <DT N="EndTime">2014-05-20T12:43:52.87-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh Performance Data</S>
                             <Obj N="Steps" RefId="1935">
                               <TNRef RefId="90" />
@@ -24940,7 +24940,7 @@
                             <Nil N="Target" />
                             <S N="ResultObjectType">VMHost</S>
                             <S N="ResultObjectTypeName">Host</S>
-                            <S N="ResultName">NYBronagh.manageiq.com</S>
+                            <S N="ResultName">NYBronagh.novahawk.com</S>
                             <B N="IsRestartable">false</B>
                             <B N="IsStoppable">false</B>
                             <Ref N="ServerConnection" RefId="43" />
@@ -24963,10 +24963,10 @@
                           <ToString>Responding</ToString>
                           <By>0</By>
                         </Obj>
-                        <S N="Name">NYBronagh.manageiq.com</S>
-                        <S N="FullyQualifiedDomainName">NYBronagh.manageiq.com</S>
+                        <S N="Name">NYBronagh.novahawk.com</S>
+                        <S N="FullyQualifiedDomainName">NYBronagh.novahawk.com</S>
                         <S N="ComputerName">NYBronagh</S>
-                        <S N="DomainName">manageiq.com</S>
+                        <S N="DomainName">novahawk.com</S>
                         <S N="Description"></S>
                         <S N="RemoteUserName"></S>
                         <B N="OverrideHostGroupReserves">false</B>
@@ -25103,7 +25103,7 @@
                         <DT N="ModifiedTime">2014-06-04T08:55:28.9755442-07:00</DT>
                         <Obj N="Agent" RefId="1949">
                           <TNRef RefId="10" />
-                          <ToString>NYBronagh.manageiq.com</ToString>
+                          <ToString>NYBronagh.novahawk.com</ToString>
                           <Props>
                             <S N="StateString">Responding</S>
                             <S N="RoleString">Host</S>
@@ -25111,12 +25111,12 @@
                             <S N="VersionState">UpToDate</S>
                             <S N="VersionStateString">Up-to-date</S>
                             <B N="MarkedForDeletion">false</B>
-                            <S N="Name">NYBronagh.manageiq.com</S>
+                            <S N="Name">NYBronagh.novahawk.com</S>
                             <Nil N="MostRecentTaskID" />
                             <Nil N="MostRecentTaskUIState" />
                             <Nil N="MostRecentTask" />
-                            <S N="FullyQualifiedDomainName">NYBronagh.manageiq.com</S>
-                            <S N="FQDN">NYBronagh.manageiq.com</S>
+                            <S N="FullyQualifiedDomainName">NYBronagh.novahawk.com</S>
+                            <S N="FQDN">NYBronagh.novahawk.com</S>
                             <S N="ComputerName">NYBronagh</S>
                             <S N="Description"></S>
                             <Version N="AgentVersion">3.2.7510.0</Version>
@@ -25346,7 +25346,7 @@
                                 </Obj>
                                 <G N="HostId">a78af7bf-469b-4823-b71a-5de4017b4266</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">NYBronagh.manageiq.com</S>
+                                <S N="HostName">NYBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="65" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -25588,7 +25588,7 @@
                                 </Obj>
                                 <G N="HostId">a78af7bf-469b-4823-b71a-5de4017b4266</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">NYBronagh.manageiq.com</S>
+                                <S N="HostName">NYBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="65" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -25834,7 +25834,7 @@
                                 </Obj>
                                 <G N="HostId">a78af7bf-469b-4823-b71a-5de4017b4266</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">NYBronagh.manageiq.com</S>
+                                <S N="HostName">NYBronagh.novahawk.com</S>
                                 <Ref N="VMHost" RefId="65" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -25846,7 +25846,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">EastCost_sales</S>
@@ -26321,7 +26321,7 @@
                             <U32 N="DisplayableErrorCode">1204</U32>
                             <S N="ErrorCodeString">1204</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveHBA ; Message : The server NYBronagh.manageiq.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveHBA ; Message : The server NYBronagh.novahawk.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -26330,7 +26330,7 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server NYBronagh.manageiq.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
+                            <S N="Problem">The server NYBronagh.novahawk.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
                             <S N="CloudProblem">The server does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
                             <S N="RecommendedAction">Transfer the virtual machine over the LAN.</S>
                             <S N="RecommendedActionCLI">Transfer the virtual machine over the LAN.</S>
@@ -26342,7 +26342,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">NYBronagh.manageiq.com</S>
+                                  <S N="Value">NYBronagh.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -26359,7 +26359,7 @@
                             <U32 N="DisplayableErrorCode">1231</U32>
                             <S N="ErrorCodeString">1231</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveIscsiInitiator ; Message : The server NYBronagh.manageiq.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveIscsiInitiator ; Message : The server NYBronagh.novahawk.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -26368,7 +26368,7 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server NYBronagh.manageiq.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used.</S>
+                            <S N="Problem">The server NYBronagh.novahawk.com does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used.</S>
                             <S N="CloudProblem">The server does not have the Microsoft iSCSI Initiator installed. iSCSI SAN transfer cannot be used.</S>
                             <S N="RecommendedAction">Transfer the virtual machine over the LAN.</S>
                             <S N="RecommendedActionCLI">Transfer the virtual machine over the LAN.</S>
@@ -26380,7 +26380,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">NYBronagh.manageiq.com</S>
+                                  <S N="Value">NYBronagh.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -26397,7 +26397,7 @@
                             <U32 N="DisplayableErrorCode">1252</U32>
                             <S N="ErrorCodeString">1252</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployHostIsNotNPIVCapable ; Message : The server NYBronagh.manageiq.com does not have an HBA which supports NPIV. ; Recommended Action : If server NYBronagh.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployHostIsNotNPIVCapable ; Message : The server NYBronagh.novahawk.com does not have an HBA which supports NPIV. ; Recommended Action : If server NYBronagh.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -26406,10 +26406,10 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server NYBronagh.manageiq.com does not have an HBA which supports NPIV.</S>
+                            <S N="Problem">The server NYBronagh.novahawk.com does not have an HBA which supports NPIV.</S>
                             <S N="CloudProblem">The server does not have an HBA which supports NPIV.</S>
-                            <S N="RecommendedAction">If server NYBronagh.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
-                            <S N="RecommendedActionCLI">If server NYBronagh.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="RecommendedAction">If server NYBronagh.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="RecommendedActionCLI">If server NYBronagh.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
                             <I32 N="DetailedCode">0</I32>
                             <S N="DetailedSource">None</S>
                             <Nil N="ExceptionDetails" />
@@ -26418,7 +26418,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">NYBronagh.manageiq.com</S>
+                                  <S N="Value">NYBronagh.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -26446,7 +26446,7 @@
                         <Ref N="MostRecentTaskIfLocal" RefId="1934" />
                       </Props>
                       <MS>
-                        <S N="FQDN">NYBronagh.manageiq.com</S>
+                        <S N="FQDN">NYBronagh.novahawk.com</S>
                         <U16 N="LogicalCPUCount">4</U16>
                         <U32 N="CPUSpeed">2128</U32>
                         <S N="CPUModel">Pentium</S>
@@ -27135,15 +27135,15 @@
                     <S N="Key">Properties</S>
                     <Obj N="Value" RefId="2129">
                       <TNRef RefId="14" />
-                      <ToString>hyperv-h01.manageiq.com</ToString>
+                      <ToString>hyperv-h01.novahawk.com</ToString>
                       <Props>
                         <Obj N="RunAsAccount" RefId="2130">
                           <TNRef RefId="45" />
-                          <ToString>MANAGEIQ\Administrator</ToString>
+                          <ToString>novahawk\Administrator</ToString>
                           <Props>
-                            <S N="Name">MANAGEIQ\Administrator</S>
+                            <S N="Name">novahawk\Administrator</S>
                             <S N="UserName">Administrator</S>
-                            <S N="Domain">MANAGEIQ</S>
+                            <S N="Domain">novahawk</S>
                             <B N="Enabled">true</B>
                             <B N="IsBuiltIn">false</B>
                             <Obj N="GrantedToList" RefId="2131">
@@ -27152,7 +27152,7 @@
                             </Obj>
                             <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                             <Ref N="UserRole" RefId="3" />
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="ObjectType">RunAsAccount</S>
                             <S N="Accessibility">Public</S>
                             <B N="IsViewOnly">false</B>
@@ -27186,9 +27186,9 @@
                             <S N="ErrorInfo">RefreshTaskCancelledOnRestart (1711)</S>
                             <DT N="StartTime">2014-05-12T12:27:35.947-07:00</DT>
                             <DT N="EndTime">2014-05-13T08:34:39.493-07:00</DT>
-                            <S N="Owner">MANAGEIQ\vmm</S>
+                            <S N="Owner">novahawk\vmm</S>
                             <S N="OwnerIdentifier">S-1-5-21-4106323499-3255682937-2389761597-8233</S>
-                            <S N="SessionOwner">MANAGEIQ\vmm</S>
+                            <S N="SessionOwner">novahawk\vmm</S>
                             <S N="Name">Refresh virtual machine properties</S>
                             <Obj N="Steps" RefId="2134">
                               <TNRef RefId="90" />
@@ -27219,7 +27219,7 @@
                             <Nil N="Target" />
                             <S N="ResultObjectType">VMHost</S>
                             <S N="ResultObjectTypeName">Host</S>
-                            <S N="ResultName">hyperv-h01.manageiq.com</S>
+                            <S N="ResultName">hyperv-h01.novahawk.com</S>
                             <B N="IsRestartable">false</B>
                             <B N="IsStoppable">false</B>
                             <Ref N="ServerConnection" RefId="43" />
@@ -27242,10 +27242,10 @@
                           <ToString>Responding</ToString>
                           <By>0</By>
                         </Obj>
-                        <S N="Name">hyperv-h01.manageiq.com</S>
-                        <S N="FullyQualifiedDomainName">hyperv-h01.manageiq.com</S>
+                        <S N="Name">hyperv-h01.novahawk.com</S>
+                        <S N="FullyQualifiedDomainName">hyperv-h01.novahawk.com</S>
                         <S N="ComputerName">hyperv-h01</S>
-                        <S N="DomainName">manageiq.com</S>
+                        <S N="DomainName">novahawk.com</S>
                         <S N="Description"></S>
                         <S N="RemoteUserName"></S>
                         <B N="OverrideHostGroupReserves">false</B>
@@ -27330,10 +27330,10 @@
                           <Props>
                             <B N="IsRoot">false</B>
                             <DT N="CreationDate">2014-03-19T13:28:20.103-07:00</DT>
-                            <S N="Creator">MANAGEIQ\vmm</S>
+                            <S N="Creator">novahawk\vmm</S>
                             <S N="Description"></S>
                             <DT N="ModificationDate">2014-03-19T13:28:32.443-07:00</DT>
-                            <S N="ModifiedBy">MANAGEIQ\vmm</S>
+                            <S N="ModifiedBy">novahawk\vmm</S>
                             <S N="Name">Host Group A</S>
                             <Ref N="ParentVMHostGroup" RefId="113" />
                             <Ref N="ParentHostGroup" RefId="113" />
@@ -27447,7 +27447,7 @@
                         <DT N="ModifiedTime">2014-06-04T08:55:26.5415125-07:00</DT>
                         <Obj N="Agent" RefId="2156">
                           <TNRef RefId="10" />
-                          <ToString>hyperv-h01.manageiq.com</ToString>
+                          <ToString>hyperv-h01.novahawk.com</ToString>
                           <Props>
                             <S N="StateString">Responding</S>
                             <S N="RoleString">Host</S>
@@ -27455,12 +27455,12 @@
                             <S N="VersionState">UpToDate</S>
                             <S N="VersionStateString">Up-to-date</S>
                             <B N="MarkedForDeletion">false</B>
-                            <S N="Name">hyperv-h01.manageiq.com</S>
+                            <S N="Name">hyperv-h01.novahawk.com</S>
                             <Nil N="MostRecentTaskID" />
                             <Nil N="MostRecentTaskUIState" />
                             <Nil N="MostRecentTask" />
-                            <S N="FullyQualifiedDomainName">hyperv-h01.manageiq.com</S>
-                            <S N="FQDN">hyperv-h01.manageiq.com</S>
+                            <S N="FullyQualifiedDomainName">hyperv-h01.novahawk.com</S>
+                            <S N="FQDN">hyperv-h01.novahawk.com</S>
                             <S N="ComputerName">hyperv-h01</S>
                             <S N="Description"></S>
                             <Version N="AgentVersion">3.2.7510.0</Version>
@@ -27694,7 +27694,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -27706,7 +27706,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">bronze_storage_vm1</S>
@@ -27959,7 +27959,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -27971,7 +27971,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">Storage_vm1</S>
@@ -28224,7 +28224,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <G N="CloudId">7a4b6987-eb13-4d86-a6f4-f7427d01f7fb</G>
@@ -28236,7 +28236,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">ServerCore_tools</S>
@@ -28304,7 +28304,7 @@
                                 <I64 N="PerfNetworkBytesRead">18048</I64>
                                 <I64 N="PerfNetworkBytesWrite">27407</I64>
                                 <S N="VirtualizationPlatform">HyperV</S>
-                                <S N="ComputerNameString">SCVMM1111.manageiq.com</S>
+                                <S N="ComputerNameString">SCVMM1111.novahawk.com</S>
                                 <S N="CreationSource">Unknown source object</S>
                                 <B N="IsUndergoingLiveMigration">false</B>
                                 <S N="SourceObjectType">Unknown source object</S>
@@ -28392,7 +28392,7 @@
                                 </Obj>
                                 <Nil N="FirstBootDevice" />
                                 <Nil N="SecureBootEnabled" />
-                                <S N="ComputerName">SCVMM1111.manageiq.com</S>
+                                <S N="ComputerName">SCVMM1111.novahawk.com</S>
                                 <B N="UseHardwareAssistedVirtualization">true</B>
                                 <Obj N="SANStatus" RefId="2222">
                                   <TNRef RefId="39" />
@@ -28493,7 +28493,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -28758,7 +28758,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -28770,7 +28770,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">dynamic_vm</S>
@@ -29006,7 +29006,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -29018,7 +29018,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">ERP_B</S>
@@ -29274,7 +29274,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -29286,7 +29286,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">ERP_A1</S>
@@ -29520,7 +29520,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <G N="CloudId">e48f11e7-8e46-4b26-a8c2-caf971b50c6a</G>
@@ -29532,7 +29532,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">hostname_test</S>
@@ -29766,7 +29766,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -29778,7 +29778,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">tenant_lib_vm</S>
@@ -30031,7 +30031,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -30043,7 +30043,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">ERP_C</S>
@@ -30298,7 +30298,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -30310,7 +30310,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">Salesforce_A</S>
@@ -30544,7 +30544,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -30812,7 +30812,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -30824,7 +30824,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">ERP_A</S>
@@ -31058,7 +31058,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -31070,7 +31070,7 @@
                                 </Obj>
                                 <G N="UserRoleID">75700cd5-893e-4f68-ada7-50ef4668acc6</G>
                                 <Ref N="UserRole" RefId="3" />
-                                <S N="Owner">MANAGEIQ\vmm</S>
+                                <S N="Owner">novahawk\vmm</S>
                                 <S N="ObjectType">VM</S>
                                 <S N="Accessibility">Public</S>
                                 <S N="Name">hostname_testing</S>
@@ -31304,7 +31304,7 @@
                                 </Obj>
                                 <G N="HostId">60e92646-b9f8-432a-a71a-5bc169ceeca2</G>
                                 <S N="HostType">VMHost</S>
-                                <S N="HostName">hyperv-h01.manageiq.com</S>
+                                <S N="HostName">hyperv-h01.novahawk.com</S>
                                 <Ref N="VMHost" RefId="16" />
                                 <Nil N="LibraryServer" />
                                 <Nil N="CloudId" />
@@ -31818,7 +31818,7 @@
                               </TN>
                               <ToString>ROOT\ISCSIPRT\0000_0</ToString>
                               <Props>
-                                <S N="ISCSINodeName">iqn.1991-05.com.microsoft:hyperv-h01.manageiq.com</S>
+                                <S N="ISCSINodeName">iqn.1991-05.com.microsoft:hyperv-h01.novahawk.com</S>
                                 <B N="IsSoftwareBased">true</B>
                                 <Obj N="Targets" RefId="2460">
                                   <TN RefId="134">
@@ -31827,7 +31827,7 @@
                                   </TN>
                                   <LST>
                                     <S>iqn.2008-08.com.starwindsoftware:192.168.252.99-bronzelun</S>
-                                    <S>iqn.2008-08.com.starwindsoftware:hyperv-h01.manageiq.com-empty</S>
+                                    <S>iqn.2008-08.com.starwindsoftware:hyperv-h01.novahawk.com-empty</S>
                                     <S>iqn.2008-08.com.starwindsoftware:192.168.252.99-goldlun</S>
                                     <S>iqn.2008-08.com.starwindsoftware:192.168.252.99-silverlun</S>
                                   </LST>
@@ -31862,7 +31862,7 @@
                               <TNRef RefId="133" />
                               <ToString>B06BDRV\L4SC&amp;PCI_163914E4&amp;SUBSYS_191714E4&amp;REV_20\5&amp;11ef8d9&amp;0&amp;30050300_0</ToString>
                               <Props>
-                                <S N="ISCSINodeName">iqn.1991-05.com.microsoft:hyperv-h01.manageiq.com</S>
+                                <S N="ISCSINodeName">iqn.1991-05.com.microsoft:hyperv-h01.novahawk.com</S>
                                 <B N="IsSoftwareBased">false</B>
                                 <Obj N="Targets" RefId="2463">
                                   <TNRef RefId="134" />
@@ -31893,7 +31893,7 @@
                               <TNRef RefId="133" />
                               <ToString>B06BDRV\L4SC&amp;PCI_163914E4&amp;SUBSYS_191714E4&amp;REV_20\5&amp;39e30d2f&amp;0&amp;30050300_0</ToString>
                               <Props>
-                                <S N="ISCSINodeName">iqn.1991-05.com.microsoft:hyperv-h01.manageiq.com</S>
+                                <S N="ISCSINodeName">iqn.1991-05.com.microsoft:hyperv-h01.novahawk.com</S>
                                 <B N="IsSoftwareBased">false</B>
                                 <Obj N="Targets" RefId="2466">
                                   <TNRef RefId="134" />
@@ -32188,7 +32188,7 @@
                             <U32 N="DisplayableErrorCode">1204</U32>
                             <S N="ErrorCodeString">1204</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveHBA ; Message : The server hyperv-h01.manageiq.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployTargetDoesNotHaveHBA ; Message : The server hyperv-h01.novahawk.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used. ; Recommended Action : Transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -32197,7 +32197,7 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server hyperv-h01.manageiq.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
+                            <S N="Problem">The server hyperv-h01.novahawk.com does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
                             <S N="CloudProblem">The server does not contain any host bus adapter (HBA) ports. Fibre Channel SAN transfer cannot be used.</S>
                             <S N="RecommendedAction">Transfer the virtual machine over the LAN.</S>
                             <S N="RecommendedActionCLI">Transfer the virtual machine over the LAN.</S>
@@ -32209,7 +32209,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">hyperv-h01.manageiq.com</S>
+                                  <S N="Value">hyperv-h01.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -32259,7 +32259,7 @@
                             <U32 N="DisplayableErrorCode">1252</U32>
                             <S N="ErrorCodeString">1252</S>
                             <S N="ErrorType">Error</S>
-                            <S N="CSMMessageString">Error Code : DeployHostIsNotNPIVCapable ; Message : The server hyperv-h01.manageiq.com does not have an HBA which supports NPIV. ; Recommended Action : If server hyperv-h01.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="CSMMessageString">Error Code : DeployHostIsNotNPIVCapable ; Message : The server hyperv-h01.novahawk.com does not have an HBA which supports NPIV. ; Recommended Action : If server hyperv-h01.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
                             <B N="IsSuccess">false</B>
                             <B N="IsTerminating">false</B>
                             <B N="IsConditionallyTerminating">false</B>
@@ -32268,10 +32268,10 @@
                             <S N="DetailedErrorCode"></S>
                             <B N="IsMomAlert">false</B>
                             <S N="MomAlertSeverity">Error</S>
-                            <S N="Problem">The server hyperv-h01.manageiq.com does not have an HBA which supports NPIV.</S>
+                            <S N="Problem">The server hyperv-h01.novahawk.com does not have an HBA which supports NPIV.</S>
                             <S N="CloudProblem">The server does not have an HBA which supports NPIV.</S>
-                            <S N="RecommendedAction">If server hyperv-h01.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
-                            <S N="RecommendedActionCLI">If server hyperv-h01.manageiq.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="RecommendedAction">If server hyperv-h01.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
+                            <S N="RecommendedActionCLI">If server hyperv-h01.novahawk.com contains an HBA that supports NPIV, ensure that the right version of firmware and driver are installed, or transfer the virtual machine over the LAN.</S>
                             <I32 N="DetailedCode">0</I32>
                             <S N="DetailedSource">None</S>
                             <Nil N="ExceptionDetails" />
@@ -32280,7 +32280,7 @@
                               <DCT>
                                 <En>
                                   <S N="Key">VMHostName</S>
-                                  <S N="Value">hyperv-h01.manageiq.com</S>
+                                  <S N="Value">hyperv-h01.novahawk.com</S>
                                 </En>
                               </DCT>
                             </Obj>
@@ -32308,7 +32308,7 @@
                         <Ref N="MostRecentTaskIfLocal" RefId="2133" />
                       </Props>
                       <MS>
-                        <S N="FQDN">hyperv-h01.manageiq.com</S>
+                        <S N="FQDN">hyperv-h01.novahawk.com</S>
                         <U16 N="LogicalCPUCount">16</U16>
                         <U32 N="CPUSpeed">2394</U32>
                         <S N="CPUModel">Xeon</S>

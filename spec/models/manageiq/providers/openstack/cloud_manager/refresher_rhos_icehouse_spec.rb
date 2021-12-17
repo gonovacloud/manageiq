@@ -1,6 +1,6 @@
 require_relative "refresh_spec_common"
 
-describe ManageIQ::Providers::Openstack::CloudManager::Refresher do
+describe NOVAHawk::Providers::Openstack::CloudManager::Refresher do
   include Openstack::RefreshSpecCommon
 
   before(:each) do

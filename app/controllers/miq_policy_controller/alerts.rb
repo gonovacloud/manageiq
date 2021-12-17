@@ -690,7 +690,7 @@ module MiqPolicyController::Alerts
   def alert_sync_provider(operation)
     if @alert.db == "MiddlewareServer"
       MiqQueue.put(
-        :class_name  => "ManageIQ::Providers::Hawkular::MiddlewareManager",
+        :class_name  => "NOVAHawk::Providers::Hawkular::MiddlewareManager",
         :method_name => "update_alert",
         :args        => {:operation => operation, :alert => @alert}
       )

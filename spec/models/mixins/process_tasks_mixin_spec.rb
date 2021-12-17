@@ -81,7 +81,7 @@ describe ProcessTasksMixin do
     end
 
     context "when the server has an ip address" do
-      let(:api_connection)    { double("ManageIQ::API::Client connection") }
+      let(:api_connection)    { double("NOVAHawk::API::Client connection") }
       let(:region_auth_token) { double("MiqRegion API auth token") }
 
       before do
@@ -90,7 +90,7 @@ describe ProcessTasksMixin do
       end
 
       it "calls invoke_api_tasks with the api connection and options" do
-        require "manageiq-api-client"
+        require "novahawk-api-client"
 
         expect(MiqRegion).to receive(:api_system_auth_token_for_region)
           .with(ApplicationRecord.my_region_number, request_user).and_return(region_auth_token)
@@ -100,7 +100,7 @@ describe ProcessTasksMixin do
           :miqtoken => region_auth_token,
           :ssl      => {:verify => false}
         }
-        expect(ManageIQ::API::Client).to receive(:new).with(client_connection_hash).and_return(api_connection)
+        expect(NOVAHawk::API::Client).to receive(:new).with(client_connection_hash).and_return(api_connection)
 
         expect(test_class).to receive(:invoke_api_tasks).with(api_connection, test_options)
         test_class.invoke_tasks_remote(test_options)
@@ -144,8 +144,8 @@ describe ProcessTasksMixin do
 
     context "with a valid class name" do
       let(:collection_name) { :test_class_collection }
-      let(:api_connection)  { double("ManageIQ::API::Client connection") }
-      let(:api_collection)  { double("ManageIQ::API::Client collection") }
+      let(:api_connection)  { double("NOVAHawk::API::Client connection") }
+      let(:api_collection)  { double("NOVAHawk::API::Client collection") }
 
       before do
         api_config = double("Api::CollectionConfig")

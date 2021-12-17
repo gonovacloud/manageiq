@@ -1,5 +1,5 @@
 class OrchestrationTemplateVnfd < OrchestrationTemplate
-  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "ManageIQ::Providers::CloudManager"
+  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "NOVAHawk::Providers::CloudManager"
 
   before_create :raw_create, :if => :remote_proxy?
   before_update :raw_update, :if => :remote_proxy?
@@ -41,7 +41,7 @@ class OrchestrationTemplateVnfd < OrchestrationTemplate
   end
 
   def self.eligible_manager_types
-    [ManageIQ::Providers::Openstack::CloudManager]
+    [NOVAHawk::Providers::Openstack::CloudManager]
   end
 
   def self.stack_type

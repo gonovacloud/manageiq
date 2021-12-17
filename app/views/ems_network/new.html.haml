@@ -15,6 +15,6 @@
   = render :partial => "shared/views/ems_common/angular/form"
 
 :javascript
-  ManageIQ.angular.app.value('emsCommonFormId', '#{@ems.id || "new"}');
+  NOVAHawk.angular.app.value('emsCommonFormId', '#{@ems.id || "new"}');
   miq_bootstrap($('#form_id').val());
 

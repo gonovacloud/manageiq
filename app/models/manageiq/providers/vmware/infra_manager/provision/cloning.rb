@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Provision::Cloning
+module NOVAHawk::Providers::Vmware::InfraManager::Provision::Cloning
   def do_clone_task_check(clone_task_mor)
     source.with_provider_connection do |vim|
       begin

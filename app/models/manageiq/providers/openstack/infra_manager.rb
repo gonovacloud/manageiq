@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::InfraManager < ::EmsInfra
+class NOVAHawk::Providers::Openstack::InfraManager < ::EmsInfra
   require_nested :AuthKeyPair
   require_nested :EmsCluster
   require_nested :EventCatcher
@@ -13,7 +13,7 @@ class ManageIQ::Providers::Openstack::InfraManager < ::EmsInfra
   require_nested :RefreshWorker
   require_nested :Template
 
-  include ManageIQ::Providers::Openstack::ManagerMixin
+  include NOVAHawk::Providers::Openstack::ManagerMixin
   include HasManyOrchestrationStackMixin
   include HasNetworkManagerMixin
 
@@ -23,7 +23,7 @@ class ManageIQ::Providers::Openstack::InfraManager < ::EmsInfra
   before_update :ensure_managers_zone_and_provider_region
 
   def ensure_network_manager
-    build_network_manager(:type => 'ManageIQ::Providers::Openstack::NetworkManager') unless network_manager
+    build_network_manager(:type => 'NOVAHawk::Providers::Openstack::NetworkManager') unless network_manager
   end
 
   # A placeholder relation for NetworkTopology to work
@@ -43,13 +43,13 @@ class ManageIQ::Providers::Openstack::InfraManager < ::EmsInfra
     # to possible many EmsOpenstacks deployed through EmsOpenstackInfra
 
     # Name of the provider needs to be unique, get provider if there is one like that
-    self.provider = ManageIQ::Providers::Openstack::Provider.find_by_name(name) unless provider
+    self.provider = NOVAHawk::Providers::Openstack::Provider.find_by_name(name) unless provider
 
     attributes = {:name => name, :zone => zone}
     if provider
       provider.update_attributes!(attributes)
     else
-      self.provider = ManageIQ::Providers::Openstack::Provider.create!(attributes)
+      self.provider = NOVAHawk::Providers::Openstack::Provider.create!(attributes)
     end
   end
 
@@ -96,7 +96,7 @@ class ManageIQ::Providers::Openstack::InfraManager < ::EmsInfra
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::Openstack::InfraManager::EventCatcher
+    NOVAHawk::Providers::Openstack::InfraManager::EventCatcher
   end
 
   def verify_credentials(auth_type = nil, options = {})

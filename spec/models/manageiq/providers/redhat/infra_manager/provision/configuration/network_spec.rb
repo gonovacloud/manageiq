@@ -1,6 +1,6 @@
 require "ovirt"
 
-describe ManageIQ::Providers::Redhat::InfraManager::Provision::Configuration::Network do
+describe NOVAHawk::Providers::Redhat::InfraManager::Provision::Configuration::Network do
   let(:mac_address)   { "mac_address" }
   let(:network_id)    { "network1-id" }
   let(:network_name)  { "network1-name" }
@@ -31,7 +31,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::Provision::Configuration::Ne
 
     allow(rhevm_vm).to receive_messages(:nics => [rhevm_nic1, rhevm_nic2])
     allow(Ovirt::Cluster).to receive_messages(:find_by_href => rhevm_cluster)
-    allow_any_instance_of(ManageIQ::Providers::Redhat::InfraManager).to receive(:supported_api_versions)
+    allow_any_instance_of(NOVAHawk::Providers::Redhat::InfraManager).to receive(:supported_api_versions)
       .and_return([3, 4])
   end
 

@@ -1,5 +1,5 @@
-module MiqAeServiceManageIQ_Providers_Vmware_InfraManager_ProvisionSpec
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_Vmware_InfraManager_Provision do
+module MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_ProvisionSpec
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_Provision do
     before(:each) do
       Spec::Support::MiqAutomateHelper.create_service_model_method('SPEC_DOMAIN', 'EVM', 'AUTOMATE', 'test1', 'test')
       @ae_method     = ::MiqAeMethod.first
@@ -198,7 +198,7 @@ module MiqAeServiceManageIQ_Providers_Vmware_InfraManager_ProvisionSpec
 
       it "return sub class" do
         result = invoke_ae.root(@ae_result_key)
-        expect(result.class).to eq MiqAeMethodService::MiqAeServiceManageIQ_Providers_Vmware_InfraManager_Provision
+        expect(result.class).to eq MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_Provision
       end
 
       it "#status" do
@@ -273,10 +273,10 @@ module MiqAeServiceManageIQ_Providers_Vmware_InfraManager_ProvisionSpec
                                        :evm_object_class => @cs.class.base_class.name.to_sym)]
         allow_any_instance_of(MiqProvisionVirtWorkflow).to receive(:allowed_customization_specs).and_return(cs_struct)
 
-        allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow)
+        allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow)
           .to receive(:get_dialogs).and_return(:dialogs => {})
         allow_any_instance_of(MiqRequestWorkflow).to receive(:normalize_numeric_fields)
-        allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow).to receive(:update_field_visibility)
+        allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow).to receive(:update_field_visibility)
       end
 
       it "#eligible_customization_specs" do

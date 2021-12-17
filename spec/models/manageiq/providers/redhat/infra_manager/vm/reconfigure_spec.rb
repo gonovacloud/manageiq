@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Vm::Reconfigure do
+describe NOVAHawk::Providers::Redhat::InfraManager::Vm::Reconfigure do
   let(:storage) { FactoryGirl.create(:storage_nfs, :ems_ref => "http://example.com/storages/XYZ") }
   let(:vm) { FactoryGirl.create(:vm_redhat, :storage => storage) }
 

@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('diagnosticsDatabaseFormController', ['$http', '$scope', '$attrs', 'miqService', 'miqDBBackupService', function($http, $scope, $attrs, miqService, miqDBBackupService) {
+NOVAHawk.angular.app.controller('diagnosticsDatabaseFormController', ['$http', '$scope', '$attrs', 'miqService', 'miqDBBackupService', function($http, $scope, $attrs, miqService, miqDBBackupService) {
   var init = function() {
     $scope.diagnosticsDatabaseModel = {
       action_typ: 'db_backup',
@@ -18,7 +18,7 @@ ManageIQ.angular.app.controller('diagnosticsDatabaseFormController', ['$http', '
     $scope.validateClicked = miqService.validateWithAjax;
     $scope.model = 'diagnosticsDatabaseModel';
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
   };
 
   $scope.backupScheduleTypeChanged = function() {

@@ -146,11 +146,11 @@ class Zone < ApplicationRecord
   end
 
   def ems_containers
-    ext_management_systems.select { |e| e.kind_of? ManageIQ::Providers::ContainerManager }
+    ext_management_systems.select { |e| e.kind_of? NOVAHawk::Providers::ContainerManager }
   end
 
   def ems_middlewares
-    ext_management_systems.select { |e| e.kind_of? ManageIQ::Providers::MiddlewareManager }
+    ext_management_systems.select { |e| e.kind_of? NOVAHawk::Providers::MiddlewareManager }
   end
 
   def middleware_servers
@@ -158,7 +158,7 @@ class Zone < ApplicationRecord
   end
 
   def ems_configproviders
-    ext_management_systems.select { |e| e.kind_of? ManageIQ::Providers::ConfigurationManager }
+    ext_management_systems.select { |e| e.kind_of? NOVAHawk::Providers::ConfigurationManager }
   end
 
   def ems_clouds
@@ -166,7 +166,7 @@ class Zone < ApplicationRecord
   end
 
   def ems_networks
-    ext_management_systems.select { |e| e.kind_of? ManageIQ::Providers::NetworkManager }
+    ext_management_systems.select { |e| e.kind_of? NOVAHawk::Providers::NetworkManager }
   end
 
   def availability_zones

@@ -7,7 +7,7 @@ class ExplorerPresenter
   include ActionView::Helpers::TagHelper
   include ActionView::Context
 
-  # Returns hash for ManageIQ.explorer that contains data needed to replace the
+  # Returns hash for NOVAHawk.explorer that contains data needed to replace the
   # contents of an explorer view as directed by the (server side) controller.
 
   # This presenter supports these options:
@@ -19,16 +19,16 @@ class ExplorerPresenter
   #
   #   init_dashboard                   -- call miqInitDashboardCols
   #   miq_widget_dd_url                -- url to be used in url in miqDropComplete method
-  #                                       (ManageIQ.widget.dashboardUrl)
+  #                                       (NOVAHawk.widget.dashboardUrl)
   #
   #   init_accords                     -- initialize accordion autoresize
   #   ajax_action                      -- Hash of options for AJAX action to fire
-  #   clear_gtl_list_grid              -- Clear ManageIQ.grids.gtl_list_grid
+  #   clear_gtl_list_grid              -- Clear NOVAHawk.grids.gtl_list_grid
   #   right_cell_text
   #
-  #   :record_id    sets ManageIQ.record.recordId     -- record being displayed or edited
-  #   :parent_id    sets ManageIQ.record.parentId     -- it's parent
-  #   :parent_class sets ManageIQ.record.parentClass  -- and it's (parent's) class
+  #   :record_id    sets NOVAHawk.record.recordId     -- record being displayed or edited
+  #   :parent_id    sets NOVAHawk.record.parentId     -- it's parent
+  #   :parent_class sets NOVAHawk.record.parentClass  -- and it's (parent's) class
   #
   #   osf_node                         -- node to open, select and focus
   #   open_accord                      -- accordion to open

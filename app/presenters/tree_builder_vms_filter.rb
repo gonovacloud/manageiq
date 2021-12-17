@@ -2,7 +2,7 @@ class TreeBuilderVmsFilter < TreeBuilder
   def tree_init_options(_tree_name)
     {
       :open_all => true,
-      :leaf      => 'ManageIQ::Providers::InfraManager::Vm'
+      :leaf      => 'NOVAHawk::Providers::InfraManager::Vm'
     }
   end
 

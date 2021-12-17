@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Redhat::InfraManager::Provision < MiqProvision
+class NOVAHawk::Providers::Redhat::InfraManager::Provision < MiqProvision
   include_concern 'Cloning'
   include_concern 'Configuration'
   include_concern 'Placement'

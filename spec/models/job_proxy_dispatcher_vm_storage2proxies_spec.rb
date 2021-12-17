@@ -90,7 +90,7 @@ describe "JobProxyDispatcherVmStorage2Proxies" do
 
             context "a vm template and invalid VC authentication" do
               before(:each) do
-                allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive_messages(:missing_credentials? => true)
+                allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive_messages(:missing_credentials? => true)
                 allow(@vm).to receive_messages(:template? => true)
                 @ems1 = FactoryGirl.create(:ems_vmware, :name => "Ems1")
                 @vm.ext_management_system = @ems1

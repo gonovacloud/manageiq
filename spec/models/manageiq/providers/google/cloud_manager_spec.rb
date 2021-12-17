@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Google::CloudManager do
+describe NOVAHawk::Providers::Google::CloudManager do
   it ".ems_type" do
     expect(described_class.ems_type).to eq('gce')
   end
@@ -74,7 +74,7 @@ describe ManageIQ::Providers::Google::CloudManager do
 
     context "#validation" do
       it "handles incorrect password" do
-        allow(ManageIQ::Providers::Google::CloudManager).to receive(:connect).and_raise(StandardError)
+        allow(NOVAHawk::Providers::Google::CloudManager).to receive(:connect).and_raise(StandardError)
         expect { @e.verify_credentials }.to raise_error(MiqException::MiqInvalidCredentialsError, /Invalid Google JSON*/)
       end
     end

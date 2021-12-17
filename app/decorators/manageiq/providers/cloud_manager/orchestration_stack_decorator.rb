@@ -1,4 +1,4 @@
-class ManageIQ::Providers::CloudManager::OrchestrationStackDecorator < Draper::Decorator
+class NOVAHawk::Providers::CloudManager::OrchestrationStackDecorator < Draper::Decorator
   def fonticon
     nil
   end

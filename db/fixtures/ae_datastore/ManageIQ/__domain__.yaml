@@ -3,7 +3,7 @@ object_type: domain
 version: 1.0
 object:
   attributes:
-    name: ManageIQ
+    name: NOVAHawk
     description: Base domain
     display_name: 
     priority: 0

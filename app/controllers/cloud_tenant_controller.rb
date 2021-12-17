@@ -106,7 +106,7 @@ class CloudTenantController < ApplicationController
     @tenant = CloudTenant.new
     @in_a_form = true
     @ems_choices = {}
-    ManageIQ::Providers::Openstack::CloudManager.all.each { |ems|
+    NOVAHawk::Providers::Openstack::CloudManager.all.each { |ems|
       @ems_choices[ems.name] = ems.id
       # keystone v3 allows for hierarchical tenants
       if ems.api_version == "v3"

@@ -5,7 +5,7 @@ describe ChangeOptionsInMiqAlert do
     let(:miq_alert_stub) { migration_stub(:MiqAlert) }
 
     it 'default miq_alert email gets updated' do
-      options = {:notifications => {:email => {:to => ['alert@manageiq.com']}}}
+      options = {:notifications => {:email => {:to => ['alert@novahawk.com']}}}
       alert = miq_alert_stub.create!(:description => 'Test Alert', :options => options)
 
       migrate

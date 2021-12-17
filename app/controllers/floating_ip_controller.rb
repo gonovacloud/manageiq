@@ -164,7 +164,7 @@ class FloatingIpController < ApplicationController
     @floating_ip = FloatingIp.new
     @in_a_form = true
     @ems_choices = {}
-    ExtManagementSystem.where(:type => "ManageIQ::Providers::Openstack::NetworkManager").find_each do |ems|
+    ExtManagementSystem.where(:type => "NOVAHawk::Providers::Openstack::NetworkManager").find_each do |ems|
       @ems_choices[ems.name] = ems.id
     end
     @cloud_tenant_choices = {}

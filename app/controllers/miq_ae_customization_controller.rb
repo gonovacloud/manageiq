@@ -435,7 +435,7 @@ class MiqAeCustomizationController < ApplicationController
     end
 
     presenter[:build_calendar] = true
-    # resetting ManageIQ.oneTransition.oneTrans when tab loads
+    # resetting NOVAHawk.oneTransition.oneTrans when tab loads
     presenter.reset_one_trans
     presenter.one_trans_ie if %w(save reset).include?(params[:button]) && is_browser_ie?
     presenter.hide(:custom_left_cell).show(:default_left_cell)

@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Provision::Placement
+module NOVAHawk::Providers::Redhat::InfraManager::Provision::Placement
   protected
 
   def placement

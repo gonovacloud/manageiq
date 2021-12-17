@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::InfraManager::EventCatcher::Runner < ManageIQ::Providers::BaseManager::EventCatcher::Runner
+class NOVAHawk::Providers::Vmware::InfraManager::EventCatcher::Runner < NOVAHawk::Providers::BaseManager::EventCatcher::Runner
   def event_monitor_handle
     require 'VMwareWebService/MiqVimEventMonitor'
     @event_monitor_handle ||= MiqVimEventMonitor.new(

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::InfraManager::VmOrTemplate do
+describe NOVAHawk::Providers::InfraManager::VmOrTemplate do
   describe "#all" do
     it "scopes" do
       vm = FactoryGirl.create(:vm_vmware)

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::InfraManager::Host do
+describe NOVAHawk::Providers::Openstack::InfraManager::Host do
   describe "#refresh_openstack_services" do
     let(:openstack_status_text) do
       <<-EOT

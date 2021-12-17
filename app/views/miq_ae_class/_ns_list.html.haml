@@ -22,7 +22,7 @@
             %td.narrow
               - if record.git_enabled?
                 %img{:src => image_path('100/ae_git_domain.png')}
-              - elsif record.name == MiqAeDatastore::MANAGEIQ_DOMAIN
+              - elsif record.name == MiqAeDatastore::novahawk_DOMAIN
                 %img{:src => image_path('100/miq.png')}
               - elsif record.top_level_namespace  
                 %img{:src => image_path("100/vendor-#{record.top_level_namespace.downcase}.png")}

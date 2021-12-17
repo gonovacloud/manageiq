@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::ProvisionViaPxe do
+describe NOVAHawk::Providers::Redhat::InfraManager::ProvisionViaPxe do
   context "::StateMachine" do
     before do
       ems      = FactoryGirl.create(:ems_redhat_with_authentication)

@@ -1444,293 +1444,293 @@ _("LDAP Servers")
 _("Load Balancer")
 # TRANSLATORS: en.yml key: dictionary.model.LoadBalancer (plural form)
 _("Load Balancers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::BaseManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::BaseManager
 _("Provider")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::BaseManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::BaseManager (plural form)
 _("Providers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager
 _("Configuration Manager (Ansible Tower)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager (plural form)
 _("Configuration Managers (Ansible Tower)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript
 _("Job Template (Ansible Tower)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript (plural form)
 _("Job Templates (Ansible Tower)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager
 _("Configuration Manager (Foreman)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager (plural form)
 _("Configuration Managers (Foreman)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ConfigurationManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ConfigurationManager
 _("Configuration Manager")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ConfigurationManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ConfigurationManager (plural form)
 _("Configuration Managers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem
 _("Configured System (Ansible Tower)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem (plural form)
 _("Configured Systems (Ansible Tower)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem
 _("Configured System (Foreman)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem (plural form)
 _("Configured Systems (Foreman)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job
 _("Ansible Tower Job")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job (plural form)
 _("Ansible Tower Jobs")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager
 _("Cloud Provider")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager (plural form)
 _("Cloud Providers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Vm
 _("Instance")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Vm (plural form)
 _("Instances")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::CloudManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::CloudManager::Vm
 _("Instance (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::CloudManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::CloudManager::Vm (plural form)
 _("Instances (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::Vm
 _("Instance (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::Vm (plural form)
 _("Instances (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::Vm
 _("Instance (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::Vm (plural form)
 _("Instances (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::Vm
 _("Instance (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::Vm (plural form)
 _("Instances (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::Vm
 _("Instance (VMware vCloud)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::Vm (plural form)
 _("Instances (VMware vCloud)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Template
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Template
 _("Image")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::Template (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::Template (plural form)
 _("Images")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::VirtualTemplate
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::VirtualTemplate
 _("Resourceless Server Template")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::VirtualTemplate (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::VirtualTemplate (plural form)
 _("Resourceless Server Templates")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::OrchestrationStack
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::OrchestrationStack
 _("Orchestration Stack")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::CloudManager::OrchestrationStack (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::CloudManager::OrchestrationStack (plural form)
 _("Orchestration Stacks")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ContainerManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ContainerManager
 _("Containers Provider")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::ContainerManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::ContainerManager (plural form)
 _("Containers Providers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager
 _("Infrastructure Provider")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager (plural form)
 _("Infrastructure Providers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Vm
 _("Virtual Machine")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Vm (plural form)
 _("Virtual Machines")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Template
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Template
 _("Template")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::InfraManager::Template (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::InfraManager::Template (plural form)
 _("Templates")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::MiddlewareManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::MiddlewareManager
 _("Middleware Provider")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::MiddlewareManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::MiddlewareManager (plural form)
 _("Middleware Providers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::NetworkManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::NetworkManager
 _("Network Manager")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::NetworkManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::NetworkManager (plural form)
 _("Network Managers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager
 _("Infrastructure Provider (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager (plural form)
 _("Infrastructure Providers (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager
 _("Infrastructure Provider (Microsoft)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager (plural form)
 _("Infrastructure Providers (Microsoft)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager
 _("Infrastructure Provider (Red Hat)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager (plural form)
 _("Infrastructure Providers (Red Hat)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager
 _("Infrastructure Provider (VMware)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager (plural form)
 _("Infrastructure Providers (VMware)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager::Vm
 _("Virtual Machine (VMware)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::InfraManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::InfraManager::Vm (plural form)
 _("Virtual Machines (VMware)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager::Vm
 _("Virtual Machine (Microsoft)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Microsoft::InfraManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Microsoft::InfraManager::Vm (plural form)
 _("Virtual Machines (Microsoft)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager::Vm
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager::Vm
 _("Virtual Machine (Red Hat)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Redhat::InfraManager::Vm (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Redhat::InfraManager::Vm (plural form)
 _("Virtual Machines (Red Hat)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager
 _("Cloud Provider (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager (plural form)
 _("Cloud Providers (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager
 _("Network Provider (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager (plural form)
 _("Network Providers (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork
 _("Cloud Network (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork (plural form)
 _("Cloud Networks (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager
 _("Cloud Provider (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager (plural form)
 _("Cloud Providers (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager
 _("Cloud Provider (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager (plural form)
 _("Cloud Providers (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager
 _("Cloud Provider (VMware vCloud)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager (plural form)
 _("Cloud Providers (VMware vCloud)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudNetwork
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork
 _("Cloud Network (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudNetwork (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork (plural form)
 _("Cloud Networks (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager
 _("Container Provider (Kubernetes)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager (plural form)
 _("Container Providers (Kubernetes)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager::ContainerGroup
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerGroup
 _("Pod (Kubernetes)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Kubernetes::ContainerManager::ContainerGroup (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerGroup (plural form)
 _("Pods (Kubernetes)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openshift::ContainerManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openshift::ContainerManager
 _("Container Provider (OpenShift Origin)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openshift::ContainerManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openshift::ContainerManager (plural form)
 _("Container Providers (OpenShift Origin)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::OpenshiftEnterprise::ContainerManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager
 _("Container Provider (OpenShift Container Platform)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::OpenshiftEnterprise::ContainerManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager (plural form)
 _("Container Providers (OpenShift Container Platform)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudNetwork
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudNetwork
 _("Cloud Network (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudNetwork (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudNetwork (plural form)
 _("Cloud Networks (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudSubnet
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudSubnet
 _("Cloud Subnet (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::CloudSubnet (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::CloudSubnet (plural form)
 _("Cloud Subnets (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::LoadBalancer
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::LoadBalancer
 _("Load Balancer (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::LoadBalancer (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::LoadBalancer (plural form)
 _("Load Balancers (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::SecurityGroup
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::SecurityGroup
 _("Security Group (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::SecurityGroup (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::SecurityGroup (plural form)
 _("Security Groups (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager
 _("Network Provider (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager (plural form)
 _("Network Providers (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::SecurityGroup
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::SecurityGroup
 _("Security Group (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::SecurityGroup (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::SecurityGroup (plural form)
 _("Security Groups (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::LoadBalancer
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::LoadBalancer
 _("Load Balancer (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::LoadBalancer (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::LoadBalancer (plural form)
 _("Load Balancers (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkPort
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkPort
 _("Network Port (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkPort (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkPort (plural form)
 _("Network Ports (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::FloatingIp
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::FloatingIp
 _("Floating Ip (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::FloatingIp (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::FloatingIp (plural form)
 _("Floating Ips (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkRouter
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkRouter
 _("Network Router (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::NetworkRouter (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::NetworkRouter (plural form)
 _("Network Routers (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudSubnet
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudSubnet
 _("Cloud Subnet (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudSubnet (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudSubnet (plural form)
 _("Cloud Subnets (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudNetwork
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudNetwork
 _("Cloud Network (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Google::NetworkManager::CloudNetwork (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Google::NetworkManager::CloudNetwork (plural form)
 _("Cloud Networks (Google)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::SecurityGroup
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::SecurityGroup
 _("Security Group (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::SecurityGroup (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::SecurityGroup (plural form)
 _("Security Groups (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::LoadBalancer
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer
 _("LoadBalancer (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::LoadBalancer (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer (plural form)
 _("LoadBalancers (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudSubnet
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudSubnet
 _("Cloud Subnet (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::CloudSubnet (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::CloudSubnet (plural form)
 _("Cloud Subnets (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::SecurityGroup
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::SecurityGroup
 _("Security Group (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::SecurityGroup (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::SecurityGroup (plural form)
 _("Security Groups (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::FloatingIp
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp
 _("Floating IP (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::FloatingIp (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp (plural form)
 _("Floating IPs (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::FloatingIp
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::FloatingIp
 _("Floating IP (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::FloatingIp (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::FloatingIp (plural form)
 _("Floating IPs (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet
 _("Cloud Subnet (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet (plural form)
 _("Cloud Subnets (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter
 _("Network Router (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter (plural form)
 _("Network Routers (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack
 _("Orchestration Stack (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack (plural form)
 _("Orchestration Stacks (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack
 _("Orchestration Stack (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack (plural form)
 _("Orchestration Stacks (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::OrchestrationStack
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack
 _("Orchestration Stack (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::CloudManager::OrchestrationStack (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack (plural form)
 _("Orchestration Stacks (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack
 _("Orchestration Stack (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack (plural form)
 _("Orchestration Stacks (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::NetworkPort
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::NetworkPort
 _("Network Port (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Amazon::NetworkManager::NetworkPort (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Amazon::NetworkManager::NetworkPort (plural form)
 _("Network Ports (Amazon)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::NetworkPort
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::NetworkPort
 _("Network Port (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Azure::NetworkManager::NetworkPort (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Azure::NetworkManager::NetworkPort (plural form)
 _("Network Ports (Microsoft Azure)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkPort
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort
 _("Network Port (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Openstack::NetworkManager::NetworkPort (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort (plural form)
 _("Network Ports (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager
 _("Storage Manager")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager (plural form)
 _("Storage Managers")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::CinderManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::CinderManager
 _("Storage Manager (Cinder)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::CinderManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::CinderManager (plural form)
 _("Storage Managers (Cinder)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::SwiftManager
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::SwiftManager
 _("Storage Manager (Swift)")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::StorageManager::SwiftManager (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::StorageManager::SwiftManager (plural form)
 _("Storage Managers (Swift)")
 # TRANSLATORS: en.yml key: dictionary.model.MiddlewareDatasource
 _("Middleware Datasource")
@@ -1934,9 +1934,9 @@ _("Azure Templates")
 _("VNF Template")
 # TRANSLATORS: en.yml key: dictionary.model.OrchestrationTemplateVnfd (plural form)
 _("VNF Templates")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate
 _("vApp Template")
-# TRANSLATORS: en.yml key: dictionary.model.ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate (plural form)
+# TRANSLATORS: en.yml key: dictionary.model.NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate (plural form)
 _("vApp Templates")
 # TRANSLATORS: en.yml key: dictionary.model.PersistentVolume
 _("Persistent Volume")
@@ -2382,13 +2382,13 @@ _("EVM Custom Attributes")
 _("Event")
 # TRANSLATORS: en.yml key: dictionary.table.miq_event_definition (plural form)
 _("Events")
-# TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_foreman_configuration_manager_configuration_profile
+# TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_foreman_configuration_manager_configuration_profile
 _("Configuration Profile (Foreman)")
-# TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_foreman_configuration_manager_configuration_profile (plural form)
+# TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_foreman_configuration_manager_configuration_profile (plural form)
 _("Configuration Profiles (Foreman)")
-# TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_openstack_infra_manager_cloud_networks
+# TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_openstack_infra_manager_cloud_networks
 _("Cloud Networks (OpenStack)")
-# TRANSLATORS: en.yml key: dictionary.table.manageiq_providers_openstack_cloud_manager_cloud_tenant
+# TRANSLATORS: en.yml key: dictionary.table.novahawk_providers_openstack_cloud_manager_cloud_tenant
 _("Cloud Tenants (OpenStack)")
 # TRANSLATORS: en.yml key: dictionary.table.miq_provision
 _("Provision")

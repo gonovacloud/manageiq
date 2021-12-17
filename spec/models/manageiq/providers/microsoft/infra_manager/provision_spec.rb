@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Microsoft::InfraManager::Provision do
+describe NOVAHawk::Providers::Microsoft::InfraManager::Provision do
   let(:vm_prov) do
     FactoryGirl.create(
       :miq_provision_microsoft,
@@ -12,7 +12,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Provision do
     )
   end
 
-  let(:regex) { ManageIQ::Providers::Microsoft::InfraManager::Provision::Cloning::MT_POINT_REGEX }
+  let(:regex) { NOVAHawk::Providers::Microsoft::InfraManager::Provision::Cloning::MT_POINT_REGEX }
 
   context "MT_POINT_REGEX" do
     it "matches a storage name with a drive letter" do
@@ -60,7 +60,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Provision do
 
     context "SCVMM provisioning" do
       it "#workflow" do
-        workflow_class = ManageIQ::Providers::Microsoft::InfraManager::ProvisionWorkflow
+        workflow_class = NOVAHawk::Providers::Microsoft::InfraManager::ProvisionWorkflow
         allow_any_instance_of(workflow_class).to receive(:get_dialogs).and_return(:dialogs => {})
 
         expect(vm_prov.workflow.class).to eq workflow_class

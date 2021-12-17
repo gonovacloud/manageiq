@@ -1,6 +1,6 @@
-module MiqAeServiceManageIQProvidersAnsibleTowerConfigurationManagerConfigurationScriptSpec
+module MiqAeServiceNOVAHawkProvidersAnsibleTowerConfigurationManagerConfigurationScriptSpec
   include MiqAeEngine
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript do
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript do
     it "get the service model class" do
       expect { described_class }.not_to raise_error
     end

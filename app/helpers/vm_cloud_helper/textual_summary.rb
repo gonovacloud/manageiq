@@ -139,7 +139,7 @@ module VmCloudHelper::TextualSummary
   end
 
   def textual_key_pairs
-    return nil if @record.kind_of?(ManageIQ::Providers::CloudManager::Template)
+    return nil if @record.kind_of?(NOVAHawk::Providers::CloudManager::Template)
     h = {:label => _("Key Pairs")}
     key_pairs = @record.key_pairs
     h[:value] = key_pairs.blank? ? _("N/A") : key_pairs.collect(&:name).join(", ")
@@ -219,7 +219,7 @@ module VmCloudHelper::TextualSummary
   end
 
   def textual_processes
-    return nil if @record.kind_of?(ManageIQ::Providers::CloudManager::Template)
+    return nil if @record.kind_of?(NOVAHawk::Providers::CloudManager::Template)
     h = {:label => _("Running Processes"), :image => "processes"}
     date = last_date(:processes)
     if date.nil?
@@ -235,7 +235,7 @@ module VmCloudHelper::TextualSummary
   end
 
   def textual_event_logs
-    return nil if @record.kind_of?(ManageIQ::Providers::CloudManager::Template)
+    return nil if @record.kind_of?(NOVAHawk::Providers::CloudManager::Template)
     num = @record.operating_system.nil? ? 0 : @record.operating_system.number_of(:event_logs)
     h = {:label => _("Event Logs"), :image => "event_logs", :value => (num == 0 ? _("Not Available") : _("Available"))}
     if num > 0
@@ -247,7 +247,7 @@ module VmCloudHelper::TextualSummary
   end
 
   def textual_vmsafe_enable
-    return nil if @record.vmsafe_enable || @record.kind_of?(ManageIQ::Providers::CloudManager::Template)
+    return nil if @record.vmsafe_enable || @record.kind_of?(NOVAHawk::Providers::CloudManager::Template)
     {:label => _("Enable"), :value => "false"}
   end
 
@@ -294,13 +294,13 @@ module VmCloudHelper::TextualSummary
   end
 
   def textual_boot_time
-    return nil if @record.kind_of?(ManageIQ::Providers::CloudManager::Template)
+    return nil if @record.kind_of?(NOVAHawk::Providers::CloudManager::Template)
     date = @record.boot_time
     {:label => _("Last Boot Time"), :value => (date.nil? ? _("N/A") : format_timezone(date))}
   end
 
   def textual_state_changed_on
-    return nil if @record.kind_of?(ManageIQ::Providers::CloudManager::Template)
+    return nil if @record.kind_of?(NOVAHawk::Providers::CloudManager::Template)
     date = @record.state_changed_on
     {:label => _("State Changed On"), :value => (date.nil? ? _("N/A") : format_timezone(date))}
   end

@@ -66,18 +66,18 @@ module MiqAeServiceSpec
         allow(workspace).to receive(:disable_rbac)
         MiqAeMethodService::Deprecation.silence do
           expect(miq_ae_service.service_model(:ems_openstack)).to be(
-            MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_CloudManager)
+            MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager)
           expect(miq_ae_service.service_model(:vm_openstack)).to  be(
-            MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_CloudManager_Vm)
+            MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager_Vm)
         end
       end
 
       it "loads name-spaced model by fully-qualified name" do
         allow(workspace).to receive(:disable_rbac)
-        expect(miq_ae_service.service_model(:ManageIQ_Providers_Openstack_CloudManager)).to    be(
-          MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_CloudManager)
-        expect(miq_ae_service.service_model(:ManageIQ_Providers_Openstack_CloudManager_Vm)).to be(
-          MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_CloudManager_Vm)
+        expect(miq_ae_service.service_model(:NOVAHawk_Providers_Openstack_CloudManager)).to    be(
+          MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager)
+        expect(miq_ae_service.service_model(:NOVAHawk_Providers_Openstack_CloudManager_Vm)).to be(
+          MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager_Vm)
       end
 
       it "raises error on invalid service_model name" do
@@ -95,9 +95,9 @@ module MiqAeServiceSpec
       it "loads cloud networks" do
         allow(workspace).to receive(:disable_rbac)
         items = %w(
-          ManageIQ_Providers_Openstack_NetworkManager_CloudNetwork
-          ManageIQ_Providers_Openstack_NetworkManager_CloudNetwork_Private
-          ManageIQ_Providers_Openstack_NetworkManager_CloudNetwork_Public
+          NOVAHawk_Providers_Openstack_NetworkManager_CloudNetwork
+          NOVAHawk_Providers_Openstack_NetworkManager_CloudNetwork_Private
+          NOVAHawk_Providers_Openstack_NetworkManager_CloudNetwork_Public
         )
         items.each do |name|
           expect(miq_ae_service.vmdb(name)).to be("#{prefix}#{name}".constantize)
@@ -114,8 +114,8 @@ module MiqAeServiceSpec
           AuthUseridPassword
           Category
           Datacenter
-          ManageIQ::Providers::BaseManager
-          ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job
+          NOVAHawk::Providers::BaseManager
+          NOVAHawk::Providers::Kubernetes::ContainerManager::Scanning::Job
           VmServer
           VmSynchronize
         )

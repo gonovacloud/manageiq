@@ -2,10 +2,10 @@ class RenameMiqSearchDb < ActiveRecord::Migration
   class MiqSearch < ActiveRecord::Base; end
 
   NAME_HASH = Hash[*%w(
-    TemplateInfra ManageIQ::Providers::InfraManager::Template
-    VmInfra       ManageIQ::Providers::InfraManager::Vm
-    TemplateCloud ManageIQ::Providers::CloudManager::Template
-    VmCloud       ManageIQ::Providers::CloudManager::Vm
+    TemplateInfra NOVAHawk::Providers::InfraManager::Template
+    VmInfra       NOVAHawk::Providers::InfraManager::Vm
+    TemplateCloud NOVAHawk::Providers::CloudManager::Template
+    VmCloud       NOVAHawk::Providers::CloudManager::Vm
   )]
 
   def up

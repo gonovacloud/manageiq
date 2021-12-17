@@ -15,7 +15,7 @@ title: vApp Orchestration Templates
 name: vApp Orchestration Template
 
 # Main DB table report is based on
-db: ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate
+db: NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate
 
 # Columns to fetch from the main table
 cols:

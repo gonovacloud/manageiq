@@ -1,6 +1,6 @@
 require 'ansible_tower_client'
 require 'faraday'
-describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript do
+describe NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript do
   let(:api)          { double(:api, :job_templates => double(:job_templates)) }
   let(:connection)   { double(:connection, :api => api) }
   let(:job)          { AnsibleTowerClient::Job.new(connection.api, "id" => 1) }

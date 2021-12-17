@@ -1,8 +1,8 @@
 require 'kubeclient'
 
-describe ManageIQ::Providers::Kubernetes::ContainerManager::RefresherMixin do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager::RefresherMixin do
   let(:client)  { double("client") }
-  let(:dummy) { (Class.new { include ManageIQ::Providers::Kubernetes::ContainerManager::RefresherMixin }).new }
+  let(:dummy) { (Class.new { include NOVAHawk::Providers::Kubernetes::ContainerManager::RefresherMixin }).new }
 
   context 'when an exception is thrown' do
     before { allow(client).to receive(:get_pods) { raise KubeException.new(0, 'oh-no', nil) } }

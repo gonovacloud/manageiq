@@ -1,4 +1,4 @@
-ManageIQ.angular.app.service('genericObjectSubscriptionService', ['subscriptionService', function(subscriptionService) {
+NOVAHawk.angular.app.service('genericObjectSubscriptionService', ['subscriptionService', function(subscriptionService) {
   this.subscribeToShowAddForm = function(callback) {
     subscriptionService.subscribeToEventType('showAddForm', callback);
   };

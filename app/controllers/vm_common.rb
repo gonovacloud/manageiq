@@ -1226,7 +1226,7 @@ module VmCommon
       parents = [{:type => "x", :id => (record.orphaned ? "orph" : "arch")}]
     else
       if x_active_tree == :instances_tree
-        parents = record.kind_of?(ManageIQ::Providers::CloudManager::Vm) && record.availability_zone ? [record.availability_zone] : [record.ext_management_system]
+        parents = record.kind_of?(NOVAHawk::Providers::CloudManager::Vm) && record.availability_zone ? [record.availability_zone] : [record.ext_management_system]
       else
         parents = record.parent_blue_folders(:exclude_non_display_folders => true)
       end
@@ -1284,13 +1284,13 @@ module VmCommon
                     end
     model, title =  case x_active_tree.to_s
                     when "images_filter_tree"
-                      ["ManageIQ::Providers::CloudManager::Template", _("Images")]
+                      ["NOVAHawk::Providers::CloudManager::Template", _("Images")]
                     when "images_tree"
-                      ["ManageIQ::Providers::CloudManager::Template", _("Images by Provider")]
+                      ["NOVAHawk::Providers::CloudManager::Template", _("Images by Provider")]
                     when "instances_filter_tree"
-                      ["ManageIQ::Providers::CloudManager::Vm", _("Instances")]
+                      ["NOVAHawk::Providers::CloudManager::Vm", _("Instances")]
                     when "instances_tree"
-                      ["ManageIQ::Providers::CloudManager::Vm", _("Instances by Provider")]
+                      ["NOVAHawk::Providers::CloudManager::Vm", _("Instances by Provider")]
                     when "vandt_tree"
                       ["VmOrTemplate", _("VMs & Templates")]
                     when "vms_instances_filter_tree"
@@ -1298,9 +1298,9 @@ module VmCommon
                     when "templates_images_filter_tree"
                       ["MiqTemplate", _("Templates & Images")]
                     when "templates_filter_tree"
-                      ["ManageIQ::Providers::InfraManager::Template", _("Templates")]
+                      ["NOVAHawk::Providers::InfraManager::Template", _("Templates")]
                     when "vms_filter_tree"
-                      ["ManageIQ::Providers::InfraManager::Vm", _("VMs")]
+                      ["NOVAHawk::Providers::InfraManager::Vm", _("VMs")]
                     else
                       [nil, nil]
                     end
@@ -1322,7 +1322,7 @@ module VmCommon
       options = {:model => model}
       if x_node == "root"
         if x_active_tree == :vandt_tree
-          klass = ManageIQ::Providers::InfraManager::VmOrTemplate
+          klass = NOVAHawk::Providers::InfraManager::VmOrTemplate
           options[:where_clause] = ["vms.type IN (?)", klass.vm_descendants.collect(&:name)]
         end
         process_show_list(options)  # Get all VMs & Templates
@@ -1336,7 +1336,7 @@ module VmCommon
       else
         if TreeBuilder.get_model_for_prefix(@nodetype) == "Hash"
           if x_active_tree == :vandt_tree
-            klass = ManageIQ::Providers::InfraManager::VmOrTemplate
+            klass = NOVAHawk::Providers::InfraManager::VmOrTemplate
             options[:where_clause] = ["vms.type IN (?)", klass.vm_descendants.collect(&:name)]
           end
           if id == "orph"
@@ -1372,8 +1372,8 @@ module VmCommon
           process_show_list(options)
           model_name = @nodetype == "d" ? "Datacenter" : ui_lookup(:model => rec.class.base_class.to_s)
           @is_redhat = case model_name
-                       when 'Datacenter' then ManageIQ::Providers::InfraManager.find(rec.ems_id).type == 'ManageIQ::Providers::Redhat::InfraManager'
-                       when 'Provider'   then rec.type == 'ManageIQ::Providers::Redhat::InfraManager'
+                       when 'Datacenter' then NOVAHawk::Providers::InfraManager.find(rec.ems_id).type == 'NOVAHawk::Providers::Redhat::InfraManager'
+                       when 'Provider'   then rec.type == 'NOVAHawk::Providers::Redhat::InfraManager'
                        else false
                        end
           #       @right_cell_text = "#{ui_lookup(:models=>"VmOrTemplate")} under #{model_name} \"#{rec.name}\""
@@ -1463,7 +1463,7 @@ module VmCommon
     add_ajax = false
     if record_showing
       presenter.hide(:form_buttons_div)
-      path_dir = @record.kind_of?(ManageIQ::Providers::CloudManager::Vm) || @record.kind_of?(ManageIQ::Providers::CloudManager::Template) ? "vm_cloud" : "vm_common"
+      path_dir = @record.kind_of?(NOVAHawk::Providers::CloudManager::Vm) || @record.kind_of?(NOVAHawk::Providers::CloudManager::Template) ? "vm_cloud" : "vm_common"
       presenter.update(:main_div, r[:partial => "#{path_dir}/main", :locals => {:controller => 'vm'}])
     elsif @in_a_form
       partial_locals = {:controller => 'vm'}

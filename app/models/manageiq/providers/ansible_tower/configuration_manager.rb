@@ -1,4 +1,4 @@
-class ManageIQ::Providers::AnsibleTower::ConfigurationManager < ManageIQ::Providers::ConfigurationManager
+class NOVAHawk::Providers::AnsibleTower::ConfigurationManager < NOVAHawk::Providers::ConfigurationManager
   require_nested :ConfigurationScript
   require_nested :ConfiguredSystem
   require_nested :Refresher

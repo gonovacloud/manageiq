@@ -1,7 +1,7 @@
 describe TreeBuilderAutomateSimulationResults do
   context 'TreeBuilderAutomateSimulationResults' do
     before do
-      @data = "<MiqAeWorkspace>\\n<MiqAeObject namespace='ManageIQ/SYSTEM' class='PROCESS' instance='Automation'>\\n</MiqAeObject>\\n</MiqAeWorkspace>\\n"
+      @data = "<MiqAeWorkspace>\\n<MiqAeObject namespace='NOVAHawk/SYSTEM' class='PROCESS' instance='Automation'>\\n</MiqAeObject>\\n</MiqAeWorkspace>\\n"
       @ae_simulation_tree = TreeBuilderAutomateSimulationResults.new(:ae_simulation_tree, :ae_simulation, {}, true, @data)
     end
     it 'no root is set' do
@@ -12,9 +12,9 @@ describe TreeBuilderAutomateSimulationResults do
     it 'sets attribute nodes correctly' do
       nodes = @ae_simulation_tree.send(:x_get_tree_roots, false)
       tree_data = {:id          => "e_1",
-                   :text        => "ManageIQ/SYSTEM <b>/</b> PROCESS <b>/</b> Automation",
+                   :text        => "NOVAHawk/SYSTEM <b>/</b> PROCESS <b>/</b> Automation",
                    :image       => "q",
-                   :tip         => "ManageIQ/SYSTEM <b>/</b> PROCESS <b>/</b> Automation",
+                   :tip         => "NOVAHawk/SYSTEM <b>/</b> PROCESS <b>/</b> Automation",
                    :elements    => [],
                    :cfmeNoClick => true
                   }

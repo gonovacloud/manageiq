@@ -28,10 +28,10 @@ class MigrateFilteredEventsToBlacklistedEvents < ActiveRecord::Migration
   private
 
   PROVIDER_NAMES = %w(
-    ManageIQ::Providers::Openstack::CloudManager
-    ManageIQ::Providers::Amazon::CloudManager
-    ManageIQ::Providers::Redhat::InfraManager
-    ManageIQ::Providers::Vmware::InfraManager
+    NOVAHawk::Providers::Openstack::CloudManager
+    NOVAHawk::Providers::Amazon::CloudManager
+    NOVAHawk::Providers::Redhat::InfraManager
+    NOVAHawk::Providers::Vmware::InfraManager
   )
 
   def default_blacklisted_event_names

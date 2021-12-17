@@ -1,5 +1,5 @@
 miqHttpInject(
-  angular.module('ManageIQ.toolbar', [
+  angular.module('NOVAHawk.toolbar', [
     'miqStaticAssets', 'ui.bootstrap'
   ])
   .config(['$locationProvider', function ($locationProvider) {

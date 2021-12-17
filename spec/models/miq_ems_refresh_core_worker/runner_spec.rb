@@ -9,13 +9,13 @@ describe MiqEmsRefreshCoreWorker::Runner do
     allow_any_instance_of(described_class).to receive(:sync_config)
     allow_any_instance_of(described_class).to receive(:set_connection_pool_size)
     allow_any_instance_of(described_class).to receive(:heartbeat_using_drb?).and_return(false)
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive(:authentication_check).and_return([true, ""])
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive(:authentication_check).and_return([true, ""])
 
     @worker = MiqEmsRefreshCoreWorker::Runner.new(:guid => @worker_record.guid, :ems_id => @ems.id)
   end
 
   context "#process_update" do
-    context "against a ManageIQ::Providers::Vmware::InfraManager::Vm" do
+    context "against a NOVAHawk::Providers::Vmware::InfraManager::Vm" do
       before(:each) do
         Timecop.travel(1.day.ago) do
           @vm = FactoryGirl.create(:vm_with_ref, :ext_management_system => @ems, :raw_power_state => "unknown")
@@ -144,7 +144,7 @@ describe MiqEmsRefreshCoreWorker::Runner do
       end
     end
 
-    context "against a ManageIQ::Providers::Vmware::InfraManager::Template" do
+    context "against a NOVAHawk::Providers::Vmware::InfraManager::Template" do
       before(:each) do
         Timecop.travel(1.day.ago) do
           @template = FactoryGirl.create(:template_vmware_with_ref, :ext_management_system => @ems)

@@ -61,47 +61,47 @@ class EmsEvent < EventStream
   end
 
   def self.add_vc(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Vmware::InfraManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Vmware::InfraManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_rhevm(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Redhat::InfraManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Redhat::InfraManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_openstack(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Openstack::CloudManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Openstack::CloudManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_openstack_network(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Openstack::NetworkManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Openstack::NetworkManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_cinder(ems_id, event)
-    add(ems_id, ManageIQ::Providers::StorageManager::CinderManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::StorageManager::CinderManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_swift(ems_id, event)
-    add(ems_id, ManageIQ::Providers::StorageManager::SwiftManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::StorageManager::SwiftManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_openstack_infra(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Openstack::InfraManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Openstack::InfraManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_kubernetes(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Kubernetes::ContainerManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Kubernetes::ContainerManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_azure(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Azure::CloudManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Azure::CloudManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_google(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Google::CloudManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Google::CloudManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add_vmware_vcloud(ems_id, event)
-    add(ems_id, ManageIQ::Providers::Vmware::CloudManager::EventParser.event_to_hash(event, ems_id))
+    add(ems_id, NOVAHawk::Providers::Vmware::CloudManager::EventParser.event_to_hash(event, ems_id))
   end
 
   def self.add(ems_id, event_hash)

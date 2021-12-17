@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionTask::OptionsHelper
+module NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionTask::OptionsHelper
   def log_provider_options
     _log.info("Provisioning [#{source.name}]")
   end

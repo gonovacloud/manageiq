@@ -37,11 +37,11 @@ describe CloudTopologyService do
 
       allow(cloud_topology_service)
         .to receive(:retrieve_providers)
-        .with(anything, ManageIQ::Providers::CloudManager)
+        .with(anything, NOVAHawk::Providers::CloudManager)
         .and_return([ems])
 
       cloud_topology_service
-        .instance_variable_set(:@providers, ManageIQ::Providers::CloudManager.where(:id => ems.id))
+        .instance_variable_set(:@providers, NOVAHawk::Providers::CloudManager.where(:id => ems.id))
 
       expect(subject[:items]).to eq(
         "CloudManager" + ems.compressed_id.to_s =>   {:name         => ems.name,

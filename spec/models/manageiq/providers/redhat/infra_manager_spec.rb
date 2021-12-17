@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager do
+describe NOVAHawk::Providers::Redhat::InfraManager do
   it ".ems_type" do
     expect(described_class.ems_type).to eq('rhevm')
   end
@@ -9,7 +9,7 @@ describe ManageIQ::Providers::Redhat::InfraManager do
 
   describe ".metrics_collector_queue_name" do
     it "returns the correct queue name" do
-      worker_queue = ManageIQ::Providers::Redhat::InfraManager::MetricsCollectorWorker.default_queue_name
+      worker_queue = NOVAHawk::Providers::Redhat::InfraManager::MetricsCollectorWorker.default_queue_name
       expect(described_class.metrics_collector_queue_name).to eq(worker_queue)
     end
   end

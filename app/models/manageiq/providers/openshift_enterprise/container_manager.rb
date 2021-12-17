@@ -1,5 +1,5 @@
-class ManageIQ::Providers::OpenshiftEnterprise::ContainerManager < ManageIQ::Providers::ContainerManager
-  include ManageIQ::Providers::Openshift::ContainerManagerMixin
+class NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager < NOVAHawk::Providers::ContainerManager
+  include NOVAHawk::Providers::Openshift::ContainerManagerMixin
 
   require_nested :EventCatcher
   require_nested :EventParser
@@ -17,6 +17,6 @@ class ManageIQ::Providers::OpenshiftEnterprise::ContainerManager < ManageIQ::Pro
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
+    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
   end
 end

@@ -347,8 +347,8 @@ describe MiqAeEngine do
 
     it "with an array of Vms" do
       hash          = {"vms" => Vm.all}
-      result_str    = "Array::vms=" + hash["vms"].collect { |v| "ManageIQ::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
-      result_arr    = hash["vms"].collect { |v| "ManageIQ::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
+      result_str    = "Array::vms=" + hash["vms"].collect { |v| "NOVAHawk::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
+      result_arr    = hash["vms"].collect { |v| "NOVAHawk::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
       result        = MiqAeEngine.create_automation_attributes(hash)
       expect(MiqAeEngine.create_automation_attributes_string(hash)).to eq(result_str)
       expect(result["Array::vms"]).to eq(result_arr)
@@ -356,8 +356,8 @@ describe MiqAeEngine do
 
     it "with an array containing a single Vm" do
       hash          = {"vms" => [Vm.first]}
-      result_str    = "Array::vms=" + hash["vms"].collect { |v| "ManageIQ::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
-      result_arr    = hash["vms"].collect { |v| "ManageIQ::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
+      result_str    = "Array::vms=" + hash["vms"].collect { |v| "NOVAHawk::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
+      result_arr    = hash["vms"].collect { |v| "NOVAHawk::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
       result        = MiqAeEngine.create_automation_attributes(hash)
       expect(MiqAeEngine.create_automation_attributes_string(hash)).to eq(result_str)
       expect(result["Array::vms"]).to eq(result_arr)
@@ -387,8 +387,8 @@ describe MiqAeEngine do
 
     it "with multiple arrays" do
       hash            = {"vms" => Vm.all}
-      vm_result_str   = "Array::vms=" + hash["vms"].collect { |v| "ManageIQ::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
-      vm_result_arr   = hash["vms"].collect { |v| "ManageIQ::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
+      vm_result_str   = "Array::vms=" + hash["vms"].collect { |v| "NOVAHawk::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
+      vm_result_arr   = hash["vms"].collect { |v| "NOVAHawk::Providers::Vmware::InfraManager::Vm::#{v.id}" }.join(",")
       hash["hosts"]   = Host.all
       host_result_str = "Array::hosts=" + hash["hosts"].collect { |h| "Host::#{h.id}" }.join(",")
       host_result_arr = hash["hosts"].collect { |h| "Host::#{h.id}" }.join(",")

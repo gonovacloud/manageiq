@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::Vm::Operations::Power
+module NOVAHawk::Providers::Openstack::CloudManager::Vm::Operations::Power
   def validate_shelve
     validate_vm_control_shelve_action
   end

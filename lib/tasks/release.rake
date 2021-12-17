@@ -23,7 +23,7 @@ task :release do
   File.write(version_file, version)
 
   # Modify the automate domain version
-  ae_file = root.join("db/fixtures/ae_datastore/ManageIQ/System/About.class/__class__.yaml")
+  ae_file = root.join("db/fixtures/ae_datastore/NOVAHawk/System/About.class/__class__.yaml")
   content = YAML.load_file(ae_file)
   content.store_path("object", "schema", 0, "field", "default_value", version)
   File.write(ae_file, content.to_yaml)

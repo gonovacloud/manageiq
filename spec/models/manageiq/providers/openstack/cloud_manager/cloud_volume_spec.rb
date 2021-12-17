@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::CloudManager::CloudVolume do
+describe NOVAHawk::Providers::Openstack::CloudManager::CloudVolume do
   let(:ems) { FactoryGirl.create(:ems_openstack) }
   let(:tenant) { FactoryGirl.create(:cloud_tenant_openstack, :ext_management_system => ems) }
   let(:cloud_volume) do

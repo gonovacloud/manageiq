@@ -23,7 +23,7 @@ class CloudNetworkController < ApplicationController
   end
 
   def show_list
-    process_show_list(:match_via_descendants => ManageIQ::Providers::NetworkManager)
+    process_show_list(:match_via_descendants => NOVAHawk::Providers::NetworkManager)
   end
 
   def button
@@ -186,7 +186,7 @@ class CloudNetworkController < ApplicationController
     @network = CloudNetwork.new
     @in_a_form = true
     @network_ems_provider_choices = {}
-    ExtManagementSystem.where(:type => "ManageIQ::Providers::Openstack::NetworkManager").find_each do |ems|
+    ExtManagementSystem.where(:type => "NOVAHawk::Providers::Openstack::NetworkManager").find_each do |ems|
       @network_ems_provider_choices[ems.name] = ems.id
     end
     @network_provider_network_type_choices = PROVIDERS_NETWORK_TYPES

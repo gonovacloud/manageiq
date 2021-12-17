@@ -1,9 +1,9 @@
 require 'MiqVim'
 require 'http-access2' # Required in case it is not already loaded
 
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Vmware
-    class InfraManager::Refresher < ManageIQ::Providers::BaseManager::Refresher
+    class InfraManager::Refresher < NOVAHawk::Providers::BaseManager::Refresher
       include EmsRefresh::Refreshers::EmsRefresherMixin
       include InfraManager::RefreshParser::Filter
 
@@ -15,7 +15,7 @@ module ManageIQ::Providers
         def provider.use_vim_broker?; @__use_vim_broker; end
         klass = use_vim_broker ? MiqVimBroker : MiqVimInventory
         klass.cacheScope = :cache_scope_ems_refresh
-        klass.setSelector(ManageIQ::Providers::Vmware::InfraManager::SelectorSpec::VIM_SELECTOR_SPEC)
+        klass.setSelector(NOVAHawk::Providers::Vmware::InfraManager::SelectorSpec::VIM_SELECTOR_SPEC)
         @initialized_console = true
       end
 

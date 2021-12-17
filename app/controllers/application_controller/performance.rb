@@ -54,17 +54,17 @@ module ApplicationController::Performance
     render :update do |page|
       page << javascript_prologue
       if @parent_chart_data
-        page << 'ManageIQ.charts.chartData = ' + {
+        page << 'NOVAHawk.charts.chartData = ' + {
           "candu"  => @chart_data,
           "parent" => @parent_chart_data
         }.to_json + ';'
       elsif @compare_vm_chart_data
-        page << 'ManageIQ.charts.chartData = ' + {
+        page << 'NOVAHawk.charts.chartData = ' + {
           "candu"     => @chart_data,
           "comparevm" => @compare_vm_chart_data
         }.to_json + ';'
       else
-        page << 'ManageIQ.charts.chartData = ' + {
+        page << 'NOVAHawk.charts.chartData = ' + {
           "candu" => @chart_data
         }.to_json + ';'
       end
@@ -74,13 +74,13 @@ module ApplicationController::Performance
       if ["host", "vm", "vm_or_template"].include?(params[:controller])
         pfx = params[:controller] == "vm_or_template" ? "vm_" : ""
         if @perf_options[:typ] == "realtime"
-          page << "ManageIQ.toolbars.showItem('#center_tb', '#{pfx}perf_refresh');"
-          page << "ManageIQ.toolbars.showItem('#center_tb', '#{pfx}perf_reload');"
-          page << "ManageIQ.toolbars.enableItem('#center_tb', '#{pfx}perf_refresh');"
-          page << "ManageIQ.toolbars.enableItem('#center_tb', '#{pfx}perf_reload');"
+          page << "NOVAHawk.toolbars.showItem('#center_tb', '#{pfx}perf_refresh');"
+          page << "NOVAHawk.toolbars.showItem('#center_tb', '#{pfx}perf_reload');"
+          page << "NOVAHawk.toolbars.enableItem('#center_tb', '#{pfx}perf_refresh');"
+          page << "NOVAHawk.toolbars.enableItem('#center_tb', '#{pfx}perf_reload');"
         else
-          page << "ManageIQ.toolbars.hideItem('#center_tb', '#{pfx}perf_refresh');"
-          page << "ManageIQ.toolbars.hideItem('#center_tb', '#{pfx}perf_reload');"
+          page << "NOVAHawk.toolbars.hideItem('#center_tb', '#{pfx}perf_refresh');"
+          page << "NOVAHawk.toolbars.hideItem('#center_tb', '#{pfx}perf_reload');"
         end
       end
 
@@ -130,7 +130,7 @@ module ApplicationController::Performance
       return unless @charts               # Return if no charts got created (first time thru async rpt gen)
       render :update do |page|
         page << javascript_prologue
-        page << 'ManageIQ.charts.chartData = ' + {"candu" => @chart_data}.to_json + ';'
+        page << 'NOVAHawk.charts.chartData = ' + {"candu" => @chart_data}.to_json + ';'
         page.replace("candu_charts_div",
                      :partial => "layouts/perf_charts",
                      :locals  => {:chart_data => @chart_data, :chart_set => "candu"})
@@ -390,17 +390,17 @@ module ApplicationController::Performance
       render :update do |page|
         page << javascript_prologue
         if @parent_chart_data
-          page << 'ManageIQ.charts.chartData = ' + {
+          page << 'NOVAHawk.charts.chartData = ' + {
             "candu"  => @chart_data,
             "parent" => @parent_chart_data
           }.to_json + ';'
         elsif @parent_chart_data
-          page << 'ManageIQ.charts.chartData = ' + {
+          page << 'NOVAHawk.charts.chartData = ' + {
             "candu"      => @chart_data,
             "compare_vm" => @compare_vm_chart_data
           }.to_json + ';'
         else
-          page << 'ManageIQ.charts.chartData = ' + {
+          page << 'NOVAHawk.charts.chartData = ' + {
             "candu" => @chart_data
           }.to_json + ';'
         end
@@ -423,12 +423,12 @@ module ApplicationController::Performance
       render :update do |page|
         page << javascript_prologue
         if @parent_chart_data
-          page << 'ManageIQ.charts.chartData = ' + {
+          page << 'NOVAHawk.charts.chartData = ' + {
             "candu"  => @chart_data,
             "parent" => @parent_chart_data
           }.to_json + ';'
         else
-          page << 'ManageIQ.charts.chartData = ' + {
+          page << 'NOVAHawk.charts.chartData = ' + {
             "candu" => @chart_data
           }.to_json + ';'
         end

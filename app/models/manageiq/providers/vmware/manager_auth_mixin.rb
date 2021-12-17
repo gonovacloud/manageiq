@@ -1,6 +1,6 @@
 require 'fog/vcloud_director'
 
-module ManageIQ::Providers::Vmware::ManagerAuthMixin
+module NOVAHawk::Providers::Vmware::ManagerAuthMixin
   extend ActiveSupport::Concern
 
   def verify_credentials(auth_type = nil, options = {})

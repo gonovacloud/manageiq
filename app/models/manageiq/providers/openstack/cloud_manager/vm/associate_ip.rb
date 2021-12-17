@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::Vm::AssociateIp
+module NOVAHawk::Providers::Openstack::CloudManager::Vm::AssociateIp
   extend ActiveSupport::Concern
 
   included do

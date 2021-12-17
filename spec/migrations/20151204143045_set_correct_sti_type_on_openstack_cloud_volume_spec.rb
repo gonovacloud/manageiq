@@ -6,9 +6,9 @@ describe SetCorrectStiTypeOnOpenstackCloudVolume do
 
   let(:ems_row_entries) do
     [
-      {:type => "ManageIQ::Providers::Openstack::CloudManager"},
-      {:type => "ManageIQ::Providers::Amazon::CloudManager"},
-      {:type => "ManageIQ::Providers::AnotherManager"}
+      {:type => "NOVAHawk::Providers::Openstack::CloudManager"},
+      {:type => "NOVAHawk::Providers::Amazon::CloudManager"},
+      {:type => "NOVAHawk::Providers::AnotherManager"}
     ]
   end
 
@@ -18,19 +18,19 @@ describe SetCorrectStiTypeOnOpenstackCloudVolume do
         :ems      => ems_row_entries[0],
         :name     => "volume_1",
         :type_in  => nil,
-        :type_out => 'ManageIQ::Providers::Openstack::CloudManager::CloudVolume'
+        :type_out => 'NOVAHawk::Providers::Openstack::CloudManager::CloudVolume'
       },
       {
         :ems      => ems_row_entries[1],
         :name     => "volume_2",
-        :type_in  => 'ManageIQ::Providers::Openstack::CloudManager::CloudVolume',
-        :type_out => 'ManageIQ::Providers::Openstack::CloudManager::CloudVolume'
+        :type_in  => 'NOVAHawk::Providers::Openstack::CloudManager::CloudVolume',
+        :type_out => 'NOVAHawk::Providers::Openstack::CloudManager::CloudVolume'
       },
       {
         :ems      => ems_row_entries[1],
         :name     => "volume_3",
-        :type_in  => 'ManageIQ::Providers::Amazon::CloudManager::CloudVolume',
-        :type_out => 'ManageIQ::Providers::Amazon::CloudManager::CloudVolume'
+        :type_in  => 'NOVAHawk::Providers::Amazon::CloudManager::CloudVolume',
+        :type_out => 'NOVAHawk::Providers::Amazon::CloudManager::CloudVolume'
       },
       {
         :ems      => ems_row_entries[1],
@@ -41,8 +41,8 @@ describe SetCorrectStiTypeOnOpenstackCloudVolume do
       {
         :ems      => ems_row_entries[2],
         :name     => "volume_5",
-        :type_in  => 'ManageIQ::Providers::AnyManager::CloudVolume',
-        :type_out => 'ManageIQ::Providers::AnyManager::CloudVolume'
+        :type_in  => 'NOVAHawk::Providers::AnyManager::CloudVolume',
+        :type_out => 'NOVAHawk::Providers::AnyManager::CloudVolume'
       },
     ]
   end

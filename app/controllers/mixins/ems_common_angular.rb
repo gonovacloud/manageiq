@@ -190,25 +190,25 @@ module Mixins
 
       @ems_types = Array(model.supported_types_and_descriptions_hash.invert).sort_by(&:first)
 
-      if @ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+      if @ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
         host_default_vnc_port_start = @ems.host_default_vnc_port_start.to_s
         host_default_vnc_port_end = @ems.host_default_vnc_port_end.to_s
       end
 
-      if @ems.kind_of?(ManageIQ::Providers::Azure::CloudManager)
+      if @ems.kind_of?(NOVAHawk::Providers::Azure::CloudManager)
         azure_tenant_id = @ems.azure_tenant_id
         subscription    = @ems.subscription
         client_id       = @ems.authentication_userid ? @ems.authentication_userid : ""
         client_key      = @ems.authentication_password ? @ems.authentication_password : ""
       end
 
-      if @ems.kind_of?(ManageIQ::Providers::Google::CloudManager)
+      if @ems.kind_of?(NOVAHawk::Providers::Google::CloudManager)
         project         = @ems.project
         service_account = @ems.authentication_token
         service_account_auth_status = @ems.authentication_status_ok?
       end
 
-      default_auth_status = @ems.authentication_status_ok? unless @ems.kind_of?(ManageIQ::Providers::Google::CloudManager)
+      default_auth_status = @ems.authentication_status_ok? unless @ems.kind_of?(NOVAHawk::Providers::Google::CloudManager)
 
       render :json => {:name                            => @ems.name,
                        :emstype                         => @ems.emstype,
@@ -234,7 +234,7 @@ module Mixins
                        :client_id                       => client_id ? client_id : "",
                        :client_key                      => client_key ? client_key : "",
                        :project                         => project ? project : "",
-                       :emstype_vm                      => @ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager),
+                       :emstype_vm                      => @ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager),
                        :event_stream_selection          => retrieve_event_stream_selection,
                        :ems_controller                  => controller_name,
                        :default_auth_status             => default_auth_status,
@@ -263,7 +263,7 @@ module Mixins
                         :ssh_keypair_userid            => ssh_keypair_userid,
                         :metrics_userid                => metrics_userid,
                         :keystone_v3_domain_id         => keystone_v3_domain_id,
-                        :emstype_vm                    => @ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager),
+                        :emstype_vm                    => @ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager),
                         :host_default_vnc_port_start   => host_default_vnc_port_start ? host_default_vnc_port_start : "",
                         :host_default_vnc_port_end     => host_default_vnc_port_end ? host_default_vnc_port_end : "",
                         :event_stream_selection        => retrieve_event_stream_selection,
@@ -307,8 +307,8 @@ module Mixins
     private ############################
 
     def metrics_default_database_name
-      if @ems.class.name == 'ManageIQ::Providers::Redhat::InfraManager'
-        ManageIQ::Providers::Redhat::InfraManager.default_history_database_name
+      if @ems.class.name == 'NOVAHawk::Providers::Redhat::InfraManager'
+        NOVAHawk::Providers::Redhat::InfraManager.default_history_database_name
       end
     end
 
@@ -346,7 +346,7 @@ module Mixins
       metrics_endpoint = {}
       hawkular_endpoint = {}
 
-      if ems.kind_of?(ManageIQ::Providers::Openstack::CloudManager) || ems.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+      if ems.kind_of?(NOVAHawk::Providers::Openstack::CloudManager) || ems.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
         default_endpoint = {:role => :default, :hostname => hostname, :port => port, :security_protocol => ems.security_protocol}
         ems.keystone_v3_domain_id = params[:keystone_v3_domain_id]
         if params[:event_stream_selection] == "amqp"
@@ -356,9 +356,9 @@ module Mixins
         end
       end
 
-      ssh_keypair_endpoint = {:role => :ssh_keypair} if ems.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+      ssh_keypair_endpoint = {:role => :ssh_keypair} if ems.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
 
-      if ems.kind_of?(ManageIQ::Providers::Redhat::InfraManager)
+      if ems.kind_of?(NOVAHawk::Providers::Redhat::InfraManager)
         default_endpoint = {:role => :default, :hostname => hostname, :port => port, :security_protocol => ems.security_protocol}
         metrics_endpoint = { :role     => :metrics,
                              :hostname => metrics_hostname,
@@ -366,34 +366,34 @@ module Mixins
                              :path     => metrics_database_name }
       end
 
-      if ems.kind_of?(ManageIQ::Providers::Google::CloudManager)
+      if ems.kind_of?(NOVAHawk::Providers::Google::CloudManager)
         ems.project = params[:project]
       end
 
-      if ems.kind_of?(ManageIQ::Providers::Microsoft::InfraManager)
+      if ems.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager)
         default_endpoint = {:role => :default, :hostname => hostname, :security_protocol => ems.security_protocol}
         ems.realm = params[:realm]
       end
 
-      if ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+      if ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
         default_endpoint = {:role => :default, :hostname => hostname}
         ems.host_default_vnc_port_start = params[:host_default_vnc_port_start].blank? ? nil : params[:host_default_vnc_port_start].to_i
         ems.host_default_vnc_port_end = params[:host_default_vnc_port_end].blank? ? nil : params[:host_default_vnc_port_end].to_i
       end
 
-      if ems.kind_of?(ManageIQ::Providers::Vmware::CloudManager)
+      if ems.kind_of?(NOVAHawk::Providers::Vmware::CloudManager)
         default_endpoint = {:role => :default, :hostname => hostname, :port => port}
         if params[:event_stream_selection] == "amqp"
           amqp_endpoint = {:role => :amqp, :hostname => amqp_hostname, :port => amqp_port, :security_protocol => amqp_security_protocol}
         end
       end
 
-      if ems.kind_of?(ManageIQ::Providers::Azure::CloudManager)
+      if ems.kind_of?(NOVAHawk::Providers::Azure::CloudManager)
         ems.azure_tenant_id = params[:azure_tenant_id]
         ems.subscription    = params[:subscription] unless params[:subscription].blank?
       end
 
-      if ems.kind_of?(ManageIQ::Providers::ContainerManager)
+      if ems.kind_of?(NOVAHawk::Providers::ContainerManager)
         params[:cred_type] = ems.default_authentication_type if params[:cred_type] == "default"
         ems.hostname = hostname
         hawkular_hostname = hostname if hawkular_hostname.blank?
@@ -402,11 +402,11 @@ module Mixins
         hawkular_endpoint = {:role => :hawkular, :hostname => hawkular_hostname, :port => hawkular_api_port}
       end
 
-      if ems.kind_of?(ManageIQ::Providers::Hawkular::MiddlewareManager)
+      if ems.kind_of?(NOVAHawk::Providers::Hawkular::MiddlewareManager)
         default_endpoint = {:role => :default, :hostname => hostname, :port => port}
       end
 
-      if ems.kind_of?(ManageIQ::Providers::Nuage::NetworkManager)
+      if ems.kind_of?(NOVAHawk::Providers::Nuage::NetworkManager)
         default_endpoint = {:role => :default, :hostname => hostname, :port => port, :security_protocol => ems.security_protocol}
       end
 
@@ -451,12 +451,12 @@ module Mixins
         amqp_password = params[:amqp_password] ? params[:amqp_password] : ems.authentication_password(:amqp)
         creds[:amqp] = {:userid => params[:amqp_userid], :password => amqp_password, :save => (mode != :validate)}
       end
-      if ems.kind_of?(ManageIQ::Providers::Openstack::InfraManager) &&
+      if ems.kind_of?(NOVAHawk::Providers::Openstack::InfraManager) &&
          ems.supports_authentication?(:ssh_keypair) && params[:ssh_keypair_userid]
         ssh_keypair_password = params[:ssh_keypair_password] ? params[:ssh_keypair_password].gsub(/\r\n/, "\n") : ems.authentication_key(:ssh_keypair)
         creds[:ssh_keypair] = {:userid => params[:ssh_keypair_userid], :auth_key => ssh_keypair_password, :save => (mode != :validate)}
       end
-      if ems.kind_of?(ManageIQ::Providers::Redhat::InfraManager) &&
+      if ems.kind_of?(NOVAHawk::Providers::Redhat::InfraManager) &&
          ems.supports_authentication?(:metrics) && params[:metrics_userid]
         metrics_password = params[:metrics_password] ? params[:metrics_password] : ems.authentication_password(:metrics)
         creds[:metrics] = {:userid => params[:metrics_userid], :password => metrics_password, :save => (mode != :validate)}
@@ -474,7 +474,7 @@ module Mixins
                          :save          => (mode != :validate)}
         session[:oauth_response] = nil
       end
-      if ems.kind_of?(ManageIQ::Providers::ContainerManager)
+      if ems.kind_of?(NOVAHawk::Providers::ContainerManager)
         default_key = params[:default_password] ? params[:default_password] : ems.authentication_key
         creds[:hawkular] = {:auth_key => default_key, :save => (mode != :validate)}
         creds[:bearer] = {:auth_key => default_key, :save => (mode != :validate)}
@@ -490,7 +490,7 @@ module Mixins
 
     def construct_edit_for_audit(ems)
       @edit ||= {}
-      ems.kind_of?(ManageIQ::Providers::Azure::CloudManager) ? azure_tenant_id = ems.azure_tenant_id : azure_tenant_id = nil
+      ems.kind_of?(NOVAHawk::Providers::Azure::CloudManager) ? azure_tenant_id = ems.azure_tenant_id : azure_tenant_id = nil
       @edit[:current] = {
         :name                  => ems.name,
         :provider_region       => ems.provider_region,

@@ -140,7 +140,7 @@ namespace :locale do
     system({"RAILS_ENV" => "i18n"}, "bundle exec rake locale:store_model_attributes")
   end
 
-  desc "Update ManageIQ gettext catalogs"
+  desc "Update NOVAHawk gettext catalogs"
   task "update" => ["run_store_model_attributes", "store_dictionary_strings", "extract_yaml_strings", "gettext:find"] do
     Dir["locale/**/*.edit.po", "locale/**/*.po.time_stamp"].each do |file|
       File.unlink(file)

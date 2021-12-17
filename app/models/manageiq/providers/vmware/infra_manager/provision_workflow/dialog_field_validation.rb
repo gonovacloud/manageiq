@@ -1,5 +1,5 @@
 # These methods are available for dialog field validation, do not erase.
-module ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow::DialogFieldValidation
+module NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow::DialogFieldValidation
   def validate_placement_host_name(field, values, dlg, fld, value)
     result = validate_placement(field, values, dlg, fld, value)
     return result if result.nil?

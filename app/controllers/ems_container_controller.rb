@@ -9,7 +9,7 @@ class EmsContainerController < ApplicationController
   after_action :set_session_data
 
   def self.model
-    ManageIQ::Providers::ContainerManager
+    NOVAHawk::Providers::ContainerManager
   end
 
   def self.table_name

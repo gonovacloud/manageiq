@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Google::CloudManager::MetricsCollectorWorker <
-  ManageIQ::Providers::BaseManager::MetricsCollectorWorker
+class NOVAHawk::Providers::Google::CloudManager::MetricsCollectorWorker <
+  NOVAHawk::Providers::BaseManager::MetricsCollectorWorker
   require_nested :Runner
 
   self.default_queue_name = "google"

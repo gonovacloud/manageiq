@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager < ManageIQ::Providers::CloudManager
+class NOVAHawk::Providers::Openstack::CloudManager < NOVAHawk::Providers::CloudManager
   require_nested :AuthKeyPair
   require_nested :AvailabilityZone
   require_nested :AvailabilityZoneNull
@@ -25,13 +25,13 @@ class ManageIQ::Providers::Openstack::CloudManager < ManageIQ::Providers::CloudM
 
   has_many :storage_managers,
            :foreign_key => :parent_ems_id,
-           :class_name  => "ManageIQ::Providers::StorageManager",
+           :class_name  => "NOVAHawk::Providers::StorageManager",
            :autosave    => true,
            :dependent   => :destroy
 
   include CinderManagerMixin
   include SwiftManagerMixin
-  include ManageIQ::Providers::Openstack::ManagerMixin
+  include NOVAHawk::Providers::Openstack::ManagerMixin
 
   supports :provisioning
   supports :cloud_tenant_mapping do
@@ -70,18 +70,18 @@ class ManageIQ::Providers::Openstack::CloudManager < ManageIQ::Providers::CloudM
   end
 
   def ensure_network_manager
-    build_network_manager(:type => 'ManageIQ::Providers::Openstack::NetworkManager') unless network_manager
+    build_network_manager(:type => 'NOVAHawk::Providers::Openstack::NetworkManager') unless network_manager
   end
 
   def ensure_cinder_manager
     return false if cinder_manager
-    build_cinder_manager(:type => 'ManageIQ::Providers::StorageManager::CinderManager')
+    build_cinder_manager(:type => 'NOVAHawk::Providers::StorageManager::CinderManager')
     true
   end
 
   def ensure_swift_manager
     return false if swift_manager
-    build_swift_manager(:type => 'ManageIQ::Providers::StorageManager::SwiftManager')
+    build_swift_manager(:type => 'NOVAHawk::Providers::StorageManager::SwiftManager')
     true
   end
 
@@ -285,7 +285,7 @@ class ManageIQ::Providers::Openstack::CloudManager < ManageIQ::Providers::CloudM
 
     # Add new snapshot image to the vms table. Type is TemplateOpenstack.
     miq_templates.create!(
-      :type     => "ManageIQ::Providers::Openstack::CloudManager::Template",
+      :type     => "NOVAHawk::Providers::Openstack::CloudManager::Template",
       :vendor   => "openstack",
       :name     => miq_snapshot.name,
       :uid_ems  => miq_snapshot.id,
@@ -343,15 +343,15 @@ class ManageIQ::Providers::Openstack::CloudManager < ManageIQ::Providers::CloudM
   end
 
   def create_host_aggregate(options)
-    ManageIQ::Providers::Openstack::CloudManager::HostAggregate.create_aggregate(self, options)
+    NOVAHawk::Providers::Openstack::CloudManager::HostAggregate.create_aggregate(self, options)
   end
 
   def create_host_aggregate_queue(userid, options)
-    ManageIQ::Providers::Openstack::CloudManager::HostAggregate.create_aggregate_queue(userid, self, options)
+    NOVAHawk::Providers::Openstack::CloudManager::HostAggregate.create_aggregate_queue(userid, self, options)
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::Openstack::CloudManager::EventCatcher
+    NOVAHawk::Providers::Openstack::CloudManager::EventCatcher
   end
 
   #

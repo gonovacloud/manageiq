@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::CloudManager::Provision do
+describe NOVAHawk::Providers::CloudManager::Provision do
   context "Cloning" do
     let(:provider) { FactoryGirl.create(:ems_cloud) }
     let(:template) { FactoryGirl.create(:template_cloud, :ext_management_system => provider) }

@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Google::NetworkManager::EventCatcher < ::MiqEventCatcher
+class NOVAHawk::Providers::Google::NetworkManager::EventCatcher < ::MiqEventCatcher
   def self.ems_class
-    ManageIQ::Providers::Google::NetworkManager
+    NOVAHawk::Providers::Google::NetworkManager
   end
 
   def self.settings_name

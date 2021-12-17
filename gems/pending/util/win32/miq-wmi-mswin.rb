@@ -22,7 +22,7 @@ module WmiMswin
     return nil if @username.nil?
 
     # Check for usernames that supplied the domain as well
-    # Example manageiq\user1 or just user1
+    # Example novahawk\user1 or just user1
     return @username if @username.include?("\\")
 
     # If we just have a username append the server name to it.  Otherwise

@@ -3,8 +3,8 @@ FactoryGirl.define do
   end
 
   factory :hawkular_middleware_messaging,
-          :aliases => ['app/models/manageiq/providers/hawkular/middleware_manager/middleware_messaging'],
-          :class   => 'ManageIQ::Providers::Hawkular::MiddlewareManager::MiddlewareMessaging',
+          :aliases => ['app/models/novahawk/providers/hawkular/middleware_manager/middleware_messaging'],
+          :class   => 'NOVAHawk::Providers::Hawkular::MiddlewareManager::MiddlewareMessaging',
           :parent  => :middleware_messaging do
   end
 

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Kubernetes::ContainerManager::Refresher do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager::Refresher do
   before(:each) do
     allow(MiqServer).to receive(:my_zone).and_return("default")
     auth = AuthToken.new(:name => "test", :auth_key => "valid-token")
@@ -76,7 +76,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::Refresher do
   def assert_ems
     expect(@ems).to have_attributes(
       :port => 6443,
-      :type => "ManageIQ::Providers::Kubernetes::ContainerManager"
+      :type => "NOVAHawk::Providers::Kubernetes::ContainerManager"
     )
   end
 
@@ -383,7 +383,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::Refresher do
       :status_phase => "Available"
     )
     expect(@ems.persistent_volumes.count).to eq(1)
-    expect(@persistent_volume.parent.class).to eq(ManageIQ::Providers::Kubernetes::ContainerManager)
+    expect(@persistent_volume.parent.class).to eq(NOVAHawk::Providers::Kubernetes::ContainerManager)
   end
 
   def label_with_name_value(name, value)
@@ -399,7 +399,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager::Refresher do
 
   context "when refreshing an empty DB" do
     # Recreation steps for the VCR cassettes can be found here:
-    # spec/models/manageiq/providers/openshift/container_manager/refresher_spec.rb
+    # spec/models/novahawk/providers/openshift/container_manager/refresher_spec.rb
 
     before(:each) do
       VCR.use_cassette("#{described_class.name.underscore}_before_deletions",

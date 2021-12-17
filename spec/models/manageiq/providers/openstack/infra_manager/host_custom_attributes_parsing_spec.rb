@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::InfraManager::Host do
+describe NOVAHawk::Providers::Openstack::InfraManager::Host do
   #####################################################################
   ##### Variations of nice format  presetn in OpenStack's confs #######
   let(:filesystem_openstack_conf_nice) do

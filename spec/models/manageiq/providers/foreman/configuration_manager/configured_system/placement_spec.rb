@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem do
+describe NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem do
   context "::Placement" do
     context "#available_configuration_profiles" do
       let(:arch1) { FactoryGirl.create(:configuration_architecture, :name => "i386") }

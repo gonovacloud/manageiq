@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Foreman::ProvisioningManager::RefreshWorker < MiqEmsRefreshWorker
+class NOVAHawk::Providers::Foreman::ProvisioningManager::RefreshWorker < MiqEmsRefreshWorker
   require_nested :Runner
 
   def self.ems_class

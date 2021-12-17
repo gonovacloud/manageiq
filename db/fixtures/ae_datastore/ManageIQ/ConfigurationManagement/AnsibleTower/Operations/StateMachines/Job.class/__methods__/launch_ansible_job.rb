@@ -7,9 +7,9 @@
 class LaunchAnsibleJob
   ANSIBLE_VAR_REGEX = Regexp.new(/(.*)=(.*$)/)
   ANSIBLE_DIALOG_VAR_REGEX = Regexp.new(/dialog_param_(.*)/)
-  SCRIPT_CLASS = 'ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript'.freeze
-  JOB_CLASS = 'ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job'.freeze
-  MANAGER_CLASS = 'ManageIQ_Providers_AnsibleTower_ConfigurationManager'.freeze
+  SCRIPT_CLASS = 'NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript'.freeze
+  JOB_CLASS = 'NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job'.freeze
+  MANAGER_CLASS = 'NOVAHawk_Providers_AnsibleTower_ConfigurationManager'.freeze
 
   def initialize(handle)
     @handle = handle

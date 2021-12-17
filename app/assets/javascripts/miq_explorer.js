@@ -1,6 +1,6 @@
-ManageIQ.explorer = {};
+NOVAHawk.explorer = {};
 
-ManageIQ.explorer.updateElement = function(element, options) {
+NOVAHawk.explorer.updateElement = function(element, options) {
   if (_.isString(options.legend)) {
     $('#' + element).html(options.legend);
   } else if (_.isString(options.title)) {
@@ -14,15 +14,15 @@ ManageIQ.explorer.updateElement = function(element, options) {
   }
 };
 
-ManageIQ.explorer.buildCalendar = function(options) {
-  ManageIQ.calendar.calDateFrom = _.isString(options.dateFrom) ? new Date(options.dateFrom) : undefined;
-  ManageIQ.calendar.calDateTo = _.isString(options.dateTo) ? new Date(options.dateTo) : undefined;
-  ManageIQ.calendar.calSkipDays = _.isObject(options.skipDays) ? options.skipDays : undefined;
+NOVAHawk.explorer.buildCalendar = function(options) {
+  NOVAHawk.calendar.calDateFrom = _.isString(options.dateFrom) ? new Date(options.dateFrom) : undefined;
+  NOVAHawk.calendar.calDateTo = _.isString(options.dateTo) ? new Date(options.dateTo) : undefined;
+  NOVAHawk.calendar.calSkipDays = _.isObject(options.skipDays) ? options.skipDays : undefined;
 
   miqBuildCalendar();
 };
 
-ManageIQ.explorer.lock_tree = function(tree_name, lock) {
+NOVAHawk.explorer.lock_tree = function(tree_name, lock) {
   var tree = miqTreeObject(tree_name);
   if (!tree || "length" in tree) {
     // "length" in tree - because miqTreeObject returns a jquery array when the element doesn't exist
@@ -35,7 +35,7 @@ ManageIQ.explorer.lock_tree = function(tree_name, lock) {
   miqDimDiv('#' + tree_name + '_div', lock);
 };
 
-ManageIQ.explorer.clearSearchToggle = function(show) {
+NOVAHawk.explorer.clearSearchToggle = function(show) {
   if (show) {
     $('#clear_search').show();
   } else {
@@ -43,49 +43,49 @@ ManageIQ.explorer.clearSearchToggle = function(show) {
   }
 };
 
-ManageIQ.explorer.process = function(data) {
+NOVAHawk.explorer.process = function(data) {
   switch (data.explorer) {
     case 'flash':
-      ManageIQ.explorer.processFlash(data);
+      NOVAHawk.explorer.processFlash(data);
       break;
     case 'replace_right_cell':
-      ManageIQ.explorer.processReplaceRightCell(data);
+      NOVAHawk.explorer.processReplaceRightCell(data);
       break;
     case 'replace_main_div':
-      ManageIQ.explorer.processReplaceMainDiv(data);
+      NOVAHawk.explorer.processReplaceMainDiv(data);
       break;
     case 'buttons':
-      ManageIQ.explorer.processButtons(data);
+      NOVAHawk.explorer.processButtons(data);
       break;
     case 'window':
-      ManageIQ.explorer.processWindow(data);
+      NOVAHawk.explorer.processWindow(data);
       break;
   }
 };
 
-ManageIQ.explorer.processWindow = function(data) {
+NOVAHawk.explorer.processWindow = function(data) {
   if (_.isString(data.openUrl)) {
     window.open(data.openUrl);
   }
-  ManageIQ.explorer.spinnerOff(data);
+  NOVAHawk.explorer.spinnerOff(data);
 };
 
-ManageIQ.explorer.processButtons = function(data) {
-  ManageIQ.explorer.miqButtons(data);
+NOVAHawk.explorer.processButtons = function(data) {
+  NOVAHawk.explorer.miqButtons(data);
 };
 
-ManageIQ.explorer.processReplaceMainDiv = function(data) {
-  ManageIQ.explorer.updatePartials(data);
+NOVAHawk.explorer.processReplaceMainDiv = function(data) {
+  NOVAHawk.explorer.updatePartials(data);
 };
 
-ManageIQ.explorer.processFlash = function(data) {
-  ManageIQ.explorer.replacePartials(data);
-  ManageIQ.explorer.spinnerOff(data);
-  ManageIQ.explorer.scrollTop(data);
-  ManageIQ.explorer.focus(data);
+NOVAHawk.explorer.processFlash = function(data) {
+  NOVAHawk.explorer.replacePartials(data);
+  NOVAHawk.explorer.spinnerOff(data);
+  NOVAHawk.explorer.scrollTop(data);
+  NOVAHawk.explorer.focus(data);
 };
 
-ManageIQ.explorer.replacePartials = function(data) {
+NOVAHawk.explorer.replacePartials = function(data) {
   if (_.isObject(data.replacePartials)) {
     _.forEach(data.replacePartials, function (content, element) {
       $('#' + element).replaceWith(content);
@@ -93,7 +93,7 @@ ManageIQ.explorer.replacePartials = function(data) {
   }
 };
 
-ManageIQ.explorer.updatePartials = function(data) {
+NOVAHawk.explorer.updatePartials = function(data) {
   if (_.isObject(data.updatePartials)) {
     _.forEach(data.updatePartials, function (content, element) {
       $('#' + element).html(content);
@@ -101,53 +101,53 @@ ManageIQ.explorer.updatePartials = function(data) {
   }
 };
 
-ManageIQ.explorer.spinnerOff = function(data) {
+NOVAHawk.explorer.spinnerOff = function(data) {
   if (data.spinnerOff) {
     miqSparkle(false);
   }
 };
 
 
-ManageIQ.explorer.scrollTop = function(data) {
+NOVAHawk.explorer.scrollTop = function(data) {
   if (data.scrollTop) {
     $('#main_div').scrollTop(0);
   }
 };
 
-ManageIQ.explorer.miqButtons = function(data) {
+NOVAHawk.explorer.miqButtons = function(data) {
   miqButtons(data.showMiqButtons ? 'show' : 'hide');
 };
 
-ManageIQ.explorer.focus = function(data) {
+NOVAHawk.explorer.focus = function(data) {
   if (_.isString(data.focus)) {
     var element = $('#' + data.focus);
     if ( element.length ) element.focus();
   }
 }
 
-ManageIQ.explorer.processReplaceRightCell = function(data) {
+NOVAHawk.explorer.processReplaceRightCell = function(data) {
   /* variables for the expression editor */
   if (_.isObject(data.expEditor)) {
     if (_.isObject(data.expEditor.first)) {
       if (!_.isUndefined(data.expEditor.first.type)) {
-        ManageIQ.expEditor.first.type   = data.expEditor.first.type;
+        NOVAHawk.expEditor.first.type   = data.expEditor.first.type;
       }
       if (!_.isUndefined(data.expEditor.first.title)) {
-        ManageIQ.expEditor.first.title  = data.expEditor.first.title;
+        NOVAHawk.expEditor.first.title  = data.expEditor.first.title;
       }
     }
 
     if (_.isObject(data.expEditor.second)) {
       if (!_.isUndefined(data.expEditor.second.type)) {
-        ManageIQ.expEditor.second.type   = data.expEditor.second.type;
+        NOVAHawk.expEditor.second.type   = data.expEditor.second.type;
       }
       if (!_.isUndefined(data.expEditor.second.title)) {
-        ManageIQ.expEditor.second.title  = data.expEditor.second.title;
+        NOVAHawk.expEditor.second.title  = data.expEditor.second.title;
       }
     }
   }
 
-  ManageIQ.explorer.miqButtons(data);
+  NOVAHawk.explorer.miqButtons(data);
 
   if (_.isString(data.clearTreeCookies)) { miqDeleteTreeCookies(data.clearTreeCookies); }
 
@@ -175,28 +175,28 @@ ManageIQ.explorer.processReplaceRightCell = function(data) {
   }
 
   if (_.isString(data.dashboardUrl)) {
-    ManageIQ.widget.dashboardUrl = data.dashboardUrl;
+    NOVAHawk.widget.dashboardUrl = data.dashboardUrl;
   }
 
   if ($('#advsearchModal').hasClass('modal fade in')) {
     $('#advsearchModal').modal('hide');
   }
 
-  ManageIQ.explorer.updatePartials(data);
+  NOVAHawk.explorer.updatePartials(data);
 
   if (_.isObject(data.updateElements)) {
     _.forEach(data.updateElements, function (options, element) {
-        ManageIQ.explorer.updateElement(element, options);
+        NOVAHawk.explorer.updateElement(element, options);
     });
   }
 
-  ManageIQ.explorer.replacePartials(data);
+  NOVAHawk.explorer.replacePartials(data);
 
-  if (_.isObject(data.buildCalendar)) { ManageIQ.explorer.buildCalendar(data.buildCalendar); }
+  if (_.isObject(data.buildCalendar)) { NOVAHawk.explorer.buildCalendar(data.buildCalendar); }
 
   if (data.initDashboard) { miqInitDashboardCols(); }
 
-  if (data.clearGtlListGrid) { ManageIQ.grids.gtl_list_grid = undefined; }
+  if (data.clearGtlListGrid) { NOVAHawk.grids.gtl_list_grid = undefined; }
 
   if (_.isObject(data.setVisibility))
     _.forEach(data.setVisibility, function (visible, element) {
@@ -209,7 +209,7 @@ ManageIQ.explorer.processReplaceRightCell = function(data) {
       }
     });
 
-  ManageIQ.explorer.scrollTop(data);
+  NOVAHawk.explorer.scrollTop(data);
 
   if (_.isString(data.rightCellText)) {
     $('h1#explorer_title > span#explorer_title_text')
@@ -217,7 +217,7 @@ ManageIQ.explorer.processReplaceRightCell = function(data) {
   }
 
   if (_.isArray(data.reloadToolbars) && data.reloadToolbars.length) {
-    ManageIQ.angular.rxSubject.onNext({
+    NOVAHawk.angular.rxSubject.onNext({
       redrawToolbar: data.reloadToolbars
     });
   } else if (_.isObject(data.reloadToolbars) && !_.isArray(data.reloadToolbars)) {
@@ -230,7 +230,7 @@ ManageIQ.explorer.processReplaceRightCell = function(data) {
     miqInitToolbars();
   }
 
-  ManageIQ.record = data.record;
+  NOVAHawk.record = data.record;
 
   if (!_.isUndefined(data.activateNode)) {
     miqExpandParentNodes(data.activateNode.activeTree, data.activateNode.osf);
@@ -239,23 +239,23 @@ ManageIQ.explorer.processReplaceRightCell = function(data) {
 
   if (_.isObject(data.lockTrees)) {
     _.forEach(data.lockTrees, function (lock, tree) {
-      ManageIQ.explorer.lock_tree(tree, lock);
+      NOVAHawk.explorer.lock_tree(tree, lock);
     });
   }
 
   if (_.isObject(data.chartData)) {
-    ManageIQ.charts.chartData = data.chartData;
+    NOVAHawk.charts.chartData = data.chartData;
     load_c3_charts();
   }
 
-  if (data.resetChanges) { ManageIQ.changes = null; }
-  if (data.resetOneTrans) { ManageIQ.oneTransition.oneTrans = 0; }
-  if (data.oneTransIE) { ManageIQ.oneTransition.IEButtonPressed = true; }
+  if (data.resetChanges) { NOVAHawk.changes = null; }
+  if (data.resetOneTrans) { NOVAHawk.oneTransition.oneTrans = 0; }
+  if (data.oneTransIE) { NOVAHawk.oneTransition.IEButtonPressed = true; }
 
-  ManageIQ.explorer.focus(data);
+  NOVAHawk.explorer.focus(data);
 
   if (!_.isUndefined(data.clearSearch)) {
-    ManageIQ.explorer.clearSearchToggle(data.clearSearch);
+    NOVAHawk.explorer.clearSearchToggle(data.clearSearch);
   }
 
   miqInitMainContent();

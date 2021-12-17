@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::HawkularClientMixin
+module NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture::HawkularClientMixin
   def hawkular_client
     require 'hawkular/hawkular_client'
     @client ||= Hawkular::Metrics::Client.new(
@@ -8,7 +8,7 @@ module ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::Hawkul
   def hawkular_entrypoint
     hawkular_endpoint = @ext_management_system.connection_configurations.hawkular.try(:endpoint)
     hawkular_endpoint_empty = hawkular_endpoint.try(:hostname).blank?
-    worker_class = ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCollectorWorker
+    worker_class = NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCollectorWorker
 
     URI::HTTPS.build(
       :host => hawkular_endpoint_empty ? @ext_management_system.hostname : hawkular_endpoint.hostname,

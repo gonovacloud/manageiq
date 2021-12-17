@@ -57,29 +57,29 @@ describe SeparateGoogleNetworkManagerFromGoogleCloudManager do
         :ems_in   => ems_row_entries[0],
         :ems_out  => ems_row_entries[0],
         :name     => "name_0",
-        :type_in  => "ManageIQ::Providers::Openstack::CloudManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::Openstack::CloudManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::Openstack::CloudManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::Openstack::CloudManager::#{model_class_name}",
       },
       {
         :ems_in   => ems_row_entries[1],
         :ems_out  => ems_row_entries[1],
         :name     => "name_1",
-        :type_in  => "ManageIQ::Providers::Openstack::InfraManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::Openstack::InfraManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::Openstack::InfraManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::Openstack::InfraManager::#{model_class_name}",
       },
       {
         :ems_in   => ems_row_entries[2],
         :ems_out  => 'new_ems',
         :name     => "name_2",
-        :type_in  => "ManageIQ::Providers::Google::CloudManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::Google::NetworkManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::Google::CloudManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::Google::NetworkManager::#{model_class_name}",
       },
       {
         :ems_in   => ems_row_entries[3],
         :ems_out  => ems_row_entries[3],
         :name     => "name_3",
-        :type_in  => "ManageIQ::Providers::AnotherManager::CloudManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::AnotherManager::CloudManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::AnotherManager::CloudManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::AnotherManager::CloudManager::#{model_class_name}",
       },
     ]
   end
@@ -112,10 +112,10 @@ describe SeparateGoogleNetworkManagerFromGoogleCloudManager do
 
   let(:ems_row_entries) do
     [
-      {:type => "ManageIQ::Providers::Openstack::CloudManager"},
-      {:type => "ManageIQ::Providers::Openstack::InfraManager"},
-      {:type => "ManageIQ::Providers::Google::CloudManager"},
-      {:type => "ManageIQ::Providers::AnotherManager::CloudManager"}
+      {:type => "NOVAHawk::Providers::Openstack::CloudManager"},
+      {:type => "NOVAHawk::Providers::Openstack::InfraManager"},
+      {:type => "NOVAHawk::Providers::Google::CloudManager"},
+      {:type => "NOVAHawk::Providers::AnotherManager::CloudManager"}
     ]
   end
 
@@ -149,7 +149,7 @@ describe SeparateGoogleNetworkManagerFromGoogleCloudManager do
 
       network_manager = ext_management_system_stub.create!(
         :name          => "cloud_network",
-        :type          => "ManageIQ::Providers::Google::NetworkManager",
+        :type          => "NOVAHawk::Providers::Google::NetworkManager",
         :parent_ems_id => ems_row_entries[2][:ems].id)
 
       all_model_names.each do |model_name|

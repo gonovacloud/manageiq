@@ -97,14 +97,14 @@ class MiqAeYamlImport
       name = @options['import_as']
       domain_yaml.store_path('object', 'attributes', 'name', name)
     end
-    miq = name.downcase == MiqAeDatastore::MANAGEIQ_DOMAIN.downcase
-    miq ? reset_manageiq_attributes(domain_yaml) : reset_domain_attributes(domain_yaml)
+    miq = name.downcase == MiqAeDatastore::novahawk_DOMAIN.downcase
+    miq ? reset_novahawk_attributes(domain_yaml) : reset_domain_attributes(domain_yaml)
     domain_yaml
   end
 
-  def reset_manageiq_attributes(domain_yaml)
-    domain_yaml.store_path('object', 'attributes', 'name', MiqAeDatastore::MANAGEIQ_DOMAIN)
-    domain_yaml.store_path('object', 'attributes', 'priority', MiqAeDatastore::MANAGEIQ_PRIORITY)
+  def reset_novahawk_attributes(domain_yaml)
+    domain_yaml.store_path('object', 'attributes', 'name', MiqAeDatastore::novahawk_DOMAIN)
+    domain_yaml.store_path('object', 'attributes', 'priority', MiqAeDatastore::novahawk_PRIORITY)
     domain_yaml.store_path('object', 'attributes', 'source', MiqAeDomain::SYSTEM_SOURCE)
     domain_yaml.store_path('object', 'attributes', 'enabled', true)
     domain_yaml.delete_path('object', 'attributes', 'system')
@@ -240,7 +240,7 @@ class MiqAeYamlImport
   end
 
   def update_attributes(domain_obj)
-    return if domain_obj.name.downcase == MiqAeDatastore::MANAGEIQ_DOMAIN.downcase
+    return if domain_obj.name.downcase == MiqAeDatastore::novahawk_DOMAIN.downcase
     attrs = @options.slice('enabled', 'source')
     domain_obj.update_attributes(attrs) unless attrs.empty?
   end

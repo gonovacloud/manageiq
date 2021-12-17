@@ -2,7 +2,7 @@ module MiqAeServiceCloudVolumeOpenstackSpec
   describe MiqAeMethodService::MiqAeServiceUser do
     let(:cloud_volume)         { FactoryGirl.create(:cloud_volume_openstack) }
     let(:service_cloud_volume) do
-      MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_CloudManager_CloudVolume.find(cloud_volume.id)
+      MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager_CloudVolume.find(cloud_volume.id)
     end
 
     before do

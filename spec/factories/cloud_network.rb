@@ -4,18 +4,18 @@ FactoryGirl.define do
     sequence(:ems_ref) { |n| "ems_ref_#{seq_padded_for_sorting(n)}" }
   end
 
-  factory :cloud_network_openstack, :class  => "ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork",
+  factory :cloud_network_openstack, :class  => "NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork",
                                     :parent => :cloud_network
   factory :cloud_network_private_openstack,
-          :class  => "ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private",
+          :class  => "NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private",
           :parent => :cloud_network_openstack
   factory :cloud_network_public_openstack,
-          :class  => "ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Public",
+          :class  => "NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Public",
           :parent => :cloud_network_openstack
-  factory :cloud_network_amazon, :class  => "ManageIQ::Providers::Amazon::NetworkManager::CloudNetwork",
+  factory :cloud_network_amazon, :class  => "NOVAHawk::Providers::Amazon::NetworkManager::CloudNetwork",
                                  :parent => :cloud_network
-  factory :cloud_network_azure, :class  => "ManageIQ::Providers::Azure::NetworkManager::CloudNetwork",
+  factory :cloud_network_azure, :class  => "NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork",
                                 :parent => :cloud_network
-  factory :cloud_network_google, :class  => "ManageIQ::Providers::Google::NetworkManager::CloudNetwork",
+  factory :cloud_network_google, :class  => "NOVAHawk::Providers::Google::NetworkManager::CloudNetwork",
                                  :parent => :cloud_network
 end

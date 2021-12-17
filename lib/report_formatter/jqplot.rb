@@ -137,7 +137,7 @@ module ReportFormatter
         format, options = javascript_format(mri.graph[:column].split(/(?<!:):(?!:)/)[0], custom_format)
         return unless format
 
-        axis_formatter = "ManageIQ.charts.formatters.#{format}.jqplot(#{options.to_json})"
+        axis_formatter = "NOVAHawk.charts.formatters.#{format}.jqplot(#{options.to_json})"
         axis = mri.graph[:type] =~ /Column/ ? :yaxis : :xaxis
         mri.chart.store_path(:options, :axes, axis, :tickOptions, :formatter, axis_formatter)
       end

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::NetworkManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
+class NOVAHawk::Providers::Openstack::NetworkManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
   require_nested :Runner
 
   self.default_queue_name = "openstack_network"
@@ -8,7 +8,7 @@ class ManageIQ::Providers::Openstack::NetworkManager::MetricsCollectorWorker < :
   end
 
   def self.ems_class
-    ManageIQ::Providers::Openstack::NetworkManager
+    NOVAHawk::Providers::Openstack::NetworkManager
   end
 
   def self.settings_name

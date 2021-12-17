@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class MiddlewareManager < BaseManager
     class << model_name
       def route_key

@@ -26,8 +26,8 @@ module ApplicationController::Timelines
       page << javascript_prologue
       page.replace("flash_msg_div", :partial => "layouts/flash_msg")
       page.replace("tl_div", :partial => "layouts/tl_detail")
-      page << "ManageIQ.calendar.calDateFrom = new Date(#{@tl_options.date.start});" unless @tl_options.date.start.nil?
-      page << "ManageIQ.calendar.calDateTo = new Date(#{@tl_options.date.end});" unless @tl_options.date.end.nil?
+      page << "NOVAHawk.calendar.calDateFrom = new Date(#{@tl_options.date.start});" unless @tl_options.date.start.nil?
+      page << "NOVAHawk.calendar.calDateTo = new Date(#{@tl_options.date.end});" unless @tl_options.date.end.nil?
       page << 'miqBuildCalendar();'
       page << "miqSparkle(false);"
     end

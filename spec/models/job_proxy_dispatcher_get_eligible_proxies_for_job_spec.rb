@@ -48,7 +48,7 @@ describe "JobProxyDispatcherGetEligibleProxiesForJob" do
 
         context "with no proxies for job, " do
           before(:each) do
-            allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Vm).to receive_messages(:proxies4job => {:proxies => [], :message => "blah"})
+            allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Vm).to receive_messages(:proxies4job => {:proxies => [], :message => "blah"})
           end
 
           it "should return an empty array" do

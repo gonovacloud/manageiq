@@ -2,26 +2,26 @@ class FixRedhatNamespace < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    ManageIQ::Providers::Redhat::CloudManager
-    ManageIQ::Providers::Redhat::InfraManager
-    ManageIQ::Providers::Redhat::CloudManager::EventCatcher
-    ManageIQ::Providers::Redhat::InfraManager::EventCatcher
-    ManageIQ::Providers::Redhat::CloudManager::EventCatcher::Runner
-    ManageIQ::Providers::Redhat::InfraManager::EventCatcher::Runner
-    ManageIQ::Providers::Redhat::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::Redhat::InfraManager::MetricsCollectorWorker
-    ManageIQ::Providers::Redhat::CloudManager::MetricsCollectorWorker::Runner
-    ManageIQ::Providers::Redhat::InfraManager::MetricsCollectorWorker::Runner
-    ManageIQ::Providers::Redhat::CloudManager::RefreshWorker
-    ManageIQ::Providers::Redhat::InfraManager::RefreshWorker
-    ManageIQ::Providers::Redhat::CloudManager::RefreshWorker::Runner
-    ManageIQ::Providers::Redhat::InfraManager::RefreshWorker::Runner
-    ManageIQ::Providers::Redhat::CloudManager::Template
-    ManageIQ::Providers::Redhat::InfraManager::Template
-    ManageIQ::Providers::Redhat::CloudManager::Vm
-    ManageIQ::Providers::Redhat::InfraManager::Vm
+    NOVAHawk::Providers::Redhat::CloudManager
+    NOVAHawk::Providers::Redhat::InfraManager
+    NOVAHawk::Providers::Redhat::CloudManager::EventCatcher
+    NOVAHawk::Providers::Redhat::InfraManager::EventCatcher
+    NOVAHawk::Providers::Redhat::CloudManager::EventCatcher::Runner
+    NOVAHawk::Providers::Redhat::InfraManager::EventCatcher::Runner
+    NOVAHawk::Providers::Redhat::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Redhat::InfraManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Redhat::CloudManager::MetricsCollectorWorker::Runner
+    NOVAHawk::Providers::Redhat::InfraManager::MetricsCollectorWorker::Runner
+    NOVAHawk::Providers::Redhat::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Redhat::InfraManager::RefreshWorker
+    NOVAHawk::Providers::Redhat::CloudManager::RefreshWorker::Runner
+    NOVAHawk::Providers::Redhat::InfraManager::RefreshWorker::Runner
+    NOVAHawk::Providers::Redhat::CloudManager::Template
+    NOVAHawk::Providers::Redhat::InfraManager::Template
+    NOVAHawk::Providers::Redhat::CloudManager::Vm
+    NOVAHawk::Providers::Redhat::InfraManager::Vm
 
-    HostRedhat                             ManageIQ::Providers::Redhat::InfraManager::Host
+    HostRedhat                             NOVAHawk::Providers::Redhat::InfraManager::Host
   )]
 
   def change

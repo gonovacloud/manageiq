@@ -9,8 +9,8 @@ class ContainerDeploymentService
 
   def possible_provision_providers
     providers = ExtManagementSystem.includes(:vm_or_template).select do |m|
-      m.instance_of?(ManageIQ::Providers::Amazon::CloudManager) ||
-        m.instance_of?(ManageIQ::Providers::Redhat::InfraManager)
+      m.instance_of?(NOVAHawk::Providers::Amazon::CloudManager) ||
+        m.instance_of?(NOVAHawk::Providers::Redhat::InfraManager)
     end
     providers.map do |provider|
       {:provider => provider, :templates => templates(provider.miq_templates)}
@@ -32,7 +32,7 @@ class ContainerDeploymentService
 
   def possible_providers_and_vms
     providers = ExtManagementSystem.includes(:vm_or_template).select do |m|
-      m.kind_of?(ManageIQ::Providers::CloudManager) || m.kind_of?(ManageIQ::Providers::InfraManager)
+      m.kind_of?(NOVAHawk::Providers::CloudManager) || m.kind_of?(NOVAHawk::Providers::InfraManager)
     end
     providers.map do |provider|
       {:provider => provider, :vms => optional_vms(provider.vms)}

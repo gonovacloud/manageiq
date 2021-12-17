@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class NetworkManager < BaseManager
     include SupportsFeatureMixin
     class << model_name
@@ -24,7 +24,7 @@ module ManageIQ::Providers
 
     belongs_to :parent_manager,
                :foreign_key => :parent_ems_id,
-               :class_name  => "ManageIQ::Providers::BaseManager",
+               :class_name  => "NOVAHawk::Providers::BaseManager",
                :autosave    => true
 
     # Relationships delegated to parent manager

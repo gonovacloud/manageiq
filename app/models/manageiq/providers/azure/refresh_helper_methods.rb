@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::RefreshHelperMethods
+module NOVAHawk::Providers::Azure::RefreshHelperMethods
   extend ActiveSupport::Concern
 
   def process_collection(collection, key)

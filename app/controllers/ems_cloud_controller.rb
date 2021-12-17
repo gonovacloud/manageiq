@@ -9,7 +9,7 @@ class EmsCloudController < ApplicationController
   after_action :set_session_data
 
   def self.model
-    ManageIQ::Providers::CloudManager
+    NOVAHawk::Providers::CloudManager
   end
 
   def self.table_name

@@ -1,10 +1,10 @@
-ManageIQ.angular.app.controller('mwServerController', MwServerController);
+NOVAHawk.angular.app.controller('mwServerController', MwServerController);
 
 MwServerController.$inject = ['$scope', 'miqService' ];
 
 /**
  * MwServerController - since there can be only one controller per page due to:
- * 'ManageIQ.angular.scope = $scope;'
+ * 'NOVAHawk.angular.scope = $scope;'
  * We are now using Rx.js Observables instead of miqCallAngular, for sending configurable
  * data from miq buttons.
  * This is the parent controller for the page that is bootstrapped,
@@ -26,9 +26,9 @@ MwServerController.$inject = ['$scope', 'miqService' ];
  * @constructor
  */
 function MwServerController($scope, miqService) {
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
-  ManageIQ.angular.rxSubject.subscribe(function(event) {
+  NOVAHawk.angular.rxSubject.subscribe(function(event) {
     var eventType = event.type,
         operation = event.operation,
         timeout = event.timeout;
@@ -127,7 +127,7 @@ function MwServerController($scope, miqService) {
   };
 }
 
-ManageIQ.angular.app.controller('mwServerOpsController', MwServerOpsController);
+NOVAHawk.angular.app.controller('mwServerOpsController', MwServerOpsController);
 
 MwServerOpsController.$inject = ['miqService', 'serverOpsService'];
 
@@ -139,7 +139,7 @@ MwServerOpsController.$inject = ['miqService', 'serverOpsService'];
  */
 function MwServerOpsController( miqService, serverOpsService) {
 
-    ManageIQ.angular.rxSubject.subscribe(function(event) {
+    NOVAHawk.angular.rxSubject.subscribe(function(event) {
 
       if(event.type == 'mwSeverOpsEvent') {
         miqService.sparkleOn();
@@ -159,7 +159,7 @@ function MwServerOpsController( miqService, serverOpsService) {
   });
 }
 
-ManageIQ.angular.app.service('serverOpsService', ServerOpsService);
+NOVAHawk.angular.app.service('serverOpsService', ServerOpsService);
 
 ServerOpsService.$inject = ['$http', '$q'];
 

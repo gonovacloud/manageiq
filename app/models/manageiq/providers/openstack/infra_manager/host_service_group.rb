@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::InfraManager::HostServiceGroup < ::HostServiceGroup
+class NOVAHawk::Providers::Openstack::InfraManager::HostServiceGroup < ::HostServiceGroup
   def running_system_services_condition
     # UI can't do arel relations, so I need to expose conditions
     SystemService.running_systemd_services_condition

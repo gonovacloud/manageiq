@@ -4,6 +4,6 @@ FactoryGirl.define do
   end
 
   factory :load_balancer_pool_member_amazon,
-          :class  => "ManageIQ::Providers::Amazon::NetworkManager::LoadBalancerPoolMember",
+          :class  => "NOVAHawk::Providers::Amazon::NetworkManager::LoadBalancerPoolMember",
           :parent => :load_balancer_pool_member
 end

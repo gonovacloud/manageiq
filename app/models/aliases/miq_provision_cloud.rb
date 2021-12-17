@@ -1,1 +1,1 @@
-::MiqProvisionCloud = ::ManageIQ::Providers::CloudManager::Provision
+::MiqProvisionCloud = ::NOVAHawk::Providers::CloudManager::Provision

@@ -35,7 +35,7 @@ if __FILE__ == $0
     puts "MiqSockUtil.getHostName                : #{MiqSockUtil.getHostName}"
     puts "MiqSockUtil.getIpAddr                  : #{MiqSockUtil.getIpAddr}"
     puts "MiqSockUtil.resolve_hostname('luke') : #{MiqSockUtil.resolve_hostname('luke')}"
-    puts "MiqSockUtil.resolve_hostname('yoda.manageiq.com') : #{MiqSockUtil.resolve_hostname('yoda.manageiq.com')}"
+    puts "MiqSockUtil.resolve_hostname('yoda.novahawk.com') : #{MiqSockUtil.resolve_hostname('yoda.novahawk.com')}"
     puts "MiqSockUtil.hostname_from_ip('192.168.252.137') : #{MiqSockUtil.hostname_from_ip('192.168.252.137')}"
   end
   puts "Completed in [#{time}] seconds"

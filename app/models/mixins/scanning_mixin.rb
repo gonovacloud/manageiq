@@ -237,7 +237,7 @@ module ScanningMixin
       _log.debug "instantiated MIQExtract"
 
       _log.debug "instantiating BlackBox"
-      bb = Manageiq::BlackBox.new(guid, ost) # TODO: target must have GUID
+      bb = novahawk::BlackBox.new(guid, ost) # TODO: target must have GUID
       _log.debug "instantiated BlackBox"
 
       _log.debug "Checking for file systems..."
@@ -326,7 +326,7 @@ module ScanningMixin
         :dataDir            => data_dir,
         :forceFleeceDefault => false
       )
-      bb = Manageiq::BlackBox.new(guid, ost)
+      bb = novahawk::BlackBox.new(guid, ost)
 
       update_agent_state(ost, "Synchronize", "Synchronization in progress")
       categories.each do |c|

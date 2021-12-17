@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack::Status < ::OrchestrationStack::Status
+class NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack::Status < ::OrchestrationStack::Status
   def succeeded?
     status.downcase == "create_complete"
   end

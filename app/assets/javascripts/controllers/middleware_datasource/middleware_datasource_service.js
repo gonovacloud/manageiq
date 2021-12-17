@@ -1,4 +1,4 @@
-ManageIQ.angular.app.service('mwAddDatasourceService', MwAddDatasourceService);
+NOVAHawk.angular.app.service('mwAddDatasourceService', MwAddDatasourceService);
 
 MwAddDatasourceService.$inject = ['$http', '$q'];
 

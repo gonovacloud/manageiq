@@ -1,6 +1,6 @@
 require 'recursive-open-struct'
 
-describe ManageIQ::Providers::Openshift::ContainerManager::RefreshParser do
+describe NOVAHawk::Providers::Openshift::ContainerManager::RefreshParser do
   let(:store_unused_images) { true }
   let(:options) do
     # using Struct not OpenStruct ensures we specify all options the code actually accesses
@@ -49,7 +49,7 @@ describe ManageIQ::Providers::Openshift::ContainerManager::RefreshParser do
         :dockerImageManifest  => '{"name": "%s", "tag": "%s"}' % [image_name, image_tag],
         :dockerImageMetadata  => {
           :Architecture  => "amd64",
-          :Author        => "ManageIQ team",
+          :Author        => "NOVAHawk team",
           :Size          => "123456",
           :DockerVersion => "1.12.1",
           :Config        => {
@@ -103,7 +103,7 @@ describe ManageIQ::Providers::Openshift::ContainerManager::RefreshParser do
                                                          :host => image_registry,
                                                          :port => image_registry_port.to_s},
                            :architecture             => "amd64",
-                           :author                   => "ManageIQ team",
+                           :author                   => "NOVAHawk team",
                            :command                  => %w(run this program),
                            :entrypoint               => %w(entry1 entry2),
                            :docker_version           => "1.12.1",

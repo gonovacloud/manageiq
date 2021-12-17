@@ -487,7 +487,7 @@ class MiqWorker < ApplicationRecord
   delegate :normalized_type, :to => :class
 
   def abbreviated_class_name
-    type.sub(/^ManageIQ::Providers::/, "")
+    type.sub(/^NOVAHawk::Providers::/, "")
   end
 
   def minimal_class_name

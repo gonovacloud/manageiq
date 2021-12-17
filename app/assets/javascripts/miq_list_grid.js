@@ -52,7 +52,7 @@ function miqGridCheckAll(state, grid) {
 
 // Order a service from the catalog list view
 function miqOrderService(id) {
-  var url = '/' + ManageIQ.controller + '/x_button/' + id + '?pressed=svc_catalog_provision';
+  var url = '/' + NOVAHawk.controller + '/x_button/' + id + '?pressed=svc_catalog_provision';
   miqJqueryRequest(url, {beforeSend: true, complete: true});
 }
 
@@ -63,7 +63,7 @@ function miqGridOnCheck(elem, button_div, grid) {
   }
 
   var crows = miqGridGetCheckedRows(grid);
-  ManageIQ.gridChecks = crows;
+  NOVAHawk.gridChecks = crows;
 
   miqSetButtons(crows.length, "center_tb");
 }
@@ -71,14 +71,14 @@ function miqGridOnCheck(elem, button_div, grid) {
 // Handle sort
 function miqGetSortUrl(col_id) {
   var controller = null;
-  var action = ManageIQ.actionUrl;
+  var action = NOVAHawk.actionUrl;
   var id = null;
 
   if (action == "sort_ds_grid") {
     controller = 'miq_request';
-  } else if (ManageIQ.record.parentId !== null) {
-    controller = ManageIQ.record.parentClass;
-    id = ManageIQ.record.parentId;
+  } else if (NOVAHawk.record.parentId !== null) {
+    controller = NOVAHawk.record.parentClass;
+    id = NOVAHawk.record.parentId;
   }
 
   var url = action;

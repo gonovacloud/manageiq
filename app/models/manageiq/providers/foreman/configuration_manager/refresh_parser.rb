@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Foreman
     class ConfigurationManager::RefreshParser
       include Vmdb::Logging
@@ -42,7 +42,7 @@ module ManageIQ::Providers
         def_org = tax_refs if indexes[:organizations].keys == %w(0)
         recs.collect do |profile|
           {
-            :type                                  => "ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile",
+            :type                                  => "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile",
             :manager_ref                           => profile["id"].to_s,
             :parent_ref                            => (profile["ancestry"] || "").split("/").last.presence,
             :name                                  => profile["name"],
@@ -88,7 +88,7 @@ module ManageIQ::Providers
         def_org = 0 if indexes[:organizations].keys == %w(0)
         recs.collect do |cs|
           {
-            :type                                  => "ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem",
+            :type                                  => "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem",
             :manager_ref                           => cs["id"].to_s,
             :hostname                              => cs["name"],
             :configuration_profile                 => id_lookup(indexes[:profiles], cs["hostgroup_id"]),

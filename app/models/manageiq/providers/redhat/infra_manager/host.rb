@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Redhat::InfraManager::Host < ::Host
+class NOVAHawk::Providers::Redhat::InfraManager::Host < ::Host
   def provider_object(connection = nil)
     connection ||= ext_management_system.connect
     connection.get_resource_by_ems_ref(ems_ref)

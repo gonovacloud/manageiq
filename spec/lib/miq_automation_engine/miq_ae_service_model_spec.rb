@@ -1,15 +1,15 @@
 describe MiqAeMethodService::MiqAeServiceVm do
   before(:each) do
     @vm = FactoryGirl.create(:vm_vmware)
-    @ae_vm = MiqAeMethodService::MiqAeServiceManageIQ_Providers_Vmware_InfraManager_Vm.new(@vm.id)
+    @ae_vm = MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_Vm.new(@vm.id)
   end
 
   it ".base_model" do
-    expect(MiqAeMethodService::MiqAeServiceManageIQ_Providers_Vmware_InfraManager_Vm.base_model).to eq(MiqAeMethodService::MiqAeServiceVm)
+    expect(MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_Vm.base_model).to eq(MiqAeMethodService::MiqAeServiceVm)
   end
 
   it ".base_class" do
-    expect(MiqAeMethodService::MiqAeServiceManageIQ_Providers_Vmware_InfraManager_Vm.base_class).to eq(MiqAeMethodService::MiqAeServiceVmOrTemplate)
+    expect(MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_Vm.base_class).to eq(MiqAeMethodService::MiqAeServiceVmOrTemplate)
   end
 
   it "vm should be valid" do

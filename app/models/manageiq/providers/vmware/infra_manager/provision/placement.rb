@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Provision::Placement
+module NOVAHawk::Providers::Vmware::InfraManager::Provision::Placement
   extend ActiveSupport::Concern
 
   protected

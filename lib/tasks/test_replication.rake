@@ -76,7 +76,7 @@ class EvmTestSetupReplication
   end
 
   def fetch_command
-    "git fetch #{'--depth=1 ' if ENV['CI']}http://github.com/ManageIQ/manageiq.git refs/heads/darga:#{TEST_BRANCH}"
+    "git fetch #{'--depth=1 ' if ENV['CI']}http://github.com/NOVAHawk/novahawk.git refs/heads/darga:#{TEST_BRANCH}"
   end
 
   def prepare_slave_database

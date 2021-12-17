@@ -5,14 +5,14 @@ describe('subscriptionService', function() {
 
   var test = {callback: function() {}};
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function(_$timeout_, subscriptionService) {
     testService = subscriptionService;
     $timeout = _$timeout_;
 
     spyOn(test, 'callback');
-    spyOn(ManageIQ.angular.rxSubject, 'subscribe').and.callFake(function(callback) {
+    spyOn(NOVAHawk.angular.rxSubject, 'subscribe').and.callFake(function(callback) {
       loadedReactionFunction = callback;
     });
   }));
@@ -27,7 +27,7 @@ describe('subscriptionService', function() {
     });
 
     it('subscribes', function() {
-      expect(ManageIQ.angular.rxSubject.subscribe).toHaveBeenCalledWith(loadedReactionFunction);
+      expect(NOVAHawk.angular.rxSubject.subscribe).toHaveBeenCalledWith(loadedReactionFunction);
     });
 
     describe('#subscribeToEventType reaction function', function() {

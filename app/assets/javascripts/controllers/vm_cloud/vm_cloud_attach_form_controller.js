@@ -1,10 +1,10 @@
-ManageIQ.angular.app.controller('vmCloudAttachFormController', ['$scope', 'vmCloudAttachFormId', 'miqService', function($scope, vmCloudAttachFormId, miqService) {
+NOVAHawk.angular.app.controller('vmCloudAttachFormController', ['$scope', 'vmCloudAttachFormId', 'miqService', function($scope, vmCloudAttachFormId, miqService) {
   $scope.vmCloudModel = { name: '' };
   $scope.formId = vmCloudAttachFormId;
   $scope.afterGet = false;
   $scope.modelCopy = angular.copy( $scope.vmCloudModel );
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   $scope.submitClicked = function() {
     miqService.sparkleOn();

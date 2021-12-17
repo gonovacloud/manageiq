@@ -1009,7 +1009,7 @@ class ApplicationController < ActionController::Base
               "100/piecharts/datastore/#{calculate_pct_img(item.v_free_space_percent_of_total)}.png"
             when MiqRequest
               item.decorate.listicon_image || "100/#{@listicon.downcase}.png"
-            when ManageIQ::Providers::CloudManager::AuthKeyPair
+            when NOVAHawk::Providers::CloudManager::AuthKeyPair
               "100/auth_key_pair.png"
             else
               item.decorate.try(:listicon_image) if item.decorator_class?

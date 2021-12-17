@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('logCollectionFormController', ['$http', '$scope', 'serverId', '$attrs', 'miqService', 'miqDBBackupService', function($http, $scope, serverId, $attrs, miqService, miqDBBackupService) {
+NOVAHawk.angular.app.controller('logCollectionFormController', ['$http', '$scope', 'serverId', '$attrs', 'miqService', 'miqDBBackupService', function($http, $scope, serverId, $attrs, miqService, miqDBBackupService) {
   var init = function() {
     $scope.logCollectionModel = {
       depot_name: '',
@@ -18,7 +18,7 @@ ManageIQ.angular.app.controller('logCollectionFormController', ['$http', '$scope
     $scope.model = 'logCollectionModel';
     $scope.miqDBBackupService = miqDBBackupService;
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
 
     if (serverId == 'new') {
       $scope.logCollectionModel.depot_name = '';

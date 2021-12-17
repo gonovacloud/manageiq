@@ -1,5 +1,5 @@
-describe ManageIQ::Providers::Azure::CloudManager::OrchestrationServiceOptionConverter do
-  subject { ManageIQ::Providers::Azure::CloudManager::OrchestrationServiceOptionConverter.new(dialog_options) }
+describe NOVAHawk::Providers::Azure::CloudManager::OrchestrationServiceOptionConverter do
+  subject { NOVAHawk::Providers::Azure::CloudManager::OrchestrationServiceOptionConverter.new(dialog_options) }
 
   describe "#create_stack_options" do
     context "both resource_group and new_resource_group exist" do

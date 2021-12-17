@@ -11,70 +11,70 @@ FactoryGirl.define do
   # Intermediate classes
 
   factory :ems_infra,
-          :aliases => ["manageiq/providers/infra_manager"],
-          :class   => "ManageIQ::Providers::InfraManager",
+          :aliases => ["novahawk/providers/infra_manager"],
+          :class   => "NOVAHawk::Providers::InfraManager",
           :parent  => :ext_management_system do
   end
 
   factory :ems_cloud,
-          :aliases => ["manageiq/providers/cloud_manager"],
-          :class   => "ManageIQ::Providers::CloudManager",
+          :aliases => ["novahawk/providers/cloud_manager"],
+          :class   => "NOVAHawk::Providers::CloudManager",
           :parent  => :ext_management_system do
   end
 
   factory :ems_network,
-          :aliases => ["manageiq/providers/network_manager"],
-          :class   => "ManageIQ::Providers::NetworkManager",
+          :aliases => ["novahawk/providers/network_manager"],
+          :class   => "NOVAHawk::Providers::NetworkManager",
           :parent  => :ext_management_system do
   end
 
   factory :ems_storage,
-          :aliases => ["manageiq/providers/storage_manager"],
-          :class   => "ManageIQ::Providers::StorageManager",
+          :aliases => ["novahawk/providers/storage_manager"],
+          :class   => "NOVAHawk::Providers::StorageManager",
           :parent  => :ext_management_system do
   end
 
   factory :ems_cinder,
-          :aliases => ["manageiq/providers/storage_manager/cinder_manager"],
-          :class   => "ManageIQ::Providers::StorageManager::CinderManager",
+          :aliases => ["novahawk/providers/storage_manager/cinder_manager"],
+          :class   => "NOVAHawk::Providers::StorageManager::CinderManager",
           :parent  => :ext_management_system do
   end
 
   factory :ems_swift,
-          :aliases => ["manageiq/providers/storage_manager/swift_manager"],
-          :class   => "ManageIQ::Providers::StorageManager::SwiftManager",
+          :aliases => ["novahawk/providers/storage_manager/swift_manager"],
+          :class   => "NOVAHawk::Providers::StorageManager::SwiftManager",
           :parent  => :ext_management_system do
   end
 
   factory :ems_container,
-          :aliases => ["manageiq/providers/container_manager"],
-          :class   => "ManageIQ::Providers::ContainerManager",
+          :aliases => ["novahawk/providers/container_manager"],
+          :class   => "NOVAHawk::Providers::ContainerManager",
           :parent  => :ext_management_system do
   end
 
   factory :ems_middleware,
-          :aliases => ["manageiq/providers/middleware_manager"],
-          :class   => "ManageIQ::Providers::MiddlewareManager",
+          :aliases => ["novahawk/providers/middleware_manager"],
+          :class   => "NOVAHawk::Providers::MiddlewareManager",
           :parent  => :ext_management_system do
   end
 
   factory :configuration_manager,
-          :aliases => ["manageiq/providers/configuration_manager"],
-          :class   => "ManageIQ::Providers::ConfigurationManager",
+          :aliases => ["novahawk/providers/configuration_manager"],
+          :class   => "NOVAHawk::Providers::ConfigurationManager",
           :parent  => :ext_management_system do
   end
 
   factory :provisioning_manager,
-          :aliases => ["manageiq/providers/provisioning_manager"],
-          :class   => "ManageIQ::Providers::ProvisioningManager",
+          :aliases => ["novahawk/providers/provisioning_manager"],
+          :class   => "NOVAHawk::Providers::ProvisioningManager",
           :parent  => :ext_management_system do
   end
 
   # Leaf classes for ems_infra
 
   factory :ems_vmware,
-          :aliases => ["manageiq/providers/vmware/infra_manager"],
-          :class   => "ManageIQ::Providers::Vmware::InfraManager",
+          :aliases => ["novahawk/providers/vmware/infra_manager"],
+          :class   => "NOVAHawk::Providers::Vmware::InfraManager",
           :parent  => :ems_infra do
   end
 
@@ -86,8 +86,8 @@ FactoryGirl.define do
   end
 
   factory :ems_microsoft,
-          :aliases => ["manageiq/providers/microsoft/infra_manager"],
-          :class   => "ManageIQ::Providers::Microsoft::InfraManager",
+          :aliases => ["novahawk/providers/microsoft/infra_manager"],
+          :class   => "NOVAHawk::Providers::Microsoft::InfraManager",
           :parent  => :ems_infra do
   end
 
@@ -99,8 +99,8 @@ FactoryGirl.define do
   end
 
   factory :ems_redhat,
-          :aliases => ["manageiq/providers/redhat/infra_manager"],
-          :class   => "ManageIQ::Providers::Redhat::InfraManager",
+          :aliases => ["novahawk/providers/redhat/infra_manager"],
+          :class   => "NOVAHawk::Providers::Redhat::InfraManager",
           :parent  => :ems_infra do
   end
 
@@ -119,8 +119,8 @@ FactoryGirl.define do
   end
 
   factory :ems_openstack_infra,
-          :aliases => ["manageiq/providers/openstack/infra_manager"],
-          :class   => "ManageIQ::Providers::Openstack::InfraManager",
+          :aliases => ["novahawk/providers/openstack/infra_manager"],
+          :class   => "NOVAHawk::Providers::Openstack::InfraManager",
           :parent  => :ems_infra do
   end
 
@@ -150,29 +150,29 @@ FactoryGirl.define do
   end
 
   factory :ems_vmware_cloud,
-          :aliases => ["manageiq/providers/vmware/cloud_manager"],
-          :class   => "ManageIQ::Providers::Vmware::CloudManager",
+          :aliases => ["novahawk/providers/vmware/cloud_manager"],
+          :class   => "NOVAHawk::Providers::Vmware::CloudManager",
           :parent  => :ems_cloud do
   end
 
   factory :ems_vmware_cloud_network,
-          :aliases => ["manageiq/providers/vmware/network_manager"],
-          :class   => "ManageIQ::Providers::Vmware::NetworkManager",
+          :aliases => ["novahawk/providers/vmware/network_manager"],
+          :class   => "NOVAHawk::Providers::Vmware::NetworkManager",
           :parent  => :ems_cloud do
   end
 
   # Leaf classes for ems_cloud
 
   factory :ems_amazon,
-          :aliases => ["manageiq/providers/amazon/cloud_manager"],
-          :class   => "ManageIQ::Providers::Amazon::CloudManager",
+          :aliases => ["novahawk/providers/amazon/cloud_manager"],
+          :class   => "NOVAHawk::Providers::Amazon::CloudManager",
           :parent  => :ems_cloud do
     provider_region "us-east-1"
   end
 
   factory :ems_amazon_network,
-          :aliases => ["manageiq/providers/amazon/network_manager"],
-          :class   => "ManageIQ::Providers::Amazon::NetworkManager",
+          :aliases => ["novahawk/providers/amazon/network_manager"],
+          :class   => "NOVAHawk::Providers::Amazon::NetworkManager",
           :parent  => :ems_network do
     provider_region "us-east-1"
   end
@@ -192,14 +192,14 @@ FactoryGirl.define do
   end
 
   factory :ems_azure,
-          :aliases => ["manageiq/providers/azure/cloud_manager"],
-          :class   => "ManageIQ::Providers::Azure::CloudManager",
+          :aliases => ["novahawk/providers/azure/cloud_manager"],
+          :class   => "NOVAHawk::Providers::Azure::CloudManager",
           :parent  => :ems_cloud do
   end
 
   factory :ems_azure_network,
-          :aliases => ["manageiq/providers/azure/network_manager"],
-          :class   => "ManageIQ::Providers::Azure::NetworkManager",
+          :aliases => ["novahawk/providers/azure/network_manager"],
+          :class   => "NOVAHawk::Providers::Azure::NetworkManager",
           :parent  => :ems_network do
   end
 
@@ -213,8 +213,8 @@ FactoryGirl.define do
   end
 
   factory :ems_openstack,
-          :aliases => ["manageiq/providers/openstack/cloud_manager"],
-          :class   => "ManageIQ::Providers::Openstack::CloudManager",
+          :aliases => ["novahawk/providers/openstack/cloud_manager"],
+          :class   => "NOVAHawk::Providers::Openstack::CloudManager",
           :parent  => :ems_cloud do
   end
 
@@ -227,20 +227,20 @@ FactoryGirl.define do
   end
 
   factory :ems_openstack_network,
-          :aliases => ["manageiq/providers/openstack/network_manager"],
-          :class   => "ManageIQ::Providers::Openstack::NetworkManager",
+          :aliases => ["novahawk/providers/openstack/network_manager"],
+          :class   => "NOVAHawk::Providers::Openstack::NetworkManager",
           :parent  => :ems_network do
   end
 
   factory :ems_nuage_network,
-          :aliases => ["manageiq/providers/nuage/network_manager"],
-          :class   => "ManageIQ::Providers::Nuage::NetworkManager",
+          :aliases => ["novahawk/providers/nuage/network_manager"],
+          :class   => "NOVAHawk::Providers::Nuage::NetworkManager",
           :parent  => :ems_network do
   end
 
   factory :ems_google,
-          :aliases => ["manageiq/providers/google/cloud_manager"],
-          :class   => "ManageIQ::Providers::Google::CloudManager",
+          :aliases => ["novahawk/providers/google/cloud_manager"],
+          :class   => "NOVAHawk::Providers::Google::CloudManager",
           :parent  => :ems_cloud do
     provider_region "us-central1"
   end
@@ -253,8 +253,8 @@ FactoryGirl.define do
   end
 
   factory :ems_google_network,
-          :aliases => ["manageiq/providers/google/network_manager"],
-          :class   => "ManageIQ::Providers::Google::NetworkManager",
+          :aliases => ["novahawk/providers/google/network_manager"],
+          :class   => "NOVAHawk::Providers::Google::NetworkManager",
           :parent  => :ems_network do
     provider_region "us-central1"
   end
@@ -262,8 +262,8 @@ FactoryGirl.define do
   # Leaf classes for ems_container
 
   factory :ems_kubernetes,
-          :aliases => ["manageiq/providers/kubernetes/container_manager"],
-          :class   => "ManageIQ::Providers::Kubernetes::ContainerManager",
+          :aliases => ["novahawk/providers/kubernetes/container_manager"],
+          :class   => "NOVAHawk::Providers::Kubernetes::ContainerManager",
           :parent  => :ems_container do
   end
 
@@ -276,27 +276,27 @@ FactoryGirl.define do
 
 
   factory :ems_openshift,
-          :aliases => ["manageiq/providers/openshift/container_manager"],
-          :class   => "ManageIQ::Providers::Openshift::ContainerManager",
+          :aliases => ["novahawk/providers/openshift/container_manager"],
+          :class   => "NOVAHawk::Providers::Openshift::ContainerManager",
           :parent  => :ems_container do
   end
 
   factory :ems_openshift_enterprise,
-          :aliases => ["manageiq/providers/openshift_enterprise/container_manager"],
-          :class   => "ManageIQ::Providers::OpenshiftEnterprise::ContainerManager",
+          :aliases => ["novahawk/providers/openshift_enterprise/container_manager"],
+          :class   => "NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager",
           :parent  => :ems_container do
   end
 
   # Leaf classes for configuration_manager
 
   factory :configuration_manager_foreman,
-          :aliases => ["manageiq/providers/foreman/configuration_manager"],
-          :class   => "ManageIQ::Providers::Foreman::ConfigurationManager",
+          :aliases => ["novahawk/providers/foreman/configuration_manager"],
+          :class   => "NOVAHawk::Providers::Foreman::ConfigurationManager",
           :parent  => :configuration_manager
 
   factory :configuration_manager_ansible_tower,
-          :aliases => ["manageiq/providers/ansible_tower/configuration_manager"],
-          :class   => "ManageIQ::Providers::AnsibleTower::ConfigurationManager",
+          :aliases => ["novahawk/providers/ansible_tower/configuration_manager"],
+          :class   => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager",
           :parent  => :configuration_manager
 
   trait(:provider) do
@@ -320,8 +320,8 @@ FactoryGirl.define do
   # Leaf classes for provisioning_manager
 
   factory :provisioning_manager_foreman,
-          :aliases => ["manageiq/providers/foreman/provisioning_manager"],
-          :class   => "ManageIQ::Providers::Foreman::ProvisioningManager",
+          :aliases => ["novahawk/providers/foreman/provisioning_manager"],
+          :class   => "NOVAHawk::Providers::Foreman::ProvisioningManager",
           :parent  => :provisioning_manager do
   end
 
@@ -335,8 +335,8 @@ FactoryGirl.define do
   # Leaf classes for middleware_manager
 
   factory :ems_hawkular,
-          :aliases => ["manageiq/providers/hawkular/middleware_manager"],
-          :class   => "ManageIQ::Providers::Hawkular::MiddlewareManager",
+          :aliases => ["novahawk/providers/hawkular/middleware_manager"],
+          :class   => "NOVAHawk::Providers::Hawkular::MiddlewareManager",
           :parent  => :ems_middleware do
   end
 end

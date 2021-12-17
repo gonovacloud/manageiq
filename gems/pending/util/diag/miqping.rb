@@ -3,7 +3,7 @@
 require 'ostruct'
 require 'optparse'
 
-module Manageiq
+module novahawk
   class MiqWsPing
     def self.defaults
       {
@@ -58,7 +58,7 @@ end
 # Only run if we are calling this script directly
 if __FILE__ == $0
 
-  cfg = OpenStruct.new(Manageiq::MiqWsPing.defaults)
+  cfg = OpenStruct.new(novahawk::MiqWsPing.defaults)
 
   opts = OptionParser.new
   opts.on('--host=<host>', 'remote host name or ip address', String) { |val| cfg.host = val }
@@ -69,5 +69,5 @@ if __FILE__ == $0
   opts.on('--mode=[agent|server]', 'ping agent or server', String) { |val| cfg.mode = val }
   opts.parse(*ARGV) unless ARGV.empty?
 
-  Manageiq::MiqWsPing.ping(cfg)
+  novahawk::MiqWsPing.ping(cfg)
 end

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::ConfigurationManager::InventoryRootGroup < ManageIQ::Providers::ConfigurationManager::InventoryGroup
+class NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup < NOVAHawk::Providers::ConfigurationManager::InventoryGroup
   has_many :configuration_scripts
   has_many :configured_systems
 

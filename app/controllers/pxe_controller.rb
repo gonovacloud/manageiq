@@ -180,7 +180,7 @@ class PxeController < ApplicationController
             @edit ? _("Editing %{model} \"%{name}\"") % {:name  => @ct.name, :model => ui_lookup(:model => "PxeCustomizationTemplate")} :
                     _("%{model} \"%{name}\"") % {:name  => @ct.name, :model => ui_lookup(:model => "PxeCustomizationTemplate")}
           end
-        # resetting ManageIQ.oneTransition.oneTrans when tab loads
+        # resetting NOVAHawk.oneTransition.oneTrans when tab loads
         presenter.reset_one_trans
         presenter.one_trans_ie if %w(save reset).include?(params[:button]) && is_browser_ie?
       end

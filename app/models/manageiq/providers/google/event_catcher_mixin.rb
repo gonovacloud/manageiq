@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google::EventCatcherMixin
+module NOVAHawk::Providers::Google::EventCatcherMixin
   def parse_event_type(event)
     event_type = event.fetch_path('structPayload', 'event_type')
     event_subtype = event.fetch_path('structPayload', 'event_subtype')

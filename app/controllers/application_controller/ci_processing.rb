@@ -1373,7 +1373,7 @@ module ApplicationController::CiProcessing
       if request.parameters[:controller] == 'ems_infra'
         @discover_type = ExtManagementSystem.ems_infra_discovery_types
       else
-        @discover_type = ManageIQ::Providers::CloudManager.subclasses.select(&:supports_discovery?).map do |cloud_manager|
+        @discover_type = NOVAHawk::Providers::CloudManager.subclasses.select(&:supports_discovery?).map do |cloud_manager|
           [cloud_manager.description, cloud_manager.ems_type]
         end
         @discover_type_selected = @discover_type.first.try!(:last)
@@ -1464,7 +1464,7 @@ module ApplicationController::CiProcessing
             end
             Host.discoverByIpRange(from_ip, to_ip, options)
           else
-            cloud_manager = ManageIQ::Providers::CloudManager.subclasses.detect do |ems|
+            cloud_manager = NOVAHawk::Providers::CloudManager.subclasses.detect do |ems|
               ems.supports_discovery? && ems.ems_type == params[:discover_type_selected]
             end
             if cloud_manager.ems_type == 'azure'
@@ -2004,11 +2004,11 @@ module ApplicationController::CiProcessing
   end
 
   def process_cfgmgr(providers, task)
-    providers, _services_out_region = filter_ids_in_region(providers, "ManageIQ::Providers::ConfigurationManager")
+    providers, _services_out_region = filter_ids_in_region(providers, "NOVAHawk::Providers::ConfigurationManager")
     return if providers.empty?
 
     options = {:ids => providers, :task => task, :userid => session[:userid]}
-    kls = ManageIQ::Providers::ConfigurationManager.find_by_id(providers.first).class
+    kls = NOVAHawk::Providers::ConfigurationManager.find_by_id(providers.first).class
     kls.process_tasks(options)
   rescue => err
     add_flash(_("Error during '%{task}': %{message}") % {:task => task, :message => err.message}, :error)
@@ -2497,21 +2497,21 @@ module ApplicationController::CiProcessing
 
   # Common Stacks button handler routines
   def process_configuration_jobs(stacks, task, _ = nil)
-    stacks, = filter_ids_in_region(stacks, "ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job")
+    stacks, = filter_ids_in_region(stacks, "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job")
     return if stacks.empty?
 
     if task == "destroy"
-      ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job.where(:id => stacks).order("lower(name)").each do |stack|
+      NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job.where(:id => stacks).order("lower(name)").each do |stack|
         id = stack.id
         stack_name = stack.name
         audit = {:event        => "stack_record_delete_initiated",
                  :message      => "[#{stack_name}] Record delete initiated",
                  :target_id    => id,
-                 :target_class => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job",
+                 :target_class => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job",
                  :userid       => session[:userid]}
         AuditEvent.success(audit)
       end
-      ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job.destroy_queue(stacks)
+      NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job.destroy_queue(stacks)
     end
   end
 
@@ -2731,7 +2731,7 @@ module ApplicationController::CiProcessing
 
   def configuration_job_delete
     assert_privileges("configuration_job_delete")
-    delete_elements(ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job,
+    delete_elements(NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job,
                     :process_configuration_jobs,
                     'configuration_job')
   end

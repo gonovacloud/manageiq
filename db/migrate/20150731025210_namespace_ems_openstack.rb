@@ -2,43 +2,43 @@ class NamespaceEmsOpenstack < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    ProviderOpenstack                       ManageIQ::Providers::Openstack::Provider
+    ProviderOpenstack                       NOVAHawk::Providers::Openstack::Provider
 
-    EmsOpenstack                            ManageIQ::Providers::Openstack::CloudManager
-    AuthKeyPairOpenstack                    ManageIQ::Providers::Openstack::CloudManager::AuthKeyPair
-    AvailabilityZoneOpenstack               ManageIQ::Providers::Openstack::CloudManager::AvailabilityZone
-    CloudResourceQuotaOpenstack             ManageIQ::Providers::Openstack::CloudManager::CloudResourceQuota
-    CloudTenantOpenstack                    ManageIQ::Providers::Openstack::CloudManager::CloudTenant
-    CloudVolumeOpenstack                    ManageIQ::Providers::Openstack::CloudManager::CloudVolume
-    CloudVolumeSnapshotOpenstack            ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot
-    MiqEventCatcherOpenstack                ManageIQ::Providers::Openstack::CloudManager::EventCatcher
-    EventCatcherOpenstack                   ManageIQ::Providers::Openstack::CloudManager::EventCatcher::Runner
-    FlavorOpenstack                         ManageIQ::Providers::Openstack::CloudManager::Flavor
-    FloatingIpOpenstack                     ManageIQ::Providers::Openstack::CloudManager::FloatingIp
-    MiqEmsMetricsCollectorWorkerOpenstack   ManageIQ::Providers::Openstack::CloudManager::MetricsCollectorWorker
-    EmsMetricsCollectorWorkerOpenstack      ManageIQ::Providers::Openstack::CloudManager::MetricsCollectorWorker::Runner
-    OrchestrationStackOpenstack             ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack
-    MiqEmsRefreshWorkerOpenstack            ManageIQ::Providers::Openstack::CloudManager::RefreshWorker
-    EmsRefreshWorkerOpenstack               ManageIQ::Providers::Openstack::CloudManager::RefreshWorker::Runner
-    SecurityGroupOpenstack                  ManageIQ::Providers::Openstack::CloudManager::SecurityGroup
-    TemplateOpenstack                       ManageIQ::Providers::Openstack::CloudManager::Template
-    VmOpenstack                             ManageIQ::Providers::Openstack::CloudManager::Vm
+    EmsOpenstack                            NOVAHawk::Providers::Openstack::CloudManager
+    AuthKeyPairOpenstack                    NOVAHawk::Providers::Openstack::CloudManager::AuthKeyPair
+    AvailabilityZoneOpenstack               NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZone
+    CloudResourceQuotaOpenstack             NOVAHawk::Providers::Openstack::CloudManager::CloudResourceQuota
+    CloudTenantOpenstack                    NOVAHawk::Providers::Openstack::CloudManager::CloudTenant
+    CloudVolumeOpenstack                    NOVAHawk::Providers::Openstack::CloudManager::CloudVolume
+    CloudVolumeSnapshotOpenstack            NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot
+    MiqEventCatcherOpenstack                NOVAHawk::Providers::Openstack::CloudManager::EventCatcher
+    EventCatcherOpenstack                   NOVAHawk::Providers::Openstack::CloudManager::EventCatcher::Runner
+    FlavorOpenstack                         NOVAHawk::Providers::Openstack::CloudManager::Flavor
+    FloatingIpOpenstack                     NOVAHawk::Providers::Openstack::CloudManager::FloatingIp
+    MiqEmsMetricsCollectorWorkerOpenstack   NOVAHawk::Providers::Openstack::CloudManager::MetricsCollectorWorker
+    EmsMetricsCollectorWorkerOpenstack      NOVAHawk::Providers::Openstack::CloudManager::MetricsCollectorWorker::Runner
+    OrchestrationStackOpenstack             NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack
+    MiqEmsRefreshWorkerOpenstack            NOVAHawk::Providers::Openstack::CloudManager::RefreshWorker
+    EmsRefreshWorkerOpenstack               NOVAHawk::Providers::Openstack::CloudManager::RefreshWorker::Runner
+    SecurityGroupOpenstack                  NOVAHawk::Providers::Openstack::CloudManager::SecurityGroup
+    TemplateOpenstack                       NOVAHawk::Providers::Openstack::CloudManager::Template
+    VmOpenstack                             NOVAHawk::Providers::Openstack::CloudManager::Vm
 
     ServiceOrchestration::OptionConverterOpenstack
-    ManageIQ::Providers::Openstack::CloudManager::OrchestrationServiceOptionConverter
+    NOVAHawk::Providers::Openstack::CloudManager::OrchestrationServiceOptionConverter
 
-    EmsOpenstackInfra                       ManageIQ::Providers::Openstack::InfraManager
-    AuthKeyPairOpenstackInfra               ManageIQ::Providers::Openstack::InfraManager::AuthKeyPair
-    EmsClusterOpenstackInfra                ManageIQ::Providers::Openstack::InfraManager::EmsCluster
-    MiqEventCatcherOpenstackInfra           ManageIQ::Providers::Openstack::InfraManager::EventCatcher
-    EventCatcherOpenstackInfra              ManageIQ::Providers::Openstack::InfraManager::EventCatcher::Runner
-    HostOpenstackInfra                      ManageIQ::Providers::Openstack::InfraManager::Host
-    HostServiceGroupOpenstack               ManageIQ::Providers::Openstack::InfraManager::HostServiceGroup
-    MiqEmsMetricsCollectorWorkerOpenstackInfra      ManageIQ::Providers::Openstack::InfraManager::MetricsCollectorWorker
-    EmsMetricsCollectorWorkerOpenstackInfra ManageIQ::Providers::Openstack::InfraManager::MetricsCollectorWorker::Runner
-    OrchestrationStackOpenstackInfra        ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack
-    MiqEmsRefreshWorkerOpenstackInfra       ManageIQ::Providers::Openstack::InfraManager::RefreshWorker
-    EmsRefreshWorkerOpenstackInfra          ManageIQ::Providers::Openstack::InfraManager::RefreshWorker::Runner
+    EmsOpenstackInfra                       NOVAHawk::Providers::Openstack::InfraManager
+    AuthKeyPairOpenstackInfra               NOVAHawk::Providers::Openstack::InfraManager::AuthKeyPair
+    EmsClusterOpenstackInfra                NOVAHawk::Providers::Openstack::InfraManager::EmsCluster
+    MiqEventCatcherOpenstackInfra           NOVAHawk::Providers::Openstack::InfraManager::EventCatcher
+    EventCatcherOpenstackInfra              NOVAHawk::Providers::Openstack::InfraManager::EventCatcher::Runner
+    HostOpenstackInfra                      NOVAHawk::Providers::Openstack::InfraManager::Host
+    HostServiceGroupOpenstack               NOVAHawk::Providers::Openstack::InfraManager::HostServiceGroup
+    MiqEmsMetricsCollectorWorkerOpenstackInfra      NOVAHawk::Providers::Openstack::InfraManager::MetricsCollectorWorker
+    EmsMetricsCollectorWorkerOpenstackInfra NOVAHawk::Providers::Openstack::InfraManager::MetricsCollectorWorker::Runner
+    OrchestrationStackOpenstackInfra        NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack
+    MiqEmsRefreshWorkerOpenstackInfra       NOVAHawk::Providers::Openstack::InfraManager::RefreshWorker
+    EmsRefreshWorkerOpenstackInfra          NOVAHawk::Providers::Openstack::InfraManager::RefreshWorker::Runner
   )]
 
   def change

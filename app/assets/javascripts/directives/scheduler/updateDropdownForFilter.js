@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('updateDropdownForFilter', ['$timeout', function($timeout) {
+NOVAHawk.angular.app.directive('updateDropdownForFilter', ['$timeout', function($timeout) {
   return {
     require: 'ngModel',
     link: function (scope, elem, attr, ctrl) {

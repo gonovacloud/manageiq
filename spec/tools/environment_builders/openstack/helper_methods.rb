@@ -5,11 +5,11 @@ module Openstack
     end
 
     def vcr_base_dir
-      File.join(base_dir, 'spec/vcr_cassettes/manageiq/providers/openstack/cloud_manager')
+      File.join(base_dir, 'spec/vcr_cassettes/novahawk/providers/openstack/cloud_manager')
     end
 
     def test_base_dir
-      File.join(base_dir, 'spec/models/manageiq/providers/openstack/cloud_manager')
+      File.join(base_dir, 'spec/models/novahawk/providers/openstack/cloud_manager')
     end
 
     def openstack_environment_file
@@ -31,10 +31,10 @@ module Openstack
                     :security_protocol     => 'no_ssl',
                     :keystone_v3_domain_id => 'default'}
 
-      @ems = ManageIQ::Providers::Openstack::CloudManager.joins(:endpoints).where(:endpoints => {
+      @ems = NOVAHawk::Providers::Openstack::CloudManager.joins(:endpoints).where(:endpoints => {
                                                                                     :hostname => hostname}).first
       puts "Creating EMS for environment #{hostname}" unless @ems
-      @ems ||= ManageIQ::Providers::Openstack::CloudManager.new
+      @ems ||= NOVAHawk::Providers::Openstack::CloudManager.new
       @ems.update_attributes(attributes)
       @ems.save
 

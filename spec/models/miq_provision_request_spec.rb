@@ -2,20 +2,20 @@ describe MiqProvisionRequest do
   it ".request_task_class_from" do
     ems = FactoryGirl.create(:ems_vmware)
     vm = FactoryGirl.create(:vm_vmware, :ext_management_system => ems)
-    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq ManageIQ::Providers::Vmware::InfraManager::Provision
-    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id, :provision_type => "pxe"})).to eq ManageIQ::Providers::Vmware::InfraManager::ProvisionViaPxe
+    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq NOVAHawk::Providers::Vmware::InfraManager::Provision
+    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id, :provision_type => "pxe"})).to eq NOVAHawk::Providers::Vmware::InfraManager::ProvisionViaPxe
 
     ems = FactoryGirl.create(:ems_redhat)
     vm = FactoryGirl.create(:vm_redhat, :ext_management_system => ems)
-    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq ManageIQ::Providers::Redhat::InfraManager::Provision
+    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq NOVAHawk::Providers::Redhat::InfraManager::Provision
 
     ems = FactoryGirl.create(:ems_openstack)
     vm = FactoryGirl.create(:vm_openstack, :ext_management_system => ems)
-    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq ManageIQ::Providers::Openstack::CloudManager::Provision
+    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq NOVAHawk::Providers::Openstack::CloudManager::Provision
 
     ems = FactoryGirl.create(:ems_amazon)
     vm = FactoryGirl.create(:vm_amazon, :ext_management_system => ems)
-    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq ManageIQ::Providers::Amazon::CloudManager::Provision
+    expect(described_class.request_task_class_from('options' => {:src_vm_id => vm.id})).to eq NOVAHawk::Providers::Amazon::CloudManager::Provision
   end
 
   context "A new provision request," do
@@ -74,7 +74,7 @@ describe MiqProvisionRequest do
       end
 
       it "should return a workflow class" do
-        expect(@pr.workflow_class).to eq(ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow)
+        expect(@pr.workflow_class).to eq(NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow)
       end
 
       context "when calling call_automate_event_queue" do

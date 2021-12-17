@@ -3,7 +3,7 @@ class CorrectStiTypeOnCloudTenant < ActiveRecord::Migration[5.0]
     self.inheritance_column = :_type_disabled
   end
 
-  NEW_TYPE = 'ManageIQ::Providers::Openstack::CloudManager::CloudTenant'.freeze
+  NEW_TYPE = 'NOVAHawk::Providers::Openstack::CloudManager::CloudTenant'.freeze
 
   def up
     CloudTenant.where(:type => nil).update_all(:type => NEW_TYPE)

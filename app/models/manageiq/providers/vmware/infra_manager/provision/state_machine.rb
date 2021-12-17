@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Provision::StateMachine
+module NOVAHawk::Providers::Vmware::InfraManager::Provision::StateMachine
   def create_destination
     signal :determine_placement
   end

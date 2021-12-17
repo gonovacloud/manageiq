@@ -13,13 +13,13 @@ describe GitRepository do
 
   it "default dirname" do
     repo = FactoryGirl.create(:git_repository,
-                              :url => "http://www.example.com/repos/manageiq")
-    expect(repo.directory_name).to eq(File.join(MiqAeDatastore::GIT_REPO_DIRECTORY, 'repos/manageiq'))
+                              :url => "http://www.example.com/repos/novahawk")
+    expect(repo.directory_name).to eq(File.join(MiqAeDatastore::GIT_REPO_DIRECTORY, 'repos/novahawk'))
   end
 
   context "repo" do
     let(:gwt) { instance_double('GitWorktree') }
-    let(:git_url) { 'http://www.example.com/repo/manageiq' }
+    let(:git_url) { 'http://www.example.com/repo/novahawk' }
     let(:verify_ssl) { OpenSSL::SSL::VERIFY_PEER }
     let(:branch_list) { %w(b1 b2) }
     let(:tag_list) { %w(t1 t2) }

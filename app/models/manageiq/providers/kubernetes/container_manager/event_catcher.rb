@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcher < ManageIQ::Providers::BaseManager::EventCatcher
+class NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcher < NOVAHawk::Providers::BaseManager::EventCatcher
   require_nested :Runner
   def self.ems_class
-    ManageIQ::Providers::Kubernetes::ContainerManager
+    NOVAHawk::Providers::Kubernetes::ContainerManager
   end
 end

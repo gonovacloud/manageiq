@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::BaseMetricsCapture < ManageIQ::Providers::BaseManager::MetricsCapture
+class NOVAHawk::Providers::Openstack::BaseMetricsCapture < NOVAHawk::Providers::BaseManager::MetricsCapture
   def perf_collect_metrics(interval_name, start_time = nil, end_time = nil)
     log_header = "[#{interval_name}] for: [#{target.class.name}], [#{target.id}], [#{target.name}]"
 

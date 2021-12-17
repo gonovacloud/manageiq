@@ -10,7 +10,7 @@
  * - miq-cal-skip-days: days of the week (array) to disable in the datepicker
  */
 
-ManageIQ.angular.app.directive('miqCalendar', function() {
+NOVAHawk.angular.app.directive('miqCalendar', function() {
   return {
     require: 'ngModel',
     link: function(scope, elem, attr, ctrl) {

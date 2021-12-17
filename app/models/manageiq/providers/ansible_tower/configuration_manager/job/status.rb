@@ -1,4 +1,4 @@
-class ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job::Status < ::OrchestrationStack::Status
+class NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job::Status < ::OrchestrationStack::Status
   def succeeded?
     status.casecmp("successful").zero?
   end

@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Foreman_ConfigurationManager < MiqAeServiceManageIQ_Providers_ConfigurationManager
+  class MiqAeServiceNOVAHawk_Providers_Foreman_ConfigurationManager < MiqAeServiceNOVAHawk_Providers_ConfigurationManager
   end
 end

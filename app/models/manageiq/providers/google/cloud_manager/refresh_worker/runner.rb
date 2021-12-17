@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::CloudManager::RefreshWorker::Runner < ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+class NOVAHawk::Providers::Google::CloudManager::RefreshWorker::Runner < NOVAHawk::Providers::BaseManager::RefreshWorker::Runner
 end

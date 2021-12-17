@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::Template < ManageIQ::Providers::CloudManager::Template
+class NOVAHawk::Providers::Openstack::CloudManager::Template < NOVAHawk::Providers::CloudManager::Template
   belongs_to :cloud_tenant
 
   supports :smartstate_analysis do
@@ -20,7 +20,7 @@ class ManageIQ::Providers::Openstack::CloudManager::Template < ManageIQ::Provide
                           :foreign_key             => "vm_id",
                           :join_table              => "cloud_tenants_vms",
                           :association_foreign_key => "cloud_tenant_id",
-                          :class_name              => "ManageIQ::Providers::Openstack::CloudManager::CloudTenant"
+                          :class_name              => "NOVAHawk::Providers::Openstack::CloudManager::CloudTenant"
 
   def provider_object(connection = nil)
     connection ||= ext_management_system.connect

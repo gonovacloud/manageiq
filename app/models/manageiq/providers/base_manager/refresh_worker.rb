@@ -1,4 +1,4 @@
-class ManageIQ::Providers::BaseManager::RefreshWorker < MiqQueueWorkerBase
+class NOVAHawk::Providers::BaseManager::RefreshWorker < MiqQueueWorkerBase
   require_nested :Runner
 
   include PerEmsWorkerMixin

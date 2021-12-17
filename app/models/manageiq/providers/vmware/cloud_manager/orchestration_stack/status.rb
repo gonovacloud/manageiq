@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack::Status < ::OrchestrationStack::Status
+class NOVAHawk::Providers::Vmware::CloudManager::OrchestrationStack::Status < ::OrchestrationStack::Status
   def succeeded?
     status.casecmp("on") == 0
   end

@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Kubernetes::ContainerManager::MetricsCapture < BaseManager::MetricsCapture
     class CollectionFailure < RuntimeError; end
     class TargetValidationError < RuntimeError; end

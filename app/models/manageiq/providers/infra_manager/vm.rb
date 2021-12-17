@@ -1,4 +1,4 @@
-class ManageIQ::Providers::InfraManager::Vm < ::Vm
+class NOVAHawk::Providers::InfraManager::Vm < ::Vm
   default_value_for :cloud, false
 
   # Show certain non-generic charts

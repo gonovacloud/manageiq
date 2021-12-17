@@ -12,13 +12,13 @@ describe NamespaceEmsClasses do
 
       migrate
 
-      expect(ems.reload).to have_attributes(:type => "ManageIQ::Providers::InfraManager")
+      expect(ems.reload).to have_attributes(:type => "NOVAHawk::Providers::InfraManager")
     end
   end
 
   migration_context :down do
     it "migrates a representative row" do
-      ems = ems_stub.create!(:type => "ManageIQ::Providers::InfraManager")
+      ems = ems_stub.create!(:type => "NOVAHawk::Providers::InfraManager")
 
       migrate
 

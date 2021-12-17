@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Azure::CloudManager::AvailabilityZone < ::AvailabilityZone
+class NOVAHawk::Providers::Azure::CloudManager::AvailabilityZone < ::AvailabilityZone
 end

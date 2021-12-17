@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('ownershipFormController', ['$http', '$scope', 'objectIds', 'miqService', function($http, $scope, objectIds, miqService) {
+NOVAHawk.angular.app.controller('ownershipFormController', ['$http', '$scope', 'objectIds', 'miqService', function($http, $scope, objectIds, miqService) {
   var init = function() {
     $scope.ownershipModel = {
       user: '',
@@ -11,7 +11,7 @@ ManageIQ.angular.app.controller('ownershipFormController', ['$http', '$scope', '
     $scope.objectIds = objectIds;
     $scope.saveable = miqService.saveable;
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
 
     miqService.sparkleOn();
     $http.post('ownership_form_fields', {object_ids: objectIds}).success(function(data) {

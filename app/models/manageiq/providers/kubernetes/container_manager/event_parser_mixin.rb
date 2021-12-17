@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Kubernetes::ContainerManager::EventParserMixin
+module NOVAHawk::Providers::Kubernetes::ContainerManager::EventParserMixin
   extend ActiveSupport::Concern
 
   included do

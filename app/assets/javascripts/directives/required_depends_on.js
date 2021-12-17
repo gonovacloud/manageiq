@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('requiredDependsOn', function() {
+NOVAHawk.angular.app.directive('requiredDependsOn', function() {
   return {
     require: 'ngModel',
     link: function (scope, _elem, attrs, ctrl) {

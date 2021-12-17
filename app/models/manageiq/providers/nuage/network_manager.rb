@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Nuage::NetworkManager < ManageIQ::Providers::NetworkManager
+class NOVAHawk::Providers::Nuage::NetworkManager < NOVAHawk::Providers::NetworkManager
   include SupportsFeatureMixin
   require_nested :RefreshParser
   require_nested :RefreshWorker

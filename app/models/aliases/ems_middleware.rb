@@ -1,1 +1,1 @@
-::EmsMiddleware = ::ManageIQ::Providers::MiddlewareManager
+::EmsMiddleware = ::NOVAHawk::Providers::MiddlewareManager

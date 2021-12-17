@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::InfraManager::Host::Operations
+module NOVAHawk::Providers::Openstack::InfraManager::Host::Operations
   include ActiveSupport::Concern
 
   def ironic_fog_node

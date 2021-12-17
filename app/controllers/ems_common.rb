@@ -68,9 +68,9 @@ module EmsCommon
 
   def view_setup_params
     {
-      "instances"                     => [ManageIQ::Providers::CloudManager::Vm, _("Instances")],
-      "images"                        => [ManageIQ::Providers::CloudManager::Template, _("Images")],
-      "storage_managers"              => [ManageIQ::Providers::StorageManager,
+      "instances"                     => [NOVAHawk::Providers::CloudManager::Vm, _("Instances")],
+      "images"                        => [NOVAHawk::Providers::CloudManager::Template, _("Images")],
+      "storage_managers"              => [NOVAHawk::Providers::StorageManager,
                                           _("Storage Managers"),
                                           :storage_managers],
       "miq_templates"                 => [MiqTemplate,            _("Templates")],
@@ -255,7 +255,7 @@ module EmsCommon
         page.replace_html("form_div", :partial => "shared/views/ems_common/form")
       end
       if params[:server_emstype] # Server type changed
-        unless @ems.kind_of?(ManageIQ::Providers::CloudManager)
+        unless @ems.kind_of?(NOVAHawk::Providers::CloudManager)
           # Hide/show C&U credentials tab
           page << "$('#metrics_li').#{params[:server_emstype] == "rhevm" ? "show" : "hide"}();"
         end
@@ -607,7 +607,7 @@ module EmsCommon
   end
 
   def provider_documentation_url
-    "http://manageiq.org/documentation/getting-started/#adding-a-provider"
+    "http://novahawk.org/documentation/getting-started/#adding-a-provider"
   end
 
   def arbitration_profiles
@@ -717,7 +717,7 @@ module EmsCommon
     if ems.supports_authentication?(:metrics) && @edit[:new][:metrics_password] != @edit[:new][:metrics_verify]
       @edit[:errors].push(_("C & U Database Login Password and Verify Password fields do not match"))
     end
-    if ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    if ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
       unless @edit[:new][:host_default_vnc_port_start] =~ /^\d+$/ || @edit[:new][:host_default_vnc_port_start].blank?
         @edit[:errors].push(_("Default Host VNC Port Range Start must be numeric"))
       end
@@ -758,16 +758,16 @@ module EmsCommon
     @edit[:new][:api_version] = @ems.api_version
     @edit[:new][:provider_id] = @ems.provider_id
 
-    if @ems.kind_of?(ManageIQ::Providers::Openstack::CloudManager) ||
-       @ems.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+    if @ems.kind_of?(NOVAHawk::Providers::Openstack::CloudManager) ||
+       @ems.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
       # Special behaviour for OpenStack while keeping it backwards compatible for the rest
       @edit[:protocols] = retrieve_openstack_security_protocols
     else
       @edit[:protocols] = [['Basic (SSL)', 'ssl'], ['Kerberos', 'kerberos']]
     end
 
-    if @ems.kind_of?(ManageIQ::Providers::Openstack::CloudManager) ||
-       @ems.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+    if @ems.kind_of?(NOVAHawk::Providers::Openstack::CloudManager) ||
+       @ems.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
       # Special behaviour for OpenStack while keeping it backwards compatible for the rest
       @edit[:new][:default_security_protocol] = @ems.security_protocol ? @ems.security_protocol : 'ssl'
     else
@@ -788,7 +788,7 @@ module EmsCommon
 
     @edit[:server_zones] = Zone.order('lower(description)').collect { |z| [z.description, z.name] }
 
-    @edit[:openstack_infra_providers] = ManageIQ::Providers::Openstack::Provider.order('lower(name)').each_with_object([["---", nil]]) do |openstack_infra_provider, x|
+    @edit[:openstack_infra_providers] = NOVAHawk::Providers::Openstack::Provider.order('lower(name)').each_with_object([["---", nil]]) do |openstack_infra_provider, x|
       x.push([openstack_infra_provider.name, openstack_infra_provider.id])
     end
 
@@ -814,7 +814,7 @@ module EmsCommon
     @edit[:new][:bearer_token] = @ems.has_authentication_type?(:bearer) ? @ems.authentication_token(:bearer).to_s : ""
     @edit[:new][:bearer_verify] = @ems.has_authentication_type?(:bearer) ? @ems.authentication_token(:bearer).to_s : ""
 
-    if @ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    if @ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
       @edit[:new][:host_default_vnc_port_start] = @ems.host_default_vnc_port_start.to_s
       @edit[:new][:host_default_vnc_port_end] = @ems.host_default_vnc_port_end.to_s
     end
@@ -861,7 +861,7 @@ module EmsCommon
   private :retrieve_provider_regions
 
   def retrieve_openstack_infra_providers
-    ManageIQ::Providers::Openstack::Provider.pluck(:name, :id)
+    NOVAHawk::Providers::Openstack::Provider.pluck(:name, :id)
   end
 
   def retrieve_openstack_api_versions
@@ -908,12 +908,12 @@ module EmsCommon
         @edit[:new][:port] = @ems.port ? @ems.port : 5000
         @edit[:new][:api_version] = @ems.api_version ? @ems.api_version : 'v2'
         @edit[:new][:default_security_protocol] = @ems.security_protocol ? @ems.security_protocol : 'ssl'
-      elsif params[:server_emstype] == ManageIQ::Providers::Kubernetes::ContainerManager.ems_type
-        @edit[:new][:port] = @ems.port ? @ems.port : ManageIQ::Providers::Kubernetes::ContainerManager::DEFAULT_PORT
-      elsif params[:server_emstype] == ManageIQ::Providers::Openshift::ContainerManager.ems_type
-        @edit[:new][:port] = @ems.port ? @ems.port : ManageIQ::Providers::Openshift::ContainerManager::DEFAULT_PORT
-      elsif params[:server_emstype] == ManageIQ::Providers::OpenshiftEnterprise::ContainerManager.ems_type
-        @edit[:new][:port] = @ems.port ? @ems.port : ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::DEFAULT_PORT
+      elsif params[:server_emstype] == NOVAHawk::Providers::Kubernetes::ContainerManager.ems_type
+        @edit[:new][:port] = @ems.port ? @ems.port : NOVAHawk::Providers::Kubernetes::ContainerManager::DEFAULT_PORT
+      elsif params[:server_emstype] == NOVAHawk::Providers::Openshift::ContainerManager.ems_type
+        @edit[:new][:port] = @ems.port ? @ems.port : NOVAHawk::Providers::Openshift::ContainerManager::DEFAULT_PORT
+      elsif params[:server_emstype] == NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager.ems_type
+        @edit[:new][:port] = @ems.port ? @ems.port : NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::DEFAULT_PORT
       else
         @edit[:new][:port] = nil
       end
@@ -970,14 +970,14 @@ module EmsCommon
     ems.provider_id = @edit[:new][:provider_id] if ems.supports_provider_id?
     ems.zone = Zone.find_by_name(@edit[:new][:zone])
 
-    if ems.kind_of?(ManageIQ::Providers::Microsoft::InfraManager)
+    if ems.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager)
       # TODO should be refactored to support methods, although there seems to be no UI for Microsoft provider
       # TODO: (julian) Silly hack until we move Infra over to Angular to be consistant with Cloud
       ems.security_protocol = @edit[:new][:default_security_protocol]
       ems.realm = @edit[:new][:realm]
     end
 
-    if ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    if ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
       ems.host_default_vnc_port_start = @edit[:new][:host_default_vnc_port_start].blank? ? nil : @edit[:new][:host_default_vnc_port_start].to_i
       ems.host_default_vnc_port_end = @edit[:new][:host_default_vnc_port_end].blank? ? nil : @edit[:new][:host_default_vnc_port_end].to_i
     end

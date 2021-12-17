@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Provision::Configuration::Network
+module NOVAHawk::Providers::Redhat::InfraManager::Provision::Configuration::Network
   def configure_network_adapters
     configure_dialog_nic
     requested_vnics   = options[:networks]

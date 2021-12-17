@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Openstack
     module RefreshParserCommon
       module OrchestrationStacks
@@ -24,7 +24,7 @@ module ManageIQ::Providers
           # TODO(lsmola) We need a support of GET /{tenant_id}/stacks/detail in FOG, it was implemented here
           # https://review.openstack.org/#/c/35034/, but never documented in API reference, so right now we
           # can't get list of detailed stacks in one API call.
-          if @ems.kind_of?(ManageIQ::Providers::Openstack::CloudManager) && ::Settings.ems.ems_openstack.refresh.heat.is_global_admin
+          if @ems.kind_of?(NOVAHawk::Providers::Openstack::CloudManager) && ::Settings.ems.ems_openstack.refresh.heat.is_global_admin
             @orchestration_service.handled_list(:stacks, {:show_nested => true, :global_tenant => true}, true).collect(&:details)
           else
             @orchestration_service.handled_list(:stacks, :show_nested => true).collect(&:details)
@@ -40,10 +40,10 @@ module ManageIQ::Providers
           resources = find_stack_resources(stack)
 
           orchestration_stack_type = case @ems
-                                     when ManageIQ::Providers::Openstack::CloudManager
-                                       "ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack"
-                                     when ManageIQ::Providers::Openstack::InfraManager
-                                       "ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack"
+                                     when NOVAHawk::Providers::Openstack::CloudManager
+                                       "NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack"
+                                     when NOVAHawk::Providers::Openstack::InfraManager
+                                       "NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack"
                                      else
                                        "OrchestrationStack"
                                      end

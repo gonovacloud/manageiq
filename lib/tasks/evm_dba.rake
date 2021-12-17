@@ -34,12 +34,12 @@ end
 
 namespace :evm do
   namespace :db do
-    desc 'Start the local ManageIQ EVM Database (VMDB)'
+    desc 'Start the local NOVAHawk EVM Database (VMDB)'
     task :start do
       EvmDba.start
     end
 
-    desc 'Stop the local ManageIQ EVM Database (VMDB)'
+    desc 'Stop the local NOVAHawk EVM Database (VMDB)'
     task :stop do
       EvmDba.stop
     end
@@ -62,7 +62,7 @@ namespace :evm do
       end
     end
 
-    desc "Seed the ManageIQ EVM Database (VMDB) with defaults"
+    desc "Seed the NOVAHawk EVM Database (VMDB) with defaults"
     task :seed do
       Rake::Task['db:seed'].invoke
     end
@@ -91,7 +91,7 @@ namespace :evm do
       exit # exit so that parameters to the first rake task are not run as rake tasks
     end
 
-    desc "Destroys the ManageIQ EVM Database (VMDB) of all tables, views and indices"
+    desc "Destroys the NOVAHawk EVM Database (VMDB) of all tables, views and indices"
     task :destroy do
       begin
         Rake::Task['environment'].invoke
@@ -110,13 +110,13 @@ namespace :evm do
       ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations[Rails.env])
     end
 
-    desc "Resets the ManageIQ EVM Database (VMDB) of all tables, views and indices"
+    desc "Resets the NOVAHawk EVM Database (VMDB) of all tables, views and indices"
     task :reset => [:destroy, 'db:migrate']
 
     # Example usage:
     #   RAILS_ENV=production bin/rake evm:db:region -- --region 99
 
-    desc 'Set the region of the current ManageIQ EVM Database (VMDB)'
+    desc 'Set the region of the current NOVAHawk EVM Database (VMDB)'
     task :region do
       require 'trollop'
       opts = Trollop.options(EvmRakeHelper.extract_command_options) do
@@ -166,13 +166,13 @@ namespace :evm do
 
     # Example usage:
     #   bin/rake evm:db:backup:local -- --local-file /tmp/db_backup_test --dbname vmdb_production
-    #   bin/rake evm:db:backup:remote -- --uri smb://dev005.manageiq.com/share1 --uri-username samba_one --uri-password "abc" --remote-file-name region1
+    #   bin/rake evm:db:backup:remote -- --uri smb://dev005.novahawk.com/share1 --uri-username samba_one --uri-password "abc" --remote-file-name region1
     #   bin/rake evm:db:restore:local -- --local-file /tmp/db_backup_test
-    #   bin/rake evm:db:restore:remote -- --uri smb://dev005.manageiq.com/share1/db_backup/region1 --uri-username samba_one --uri-password "abc"
+    #   bin/rake evm:db:restore:remote -- --uri smb://dev005.novahawk.com/share1/db_backup/region1 --uri-username samba_one --uri-password "abc"
 
     namespace :backup do
       require File.expand_path(File.join(Rails.root, "lib", "evm_database_ops"))
-      desc 'Backup the local ManageIQ EVM Database (VMDB) to a local file'
+      desc 'Backup the local NOVAHawk EVM Database (VMDB) to a local file'
       task :local do
         require 'trollop'
         opts = Trollop.options(EvmRakeHelper.extract_command_options) do
@@ -189,7 +189,7 @@ namespace :evm do
         exit # exit so that parameters to the first rake task are not run as rake tasks
       end
 
-      desc 'Backup the local ManageIQ EVM Database (VMDB) to a remote file'
+      desc 'Backup the local NOVAHawk EVM Database (VMDB) to a remote file'
       task :remote do
         require 'trollop'
         opts = Trollop.options(EvmRakeHelper.extract_command_options) do
@@ -218,7 +218,7 @@ namespace :evm do
     end
 
     namespace :restore do
-      desc 'Restore the local ManageIQ EVM Database (VMDB) from a local backup file'
+      desc 'Restore the local NOVAHawk EVM Database (VMDB) from a local backup file'
       task :local do
         require 'trollop'
         opts = Trollop.options(EvmRakeHelper.extract_command_options) do
@@ -239,7 +239,7 @@ namespace :evm do
         exit # exit so that parameters to the first rake task are not run as rake tasks
       end
 
-      desc 'Restore the local ManageIQ EVM Database (VMDB) from a remote backup file'
+      desc 'Restore the local NOVAHawk EVM Database (VMDB) from a remote backup file'
       task :remote do
         require 'trollop'
         opts = Trollop.options(EvmRakeHelper.extract_command_options) do

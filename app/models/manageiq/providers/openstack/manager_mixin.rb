@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::ManagerMixin
+module NOVAHawk::Providers::Openstack::ManagerMixin
   extend ActiveSupport::Concern
 
   included do

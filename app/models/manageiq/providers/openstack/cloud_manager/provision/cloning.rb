@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::Provision::Cloning
+module NOVAHawk::Providers::Openstack::CloudManager::Provision::Cloning
   def do_clone_task_check(clone_task_ref)
     source.with_provider_connection do |openstack|
       instance = openstack.handled_list(:servers).detect { |s| s.id == clone_task_ref }
@@ -18,7 +18,7 @@ module ManageIQ::Providers::Openstack::CloudManager::Provision::Cloning
     clone_options[:name]              = dest_name
     clone_options[:image_ref]         = source.ems_ref
     clone_options[:flavor_ref]        = instance_type.ems_ref
-    clone_options[:availability_zone] = nil if dest_availability_zone.kind_of?(ManageIQ::Providers::Openstack::CloudManager::AvailabilityZoneNull)
+    clone_options[:availability_zone] = nil if dest_availability_zone.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZoneNull)
     clone_options[:security_groups]   = security_groups.collect(&:ems_ref)
     clone_options[:nics]              = configure_network_adapters unless configure_network_adapters.blank?
 

@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Openstack::NetworkManager::MetricsCollectorWorker::Runner < ManageIQ::Providers::BaseManager::MetricsCollectorWorker::Runner
+class NOVAHawk::Providers::Openstack::NetworkManager::MetricsCollectorWorker::Runner < NOVAHawk::Providers::BaseManager::MetricsCollectorWorker::Runner
 end

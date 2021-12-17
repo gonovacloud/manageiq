@@ -18,4 +18,4 @@
           = WidgetPresenter.new(self, controller, widget).render_partial
 - if WidgetPresenter.chart_data.present?
   :javascript
-    ManageIQ.charts.chartData = #{{"widgetchart" => WidgetPresenter.chart_data}.to_json.html_safe};
+    NOVAHawk.charts.chartData = #{{"widgetchart" => WidgetPresenter.chart_data}.to_json.html_safe};

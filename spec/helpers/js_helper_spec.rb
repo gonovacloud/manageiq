@@ -106,9 +106,9 @@ describe JsHelper do
   context '#js_build_calendar' do
     it 'returns JS to build calendar with no options' do
       expected = <<EOD
-ManageIQ.calendar.calDateFrom = undefined;
-ManageIQ.calendar.calDateTo = undefined;
-ManageIQ.calendar.calSkipDays = undefined;
+NOVAHawk.calendar.calDateFrom = undefined;
+NOVAHawk.calendar.calDateTo = undefined;
+NOVAHawk.calendar.calSkipDays = undefined;
 miqBuildCalendar();
 EOD
 
@@ -121,9 +121,9 @@ EOD
              :skip_days => [ 1, 2, 3 ]}
 
       expected = <<EOD
-ManageIQ.calendar.calDateFrom = new Date('1970-01-01T00:00:00Z');
-ManageIQ.calendar.calDateTo = new Date('2000-01-01T00:00:00Z');
-ManageIQ.calendar.calSkipDays = [1,2,3];
+NOVAHawk.calendar.calDateFrom = new Date('1970-01-01T00:00:00Z');
+NOVAHawk.calendar.calDateTo = new Date('2000-01-01T00:00:00Z');
+NOVAHawk.calendar.calSkipDays = [1,2,3];
 miqBuildCalendar();
 EOD
 

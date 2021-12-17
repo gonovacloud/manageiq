@@ -1,3 +1,3 @@
-class ManageIQ::Providers::Openshift::ContainerManager::EventCatcher::Runner < ManageIQ::Providers::BaseManager::EventCatcher::Runner
-  include ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcherMixin
+class NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher::Runner < NOVAHawk::Providers::BaseManager::EventCatcher::Runner
+  include NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcherMixin
 end

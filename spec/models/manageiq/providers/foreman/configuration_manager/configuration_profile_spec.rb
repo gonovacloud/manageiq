@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile do
+describe NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile do
   subject { described_class.new }
 
   let(:cp1)   { FactoryGirl.create(:configuration_profile_foreman) }

@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::ProvisionViaPxe::StateMachine
+module NOVAHawk::Providers::Redhat::InfraManager::ProvisionViaPxe::StateMachine
   def configure_destination
     signal :create_pxe_configuration_file
   end

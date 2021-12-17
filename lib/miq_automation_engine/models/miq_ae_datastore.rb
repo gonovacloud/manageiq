@@ -1,8 +1,8 @@
 module MiqAeDatastore
   XML_VERSION = "1.0"
   XML_VERSION_MIN_SUPPORTED = "1.0"
-  MANAGEIQ_DOMAIN = "ManageIQ"
-  MANAGEIQ_PRIORITY = 0
+  novahawk_DOMAIN = "NOVAHawk"
+  novahawk_PRIORITY = 0
   DATASTORE_DIRECTORY = Rails.root.join('db/fixtures/ae_datastore')
   GIT_REPO_DIRECTORY = Rails.root.join('data/git_repos')
   DEFAULT_OBJECT_NAMESPACE = "$"
@@ -135,15 +135,15 @@ module MiqAeDatastore
     ns = MiqAeDomain.find_by_fqname(domain_name)
     ns.destroy if ns
     import_yaml_dir(datastore_dir, domain_name, tenant)
-    if domain_name.downcase == MANAGEIQ_DOMAIN.downcase
-      ns = MiqAeDomain.find_by_fqname(MANAGEIQ_DOMAIN)
+    if domain_name.downcase == novahawk_DOMAIN.downcase
+      ns = MiqAeDomain.find_by_fqname(novahawk_DOMAIN)
       ns.update_attributes!(:source   => MiqAeDomain::SYSTEM_SOURCE, :enabled => true,
-                            :priority => MANAGEIQ_PRIORITY) if ns
+                            :priority => novahawk_PRIORITY) if ns
     end
   end
 
-  def self.reset_manageiq_domain
-    reset_domain(DATASTORE_DIRECTORY, MANAGEIQ_DOMAIN, Tenant.root_tenant)
+  def self.reset_novahawk_domain
+    reset_domain(DATASTORE_DIRECTORY, novahawk_DOMAIN, Tenant.root_tenant)
   end
 
   def self.seed_default_namespace
@@ -181,9 +181,9 @@ module MiqAeDatastore
   end
 
   def self.seed
-    ns = MiqAeDomain.find_by_fqname(MANAGEIQ_DOMAIN)
+    ns = MiqAeDomain.find_by_fqname(novahawk_DOMAIN)
     unless ns
-      _log.info "Seeding ManageIQ domain..."
+      _log.info "Seeding NOVAHawk domain..."
       begin
         reset_to_defaults
       rescue => err
@@ -228,7 +228,7 @@ module MiqAeDatastore
 
   def self.preserved_attrs_for_domains
     MiqAeDomain.all.each_with_object({}) do |dom, h|
-      next if dom.name.downcase == MANAGEIQ_DOMAIN.downcase
+      next if dom.name.downcase == novahawk_DOMAIN.downcase
       h[dom.name] = PRESERVED_ATTRS.each_with_object({}) { |attr, ih| ih[attr] = dom[attr] }
     end
   end

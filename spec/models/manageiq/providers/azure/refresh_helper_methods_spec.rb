@@ -1,6 +1,6 @@
 require 'azure-armrest'
 
-describe ManageIQ::Providers::Azure::RefreshHelperMethods do
+describe NOVAHawk::Providers::Azure::RefreshHelperMethods do
   before do
     @ems_azure = FactoryGirl.create(:ems_azure, :name => 'test', :provider_region => 'eastus')
     @ems_azure.extend(described_class)

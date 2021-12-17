@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Provision::Cloning do
+describe NOVAHawk::Providers::Vmware::InfraManager::Provision::Cloning do
   context "#dest_folder" do
     before do
       @os = FactoryGirl.create(:operating_system)

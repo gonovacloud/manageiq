@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('verifypasswd', function() {
+NOVAHawk.angular.app.directive('verifypasswd', function() {
   return {
     require: 'ngModel',
     link: function (scope, _elem, attr, ctrl) {

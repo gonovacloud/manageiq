@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Foreman::ConfigurationManager::Refresher do
+describe NOVAHawk::Providers::Foreman::ConfigurationManager::Refresher do
   it ".ems_type" do
     expect(described_class.ems_type).to eq(:foreman_configuration)
   end
@@ -132,7 +132,7 @@ describe ManageIQ::Providers::Foreman::ConfigurationManager::Refresher do
       child  = configuration_manager.configuration_profiles.where(:name => 'ProviderRefreshSpec-ChildHostGroup').first
       parent = configuration_manager.configuration_profiles.where(:name => 'ProviderRefreshSpec-HostGroup').first
       expect(child).to have_attributes(
-        :type                               => "ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile",
+        :type                               => "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile",
         :name                               => "ProviderRefreshSpec-ChildHostGroup",
         :description                        => "ProviderRefreshSpec-HostGroup/ProviderRefreshSpec-ChildHostGroup",
         :manager_ref                        => "14",
@@ -157,7 +157,7 @@ describe ManageIQ::Providers::Foreman::ConfigurationManager::Refresher do
     def assert_configuration_profile_parent
       parent = configuration_manager.configuration_profiles.where(:name => 'ProviderRefreshSpec-HostGroup').first
       expect(parent).to have_attributes(
-        :type                               => "ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile",
+        :type                               => "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile",
         :name                               => "ProviderRefreshSpec-HostGroup",
         :description                        => "ProviderRefreshSpec-HostGroup",
         :manager_ref                        => "13",
@@ -186,7 +186,7 @@ describe ManageIQ::Providers::Foreman::ConfigurationManager::Refresher do
       expect(system).to have_attributes(
         :ipaddress                          => "192.168.169.254",
         :mac_address                        => "00:00:00:00:00:00",
-        :type                               => "ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem",
+        :type                               => "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem",
         :hostname                           => "providerrefreshspec-hostbaremetal.example.com",
         :manager_ref                        => "38",
         :configuration_profile              => child,

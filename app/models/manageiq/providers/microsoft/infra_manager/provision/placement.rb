@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Microsoft::InfraManager::Provision::Placement
+module NOVAHawk::Providers::Microsoft::InfraManager::Provision::Placement
   extend ActiveSupport::Concern
 
   protected

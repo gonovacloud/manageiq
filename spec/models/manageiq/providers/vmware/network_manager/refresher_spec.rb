@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::NetworkManager::Refresher do
+describe NOVAHawk::Providers::Vmware::NetworkManager::Refresher do
   before do
     @host = Rails.application.secrets.vmware_cloud.try(:[], 'host') || 'vmwarecloudhost'
     host_uri = URI.parse("https://#{@host}")
@@ -14,8 +14,8 @@ describe ManageIQ::Providers::Vmware::NetworkManager::Refresher do
       :port     => @port
     )
     @ems_network = @ems.network_manager
-    @network_type_vdc = "ManageIQ::Providers::Vmware::NetworkManager::CloudNetwork::OrgVdcNet"
-    @network_type_vapp = "ManageIQ::Providers::Vmware::NetworkManager::CloudNetwork::VappNet"
+    @network_type_vdc = "NOVAHawk::Providers::Vmware::NetworkManager::CloudNetwork::OrgVdcNet"
+    @network_type_vapp = "NOVAHawk::Providers::Vmware::NetworkManager::CloudNetwork::VappNet"
 
     @userid = Rails.application.secrets.vmware_cloud.try(:[], 'userid') || 'VMWARE_CLOUD_USERID'
     @password = Rails.application.secrets.vmware_cloud.try(:[], 'password') || 'VMWARE_CLOUD_PASSWORD'
@@ -47,7 +47,7 @@ describe ManageIQ::Providers::Vmware::NetworkManager::Refresher do
     # match anymore). Since we're only testing networking in this example, we can simply prevent vApp Templates from
     # being fetched instead of re-recording the whole thing. Also, the NetworkManager has been reimplemented, therefore
     # it makes no real sense to dive into fixing this obsolete VCR cassette.
-    allow_any_instance_of(ManageIQ::Providers::Vmware::CloudManager::RefreshParser).to receive(:get_vapp_templates)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::CloudManager::RefreshParser).to receive(:get_vapp_templates)
 
     2.times do # Run twice to verify that a second run with existing data does not change anything
       @ems.reload

@@ -4,7 +4,7 @@ class FloatingIp < ApplicationRecord
 
   acts_as_miq_taggable
 
-  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "ManageIQ::Providers::NetworkManager"
+  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "NOVAHawk::Providers::NetworkManager"
   # Not going through network_port because of Amazon, old EC2 way allows to associate public Ip to instance, without
   # any network_port used
   belongs_to :vm

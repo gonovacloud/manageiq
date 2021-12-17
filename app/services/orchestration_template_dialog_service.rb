@@ -26,7 +26,7 @@ class OrchestrationTemplateDialogService
         add_azure_stack_options(dialog_group, 2)
       elsif template.kind_of?(OrchestrationTemplateVnfd)
         # TODO(lsmola) add Vnfd specific options
-      elsif template.kind_of?(ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate)
+      elsif template.kind_of?(NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate)
         add_availability_zone_field(dialog_group, 2)
       else
         add_aws_openstack_stack_options(dialog_group, 2)

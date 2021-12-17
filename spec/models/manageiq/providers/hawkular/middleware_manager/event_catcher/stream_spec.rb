@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher::Stream do
+describe NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher::Stream do
   subject do
     _guid, _server, zone = EvmSpecHelper.create_guid_miq_server_zone
     auth                 = AuthToken.new(:name     => "jdoe",

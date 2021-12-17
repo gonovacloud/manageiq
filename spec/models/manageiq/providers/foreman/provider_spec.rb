@@ -1,6 +1,6 @@
 require "foreman_api_client"
 
-describe ManageIQ::Providers::Foreman::Provider do
+describe NOVAHawk::Providers::Foreman::Provider do
   let(:provider) { FactoryGirl.build(:provider_foreman) }
   let(:attrs)    do
     {:base_url => "example.com", :username => "admin", :password => "smartvm", :verify_ssl => OpenSSL::SSL::VERIFY_PEER}

@@ -87,7 +87,7 @@ class MiqSnmp
     end
   end
 
-  # IANA assigned Private Enterprise Number 33482 to ManageIQ
+  # IANA assigned Private Enterprise Number 33482 to NOVAHawk
   def self.enterprise_oid_string
     @@enterprise_oid_string ||= "1.3.6.1.4.1.33482"
   end
@@ -123,7 +123,7 @@ class MiqSnmp
     # If it begins with a dot, append it to the base
     return "#{base}#{oid}" if oid[0, 1] == "."
 
-    # Need to move these to ManageIQ MIB
+    # Need to move these to NOVAHawk MIB
     oid = case oid.downcase
           when "info"                         then "#{enterprise_oid_string}.1"
           when "warn", "warning"              then "#{enterprise_oid_string}.2"

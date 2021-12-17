@@ -17,7 +17,7 @@ class ApplicationHelper::Toolbar::SecurityGroupsCenter < ApplicationHelper::Tool
           ),
           separator,
           # TODO: Uncomment until cross controllers show_list issue fully in place
-          # https://github.com/ManageIQ/manageiq/pull/12551
+          # https://github.com/NOVAHawk/novahawk/pull/12551
           # button(
           #  :security_group_edit,
           #  'pficon pficon-edit fa-lg',

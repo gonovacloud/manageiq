@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :vm_google, :class => "ManageIQ::Providers::Google::CloudManager::Vm", :parent => :vm_cloud do
+  factory :vm_google, :class => "NOVAHawk::Providers::Google::CloudManager::Vm", :parent => :vm_cloud do
     vendor "google"
 
     trait :with_provider do

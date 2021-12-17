@@ -1,7 +1,7 @@
 ---
 en:
   product:
-    name: ManageIQ
+    name: NOVAHawk
   advanced_settings:
     menu_order:
     - dhcp

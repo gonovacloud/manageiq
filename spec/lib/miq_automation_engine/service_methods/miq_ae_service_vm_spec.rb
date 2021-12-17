@@ -1,7 +1,7 @@
 module MiqAeServiceVmSpec
   describe MiqAeMethodService::MiqAeServiceVm do
     let(:vm)         { FactoryGirl.create(:vm_vmware, :name => "template1", :location => "abc/abc.vmx") }
-    let(:service_vm) { MiqAeMethodService::MiqAeServiceManageIQ_Providers_Vmware_InfraManager_Vm.find(vm.id) }
+    let(:service_vm) { MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_Vm.find(vm.id) }
 
     before(:each) do
       @user = FactoryGirl.create(:user_with_group)
@@ -247,7 +247,7 @@ module MiqAeServiceVmSpec
 
       it "when not supported" do
         vm_amazon = FactoryGirl.create(:vm_amazon, :name => "template1")
-        svc_vm = MiqAeMethodService::MiqAeServiceManageIQ_Providers_Amazon_CloudManager_Vm.find(vm_amazon.id)
+        svc_vm = MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Amazon_CloudManager_Vm.find(vm_amazon.id)
 
         expect { svc_vm.create_snapshot('snap', 'crackle & pop') }.to raise_error(RuntimeError)
       end

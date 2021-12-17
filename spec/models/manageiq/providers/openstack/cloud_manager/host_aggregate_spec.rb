@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe ManageIQ::Providers::Openstack::CloudManager::CloudVolume do
+describe NOVAHawk::Providers::Openstack::CloudManager::CloudVolume do
   let(:ems) { FactoryGirl.create(:ems_openstack) }
   let(:zone) { FactoryGirl.create(:availability_zone_openstack,
                                   :ext_management_system => ems) }

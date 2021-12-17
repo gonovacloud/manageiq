@@ -1,13 +1,13 @@
 # TODO: Separate collection from parsing (perhaps collecting in parallel a la RHEVM)
 
-module ManageIQ::Providers
-  class Openstack::CloudManager::RefreshParser < ManageIQ::Providers::CloudManager::RefreshParser
+module NOVAHawk::Providers
+  class Openstack::CloudManager::RefreshParser < NOVAHawk::Providers::CloudManager::RefreshParser
     include Vmdb::Logging
-    include ManageIQ::Providers::Openstack::RefreshParserCommon::HelperMethods
-    include ManageIQ::Providers::Openstack::RefreshParserCommon::Images
-    include ManageIQ::Providers::Openstack::RefreshParserCommon::Objects
-    include ManageIQ::Providers::Openstack::RefreshParserCommon::Flavors
-    include ManageIQ::Providers::Openstack::RefreshParserCommon::OrchestrationStacks
+    include NOVAHawk::Providers::Openstack::RefreshParserCommon::HelperMethods
+    include NOVAHawk::Providers::Openstack::RefreshParserCommon::Images
+    include NOVAHawk::Providers::Openstack::RefreshParserCommon::Objects
+    include NOVAHawk::Providers::Openstack::RefreshParserCommon::Flavors
+    include NOVAHawk::Providers::Openstack::RefreshParserCommon::OrchestrationStacks
 
     def self.ems_inv_to_hashes(ems, options = nil)
       new(ems, options).ems_inv_to_hashes
@@ -183,13 +183,13 @@ module ManageIQ::Providers
       if az.nil?
         uid        = "null_az"
         new_result = {
-          :type    => "ManageIQ::Providers::Openstack::CloudManager::AvailabilityZoneNull",
+          :type    => "NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZoneNull",
           :ems_ref => uid
         }
       else
         name = uid = az.zoneName
         new_result = {
-          :type    => "ManageIQ::Providers::Openstack::CloudManager::AvailabilityZone",
+          :type    => "NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZone",
           :ems_ref => uid,
           :name    => name
         }
@@ -206,7 +206,7 @@ module ManageIQ::Providers
       end
 
       new_result = {
-        :type     => "ManageIQ::Providers::Openstack::CloudManager::HostAggregate",
+        :type     => "NOVAHawk::Providers::Openstack::CloudManager::HostAggregate",
         :ems_ref  => uid.to_s,
         :name     => ha.name,
         :metadata => ha.metadata,
@@ -220,7 +220,7 @@ module ManageIQ::Providers
       uid = tenant.id
 
       new_result = {
-        :type        => "ManageIQ::Providers::Openstack::CloudManager::CloudTenant",
+        :type        => "NOVAHawk::Providers::Openstack::CloudManager::CloudTenant",
         :name        => tenant.name,
         :description => tenant.description,
         :enabled     => tenant.enabled,
@@ -259,7 +259,7 @@ module ManageIQ::Providers
           :ems_ref      => quota["id"],
           :name         => key,
           :value        => value,
-          :type         => "ManageIQ::Providers::Openstack::CloudManager::CloudResourceQuota",
+          :type         => "NOVAHawk::Providers::Openstack::CloudManager::CloudResourceQuota",
         }
       end
     end
@@ -270,11 +270,11 @@ module ManageIQ::Providers
     end
 
     def self.key_pair_type
-      'ManageIQ::Providers::Openstack::CloudManager::AuthKeyPair'
+      'NOVAHawk::Providers::Openstack::CloudManager::AuthKeyPair'
     end
 
     def self.miq_template_type
-      "ManageIQ::Providers::Openstack::CloudManager::Template"
+      "NOVAHawk::Providers::Openstack::CloudManager::Template"
     end
 
     def parse_server(server, parent_hosts = nil)
@@ -309,7 +309,7 @@ module ManageIQ::Providers
       parent_image_uid = server.image["id"]
 
       new_result = {
-        :type                => "ManageIQ::Providers::Openstack::CloudManager::Vm",
+        :type                => "NOVAHawk::Providers::Openstack::CloudManager::Vm",
         :uid_ems             => uid,
         :ems_ref             => uid,
         :name                => server.name,
@@ -375,7 +375,7 @@ module ManageIQ::Providers
       ]
 
       new_result = {
-        :type           => "ManageIQ::Providers::Openstack::CloudManager::Vnf",
+        :type           => "NOVAHawk::Providers::Openstack::CloudManager::Vnf",
         :ems_ref        => uid,
         :name           => vnf.name,
         :description    => vnf.description,

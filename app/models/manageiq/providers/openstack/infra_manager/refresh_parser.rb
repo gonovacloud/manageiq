@@ -1,12 +1,12 @@
-module ManageIQ
+module NOVAHawk
   module Providers
-    class Openstack::InfraManager::RefreshParser < ManageIQ::Providers::InfraManager::RefreshParser
+    class Openstack::InfraManager::RefreshParser < NOVAHawk::Providers::InfraManager::RefreshParser
       include Vmdb::Logging
 
-      include ManageIQ::Providers::Openstack::RefreshParserCommon::HelperMethods
-      include ManageIQ::Providers::Openstack::RefreshParserCommon::Images
-      include ManageIQ::Providers::Openstack::RefreshParserCommon::Objects
-      include ManageIQ::Providers::Openstack::RefreshParserCommon::OrchestrationStacks
+      include NOVAHawk::Providers::Openstack::RefreshParserCommon::HelperMethods
+      include NOVAHawk::Providers::Openstack::RefreshParserCommon::Images
+      include NOVAHawk::Providers::Openstack::RefreshParserCommon::Objects
+      include NOVAHawk::Providers::Openstack::RefreshParserCommon::OrchestrationStacks
 
       def self.ems_inv_to_hashes(ems, options = nil)
         new(ems, options).ems_inv_to_hashes
@@ -185,7 +185,7 @@ module ManageIQ
 
         new_result = {
           :name                 => host_name,
-          :type                 => 'ManageIQ::Providers::Openstack::InfraManager::Host',
+          :type                 => 'NOVAHawk::Providers::Openstack::InfraManager::Host',
           :uid_ems              => uid,
           :ems_ref              => uid,
           :ems_ref_obj          => host.instance_uuid,
@@ -367,7 +367,7 @@ module ManageIQ
           :ems_ref => uid,
           :uid_ems => uid,
           :name    => name,
-          :type    => 'ManageIQ::Providers::Openstack::InfraManager::EmsCluster'
+          :type    => 'NOVAHawk::Providers::Openstack::InfraManager::EmsCluster'
         }
         return uid, new_result
       end
@@ -383,7 +383,7 @@ module ManageIQ
       end
 
       def self.miq_template_type
-        "ManageIQ::Providers::Openstack::InfraManager::Template"
+        "NOVAHawk::Providers::Openstack::InfraManager::Template"
       end
 
       #

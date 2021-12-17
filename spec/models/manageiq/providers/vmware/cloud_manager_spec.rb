@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::CloudManager do
+describe NOVAHawk::Providers::Vmware::CloudManager do
   before(:context) do
     @host = Rails.application.secrets.vmware_cloud.try(:[], 'host') || 'vmwarecloudhost'
     host_uri = URI.parse("https://#{@host}")

@@ -258,7 +258,7 @@ module PxeController::IsoDatastores
   end
 
   def iso_datastore_set_record_vars(isd)
-    ems = ManageIQ::Providers::Redhat::InfraManager.find_by_id(@edit[:new][:ems_id])
+    ems = NOVAHawk::Providers::Redhat::InfraManager.find_by_id(@edit[:new][:ems_id])
     isd.ext_management_system = ems
     # saving name to use in flash message
     @edit[:ems_name] = ems.name
@@ -281,7 +281,7 @@ module PxeController::IsoDatastores
     @edit[:rec_id] = @isd.id || nil
     @edit[:new][:ems_id] = @isd.ext_management_system ? @isd.ext_management_system.id : nil
 
-    @edit[:emses] = ManageIQ::Providers::Redhat::InfraManager
+    @edit[:emses] = NOVAHawk::Providers::Redhat::InfraManager
                     .without_iso_datastores
                     .order(:name)
                     .pluck(:name, :id)

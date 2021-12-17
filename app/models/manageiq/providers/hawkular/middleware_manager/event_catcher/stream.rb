@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher::Stream
+class NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher::Stream
   def initialize(ems)
     @ems               = ems
     @alerts_client     = ems.alerts_client

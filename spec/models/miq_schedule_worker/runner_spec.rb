@@ -556,7 +556,7 @@ describe MiqScheduleWorker::Runner do
     end
 
     it "#schedule_settings_for_ems_refresh (private)" do
-      _ = ManageIQ::Providers::Microsoft::InfraManager # FIXME: Loader
+      _ = NOVAHawk::Providers::Microsoft::InfraManager # FIXME: Loader
 
       stub_server_configuration(
         :ems_refresh => {
@@ -567,8 +567,8 @@ describe MiqScheduleWorker::Runner do
 
       settings = @schedule_worker.send(:schedule_settings_for_ems_refresh)
 
-      expect(settings[ManageIQ::Providers::Vmware::InfraManager]).to    eq(86_400) # Uses default
-      expect(settings[ManageIQ::Providers::Microsoft::InfraManager]).to eq(900)    # Uses override
+      expect(settings[NOVAHawk::Providers::Vmware::InfraManager]).to    eq(86_400) # Uses default
+      expect(settings[NOVAHawk::Providers::Microsoft::InfraManager]).to eq(900)    # Uses override
     end
 
     def while_calling_job(job)

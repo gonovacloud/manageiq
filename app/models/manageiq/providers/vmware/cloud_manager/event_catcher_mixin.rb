@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::CloudManager::EventCatcherMixin
+module NOVAHawk::Providers::Vmware::CloudManager::EventCatcherMixin
 
   def event_monitor_handle
     unless @event_monitor_handle
@@ -13,7 +13,7 @@ module ManageIQ::Providers::Vmware::CloudManager::EventCatcherMixin
       options[:recover_from_connection_close] = true
       options[:ems]                           = @ems
 
-      @event_monitor_handle = ManageIQ::Providers::Vmware::CloudManager::EventCatcher::Stream.new(options)
+      @event_monitor_handle = NOVAHawk::Providers::Vmware::CloudManager::EventCatcher::Stream.new(options)
     end
     @event_monitor_handle
   end

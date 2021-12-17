@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::EventCatcherMixin
+module NOVAHawk::Providers::Azure::EventCatcherMixin
   def parse_event_type(event)
     event_name   = event["eventName"]["value"]
     event_action = event.fetch_path("authorization", "action")

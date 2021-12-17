@@ -18,9 +18,9 @@ http_client.debug_dev = $stdout
 headers = {
   "Content-Type" => "text/xml;charset=UTF-8",
   "SOAPAction"   => 'insert',
-  'User-Agent'   => "ManageIQ/EVM"
+  'User-Agent'   => "NOVAHawk/EVM"
 }
 
-uri = 'https://manageiqdev.service-now.com/ecc_queue.do?SOAP'
+uri = 'https://novahawkdev.service-now.com/ecc_queue.do?SOAP'
 
 response = http_client.post(uri, body, headers)

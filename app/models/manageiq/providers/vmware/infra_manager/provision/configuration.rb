@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Provision::Configuration
+module NOVAHawk::Providers::Vmware::InfraManager::Provision::Configuration
   extend ActiveSupport::Concern
 
   include_concern 'Container'

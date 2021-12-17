@@ -62,9 +62,9 @@ module InterRegionApiMethodRelay
       raise "Failed to establish API connection to region #{region_number}"
     end
 
-    require 'manageiq-api-client'
+    require 'novahawk-api-client'
 
-    ManageIQ::API::Client.new(
+    NOVAHawk::API::Client.new(
       :url      => url,
       :miqtoken => region.api_system_auth_token(User.current_userid),
       :ssl      => {:verify => false}

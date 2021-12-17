@@ -1,15 +1,15 @@
 
 module MiqAeServiceVmOpenstackSpec
   include MiqAeEngine
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_CloudManager_Vm do
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager_Vm do
     ["openstack", "amazon", "google"].each do |t|
       context "for #{t}" do
         define_method(:service_class_for) do |part|
           case part.to_s.camelize
           when "FloatingIp", "SecurityGroup", "CloudSubnet", "CloudNetwork"
-            return "MiqAeMethodService::MiqAeServiceManageIQ_Providers_#{t.camelize}_NetworkManager_#{part.to_s.camelize}".constantize
+            return "MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_#{t.camelize}_NetworkManager_#{part.to_s.camelize}".constantize
           end
-          "MiqAeMethodService::MiqAeServiceManageIQ_Providers_#{t.camelize}_CloudManager_#{part.to_s.camelize}".constantize
+          "MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_#{t.camelize}_CloudManager_#{part.to_s.camelize}".constantize
         end
 
         before(:each) do

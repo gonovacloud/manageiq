@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Azure::NetworkManager::LoadBalancer < ::LoadBalancer
+class NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer < ::LoadBalancer
 end

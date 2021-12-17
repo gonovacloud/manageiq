@@ -2,27 +2,27 @@ class NamespaceEmsAmazon < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    AuthKeyPairCloud                           ManageIQ::Providers::CloudManager::AuthKeyPair
+    AuthKeyPairCloud                           NOVAHawk::Providers::CloudManager::AuthKeyPair
 
-    EmsAmazon                                  ManageIQ::Providers::Amazon::CloudManager
-    AvailabilityZoneAmazon                     ManageIQ::Providers::Amazon::CloudManager::AvailabilityZone
-    CloudVolumeAmazon                          ManageIQ::Providers::Amazon::CloudManager::CloudVolume
-    CloudVolumeSnapshotAmazon                  ManageIQ::Providers::Amazon::CloudManager::CloudVolumeSnapshot
-    MiqEventCatcherAmazon                      ManageIQ::Providers::Amazon::CloudManager::EventCatcher
-    EventCatcherAmazon                         ManageIQ::Providers::Amazon::CloudManager::EventCatcher::Runner
-    FlavorAmazon                               ManageIQ::Providers::Amazon::CloudManager::Flavor
-    FloatingIpAmazon                           ManageIQ::Providers::Amazon::CloudManager::FloatingIp
-    MiqEmsMetricsCollectorWorkerAmazon         ManageIQ::Providers::Amazon::CloudManager::MetricsCollectorWorker
-    EmsMetricsCollectorWorkerAmazon            ManageIQ::Providers::Amazon::CloudManager::MetricsCollectorWorker::Runner
-    OrchestrationStackAmazon                   ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack
-    MiqEmsRefreshWorkerAmazon                  ManageIQ::Providers::Amazon::CloudManager::RefreshWorker
-    EmsRefreshWorkerAmazon                     ManageIQ::Providers::Amazon::CloudManager::RefreshWorker::Runner
-    SecurityGroupAmazon                        ManageIQ::Providers::Amazon::CloudManager::SecurityGroup
-    TemplateAmazon                             ManageIQ::Providers::Amazon::CloudManager::Template
-    VmAmazon                                   ManageIQ::Providers::Amazon::CloudManager::Vm
+    EmsAmazon                                  NOVAHawk::Providers::Amazon::CloudManager
+    AvailabilityZoneAmazon                     NOVAHawk::Providers::Amazon::CloudManager::AvailabilityZone
+    CloudVolumeAmazon                          NOVAHawk::Providers::Amazon::CloudManager::CloudVolume
+    CloudVolumeSnapshotAmazon                  NOVAHawk::Providers::Amazon::CloudManager::CloudVolumeSnapshot
+    MiqEventCatcherAmazon                      NOVAHawk::Providers::Amazon::CloudManager::EventCatcher
+    EventCatcherAmazon                         NOVAHawk::Providers::Amazon::CloudManager::EventCatcher::Runner
+    FlavorAmazon                               NOVAHawk::Providers::Amazon::CloudManager::Flavor
+    FloatingIpAmazon                           NOVAHawk::Providers::Amazon::CloudManager::FloatingIp
+    MiqEmsMetricsCollectorWorkerAmazon         NOVAHawk::Providers::Amazon::CloudManager::MetricsCollectorWorker
+    EmsMetricsCollectorWorkerAmazon            NOVAHawk::Providers::Amazon::CloudManager::MetricsCollectorWorker::Runner
+    OrchestrationStackAmazon                   NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack
+    MiqEmsRefreshWorkerAmazon                  NOVAHawk::Providers::Amazon::CloudManager::RefreshWorker
+    EmsRefreshWorkerAmazon                     NOVAHawk::Providers::Amazon::CloudManager::RefreshWorker::Runner
+    SecurityGroupAmazon                        NOVAHawk::Providers::Amazon::CloudManager::SecurityGroup
+    TemplateAmazon                             NOVAHawk::Providers::Amazon::CloudManager::Template
+    VmAmazon                                   NOVAHawk::Providers::Amazon::CloudManager::Vm
 
     ServiceOrchestration::OptionConverterAmazon
-    ManageIQ::Providers::Amazon::CloudManager::OrchestrationServiceOptionConverter
+    NOVAHawk::Providers::Amazon::CloudManager::OrchestrationServiceOptionConverter
   )]
 
   def change

@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('hostAggregateFormController', ['$http', '$scope', 'hostAggregateFormId', 'miqService', function($http, $scope, hostAggregateFormId, miqService) {
+NOVAHawk.angular.app.controller('hostAggregateFormController', ['$http', '$scope', 'hostAggregateFormId', 'miqService', function($http, $scope, hostAggregateFormId, miqService) {
   $scope.hostAggregateModel = {
     name: '',
     ems_id: '',
@@ -11,7 +11,7 @@ ManageIQ.angular.app.controller('hostAggregateFormController', ['$http', '$scope
   $scope.modelCopy = angular.copy( $scope.hostAggregateModel );
   $scope.model = "hostAggregateModel";
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   if (hostAggregateFormId == 'new') {
     $scope.hostAggregateModel.name = "";

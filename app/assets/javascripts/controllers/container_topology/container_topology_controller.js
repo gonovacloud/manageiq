@@ -1,12 +1,12 @@
 /* global miqHttpInject */
 
-miqHttpInject(angular.module('topologyApp', ['kubernetesUI', 'ui.bootstrap', 'ManageIQ']))
+miqHttpInject(angular.module('topologyApp', ['kubernetesUI', 'ui.bootstrap', 'NOVAHawk']))
 .controller('containerTopologyController', ContainerTopologyCtrl);
 
 ContainerTopologyCtrl.$inject = ['$scope', '$http', '$interval', '$location', 'topologyService', '$window'];
 
 function ContainerTopologyCtrl($scope, $http, $interval, $location, topologyService, $window) {
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
   miqHideSearchClearButton();
   var self = this;
   $scope.vs = null;

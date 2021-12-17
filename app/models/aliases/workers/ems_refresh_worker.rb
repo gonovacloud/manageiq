@@ -1,1 +1,1 @@
-::EmsRefreshWorker = ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+::EmsRefreshWorker = NOVAHawk::Providers::BaseManager::RefreshWorker::Runner

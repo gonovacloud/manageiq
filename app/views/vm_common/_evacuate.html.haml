@@ -65,5 +65,5 @@
             :onclick => "miqAjaxButton('#{url_for(:action => "evacuate_vm", :id => "#{@record.id}", :button => "cancel")}');")
 
 :javascript
-  ManageIQ.angular.app.value('vmCloudEvacuateFormId', '#{@record.id}');
+  NOVAHawk.angular.app.value('vmCloudEvacuateFormId', '#{@record.id}');
   miq_bootstrap('#form_div');

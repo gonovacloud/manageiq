@@ -1,5 +1,5 @@
-describe('Global variable ManageIQ', function() {
-  it('checks that variable ManageIQ is not undefined', function() {
-    expect(ManageIQ).not.toBeUndefined();
+describe('Global variable NOVAHawk', function() {
+  it('checks that variable NOVAHawk is not undefined', function() {
+    expect(NOVAHawk).not.toBeUndefined();
   });
 });

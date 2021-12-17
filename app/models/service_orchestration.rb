@@ -26,7 +26,7 @@ class ServiceOrchestration < Service
 
   def deploy_orchestration_stack
     creation_options = stack_options
-    @orchestration_stack = ManageIQ::Providers::CloudManager::OrchestrationStack.create_stack(
+    @orchestration_stack = NOVAHawk::Providers::CloudManager::OrchestrationStack.create_stack(
       orchestration_manager, stack_name, orchestration_template, creation_options)
   ensure
     # create options may never be saved before unless they were overridden

@@ -23,10 +23,10 @@ describe TreeBuilderArchived do
     User.current_user.settings[:display] = {:display_vms => false}
     nodes_orph = archived.x_get_tree_custom_kids({:id => 'orph'},
                                                  false,
-                                                 :leaf => 'ManageIQ::Providers::InfraManager::VmOrTemplate')
+                                                 :leaf => 'NOVAHawk::Providers::InfraManager::VmOrTemplate')
     nodes_arch = archived.x_get_tree_custom_kids({:id => 'arch'},
                                                  false,
-                                                 :leaf => 'ManageIQ::Providers::InfraManager::VmOrTemplate')
+                                                 :leaf => 'NOVAHawk::Providers::InfraManager::VmOrTemplate')
     expect(nodes_orph).to eq([])
     expect(nodes_arch).to eq([])
   end
@@ -37,14 +37,14 @@ describe TreeBuilderArchived do
     template_orph = FactoryGirl.create(:template_infra, :storage => FactoryGirl.create(:storage))
     vm_arch = FactoryGirl.create(:vm_infra)
     template_arch = FactoryGirl.create(:template_infra)
-    allow(ManageIQ::Providers::InfraManager::VmOrTemplate).to receive(:all_orphaned) { [vm_orph, template_orph] }
-    allow(ManageIQ::Providers::InfraManager::VmOrTemplate).to receive(:all_archived) { [vm_arch, template_arch] }
+    allow(NOVAHawk::Providers::InfraManager::VmOrTemplate).to receive(:all_orphaned) { [vm_orph, template_orph] }
+    allow(NOVAHawk::Providers::InfraManager::VmOrTemplate).to receive(:all_archived) { [vm_arch, template_arch] }
     nodes_orph = archived.x_get_tree_custom_kids({:id => 'orph'},
                                                  false,
-                                                 :leaf => 'ManageIQ::Providers::InfraManager::VmOrTemplate')
+                                                 :leaf => 'NOVAHawk::Providers::InfraManager::VmOrTemplate')
     nodes_arch = archived.x_get_tree_custom_kids({:id => 'arch'},
                                                  false,
-                                                 :leaf => 'ManageIQ::Providers::InfraManager::VmOrTemplate')
+                                                 :leaf => 'NOVAHawk::Providers::InfraManager::VmOrTemplate')
     expect(nodes_orph).to eq([vm_orph, template_orph].sort_by { |object| object[:name] })
     expect(nodes_arch).to eq([vm_arch, template_arch].sort_by { |object| object[:name] })
   end
@@ -79,10 +79,10 @@ describe TreeBuilderArchived do
     User.current_user.settings[:display] = {:display_vms => false}
     nodes_orph = archived.x_get_tree_custom_kids({:id => 'orph'},
                                                  false,
-                                                 :leaf => 'ManageIQ::Providers::CloudManager::Template')
+                                                 :leaf => 'NOVAHawk::Providers::CloudManager::Template')
     nodes_arch = archived.x_get_tree_custom_kids({:id => 'arch'},
                                                  false,
-                                                 :leaf => 'ManageIQ::Providers::InfraManager::Template')
+                                                 :leaf => 'NOVAHawk::Providers::InfraManager::Template')
     expect(nodes_orph).to eq([])
     expect(nodes_arch).to eq([])
   end
@@ -93,10 +93,10 @@ describe TreeBuilderArchived do
     template_orph_cloud = FactoryGirl.create(:template_cloud, :storage => FactoryGirl.create(:storage))
     nodes_orph = archived.x_get_tree_custom_kids({:id => 'orph'},
                                                   false,
-                                                  :leaf => 'ManageIQ::Providers::CloudManager::Template')
+                                                  :leaf => 'NOVAHawk::Providers::CloudManager::Template')
     nodes_arch = archived.x_get_tree_custom_kids({:id => 'arch'},
                                                   false,
-                                                  :leaf => 'ManageIQ::Providers::CloudManager::Template')
+                                                  :leaf => 'NOVAHawk::Providers::CloudManager::Template')
     expect(nodes_orph).to eq([template_orph_cloud])
     expect(nodes_arch).to eq([template_arch_cloud])
   end

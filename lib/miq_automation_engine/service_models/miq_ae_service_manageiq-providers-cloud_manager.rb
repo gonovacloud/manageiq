@@ -1,5 +1,5 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_CloudManager < MiqAeServiceManageIQ_Providers_BaseManager
+  class MiqAeServiceNOVAHawk_Providers_CloudManager < MiqAeServiceNOVAHawk_Providers_BaseManager
     expose :network_manager,        :association => true
     expose :availability_zones,     :association => true
     expose :cloud_networks,         :association => true

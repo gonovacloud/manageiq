@@ -1,8 +1,8 @@
-module ManageIQ::Providers::Openstack
+module NOVAHawk::Providers::Openstack
   module RefreshParserCommon
     module Flavors
       def get_flavors
-        flavors = if @ems.kind_of?(ManageIQ::Providers::Openstack::CloudManager) && ::Settings.ems.ems_openstack.refresh.is_admin
+        flavors = if @ems.kind_of?(NOVAHawk::Providers::Openstack::CloudManager) && ::Settings.ems.ems_openstack.refresh.is_admin
                     @connection.handled_list(:flavors, {'is_public' => 'None'}, true)
                   else
                     @connection.handled_list(:flavors)
@@ -19,7 +19,7 @@ module ManageIQ::Providers::Openstack
         uid = flavor.id
 
         new_result = {
-          :type                 => "ManageIQ::Providers::Openstack::CloudManager::Flavor",
+          :type                 => "NOVAHawk::Providers::Openstack::CloudManager::Flavor",
           :ems_ref              => uid,
           :name                 => flavor.name,
           :enabled              => !flavor.disabled,

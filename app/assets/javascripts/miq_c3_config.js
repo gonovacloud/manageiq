@@ -1,12 +1,12 @@
 /**
- * C3 chart configuration for ManageIQ.
+ * C3 chart configuration for NOVAHawk.
  *
  * To be replaced with `c3ChartDefaults` once available through PatternFly:
  *
  *   https://github.com/patternfly/patternfly/blob/master/dist/js/patternfly.js
  */
 
-(function (ManageIQ) {
+(function (NOVAHawk) {
   var pfColors = [$.pfPaletteColors.blue, $.pfPaletteColors.red, $.pfPaletteColors.green, $.pfPaletteColors.orange, $.pfPaletteColors.cyan,
     $.pfPaletteColors.gold, $.pfPaletteColors.purple, $.pfPaletteColors.lightBlue, $.pfPaletteColors.lightGreen, $.pfPaletteColors.black];
   var c3mixins = {};
@@ -98,7 +98,7 @@
   };
 
 
-  ManageIQ.charts.c3config = {
+  NOVAHawk.charts.c3config = {
 
     Bar: _.defaultsDeep(
       {
@@ -185,4 +185,4 @@
      $().c3ChartDefaults().getDefaultAreaConfig()
    ),
   };
-})(ManageIQ);
+})(NOVAHawk);

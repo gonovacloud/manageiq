@@ -5,6 +5,6 @@ FactoryGirl.define do
   end
 
   factory :load_balancer_health_check_amazon,
-          :class  => "ManageIQ::Providers::Amazon::NetworkManager::LoadBalancerHealthCheck",
+          :class  => "NOVAHawk::Providers::Amazon::NetworkManager::LoadBalancerHealthCheck",
           :parent => :load_balancer_health_check
 end

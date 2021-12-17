@@ -184,9 +184,9 @@ class VmCloudController < ApplicationController
 
     # Position in tree that matches selected record
     if role_allows?(:feature => "instances_accord") && prefix == "instances"
-      set_active_elements_authorized_user('instances_tree', 'instances', true, ManageIQ::Providers::CloudManager::Vm, id)
+      set_active_elements_authorized_user('instances_tree', 'instances', true, NOVAHawk::Providers::CloudManager::Vm, id)
     elsif role_allows?(:feature => "images_accord") && prefix == "images"
-      set_active_elements_authorized_user('images_tree', 'images', true, ManageIQ::Providers::CloudManager::Template, id)
+      set_active_elements_authorized_user('images_tree', 'images', true, NOVAHawk::Providers::CloudManager::Template, id)
     elsif role_allows?(:feature => "#{prefix}_filter_accord")
       set_active_elements_authorized_user("#{prefix}_filter_tree", "#{prefix}_filter", false, nil, nil)
     else

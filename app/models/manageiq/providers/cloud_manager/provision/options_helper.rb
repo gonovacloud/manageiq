@@ -1,4 +1,4 @@
-module ManageIQ::Providers::CloudManager::Provision::OptionsHelper
+module NOVAHawk::Providers::CloudManager::Provision::OptionsHelper
   def dest_availability_zone
     @dest_availability_zone ||= AvailabilityZone.find_by(:id => get_option(:dest_availability_zone))
   end

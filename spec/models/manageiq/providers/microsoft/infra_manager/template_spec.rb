@@ -1,6 +1,6 @@
-describe ManageIQ::Providers::Microsoft::InfraManager::Template do
+describe NOVAHawk::Providers::Microsoft::InfraManager::Template do
   context "#active_proxy?" do
-    let(:template_microsoft) { ManageIQ::Providers::Microsoft::InfraManager::Template.new }
+    let(:template_microsoft) { NOVAHawk::Providers::Microsoft::InfraManager::Template.new }
 
     it "returns true" do
       expect(template_microsoft.has_active_proxy?).to eq(true)
@@ -8,7 +8,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Template do
   end
 
   context "#has_proxy?" do
-    let(:template_microsoft) { ManageIQ::Providers::Microsoft::InfraManager::Template.new }
+    let(:template_microsoft) { NOVAHawk::Providers::Microsoft::InfraManager::Template.new }
 
     it "returns true" do
       expect(template_microsoft.has_proxy?).to eq(true)
@@ -17,7 +17,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Template do
 
   context "#proxies4job" do
     before do
-      @template_microsoft = ManageIQ::Providers::Microsoft::InfraManager::Template.new
+      @template_microsoft = NOVAHawk::Providers::Microsoft::InfraManager::Template.new
       allow(MiqServer).to receive(:my_server).and_return("default")
       @proxies = @template_microsoft.proxies4job
     end

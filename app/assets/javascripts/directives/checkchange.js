@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('checkchange', ['miqService', function(miqService) {
+NOVAHawk.angular.app.directive('checkchange', ['miqService', function(miqService) {
   return {
     require: 'ngModel',
     link: function (scope, elem, attr, ctrl) {

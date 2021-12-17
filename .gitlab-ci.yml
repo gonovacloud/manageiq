@@ -1,4 +1,4 @@
-image: manageiq_gitlabci:master
+image: novahawk_gitlabci:master
 before_script:
   - su postgres -c ". /docker-environment.sh && pg_ctl start -w -D /var/opt/rh/rh-postgresql94/lib/pgsql/data/"
   - ruby -v

@@ -1,3 +1,3 @@
-class ManageIQ::Providers::Vmware::CloudManager::EventCatcher::Runner < ManageIQ::Providers::BaseManager::EventCatcher::Runner
-  include ManageIQ::Providers::Vmware::CloudManager::EventCatcherMixin
+class NOVAHawk::Providers::Vmware::CloudManager::EventCatcher::Runner < NOVAHawk::Providers::BaseManager::EventCatcher::Runner
+  include NOVAHawk::Providers::Vmware::CloudManager::EventCatcherMixin
 end

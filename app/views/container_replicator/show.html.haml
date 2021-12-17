@@ -3,11 +3,11 @@
 - elsif @showtype == "timeline"
     = render(:partial => "layouts/tl_show")
     :javascript
-        ManageIQ.afterOnload = "miqAsyncAjax('#{url_for(:action => @ajax_action, :id => @record)}');"
+        NOVAHawk.afterOnload = "miqAsyncAjax('#{url_for(:action => @ajax_action, :id => @record)}');"
 - elsif @showtype == "performance"
     = render(:partial => "layouts/performance")
     :javascript
-        ManageIQ.afterOnload = "miqAsyncAjax('#{url_for(:action => @ajax_action, :id => @record)}');"
+        NOVAHawk.afterOnload = "miqAsyncAjax('#{url_for(:action => @ajax_action, :id => @record)}');"
 - elsif @showtype == "compliance_history"
     = render :partial => "shared/views/#{@showtype}"
 - else

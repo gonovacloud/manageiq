@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Openstack_CloudManager_CloudTenant < MiqAeServiceCloudTenant
+  class MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager_CloudTenant < MiqAeServiceCloudTenant
   end
 end

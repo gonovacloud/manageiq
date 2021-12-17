@@ -14,7 +14,7 @@ jQuery.evalLog = function (text) {
 jQuery.jsonPayload = function (text, fallback) {
   var parsed_json = jQuery.parseJSON(text);
   if (parsed_json['explorer']) {
-    return ManageIQ.explorer.process(parsed_json); // ExplorerPresenter payload
+    return NOVAHawk.explorer.process(parsed_json); // ExplorerPresenter payload
   } else {
     return fallback(text);
   }

@@ -1,3 +1,3 @@
-class ManageIQ::Providers::Redhat::InfraManager::RefreshWorker < ManageIQ::Providers::BaseManager::RefreshWorker
+class NOVAHawk::Providers::Redhat::InfraManager::RefreshWorker < NOVAHawk::Providers::BaseManager::RefreshWorker
   require_nested :Runner
 end

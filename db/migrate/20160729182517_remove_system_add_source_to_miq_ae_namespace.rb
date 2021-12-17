@@ -6,7 +6,7 @@ class RemoveSystemAddSourceToMiqAeNamespace < ActiveRecord::Migration[5.0]
 
     say_with_time('Migrating system attribute to source in MiqAeNamespace') do
       MiqAeNamespace.where(:parent_id => nil).each do |obj|
-        source = if obj.name == 'ManageIQ'
+        source = if obj.name == 'NOVAHawk'
                    'system'
                  elsif obj.system
                    'user_locked'

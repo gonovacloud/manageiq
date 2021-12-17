@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Redhat::InfraManager::DiskAttachmentBuilder
+class NOVAHawk::Providers::Redhat::InfraManager::DiskAttachmentBuilder
   def initialize(options = {})
     @size_in_mb = options[:size_in_mb]
     @storage = options[:storage]
@@ -19,7 +19,7 @@ class ManageIQ::Providers::Redhat::InfraManager::DiskAttachmentBuilder
         :provisioned_size => @size_in_mb.to_i.megabytes,
         :sparse           => thin_provisioned,
         :format           => self.class.disk_format_for(@storage, thin_provisioned),
-        :storage_domains  => [:id => ManageIQ::Providers::Redhat::InfraManager.extract_ems_ref_id(@storage.ems_ref)]
+        :storage_domains  => [:id => NOVAHawk::Providers::Redhat::InfraManager.extract_ems_ref_id(@storage.ems_ref)]
       }
     }
   end

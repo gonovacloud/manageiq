@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::CloudManager < ManageIQ::Providers::CloudManager
+class NOVAHawk::Providers::Vmware::CloudManager < NOVAHawk::Providers::CloudManager
   require_nested :AvailabilityZone
   require_nested :OrchestrationServiceOptionConverter
   require_nested :OrchestrationStack
@@ -11,14 +11,14 @@ class ManageIQ::Providers::Vmware::CloudManager < ManageIQ::Providers::CloudMana
   require_nested :Template
   require_nested :Vm
 
-  include ManageIQ::Providers::Vmware::ManagerAuthMixin
-  include ManageIQ::Providers::Vmware::CloudManager::ManagerEventsMixin
+  include NOVAHawk::Providers::Vmware::ManagerAuthMixin
+  include NOVAHawk::Providers::Vmware::CloudManager::ManagerEventsMixin
   include HasNetworkManagerMixin
 
   before_create :ensure_managers
 
   def ensure_network_manager
-    build_network_manager(:type => 'ManageIQ::Providers::Vmware::NetworkManager') unless network_manager
+    build_network_manager(:type => 'NOVAHawk::Providers::Vmware::NetworkManager') unless network_manager
   end
 
   def self.ems_type

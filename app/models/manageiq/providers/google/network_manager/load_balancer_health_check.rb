@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::NetworkManager::LoadBalancerHealthCheck < ::LoadBalancerHealthCheck
+class NOVAHawk::Providers::Google::NetworkManager::LoadBalancerHealthCheck < ::LoadBalancerHealthCheck
 end

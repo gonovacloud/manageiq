@@ -6,7 +6,7 @@
 #           Stonecap Enterprises
 #
 #  This software is copyrighted 2007 All rights reserved
-#  ManageIQ
+#  NOVAHawk
 #  1 International Boulevard
 #  Mahwah, NJ   07495
 #

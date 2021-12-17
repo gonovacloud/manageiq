@@ -1122,7 +1122,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-temp1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-temp1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1157,7 +1157,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi0.vg0.msan1
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi0.vg0.msan1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1192,7 +1192,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo3
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo3
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1227,7 +1227,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo5
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo5
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1262,7 +1262,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-backup1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-backup1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1297,7 +1297,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi1.vg0.msan2
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi1.vg0.msan2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1332,7 +1332,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1367,7 +1367,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo4
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo4
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1402,7 +1402,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-xav1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-xav1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1437,7 +1437,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi2.vg0.msan3
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi2.vg0.msan3
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1472,7 +1472,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1507,7 +1507,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-instmedia
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-instmedia
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1542,7 +1542,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-dev1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-dev1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1612,7 +1612,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-viewtest
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-viewtest
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1647,7 +1647,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-prod1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-prod1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1682,7 +1682,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-test2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-test2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1717,7 +1717,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-temp2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-temp2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1787,7 +1787,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo7
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo7
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -1857,7 +1857,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo6
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo6
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -2998,7 +2998,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-temp1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-temp1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3033,7 +3033,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi2.vg0.msan3
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi2.vg0.msan3
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3068,7 +3068,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-prod1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-prod1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3103,7 +3103,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3138,7 +3138,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo6
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo6
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3173,7 +3173,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-backup1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-backup1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3278,7 +3278,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo5
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo5
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3313,7 +3313,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-xav1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-xav1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3383,7 +3383,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo4
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo4
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3418,7 +3418,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-dev1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-dev1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3453,7 +3453,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi0.vg0.msan1
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi0.vg0.msan1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3488,7 +3488,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-viewtest
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-viewtest
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3523,7 +3523,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo3
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo3
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3558,7 +3558,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-test2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-test2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3593,7 +3593,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-temp2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-temp2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3628,7 +3628,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi1.vg0.msan2
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi1.vg0.msan2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3663,7 +3663,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-instmedia
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-instmedia
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3698,7 +3698,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -3733,7 +3733,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo7
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo7
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5079,7 +5079,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi2.vg0.msan3
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi2.vg0.msan3
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5114,7 +5114,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi1.vg0.msan2
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi1.vg0.msan2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5149,7 +5149,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2009-9.manageiq:MRAID1.iscsi0.vg0.msan1
+                    str: iqn.2009-9.novahawk:MRAID1.iscsi0.vg0.msan1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5254,7 +5254,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5289,7 +5289,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo3
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo3
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5324,7 +5324,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5359,7 +5359,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo7
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo7
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5394,7 +5394,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-viewtest
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-viewtest
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5429,7 +5429,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-prod1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-prod1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5464,7 +5464,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-instmedia
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-instmedia
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5499,7 +5499,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo4
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo4
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5534,7 +5534,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo5
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo5
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5569,7 +5569,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-demo6
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-demo6
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5604,7 +5604,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-test2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-test2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5639,7 +5639,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-dev1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-dev1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5674,7 +5674,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-xav1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-xav1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5709,7 +5709,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-backup1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-backup1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5744,7 +5744,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-temp1
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-temp1
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 
@@ -5779,7 +5779,7 @@
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   iScsiName: !str:VimString 
-                    str: iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-temp2
+                    str: iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-temp2
                     "@vimType": 
                     "@xsiType": :"SOAP::SOAPString"
                   __iv__@vimType: 

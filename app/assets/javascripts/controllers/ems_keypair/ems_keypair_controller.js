@@ -67,5 +67,5 @@
   };
 
   EmsKeypairController.$inject = ["$scope"];
-  ManageIQ.angular.app.controller('emsKeypairController', EmsKeypairController);
+  NOVAHawk.angular.app.controller('emsKeypairController', EmsKeypairController);
 })();

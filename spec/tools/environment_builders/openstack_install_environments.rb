@@ -26,7 +26,7 @@ def usage(s)
 end
 
 unless File.exist?("openstack_environments.yml")
-  raise ArgumentError, usage("expecting openstack_environments.yml in ManageIQ root dir")
+  raise ArgumentError, usage("expecting openstack_environments.yml in NOVAHawk root dir")
 end
 
 @only_environment = nil

@@ -40,7 +40,7 @@ module ApplicationController::MiqRequestMethods
           end
         end
         if @edit.fetch_path(:new, :schedule_type, 0) == "schedule"
-          page << "ManageIQ.calendar.calDateFrom = new Date(#{@timezone_offset});"
+          page << "NOVAHawk.calendar.calDateFrom = new Date(#{@timezone_offset});"
           page << "miqBuildCalendar();"
         end
         if @edit.fetch_path(:new, :owner_email).blank?
@@ -178,12 +178,12 @@ module ApplicationController::MiqRequestMethods
   def get_template_kls
     # when clone/migrate buttons are pressed from a sub list view,
     # these buttons are only available on Infra side
-    return ManageIQ::Providers::InfraManager::Template if params[:prov_type]
+    return NOVAHawk::Providers::InfraManager::Template if params[:prov_type]
     case request.parameters[:controller]
     when "vm_cloud"
-      return ManageIQ::Providers::CloudManager::Template
+      return NOVAHawk::Providers::CloudManager::Template
     when "vm_infra"
-      return ManageIQ::Providers::InfraManager::Template
+      return NOVAHawk::Providers::InfraManager::Template
     else
       return MiqTemplate
     end
@@ -519,7 +519,7 @@ module ApplicationController::MiqRequestMethods
     workflow = @edit.try(:[], :wf) && !@edit[:stamp_typ] ? @edit[:wf] : @options[:wf]
     case workflow
     when MiqProvisionVirtWorkflow                    then "shared/views/prov_dialog"
-    when ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionWorkflow then "prov_configured_system_foreman_dialog"
+    when NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionWorkflow then "prov_configured_system_foreman_dialog"
     when MiqHostProvisionWorkflow                    then "prov_host_dialog"
     when VmMigrateWorkflow                           then "prov_vm_migrate_dialog"
     end
@@ -852,7 +852,7 @@ module ApplicationController::MiqRequestMethods
         @edit[:new] = @edit[:new].merge pre_prov_values.select { |k| !@edit[:new].keys.include?(k) }
       end
 
-      if @edit[:wf].kind_of?(ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionWorkflow)
+      if @edit[:wf].kind_of?(NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionWorkflow)
         # BD TODO
       else
         @edit[:ds_sortdir] ||= "DESC"
@@ -912,7 +912,7 @@ module ApplicationController::MiqRequestMethods
             @edit[:prov_type] = "VM Provision"
             if @edit[:org_controller] == "service_template"
               options[:service_template_request] = true
-              ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow
+              NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow
             else
               options[:src_vm_id]    = @edit[:prov_id]
               options[:request_type] = params[:prov_type].to_sym
@@ -923,7 +923,7 @@ module ApplicationController::MiqRequestMethods
         options[:initial_pass]             = true  unless req
         options[:service_template_request] = true  if @edit[:org_controller] == "service_template"
         options[:use_pre_dialog]           = false if @workflow_exists
-        # setting class to ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow for requests where src_vm_id is
+        # setting class to NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow for requests where src_vm_id is
         # not already set, i.e catalogitem
         src_vm_id =
           if @edit.fetch_path(:new, :src_vm_id, 0).present?
@@ -953,7 +953,7 @@ module ApplicationController::MiqRequestMethods
     elsif @edit[:org_controller] == "configured_system"
       @edit[:prov_type] = "ConfiguredSystem"
       @edit[:new][:src_configured_system_ids] = params[:prov_id].kind_of?(Array) ? params[:prov_id] : [params[:prov_id]]
-      wf_type = ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionWorkflow
+      wf_type = NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionWorkflow
     else
       @edit[:prov_type] = "Host"
       if @edit[:new].empty?

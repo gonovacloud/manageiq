@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::NetworkManager::SecurityGroup < ::SecurityGroup
+class NOVAHawk::Providers::Openstack::NetworkManager::SecurityGroup < ::SecurityGroup
   supports :create
 
   supports :delete do

@@ -2,7 +2,7 @@ class NamespaceEmsOpenstackAvailabilityZonesNull < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    AvailabilityZoneOpenstackNull               ManageIQ::Providers::Openstack::CloudManager::AvailabilityZoneNull
+    AvailabilityZoneOpenstackNull               NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZoneNull
   )]
 
   def change

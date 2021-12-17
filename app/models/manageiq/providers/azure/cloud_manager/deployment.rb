@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::CloudManager::Deployment
+module NOVAHawk::Providers::Azure::CloudManager::Deployment
   extend ActiveSupport::Concern
 
   def deployment_failed?(deployment)

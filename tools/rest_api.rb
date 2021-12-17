@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-# Helper Script to access the ManageIQ REST API
+# Helper Script to access the NOVAHawk REST API
 #
 # Makes use of the Trollop and Faraday Client Gems
 #   gem install trollop
@@ -80,7 +80,7 @@ class RestApi
       params    = {}
 
       opts = Trollop.options do
-        version "#{API_CMD} #{VERSION} - ManageIQ REST API Access Script"
+        version "#{API_CMD} #{VERSION} - NOVAHawk REST API Access Script"
         banner <<-EOS
       #{version}
 

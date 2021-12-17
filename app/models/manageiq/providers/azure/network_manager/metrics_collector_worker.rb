@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Azure::NetworkManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
+class NOVAHawk::Providers::Azure::NetworkManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
   self.default_queue_name = "azure_network"
 
   def friendly_name
@@ -6,7 +6,7 @@ class ManageIQ::Providers::Azure::NetworkManager::MetricsCollectorWorker < ::Miq
   end
 
   def self.ems_class
-    ManageIQ::Providers::Azure::NetworkManager
+    NOVAHawk::Providers::Azure::NetworkManager
   end
 
   def self.settings_name

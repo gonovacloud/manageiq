@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class ContainerManager < BaseManager
     include AvailabilityMixin
 
@@ -48,7 +48,7 @@ module ManageIQ::Providers
 
     # enables overide of ChartsLayoutService#find_chart_path
     def chart_layout_path
-      "ManageIQ_Providers_ContainerManager"
+      "NOVAHawk_Providers_ContainerManager"
     end
 
     def validate_timeline

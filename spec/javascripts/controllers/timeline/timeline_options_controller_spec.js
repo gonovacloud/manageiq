@@ -1,7 +1,7 @@
 describe('timelineOptionsController', function() {
     var $scope, $controller, $httpBackend, miqService;
 
-    beforeEach(module('ManageIQ'));
+    beforeEach(module('NOVAHawk'));
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, _$controller_, _miqService_) {
         miqService = _miqService_;

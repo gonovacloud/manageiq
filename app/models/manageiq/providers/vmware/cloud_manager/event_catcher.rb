@@ -1,8 +1,8 @@
-class ManageIQ::Providers::Vmware::CloudManager::EventCatcher < ::MiqEventCatcher
+class NOVAHawk::Providers::Vmware::CloudManager::EventCatcher < ::MiqEventCatcher
   require_nested :Runner
 
   def self.ems_class
-    ManageIQ::Providers::Vmware::CloudManager
+    NOVAHawk::Providers::Vmware::CloudManager
   end
 
   def self.settings_name

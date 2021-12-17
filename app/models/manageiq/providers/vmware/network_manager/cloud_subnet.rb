@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Vmware::NetworkManager::CloudSubnet < ::CloudSubnet
+class NOVAHawk::Providers::Vmware::NetworkManager::CloudSubnet < ::CloudSubnet
 end

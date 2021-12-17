@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Redhat_InfraManager_Provision < MiqAeServiceMiqProvision
+  class MiqAeServiceNOVAHawk_Providers_Redhat_InfraManager_Provision < MiqAeServiceMiqProvision
   end
 end

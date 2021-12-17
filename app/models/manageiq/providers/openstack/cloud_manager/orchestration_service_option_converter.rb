@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Openstack::CloudManager::OrchestrationServiceOptionConverter < ::ServiceOrchestration::OptionConverter
     def stack_create_options
       on_failure = @dialog_options['dialog_stack_onfailure']

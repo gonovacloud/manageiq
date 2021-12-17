@@ -3,7 +3,7 @@ class CorrectStiTypeOnCloudResourceQuota < ActiveRecord::Migration[5.0]
     self.inheritance_column = :_type_disabled
   end
 
-  NEW_TYPE = 'ManageIQ::Providers::Openstack::CloudManager::CloudResourceQuota'.freeze
+  NEW_TYPE = 'NOVAHawk::Providers::Openstack::CloudManager::CloudResourceQuota'.freeze
   OLD_TYPE = 'CloudResourceQuotaOpenstack'.freeze
   EVEN_OLDER_TYPE = 'OpenstackResourceQuota'.freeze
 

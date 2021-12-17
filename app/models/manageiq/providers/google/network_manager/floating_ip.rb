@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::NetworkManager::FloatingIp < ::FloatingIp
+class NOVAHawk::Providers::Google::NetworkManager::FloatingIp < ::FloatingIp
 end

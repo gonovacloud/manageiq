@@ -2,27 +2,27 @@ class RemoveAtomicContainerProviders < ActiveRecord::Migration[5.0]
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    ManageIQ::Providers::Atomic::ContainerManager                                 ManageIQ::Providers::Openshift::ContainerManager
-    ManageIQ::Providers::Atomic::ContainerManager::EventCatcher                   ManageIQ::Providers::Openshift::ContainerManager::EventCatcher
-    ManageIQ::Providers::Atomic::ContainerManager::EventCatcher::Runner           ManageIQ::Providers::Openshift::ContainerManager::EventCatcher::Runner
-    ManageIQ::Providers::Atomic::ContainerManager::EventParser                    ManageIQ::Providers::Openshift::ContainerManager::EventParser
-    ManageIQ::Providers::Atomic::ContainerManager::MetricsCollectorWorker         ManageIQ::Providers::Openshift::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::Atomic::ContainerManager::MetricsCollectorWorker::Runner ManageIQ::Providers::Openshift::ContainerManager::MetricsCollectorWorker::Runner
-    ManageIQ::Providers::Atomic::ContainerManager::RefreshParser                  ManageIQ::Providers::Openshift::ContainerManager::RefreshParser
-    ManageIQ::Providers::Atomic::ContainerManager::RefreshWorker                  ManageIQ::Providers::Openshift::ContainerManager::RefreshWorker
-    ManageIQ::Providers::Atomic::ContainerManager::RefreshWorker::Runner          ManageIQ::Providers::Openshift::ContainerManager::RefreshWorker::Runner
-    ManageIQ::Providers::Atomic::ContainerManager::Refresher                      ManageIQ::Providers::Openshift::ContainerManager::Refresher
+    NOVAHawk::Providers::Atomic::ContainerManager                                 NOVAHawk::Providers::Openshift::ContainerManager
+    NOVAHawk::Providers::Atomic::ContainerManager::EventCatcher                   NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher
+    NOVAHawk::Providers::Atomic::ContainerManager::EventCatcher::Runner           NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher::Runner
+    NOVAHawk::Providers::Atomic::ContainerManager::EventParser                    NOVAHawk::Providers::Openshift::ContainerManager::EventParser
+    NOVAHawk::Providers::Atomic::ContainerManager::MetricsCollectorWorker         NOVAHawk::Providers::Openshift::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Atomic::ContainerManager::MetricsCollectorWorker::Runner NOVAHawk::Providers::Openshift::ContainerManager::MetricsCollectorWorker::Runner
+    NOVAHawk::Providers::Atomic::ContainerManager::RefreshParser                  NOVAHawk::Providers::Openshift::ContainerManager::RefreshParser
+    NOVAHawk::Providers::Atomic::ContainerManager::RefreshWorker                  NOVAHawk::Providers::Openshift::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::Atomic::ContainerManager::RefreshWorker::Runner          NOVAHawk::Providers::Openshift::ContainerManager::RefreshWorker::Runner
+    NOVAHawk::Providers::Atomic::ContainerManager::Refresher                      NOVAHawk::Providers::Openshift::ContainerManager::Refresher
 
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager                                 ManageIQ::Providers::OpenshiftEnterprise::ContainerManager
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::EventCatcher                   ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::EventCatcher::Runner           ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher::Runner
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::EventParser                    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::EventParser
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::MetricsCollectorWorker         ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::MetricsCollectorWorker::Runner ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker::Runner
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::RefreshParser                  ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::RefreshParser
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::RefreshWorker                  ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::RefreshWorker::Runner          ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker::Runner
-    ManageIQ::Providers::AtomicEnterprise::ContainerManager::Refresher                      ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::Refresher
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager                                 NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::EventCatcher                   NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::EventCatcher::Runner           NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher::Runner
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::EventParser                    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::EventParser
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::MetricsCollectorWorker         NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::MetricsCollectorWorker::Runner NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker::Runner
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::RefreshParser                  NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::RefreshParser
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::RefreshWorker                  NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::RefreshWorker::Runner          NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker::Runner
+    NOVAHawk::Providers::AtomicEnterprise::ContainerManager::Refresher                      NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::Refresher
   )]
 
   class ExtManagementSystem < ActiveRecord::Base
@@ -42,11 +42,11 @@ class RemoveAtomicContainerProviders < ActiveRecord::Migration[5.0]
     end
 
     say_with_time "Rename Atomic to Openshift in Authentication:name" do
-      Authentication.update_all("name = replace(name, 'ManageIQ::Providers::Atomic', 'ManageIQ::Providers::Openshift')")
+      Authentication.update_all("name = replace(name, 'NOVAHawk::Providers::Atomic', 'NOVAHawk::Providers::Openshift')")
     end
 
     say_with_time "Rename Atomic to Openshift in MiqQueue:args" do
-      MiqQueue.update_all("args = replace(args, 'ManageIQ::Providers::Atomic', 'ManageIQ::Providers::Openshift')")
+      MiqQueue.update_all("args = replace(args, 'NOVAHawk::Providers::Atomic', 'NOVAHawk::Providers::Openshift')")
     end
   end
 end

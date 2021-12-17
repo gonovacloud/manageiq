@@ -143,7 +143,7 @@
   </wsdl:binding>
   <wsdl:service name="ServiceNow_ecc_queue">
     <wsdl:port name="ServiceNowSoap" binding="sncns:ServiceNowSoap">
-      <soap:address location="https://manageiqdev.service-now.com/ecc_queue.do?SOAP"/>
+      <soap:address location="https://novahawkdev.service-now.com/ecc_queue.do?SOAP"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

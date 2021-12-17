@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Hawkular::MiddlewareManager do
+describe NOVAHawk::Providers::Hawkular::MiddlewareManager do
   it ".ems_type" do
     expect(described_class.ems_type).to eq('hawkular')
   end

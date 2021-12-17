@@ -267,6 +267,6 @@
                      "ng-click" => "cancelClicked()")
 
 :javascript
-  ManageIQ.angular.app.value('reconfigureFormId', '#{@request_id || "new"}');
-  ManageIQ.angular.app.value('objectIds', #{ @reconfigitems.collect(&:id) });
+  NOVAHawk.angular.app.value('reconfigureFormId', '#{@request_id || "new"}');
+  NOVAHawk.angular.app.value('objectIds', #{ @reconfigitems.collect(&:id) });
   miq_bootstrap('#form_div');

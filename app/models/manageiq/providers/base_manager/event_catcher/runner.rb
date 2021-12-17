@@ -2,7 +2,7 @@ require 'thread'
 require 'concurrent/atomic/event'
 require 'util/duplicate_blocker'
 
-class ManageIQ::Providers::BaseManager::EventCatcher::Runner < ::MiqWorker::Runner
+class NOVAHawk::Providers::BaseManager::EventCatcher::Runner < ::MiqWorker::Runner
   class EventCatcherHandledException < StandardError
   end
 

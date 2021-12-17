@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack < ManageIQ::Providers::CloudManager::OrchestrationStack
+class NOVAHawk::Providers::Vmware::CloudManager::OrchestrationStack < NOVAHawk::Providers::CloudManager::OrchestrationStack
   require_nested :Status
 
   def self.raw_create_stack(orchestration_manager, stack_name, template, options = {})

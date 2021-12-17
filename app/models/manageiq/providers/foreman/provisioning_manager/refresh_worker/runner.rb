@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Foreman::ProvisioningManager::RefreshWorker::Runner < ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+class NOVAHawk::Providers::Foreman::ProvisioningManager::RefreshWorker::Runner < NOVAHawk::Providers::BaseManager::RefreshWorker::Runner
 end

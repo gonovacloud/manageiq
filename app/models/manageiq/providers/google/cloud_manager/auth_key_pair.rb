@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::CloudManager::AuthKeyPair < ManageIQ::Providers::CloudManager::AuthKeyPair
+class NOVAHawk::Providers::Google::CloudManager::AuthKeyPair < NOVAHawk::Providers::CloudManager::AuthKeyPair
 end

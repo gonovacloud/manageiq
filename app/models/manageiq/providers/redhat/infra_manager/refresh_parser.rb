@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
+module NOVAHawk::Providers::Redhat::InfraManager::RefreshParser
   #
   # EMS Inventory Parsing
   #
@@ -50,7 +50,7 @@ module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
       committed   = storage_inv[:committed].to_i
       uncommitted = total - committed
 
-      ems_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(storage_inv[:href])
+      ems_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(storage_inv[:href])
 
       new_result = {
         :ems_ref             => ems_ref,
@@ -119,9 +119,9 @@ module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
       end
 
       host_os_version = host_inv[:os][:version] if host_inv[:os]
-      ems_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(host_inv[:href])
+      ems_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(host_inv[:href])
       new_result = {
-        :type             => 'ManageIQ::Providers::Redhat::InfraManager::Host',
+        :type             => 'NOVAHawk::Providers::Redhat::InfraManager::Host',
         :ems_ref          => ems_ref,
         :ems_ref_obj      => ems_ref,
         :name             => host_inv[:name] || hostname,
@@ -414,7 +414,7 @@ module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
       hardware[:guest_devices], guest_device_uids[mor] = vm_inv_to_guest_device_hashes(vm_inv, lan_uids[host_mor])
       hardware[:networks] = vm_inv_to_network_hashes(vm_inv, guest_device_uids[mor])
 
-      ems_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(vm_inv[:href])
+      ems_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(vm_inv[:href])
 
       new_result = create_vm_hash(template, ems_ref, vm_inv[:id], URI.decode(vm_inv[:name]))
 
@@ -444,7 +444,7 @@ module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
   end
 
   def self.partial_host_hash(partial_host_inv)
-    ems_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(partial_host_inv[:href])
+    ems_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(partial_host_inv[:href])
     {
       :ems_ref     => ems_ref,
       :uid_ems     => partial_host_inv[:id],
@@ -454,7 +454,7 @@ module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
 
   def self.create_vm_hash(template, ems_ref, vm_id, name)
     {
-      :type        => template ? "ManageIQ::Providers::Redhat::InfraManager::Template" : "ManageIQ::Providers::Redhat::InfraManager::Vm",
+      :type        => template ? "NOVAHawk::Providers::Redhat::InfraManager::Template" : "NOVAHawk::Providers::Redhat::InfraManager::Vm",
       :ems_ref     => ems_ref,
       :ems_ref_obj => ems_ref,
       :uid_ems     => vm_id,
@@ -662,7 +662,7 @@ module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
       }
       result_res_pools << default_res_pool
 
-      ems_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(data[:href])
+      ems_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(data[:href])
 
       new_result = {
         :ems_ref       => ems_ref,
@@ -709,7 +709,7 @@ module ManageIQ::Providers::Redhat::InfraManager::RefreshParser
       vms = vm_uids.values.select { |v| v.fetch_path(:ems_cluster, :datacenter_id) == uid }
       vm_folder[:ems_children] = {:vms => vms}
 
-      ems_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(data[:href])
+      ems_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(data[:href])
 
       new_result = {
         :name         => data[:name],

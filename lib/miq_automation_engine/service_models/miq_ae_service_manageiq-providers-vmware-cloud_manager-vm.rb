@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Vmware_CloudManager_Vm < MiqAeServiceManageIQ_Providers_CloudManager_Vm
+  class MiqAeServiceNOVAHawk_Providers_Vmware_CloudManager_Vm < MiqAeServiceNOVAHawk_Providers_CloudManager_Vm
   end
 end

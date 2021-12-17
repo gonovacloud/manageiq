@@ -1,7 +1,7 @@
 describe('emsCommonFormController', function() {
   var $scope, $controller, $httpBackend, miqService, compile;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function(_$httpBackend_, $rootScope, _$controller_, _miqService_, _$compile_) {
     miqService = _miqService_;
@@ -393,7 +393,7 @@ describe('emsCommonFormController', function() {
 describe('emsCommonFormController in the context of ems infra provider', function() {
   var $scope, $controller, $httpBackend, miqService, compile;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function (_$httpBackend_, $rootScope, _$controller_, _miqService_, _$compile_) {
     miqService = _miqService_;
@@ -657,7 +657,7 @@ describe('emsCommonFormController in the context of ems infra provider', functio
 describe('emsCommonFormController in the context of ems middleware provider', function () {
   var $scope, $controller, $httpBackend, miqService, compile;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function (_$httpBackend_, $rootScope, _$controller_, _miqService_, _$compile_) {
     miqService = _miqService_;

@@ -16,8 +16,8 @@ describe MiqVimBrokerWorker::Runner do
     allow_any_instance_of(described_class).to receive(:sync_active_roles)
     allow_any_instance_of(described_class).to receive(:sync_config)
     allow_any_instance_of(described_class).to receive(:set_connection_pool_size)
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive(:authentication_check).and_return([true, ""])
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive(:authentication_status_ok?).and_return(true)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive(:authentication_check).and_return([true, ""])
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive(:authentication_status_ok?).and_return(true)
   end
 
   it "#after_initialize" do

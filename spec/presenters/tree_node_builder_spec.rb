@@ -773,7 +773,7 @@ describe TreeNodeBuilder do
       )
     end
 
-    it "ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate node" do
+    it "NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate node" do
       template = FactoryGirl.build(:orchestration_template_vmware_cloud_with_content)
       node = TreeNodeBuilder.build(template, nil, {})
       expect(node).to eq(
@@ -1027,16 +1027,16 @@ describe TreeNodeBuilder do
       # Template classes
       {
         :miq_template          => "Base",
-        :template_cloud        => "ManageIQ::Providers::CloudManager::Template",
-        :template_infra        => "ManageIQ::Providers::InfraManager::Template",
-        :template_amazon       => "ManageIQ::Providers::Amazon::CloudManager::Template",
-        :template_azure        => "ManageIQ::Providers::Azure::CloudManager::Template",
-        :template_google       => "ManageIQ::Providers::Google::CloudManager::Template",
-        :template_openstack    => "ManageIQ::Providers::Openstack::CloudManager::Template",
-        :template_vmware_cloud => "ManageIQ::Providers::Vmware::CloudManager::Template",
-        :template_microsoft    => "ManageIQ::Providers::Microsoft::InfraManager::Template",
-        :template_redhat       => "ManageIQ::Providers::Microsoft::InfraManager::Template",
-        :template_vmware       => "ManageIQ::Providers::Vmware::InfraManager::Template",
+        :template_cloud        => "NOVAHawk::Providers::CloudManager::Template",
+        :template_infra        => "NOVAHawk::Providers::InfraManager::Template",
+        :template_amazon       => "NOVAHawk::Providers::Amazon::CloudManager::Template",
+        :template_azure        => "NOVAHawk::Providers::Azure::CloudManager::Template",
+        :template_google       => "NOVAHawk::Providers::Google::CloudManager::Template",
+        :template_openstack    => "NOVAHawk::Providers::Openstack::CloudManager::Template",
+        :template_vmware_cloud => "NOVAHawk::Providers::Vmware::CloudManager::Template",
+        :template_microsoft    => "NOVAHawk::Providers::Microsoft::InfraManager::Template",
+        :template_redhat       => "NOVAHawk::Providers::Microsoft::InfraManager::Template",
+        :template_vmware       => "NOVAHawk::Providers::Vmware::InfraManager::Template",
         :template_xen          => "TemplateXen",
       }.each do |factory, vm_type|
         it vm_type do
@@ -1054,17 +1054,17 @@ describe TreeNodeBuilder do
       # Vm classes
       {
         :vm              => "Base",
-        :vm_cloud        => "ManageIQ::Providers::CloudManager::Vm",
-        :vm_infra        => "ManageIQ::Providers::InfraManager::Vm",
+        :vm_cloud        => "NOVAHawk::Providers::CloudManager::Vm",
+        :vm_infra        => "NOVAHawk::Providers::InfraManager::Vm",
         :vm_server       => "VmServer",
-        :vm_amazon       => "ManageIQ::Providers::Amazon::CloudManager::Vm",
-        :vm_azure        => "ManageIQ::Providers::Azure::CloudManager::Vm",
-        :vm_google       => "ManageIQ::Providers::Google::CloudManager::Vm",
-        :vm_openstack    => "ManageIQ::Providers::Openstack::CloudManager::Vm",
-        :vm_vmware_cloud => "ManageIQ::Providers::Vmware::CloudManager::Vm",
-        :vm_microsoft    => "ManageIQ::Providers::Microsoft::InfraManager::Vm",
-        :vm_redhat       => "ManageIQ::Providers::Redhat::InfraManager::Vm",
-        :vm_vmware       => "ManageIQ::Providers::Vmware::InfraManager::Vm",
+        :vm_amazon       => "NOVAHawk::Providers::Amazon::CloudManager::Vm",
+        :vm_azure        => "NOVAHawk::Providers::Azure::CloudManager::Vm",
+        :vm_google       => "NOVAHawk::Providers::Google::CloudManager::Vm",
+        :vm_openstack    => "NOVAHawk::Providers::Openstack::CloudManager::Vm",
+        :vm_vmware_cloud => "NOVAHawk::Providers::Vmware::CloudManager::Vm",
+        :vm_microsoft    => "NOVAHawk::Providers::Microsoft::InfraManager::Vm",
+        :vm_redhat       => "NOVAHawk::Providers::Redhat::InfraManager::Vm",
+        :vm_vmware       => "NOVAHawk::Providers::Vmware::InfraManager::Vm",
         :vm_xen          => "VmXen",
       }.each do |factory, vm_type|
         it vm_type do

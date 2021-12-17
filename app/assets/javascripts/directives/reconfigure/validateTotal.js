@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('validateTotal', function() {
+NOVAHawk.angular.app.directive('validateTotal', function() {
   return {
     require: 'ngModel',
     link: function(_scope, _elm, attrs, ctrl) {

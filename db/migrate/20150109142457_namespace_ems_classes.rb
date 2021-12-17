@@ -2,27 +2,27 @@ class NamespaceEmsClasses < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    EmsCloud                               ManageIQ::Providers::CloudManager
-    HostCloud                              ManageIQ::Providers::CloudManager::Host
-    TemplateCloud                          ManageIQ::Providers::CloudManager::Template
-    VmCloud                                ManageIQ::Providers::CloudManager::Vm
+    EmsCloud                               NOVAHawk::Providers::CloudManager
+    HostCloud                              NOVAHawk::Providers::CloudManager::Host
+    TemplateCloud                          NOVAHawk::Providers::CloudManager::Template
+    VmCloud                                NOVAHawk::Providers::CloudManager::Vm
 
-    EmsInfra                               ManageIQ::Providers::InfraManager
-    HostInfra                              ManageIQ::Providers::InfraManager::Host
-    TemplateInfra                          ManageIQ::Providers::InfraManager::Template
-    VmInfra                                ManageIQ::Providers::InfraManager::Vm
+    EmsInfra                               NOVAHawk::Providers::InfraManager
+    HostInfra                              NOVAHawk::Providers::InfraManager::Host
+    TemplateInfra                          NOVAHawk::Providers::InfraManager::Template
+    VmInfra                                NOVAHawk::Providers::InfraManager::Vm
 
-    EmsVmware                              ManageIQ::Providers::Vmware::InfraManager
-    MiqEventCatcherVmware                  ManageIQ::Providers::Vmware::InfraManager::EventCatcher
-    EventCatcherVmware                     ManageIQ::Providers::Vmware::InfraManager::EventCatcher::Runner
-    HostVmware                             ManageIQ::Providers::Vmware::InfraManager::Host
-    HostVmwareEsx                          ManageIQ::Providers::Vmware::InfraManager::HostEsx
-    MiqEmsMetricsCollectorWorkerVmware     ManageIQ::Providers::Vmware::InfraManager::MetricsCollectorWorker
-    EmsMetricsCollectorWorkerVmware        ManageIQ::Providers::Vmware::InfraManager::MetricsCollectorWorker::Runner
-    MiqEmsRefreshWorkerVmware              ManageIQ::Providers::Vmware::InfraManager::RefreshWorker
-    EmsRefreshWorkerVmware                 ManageIQ::Providers::Vmware::InfraManager::RefreshWorker::Runner
-    TemplateVmware                         ManageIQ::Providers::Vmware::InfraManager::Template
-    VmVmware                               ManageIQ::Providers::Vmware::InfraManager::Vm
+    EmsVmware                              NOVAHawk::Providers::Vmware::InfraManager
+    MiqEventCatcherVmware                  NOVAHawk::Providers::Vmware::InfraManager::EventCatcher
+    EventCatcherVmware                     NOVAHawk::Providers::Vmware::InfraManager::EventCatcher::Runner
+    HostVmware                             NOVAHawk::Providers::Vmware::InfraManager::Host
+    HostVmwareEsx                          NOVAHawk::Providers::Vmware::InfraManager::HostEsx
+    MiqEmsMetricsCollectorWorkerVmware     NOVAHawk::Providers::Vmware::InfraManager::MetricsCollectorWorker
+    EmsMetricsCollectorWorkerVmware        NOVAHawk::Providers::Vmware::InfraManager::MetricsCollectorWorker::Runner
+    MiqEmsRefreshWorkerVmware              NOVAHawk::Providers::Vmware::InfraManager::RefreshWorker
+    EmsRefreshWorkerVmware                 NOVAHawk::Providers::Vmware::InfraManager::RefreshWorker::Runner
+    TemplateVmware                         NOVAHawk::Providers::Vmware::InfraManager::Template
+    VmVmware                               NOVAHawk::Providers::Vmware::InfraManager::Vm
   )]
 
   def change

@@ -1,6 +1,6 @@
 require 'ansible_tower_client'
 require 'faraday'
-describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job do
+describe NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job do
   let(:faraday_connection) { instance_double("Faraday::Connection", :post => post, :get => get) }
   let(:post) { instance_double("Faraday::Result", :body => {}.to_json) }
   let(:get)  { instance_double("Faraday::Result", :body => {'id' => 1}.to_json) }
@@ -27,7 +27,7 @@ describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job do
       it 'creates a job' do
         expect(template).to receive(:run).and_return(the_raw_job)
 
-        job = ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job.create_job(template, {})
+        job = NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job.create_job(template, {})
         expect(job.class).to                 eq(described_class)
         expect(job.name).to                  eq(template.name)
         expect(job.ems_ref).to               eq(the_raw_job.id)
@@ -40,7 +40,7 @@ describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job do
         expect(template).to receive(:run).and_raise('bad request')
 
         expect do
-          ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job.create_job(template, {})
+          NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job.create_job(template, {})
         end.to raise_error(MiqException::MiqOrchestrationProvisionError)
       end
     end

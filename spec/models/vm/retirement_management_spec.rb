@@ -33,7 +33,7 @@ describe "VM Retirement Management" do
 
   it "#retire_now with userid" do
     event_name = 'request_vm_retire'
-    event_hash = {:vm => @vm, :host => @vm.host, :type => "ManageIQ::Providers::Vmware::InfraManager::Vm",
+    event_hash = {:vm => @vm, :host => @vm.host, :type => "NOVAHawk::Providers::Vmware::InfraManager::Vm",
                   :retirement_initiator => "user", :userid => 'freddy'}
     options = {:zone => @zone.name}
 
@@ -44,7 +44,7 @@ describe "VM Retirement Management" do
 
   it "#retire_now without userid" do
     event_name = 'request_vm_retire'
-    event_hash = {:vm => @vm, :host => @vm.host, :type => "ManageIQ::Providers::Vmware::InfraManager::Vm",
+    event_hash = {:vm => @vm, :host => @vm.host, :type => "NOVAHawk::Providers::Vmware::InfraManager::Vm",
                   :retirement_initiator => "system"}
     options = {:zone => @zone.name}
 
@@ -143,7 +143,7 @@ describe "VM Retirement Management" do
 
   it "#raise_retirement_event" do
     event_name = 'foo'
-    event_hash = {:vm => @vm, :host => @vm.host, :type => "ManageIQ::Providers::Vmware::InfraManager::Vm",
+    event_hash = {:vm => @vm, :host => @vm.host, :type => "NOVAHawk::Providers::Vmware::InfraManager::Vm",
                   :retirement_initiator => "system"}
     options = {:zone => @vm.my_zone}
 

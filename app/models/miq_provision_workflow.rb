@@ -8,11 +8,11 @@ class MiqProvisionWorkflow < MiqRequestWorkflow
 
     if classy =~ /(.*)Infra/
       find_matching_constant("MiqProvision#{classy}Workflow") ||
-        find_matching_constant("ManageIQ::Providers::#{$1}::InfraManager::ProvisionWorkflow")
+        find_matching_constant("NOVAHawk::Providers::#{$1}::InfraManager::ProvisionWorkflow")
     else
       find_matching_constant("MiqProvision#{classy}Workflow") ||
-        find_matching_constant("ManageIQ::Providers::#{classy}::CloudManager::ProvisionWorkflow") ||
-        find_matching_constant("ManageIQ::Providers::#{classy}::InfraManager::ProvisionWorkflow")
+        find_matching_constant("NOVAHawk::Providers::#{classy}::CloudManager::ProvisionWorkflow") ||
+        find_matching_constant("NOVAHawk::Providers::#{classy}::InfraManager::ProvisionWorkflow")
     end
   end
 

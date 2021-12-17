@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Foreman::ProvisioningManager < ManageIQ::Providers::ProvisioningManager
+class NOVAHawk::Providers::Foreman::ProvisioningManager < NOVAHawk::Providers::ProvisioningManager
   require_nested :Refresher
   require_nested :RefreshParser
   require_nested :RefreshWorker

@@ -141,12 +141,12 @@ describe ApplicationHelper do
 
   describe "#object_types_for_flash_message" do
     before do
-      @record_1 = FactoryGirl.create(:vm_openstack, :type => ManageIQ::Providers::Openstack::CloudManager::Vm.name,       :template => false)
-      @record_2 = FactoryGirl.create(:vm_openstack, :type => ManageIQ::Providers::Openstack::CloudManager::Vm.name,       :template => false)
-      @record_3 = FactoryGirl.create(:vm_openstack, :type => ManageIQ::Providers::Openstack::CloudManager::Template.name, :template => true)
-      @record_4 = FactoryGirl.create(:vm_openstack, :type => ManageIQ::Providers::Openstack::CloudManager::Template.name, :template => true)
-      @record_5 = FactoryGirl.create(:vm_redhat,    :type => ManageIQ::Providers::Redhat::InfraManager::Vm.name)
-      @record_6 = FactoryGirl.create(:vm_vmware,    :type => ManageIQ::Providers::Vmware::InfraManager::Vm.name)
+      @record_1 = FactoryGirl.create(:vm_openstack, :type => NOVAHawk::Providers::Openstack::CloudManager::Vm.name,       :template => false)
+      @record_2 = FactoryGirl.create(:vm_openstack, :type => NOVAHawk::Providers::Openstack::CloudManager::Vm.name,       :template => false)
+      @record_3 = FactoryGirl.create(:vm_openstack, :type => NOVAHawk::Providers::Openstack::CloudManager::Template.name, :template => true)
+      @record_4 = FactoryGirl.create(:vm_openstack, :type => NOVAHawk::Providers::Openstack::CloudManager::Template.name, :template => true)
+      @record_5 = FactoryGirl.create(:vm_redhat,    :type => NOVAHawk::Providers::Redhat::InfraManager::Vm.name)
+      @record_6 = FactoryGirl.create(:vm_vmware,    :type => NOVAHawk::Providers::Vmware::InfraManager::Vm.name)
     end
 
     context "when formatting flash message for VM or Templates class" do
@@ -488,8 +488,8 @@ describe ApplicationHelper do
       end
     end
 
-    context "when with ManageIQ::Providers::ContainerManager" do
-      before { @db = "ManageIQ::Providers::ContainerManager" }
+    context "when with NOVAHawk::Providers::ContainerManager" do
+      before { @db = "NOVAHawk::Providers::ContainerManager" }
 
       it "and @explorer" do
         @explorer = true
@@ -1196,7 +1196,7 @@ describe ApplicationHelper do
     context "when the controller uses restful paths" do
       before do
         FactoryGirl.create(:ems_cloud, :zone => Zone.seed)
-        @record = ManageIQ::Providers::CloudManager.first
+        @record = NOVAHawk::Providers::CloudManager.first
         get "/ems_cloud/#{@record.id}", :params => { :display => 'images' }
         allow_any_instance_of(Object).to receive(:query_string).and_return(@request.query_string)
         allow_message_expectations_on_nil
@@ -1677,7 +1677,7 @@ describe ApplicationHelper do
       expect(
         helper.view_to_association(
           view,
-          ManageIQ::Providers::Vmware::InfraManager::Host.new
+          NOVAHawk::Providers::Vmware::InfraManager::Host.new
         )
       ).to eq('host_services')
     end

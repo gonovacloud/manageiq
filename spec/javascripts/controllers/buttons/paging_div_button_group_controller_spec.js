@@ -1,7 +1,7 @@
 describe('pagingDivButtonGroupController', function() {
   var $scope, $controller, miqService, $compile;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, _$controller_, _miqService_, _$compile_) {
     miqService = _miqService_;

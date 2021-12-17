@@ -1,6 +1,6 @@
 require 'azure-armrest'
 
-describe ManageIQ::Providers::Azure::CloudManager::MetricsCapture do
+describe NOVAHawk::Providers::Azure::CloudManager::MetricsCapture do
   let(:ems)      { FactoryGirl.create(:ems_azure) }
   let(:vm)       { FactoryGirl.build(:vm_azure, :ext_management_system => ems, :ems_ref => "my_ems_ref") }
 

@@ -1,4 +1,4 @@
-ManageIQ.angular.app.service('topologyService', function() {
+NOVAHawk.angular.app.service('topologyService', function() {
   this.tooltip = function tooltip(d) {
     var status = [
       __("Name: ") + d.item.name,

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Provision::Disk do
+describe NOVAHawk::Providers::Redhat::InfraManager::Provision::Disk do
   let(:ems)           { FactoryGirl.create(:ems_redhat_with_authentication) }
   let(:template)      { FactoryGirl.create(:template_redhat, :ext_management_system => ems) }
   let(:rhevm_vm)      { FactoryGirl.build(:vm_redhat) }

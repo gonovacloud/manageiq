@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Kubernetes::ContainerManager::MetricsCollectorWorker < BaseManager::MetricsCollectorWorker
     require_nested :Runner
 
@@ -9,7 +9,7 @@ module ManageIQ::Providers
     end
 
     def self.ems_class
-      ManageIQ::Providers::Kubernetes::ContainerManager
+      NOVAHawk::Providers::Kubernetes::ContainerManager
     end
   end
 end

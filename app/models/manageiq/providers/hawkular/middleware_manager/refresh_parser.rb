@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Hawkular
     class MiddlewareManager::RefreshParser
       include ::HawkularUtilsMixin
@@ -129,9 +129,9 @@ module ManageIQ::Providers
 
       def uuid_provider_types
         # after the PoC, we might want to test/support these extra providers:
-        # ManageIQ::Providers::Openstack::CloudManager::Vm
-        # ManageIQ::Providers::Vmware::InfraManager::Vm
-        'ManageIQ::Providers::Redhat::InfraManager::Vm'
+        # NOVAHawk::Providers::Openstack::CloudManager::Vm
+        # NOVAHawk::Providers::Vmware::InfraManager::Vm
+        'NOVAHawk::Providers::Redhat::InfraManager::Vm'
       end
 
       def fetch_server_entities

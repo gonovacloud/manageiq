@@ -1,5 +1,5 @@
 require Rails.root.join(
-  'db/fixtures/ae_datastore/ManageIQ/Infrastructure/VM/Provisioning/Naming.class/__methods__/vmname'
+  'db/fixtures/ae_datastore/NOVAHawk/Infrastructure/VM/Provisioning/Naming.class/__methods__/vmname'
 ).to_s
 
 describe VmName do

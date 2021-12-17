@@ -131,7 +131,7 @@ describe Rbac::Filterer do
         it "can see descendant tenant's Openstack Vm" do
           child_openstack_vm
 
-          results = described_class.search(:class => "ManageIQ::Providers::Openstack::CloudManager::Vm", :miq_group => owner_group).first
+          results = described_class.search(:class => "NOVAHawk::Providers::Openstack::CloudManager::Vm", :miq_group => owner_group).first
           expect(results).to match_array [child_openstack_vm]
         end
 
@@ -618,12 +618,12 @@ describe Rbac::Filterer do
         end
 
         it "honors ems_id conditions" do
-          results = described_class.search(:class => "ManageIQ::Providers::Vmware::InfraManager::Template", :conditions => ["ems_id IS NULL"])
+          results = described_class.search(:class => "NOVAHawk::Providers::Vmware::InfraManager::Template", :conditions => ["ems_id IS NULL"])
           objects = results.first
           expect(objects).to eq([])
 
           @template.update_attributes(:ext_management_system => nil)
-          results = described_class.search(:class => "ManageIQ::Providers::Vmware::InfraManager::Template", :conditions => ["ems_id IS NULL"])
+          results = described_class.search(:class => "NOVAHawk::Providers::Vmware::InfraManager::Template", :conditions => ["ems_id IS NULL"])
           objects = results.first
           expect(objects).to eq([@template])
         end
@@ -808,7 +808,7 @@ describe Rbac::Filterer do
           group.entitlement.set_managed_filters([])
           group.save!
 
-          ["ManageIQ::Providers::Vmware::InfraManager::Vm", "Vm"].each do |klass|
+          ["NOVAHawk::Providers::Vmware::InfraManager::Vm", "Vm"].each do |klass|
             results2 = described_class.search(:class => klass, :user => user).first
             expect(results2.length).to eq(1)
           end
@@ -816,7 +816,7 @@ describe Rbac::Filterer do
           results2 = described_class.search(:class => "VmOrTemplate", :user => user).first
           expect(results2.length).to eq(2)
 
-          ["ManageIQ::Providers::Vmware::InfraManager::Template", "MiqTemplate"].each do |klass|
+          ["NOVAHawk::Providers::Vmware::InfraManager::Template", "MiqTemplate"].each do |klass|
             results2 = described_class.search(:class => klass, :user => user).first
             expect(results2.length).to eq(1)
           end
@@ -963,15 +963,15 @@ describe Rbac::Filterer do
           group.save!
         end
 
-        (described_class::NETWORK_MODELS_FOR_BELONGSTO_FILTER + [ManageIQ::Providers::NetworkManager]).each do |network_model|
+        (described_class::NETWORK_MODELS_FOR_BELONGSTO_FILTER + [NOVAHawk::Providers::NetworkManager]).each do |network_model|
           describe ".search" do
             let!(:network_object) do
-              return network_manager if network_model == ManageIQ::Providers::NetworkManager
+              return network_manager if network_model == NOVAHawk::Providers::NetworkManager
               FactoryGirl.create(network_model.underscore, :ext_management_system => network_manager)
             end
 
             let!(:network_object_with_different_network_manager) do
-              return network_manager_1 if network_model == ManageIQ::Providers::NetworkManager
+              return network_manager_1 if network_model == NOVAHawk::Providers::NetworkManager
               FactoryGirl.create(network_model.underscore,  :ext_management_system => network_manager_1)
             end
 
@@ -1027,7 +1027,7 @@ describe Rbac::Filterer do
 
           it "lists only tagged network manager" do
             User.with_user(user) do
-              results = described_class.search(:class => ManageIQ::Providers::NetworkManager).first
+              results = described_class.search(:class => NOVAHawk::Providers::NetworkManager).first
               expect(results).to match_array([network_manager])
             end
           end
@@ -1051,8 +1051,8 @@ describe Rbac::Filterer do
 
           it "lists all network managers" do
             User.with_user(user) do
-              results = described_class.search(:class => ManageIQ::Providers::NetworkManager).first
-              expect(results).to match_array(ManageIQ::Providers::NetworkManager.all)
+              results = described_class.search(:class => NOVAHawk::Providers::NetworkManager).first
+              expect(results).to match_array(NOVAHawk::Providers::NetworkManager.all)
             end
           end
         end

@@ -1,7 +1,7 @@
 describe('timerOptionService', function() {
   var testService;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function(timerOptionService) {
     testService = timerOptionService;

@@ -1,7 +1,7 @@
 class SetCorrectStiTypeOnCloudNetwork < ActiveRecord::Migration
-  CLOUD_TEMPLATE_CLASS = "ManageIQ::Providers::Openstack::CloudManager::Template".freeze
-  CLOUD_PUBLIC_CLASS   = "ManageIQ::Providers::Openstack::CloudManager::CloudNetwork::Public".freeze
-  CLOUD_PRIVATE_CLASS  = "ManageIQ::Providers::Openstack::CloudManager::CloudNetwork::Private".freeze
+  CLOUD_TEMPLATE_CLASS = "NOVAHawk::Providers::Openstack::CloudManager::Template".freeze
+  CLOUD_PUBLIC_CLASS   = "NOVAHawk::Providers::Openstack::CloudManager::CloudNetwork::Public".freeze
+  CLOUD_PRIVATE_CLASS  = "NOVAHawk::Providers::Openstack::CloudManager::CloudNetwork::Private".freeze
 
   class ExtManagementSystem < ActiveRecord::Base
     self.inheritance_column = :_type_disabled
@@ -23,12 +23,12 @@ class SetCorrectStiTypeOnCloudNetwork < ActiveRecord::Migration
 
     CloudNetwork.joins(:ext_management_system)
                 .where(:cloud_networks => {:external_facing => true},
-                       :ext_management_systems => {:type => 'ManageIQ::Providers::Openstack::CloudManager'})
+                       :ext_management_systems => {:type => 'NOVAHawk::Providers::Openstack::CloudManager'})
                 .update_all(:type => CLOUD_PUBLIC_CLASS)
 
     CloudNetwork.joins(:ext_management_system)
                 .where.not(:cloud_networks => {:external_facing => true})
-                .where(:ext_management_systems => {:type => 'ManageIQ::Providers::Openstack::InfraManager'})
+                .where(:ext_management_systems => {:type => 'NOVAHawk::Providers::Openstack::InfraManager'})
                 .update_all(:type => CLOUD_PRIVATE_CLASS)
   end
 

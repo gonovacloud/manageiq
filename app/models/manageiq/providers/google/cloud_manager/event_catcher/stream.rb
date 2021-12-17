@@ -1,13 +1,13 @@
 # Helper class responsible for polling a Google Pubsub topic and retreiving
 # event type messages. Parsing of the message is deferred to the caller of
 # #poll.
-class ManageIQ::Providers::Google::CloudManager::EventCatcher::Stream
+class NOVAHawk::Providers::Google::CloudManager::EventCatcher::Stream
   # Generic exception if we are unable to reach GCP
-  class ProviderUnreachable < ManageIQ::Providers::BaseManager::EventCatcher::Runner::TemporaryFailure
+  class ProviderUnreachable < NOVAHawk::Providers::BaseManager::EventCatcher::Runner::TemporaryFailure
   end
 
   # Topic wasn't found (event catcher likely not set up)
-  class TopicNotFound < ManageIQ::Providers::BaseManager::EventCatcher::Runner::TemporaryFailure
+  class TopicNotFound < NOVAHawk::Providers::BaseManager::EventCatcher::Runner::TemporaryFailure
   end
 
   def initialize(ems)
@@ -62,10 +62,10 @@ class ManageIQ::Providers::Google::CloudManager::EventCatcher::Stream
   end
 
   def subscription_name
-    "projects/#{@ems.project}/subscriptions/manageiq-eventcatcher-#{@ems.guid}"
+    "projects/#{@ems.project}/subscriptions/novahawk-eventcatcher-#{@ems.guid}"
   end
 
   def topic_name
-    "projects/#{@ems.project}/topics/manageiq-activity-log"
+    "projects/#{@ems.project}/topics/novahawk-activity-log"
   end
 end

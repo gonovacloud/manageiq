@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::ManagerMixin
+module NOVAHawk::Providers::Azure::ManagerMixin
   extend ActiveSupport::Concern
 
   def connect(options = {})

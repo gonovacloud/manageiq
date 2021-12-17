@@ -1,4 +1,4 @@
-ManageIQ.angular.app.service('miqDBBackupService', function() {
+NOVAHawk.angular.app.service('miqDBBackupService', function() {
   this.knownProtocolsList = ["Anonymous FTP", "FTP", "NFS", "Samba"];
 
   this.logProtocolNotSelected = function(model) {

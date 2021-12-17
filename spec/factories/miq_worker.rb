@@ -12,9 +12,9 @@ FactoryGirl.define do
 
   factory :miq_ems_refresh_worker,
           :parent => :miq_worker,
-          :class  => "ManageIQ::Providers::BaseManager::RefreshWorker"
+          :class  => "NOVAHawk::Providers::BaseManager::RefreshWorker"
 
   factory :ems_refresh_worker_amazon,
           :parent => :miq_ems_refresh_worker,
-          :class  => "ManageIQ::Providers::Amazon::CloudManager::RefreshWorker"
+          :class  => "NOVAHawk::Providers::Amazon::CloudManager::RefreshWorker"
 end

@@ -1,7 +1,7 @@
-module MiqAeServiceManageIQ_Providers_Redhat_InfraManager_VmSpec
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_Redhat_InfraManager_Vm do
+module MiqAeServiceNOVAHawk_Providers_Redhat_InfraManager_VmSpec
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Redhat_InfraManager_Vm do
     let(:vm)         { FactoryGirl.create(:vm_redhat) }
-    let(:service_vm) { MiqAeMethodService::MiqAeServiceManageIQ_Providers_Redhat_InfraManager_Vm.find(vm.id) }
+    let(:service_vm) { MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Redhat_InfraManager_Vm.find(vm.id) }
 
     before do
       allow(MiqServer).to receive(:my_zone).and_return('default')

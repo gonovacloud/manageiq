@@ -1,7 +1,7 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Azure
-    class CloudManager::RefreshParser < ManageIQ::Providers::CloudManager::RefreshParser
-      include ManageIQ::Providers::Azure::RefreshHelperMethods
+    class CloudManager::RefreshParser < NOVAHawk::Providers::CloudManager::RefreshParser
+      include NOVAHawk::Providers::Azure::RefreshHelperMethods
       include Vmdb::Logging
 
       TYPE_DEPLOYMENT = "microsoft.resources/deployments"
@@ -184,7 +184,7 @@ module ManageIQ::Providers
       def parse_series(s)
         name = uid = s.name.downcase
         new_result = {
-          :type           => "ManageIQ::Providers::Azure::CloudManager::Flavor",
+          :type           => "NOVAHawk::Providers::Azure::CloudManager::Flavor",
           :ems_ref        => uid,
           :name           => name,
           :cpus           => s.number_of_cores, # where are the virtual CPUs??
@@ -200,7 +200,7 @@ module ManageIQ::Providers
         id = az.id.downcase
 
         new_result = {
-          :type    => "ManageIQ::Providers::Azure::CloudManager::AvailabilityZone",
+          :type    => "NOVAHawk::Providers::Azure::CloudManager::AvailabilityZone",
           :ems_ref => id,
           :name    => az.name,
         }
@@ -220,7 +220,7 @@ module ManageIQ::Providers
         hardware_network_info = get_hardware_network_info(instance)
 
         new_result = {
-          :type                => 'ManageIQ::Providers::Azure::CloudManager::Vm',
+          :type                => 'NOVAHawk::Providers::Azure::CloudManager::Vm',
           :uid_ems             => uid,
           :ems_ref             => uid,
           :name                => instance.name,
@@ -330,7 +330,7 @@ module ManageIQ::Providers
                            name)
         child_stacks, resources = stack_resources(deployment)
         new_result = {
-          :type           => ManageIQ::Providers::Azure::CloudManager::OrchestrationStack.name,
+          :type           => NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack.name,
           :ems_ref        => deployment.id,
           :name           => name,
           :description    => name,
@@ -360,7 +360,7 @@ module ManageIQ::Providers
         find_by = {:name => deployment.name, :ems_ref => deployment.id, :ext_management_system => @ems}
         # TODO(lsmola) this is generating a huge amount of sql queries? Do we need it? Why do we touch DB here?
         # Can be at least written more effectively
-        stack = ManageIQ::Providers::Azure::CloudManager::OrchestrationStack.find_by(find_by)
+        stack = NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack.find_by(find_by)
         stack.try(:orchestration_template).try(:content)
       end
 
@@ -480,7 +480,7 @@ module ManageIQ::Providers
         os = image.properties.storage_profile.try(:os_disk).try(:os_type) || 'unknown'
 
         new_result = {
-          :type               => ManageIQ::Providers::Azure::CloudManager::Template.name,
+          :type               => NOVAHawk::Providers::Azure::CloudManager::Template.name,
           :uid_ems            => uid,
           :ems_ref            => uid,
           :name               => image.name,
@@ -503,7 +503,7 @@ module ManageIQ::Providers
       def parse_image(image)
         uid = image.uri
         new_result = {
-          :type               => ManageIQ::Providers::Azure::CloudManager::Template.name,
+          :type               => NOVAHawk::Providers::Azure::CloudManager::Template.name,
           :uid_ems            => uid,
           :ems_ref            => uid,
           :name               => build_image_name(image),

@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Azure::NetworkManager::FloatingIp < ::FloatingIp
+class NOVAHawk::Providers::Azure::NetworkManager::FloatingIp < ::FloatingIp
 end

@@ -68,7 +68,7 @@ module EmsInfraHelper::TextualSummary
   end
 
   def textual_infrastructure_folders
-    return nil if @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+    return nil if @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
     label     = "#{title_for_hosts} & #{title_for_clusters}"
     available = @ems.number_of(:ems_folders) > 0 && @ems.ems_folder_root
     h         = {:label => label, :image => "hosts_and_clusters", :value => available ? _("Available") : _("N/A")}
@@ -80,7 +80,7 @@ module EmsInfraHelper::TextualSummary
   end
 
   def textual_folders
-    return nil if @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+    return nil if @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
     label     = _("VMs & Templates")
     available = @ems.number_of(:ems_folders) > 0 && @ems.ems_folder_root
     h         = {:label => label, :image => "vms_and_templates", :value => available ? _("Available") : _("N/A")}
@@ -136,7 +136,7 @@ module EmsInfraHelper::TextualSummary
   end
 
   def textual_datastores
-    return nil if @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+    return nil if @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
 
     textual_link(@record.storages.sort_by { |s| s.name.downcase },
                  :as   => Storage,
@@ -144,7 +144,7 @@ module EmsInfraHelper::TextualSummary
   end
 
   def textual_vms
-    return nil if @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager)
+    return nil if @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager)
 
     textual_link(@ems.vms, :label => _("Virtual Machines"))
   end

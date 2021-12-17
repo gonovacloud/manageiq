@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api
     body:
       encoding: US-ASCII
       string: ''
@@ -85,7 +85,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:28 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/clusters
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/clusters
     body:
       encoding: US-ASCII
       string: ''
@@ -177,7 +177,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:28 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vmpools
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vmpools
     body:
       encoding: US-ASCII
       string: ''
@@ -222,7 +222,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:29 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/networks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/networks
     body:
       encoding: US-ASCII
       string: ''
@@ -297,7 +297,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:29 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/storagedomains?search=sortby%20name%20asc%20page%201
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/storagedomains?search=sortby%20name%20asc%20page%201
     body:
       encoding: US-ASCII
       string: ''
@@ -374,7 +374,7 @@ http_interactions:
         \       <type>data</type>\n        <master>true</master>\n        <storage>\n
         \           <type>iscsi</type>\n            <volume_group id=\"ETu16x-1cnn-Z1Xi-k9Bj-GMzq-ke5s-gsou2g\">\n
         \               <logical_unit id=\"2403027f93d7780fa\">\n                    <address>10.1.1.202</address>\n
-        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-rhev-1</target>\n
+        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-rhev-1</target>\n
         \                   <username></username>\n                    <serial>SROCKET_IMAGEFILE_403027F93D7780F</serial>\n
         \                   <vendor_id>ROCKET</vendor_id>\n                    <product_id>IMAGEFILE</product_id>\n
         \                   <lun_mapping>0</lun_mapping>\n                    <portal>10.1.1.202:3260,1</portal>\n
@@ -388,7 +388,7 @@ http_interactions:
         \       <type>data</type>\n        <master>true</master>\n        <storage>\n
         \           <type>iscsi</type>\n            <volume_group id=\"9Al9cf-ML4f-Ch0m-mI0x-Kz8n-bUYL-uycuBn\">\n
         \               <logical_unit id=\"298b42b5b7976b220\">\n                    <address>10.1.1.202</address>\n
-        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-rhevm1</target>\n
+        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-rhevm1</target>\n
         \                   <username></username>\n                    <serial>SROCKET_IMAGEFILE_98B42B5B7976B22</serial>\n
         \                   <vendor_id>ROCKET</vendor_id>\n                    <product_id>IMAGEFILE</product_id>\n
         \                   <lun_mapping>0</lun_mapping>\n                    <portal>10.1.1.202:3260,1</portal>\n
@@ -401,7 +401,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:29 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/storagedomains?search=sortby%20name%20asc%20page%202
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/storagedomains?search=sortby%20name%20asc%20page%202
     body:
       encoding: US-ASCII
       string: ''
@@ -446,7 +446,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:29 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters
     body:
       encoding: US-ASCII
       string: ''
@@ -514,7 +514,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:29 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/hosts?search=sortby%20name%20asc%20page%201
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/hosts?search=sortby%20name%20asc%20page%201
     body:
       encoding: US-ASCII
       string: ''
@@ -552,7 +552,7 @@ http_interactions:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<hosts>\n
         \   <host id=\"ca389dbc-2054-11e1-9241-005056af0085\" href=\"/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085\">\n
-        \       <name>rhelvirt.manageiq.com</name>\n        <actions>\n            <link
+        \       <name>rhelvirt.novahawk.com</name>\n        <actions>\n            <link
         rel=\"install\" href=\"/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085/install\"/>\n
         \           <link rel=\"activate\" href=\"/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085/activate\"/>\n
         \           <link rel=\"fence\" href=\"/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085/fence\"/>\n
@@ -582,7 +582,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:30 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/hosts?search=sortby%20name%20asc%20page%202
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/hosts?search=sortby%20name%20asc%20page%202
     body:
       encoding: US-ASCII
       string: ''
@@ -627,7 +627,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:30 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms?search=sortby%20name%20asc%20page%201
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms?search=sortby%20name%20asc%20page%201
     body:
       encoding: US-ASCII
       string: ''
@@ -1374,7 +1374,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:30 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms?search=sortby%20name%20asc%20page%202
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms?search=sortby%20name%20asc%20page%202
     body:
       encoding: US-ASCII
       string: ''
@@ -1419,7 +1419,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:31 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates
     body:
       encoding: US-ASCII
       string: ''
@@ -1545,7 +1545,7 @@ http_interactions:
         \       <stateless>false</stateless>\n        <usb>\n            <enabled>true</enabled>\n
         \       </usb>\n    </template>\n    <template id=\"7120b19a-1b39-4bd4-afa8-6393fc4cd3dc\"
         href=\"/ovirt-engine/api/templates/7120b19a-1b39-4bd4-afa8-6393fc4cd3dc\">\n        <name>EVMv5</name>\n
-        \       <description>ManageIQ EVM 5.0.0.13</description>\n        <actions>\n
+        \       <description>NOVAHawk EVM 5.0.0.13</description>\n        <actions>\n
         \           <link rel=\"export\" href=\"/ovirt-engine/api/templates/7120b19a-1b39-4bd4-afa8-6393fc4cd3dc/export\"/>\n
         \       </actions>\n        <link rel=\"disks\" href=\"/ovirt-engine/api/templates/7120b19a-1b39-4bd4-afa8-6393fc4cd3dc/disks\"/>\n
         \       <link rel=\"nics\" href=\"/ovirt-engine/api/templates/7120b19a-1b39-4bd4-afa8-6393fc4cd3dc/nics\"/>\n
@@ -1725,7 +1725,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:31 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters/cb50d90a-f585-4d17-a524-a577a97da928/storagedomains
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters/cb50d90a-f585-4d17-a524-a577a97da928/storagedomains
     body:
       encoding: US-ASCII
       string: ''
@@ -1772,7 +1772,7 @@ http_interactions:
         \       <master>true</master>\n        <storage>\n            <type>iscsi</type>\n
         \           <volume_group id=\"ETu16x-1cnn-Z1Xi-k9Bj-GMzq-ke5s-gsou2g\">\n
         \               <logical_unit id=\"2403027f93d7780fa\">\n                    <address>10.1.1.202</address>\n
-        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-rhev-1</target>\n
+        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-rhev-1</target>\n
         \                   <username></username>\n                    <serial>SROCKET_IMAGEFILE_403027F93D7780F</serial>\n
         \                   <vendor_id>ROCKET</vendor_id>\n                    <product_id>IMAGEFILE</product_id>\n
         \                   <lun_mapping>0</lun_mapping>\n                    <portal>10.1.1.202:3260,1</portal>\n
@@ -1785,7 +1785,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:32 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters/199560d0-9b83-4212-b2a1-077e1b4371af/storagedomains
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters/199560d0-9b83-4212-b2a1-077e1b4371af/storagedomains
     body:
       encoding: US-ASCII
       string: ''
@@ -1832,7 +1832,7 @@ http_interactions:
         \       <master>true</master>\n        <storage>\n            <type>iscsi</type>\n
         \           <volume_group id=\"9Al9cf-ML4f-Ch0m-mI0x-Kz8n-bUYL-uycuBn\">\n
         \               <logical_unit id=\"298b42b5b7976b220\">\n                    <address>10.1.1.202</address>\n
-        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.manageiq.com-starm1-rhevm1</target>\n
+        \                   <port>3260</port>\n                    <target>iqn.2008-08.com.starwindsoftware:starwindm1.novahawk.com-starm1-rhevm1</target>\n
         \                   <username></username>\n                    <serial>SROCKET_IMAGEFILE_98B42B5B7976B22</serial>\n
         \                   <vendor_id>ROCKET</vendor_id>\n                    <product_id>IMAGEFILE</product_id>\n
         \                   <lun_mapping>0</lun_mapping>\n                    <portal>10.1.1.202:3260,1</portal>\n
@@ -1845,7 +1845,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:32 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters/eb5592d2-ce76-11e0-a703-005056af0085/storagedomains
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/datacenters/eb5592d2-ce76-11e0-a703-005056af0085/storagedomains
     body:
       encoding: US-ASCII
       string: ''
@@ -1910,7 +1910,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:32 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085/statistics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085/statistics
     body:
       encoding: US-ASCII
       string: ''
@@ -2035,7 +2035,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:33 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/hosts/ca389dbc-2054-11e1-9241-005056af0085/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -2097,7 +2097,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:34 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/f84706ea-a68a-4206-a6cf-a06e11da70c0/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/f84706ea-a68a-4206-a6cf-a06e11da70c0/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -2179,7 +2179,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:34 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/f84706ea-a68a-4206-a6cf-a06e11da70c0/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/f84706ea-a68a-4206-a6cf-a06e11da70c0/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -2227,7 +2227,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:34 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/f84706ea-a68a-4206-a6cf-a06e11da70c0/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/f84706ea-a68a-4206-a6cf-a06e11da70c0/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -2274,7 +2274,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:35 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/209666c9-e9d6-4e55-89f9-cc7fdf023ba3/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/209666c9-e9d6-4e55-89f9-cc7fdf023ba3/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -2356,7 +2356,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:35 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/209666c9-e9d6-4e55-89f9-cc7fdf023ba3/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/209666c9-e9d6-4e55-89f9-cc7fdf023ba3/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -2404,7 +2404,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:35 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/209666c9-e9d6-4e55-89f9-cc7fdf023ba3/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/209666c9-e9d6-4e55-89f9-cc7fdf023ba3/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -2451,7 +2451,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:36 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/26a050fb-62c3-4645-9088-be6efec860e1/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/26a050fb-62c3-4645-9088-be6efec860e1/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -2509,7 +2509,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:36 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/26a050fb-62c3-4645-9088-be6efec860e1/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/26a050fb-62c3-4645-9088-be6efec860e1/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -2579,7 +2579,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:37 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/26a050fb-62c3-4645-9088-be6efec860e1/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/26a050fb-62c3-4645-9088-be6efec860e1/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -2636,7 +2636,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:37 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fe052832-2350-48ce-8e56-c24b4cd91876/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fe052832-2350-48ce-8e56-c24b4cd91876/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -2694,7 +2694,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:37 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fe052832-2350-48ce-8e56-c24b4cd91876/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fe052832-2350-48ce-8e56-c24b4cd91876/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -2751,7 +2751,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:37 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fe052832-2350-48ce-8e56-c24b4cd91876/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fe052832-2350-48ce-8e56-c24b4cd91876/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -2808,7 +2808,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:38 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/7427031c-c3d1-4e06-99b4-19fd893606de/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/7427031c-c3d1-4e06-99b4-19fd893606de/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -2890,7 +2890,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:38 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/7427031c-c3d1-4e06-99b4-19fd893606de/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/7427031c-c3d1-4e06-99b4-19fd893606de/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -2966,7 +2966,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:38 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/7427031c-c3d1-4e06-99b4-19fd893606de/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/7427031c-c3d1-4e06-99b4-19fd893606de/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -3013,7 +3013,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:38 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/a42314f4-4381-468f-ba9c-93b4276f155a/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/a42314f4-4381-468f-ba9c-93b4276f155a/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -3095,7 +3095,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:38 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/a42314f4-4381-468f-ba9c-93b4276f155a/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/a42314f4-4381-468f-ba9c-93b4276f155a/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -3143,7 +3143,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:39 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/a42314f4-4381-468f-ba9c-93b4276f155a/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/a42314f4-4381-468f-ba9c-93b4276f155a/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -3190,7 +3190,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:39 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/4655202c-c752-461d-89bd-db42ff76b69f/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/4655202c-c752-461d-89bd-db42ff76b69f/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -3272,7 +3272,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:39 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/4655202c-c752-461d-89bd-db42ff76b69f/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/4655202c-c752-461d-89bd-db42ff76b69f/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -3320,7 +3320,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:39 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/4655202c-c752-461d-89bd-db42ff76b69f/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/4655202c-c752-461d-89bd-db42ff76b69f/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -3365,7 +3365,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:39 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a9e4a4b-fdac-4370-b429-a8df3c96f11f/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a9e4a4b-fdac-4370-b429-a8df3c96f11f/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -3447,7 +3447,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:40 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a9e4a4b-fdac-4370-b429-a8df3c96f11f/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a9e4a4b-fdac-4370-b429-a8df3c96f11f/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -3523,7 +3523,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:40 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a9e4a4b-fdac-4370-b429-a8df3c96f11f/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a9e4a4b-fdac-4370-b429-a8df3c96f11f/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -3570,7 +3570,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:40 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/70c4e710-846c-453e-bfc8-f02113f34045/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/70c4e710-846c-453e-bfc8-f02113f34045/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -3652,7 +3652,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:40 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/70c4e710-846c-453e-bfc8-f02113f34045/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/70c4e710-846c-453e-bfc8-f02113f34045/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -3700,7 +3700,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:40 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/70c4e710-846c-453e-bfc8-f02113f34045/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/70c4e710-846c-453e-bfc8-f02113f34045/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -3747,7 +3747,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:41 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/bb8e1c05-0722-405e-967d-00b142cae630/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/bb8e1c05-0722-405e-967d-00b142cae630/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -3829,7 +3829,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:41 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/bb8e1c05-0722-405e-967d-00b142cae630/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/bb8e1c05-0722-405e-967d-00b142cae630/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -3877,7 +3877,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:41 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/bb8e1c05-0722-405e-967d-00b142cae630/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/bb8e1c05-0722-405e-967d-00b142cae630/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -3924,7 +3924,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:41 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/dba8a234-08b8-4639-a047-1dd072ff6e5b/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/dba8a234-08b8-4639-a047-1dd072ff6e5b/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -4006,7 +4006,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:42 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/dba8a234-08b8-4639-a047-1dd072ff6e5b/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/dba8a234-08b8-4639-a047-1dd072ff6e5b/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -4082,7 +4082,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:42 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/dba8a234-08b8-4639-a047-1dd072ff6e5b/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/dba8a234-08b8-4639-a047-1dd072ff6e5b/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -4129,7 +4129,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:42 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/935a9856-b8e7-43c3-ad93-e10df0a29226/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/935a9856-b8e7-43c3-ad93-e10df0a29226/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -4187,7 +4187,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:42 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/935a9856-b8e7-43c3-ad93-e10df0a29226/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/935a9856-b8e7-43c3-ad93-e10df0a29226/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -4242,7 +4242,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:42 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/935a9856-b8e7-43c3-ad93-e10df0a29226/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/935a9856-b8e7-43c3-ad93-e10df0a29226/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -4289,7 +4289,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:43 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/980bb541-261d-4d11-8782-86848f35cf33/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/980bb541-261d-4d11-8782-86848f35cf33/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -4339,7 +4339,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:43 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/980bb541-261d-4d11-8782-86848f35cf33/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/980bb541-261d-4d11-8782-86848f35cf33/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -4387,7 +4387,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:43 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/980bb541-261d-4d11-8782-86848f35cf33/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/980bb541-261d-4d11-8782-86848f35cf33/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -4434,7 +4434,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:43 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fff83bf7-9dcb-4845-b85b-ff855b9fb141/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fff83bf7-9dcb-4845-b85b-ff855b9fb141/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -4492,7 +4492,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:43 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fff83bf7-9dcb-4845-b85b-ff855b9fb141/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fff83bf7-9dcb-4845-b85b-ff855b9fb141/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -4547,7 +4547,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:44 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fff83bf7-9dcb-4845-b85b-ff855b9fb141/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/fff83bf7-9dcb-4845-b85b-ff855b9fb141/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -4599,7 +4599,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:44 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/2ada2b89-9345-42fb-a179-fbed002fff67/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/2ada2b89-9345-42fb-a179-fbed002fff67/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -4649,7 +4649,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:44 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/2ada2b89-9345-42fb-a179-fbed002fff67/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/2ada2b89-9345-42fb-a179-fbed002fff67/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -4697,7 +4697,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:44 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/2ada2b89-9345-42fb-a179-fbed002fff67/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/2ada2b89-9345-42fb-a179-fbed002fff67/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -4744,7 +4744,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:44 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/ee3670c0-152b-4106-89b2-4eda71bea8d0/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/ee3670c0-152b-4106-89b2-4eda71bea8d0/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -4794,7 +4794,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:45 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/ee3670c0-152b-4106-89b2-4eda71bea8d0/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/ee3670c0-152b-4106-89b2-4eda71bea8d0/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -4842,7 +4842,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:45 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/ee3670c0-152b-4106-89b2-4eda71bea8d0/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/ee3670c0-152b-4106-89b2-4eda71bea8d0/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -4889,7 +4889,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:45 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/31d7505f-e739-4024-84da-2d8df1db9b39/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/31d7505f-e739-4024-84da-2d8df1db9b39/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -4939,7 +4939,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:46 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/31d7505f-e739-4024-84da-2d8df1db9b39/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/31d7505f-e739-4024-84da-2d8df1db9b39/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -4987,7 +4987,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:46 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/31d7505f-e739-4024-84da-2d8df1db9b39/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/31d7505f-e739-4024-84da-2d8df1db9b39/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -5032,7 +5032,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:46 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/554c9e02-0f7f-4f79-8fcd-5d5049e437a0/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/554c9e02-0f7f-4f79-8fcd-5d5049e437a0/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5114,7 +5114,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:46 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/554c9e02-0f7f-4f79-8fcd-5d5049e437a0/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/554c9e02-0f7f-4f79-8fcd-5d5049e437a0/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -5162,7 +5162,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:47 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/554c9e02-0f7f-4f79-8fcd-5d5049e437a0/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/554c9e02-0f7f-4f79-8fcd-5d5049e437a0/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -5209,7 +5209,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:47 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a5bec68-7d96-4c40-b918-9f137b95fc3e/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a5bec68-7d96-4c40-b918-9f137b95fc3e/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5291,7 +5291,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:47 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a5bec68-7d96-4c40-b918-9f137b95fc3e/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a5bec68-7d96-4c40-b918-9f137b95fc3e/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -5346,7 +5346,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:48 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a5bec68-7d96-4c40-b918-9f137b95fc3e/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/9a5bec68-7d96-4c40-b918-9f137b95fc3e/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -5393,7 +5393,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:48 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/22e1a0b0-06af-4e84-8789-07e6a7f6cc49/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/22e1a0b0-06af-4e84-8789-07e6a7f6cc49/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5443,7 +5443,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:48 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/22e1a0b0-06af-4e84-8789-07e6a7f6cc49/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/22e1a0b0-06af-4e84-8789-07e6a7f6cc49/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -5498,7 +5498,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:48 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/22e1a0b0-06af-4e84-8789-07e6a7f6cc49/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/22e1a0b0-06af-4e84-8789-07e6a7f6cc49/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -5545,7 +5545,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:48 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/aee6bd5e-9f12-4384-8fe5-4b0b8e15268f/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/aee6bd5e-9f12-4384-8fe5-4b0b8e15268f/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5627,7 +5627,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:49 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/aee6bd5e-9f12-4384-8fe5-4b0b8e15268f/snapshots
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/aee6bd5e-9f12-4384-8fe5-4b0b8e15268f/snapshots
     body:
       encoding: US-ASCII
       string: ''
@@ -5675,7 +5675,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:49 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/vms/aee6bd5e-9f12-4384-8fe5-4b0b8e15268f/nics
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/vms/aee6bd5e-9f12-4384-8fe5-4b0b8e15268f/nics
     body:
       encoding: US-ASCII
       string: ''
@@ -5722,7 +5722,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:49 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/00000000-0000-0000-0000-000000000000/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5767,7 +5767,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:49 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/e3af998a-7104-4a10-a7c0-bc90c4250bf5/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/e3af998a-7104-4a10-a7c0-bc90c4250bf5/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5817,7 +5817,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:50 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/7a6db798-9df9-40ca-8cc3-3baab32e7613/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/7a6db798-9df9-40ca-8cc3-3baab32e7613/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5875,7 +5875,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:50 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/d473fb6b-96a5-4667-a2d4-60b195603bbf/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/d473fb6b-96a5-4667-a2d4-60b195603bbf/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -5957,7 +5957,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:50 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/ce9b44cb-8253-4153-ad4b-c53039dd9356/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/ce9b44cb-8253-4153-ad4b-c53039dd9356/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6039,7 +6039,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:50 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/7120b19a-1b39-4bd4-afa8-6393fc4cd3dc/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/7120b19a-1b39-4bd4-afa8-6393fc4cd3dc/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6121,7 +6121,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:51 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/1845ad70-c097-42f8-acb6-c3ac8c410572/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/1845ad70-c097-42f8-acb6-c3ac8c410572/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6203,7 +6203,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:51 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/a9ac3d74-eb66-437b-85c8-e83099edf9ff/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/a9ac3d74-eb66-437b-85c8-e83099edf9ff/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6285,7 +6285,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:51 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/6bd4eec5-0135-4cd0-ae16-71905ba76676/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/6bd4eec5-0135-4cd0-ae16-71905ba76676/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6367,7 +6367,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:51 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/c9ee91ff-41af-48f5-8734-953f865c83b9/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/c9ee91ff-41af-48f5-8734-953f865c83b9/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6449,7 +6449,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:52 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/1d92768f-bbbb-4eb4-90f5-a3ae6c205ec8/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/1d92768f-bbbb-4eb4-90f5-a3ae6c205ec8/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6531,7 +6531,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:52 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/83f76598-4797-40ff-b0ec-433eb74db8be/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/83f76598-4797-40ff-b0ec-433eb74db8be/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6581,7 +6581,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:52 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/57eb8fef-58ea-4f40-a308-f88b05d18f5d/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/57eb8fef-58ea-4f40-a308-f88b05d18f5d/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6631,7 +6631,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:52 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/bb3289d7-6dce-4cfc-9973-c01f3abfe13f/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/bb3289d7-6dce-4cfc-9973-c01f3abfe13f/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6681,7 +6681,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:52 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api/templates/276fcf44-afeb-4591-b3a6-82544124f898/disks
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api/templates/276fcf44-afeb-4591-b3a6-82544124f898/disks
     body:
       encoding: US-ASCII
       string: ''
@@ -6763,7 +6763,7 @@ http_interactions:
   recorded_at: Tue, 07 Oct 2014 17:58:53 GMT
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.231:8443/ovirt-engine/api
+    uri: https://evm%40novahawk.com:password@192.168.252.231:8443/ovirt-engine/api
     body:
       encoding: US-ASCII
       string: ''

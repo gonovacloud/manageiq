@@ -1,4 +1,4 @@
-class ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem < ::ConfiguredSystem
+class NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem < ::ConfiguredSystem
   include ProviderObjectMixin
 
   def provider_object(connection = nil)

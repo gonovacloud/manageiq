@@ -1,1 +1,1 @@
-::VmInfra = ManageIQ::Providers::InfraManager::Vm
+::VmInfra = NOVAHawk::Providers::InfraManager::Vm

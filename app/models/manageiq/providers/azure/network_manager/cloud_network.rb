@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Azure::NetworkManager::CloudNetwork < ::CloudNetwork
+class NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork < ::CloudNetwork
 end

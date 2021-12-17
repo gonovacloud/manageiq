@@ -1,6 +1,6 @@
 describe('checkchange initialization', function() {
   var $scope, form;
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
   beforeEach(inject(function($compile, $rootScope, miqService) {
     $scope = $rootScope;
     var element = angular.element(

@@ -546,12 +546,12 @@ class DashboardController < ApplicationController
       #   status = @report.table.data.length == 0 ? :disabled : :enabled
       #
       #   center_tb_buttons.each do |button_id, typ|
-      #     page << "ManageIQ.toolbars.showItem('#center_tb', '#{button_id}');"
+      #     page << "NOVAHawk.toolbars.showItem('#center_tb', '#{button_id}');"
       #     page << tl_toggle_button_enablement(button_id, status, typ)
       #   end
       # else
       #   center_tb_buttons.keys.each do |button_id|
-      #     page << "ManageIQ.toolbars.hideItem('#center_tb', '#{button_id}');"
+      #     page << "NOVAHawk.toolbars.hideItem('#center_tb', '#{button_id}');"
       #   end
       # end
 
@@ -613,10 +613,10 @@ class DashboardController < ApplicationController
   def tl_toggle_button_enablement(button_id, enablement, typ)
     if enablement == :enabled
       tooltip = _("Download this Timeline data in %{typ} format") % {:typ => typ}
-      "ManageIQ.toolbars.enableItem('#center_tb', '#{button_id}'); ManageIQ.toolbars.setItemTooltip('#center_tb', '#{button_id}', '#{tooltip}');"
+      "NOVAHawk.toolbars.enableItem('#center_tb', '#{button_id}'); NOVAHawk.toolbars.setItemTooltip('#center_tb', '#{button_id}', '#{tooltip}');"
     else
       tooltip = _('No records found for this timeline')
-      "ManageIQ.toolbars.disableItem('#center_tb', '#{button_id}'); ManageIQ.toolbars.setItemTooltip('#center_tb', '#{button_id}', '#{tooltip}');"
+      "NOVAHawk.toolbars.disableItem('#center_tb', '#{button_id}'); NOVAHawk.toolbars.setItemTooltip('#center_tb', '#{button_id}', '#{tooltip}');"
     end
   end
   helper_method(:tl_toggle_button_enablement)

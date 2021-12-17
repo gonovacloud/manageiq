@@ -1,11 +1,11 @@
 require 'digest'
 require 'fog/google'
 
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Google
     class NetworkManager::RefreshParser
       include Vmdb::Logging
-      include ManageIQ::Providers::Google::RefreshHelperMethods
+      include NOVAHawk::Providers::Google::RefreshHelperMethods
 
       GCP_HEALTH_STATUS_MAP = {
         "HEALTHY"   => "InService",
@@ -321,7 +321,7 @@ module ManageIQ::Providers
         uid = forwarding_rule.id
 
         new_result = {
-          :type    => ManageIQ::Providers::Google::NetworkManager::LoadBalancer.name,
+          :type    => NOVAHawk::Providers::Google::NetworkManager::LoadBalancer.name,
           :ems_ref => uid,
           :name    => forwarding_rule.name
         }
@@ -333,7 +333,7 @@ module ManageIQ::Providers
         uid = target_pool.id
 
         new_result = {
-          :type    => ManageIQ::Providers::Google::NetworkManager::LoadBalancerPool.name,
+          :type    => NOVAHawk::Providers::Google::NetworkManager::LoadBalancerPool.name,
           :ems_ref => uid,
           :name    => target_pool.name
         }
@@ -346,7 +346,7 @@ module ManageIQ::Providers
       def parse_load_balancer_pool_member(member_link)
         vm_id = get_vm_id_from_link(member_link)
         {
-          :type    => "ManageIQ::Providers::Google::NetworkManager::LoadBalancerPoolMember",
+          :type    => "NOVAHawk::Providers::Google::NetworkManager::LoadBalancerPoolMember",
           :ems_ref => Digest::MD5.base64digest(member_link),
           :vm      => (parent_manager_fetch_path(:vms, vm_id) if vm_id)
         }
@@ -359,7 +359,7 @@ module ManageIQ::Providers
         has_ports = %w(TCP UDP SCTP).include?(forwarding_rule.ip_protocol)
 
         new_result = {
-          :type                         => ManageIQ::Providers::Google::NetworkManager::LoadBalancerListener.name,
+          :type                         => NOVAHawk::Providers::Google::NetworkManager::LoadBalancerListener.name,
           :name                         => forwarding_rule.name,
           :ems_ref                      => uid,
           :load_balancer_protocol       => forwarding_rule.ip_protocol,
@@ -401,7 +401,7 @@ module ManageIQ::Providers
           new_result = {
             :name                               => health_check.name,
             :ems_ref                            => uid,
-            :type                               => ManageIQ::Providers::Google::NetworkManager::LoadBalancerHealthCheck.name,
+            :type                               => NOVAHawk::Providers::Google::NetworkManager::LoadBalancerHealthCheck.name,
             :protocol                           => "HTTP",
             :port                               => health_check.port,
             :url_path                           => health_check.request_path,
@@ -600,27 +600,27 @@ module ManageIQ::Providers
 
       class << self
         def security_group_type
-          ManageIQ::Providers::Google::NetworkManager::SecurityGroup.name
+          NOVAHawk::Providers::Google::NetworkManager::SecurityGroup.name
         end
 
         def network_router_type
-          ManageIQ::Providers::Google::NetworkManager::NetworkRouter.name
+          NOVAHawk::Providers::Google::NetworkManager::NetworkRouter.name
         end
 
         def cloud_network_type
-          ManageIQ::Providers::Google::NetworkManager::CloudNetwork.name
+          NOVAHawk::Providers::Google::NetworkManager::CloudNetwork.name
         end
 
         def cloud_subnet_type
-          ManageIQ::Providers::Google::NetworkManager::CloudSubnet.name
+          NOVAHawk::Providers::Google::NetworkManager::CloudSubnet.name
         end
 
         def floating_ip_type
-          ManageIQ::Providers::Google::NetworkManager::FloatingIp.name
+          NOVAHawk::Providers::Google::NetworkManager::FloatingIp.name
         end
 
         def network_port_type
-          ManageIQ::Providers::Google::NetworkManager::NetworkPort.name
+          NOVAHawk::Providers::Google::NetworkManager::NetworkPort.name
         end
       end
     end

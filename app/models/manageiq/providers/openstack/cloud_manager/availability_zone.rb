@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::AvailabilityZone < ::AvailabilityZone
+class NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZone < ::AvailabilityZone
   # TODO: Currently, all cinder nodes are installed with the default availability zone,
   # nova. So we just take the aggregate disk capacity in the BlockStorage cluster.
   # In the future, when multiple Cinder availability zones are supported in the overcloud

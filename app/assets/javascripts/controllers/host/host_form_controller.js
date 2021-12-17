@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('hostFormController', ['$http', '$scope', '$attrs', 'hostFormId', 'miqService', function($http, $scope, $attrs, hostFormId, miqService) {
+NOVAHawk.angular.app.controller('hostFormController', ['$http', '$scope', '$attrs', 'hostFormId', 'miqService', function($http, $scope, $attrs, hostFormId, miqService) {
   var init = function() {
     $scope.hostModel = {
       name: '',
@@ -31,7 +31,7 @@ ManageIQ.angular.app.controller('hostFormController', ['$http', '$scope', '$attr
     $scope.createUrl = $attrs.createUrl;
     $scope.updateUrl = $attrs.updateUrl;
     $scope.model = "hostModel";
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
 
     if (hostFormId == 'new') {
       $scope.newRecord = true;

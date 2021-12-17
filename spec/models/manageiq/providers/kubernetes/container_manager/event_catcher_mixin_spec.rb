@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcherMixin do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcherMixin do
   let(:test_class) do
     Class.new do
       def initialize(ems = nil)

@@ -1,5 +1,5 @@
 class CloudResourceQuota < ApplicationRecord
-  belongs_to :ext_management_system, :foreign_key => "ems_id", :class_name => "ManageIQ::Providers::CloudManager"
+  belongs_to :ext_management_system, :foreign_key => "ems_id", :class_name => "NOVAHawk::Providers::CloudManager"
   belongs_to :cloud_tenant
 
   virtual_column :used, :type => :integer

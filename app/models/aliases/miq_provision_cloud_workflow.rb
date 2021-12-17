@@ -1,1 +1,1 @@
-::MiqProvisionCloudWorkflow = ::ManageIQ::Providers::CloudManager::ProvisionWorkflow
+::MiqProvisionCloudWorkflow = ::NOVAHawk::Providers::CloudManager::ProvisionWorkflow

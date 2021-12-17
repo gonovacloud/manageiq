@@ -35,7 +35,7 @@ class EvmDatabaseOps
     #   :local_file => "/tmp/backup_1",      - Backup locally to the file specified
 
     # connect_opts:
-    #   :uri => "smb://dev005.manageiq.com/share1",
+    #   :uri => "smb://dev005.novahawk.com/share1",
     #   :username => 'samba_one',
     #   :password => 'Zug-drep5s',
     #   :remote_file_name => "backup_1",     - Provide a base file name for the uploaded file
@@ -79,7 +79,7 @@ class EvmDatabaseOps
     #  :username => 'root'
 
     # connect_opts:
-    #   :uri => "smb://dev005.manageiq.com/share1/db_backup/miq_pg_backup_20100719_215444",
+    #   :uri => "smb://dev005.novahawk.com/share1/db_backup/miq_pg_backup_20100719_215444",
     #   :username => 'samba_one',
     #   :password => 'Zug-drep5s',
 

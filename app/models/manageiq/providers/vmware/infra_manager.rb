@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Vmware::InfraManager < InfraManager
     require_nested :EventCatcher
     require_nested :EventParser

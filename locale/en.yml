@@ -3,11 +3,11 @@
 
 en:
   product:
-    name: ManageIQ
-    name_full: ManageIQ
-    copyright: "Copyright (c) 2016 ManageIQ. Sponsored by Red Hat Inc."
-    support_website: "http://www.manageiq.org"
-    support_website_text: "ManageIQ.org"
+    name: NOVAHawk
+    name_full: NOVAHawk
+    copyright: "Copyright (c) 2016 NOVAHawk. Sponsored by Red Hat Inc."
+    support_website: "http://www.novahawk.org"
+    support_website_text: "NOVAHawk.org"
   activerecord:
     attributes:
       ems_cloud:
@@ -734,80 +734,80 @@ en:
       LdapRegion:               LDAP Region
       LdapServer:               LDAP Server
       LoadBalancer:             Load Balancer
-      ManageIQ::Providers::BaseManager:                                     Provider
-      ManageIQ::Providers::AnsibleTower::ConfigurationManager:              Configuration Manager (Ansible Tower)
-      ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript: Job Template (Ansible Tower)
-      ManageIQ::Providers::Foreman::ConfigurationManager:                   Configuration Manager (Foreman)
-      ManageIQ::Providers::ConfigurationManager:                            Configuration Manager
-      ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem: Configured System (Ansible Tower)
-      ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem: Configured System (Foreman)
-      ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job:         Ansible Tower Job
-      ManageIQ::Providers::CloudManager:                                    Cloud Provider
-      ManageIQ::Providers::CloudManager::Vm:                                Instance
-      ManageIQ::Providers::Google::CloudManager::Vm:                        Instance (Google)
-      ManageIQ::Providers::Openstack::CloudManager::Vm:                     Instance (OpenStack)
-      ManageIQ::Providers::Azure::CloudManager::Vm:                         Instance (Microsoft Azure)
-      ManageIQ::Providers::Amazon::CloudManager::Vm:                        Instance (Amazon)
-      ManageIQ::Providers::Vmware::CloudManager::Vm:                        Instance (VMware vCloud)
-      ManageIQ::Providers::CloudManager::Template:                          Image
-      ManageIQ::Providers::CloudManager::VirtualTemplate:                   Resourceless Server Template
-      ManageIQ::Providers::CloudManager::OrchestrationStack:                Orchestration Stack
-      ManageIQ::Providers::ContainerManager:                                Containers Provider
-      ManageIQ::Providers::InfraManager:                                    Infrastructure Provider
-      ManageIQ::Providers::InfraManager::Vm:                                Virtual Machine
-      ManageIQ::Providers::InfraManager::Template:                          Template
-      ManageIQ::Providers::MiddlewareManager:                               Middleware Provider
-      ManageIQ::Providers::NetworkManager:                                  Network Manager
-      ManageIQ::Providers::Openstack::InfraManager:                         Infrastructure Provider (OpenStack)
-      ManageIQ::Providers::Microsoft::InfraManager:                         Infrastructure Provider (Microsoft)
-      ManageIQ::Providers::Redhat::InfraManager:                            Infrastructure Provider (Red Hat)
-      ManageIQ::Providers::Vmware::InfraManager:                            Infrastructure Provider (VMware)
-      ManageIQ::Providers::Vmware::InfraManager::Vm:                        Virtual Machine (VMware)
-      ManageIQ::Providers::Microsoft::InfraManager::Vm:                     Virtual Machine (Microsoft)
-      ManageIQ::Providers::Redhat::InfraManager::Vm:                        Virtual Machine (Red Hat)
-      ManageIQ::Providers::Openstack::CloudManager:                         Cloud Provider (OpenStack)
-      ManageIQ::Providers::Openstack::NetworkManager:                       Network Provider (OpenStack)
-      ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork:         Cloud Network (OpenStack)
-      ManageIQ::Providers::Amazon::CloudManager:                            Cloud Provider (Amazon)
-      ManageIQ::Providers::Azure::CloudManager:                             Cloud Provider (Microsoft Azure)
-      ManageIQ::Providers::Vmware::CloudManager:                            Cloud Provider (VMware vCloud)
-      ManageIQ::Providers::Azure::NetworkManager::CloudNetwork:             Cloud Network (Microsoft Azure)
-      ManageIQ::Providers::Kubernetes::ContainerManager:                    Container Provider (Kubernetes)
-      ManageIQ::Providers::Kubernetes::ContainerManager::ContainerGroup:    Pod (Kubernetes)
-      ManageIQ::Providers::Openshift::ContainerManager:                     Container Provider (OpenShift Origin)
-      ManageIQ::Providers::OpenshiftEnterprise::ContainerManager:           Container Provider (OpenShift Container Platform)
-      ManageIQ::Providers::Amazon::NetworkManager:                          Network Provider (Amazon)
-      ManageIQ::Providers::Amazon::NetworkManager::CloudNetwork:            Cloud Network (Amazon)
-      ManageIQ::Providers::Amazon::NetworkManager::CloudSubnet:             Cloud Subnet (Amazon)
-      ManageIQ::Providers::Amazon::NetworkManager::LoadBalancer:            Load Balancer (Amazon)
-      ManageIQ::Providers::Amazon::NetworkManager::SecurityGroup:           Security Group (Amazon)
-      ManageIQ::Providers::Google::NetworkManager:                          Network Provider (Google)
-      ManageIQ::Providers::Google::NetworkManager::SecurityGroup:           Security Group (Google)
-      ManageIQ::Providers::Google::NetworkManager::LoadBalancer:            Load Balancer (Google)
-      ManageIQ::Providers::Google::NetworkManager::NetworkPort:             Network Port (Google)
-      ManageIQ::Providers::Google::NetworkManager::FloatingIp:              Floating Ip (Google)
-      ManageIQ::Providers::Google::NetworkManager::NetworkRouter:           Network Router (Google)
-      ManageIQ::Providers::Google::NetworkManager::CloudSubnet:             Cloud Subnet (Google)
-      ManageIQ::Providers::Google::NetworkManager::CloudNetwork:            Cloud Network (Google)
-      ManageIQ::Providers::Openstack::NetworkManager::SecurityGroup:        Security Group (OpenStack)
-      ManageIQ::Providers::Azure::NetworkManager::LoadBalancer:             LoadBalancer (Microsoft Azure)
-      ManageIQ::Providers::Azure::NetworkManager::CloudSubnet:              Cloud Subnet (Microsoft Azure)
-      ManageIQ::Providers::Azure::CloudManager::SecurityGroup:              Security Group (Microsoft Azure)
-      ManageIQ::Providers::Openstack::NetworkManager::FloatingIp:           Floating IP (OpenStack)
-      ManageIQ::Providers::Amazon::NetworkManager::FloatingIp:              Floating IP (Amazon)
-      ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet:          Cloud Subnet (OpenStack)
-      ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter:        Network Router (OpenStack)
-      ManageIQ::Providers::Openstack::InfraManager::OrchestrationStack:     Orchestration Stack (OpenStack)
-      ManageIQ::Providers::Openstack::CloudManager::OrchestrationStack:     Orchestration Stack (OpenStack)
-      ManageIQ::Providers::Azure::CloudManager::OrchestrationStack:         Orchestration Stack (Microsoft Azure)
-      ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack:        Orchestration Stack (Amazon)
-      ManageIQ::Providers::Amazon::NetworkManager::NetworkPort:             Network Port (Amazon)
-      ManageIQ::Providers::Azure::NetworkManager:                           Network Manager (Microsoft Azure)
-      ManageIQ::Providers::Azure::NetworkManager::NetworkPort:              Network Port (Microsoft Azure)
-      ManageIQ::Providers::Openstack::NetworkManager::NetworkPort:          Network Port (OpenStack)
-      ManageIQ::Providers::StorageManager:                                  Storage Manager
-      ManageIQ::Providers::StorageManager::CinderManager:                   Storage Manager (Cinder)
-      ManageIQ::Providers::StorageManager::SwiftManager:                    Storage Manager (Swift)
+      NOVAHawk::Providers::BaseManager:                                     Provider
+      NOVAHawk::Providers::AnsibleTower::ConfigurationManager:              Configuration Manager (Ansible Tower)
+      NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript: Job Template (Ansible Tower)
+      NOVAHawk::Providers::Foreman::ConfigurationManager:                   Configuration Manager (Foreman)
+      NOVAHawk::Providers::ConfigurationManager:                            Configuration Manager
+      NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem: Configured System (Ansible Tower)
+      NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem: Configured System (Foreman)
+      NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job:         Ansible Tower Job
+      NOVAHawk::Providers::CloudManager:                                    Cloud Provider
+      NOVAHawk::Providers::CloudManager::Vm:                                Instance
+      NOVAHawk::Providers::Google::CloudManager::Vm:                        Instance (Google)
+      NOVAHawk::Providers::Openstack::CloudManager::Vm:                     Instance (OpenStack)
+      NOVAHawk::Providers::Azure::CloudManager::Vm:                         Instance (Microsoft Azure)
+      NOVAHawk::Providers::Amazon::CloudManager::Vm:                        Instance (Amazon)
+      NOVAHawk::Providers::Vmware::CloudManager::Vm:                        Instance (VMware vCloud)
+      NOVAHawk::Providers::CloudManager::Template:                          Image
+      NOVAHawk::Providers::CloudManager::VirtualTemplate:                   Resourceless Server Template
+      NOVAHawk::Providers::CloudManager::OrchestrationStack:                Orchestration Stack
+      NOVAHawk::Providers::ContainerManager:                                Containers Provider
+      NOVAHawk::Providers::InfraManager:                                    Infrastructure Provider
+      NOVAHawk::Providers::InfraManager::Vm:                                Virtual Machine
+      NOVAHawk::Providers::InfraManager::Template:                          Template
+      NOVAHawk::Providers::MiddlewareManager:                               Middleware Provider
+      NOVAHawk::Providers::NetworkManager:                                  Network Manager
+      NOVAHawk::Providers::Openstack::InfraManager:                         Infrastructure Provider (OpenStack)
+      NOVAHawk::Providers::Microsoft::InfraManager:                         Infrastructure Provider (Microsoft)
+      NOVAHawk::Providers::Redhat::InfraManager:                            Infrastructure Provider (Red Hat)
+      NOVAHawk::Providers::Vmware::InfraManager:                            Infrastructure Provider (VMware)
+      NOVAHawk::Providers::Vmware::InfraManager::Vm:                        Virtual Machine (VMware)
+      NOVAHawk::Providers::Microsoft::InfraManager::Vm:                     Virtual Machine (Microsoft)
+      NOVAHawk::Providers::Redhat::InfraManager::Vm:                        Virtual Machine (Red Hat)
+      NOVAHawk::Providers::Openstack::CloudManager:                         Cloud Provider (OpenStack)
+      NOVAHawk::Providers::Openstack::NetworkManager:                       Network Provider (OpenStack)
+      NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork:         Cloud Network (OpenStack)
+      NOVAHawk::Providers::Amazon::CloudManager:                            Cloud Provider (Amazon)
+      NOVAHawk::Providers::Azure::CloudManager:                             Cloud Provider (Microsoft Azure)
+      NOVAHawk::Providers::Vmware::CloudManager:                            Cloud Provider (VMware vCloud)
+      NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork:             Cloud Network (Microsoft Azure)
+      NOVAHawk::Providers::Kubernetes::ContainerManager:                    Container Provider (Kubernetes)
+      NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerGroup:    Pod (Kubernetes)
+      NOVAHawk::Providers::Openshift::ContainerManager:                     Container Provider (OpenShift Origin)
+      NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager:           Container Provider (OpenShift Container Platform)
+      NOVAHawk::Providers::Amazon::NetworkManager:                          Network Provider (Amazon)
+      NOVAHawk::Providers::Amazon::NetworkManager::CloudNetwork:            Cloud Network (Amazon)
+      NOVAHawk::Providers::Amazon::NetworkManager::CloudSubnet:             Cloud Subnet (Amazon)
+      NOVAHawk::Providers::Amazon::NetworkManager::LoadBalancer:            Load Balancer (Amazon)
+      NOVAHawk::Providers::Amazon::NetworkManager::SecurityGroup:           Security Group (Amazon)
+      NOVAHawk::Providers::Google::NetworkManager:                          Network Provider (Google)
+      NOVAHawk::Providers::Google::NetworkManager::SecurityGroup:           Security Group (Google)
+      NOVAHawk::Providers::Google::NetworkManager::LoadBalancer:            Load Balancer (Google)
+      NOVAHawk::Providers::Google::NetworkManager::NetworkPort:             Network Port (Google)
+      NOVAHawk::Providers::Google::NetworkManager::FloatingIp:              Floating Ip (Google)
+      NOVAHawk::Providers::Google::NetworkManager::NetworkRouter:           Network Router (Google)
+      NOVAHawk::Providers::Google::NetworkManager::CloudSubnet:             Cloud Subnet (Google)
+      NOVAHawk::Providers::Google::NetworkManager::CloudNetwork:            Cloud Network (Google)
+      NOVAHawk::Providers::Openstack::NetworkManager::SecurityGroup:        Security Group (OpenStack)
+      NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer:             LoadBalancer (Microsoft Azure)
+      NOVAHawk::Providers::Azure::NetworkManager::CloudSubnet:              Cloud Subnet (Microsoft Azure)
+      NOVAHawk::Providers::Azure::CloudManager::SecurityGroup:              Security Group (Microsoft Azure)
+      NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp:           Floating IP (OpenStack)
+      NOVAHawk::Providers::Amazon::NetworkManager::FloatingIp:              Floating IP (Amazon)
+      NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet:          Cloud Subnet (OpenStack)
+      NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter:        Network Router (OpenStack)
+      NOVAHawk::Providers::Openstack::InfraManager::OrchestrationStack:     Orchestration Stack (OpenStack)
+      NOVAHawk::Providers::Openstack::CloudManager::OrchestrationStack:     Orchestration Stack (OpenStack)
+      NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack:         Orchestration Stack (Microsoft Azure)
+      NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack:        Orchestration Stack (Amazon)
+      NOVAHawk::Providers::Amazon::NetworkManager::NetworkPort:             Network Port (Amazon)
+      NOVAHawk::Providers::Azure::NetworkManager:                           Network Manager (Microsoft Azure)
+      NOVAHawk::Providers::Azure::NetworkManager::NetworkPort:              Network Port (Microsoft Azure)
+      NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort:          Network Port (OpenStack)
+      NOVAHawk::Providers::StorageManager:                                  Storage Manager
+      NOVAHawk::Providers::StorageManager::CinderManager:                   Storage Manager (Cinder)
+      NOVAHawk::Providers::StorageManager::SwiftManager:                    Storage Manager (Swift)
       MiddlewareDatasource:     Middleware Datasource
       MiddlewareDomain:         Middleware Domain
       MiddlewareMessaging:      Middleware Messaging
@@ -859,7 +859,7 @@ en:
       OrchestrationTemplateHot: Heat Template
       OrchestrationTemplateAzure: Azure Template
       OrchestrationTemplateVnfd: VNF Template
-      ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate: vApp Template
+      NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate: vApp Template
       PersistentVolume:         Persistent Volume
       ProductUpdate:            Product Update
       PxeCustomizationTemplate: Customization Template
@@ -1001,9 +1001,9 @@ en:
       miq_custom_attribute:        EVM Custom Attribute
       miq_custom_attributes:       EVM Custom Attributes
       miq_event_definition:        Event
-      manageiq_providers_foreman_configuration_manager_configuration_profile: Configuration Profile (Foreman)
-      manageiq_providers_openstack_infra_manager_cloud_networks: Cloud Networks (OpenStack)
-      manageiq_providers_openstack_cloud_manager_cloud_tenant: Cloud Tenants (OpenStack)
+      novahawk_providers_foreman_configuration_manager_configuration_profile: Configuration Profile (Foreman)
+      novahawk_providers_openstack_infra_manager_cloud_networks: Cloud Networks (OpenStack)
+      novahawk_providers_openstack_cloud_manager_cloud_tenant: Cloud Tenants (OpenStack)
       miq_provision:               Provision
       miq_provision_template:      Provisioned From Template
       miq_provision_vms:           Provisioned VMs

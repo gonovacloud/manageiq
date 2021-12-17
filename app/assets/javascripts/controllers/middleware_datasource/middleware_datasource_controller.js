@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('mwAddDatasourceController', MwAddDatasourceCtrl);
+NOVAHawk.angular.app.controller('mwAddDatasourceController', MwAddDatasourceCtrl);
 
 var ADD_DATASOURCE_EVENT = 'mwAddDatasourceEvent';
 

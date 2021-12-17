@@ -1,28 +1,28 @@
 describe EmsCloud do
   it ".types" do
-    expected_types = [ManageIQ::Providers::Amazon::CloudManager,
-                      ManageIQ::Providers::Azure::CloudManager,
-                      ManageIQ::Providers::Openstack::CloudManager,
-                      ManageIQ::Providers::Google::CloudManager,
-                      ManageIQ::Providers::Vmware::CloudManager].collect(&:ems_type)
+    expected_types = [NOVAHawk::Providers::Amazon::CloudManager,
+                      NOVAHawk::Providers::Azure::CloudManager,
+                      NOVAHawk::Providers::Openstack::CloudManager,
+                      NOVAHawk::Providers::Google::CloudManager,
+                      NOVAHawk::Providers::Vmware::CloudManager].collect(&:ems_type)
     expect(described_class.types).to match_array(expected_types)
   end
 
   it ".supported_subclasses" do
-    expected_subclasses = [ManageIQ::Providers::Amazon::CloudManager,
-                           ManageIQ::Providers::Azure::CloudManager,
-                           ManageIQ::Providers::Openstack::CloudManager,
-                           ManageIQ::Providers::Google::CloudManager,
-                           ManageIQ::Providers::Vmware::CloudManager]
+    expected_subclasses = [NOVAHawk::Providers::Amazon::CloudManager,
+                           NOVAHawk::Providers::Azure::CloudManager,
+                           NOVAHawk::Providers::Openstack::CloudManager,
+                           NOVAHawk::Providers::Google::CloudManager,
+                           NOVAHawk::Providers::Vmware::CloudManager]
     expect(described_class.supported_subclasses).to match_array(expected_subclasses)
   end
 
   it ".supported_types" do
-    expected_types = [ManageIQ::Providers::Amazon::CloudManager,
-                      ManageIQ::Providers::Azure::CloudManager,
-                      ManageIQ::Providers::Openstack::CloudManager,
-                      ManageIQ::Providers::Google::CloudManager,
-                      ManageIQ::Providers::Vmware::CloudManager].collect(&:ems_type)
+    expected_types = [NOVAHawk::Providers::Amazon::CloudManager,
+                      NOVAHawk::Providers::Azure::CloudManager,
+                      NOVAHawk::Providers::Openstack::CloudManager,
+                      NOVAHawk::Providers::Google::CloudManager,
+                      NOVAHawk::Providers::Vmware::CloudManager].collect(&:ems_type)
     expect(described_class.supported_types).to match_array(expected_types)
   end
 
@@ -48,7 +48,7 @@ describe EmsCloud do
     describe "#sync_cloud_tenants_with_tenants" do
       let!(:default_tenant) { Tenant.seed }
       let(:name_of_created_tenant) do
-        "#{ManageIQ::Providers::Openstack::CloudManager.description} Cloud Provider #{ems_cloud.name}"
+        "#{NOVAHawk::Providers::Openstack::CloudManager.description} Cloud Provider #{ems_cloud.name}"
       end
 
       context "provider is not created under root tenant" do

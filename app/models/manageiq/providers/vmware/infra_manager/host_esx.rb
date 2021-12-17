@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::InfraManager::HostEsx < ManageIQ::Providers::Vmware::InfraManager::Host
+class NOVAHawk::Providers::Vmware::InfraManager::HostEsx < NOVAHawk::Providers::Vmware::InfraManager::Host
   def self.use_vim_broker?
     false
   end
@@ -95,7 +95,7 @@ class ManageIQ::Providers::Vmware::InfraManager::HostEsx < ManageIQ::Providers::
       data['config']['firewall'] = fws.firewallInfo
     end
 
-    ManageIQ::Providers::Vmware::InfraManager::RefreshParser.host_inv_to_firewall_rules_hashes(data)
+    NOVAHawk::Providers::Vmware::InfraManager::RefreshParser.host_inv_to_firewall_rules_hashes(data)
   end
 
   def vim_advanced_settings
@@ -107,7 +107,7 @@ class ManageIQ::Providers::Vmware::InfraManager::HostEsx < ManageIQ::Providers::
       data['config']['optionDef'] = aom.supportedOption
     end
 
-    ManageIQ::Providers::Vmware::InfraManager::RefreshParser.host_inv_to_advanced_settings_hashes(data)
+    NOVAHawk::Providers::Vmware::InfraManager::RefreshParser.host_inv_to_advanced_settings_hashes(data)
   end
 
   def verify_credentials_with_ws(auth_type = nil)

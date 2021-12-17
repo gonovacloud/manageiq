@@ -1,1 +1,1 @@
-::EmsInfra = ::ManageIQ::Providers::InfraManager
+::EmsInfra = ::NOVAHawk::Providers::InfraManager

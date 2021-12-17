@@ -12,7 +12,7 @@ describe "Quota Validation" do
     attrs = []
     attrs << "MiqProvisionRequest::miq_provision_request=#{provision_request.id}&" \
              "MiqRequest::miq_request=#{provision_request.id}&max_cpu=3&max_vms=2&#{source}" if provision_request
-    MiqAeEngine.instantiate("/ManageIQ/system/request/Call_instance?namespace=System/CommonMethods&" \
+    MiqAeEngine.instantiate("/NOVAHawk/system/request/Call_instance?namespace=System/CommonMethods&" \
                             "class=QuotaMethods&instance=limits&#{attrs.join('&')}", @user)
   end
 

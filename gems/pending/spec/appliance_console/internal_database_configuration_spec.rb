@@ -36,7 +36,7 @@ describe ApplianceConsole::InternalDatabaseConfiguration do
 
   it ".postgresql_template" do
     allow(PostgresAdmin).to receive_messages(:data_directory     => Pathname.new("/var/lib/pgsql/data"))
-    allow(PostgresAdmin).to receive_messages(:template_directory => Pathname.new("/opt/manageiq/manageiq-appliance/TEMPLATE"))
+    allow(PostgresAdmin).to receive_messages(:template_directory => Pathname.new("/opt/novahawk/novahawk-appliance/TEMPLATE"))
     expect(described_class.postgresql_template.to_s).to end_with("TEMPLATE/var/lib/pgsql/data")
   end
 

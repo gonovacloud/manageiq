@@ -35,10 +35,10 @@ class SeparateAmazonNetworkManagerFromAmazonCloudManager < ActiveRecord::Migrati
     # Separate NetworkManager from CloudManager and move network models under NetworkManager
     ExtManagementSystem
       .joins('left join ext_management_systems as network_manager on network_manager.parent_ems_id = ext_management_systems.id')
-      .where(:ext_management_systems => {:type          => 'ManageIQ::Providers::Amazon::CloudManager'},
+      .where(:ext_management_systems => {:type          => 'NOVAHawk::Providers::Amazon::CloudManager'},
              :network_manager        => {:parent_ems_id => nil}).each do |cloud_manager|
       network_manager = ExtManagementSystem.create!(
-        :type          => 'ManageIQ::Providers::Amazon::NetworkManager',
+        :type          => 'NOVAHawk::Providers::Amazon::NetworkManager',
         :name          => "#{cloud_manager.name} Network Manager",
         :parent_ems_id => cloud_manager.id,
         :guid          => MiqUUID.new_guid)
@@ -46,7 +46,7 @@ class SeparateAmazonNetworkManagerFromAmazonCloudManager < ActiveRecord::Migrati
       affected_classes.each do |network_model_class|
         network_model_class
           .where(:ems_id => cloud_manager.id)
-          .update_all("type = 'ManageIQ::Providers::Amazon::NetworkManager::#{network_model_class.name.demodulize}', ems_id = '#{network_manager.id}'")
+          .update_all("type = 'NOVAHawk::Providers::Amazon::NetworkManager::#{network_model_class.name.demodulize}', ems_id = '#{network_manager.id}'")
       end
     end
   end
@@ -55,13 +55,13 @@ class SeparateAmazonNetworkManagerFromAmazonCloudManager < ActiveRecord::Migrati
     # Move NetworkManager models back from CloudManager and delete NetworkManager
     ExtManagementSystem
       .joins('join ext_management_systems as network_manager on network_manager.parent_ems_id = ext_management_systems.id')
-      .where(:ext_management_systems => {:type => 'ManageIQ::Providers::Amazon::CloudManager'}).each do |cloud_manager|
+      .where(:ext_management_systems => {:type => 'NOVAHawk::Providers::Amazon::CloudManager'}).each do |cloud_manager|
 
       network_manager = ExtManagementSystem.where(:parent_ems_id => cloud_manager.id).first
       affected_classes.each do |network_model_class|
         network_model_class
           .where(:ems_id => network_manager.id)
-          .update_all("type = 'ManageIQ::Providers::Amazon::CloudManager::#{network_model_class.name.demodulize}', ems_id = '#{cloud_manager.id}'")
+          .update_all("type = 'NOVAHawk::Providers::Amazon::CloudManager::#{network_model_class.name.demodulize}', ems_id = '#{cloud_manager.id}'")
       end
 
       network_manager.destroy

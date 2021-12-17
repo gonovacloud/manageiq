@@ -343,7 +343,7 @@ describe VmOrTemplate do
     end
 
     context "when the vm_or_template does exist but is not cloneable" do
-      let(:vm_or_template) { VmOrTemplate.create(:type => "ManageIQ::Providers::Redhat::InfraManager::Template", :name => "aaa", :location => "bbb", :vendor => "redhat") }
+      let(:vm_or_template) { VmOrTemplate.create(:type => "NOVAHawk::Providers::Redhat::InfraManager::Template", :name => "aaa", :location => "bbb", :vendor => "redhat") }
 
       it "returns false" do
         expect(VmOrTemplate.cloneable?(vm_or_template.id)).to eq(false)
@@ -351,7 +351,7 @@ describe VmOrTemplate do
     end
 
     context "when the vm_or_template exists and is cloneable" do
-      let(:vm_or_template) { ManageIQ::Providers::Redhat::InfraManager::Vm.create(:type => "ManageIQ::Providers::Redhat::InfraManager::Vm", :name => "aaa", :location => "bbb", :vendor   => "redhat") }
+      let(:vm_or_template) { NOVAHawk::Providers::Redhat::InfraManager::Vm.create(:type => "NOVAHawk::Providers::Redhat::InfraManager::Vm", :name => "aaa", :location => "bbb", :vendor   => "redhat") }
 
       it "returns true" do
         expect(VmOrTemplate.cloneable?(vm_or_template.id)).to eq(true)

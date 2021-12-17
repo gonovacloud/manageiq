@@ -1,4 +1,4 @@
-ManageIQ.angular.app = angular.module('ManageIQ', [
+NOVAHawk.angular.app = angular.module('NOVAHawk', [
   'ui.bootstrap',
   'ui.codemirror',
   'patternfly',
@@ -6,9 +6,9 @@ ManageIQ.angular.app = angular.module('ManageIQ', [
   'angular.validators',
   'miq.api'
 ]);
-miqHttpInject(ManageIQ.angular.app);
+miqHttpInject(NOVAHawk.angular.app);
 
-ManageIQ.angular.rxSubject = new Rx.Subject();
+NOVAHawk.angular.rxSubject = new Rx.Subject();
 
 function miqHttpInject(angular_app) {
   angular_app.config(['$httpProvider', function($httpProvider) {
@@ -34,17 +34,17 @@ function miqHttpInject(angular_app) {
 }
 
 function miq_bootstrap(selector, app) {
-  app = app || 'ManageIQ';
+  app = app || 'NOVAHawk';
 
   return angular.bootstrap($(selector), [app], { strictDi: true });
 }
 
 function miqCallAngular(data) {
-  ManageIQ.angular.scope.$apply(function() {
-    ManageIQ.angular.scope[data.name].apply(ManageIQ.angular.scope, data.args);
+  NOVAHawk.angular.scope.$apply(function() {
+    NOVAHawk.angular.scope[data.name].apply(NOVAHawk.angular.scope, data.args);
   });
 }
 
 function sendDataWithRx(data) {
-  ManageIQ.angular.rxSubject.onNext(data);
+  NOVAHawk.angular.rxSubject.onNext(data);
 }

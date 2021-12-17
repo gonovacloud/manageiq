@@ -2,20 +2,20 @@ class NamespaceEmsContainer < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    EmsKubernetes                     ManageIQ::Providers::Kubernetes::ContainerManager
-    ContainerKubernetes               ManageIQ::Providers::Kubernetes::ContainerManager::Container
-    ContainerGroupKubernetes          ManageIQ::Providers::Kubernetes::ContainerManager::ContainerGroup
-    ContainerNodeKubernetes           ManageIQ::Providers::Kubernetes::ContainerManager::ContainerNode
-    MiqEventCatcherKubernetes         ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcher
-    EventCatcherKubernetes            ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcher::Runner
-    MiqEmsRefreshWorkerKubernetes     ManageIQ::Providers::Kubernetes::ContainerManager::RefreshWorker
-    EmsRefreshWorkerKubernetes        ManageIQ::Providers::Kubernetes::ContainerManager::RefreshWorker::Runner
+    EmsKubernetes                     NOVAHawk::Providers::Kubernetes::ContainerManager
+    ContainerKubernetes               NOVAHawk::Providers::Kubernetes::ContainerManager::Container
+    ContainerGroupKubernetes          NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerGroup
+    ContainerNodeKubernetes           NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerNode
+    MiqEventCatcherKubernetes         NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcher
+    EventCatcherKubernetes            NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcher::Runner
+    MiqEmsRefreshWorkerKubernetes     NOVAHawk::Providers::Kubernetes::ContainerManager::RefreshWorker
+    EmsRefreshWorkerKubernetes        NOVAHawk::Providers::Kubernetes::ContainerManager::RefreshWorker::Runner
 
-    EmsOpenshift                      ManageIQ::Providers::Openshift::ContainerManager
-    MiqEventCatcherOpenshift          ManageIQ::Providers::Openshift::ContainerManager::EventCatcher
-    EventCatcherOpenshift             ManageIQ::Providers::Openshift::ContainerManager::EventCatcher::Runner
-    MiqEmsRefreshWorkerOpenshift      ManageIQ::Providers::Openshift::ContainerManager::RefreshWorker
-    EmsRefreshWorkerOpenshift         ManageIQ::Providers::Openshift::ContainerManager::RefreshWorker::Runner
+    EmsOpenshift                      NOVAHawk::Providers::Openshift::ContainerManager
+    MiqEventCatcherOpenshift          NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher
+    EventCatcherOpenshift             NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher::Runner
+    MiqEmsRefreshWorkerOpenshift      NOVAHawk::Providers::Openshift::ContainerManager::RefreshWorker
+    EmsRefreshWorkerOpenshift         NOVAHawk::Providers::Openshift::ContainerManager::RefreshWorker::Runner
   )]
 
   def change

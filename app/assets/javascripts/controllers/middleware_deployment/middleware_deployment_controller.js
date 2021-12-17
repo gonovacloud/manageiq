@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('mwAddDeploymentController', MwAddDeploymentController);
+NOVAHawk.angular.app.controller('mwAddDeploymentController', MwAddDeploymentController);
 
 MwAddDeploymentController.$inject = ['$scope', '$http', 'miqService'];
 

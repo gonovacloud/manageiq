@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionWorkflow do
+describe NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionWorkflow do
   include Spec::Support::WorkflowHelper
 
   let(:admin)   { FactoryGirl.create(:user_with_group) }

@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Vmware::NetworkManager::CloudNetwork::OrgVdcNet < ManageIQ::Providers::Vmware::NetworkManager::CloudNetwork
+class NOVAHawk::Providers::Vmware::NetworkManager::CloudNetwork::OrgVdcNet < NOVAHawk::Providers::Vmware::NetworkManager::CloudNetwork
 end

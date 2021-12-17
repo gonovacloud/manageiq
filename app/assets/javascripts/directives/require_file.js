@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('requireFile', ['$parse', function ($parse) {
+NOVAHawk.angular.app.directive('requireFile', ['$parse', function ($parse) {
   return {
     require: 'ngModel',
     link: function(scope, el, attrs, _ngModel) {

@@ -153,7 +153,7 @@ module ApplicationHelper
 
   def controller_to_model
     case self.class.model.to_s
-    when "ManageIQ::Providers::CloudManager::Template", "ManageIQ::Providers::CloudManager::Vm", "ManageIQ::Providers::InfraManager::Template", "ManageIQ::Providers::InfraManager::Vm"
+    when "NOVAHawk::Providers::CloudManager::Template", "NOVAHawk::Providers::CloudManager::Vm", "NOVAHawk::Providers::InfraManager::Template", "NOVAHawk::Providers::InfraManager::Vm"
       VmOrTemplate
     else
       self.class.model
@@ -358,14 +358,14 @@ module ApplicationHelper
       controller = request.parameters[:controller]
       action = "diagnostics_worker_selected"
     when "OrchestrationStackOutput", "OrchestrationStackParameter", "OrchestrationStackResource",
-        "ManageIQ::Providers::CloudManager::OrchestrationStack",
-        "ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job", "ConfigurationScript"
+        "NOVAHawk::Providers::CloudManager::OrchestrationStack",
+        "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job", "ConfigurationScript"
       controller = request.parameters[:controller]
     when "ContainerVolume"
       controller = "persistent_volume"
-    when /^ManageIQ::Providers::(\w+)Manager$/
+    when /^NOVAHawk::Providers::(\w+)Manager$/
       controller = "ems_#{$1.underscore}"
-    when /^ManageIQ::Providers::(\w+)Manager::(\w+)$/
+    when /^NOVAHawk::Providers::(\w+)Manager::(\w+)$/
       controller = "#{$2.underscore}_#{$1.underscore}"
     else
       controller = db.underscore
@@ -844,33 +844,33 @@ module ApplicationHelper
 
   def model_for_ems(record)
     raise _("Record is not ExtManagementSystem class") unless record.kind_of?(ExtManagementSystem)
-    if record.kind_of?(ManageIQ::Providers::CloudManager)
-      ManageIQ::Providers::CloudManager
-    elsif record.kind_of?(ManageIQ::Providers::ContainerManager)
-      ManageIQ::Providers::ContainerManager
+    if record.kind_of?(NOVAHawk::Providers::CloudManager)
+      NOVAHawk::Providers::CloudManager
+    elsif record.kind_of?(NOVAHawk::Providers::ContainerManager)
+      NOVAHawk::Providers::ContainerManager
     else
-      ManageIQ::Providers::InfraManager
+      NOVAHawk::Providers::InfraManager
     end
   end
 
   def model_for_vm(record)
     raise _("Record is not VmOrTemplate class") unless record.kind_of?(VmOrTemplate)
-    if record.kind_of?(ManageIQ::Providers::CloudManager::Vm)
-      ManageIQ::Providers::CloudManager::Vm
-    elsif record.kind_of?(ManageIQ::Providers::InfraManager::Vm)
-      ManageIQ::Providers::InfraManager::Vm
-    elsif record.kind_of?(ManageIQ::Providers::CloudManager::Template)
-      ManageIQ::Providers::CloudManager::Template
-    elsif record.kind_of?(ManageIQ::Providers::InfraManager::Template)
-      ManageIQ::Providers::InfraManager::Template
+    if record.kind_of?(NOVAHawk::Providers::CloudManager::Vm)
+      NOVAHawk::Providers::CloudManager::Vm
+    elsif record.kind_of?(NOVAHawk::Providers::InfraManager::Vm)
+      NOVAHawk::Providers::InfraManager::Vm
+    elsif record.kind_of?(NOVAHawk::Providers::CloudManager::Template)
+      NOVAHawk::Providers::CloudManager::Template
+    elsif record.kind_of?(NOVAHawk::Providers::InfraManager::Template)
+      NOVAHawk::Providers::InfraManager::Template
     end
   end
 
   def controller_for_vm(model)
     case model.to_s
-    when "ManageIQ::Providers::CloudManager::Template", "ManageIQ::Providers::CloudManager::Vm"
+    when "NOVAHawk::Providers::CloudManager::Template", "NOVAHawk::Providers::CloudManager::Vm"
       "vm_cloud"
-    when "ManageIQ::Providers::InfraManager::Template", "ManageIQ::Providers::InfraManager::Vm"
+    when "NOVAHawk::Providers::InfraManager::Template", "NOVAHawk::Providers::InfraManager::Vm"
       "vm_infra"
     else
       "vm_or_template"
@@ -879,7 +879,7 @@ module ApplicationHelper
 
   def controller_for_stack(model)
     case model.to_s
-    when "ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job"
+    when "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job"
       "configuration_job"
     else
       model.name.underscore
@@ -889,13 +889,13 @@ module ApplicationHelper
   def vm_model_from_active_tree(tree)
     case tree
     when :instances_filter_tree
-      "ManageIQ::Providers::CloudManager::Vm"
+      "NOVAHawk::Providers::CloudManager::Vm"
     when :images_filter_tree
-      "ManageIQ::Providers::CloudManager::Template"
+      "NOVAHawk::Providers::CloudManager::Template"
     when :vms_filter_tree
-      "ManageIQ::Providers::InfraManager::Vm"
+      "NOVAHawk::Providers::InfraManager::Vm"
     when :templates_filter_tree
-      "ManageIQ::Providers::InfraManager::Template"
+      "NOVAHawk::Providers::InfraManager::Template"
     when :templates_images_filter_tree
       "MiqTemplate"
     when :vms_instances_filter_tree
@@ -1242,8 +1242,8 @@ module ApplicationHelper
   end
 
   def vm_quad_link_attributes(record)
-    attributes = vm_cloud_attributes(record) if record.kind_of?(ManageIQ::Providers::CloudManager::Vm)
-    attributes ||= vm_infra_attributes(record) if record.kind_of?(ManageIQ::Providers::InfraManager::Vm)
+    attributes = vm_cloud_attributes(record) if record.kind_of?(NOVAHawk::Providers::CloudManager::Vm)
+    attributes ||= vm_infra_attributes(record) if record.kind_of?(NOVAHawk::Providers::InfraManager::Vm)
     attributes
   end
 

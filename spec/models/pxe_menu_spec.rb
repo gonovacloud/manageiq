@@ -2,7 +2,7 @@ describe PxeMenu do
   before(:each) do
     @contents_pxelinux = <<-PXEMENU
 default vesamenu.c32
-Menu Title ManageIQ TFTP Boot Menu
+Menu Title NOVAHawk TFTP Boot Menu
 
 label iPXE
  menu default
@@ -64,7 +64,7 @@ PXEMENU
 
     @contents_ipxe = <<-PXEMENU
 #!ipxe
-menu ManageIQ iPXE Boot Menu
+menu NOVAHawk iPXE Boot Menu
 item --gap -- -----Live Images:
 item ud1204 Ubuntu 12.04 Desktop x64
 #item ud1204_commented_in_menu Ubuntu 12.04 Desktop x64

@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Vmware::NetworkManager::NetworkPort < ::NetworkPort
+class NOVAHawk::Providers::Vmware::NetworkManager::NetworkPort < ::NetworkPort
 end

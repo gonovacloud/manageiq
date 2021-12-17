@@ -3,8 +3,8 @@
   - url_json = {:url => url}.to_json
   -# Create from/to date JS vars to limit calendar starting from
   :javascript
-    ManageIQ.calendar.calDateFrom = null;
-    ManageIQ.calendar.calDateTo = new Date();
+    NOVAHawk.calendar.calDateFrom = null;
+    NOVAHawk.calendar.calDateTo = new Date();
   = render :partial => "layouts/flash_msg", :locals => {:div_num => "cu_repair"}
 
   %h3= _("Collection Options")

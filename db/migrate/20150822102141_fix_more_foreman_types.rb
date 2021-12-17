@@ -2,8 +2,8 @@ class FixMoreForemanTypes < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    ConfigurationProfileForeman        ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile
-    ConfiguredSystemForeman            ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem
+    ConfigurationProfileForeman        NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile
+    ConfiguredSystemForeman            NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem
   )]
 
   def change

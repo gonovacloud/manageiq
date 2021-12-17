@@ -1,6 +1,6 @@
 require 'shellwords'
 
-module ManageIQ::Providers::Kubernetes
+module NOVAHawk::Providers::Kubernetes
   class ContainerManager::RefreshParser
     include Vmdb::Logging
     def self.ems_inv_to_hashes(inventory, options = Config::Options.new)
@@ -142,9 +142,9 @@ module ManageIQ::Providers::Kubernetes
     def scheme_to_provider_mapping
       @scheme_to_provider_mapping ||= begin
         {
-          'gce'       => ['ManageIQ::Providers::Google::CloudManager'.safe_constantize, :name],
-          'aws'       => ['ManageIQ::Providers::Amazon::CloudManager'.safe_constantize, :uid_ems],
-          'openstack' => ['ManageIQ::Providers::Openstack::CloudManager'.safe_constantize, :uid_ems]
+          'gce'       => ['NOVAHawk::Providers::Google::CloudManager'.safe_constantize, :name],
+          'aws'       => ['NOVAHawk::Providers::Amazon::CloudManager'.safe_constantize, :uid_ems],
+          'openstack' => ['NOVAHawk::Providers::Openstack::CloudManager'.safe_constantize, :uid_ems]
         }.reject { |_key, (provider, _name)| provider.nil? }
       end
     end
@@ -157,9 +157,9 @@ module ManageIQ::Providers::Kubernetes
 
     def uuid_provider_types
       @uuid_provider_types ||= begin
-        ['ManageIQ::Providers::Redhat::InfraManager::Vm',
-         'ManageIQ::Providers::Openstack::CloudManager::Vm',
-         'ManageIQ::Providers::Vmware::InfraManager::Vm'].map(&:safe_constantize).compact.map(&:name)
+        ['NOVAHawk::Providers::Redhat::InfraManager::Vm',
+         'NOVAHawk::Providers::Openstack::CloudManager::Vm',
+         'NOVAHawk::Providers::Vmware::InfraManager::Vm'].map(&:safe_constantize).compact.map(&:name)
       end
     end
 
@@ -182,7 +182,7 @@ module ManageIQ::Providers::Kubernetes
 
       labels = parse_labels(node)
       new_result.merge!(
-        :type           => 'ManageIQ::Providers::Kubernetes::ContainerManager::ContainerNode',
+        :type           => 'NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerNode',
         :identity_infra => node.spec.providerID,
         :labels         => labels,
         :tags           => map_labels('ContainerNode', labels),
@@ -272,11 +272,11 @@ module ManageIQ::Providers::Kubernetes
     end
 
     def parse_pod(pod)
-      # pod in kubernetes is container group in manageiq
+      # pod in kubernetes is container group in novahawk
       new_result = parse_base_item(pod)
 
       new_result.merge!(
-        :type                  => 'ManageIQ::Providers::Kubernetes::ContainerManager::ContainerGroup',
+        :type                  => 'NOVAHawk::Providers::Kubernetes::ContainerManager::ContainerGroup',
         :restart_policy        => pod.spec.restartPolicy,
         :dns_policy            => pod.spec.dnsPolicy,
         :ipaddress             => pod.status.podIP,
@@ -373,7 +373,7 @@ module ManageIQ::Providers::Kubernetes
       new_result.merge!(parse_volume_source(persistent_volume.spec))
       new_result.merge!(
         :type                    => 'PersistentVolume',
-        :parent_type             => 'ManageIQ::Providers::ContainerManager',
+        :parent_type             => 'NOVAHawk::Providers::ContainerManager',
         :capacity                => parse_resource_list(persistent_volume.spec.capacity.to_h),
         :access_modes            => persistent_volume.spec.accessModes.join(','),
         :reclaim_policy          => persistent_volume.spec.persistentVolumeReclaimPolicy,
@@ -625,7 +625,7 @@ module ManageIQ::Providers::Kubernetes
       return if container_image.nil?
 
       h = {
-        :type            => 'ManageIQ::Providers::Kubernetes::ContainerManager::Container',
+        :type            => 'NOVAHawk::Providers::Kubernetes::ContainerManager::Container',
         :ems_ref         => "#{pod_id}_#{container.name}_#{container.image}",
         :name            => container.name,
         :restart_count   => container.restartCount,

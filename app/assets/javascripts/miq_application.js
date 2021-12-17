@@ -5,7 +5,7 @@
 // Things to be done on page loads
 function miqOnLoad() {
   // controller to be used in url in miqDropComplete method
-  ManageIQ.widget.dashboardUrl = "dashboard/widget_dd_done";
+  NOVAHawk.widget.dashboardUrl = "dashboard/widget_dd_done";
 
   // Initialize the dashboard column sortables
   if (miqDomElementExists('col1')) {
@@ -14,8 +14,8 @@ function miqOnLoad() {
 
   // Track the mouse coordinates for popup menus
   $(document).mousemove(function (e) {
-    ManageIQ.mouse.x = e.pageX;
-    ManageIQ.mouse.y = e.pageY;
+    NOVAHawk.mouse.x = e.pageX;
+    NOVAHawk.mouse.y = e.pageY;
   });
 
   miqBuildCalendar();
@@ -23,7 +23,7 @@ function miqOnLoad() {
 
   if (typeof miqLoadTL == "function") {
     miqLoadTL();
-    if (ManageIQ.timelineFilter) {
+    if (NOVAHawk.timelineFilter) {
       performFiltering(tl, [ 0, 1 ]);
     }
   }
@@ -39,13 +39,13 @@ function miqOnLoad() {
   }
 
   // Refresh the myCodeMirror editor
-  if (ManageIQ.editor !== null) {
-    ManageIQ.editor.refresh();
+  if (NOVAHawk.editor !== null) {
+    NOVAHawk.editor.refresh();
   }
 
   // Run MIQ after onload code if present
-  if (typeof ManageIQ.afterOnload == "string") {
-    eval(ManageIQ.afterOnload);
+  if (typeof NOVAHawk.afterOnload == "string") {
+    eval(NOVAHawk.afterOnload);
   }
 
   // Focus on search box, if it's there and allows focus
@@ -170,28 +170,28 @@ function miqCalendarDateConversion(server_offset) {
 
   // Prefill report editor style value text entry fields when blank
   // (written more generic for reuse, just have to build
-  // the ManageIQ.reportEditor.valueStyles hash)
+  // the NOVAHawk.reportEditor.valueStyles hash)
   window.miqValueStylePrefill = function (count) {
     var found = false;
 
-    for (var field in ManageIQ.reportEditor.valueStyles) {
+    for (var field in NOVAHawk.reportEditor.valueStyles) {
       if ($(field).length) {
-        $(field).prop('placeholder', expressions[ManageIQ.reportEditor.valueStyles[field]]);
+        $(field).prop('placeholder', expressions[NOVAHawk.reportEditor.valueStyles[field]]);
         found = true;
       }
     }
     if (found) {
       if (typeof count == 'undefined') {
-        ManageIQ.reportEditor.prefillCount = 0;
+        NOVAHawk.reportEditor.prefillCount = 0;
         setTimeout(function () {
-          miqValueStylePrefill(ManageIQ.reportEditor.prefillCount);
+          miqValueStylePrefill(NOVAHawk.reportEditor.prefillCount);
         }, 200);
-      } else if (count == ManageIQ.reportEditor.prefillCount) {
-        if (++ManageIQ.reportEditor.prefillCount > 100) {
-          ManageIQ.reportEditor.prefillCount = 0;
+      } else if (count == NOVAHawk.reportEditor.prefillCount) {
+        if (++NOVAHawk.reportEditor.prefillCount > 100) {
+          NOVAHawk.reportEditor.prefillCount = 0;
         }
         setTimeout(function () {
-          miqValueStylePrefill(ManageIQ.reportEditor.prefillCount);
+          miqValueStylePrefill(NOVAHawk.reportEditor.prefillCount);
         }, 200);
       }
     }
@@ -292,19 +292,19 @@ function miqDimDiv(divname, status) {
 
 // Check for changes and prompt
 function miqCheckForChanges() {
-  if (ManageIQ.angular.scope) {
-    if (angular.isDefined(ManageIQ.angular.scope.angularForm) &&
-      ManageIQ.angular.scope.angularForm.$dirty &&
+  if (NOVAHawk.angular.scope) {
+    if (angular.isDefined(NOVAHawk.angular.scope.angularForm) &&
+      NOVAHawk.angular.scope.angularForm.$dirty &&
       !miqDomElementExists('ignore_form_changes')) {
       var answer = confirm(__("Abandon changes?"));
       if (answer) {
-        ManageIQ.angular.scope.angularForm.$setPristine(true);
+        NOVAHawk.angular.scope.angularForm.$setPristine(true);
       }
       return answer;
     }
   } else if (((miqDomElementExists('buttons_on') &&
                $('#buttons_on').is(":visible")) ||
-              ManageIQ.changes !== null) &&
+              NOVAHawk.changes !== null) &&
              !miqDomElementExists('ignore_form_changes')) {
     return confirm(__("Abandon changes?"));
   }
@@ -378,11 +378,11 @@ function miqUpdateAllCheckboxes(button_div) {
 
   var state = $('#masterToggle').prop('checked');
 
-  if (ManageIQ.grids.gtl_list_grid) {
+  if (NOVAHawk.grids.gtl_list_grid) {
     miqGridCheckAll(state);
     var crows = miqGridGetCheckedRows();
 
-    ManageIQ.gridChecks = crows;
+    NOVAHawk.gridChecks = crows;
     miqSetButtons(crows.length, button_div);
   } else if ($("input.listcheckbox").length) {
     // No list_grid on the screen
@@ -501,13 +501,13 @@ function miqPassFields(url, args) {
 // Load XML/SWF charts data (non-IE)
 // This method is called by the XML/SWF charts when a chart is loaded into the DOM
 function Loaded_Chart(chart_id) {
-  if (ManageIQ.browser != 'Explorer') {
-    if ((ManageIQ.charts.chartData === null) && (document.readyState == "loading")) {
+  if (NOVAHawk.browser != 'Explorer') {
+    if ((NOVAHawk.charts.chartData === null) && (document.readyState == "loading")) {
       setTimeout(function() { Loaded_Chart(chart_id) }, 200);
       return;
     }
 
-    if (ManageIQ.charts.chartData !== null) {
+    if (NOVAHawk.charts.chartData !== null) {
       doLoadChart(chart_id, document.getElementsByName(chart_id)[0]);
     }
   }
@@ -520,17 +520,17 @@ function doLoadChart(chart_id, chart_object) {
   var comp = id_splitted[3];
 
   if (typeof (comp) === 'undefined') {
-    chart_object.Update_XML(ManageIQ.charts.chartData[set][idx].xml, false);
+    chart_object.Update_XML(NOVAHawk.charts.chartData[set][idx].xml, false);
   } else {
-    chart_object.Update_XML(ManageIQ.charts.chartData[set][idx].xml2, false);
+    chart_object.Update_XML(NOVAHawk.charts.chartData[set][idx].xml2, false);
   }
 }
 
 // Load XML/SWF charts data (IE)
 function miqLoadCharts() {
-  if (typeof ManageIQ.charts.chartData != 'undefined' && ManageIQ.browser == 'Explorer') {
-    for (var set in ManageIQ.charts.chartData) {
-      var mcd = ManageIQ.charts.chartData[set];
+  if (typeof NOVAHawk.charts.chartData != 'undefined' && NOVAHawk.browser == 'Explorer') {
+    for (var set in NOVAHawk.charts.chartData) {
+      var mcd = NOVAHawk.charts.chartData[set];
       for (var i = 0; i < mcd.length; i++) {
         miqLoadChart("miq_" + set + "_" + i);
         if (typeof mcd[i].xml2 != "undefined") {
@@ -580,7 +580,7 @@ function miqChartLinkData(col, row, value, category, series, id, message) {
 function miqBuildChartMenu(col, row, _value, category, series, id, _message) {
   var set = id.split('_')[1]; // Get the chart set
   var idx = id.split('_')[2]; // Get the chart index
-  var chart_data = ManageIQ.charts.chartData[set];
+  var chart_data = NOVAHawk.charts.chartData[set];
   var chart_el_id = id.replace(/^miq_/, 'miq_chart_');
   var chartmenu_el_id = id.replace(/^miq_/, 'miq_chartmenu_');
 
@@ -604,22 +604,22 @@ function miqBuildChartMenu(col, row, _value, category, series, id, _message) {
         "' href='#' onclick='miqChartMenuClick(this.id)'>" + menu_title + "</a></li>");
     }
 
-    $("#" + chartmenu_el_id).css({'left': ManageIQ.mouse.x, 'top': ManageIQ.mouse.y});
+    $("#" + chartmenu_el_id).css({'left': NOVAHawk.mouse.x, 'top': NOVAHawk.mouse.y});
     $('#' + chartmenu_el_id).dropdown('toggle');
     $('#' + chart_el_id).find('.overlay').show();
   }
 }
 
 function miqChartBindEvents(chart_set, chart_index) {
-  if (ManageIQ.charts.provider == 'jqplot') {
+  if (NOVAHawk.charts.provider == 'jqplot') {
     jqplot_bind_events(chart_set, chart_index);
-  } else if (ManageIQ.charts.provider == 'c3') {
+  } else if (NOVAHawk.charts.provider == 'c3') {
     // noop
   }
 }
 
 function miqBuildChartMenuEx(col, row, _value, category, series, chart_set, chart_index) {
-  var chart_data = ManageIQ.charts.chartData[chart_set];
+  var chart_data = NOVAHawk.charts.chartData[chart_set];
   var chart_el = $('#miq_chart_parent_' + chart_set + '_' + chart_index);
   var chartmenu_el = $('#miq_chartmenu_' + chart_set + '_' + chart_index);
   chartmenu_el.empty();
@@ -646,8 +646,8 @@ function miqBuildChartMenuEx(col, row, _value, category, series, chart_set, char
     }
 
     //chart menu has min-width: 160 a has two levels
-    var x_position = (ManageIQ.mouse.x > $(window).width() - 320) ? $(window).width() - 320 : ManageIQ.mouse.x;
-    chartmenu_el.css({'left': x_position, 'top': ManageIQ.mouse.y});
+    var x_position = (NOVAHawk.mouse.x > $(window).width() - 320) ? $(window).width() - 320 : NOVAHawk.mouse.x;
+    chartmenu_el.css({'left': x_position, 'top': NOVAHawk.mouse.y});
     chartmenu_el.dropdown('toggle');
     chart_el.find('.overlay').show();
   }
@@ -741,21 +741,21 @@ function miqAsyncAjax(url) {
   miqJqueryRequest(url, {beforeSend: true});
 }
 
-ManageIQ.oneTransition.oneTrans = 0;
+NOVAHawk.oneTransition.oneTrans = 0;
 
 // Function to generate an Ajax request, but only once for a drawn screen
 function miqSendOneTrans(url, observe) {
-  if (ManageIQ.oneTransition.IEButtonPressed) {
+  if (NOVAHawk.oneTransition.IEButtonPressed) {
     // page replace after clicking save/reset was making observe_field on
     // text_area in IE send up a trascation to form_field_changed method
-    ManageIQ.oneTransition.IEButtonPressed = false;
+    NOVAHawk.oneTransition.IEButtonPressed = false;
     return;
   }
-  if (ManageIQ.oneTransition.oneTrans) {
+  if (NOVAHawk.oneTransition.oneTrans) {
     return;
   }
 
-  ManageIQ.oneTransition.oneTrans = 1;
+  NOVAHawk.oneTransition.oneTrans = 1;
 
   if (observe && observe.observe) {
     return miqObserveRequest(url, { done: observe.done });
@@ -941,7 +941,7 @@ function miqInitDashboardCols() {
 // Send the updated sortable order after jQuery drag/drop
 function miqDropComplete(_event, _ui) {
   var el = $(this);
-  var url = "/" + ManageIQ.widget.dashboardUrl + "?" + el.sortable(
+  var url = "/" + NOVAHawk.widget.dashboardUrl + "?" + el.sortable(
               'serialize', {key: el.attr('id') + "[]"}
             ).toString();
   // dialog service uses div ID for reorder, because unsaved element doesnt have record ID
@@ -949,8 +949,8 @@ function miqDropComplete(_event, _ui) {
     miqUpdateElementsId(el);
   }
   // Adding id of record being edited to be used by load_edit call
-  if (ManageIQ.record.recordId !== null) {
-    url += "&id=" + ManageIQ.record.recordId;
+  if (NOVAHawk.record.recordId !== null) {
+    url += "&id=" + NOVAHawk.record.recordId;
   }
   miqJqueryRequest(url);
 }
@@ -972,25 +972,25 @@ function miqBuildCalendar() {
     var observeDateBackup = null;
 
     if (! element.data('datepicker')) {
-      observeDateBackup = ManageIQ.observeDate;
-      ManageIQ.observeDate = function() {};
+      observeDateBackup = NOVAHawk.observeDate;
+      NOVAHawk.observeDate = function() {};
       element.datepicker();
     }
 
-    if (ManageIQ.calendar.calDateFrom) {
-      element.datepicker('setStartDate', ManageIQ.calendar.calDateFrom);
+    if (NOVAHawk.calendar.calDateFrom) {
+      element.datepicker('setStartDate', NOVAHawk.calendar.calDateFrom);
     }
 
-    if (ManageIQ.calendar.calDateTo) {
-      element.datepicker('setEndDate', ManageIQ.calendar.calDateTo);
+    if (NOVAHawk.calendar.calDateTo) {
+      element.datepicker('setEndDate', NOVAHawk.calendar.calDateTo);
     }
 
-    if (ManageIQ.calendar.calSkipDays) {
-      element.datepicker('setDaysOfWeekDisabled', ManageIQ.calendar.calSkipDays);
+    if (NOVAHawk.calendar.calSkipDays) {
+      element.datepicker('setDaysOfWeekDisabled', NOVAHawk.calendar.calSkipDays);
     }
 
     if (observeDateBackup != null) {
-      ManageIQ.observeDate = observeDateBackup;
+      NOVAHawk.observeDate = observeDateBackup;
     }
   });
 }
@@ -1058,8 +1058,8 @@ function miq_tabs_init(id, url) {
 
   $(id + ' > ul.nav-tabs a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
     // Refresh CodeMirror when its tab is toggled
-    if ($($(e.target).attr('href')).hasClass('cm-tab') && typeof(ManageIQ.editor) != 'undefined') {
-      ManageIQ.editor.refresh();
+    if ($($(e.target).attr('href')).hasClass('cm-tab') && typeof(NOVAHawk.editor) != 'undefined') {
+      NOVAHawk.editor.refresh();
     }
   });
 
@@ -1099,7 +1099,7 @@ function miqSearchByName(button) {
 // Send transaction to server so automate tree selection box can be made active
 // and rest of the screen can be blocked
 function miqShowAE_Tree(typ) {
-  var ae_url = "/" + ManageIQ.controller + "/ae_tree_select_toggle";
+  var ae_url = "/" + NOVAHawk.controller + "/ae_tree_select_toggle";
   miqJqueryRequest(miqPassFields(ae_url, {typ: typ}));
   return true;
 }
@@ -1164,25 +1164,25 @@ function miqSearchSpinner(status) {
 }
 
 function miqProcessObserveQueue() {
-  if (! ManageIQ.observe.queue.length) {
+  if (! NOVAHawk.observe.queue.length) {
     return;
   }
 
-  if (ManageIQ.observe.processing) {
+  if (NOVAHawk.observe.processing) {
     setTimeout(miqProcessObserveQueue, 700);
     return;
   }
 
-  ManageIQ.observe.processing = true;
+  NOVAHawk.observe.processing = true;
 
-  var request = ManageIQ.observe.queue.shift();
+  var request = NOVAHawk.observe.queue.shift();
 
   miqJqueryRequest(request.url, request.options)
   .then(function(arg) {
-    ManageIQ.observe.processing = false;
+    NOVAHawk.observe.processing = false;
     request.deferred.resolve(arg);
   }, function(err) {
-    ManageIQ.observe.processing = false;
+    NOVAHawk.observe.processing = false;
     add_flash(__("Error requesting data from server"), 'error');
     console.log(err);
     request.deferred.reject(err);
@@ -1199,7 +1199,7 @@ function miqObserveRequest(url, options) {
     deferred.reject = reject;
   });
 
-  ManageIQ.observe.queue.push({
+  NOVAHawk.observe.queue.push({
     url: url,
     options: options,
     deferred: deferred,
@@ -1211,7 +1211,7 @@ function miqObserveRequest(url, options) {
 }
 
 function miqJqueryRequest(url, options) {
-  if ((ManageIQ.observe.processing || ManageIQ.observe.queue.length) && (!options || !options.observe)) {
+  if ((NOVAHawk.observe.processing || NOVAHawk.observe.queue.length) && (!options || !options.observe)) {
     console.debug('Postponing miqJqueryRequest - waiting for the observe queue to empty first');
 
     return new Promise(function(resolve, reject) {
@@ -1295,7 +1295,7 @@ function miqInitCodemirror(options) {
 
   var textarea = $('#' + options.text_area_id)[0];
 
-  ManageIQ.editor = CodeMirror.fromTextArea(textarea, {
+  NOVAHawk.editor = CodeMirror.fromTextArea(textarea, {
     mode: options.mode,
     lineNumbers: options.line_numbers,
     matchBrackets: true,
@@ -1304,24 +1304,24 @@ function miqInitCodemirror(options) {
     viewportMargin: Infinity,
   });
 
-  ManageIQ.editor.on('change', function (cm, change) {
+  NOVAHawk.editor.on('change', function (cm, change) {
     if (options.angular) {
-      ManageIQ.editor.save();
+      NOVAHawk.editor.save();
       $(textarea).trigger("change");
     } else {
       miqSendOneTrans(options.url);
     }
   });
 
-  ManageIQ.editor.on('blur', function (cm, change) {
-    ManageIQ.editor.save();
+  NOVAHawk.editor.on('blur', function (cm, change) {
+    NOVAHawk.editor.save();
   });
 
   $('.CodeMirror').css('height', options.height);
   $('.CodeMirror').css('width', options.width);
 
   if (! options.no_focus) {
-    ManageIQ.editor.focus();
+    NOVAHawk.editor.focus();
   }
 }
 
@@ -1353,7 +1353,7 @@ function miqSelectPickerEvent(element, url, options) {
 }
 
 function miqAccordSelect(e) {
-  if (ManageIQ.noCollapseEvent) { // implicitly return true when the noCollapseEvent is set
+  if (NOVAHawk.noCollapseEvent) { // implicitly return true when the noCollapseEvent is set
     return true;
   }
   if (!miqCheckForChanges()) {
@@ -1391,15 +1391,15 @@ function miqAccordionSwap(_collapse, expand) {
    * });
    * // Fire an one-time event fater the expand is done
    * $(expand).one('shown.bs.collapse', function () {
-   *   ManageIQ.noCollapseEvent = false;
+   *   NOVAHawk.noCollapseEvent = false;
    * })
-   * ManageIQ.noCollapseEvent = true;
+   * NOVAHawk.noCollapseEvent = true;
    * $(collapse).collapse('hide');
    *
    */
-   ManageIQ.noCollapseEvent = true;
+   NOVAHawk.noCollapseEvent = true;
    $(expand).parent().find('.panel-heading a').trigger('click');
-   ManageIQ.noCollapseEvent = false;
+   NOVAHawk.noCollapseEvent = false;
 }
 
 // This function is called in miqOnLoad
@@ -1456,11 +1456,11 @@ function miqToolbarOnClick(_e) {
     // See if a url is defined
     if (button.data('url').indexOf("/") === 0) {
       // If url starts with / it is non-ajax
-      tb_url = "/" + ManageIQ.controller + button.data('url');
-      if (ManageIQ.record.recordId !== null) {
+      tb_url = "/" + NOVAHawk.controller + button.data('url');
+      if (NOVAHawk.record.recordId !== null) {
         // remove last "/" if exist
         tb_url = tb_url.replace(/\/$/, "");
-        tb_url += "/" + ManageIQ.record.recordId;
+        tb_url += "/" + NOVAHawk.record.recordId;
       }
       if (button.data("url_parms")) {
         tb_url += button.data('url_parms');
@@ -1469,11 +1469,11 @@ function miqToolbarOnClick(_e) {
       return;
     } else {
       // An ajax url was defined
-      tb_url = "/" + ManageIQ.controller + "/" + button.data('url');
+      tb_url = "/" + NOVAHawk.controller + "/" + button.data('url');
       if (button.data('url').indexOf("x_history") !== 0) {
         // If not an explorer history button
-        if (ManageIQ.record.recordId !== null) {
-          tb_url += "/" + ManageIQ.record.recordId;
+        if (NOVAHawk.record.recordId !== null) {
+          tb_url += "/" + NOVAHawk.record.recordId;
         }
       }
     }
@@ -1486,12 +1486,12 @@ function miqToolbarOnClick(_e) {
     // No url specified, run standard button ajax transaction
     if (typeof button.data('explorer') != "undefined" && button.data('explorer')) {
       // Use x_button method for explorer ajax
-      tb_url = "/" + ManageIQ.controller + "/x_button";
+      tb_url = "/" + NOVAHawk.controller + "/x_button";
     } else {
-      tb_url = "/" + ManageIQ.controller + "/button";
+      tb_url = "/" + NOVAHawk.controller + "/button";
     }
-    if (ManageIQ.record.recordId !== null) {
-      tb_url += "/" + ManageIQ.record.recordId;
+    if (NOVAHawk.record.recordId !== null) {
+      tb_url += "/" + NOVAHawk.record.recordId;
     }
     tb_url += "?pressed=";
     if (typeof button.data('pressed') == "undefined" && button.data('click')) {
@@ -1512,8 +1512,8 @@ function miqToolbarOnClick(_e) {
   var params;
   if (button.data("url_parms")) {
     if (button.data('url_parms').match("_div$")) {
-      if (ManageIQ.gridChecks.length) {
-        params = "miq_grid_checks=" + ManageIQ.gridChecks.join(',');
+      if (NOVAHawk.gridChecks.length) {
+        params = "miq_grid_checks=" + NOVAHawk.gridChecks.join(',');
       } else {
         params = miqSerializeForm(button.data('url_parms'));
       }
@@ -1619,7 +1619,7 @@ function miqHideSearchClearButton(explorer) {
     $(this).prev('.form-control').val('').focus();
     $(this).hide();
     // Clear Search text values as well
-    var url = "/" + ManageIQ.controller + "/adv_search_text_clear" + "?in_explorer=" + explorer;
+    var url = "/" + NOVAHawk.controller + "/adv_search_text_clear" + "?in_explorer=" + explorer;
     miqJqueryRequest(url);
   });
 }
@@ -1713,7 +1713,7 @@ function chartData(type, data, data2) {
       var recalculated = recalculatePrecision(minShowed, maxShowed, format, min, max);
       format = recalculated.format;
     }
-    data.axis.y.tick.format = ManageIQ.charts.formatters[format.function].c3(format.options);
+    data.axis.y.tick.format = NOVAHawk.charts.formatters[format.function].c3(format.options);
     data.legend.item = {
       onclick: recalculateChartYAxisLabels
     }
@@ -1721,12 +1721,12 @@ function chartData(type, data, data2) {
     var titleFormat = _.cloneDeep(format);
     titleFormat.options.precision += 1;
     data.tooltip.format.value = function (value, _ratio, _id) {
-      var format = ManageIQ.charts.formatters[titleFormat.function].c3(titleFormat.options);
+      var format = NOVAHawk.charts.formatters[titleFormat.function].c3(titleFormat.options);
       return format(value);
     }
   }
 
-  var config = _.cloneDeep(ManageIQ.charts.c3config[type]);
+  var config = _.cloneDeep(NOVAHawk.charts.c3config[type]);
   // some PatternFly default configs define contents function, but it breaks formatting
   if (_.isObject(config.tooltip)) {
     config.tooltip.contents = undefined;

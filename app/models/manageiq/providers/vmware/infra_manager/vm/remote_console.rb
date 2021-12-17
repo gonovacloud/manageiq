@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Vm::RemoteConsole
+module NOVAHawk::Providers::Vmware::InfraManager::Vm::RemoteConsole
   require_dependency 'securerandom'
 
   def console_supported?(type)

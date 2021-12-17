@@ -1,6 +1,6 @@
 /* global miqAjaxButton miqBuildCalendar miqButtons miqJqueryRequest miqRESTAjaxButton miqSparkleOff miqSparkleOn */
 
-ManageIQ.angular.app.service('miqService', ['$timeout', '$document', function($timeout, $document) {
+NOVAHawk.angular.app.service('miqService', ['$timeout', '$document', function($timeout, $document) {
   this.storedPasswordPlaceholder = "●●●●●●●●";
 
   this.showButtons = function() {
@@ -12,7 +12,7 @@ ManageIQ.angular.app.service('miqService', ['$timeout', '$document', function($t
   };
 
   this.buildCalendar = function(year, month, date) {
-    ManageIQ.calendar.calDateFrom = new Date(year, month, date);
+    NOVAHawk.calendar.calDateFrom = new Date(year, month, date);
     miqBuildCalendar(true);
   };
 

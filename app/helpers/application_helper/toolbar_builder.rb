@@ -640,24 +640,24 @@ class ApplicationHelper::ToolbarBuilder
         "ontap_file_share_statistics"
       return true unless get_vmdb_config[:product][:smis]
     when "host_register_nodes"
-      return true if @record.class != ManageIQ::Providers::Openstack::InfraManager
+      return true if @record.class != NOVAHawk::Providers::Openstack::InfraManager
     when "host_introspect", "host_provide"
-      return true unless @record.class == ManageIQ::Providers::Openstack::InfraManager ||
-                         @record.class == ManageIQ::Providers::Openstack::InfraManager::Host
-      return true if @record.class == ManageIQ::Providers::Openstack::InfraManager::Host &&
+      return true unless @record.class == NOVAHawk::Providers::Openstack::InfraManager ||
+                         @record.class == NOVAHawk::Providers::Openstack::InfraManager::Host
+      return true if @record.class == NOVAHawk::Providers::Openstack::InfraManager::Host &&
                      @record.hardware.provision_state != "manageable"
     when "host_manageable"
-      return true unless @record.class == ManageIQ::Providers::Openstack::InfraManager ||
-                         @record.class == ManageIQ::Providers::Openstack::InfraManager::Host
-      return true if @record.class == ManageIQ::Providers::Openstack::InfraManager::Host &&
+      return true unless @record.class == NOVAHawk::Providers::Openstack::InfraManager ||
+                         @record.class == NOVAHawk::Providers::Openstack::InfraManager::Host
+      return true if @record.class == NOVAHawk::Providers::Openstack::InfraManager::Host &&
                      @record.hardware.provision_state == "manageable"
     end
 
     # Scale is only supported by OpenStack Infrastructure Provider
     return true if (id == "ems_infra_scale" || id == "ems_infra_scaledown") &&
-                   (@record.class != ManageIQ::Providers::Openstack::InfraManager ||
+                   (@record.class != NOVAHawk::Providers::Openstack::InfraManager ||
                     !role_allows?(:feature => "ems_infra_scale") ||
-                   (@record.class == ManageIQ::Providers::Openstack::InfraManager && @record.orchestration_stacks.count == 0))
+                   (@record.class == NOVAHawk::Providers::Openstack::InfraManager && @record.orchestration_stacks.count == 0))
 
     # Now check model/record specific rules
     case get_record_cls(@record)
@@ -735,7 +735,7 @@ class ApplicationHelper::ToolbarBuilder
       when "server_delete", "role_start", "role_suspend", "promote_server", "demote_server"
         return true
       end
-    when "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem", "ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem"
+    when "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem", "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem"
       case id
       when "configured_system_provision"
         return true unless @record.provisionable?
@@ -1338,6 +1338,6 @@ class ApplicationHelper::ToolbarBuilder
   def disable_new_iso_datastore?(item_id)
     @layout == "pxe" &&
       item_id == "iso_datastore_new" &&
-      !ManageIQ::Providers::Redhat::InfraManager.any_without_iso_datastores?
+      !NOVAHawk::Providers::Redhat::InfraManager.any_without_iso_datastores?
   end
 end

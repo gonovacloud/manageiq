@@ -12,7 +12,7 @@ module WmiLinux
     return nil if @username.nil?
 
     # Check for usernames that supplied the domain as well
-    # Example manageiq\user1 or just user1
+    # Example novahawk\user1 or just user1
     if @username.include?("\\")
       domain, name = @username.split("\\")
       return "#{domain}/#{name}"

@@ -57,11 +57,11 @@ class EmsInfraDashboardService
   end
 
   def providers
-    provider_classes_to_ui_types = ManageIQ::Providers::InfraManager.subclasses.each_with_object({}) { |subclass, h|
+    provider_classes_to_ui_types = NOVAHawk::Providers::InfraManager.subclasses.each_with_object({}) { |subclass, h|
       name = subclass.name.split('::')[2]
       h[subclass.name] = name.to_sym
     }
-    providers = @ems.present? ? {@ems.type => 1} : ManageIQ::Providers::InfraManager.group(:type).count
+    providers = @ems.present? ? {@ems.type => 1} : NOVAHawk::Providers::InfraManager.group(:type).count
 
     result = {}
     providers.each do |provider, count|
@@ -202,7 +202,7 @@ class EmsInfraDashboardService
     tp = TimeProfile.profile_for_user_tz(current_user.id, current_user.get_timezone) || TimeProfile.default_time_profile
 
     @daily_metrics ||= Metric::Helper.find_for_interval_name('daily', tp)
-                                     .where(:resource => (@ems || ManageIQ::Providers::InfraManager.all))
+                                     .where(:resource => (@ems || NOVAHawk::Providers::InfraManager.all))
                                      .where('timestamp > ?', 30000.days.ago.utc).order('timestamp')
   end
 end

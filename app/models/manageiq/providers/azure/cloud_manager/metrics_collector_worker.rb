@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Azure::CloudManager::MetricsCollectorWorker < ManageIQ::Providers::BaseManager::MetricsCollectorWorker
+class NOVAHawk::Providers::Azure::CloudManager::MetricsCollectorWorker < NOVAHawk::Providers::BaseManager::MetricsCollectorWorker
   require_nested :Runner
 
   self.default_queue_name = "azure"

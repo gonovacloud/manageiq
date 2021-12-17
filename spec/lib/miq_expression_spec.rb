@@ -1878,12 +1878,12 @@ describe MiqExpression do
 
     context "with :typ=>tag" do
       it "VmInfra" do
-        result = described_class.model_details("ManageIQ::Providers::InfraManager::Vm", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
+        result = described_class.model_details("NOVAHawk::Providers::InfraManager::Vm", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
         expect(result.map(&:first)).to include("Virtual Machine.My Company Tags : Auto Approve - Max CPU")
       end
 
       it "VmCloud" do
-        result = described_class.model_details("ManageIQ::Providers::CloudManager::Vm", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
+        result = described_class.model_details("NOVAHawk::Providers::CloudManager::Vm", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
         expect(result.map(&:first)).to include("Instance.My Company Tags : Auto Approve - Max CPU")
         expect(result.map(&:first)).not_to include("Instance.VM and Instance.My Company Tags : Auto Approve - Max CPU")
       end
@@ -1899,12 +1899,12 @@ describe MiqExpression do
       end
 
       it "TemplateInfra" do
-        result = described_class.model_details("ManageIQ::Providers::InfraManager::Template", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
+        result = described_class.model_details("NOVAHawk::Providers::InfraManager::Template", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
         expect(result.map(&:first)).to include("Template.My Company Tags : Auto Approve - Max CPU")
       end
 
       it "TemplateCloud" do
-        result = described_class.model_details("ManageIQ::Providers::CloudManager::Template", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
+        result = described_class.model_details("NOVAHawk::Providers::CloudManager::Template", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
         expect(result.map(&:first)).to include("Image.My Company Tags : Auto Approve - Max CPU")
       end
 
@@ -1914,12 +1914,12 @@ describe MiqExpression do
       end
 
       it "EmsInfra" do
-        result = described_class.model_details("ManageIQ::Providers::InfraManager", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
+        result = described_class.model_details("NOVAHawk::Providers::InfraManager", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
         expect(result.map(&:first)).to include("Infrastructure Provider.My Company Tags : Auto Approve - Max CPU")
       end
 
       it "EmsCloud" do
-        result = described_class.model_details("ManageIQ::Providers::CloudManager", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
+        result = described_class.model_details("NOVAHawk::Providers::CloudManager", :typ => "tag", :include_model => true, :include_my_tags => true, :userid => "admin")
         expect(result.map(&:first)).to include("Cloud Provider.My Company Tags : Auto Approve - Max CPU")
       end
     end
@@ -1948,12 +1948,12 @@ describe MiqExpression do
   context ".build_relats" do
     it "AvailabilityZone" do
       result = described_class.build_relats("AvailabilityZone")
-      expect(result.fetch_path(:reflections, :ext_management_system, :parent, :class_path).split(".").last).to eq("manageiq_providers_cloud_manager")
+      expect(result.fetch_path(:reflections, :ext_management_system, :parent, :class_path).split(".").last).to eq("novahawk_providers_cloud_manager")
       expect(result.fetch_path(:reflections, :ext_management_system, :parent, :assoc_path).split(".").last).to eq("ext_management_system")
     end
 
     it "VmInfra" do
-      result = described_class.build_relats("ManageIQ::Providers::InfraManager::Vm")
+      result = described_class.build_relats("NOVAHawk::Providers::InfraManager::Vm")
       expect(result.fetch_path(:reflections, :evm_owner, :parent, :class_path).split(".").last).to eq("evm_owner")
       expect(result.fetch_path(:reflections, :evm_owner, :parent, :assoc_path).split(".").last).to eq("evm_owner")
       expect(result.fetch_path(:reflections, :linux_initprocesses, :parent, :class_path).split(".").last).to eq("linux_initprocesses")
@@ -1967,8 +1967,8 @@ describe MiqExpression do
     end
 
     it "OrchestrationStack" do
-      result = described_class.build_relats("ManageIQ::Providers::CloudManager::OrchestrationStack")
-      expect(result.fetch_path(:reflections, :vms, :parent, :class_path).split(".").last).to eq("manageiq_providers_cloud_manager_vms")
+      result = described_class.build_relats("NOVAHawk::Providers::CloudManager::OrchestrationStack")
+      expect(result.fetch_path(:reflections, :vms, :parent, :class_path).split(".").last).to eq("novahawk_providers_cloud_manager_vms")
       expect(result.fetch_path(:reflections, :vms, :parent, :assoc_path).split(".").last).to eq("vms")
     end
   end
@@ -1993,7 +1993,7 @@ describe MiqExpression do
       end
 
       it "one_to_many relation" do
-        @ref = ManageIQ::Providers::CloudManager::OrchestrationStack.reflections_with_virtual[:vms]
+        @ref = NOVAHawk::Providers::CloudManager::OrchestrationStack.reflections_with_virtual[:vms]
         expect(subject).to eq(@ref.klass.model_name.plural)
       end
     end
@@ -2024,7 +2024,7 @@ describe MiqExpression do
     end
 
     it "returns list of available operations for field type 'string'" do
-      @field = "ManageIQ::Providers::InfraManager::Vm.advanced_settings-name"
+      @field = "NOVAHawk::Providers::InfraManager::Vm.advanced_settings-name"
       expect(subject).to contain_exactly("=",
                                          "STARTS WITH",
                                          "ENDS WITH",
@@ -2038,7 +2038,7 @@ describe MiqExpression do
     end
 
     it "returns list of available operations for field type 'integer'" do
-      @field = "ManageIQ::Providers::InfraManager::Vm-cpu_limit"
+      @field = "NOVAHawk::Providers::InfraManager::Vm-cpu_limit"
       expect(subject).to contain_exactly("=", "!=", "<", "<=", ">=", ">")
     end
 
@@ -2056,7 +2056,7 @@ describe MiqExpression do
 =end
 
     it "returns list of available operations for field type 'string_set'" do
-      @field = "ManageIQ::Providers::InfraManager::Vm-hostnames"
+      @field = "NOVAHawk::Providers::InfraManager::Vm-hostnames"
       expect(subject).to contain_exactly("INCLUDES ALL", "INCLUDES ANY", "LIMITED TO")
     end
 
@@ -2066,17 +2066,17 @@ describe MiqExpression do
     end
 
     it "returns list of available operations for field type 'boolean'" do
-      @field = "ManageIQ::Providers::InfraManager::Vm-active"
+      @field = "NOVAHawk::Providers::InfraManager::Vm-active"
       expect(subject).to contain_exactly("=", "IS NULL", "IS NOT NULL")
     end
 
     it "returns list of available operations for field type 'date'" do
-      @field = "ManageIQ::Providers::InfraManager::Vm-retires_on"
+      @field = "NOVAHawk::Providers::InfraManager::Vm-retires_on"
       expect(subject).to contain_exactly("IS", "BEFORE", "AFTER", "FROM", "IS EMPTY", "IS NOT EMPTY")
     end
 
     it "returns list of available operations for field type 'datetime'" do
-      @field = "ManageIQ::Providers::InfraManager::Vm-ems_created_on"
+      @field = "NOVAHawk::Providers::InfraManager::Vm-ems_created_on"
       expect(subject).to contain_exactly("IS", "BEFORE", "AFTER", "FROM", "IS EMPTY", "IS NOT EMPTY")
     end
 
@@ -2154,7 +2154,7 @@ describe MiqExpression do
     end
 
     it "return column info for model-field" do
-      field = "ManageIQ::Providers::InfraManager::Vm-cpu_limit"
+      field = "NOVAHawk::Providers::InfraManager::Vm-cpu_limit"
       col_info = described_class.get_col_info(field)
       expect(col_info).to match(
         :data_type                      => :integer,
@@ -2169,7 +2169,7 @@ describe MiqExpression do
     end
 
     it "return column info for model.association-field" do
-      field = "ManageIQ::Providers::InfraManager::Vm.guest_applications-vendor"
+      field = "NOVAHawk::Providers::InfraManager::Vm.guest_applications-vendor"
       col_info = described_class.get_col_info(field)
       expect(col_info).to match(
         :data_type                      => :string,
@@ -2184,7 +2184,7 @@ describe MiqExpression do
     end
 
     it "return column info for model.virtualassociation..virtualassociation-field (with sql)" do
-      field = "ManageIQ::Providers::InfraManager::Vm.service.user.vms-uncommitted_storage"
+      field = "NOVAHawk::Providers::InfraManager::Vm.service.user.vms-uncommitted_storage"
       col_info = described_class.get_col_info(field)
       expect(col_info).to match(
         :data_type                      => :integer,
@@ -2199,7 +2199,7 @@ describe MiqExpression do
     end
 
     it "return column info for model.virtualassociation..virtualassociation-field (with sql)" do
-      field = "ManageIQ::Providers::InfraManager::Vm.service.user.vms-active"
+      field = "NOVAHawk::Providers::InfraManager::Vm.service.user.vms-active"
       col_info = described_class.get_col_info(field)
       expect(col_info).to match(
         :data_type                      => :boolean,
@@ -2231,31 +2231,31 @@ describe MiqExpression do
 
       context "operation with 'field'" do
         it "returns false if format of field is model.association..association-field" do
-          field = "ManageIQ::Providers::InfraManager::Vm.service.user.vms-active"
+          field = "NOVAHawk::Providers::InfraManager::Vm.service.user.vms-active"
           expression = {"CONTAINS" => {"field" => field, "value" => "true"}}
           expect(described_class.new(nil).sql_supports_atom?(expression)).to eq(false)
         end
 
         it "returns false if field belongs to virtual_has_many association" do
-          field = "ManageIQ::Providers::InfraManager::Vm.file_shares-type"
+          field = "NOVAHawk::Providers::InfraManager::Vm.file_shares-type"
           expression = {"CONTAINS" => {"field" => field, "value" => "abc"}}
           expect(described_class.new(nil).sql_supports_atom?(expression)).to eq(false)
         end
 
         it "returns false if field belongs to 'has_and_belongs_to_many' association" do
-          field = "ManageIQ::Providers::InfraManager::Vm.storages-name"
+          field = "NOVAHawk::Providers::InfraManager::Vm.storages-name"
           expression = {"CONTAINS" => {"field" => field, "value" => "abc"}}
           expect(described_class.new(nil).sql_supports_atom?(expression)).to eq(false)
         end
 
         it "returns false if field belongs to 'has_many' polymorhic/polymorhic association" do
-          field = "ManageIQ::Providers::InfraManager::Vm.advanced_settings-region_number"
+          field = "NOVAHawk::Providers::InfraManager::Vm.advanced_settings-region_number"
           expression = {"CONTAINS" => {"field" => field, "value" => "1"}}
           expect(described_class.new(nil).sql_supports_atom?(expression)).to eq(false)
         end
 
         it "returns true if field belongs to 'has_many' association" do
-          field = "ManageIQ::Providers::InfraManager::Vm.registry_items-name"
+          field = "NOVAHawk::Providers::InfraManager::Vm.registry_items-name"
           expression = {"CONTAINS" => {"field" => field, "value" => "abc"}}
           expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(true)
         end
@@ -2264,31 +2264,31 @@ describe MiqExpression do
 
     context "expression key is 'INCLUDE'" do
       it "returns false for model-virtualfield" do
-        field = "ManageIQ::Providers::InfraManager::Vm-v_datastore_path"
+        field = "NOVAHawk::Providers::InfraManager::Vm-v_datastore_path"
         expression = {"INCLUDES" => {"field" => field, "value" => "abc"}}
         expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(false)
       end
 
       it "returns true for model-field" do
-        field = "ManageIQ::Providers::InfraManager::Vm-location"
+        field = "NOVAHawk::Providers::InfraManager::Vm-location"
         expression = {"INCLUDES" => {"field" => field, "value" => "abc"}}
         expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(true)
       end
 
       it "returns false for model.association.virtualfield" do
-        field = "ManageIQ::Providers::InfraManager::Vm.ext_management_system-hostname"
+        field = "NOVAHawk::Providers::InfraManager::Vm.ext_management_system-hostname"
         expression = {"INCLUDES" => {"field" => field, "value" => "abc"}}
         expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(false)
       end
 
       it "returns true for model.accociation.field" do
-        field = "ManageIQ::Providers::InfraManager::Vm.ext_management_system-name"
+        field = "NOVAHawk::Providers::InfraManager::Vm.ext_management_system-name"
         expression = {"INCLUDES" => {"field" => field, "value" => "abc"}}
         expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(true)
       end
 
       it "returns false if format of field is model.association..association-field" do
-        field = "ManageIQ::Providers::InfraManager::Vm.service.miq_request-v_approved_by"
+        field = "NOVAHawk::Providers::InfraManager::Vm.service.miq_request-v_approved_by"
         expression = {"INCLUDES" => {"field" => field, "value" => "abc"}}
         expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(false)
       end
@@ -2299,13 +2299,13 @@ describe MiqExpression do
     end
 
     it "returns false if expression key is 'REGULAR EXPRESSION MATCHES'" do
-      field = "ManageIQ::Providers::InfraManager::Vm-name"
+      field = "NOVAHawk::Providers::InfraManager::Vm-name"
       expression = {"REGULAR EXPRESSION MATCHES" => {"filed" => field, "value" => "\w+"}}
       expect(described_class.new(nil).sql_supports_atom?(expression)).to eq(false)
     end
 
     it "returns false if expression key is 'REGULAR EXPRESSION DOES NOT MATCH'" do
-      field = "ManageIQ::Providers::InfraManager::Vm-name"
+      field = "NOVAHawk::Providers::InfraManager::Vm-name"
       expression = {"REGULAR EXPRESSION DOES NOT MATCH" => {"filed" => field, "value" => "\w+"}}
       expect(described_class.new(nil).sql_supports_atom?(expression)).to eq(false)
     end
@@ -2317,7 +2317,7 @@ describe MiqExpression do
     end
 
     it "returns false if operand is'COUNT' on model.association" do
-      association = "ManageIQ::Providers::InfraManager::Vm.users"
+      association = "NOVAHawk::Providers::InfraManager::Vm.users"
       expression = {">" => {"count" => association, "value" => "10"}}
       expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(false)
     end
@@ -2329,19 +2329,19 @@ describe MiqExpression do
     end
 
     it "does not supports sql for model.association-virtualfield (no arel)" do
-      field = "ManageIQ::Providers::InfraManager::Vm.storage-v_used_space"
+      field = "NOVAHawk::Providers::InfraManager::Vm.storage-v_used_space"
       expression = {">=" => {"field" => field, "value" => "50"}}
       expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(false)
     end
 
     it "returns true for model-field" do
-      field = "ManageIQ::Providers::InfraManager::Vm-vendor"
+      field = "NOVAHawk::Providers::InfraManager::Vm-vendor"
       expression = {"=" => {"field" => field, "value" => "redhat"}}
       expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(true)
     end
 
     it "returns true for model.assoctiation-field" do
-      field = "ManageIQ::Providers::InfraManager::Vm.ext_management_system-name"
+      field = "NOVAHawk::Providers::InfraManager::Vm.ext_management_system-name"
       expression = {"STARTS WITH" => {"field" => field, "value" => "abc"}}
       expect(described_class.new(expression).sql_supports_atom?(expression)).to eq(true)
     end
@@ -2365,31 +2365,31 @@ describe MiqExpression do
 
   describe "#field_in_sql?" do
     it "returns true for model.virtualfield (with sql)" do
-      field = "ManageIQ::Providers::InfraManager::Vm-archived"
+      field = "NOVAHawk::Providers::InfraManager::Vm-archived"
       expression = {"=" => {"field" => field, "value" => "true"}}
       expect(described_class.new(expression).field_in_sql?(field)).to eq(true)
     end
 
     it "returns false for model.virtualfield (with no sql)" do
-      field = "ManageIQ::Providers::InfraManager::Vm-uncommitted_storage"
+      field = "NOVAHawk::Providers::InfraManager::Vm-uncommitted_storage"
       expression = {"=" => {"field" => field, "value" => "true"}}
       expect(described_class.new(expression).field_in_sql?(field)).to eq(false)
     end
 
     it "returns false for model.association-virtualfield" do
-      field = "ManageIQ::Providers::InfraManager::Vm.storage-v_used_space_percent_of_total"
+      field = "NOVAHawk::Providers::InfraManager::Vm.storage-v_used_space_percent_of_total"
       expression = {">=" => {"field" => field, "value" => "50"}}
       expect(described_class.new(expression).field_in_sql?(field)).to eq(false)
     end
 
     it "returns true for model-field" do
-      field = "ManageIQ::Providers::InfraManager::Vm-vendor"
+      field = "NOVAHawk::Providers::InfraManager::Vm-vendor"
       expression = {"=" => {"field" => field, "value" => "redhat"}}
       expect(described_class.new(expression).field_in_sql?(field)).to eq(true)
     end
 
     it "returns true for model.association-field" do
-      field = "ManageIQ::Providers::InfraManager::Vm.guest_applications-vendor"
+      field = "NOVAHawk::Providers::InfraManager::Vm.guest_applications-vendor"
       expression = {"CONTAINS" => {"field" => field, "value" => "redhat"}}
       expect(described_class.new(expression).field_in_sql?(field)).to eq(true)
     end
@@ -2479,7 +2479,7 @@ describe MiqExpression do
     context "when ops key is count" do
       let(:ops) do
         {
-          "count" => "ManageIQ::Providers::InfraManager::Vm.advanced_settings",
+          "count" => "NOVAHawk::Providers::InfraManager::Vm.advanced_settings",
           "value" => "foo"
         }
       end

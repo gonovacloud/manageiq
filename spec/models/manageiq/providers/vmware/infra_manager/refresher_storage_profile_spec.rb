@@ -1,6 +1,6 @@
 require Rails.root.join('spec/tools/vim_data/vim_data_test_helper')
 
-describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
+describe NOVAHawk::Providers::Vmware::InfraManager::Refresher do
   let(:zone) { EvmSpecHelper.create_guid_miq_server_zone[2] }
   let(:ems) do
     FactoryGirl.create(
@@ -12,11 +12,11 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
   end
 
   before(:each) do
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager)
       .to receive(:connect).and_return(FakeMiqVimHandle.new)
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager)
       .to receive(:disconnect).and_return(true)
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager)
       .to receive(:has_credentials?).and_return(true)
 
     EmsRefresh.refresh(ems)

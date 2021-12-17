@@ -7,128 +7,128 @@ All notable changes to this project will be documented in this file.
 ## Added
 
 ### Automate
-- Allow passing options when adding a disk in automate. [(#14350)](https://github.com/ManageIQ/manageiq/pull/14350)
-- Added container components for service model. ([#12863](https://github.com/ManageIQ/manageiq/pull/12863))
+- Allow passing options when adding a disk in automate. [(#14350)](https://github.com/NOVAHawk/novahawk/pull/14350)
+- Added container components for service model. ([#12863](https://github.com/NOVAHawk/novahawk/pull/12863))
 - Services
-  - Add automate engine support for array elements containing text values. ([#11667](https://github.com/ManageIQ/manageiq/pull/11667))
-  - Add multiselect option to dropdowns [(#10270)](https://github.com/ManageIQ/manageiq/pull/10270)
+  - Add automate engine support for array elements containing text values. ([#11667](https://github.com/NOVAHawk/novahawk/pull/11667))
+  - Add multiselect option to dropdowns [(#10270)](https://github.com/NOVAHawk/novahawk/pull/10270)
 
 ### Platform
-- Authentication: Ensure user name is set even when common LDAP attributes are missing. [(#14142)](https://github.com/ManageIQ/manageiq/pull/14142)
+- Authentication: Ensure user name is set even when common LDAP attributes are missing. [(#14142)](https://github.com/NOVAHawk/novahawk/pull/14142)
 - Chargeback
-  - Add tenant scoping for resources of performance reports in RBAC [(#14095)](https://github.com/ManageIQ/manageiq/pull/14095)
-  - Enterprise rate parent for containers chargeback [(#14079)](https://github.com/ManageIQ/manageiq/pull/14079)
-- RBAC: Add RBAC for rss feeds [(#14041)](https://github.com/ManageIQ/manageiq/pull/14041)
+  - Add tenant scoping for resources of performance reports in RBAC [(#14095)](https://github.com/NOVAHawk/novahawk/pull/14095)
+  - Enterprise rate parent for containers chargeback [(#14079)](https://github.com/NOVAHawk/novahawk/pull/14079)
+- RBAC: Add RBAC for rss feeds [(#14041)](https://github.com/NOVAHawk/novahawk/pull/14041)
 
 ### Providers
 - Openstack
-  - Add openstack excon settings [(#14172)](https://github.com/ManageIQ/manageiq/pull/14172)
-  - Add :event_catcher_openstack_service setting [(#13985)](https://github.com/ManageIQ/manageiq/pull/13985)
-- Red Hat Virtualization Manager: Resolve oVirt IP addresses [(#13767)](https://github.com/ManageIQ/manageiq/pull/13767)
+  - Add openstack excon settings [(#14172)](https://github.com/NOVAHawk/novahawk/pull/14172)
+  - Add :event_catcher_openstack_service setting [(#13985)](https://github.com/NOVAHawk/novahawk/pull/13985)
+- Red Hat Virtualization Manager: Resolve oVirt IP addresses [(#13767)](https://github.com/NOVAHawk/novahawk/pull/13767)
 
 ## Changed
 
 ### Performance
-- Optimize number of transactions sent in refresh [(#14670)](https://github.com/ManageIQ/manageiq/pull/14670)
-- Make Widget run without timezones [(#14386)](https://github.com/ManageIQ/manageiq/pull/14386)
-- Speed up widget generation [(#14224)](https://github.com/ManageIQ/manageiq/pull/14224)
+- Optimize number of transactions sent in refresh [(#14670)](https://github.com/NOVAHawk/novahawk/pull/14670)
+- Make Widget run without timezones [(#14386)](https://github.com/NOVAHawk/novahawk/pull/14386)
+- Speed up widget generation [(#14224)](https://github.com/NOVAHawk/novahawk/pull/14224)
 
 ### Platform
-- RBAC: Remove admin role for tenant admin [(#14081)](https://github.com/ManageIQ/manageiq/pull/14081)
-- Reporting: Support dots and slashes in virtual custom attributes [(#14329)](https://github.com/ManageIQ/manageiq/pull/14329)
+- RBAC: Remove admin role for tenant admin [(#14081)](https://github.com/NOVAHawk/novahawk/pull/14081)
+- Reporting: Support dots and slashes in virtual custom attributes [(#14329)](https://github.com/NOVAHawk/novahawk/pull/14329)
 
 ## Fixed
 
 ### Automate
-- Provisioning: Add multiple_value option to expose_eligible_resources. [(#13853)](https://github.com/ManageIQ/manageiq/pull/13853)
+- Provisioning: Add multiple_value option to expose_eligible_resources. [(#13853)](https://github.com/NOVAHawk/novahawk/pull/13853)
 - Services
-  - Fixes tag control multi-value [(#14382)](https://github.com/ManageIQ/manageiq/pull/14382)
-  - Power state for services that do not have an associated service_template [(#13785)](https://github.com/ManageIQ/manageiq/pull/13785)
+  - Fixes tag control multi-value [(#14382)](https://github.com/NOVAHawk/novahawk/pull/14382)
+  - Power state for services that do not have an associated service_template [(#13785)](https://github.com/NOVAHawk/novahawk/pull/13785)
 
 ### Platform
-- Appliance: Move the call to reload ntp settings to the server only [(#14208)](https://github.com/ManageIQ/manageiq/pull/14208)
-- Chargeback: Do not pass nil to the assignment mixin [(#14713)](https://github.com/ManageIQ/manageiq/pull/14713)
-- Fix "Multiple Parents Found" issue when moving a relationship. [(#14060)](https://github.com/ManageIQ/manageiq/pull/14060)
+- Appliance: Move the call to reload ntp settings to the server only [(#14208)](https://github.com/NOVAHawk/novahawk/pull/14208)
+- Chargeback: Do not pass nil to the assignment mixin [(#14713)](https://github.com/NOVAHawk/novahawk/pull/14713)
+- Fix "Multiple Parents Found" issue when moving a relationship. [(#14060)](https://github.com/NOVAHawk/novahawk/pull/14060)
 - Workers
-  - Make worker_monitor_drb act like a reader again! [(#14638)](https://github.com/ManageIQ/manageiq/pull/14638)
-  - Fix missing reason constants [(#13919)](https://github.com/ManageIQ/manageiq/pull/13919)
-  - Add balancer members after configs have been written [(#14311)](https://github.com/ManageIQ/manageiq/pull/14311)
-  - Rescue worker class sync_workers exceptions and move on [(#13976)](https://github.com/ManageIQ/manageiq/pull/13976)
-  - Configure apache balancer with up to 10 members at startup [(#14007)](https://github.com/ManageIQ/manageiq/pull/14007)
-  - If we can't update_attributes on a queue row set state to error [(#14365)](https://github.com/ManageIQ/manageiq/pull/14365)
+  - Make worker_monitor_drb act like a reader again! [(#14638)](https://github.com/NOVAHawk/novahawk/pull/14638)
+  - Fix missing reason constants [(#13919)](https://github.com/NOVAHawk/novahawk/pull/13919)
+  - Add balancer members after configs have been written [(#14311)](https://github.com/NOVAHawk/novahawk/pull/14311)
+  - Rescue worker class sync_workers exceptions and move on [(#13976)](https://github.com/NOVAHawk/novahawk/pull/13976)
+  - Configure apache balancer with up to 10 members at startup [(#14007)](https://github.com/NOVAHawk/novahawk/pull/14007)
+  - If we can't update_attributes on a queue row set state to error [(#14365)](https://github.com/NOVAHawk/novahawk/pull/14365)
 
 ### Performance
-- Optimize store_ids_for_new_records by getting rid of the O(n^2) lookups [(#14542)](https://github.com/ManageIQ/manageiq/pull/14542)
+- Optimize store_ids_for_new_records by getting rid of the O(n^2) lookups [(#14542)](https://github.com/NOVAHawk/novahawk/pull/14542)
 
 ### Providers
 - Containers
-  - Delegate custom attributes to images in ChargebackContainerImage [(#14395)](https://github.com/ManageIQ/manageiq/pull/14395)
-  - Fix queueing of historical metrics collection [(#14695)](https://github.com/ManageIQ/manageiq/pull/14695)
-  - Identifying container images by digest only [(#14185)](https://github.com/ManageIQ/manageiq/pull/14185)
-  - Container Project reports: add archived Container Groups [(#13810)](https://github.com/ManageIQ/manageiq/pull/13810)
+  - Delegate custom attributes to images in ChargebackContainerImage [(#14395)](https://github.com/NOVAHawk/novahawk/pull/14395)
+  - Fix queueing of historical metrics collection [(#14695)](https://github.com/NOVAHawk/novahawk/pull/14695)
+  - Identifying container images by digest only [(#14185)](https://github.com/NOVAHawk/novahawk/pull/14185)
+  - Container Project reports: add archived Container Groups [(#13810)](https://github.com/NOVAHawk/novahawk/pull/13810)
 - Metrics
-  - Split metric collections into smaller intervals [(#14332)](https://github.com/ManageIQ/manageiq/pull/14332)
-  - Handle exception when a metrics target doesn't have an ext_management_system [(#14718)](https://github.com/ManageIQ/manageiq/pull/14718)
-- Microsoft: SCVMM - Enable VM reset functionality [(#14123)](https://github.com/ManageIQ/manageiq/pull/14123)
-- Openstack: Set the raw power state when starting Openstack instance [(#14122)](https://github.com/ManageIQ/manageiq/pull/14122)
+  - Split metric collections into smaller intervals [(#14332)](https://github.com/NOVAHawk/novahawk/pull/14332)
+  - Handle exception when a metrics target doesn't have an ext_management_system [(#14718)](https://github.com/NOVAHawk/novahawk/pull/14718)
+- Microsoft: SCVMM - Enable VM reset functionality [(#14123)](https://github.com/NOVAHawk/novahawk/pull/14123)
+- Openstack: Set the raw power state when starting Openstack instance [(#14122)](https://github.com/NOVAHawk/novahawk/pull/14122)
 - Red Hat Virtualization Manager
-  - Set timeout for inventory refresh calls [(#14245)](https://github.com/ManageIQ/manageiq/pull/14245)
-  - Add oVirt cloud-init customization template [(#14139)](https://github.com/ManageIQ/manageiq/pull/14139)
-  - Fix authentication of metrics credentials in RHV [(#13981)](https://github.com/ManageIQ/manageiq/pull/13981)
+  - Set timeout for inventory refresh calls [(#14245)](https://github.com/NOVAHawk/novahawk/pull/14245)
+  - Add oVirt cloud-init customization template [(#14139)](https://github.com/NOVAHawk/novahawk/pull/14139)
+  - Fix authentication of metrics credentials in RHV [(#13981)](https://github.com/NOVAHawk/novahawk/pull/13981)
 
 ### SmartState
-- Add the logic to allow a policy to prevent request_vm_scan. [(#14370)](https://github.com/ManageIQ/manageiq/pull/14370)
+- Add the logic to allow a policy to prevent request_vm_scan. [(#14370)](https://github.com/NOVAHawk/novahawk/pull/14370)
 
 ### User Interface (Classic)
-- Update spice-html5-bower to 1.6.3 fixing an extra GET .../null request [(#13889)](https://github.com/ManageIQ/manageiq/pull/13889)
-- Fix mixed values in Low and High operating ranges for CU charts [(#14324)](https://github.com/ManageIQ/manageiq/pull/14324)
+- Update spice-html5-bower to 1.6.3 fixing an extra GET .../null request [(#13889)](https://github.com/NOVAHawk/novahawk/pull/13889)
+- Fix mixed values in Low and High operating ranges for CU charts [(#14324)](https://github.com/NOVAHawk/novahawk/pull/14324)
 
 # Euwe-2
 
 ## Added
 
 ### Automate
-- Automate Retry with Server Affinity ([#13543](https://github.com/ManageIQ/manageiq/pull/13543))
+- Automate Retry with Server Affinity ([#13543](https://github.com/NOVAHawk/novahawk/pull/13543))
 
 ### Platform
 - Chargeback
-  - Chargebacks for SCVMM (rollup-less) ([#13419](https://github.com/ManageIQ/manageiq/pull/13419))
-  - Chargebacks for SCVMM (rollup-less) [2/2] ([#13554](https://github.com/ManageIQ/manageiq/pull/13554))
-  - Prioritize rate with tag of VM when selecting from more rates ([#13556](https://github.com/ManageIQ/manageiq/pull/13556))
-- Reporting: Add option for container performance reports ([#11904](https://github.com/ManageIQ/manageiq/pull/11904))
+  - Chargebacks for SCVMM (rollup-less) ([#13419](https://github.com/NOVAHawk/novahawk/pull/13419))
+  - Chargebacks for SCVMM (rollup-less) [2/2] ([#13554](https://github.com/NOVAHawk/novahawk/pull/13554))
+  - Prioritize rate with tag of VM when selecting from more rates ([#13556](https://github.com/NOVAHawk/novahawk/pull/13556))
+- Reporting: Add option for container performance reports ([#11904](https://github.com/NOVAHawk/novahawk/pull/11904))
 
 ### Providers
-- Ansible Tower: Advanced search for Ansible Tower Jobs not visible on switch from a different tab ([#12717](https://github.com/ManageIQ/manageiq/pull/12717))
-- Containers: Common mixin: ui_lookup should get a string ([#13389](https://github.com/ManageIQ/manageiq/pull/13389))
-- Microsoft Azure: Delete all resources when deleting an Azure stack ([#24](https://github.com/ManageIQ/manageiq-providers-azure/pull/24))
+- Ansible Tower: Advanced search for Ansible Tower Jobs not visible on switch from a different tab ([#12717](https://github.com/NOVAHawk/novahawk/pull/12717))
+- Containers: Common mixin: ui_lookup should get a string ([#13389](https://github.com/NOVAHawk/novahawk/pull/13389))
+- Microsoft Azure: Delete all resources when deleting an Azure stack ([#24](https://github.com/NOVAHawk/novahawk-providers-azure/pull/24))
 
 ### User Interface (Classic)
-- Ops_rbac - group detail - don't render trees that are not visible ([#13399](https://github.com/ManageIQ/manageiq/pull/13399))
-- Launch a URL returned by an automate button ([#13449](https://github.com/ManageIQ/manageiq/pull/13449))
-- Remove confirmation when opening the HTML5 vnc/spice console. ([#13465](https://github.com/ManageIQ/manageiq/pull/13465))
-- Cloud Network UI: Task queue ([#13416](https://github.com/ManageIQ/manageiq/pull/13416))
+- Ops_rbac - group detail - don't render trees that are not visible ([#13399](https://github.com/NOVAHawk/novahawk/pull/13399))
+- Launch a URL returned by an automate button ([#13449](https://github.com/NOVAHawk/novahawk/pull/13449))
+- Remove confirmation when opening the HTML5 vnc/spice console. ([#13465](https://github.com/NOVAHawk/novahawk/pull/13465))
+- Cloud Network UI: Task queue ([#13416](https://github.com/NOVAHawk/novahawk/pull/13416))
 
 ## Changed
 
 ### Automate
-  - Look for resources in the same region as the selected template during provisioning. ([#13045](https://github.com/ManageIQ/manageiq/pull/13045))
+  - Look for resources in the same region as the selected template during provisioning. ([#13045](https://github.com/NOVAHawk/novahawk/pull/13045))
 
 ### Performance
-- Don't lookup category names if tag tree view all ([#13308](https://github.com/ManageIQ/manageiq/pull/13308))
+- Don't lookup category names if tag tree view all ([#13308](https://github.com/NOVAHawk/novahawk/pull/13308))
 
 ### Platform
-- Add list of providers to RBAC on catalog items ([#13395](https://github.com/ManageIQ/manageiq/pull/13395))
+- Add list of providers to RBAC on catalog items ([#13395](https://github.com/NOVAHawk/novahawk/pull/13395))
 - Gem changes
-  - Upgrade azure-armrest gem to 0.5.2. [(#13670)](https://github.com/ManageIQ/manageiq/pull/13670)
-  - Use version 0.14.0 of the 'ovirt' gem ([#13425](https://github.com/ManageIQ/manageiq/pull/13425))
-  - Updated PatternFly to v3.15.0 ([#13404](https://github.com/ManageIQ/manageiq/pull/13404))
+  - Upgrade azure-armrest gem to 0.5.2. [(#13670)](https://github.com/NOVAHawk/novahawk/pull/13670)
+  - Use version 0.14.0 of the 'ovirt' gem ([#13425](https://github.com/NOVAHawk/novahawk/pull/13425))
+  - Updated PatternFly to v3.15.0 ([#13404](https://github.com/NOVAHawk/novahawk/pull/13404))
 
 ### Providers
-- Network: Added exception clases for router add/remove interfaces ([#13005](https://github.com/ManageIQ/manageiq/pull/13005))
+- Network: Added exception clases for router add/remove interfaces ([#13005](https://github.com/NOVAHawk/novahawk/pull/13005))
 
 ### User Interface
-- UX improvements for attaching Openstack cloud volumes to instances ([#13437](https://github.com/ManageIQ/manageiq/pull/13437))
-- Add latest VMRC API version ([#184](https://github.com/ManageIQ/manageiq-ui-classic/pull/184))
+- UX improvements for attaching Openstack cloud volumes to instances ([#13437](https://github.com/NOVAHawk/novahawk/pull/13437))
+- Add latest VMRC API version ([#184](https://github.com/NOVAHawk/novahawk-ui-classic/pull/184))
 
 
 ## Fixed
@@ -136,47 +136,47 @@ All notable changes to this project will be documented in this file.
 Notable fixes include:
 
 ### Automate
-- Inconsistent attribute names inside Automate Engine ([#13545](https://github.com/ManageIQ/manageiq/pull/13545))
-- Allow a service power state to correctly handle nil actions ([#13232](https://github.com/ManageIQ/manageiq/pull/13232))
-- Increment the ae_state_retries when on_exit sets retry ([#13339](https://github.com/ManageIQ/manageiq/pull/13339))
+- Inconsistent attribute names inside Automate Engine ([#13545](https://github.com/NOVAHawk/novahawk/pull/13545))
+- Allow a service power state to correctly handle nil actions ([#13232](https://github.com/NOVAHawk/novahawk/pull/13232))
+- Increment the ae_state_retries when on_exit sets retry ([#13339](https://github.com/NOVAHawk/novahawk/pull/13339))
 
 ### Platform
 - Chargeback
-  - BigDecimal not working properly on ruby 2.3.1 ([#13634](https://github.com/ManageIQ/manageiq/pull/13634))
-  - Skip calculation when there is zero consumed hours ([#13723](https://github.com/ManageIQ/manageiq/pull/13723))
-- Tenant admin should not be able to create groups in other tenants. ([#13483](https://github.com/ManageIQ/manageiq/pull/13483))
-- Add MiqUserRole to RBAC ([#13689](https://github.com/ManageIQ/manageiq/pull/13689))
-- Reporting: Introduce report result purging timer ([#13429](https://github.com/ManageIQ/manageiq/pull/13429))
+  - BigDecimal not working properly on ruby 2.3.1 ([#13634](https://github.com/NOVAHawk/novahawk/pull/13634))
+  - Skip calculation when there is zero consumed hours ([#13723](https://github.com/NOVAHawk/novahawk/pull/13723))
+- Tenant admin should not be able to create groups in other tenants. ([#13483](https://github.com/NOVAHawk/novahawk/pull/13483))
+- Add MiqUserRole to RBAC ([#13689](https://github.com/NOVAHawk/novahawk/pull/13689))
+- Reporting: Introduce report result purging timer ([#13429](https://github.com/NOVAHawk/novahawk/pull/13429))
 
 ### Providers
-- Hawkular: Adding alt and title attributes for buttons ([#13468](https://github.com/ManageIQ/manageiq/pull/13468))
+- Hawkular: Adding alt and title attributes for buttons ([#13468](https://github.com/NOVAHawk/novahawk/pull/13468))
 - RHEV
-  - Save host for a Vm after migration ([#13618](https://github.com/ManageIQ/manageiq/pull/13618))
-  - Fix Host getting disconnected from Cluster when migrating a VM in RHEV [(#13836)](https://github.com/ManageIQ/manageiq/pull/13836)
-  - Disks should be added as 'active' in RHV ([#13913)](https://github.com/ManageIQ/manageiq/pull/13913)
+  - Save host for a Vm after migration ([#13618](https://github.com/NOVAHawk/novahawk/pull/13618))
+  - Fix Host getting disconnected from Cluster when migrating a VM in RHEV [(#13836)](https://github.com/NOVAHawk/novahawk/pull/13836)
+  - Disks should be added as 'active' in RHV ([#13913)](https://github.com/NOVAHawk/novahawk/pull/13913)
 - OpenStack
-  - Add Openstack metric service to Settings ([#13918](https://github.com/ManageIQ/manageiq/pull/13918))
-  - OpenStack Infra: ssh keypair validation fixes ([#13445](https://github.com/ManageIQ/manageiq/pull/13445))
-  - Console: Added missing parameter when requesting OpenStack remote console ([#13558](https://github.com/ManageIQ/manageiq/pull/13558))
+  - Add Openstack metric service to Settings ([#13918](https://github.com/NOVAHawk/novahawk/pull/13918))
+  - OpenStack Infra: ssh keypair validation fixes ([#13445](https://github.com/NOVAHawk/novahawk/pull/13445))
+  - Console: Added missing parameter when requesting OpenStack remote console ([#13558](https://github.com/NOVAHawk/novahawk/pull/13558))
 
 ### User Interface (Classic)
-- Pulled out simulation parameters ([#13472](https://github.com/ManageIQ/manageiq/pull/13472))
-- Advanced search not working for the ansible job ([#12719](https://github.com/ManageIQ/manageiq/pull/12719))
-- Fix missing Smart State Analysis button on Cloud Instances list view ([#13422](https://github.com/ManageIQ/manageiq/pull/13422))
-- Remove disabling of 'instance_retire' button ([#14016)](https://github.com/ManageIQ/manageiq/pull/14016)
-- Fix Snapshot revert ([#13986)](https://github.com/ManageIQ/manageiq/pull/13986)
-- Make created filters in Datastores visible and fix commiting filters ([#13621](https://github.com/ManageIQ/manageiq/pull/13621))
-- Add missing icons for provider policies & compliance events ([#13502](https://github.com/ManageIQ/manageiq/pull/13502))
-- Allow configuration managers providers and configuration scripts trees to display the advanced search box ([#13763](https://github.com/ManageIQ/manageiq/pull/13763))
-- Cloud Subnet UI: Task queue validation buttons ([#13490](https://github.com/ManageIQ/manageiq/pull/13490))
-- Tenant admin should not be able to create groups in other tenants. ([#151](https://github.com/ManageIQ/manageiq-ui-classic/pull/151))
-- Floating IPs: Adds missing route for wait_for_task ([#192](https://github.com/ManageIQ/manageiq-ui-classic/pull/192))
-- Fix valid_tenant check in ops ([#203](https://github.com/ManageIQ/manageiq-ui-classic/pull/203))
-- Red Hat Enterprise Virtualization: Removed the option to migrate the VMs outside of the cluster. ([#207](https://github.com/ManageIQ/manageiq-ui-classic/pull/207))
-- Fix check_box_tag parameters for snap_memory ([#217](https://github.com/ManageIQ/manageiq-ui-classic/pull/217))
-- Add list of roles to rbac ([#271)](https://github.com/ManageIQ/manageiq-ui-classic/pull/271)
-- Fix assigning roles in group form ([#296)](https://github.com/ManageIQ/manageiq-ui-classic/pull/296)
-- Fix repeating values on Y-axis of C&U charts ([#40](https://github.com/ManageIQ/manageiq-ui-classic/pull/40))
+- Pulled out simulation parameters ([#13472](https://github.com/NOVAHawk/novahawk/pull/13472))
+- Advanced search not working for the ansible job ([#12719](https://github.com/NOVAHawk/novahawk/pull/12719))
+- Fix missing Smart State Analysis button on Cloud Instances list view ([#13422](https://github.com/NOVAHawk/novahawk/pull/13422))
+- Remove disabling of 'instance_retire' button ([#14016)](https://github.com/NOVAHawk/novahawk/pull/14016)
+- Fix Snapshot revert ([#13986)](https://github.com/NOVAHawk/novahawk/pull/13986)
+- Make created filters in Datastores visible and fix commiting filters ([#13621](https://github.com/NOVAHawk/novahawk/pull/13621))
+- Add missing icons for provider policies & compliance events ([#13502](https://github.com/NOVAHawk/novahawk/pull/13502))
+- Allow configuration managers providers and configuration scripts trees to display the advanced search box ([#13763](https://github.com/NOVAHawk/novahawk/pull/13763))
+- Cloud Subnet UI: Task queue validation buttons ([#13490](https://github.com/NOVAHawk/novahawk/pull/13490))
+- Tenant admin should not be able to create groups in other tenants. ([#151](https://github.com/NOVAHawk/novahawk-ui-classic/pull/151))
+- Floating IPs: Adds missing route for wait_for_task ([#192](https://github.com/NOVAHawk/novahawk-ui-classic/pull/192))
+- Fix valid_tenant check in ops ([#203](https://github.com/NOVAHawk/novahawk-ui-classic/pull/203))
+- Red Hat Enterprise Virtualization: Removed the option to migrate the VMs outside of the cluster. ([#207](https://github.com/NOVAHawk/novahawk-ui-classic/pull/207))
+- Fix check_box_tag parameters for snap_memory ([#217](https://github.com/NOVAHawk/novahawk-ui-classic/pull/217))
+- Add list of roles to rbac ([#271)](https://github.com/NOVAHawk/novahawk-ui-classic/pull/271)
+- Fix assigning roles in group form ([#296)](https://github.com/NOVAHawk/novahawk-ui-classic/pull/296)
+- Fix repeating values on Y-axis of C&U charts ([#40](https://github.com/NOVAHawk/novahawk-ui-classic/pull/40))
 
 # Euwe-1
 
@@ -229,7 +229,7 @@ Notable fixes include:
   - Set VM storage profile in provisioning
   - Show shared networks in the OpenStack provisioning dialog
   - Enhanced messaging for provisioning: Displayed elements
-    - ManageIQ Server name
+    - NOVAHawk Server name
     - Name of VM/Service being provisioned
     - Current Automate state machine step
     - Status message
@@ -304,7 +304,7 @@ Notable fixes include:
 - PostgreSQL High Availability
   - Added [repmgr](http://repmgr.org/)  to support automatic failover
     - Maintain list of active standby database servers
-    - Added [pg-dsn_parser](https://github.com/ManageIQ/pg-dsn_parser) for converting DSN to a hash
+    - Added [pg-dsn_parser](https://github.com/NOVAHawk/pg-dsn_parser) for converting DSN to a hash
   - DB Cluster - Primary, Standbys
   - Uses [repmgr](http://www.repmgr.org/) (replication)
   - Failover
@@ -323,8 +323,8 @@ Notable fixes include:
 - Tenancy
   - Groundwork in preparation for supporting multiple entitlements
   - ApplicationHelper#role_allows and User#role_allows? combined and moved to RBAC
-  - Added parent_id to CloudTenant as prerequisite for mapping OpenStack tenants to ManageIQ tenants
-  - Mapping Cloud Tenants to ManageIQ Tenants
+  - Added parent_id to CloudTenant as prerequisite for mapping OpenStack tenants to NOVAHawk tenants
+  - Mapping Cloud Tenants to NOVAHawk Tenants
     - Prevent deleting mapped tenants from cloud provider
     - Added checkbox "Tenant Mapping Enabled" to Openstack Manager
     - Post refresh hook to queue mapping of Cloud Tenants
@@ -366,8 +366,8 @@ Notable fixes include:
   - Support micro-lifecycle for Middleware-deployments
   - Alerts
     - Link miq alerts and hawkular events on the provider
-    - Convert ManageIQ alerts/profiles to hawkular group triggers/members of group triggers
-    - Sync the provider when ManageIQ alerts and alert profiles are created/updated
+    - Convert NOVAHawk alerts/profiles to hawkular group triggers/members of group triggers
+    - Sync the provider when NOVAHawk alerts and alert profiles are created/updated
     - Support for alert profiles and alert automated expressions
   - Added entities: Domains and Server Groups including their visualization in topology
   - Datasource entity now has deletion operation
@@ -734,7 +734,7 @@ Notable fixes include:
   - Provider connection logic
   - Support refresh of Configured Systems
   - `wait_for_ip` method added to state-machine
-  - [ansible_tower_client](https://github.com/ManageIQ/ansible_tower_client) gem
+  - [ansible_tower_client](https://github.com/NOVAHawk/ansible_tower_client) gem
      - Credential validation
      - Supported resources: Hosts, JobTemplates, Adhoc commands
   - Support for generating Service Dialogs from Ansible Tower JobTemplate
@@ -797,7 +797,7 @@ Notable fixes include:
     - Regional and Global DBs MUST have identical schemas
      - Migrations must have timestamp later than the last migration of previous version for correct column order
      - Specs added to validate schema
-     - See [New Schema Specs for New Replication](http://talk.manageiq.org/t/new-schema-specs-for-new-replication/1404)
+     - See [New Schema Specs for New Replication](http://talk.novahawk.org/t/new-schema-specs-for-new-replication/1404)
   - Schema consistency checking - during configuration
 and before subscription is enabled
   - Tool to fix column order mismatches
@@ -992,7 +992,7 @@ and before subscription is enabled
   - Enhanced .missing method support
      - Save original method name in `_missing`_instance property
      - Accessible during instance resolution and within methods
-- [Self Service UI](https://github.com/ManageIQ/manageiq-ui-self_service) extracted into its own repository setting up pattern for other independent UIs
+- [Self Service UI](https://github.com/NOVAHawk/novahawk-ui-self_service) extracted into its own repository setting up pattern for other independent UIs
   -  Initializers can now load ApplicationController w/o querying DB
   -  10-20% performance improvement in vm explorer
 - User Interface
@@ -1023,7 +1023,7 @@ and before subscription is enabled
      - Appliance depot used if requested on appliance and defined. Else, collection disabled
   - DB seeding no longer silently catches exceptions
   - Workers forked from main server process instead of spawned
-  - Updated to newer [ansible`_tower`_client gem](https://github.com/ManageIQ/ansible_tower_client)
+  - Updated to newer [ansible`_tower`_client gem](https://github.com/NOVAHawk/ansible_tower_client)
      - Accessors for Host#groups and #inventory_id
      - Allow passing extra_vars to Job Template launch
      - Added JSON validation for extra_vars
@@ -1058,7 +1058,7 @@ and before subscription is enabled
   - Neutron Networking
 - Foreman: Exposed additional properties to reporting
 - Azure
-  - Initial work for Inventory Collection, OAuth2, [azure-armrest gem](https://github.com/ManageIQ/azure-armrest)
+  - Initial work for Inventory Collection, OAuth2, [azure-armrest gem](https://github.com/NOVAHawk/azure-armrest)
   - Azure Provider models
   - Power Operations
 - RHEVM: Reconfigure of Memory and CPU
@@ -1106,7 +1106,7 @@ and before subscription is enabled
 - Notes:
   - New events must be added to automate model
   - Built-in event handlers added for performance
-  - Requires update of the ManageIQ automate domain
+  - Requires update of the NOVAHawk automate domain
 
 ### Tenancy
 - Model
@@ -1211,10 +1211,10 @@ and before subscription is enabled
  - lib moved into gems/pending
  - Build and system directories extracted to new repositories
 - Extracted C code to external gems
- - MiqLargeFileLinux => [large\_file\_linux]( https://github.com/ManageIQ/large_file_linux) gem
- - MiqBlockDevOps => [linux\_block\_device](https://github.com/ManageIQ/linux_block_device) and [memory\_buffer](https://github.com/ManageIQ/memory_buffer) gems
- - MiqMemory => [memory\_buffer](https://github.com/ManageIQ/memory_buffer) gem
- - SlpLib => [slp](https://github.com/ManageIQ/slp) gem  
+ - MiqLargeFileLinux => [large\_file\_linux]( https://github.com/NOVAHawk/large_file_linux) gem
+ - MiqBlockDevOps => [linux\_block\_device](https://github.com/NOVAHawk/linux_block_device) and [memory\_buffer](https://github.com/NOVAHawk/memory_buffer) gems
+ - MiqMemory => [memory\_buffer](https://github.com/NOVAHawk/memory_buffer) gem
+ - SlpLib => [slp](https://github.com/NOVAHawk/slp) gem  
 - Gem updates
   - Upgraded rufus scheduler to version 3
   - Upgraded to latest net-sftp
@@ -1417,7 +1417,7 @@ and before subscription is enabled
 ### IPv6
 - Allow IPv6 literals in VMware communication by upgrading httpclient
 - Allow IPv6 literals in RHEVM/ovirt communication by fixing and upgrading rest-client and ruby 2.0  
-- Fixed URI building within ManageIQ to wrap/unwrap IPv6 literals as needed
+- Fixed URI building within NOVAHawk to wrap/unwrap IPv6 literals as needed
 
 ### Security
 - Lock down [POODLE](http://en.wikipedia.org/wiki/POODLE) attacks.
@@ -1498,7 +1498,7 @@ and before subscription is enabled
   - Provisioning fix to deal with multiple security groups with the same name.
 - Automate
   - Prevent deletion of locked domains.
-  - Corrected ManageIQ/Infrastructure/vm/retirement method retry criteria.
+  - Corrected NOVAHawk/Infrastructure/vm/retirement method retry criteria.
   - Fixed timeout issue with remove_from_disk method on a VM in Automate.
 - Providers
  - server_monitor_poll default setting changed to 5 seconds, resulting in shorter queue times.

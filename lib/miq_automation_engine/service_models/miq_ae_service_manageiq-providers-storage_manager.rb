@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_StorageManager < MiqAeServiceExtManagementSystem
+  class MiqAeServiceNOVAHawk_Providers_StorageManager < MiqAeServiceExtManagementSystem
   end
 end

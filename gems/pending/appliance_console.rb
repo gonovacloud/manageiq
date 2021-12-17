@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# description: ManageIQ appliance console
+# description: NOVAHawk appliance console
 #
 
 # Simulate rubygems adding the top level appliance_console.rb's directory to the path.

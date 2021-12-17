@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Nuage::NetworkManager::NetworkPort < ::NetworkPort
+class NOVAHawk::Providers::Nuage::NetworkManager::NetworkPort < ::NetworkPort
 end

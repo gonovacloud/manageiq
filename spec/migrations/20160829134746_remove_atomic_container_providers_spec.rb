@@ -10,13 +10,13 @@ describe RemoveAtomicContainerProviders do
     it "Updates Atomic Provider to Openshift and Atomic Enterprise to Openshift Enterprise" do
       type_examples = [
         {:table          => ems_stub,
-         :pre_migration  => "ManageIQ::Providers::Atomic::ContainerManager",
-         :post_migration => "ManageIQ::Providers::Openshift::ContainerManager",
+         :pre_migration  => "NOVAHawk::Providers::Atomic::ContainerManager",
+         :post_migration => "NOVAHawk::Providers::Openshift::ContainerManager",
          :record         => nil},
 
         {:table          => ems_stub,
-         :pre_migration  => "ManageIQ::Providers::AtomicEnterprise::ContainerManager",
-         :post_migration => "ManageIQ::Providers::OpenshiftEnterprise::ContainerManager",
+         :pre_migration  => "NOVAHawk::Providers::AtomicEnterprise::ContainerManager",
+         :post_migration => "NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager",
          :record         => nil},
 
         {:table          => ems_stub,
@@ -25,33 +25,33 @@ describe RemoveAtomicContainerProviders do
          :record         => nil},
 
         {:table          => workers_stub,
-         :pre_migration  => "ManageIQ::Providers::Atomic::ContainerManager::EventCatcher",
-         :post_migration => "ManageIQ::Providers::Openshift::ContainerManager::EventCatcher",
+         :pre_migration  => "NOVAHawk::Providers::Atomic::ContainerManager::EventCatcher",
+         :post_migration => "NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher",
          :record         => nil},
 
         {:table          => workers_stub,
-         :pre_migration  => "ManageIQ::Providers::Atomic::ContainerManager::MetricsCollectorWorker",
-         :post_migration => "ManageIQ::Providers::Openshift::ContainerManager::MetricsCollectorWorker",
+         :pre_migration  => "NOVAHawk::Providers::Atomic::ContainerManager::MetricsCollectorWorker",
+         :post_migration => "NOVAHawk::Providers::Openshift::ContainerManager::MetricsCollectorWorker",
          :record         => nil},
 
         {:table          => workers_stub,
-         :pre_migration  => "ManageIQ::Providers::Atomic::ContainerManager::RefreshWorker",
-         :post_migration => "ManageIQ::Providers::Openshift::ContainerManager::RefreshWorker",
+         :pre_migration  => "NOVAHawk::Providers::Atomic::ContainerManager::RefreshWorker",
+         :post_migration => "NOVAHawk::Providers::Openshift::ContainerManager::RefreshWorker",
          :record         => nil},
 
         {:table          => workers_stub,
-         :pre_migration  => "ManageIQ::Providers::AtomicEnterprise::ContainerManager::EventCatcher",
-         :post_migration => "ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher",
+         :pre_migration  => "NOVAHawk::Providers::AtomicEnterprise::ContainerManager::EventCatcher",
+         :post_migration => "NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher",
          :record         => nil},
 
         {:table          => workers_stub,
-         :pre_migration  => "ManageIQ::Providers::AtomicEnterprise::ContainerManager::MetricsCollectorWorker",
-         :post_migration => "ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker",
+         :pre_migration  => "NOVAHawk::Providers::AtomicEnterprise::ContainerManager::MetricsCollectorWorker",
+         :post_migration => "NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker",
          :record         => nil},
 
         {:table          => workers_stub,
-         :pre_migration  => "ManageIQ::Providers::AtomicEnterprise::ContainerManager::RefreshWorker",
-         :post_migration => "ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker",
+         :pre_migration  => "NOVAHawk::Providers::AtomicEnterprise::ContainerManager::RefreshWorker",
+         :post_migration => "NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker",
          :record         => nil},
 
         {:table          => workers_stub,
@@ -64,13 +64,13 @@ describe RemoveAtomicContainerProviders do
 
       name_examples = [
         {:table          => auth_stub,
-         :pre_migration  => "ManageIQ::Providers::Atomic::ContainerManager Server1",
-         :post_migration => "ManageIQ::Providers::Openshift::ContainerManager Server1",
+         :pre_migration  => "NOVAHawk::Providers::Atomic::ContainerManager Server1",
+         :post_migration => "NOVAHawk::Providers::Openshift::ContainerManager Server1",
          :record         => nil},
 
         {:table          => auth_stub,
-         :pre_migration  => "ManageIQ::Providers::AtomicEnterprise::ContainerManager Server2",
-         :post_migration => "ManageIQ::Providers::OpenshiftEnterprise::ContainerManager Server2",
+         :pre_migration  => "NOVAHawk::Providers::AtomicEnterprise::ContainerManager Server2",
+         :post_migration => "NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager Server2",
          :record         => nil},
 
         {:table          => auth_stub,
@@ -83,13 +83,13 @@ describe RemoveAtomicContainerProviders do
 
       args_examples = [
         {:table          => queue_stub,
-         :pre_migration  => "[[[\"ManageIQ::Providers::Atomic::ContainerManager\", 12]]]",
-         :post_migration => "[[[\"ManageIQ::Providers::Openshift::ContainerManager\", 12]]]",
+         :pre_migration  => "[[[\"NOVAHawk::Providers::Atomic::ContainerManager\", 12]]]",
+         :post_migration => "[[[\"NOVAHawk::Providers::Openshift::ContainerManager\", 12]]]",
          :record         => nil},
 
         {:table          => queue_stub,
-         :pre_migration  => "[[[\"ManageIQ::Providers::AtomicEnterprise::ContainerManager\", 15]]]",
-         :post_migration => "[[[\"ManageIQ::Providers::OpenshiftEnterprise::ContainerManager\", 15]]]",
+         :pre_migration  => "[[[\"NOVAHawk::Providers::AtomicEnterprise::ContainerManager\", 15]]]",
+         :post_migration => "[[[\"NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager\", 15]]]",
          :record         => nil},
 
         {:table          => queue_stub,

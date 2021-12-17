@@ -4,7 +4,7 @@ describe('mwAddDatasourceController', function() {
   var mwAddDatasourceService;
   var $httpBackend;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($injector) {
     mwAddDatasourceService = $injector.get('mwAddDatasourceService');

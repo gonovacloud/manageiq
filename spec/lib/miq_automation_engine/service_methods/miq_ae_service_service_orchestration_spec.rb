@@ -19,7 +19,7 @@ module MiqAeServiceServiceOrchestrationSpec
     it "sets and gets orchestration_manager" do
       service_service.orchestration_manager = ae_orch_manager
       expect(service.orchestration_manager).to eq(orch_manager)
-      expect(service_service.orchestration_manager.object_class.name).to eq('ManageIQ::Providers::Amazon::CloudManager')
+      expect(service_service.orchestration_manager.object_class.name).to eq('NOVAHawk::Providers::Amazon::CloudManager')
     end
 
     it "sets and gets stack_name" do

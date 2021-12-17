@@ -36,9 +36,9 @@ _("VMs & Templates")
 _("VMs & Templates Accordion")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 # TRANSLATORS: file: product/views/CimBaseStorageExtent.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/OntapFileShare.yaml
 # TRANSLATORS: file: product/views/OntapLogicalDisk.yaml
 # TRANSLATORS: file: product/views/OntapStorageSystem.yaml
@@ -52,8 +52,8 @@ _("VMs")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("VMs Accordion")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
 # TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 # TRANSLATORS: file: product/views/MiqTemplate.yaml
 _("Templates")
@@ -67,10 +67,10 @@ _("Templates Accordion")
 # TRANSLATORS: file: product/views/Flavor.yaml
 # TRANSLATORS: file: product/views/HostAggregate.yaml
 # TRANSLATORS: file: product/views/LoadBalancer.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 # TRANSLATORS: file: product/views/MiqAeInstance.yaml
 # TRANSLATORS: file: product/views/NetworkRouter.yaml
 # TRANSLATORS: file: product/views/OrchestrationStack.yaml
@@ -92,8 +92,8 @@ _("Images by Provider Accordion")
 _("Instances Accordion")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 # TRANSLATORS: file: product/views/ContainerProject.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
 _("Images")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Images Accordion")
@@ -302,7 +302,7 @@ _("Create Services")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Retire Services")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
 _("Cloud Providers")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Everything under Cloud Providers")
@@ -578,7 +578,7 @@ _("Perform Operations on Flavors")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Edit Tags of Flavor")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 _("Infrastructure Providers")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Everything under Infrastructure Providers")
@@ -784,7 +784,7 @@ _("Modify Resource Pools")
 _("Remove Resource Pools")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 # TRANSLATORS: file: product/views/CimBaseStorageExtent.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 # TRANSLATORS: file: product/views/OntapFileShare.yaml
 # TRANSLATORS: file: product/views/OntapLogicalDisk.yaml
 # TRANSLATORS: file: product/views/OntapStorageSystem.yaml
@@ -1919,8 +1919,8 @@ _("deploy")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Deploy a New Containers Provider")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("Providers")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Everything under Middleware Providers")
@@ -2126,7 +2126,7 @@ _("Perform Operations on Middleware Messaging")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Edit Tags of Middleware Messaging")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 _("Network Providers")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Everything under Network Providers")
@@ -2157,7 +2157,7 @@ _("Edit a Network Provider")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Add a Network Provider")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 # TRANSLATORS: file: product/views/OrchestrationStack.yaml
 _("Security Groups")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
@@ -2188,7 +2188,7 @@ _("Perform Operations on Floating IPs")
 _("Edit Tags of Floating IP")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 # TRANSLATORS: file: product/views/CloudNetwork.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 # TRANSLATORS: file: product/views/OrchestrationStack.yaml
 _("Cloud Networks")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
@@ -2620,7 +2620,7 @@ _("View Configured Systems")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Perform Operations on Configured Systems")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
 _("Ansible Tower Job Templates")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Everything under Ansible Tower Job Templates accordion")
@@ -3057,7 +3057,7 @@ _("Publish")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Publish Blueprint")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 _("Storage Providers")
 # TRANSLATORS: file: db/fixtures/miq_product_features.yml
 _("Everything under Storage Providers")
@@ -3249,11 +3249,11 @@ _("Event Source")
 # TRANSLATORS: file: product/views/ContainerRoute.yaml
 # TRANSLATORS: file: product/views/ContainerService.yaml
 # TRANSLATORS: file: product/views/ContainerTemplate.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiddlewareDomain.yaml
 # TRANSLATORS: file: product/views/MiddlewareServer.yaml
 # TRANSLATORS: file: product/views/OrchestrationStack.yaml
@@ -3273,8 +3273,8 @@ _("Message")
 # TRANSLATORS: file: product/views/Host-hosts.yaml
 # TRANSLATORS: file: product/views/Host.yaml
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 # TRANSLATORS: file: product/views/Vm-all_vms.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate-all_archived.yaml
@@ -3305,9 +3305,9 @@ _("Destination VM Location")
 # TRANSLATORS: file: product/views/AvailabilityZone.yaml
 # TRANSLATORS: file: product/views/CloudVolume-based_volumes.yaml
 # TRANSLATORS: file: product/views/CloudVolume.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 _("Availability Zone")
 # TRANSLATORS: file: product/timelines/miq_reports/tl_events_daily.yaml
 # TRANSLATORS: file: product/timelines/miq_reports/tl_events_hourly.yaml
@@ -3341,20 +3341,20 @@ _("Time Stamp")
 # TRANSLATORS: file: product/views/CloudVolume.yaml
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
 # TRANSLATORS: file: product/views/ContainerService.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 # TRANSLATORS: file: product/views/MiqAction.yaml
 # TRANSLATORS: file: product/views/MiqEvent-actions.yaml
 # TRANSLATORS: file: product/views/MiqWidget-all.yaml
@@ -3408,24 +3408,24 @@ _("Type")
 # TRANSLATORS: file: product/views/IsoDatastore.yaml
 # TRANSLATORS: file: product/views/LdapRegion.yaml
 # TRANSLATORS: file: product/views/LoadBalancer.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager_InventoryGroup.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager_InventoryGroup.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/MiqActionSet.yaml
 # TRANSLATORS: file: product/views/MiqAeInstance.yaml
 # TRANSLATORS: file: product/views/MiqDialog.yaml
@@ -3524,8 +3524,8 @@ _("ConfigurationProfile")
 # TRANSLATORS: file: product/views/GuestApplication.yaml
 # TRANSLATORS: file: product/views/LdapRegion.yaml
 # TRANSLATORS: file: product/views/LoadBalancer.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/MiqAction.yaml
 # TRANSLATORS: file: product/views/MiqActionSet.yaml
 # TRANSLATORS: file: product/views/MiqAeClass.yaml
@@ -3567,23 +3567,23 @@ _("ConfigurationProfile")
 # TRANSLATORS: file: product/views/VmdbDatabaseSetting.yaml
 _("Description")
 # TRANSLATORS: file: product/views/ConfigurationProfile.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager_InventoryGroup.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager_InventoryGroup.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("Total Configured Systems")
 # TRANSLATORS: file: product/views/ConfigurationProfile.yaml
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 _("Environment")
 # TRANSLATORS: file: product/views/ConfigurationProfile.yaml
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 # TRANSLATORS: file: product/views/MiqServer.yaml
 # TRANSLATORS: file: product/views/VmdbDatabaseConnection.yaml
 _("Zone")
@@ -3595,14 +3595,14 @@ _("Zone")
 # TRANSLATORS: file: product/views/Host-hosts.yaml
 # TRANSLATORS: file: product/views/Host.yaml
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 # TRANSLATORS: file: product/views/MiqRequest.yaml
 # TRANSLATORS: file: product/views/MiqServer.yaml
 # TRANSLATORS: file: product/views/OntapFileShare.yaml
@@ -3630,11 +3630,11 @@ _("Deployment Name")
 # TRANSLATORS: file: product/views/CloudVolumeBackup.yaml
 # TRANSLATORS: file: product/views/CloudVolumeSnapshot-cloud_volume_snapshots.yaml
 # TRANSLATORS: file: product/views/CloudVolumeSnapshot.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 # TRANSLATORS: file: product/views/MiddlewareDeployment.yaml
 # TRANSLATORS: file: product/views/MiqProvision.yaml
 # TRANSLATORS: file: product/views/MiqReportResult-all.yaml
@@ -3732,8 +3732,8 @@ _("ContainerImageRegistry")
 # TRANSLATORS: file: product/views/Host-hosts.yaml
 # TRANSLATORS: file: product/views/Host.yaml
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 # TRANSLATORS: file: product/views/Vm-VmReconfigureRequest.yaml
 # TRANSLATORS: file: product/views/Vm-all_vms.yaml
@@ -3744,8 +3744,8 @@ _("ContainerImageRegistry")
 _("Host")
 # TRANSLATORS: file: product/views/ContainerImageRegistry.yaml
 # TRANSLATORS: file: product/views/FirewallRule.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 # TRANSLATORS: file: product/views/StorageManager.yaml
 _("Port")
 # TRANSLATORS: file: product/views/Condition.yaml
@@ -3777,8 +3777,8 @@ _("Active")
 # TRANSLATORS: file: product/views/MiqWidget.yaml
 _("Default")
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 # TRANSLATORS: file: product/views/Storage.yaml
 # TRANSLATORS: file: product/views/StorageCluster.yaml
@@ -3791,13 +3791,13 @@ _("Datastore")
 # TRANSLATORS: file: product/views/Host-hosts.yaml
 # TRANSLATORS: file: product/views/Host.yaml
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 # TRANSLATORS: file: product/views/MiqTemplate.yaml
 # TRANSLATORS: file: product/views/Vm-all_vms.yaml
@@ -3808,8 +3808,8 @@ _("Datastore")
 # TRANSLATORS: file: product/views/VmOrTemplate.yaml
 _("Compliant")
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 # TRANSLATORS: file: product/views/MiqTemplate.yaml
 # TRANSLATORS: file: product/views/Vm-all_vms.yaml
@@ -3819,13 +3819,13 @@ _("Compliant")
 # TRANSLATORS: file: product/views/VmOrTemplate-all_vms_and_templates.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate.yaml
 _("Total Snapshots")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiqTemplate.yaml
 # TRANSLATORS: file: product/views/Vm.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate-all_archived.yaml
@@ -3837,13 +3837,13 @@ _("Allocated Size")
 # TRANSLATORS: file: product/views/Host-hosts.yaml
 # TRANSLATORS: file: product/views/Host.yaml
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager_Vm.yaml
 # TRANSLATORS: file: product/views/MiqTemplate-all_miq_templates.yaml
 # TRANSLATORS: file: product/views/MiqTemplate.yaml
 # TRANSLATORS: file: product/views/Storage.yaml
@@ -3855,19 +3855,19 @@ _("Allocated Size")
 # TRANSLATORS: file: product/views/VmOrTemplate-all_vms_and_templates.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate.yaml
 _("Last Analysis Time")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 _("Ansible Tower Jobs")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 _("Ansible Tower Job")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 _("Template Name")
 # TRANSLATORS: file: product/views/ContainerImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
 _("Id")
 # TRANSLATORS: file: product/views/AutomationRequest.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/MiqRequest.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
@@ -3880,9 +3880,9 @@ _("Id")
 # TRANSLATORS: file: product/views/Vsc.yaml
 _("Created On")
 # TRANSLATORS: file: product/views/ChargebackRate.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateCfn.yaml
@@ -3900,13 +3900,13 @@ _("Cloud Tenant")
 # TRANSLATORS: file: product/views/CloudTenant.yaml
 _("CloudTenant")
 # TRANSLATORS: file: product/views/Flavor.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 _("Flavor")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 # TRANSLATORS: file: product/views/NetworkPort.yaml
 # TRANSLATORS: file: product/views/Vm.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate-all_vms_and_templates.yaml
@@ -3914,11 +3914,11 @@ _("Flavor")
 # TRANSLATORS: file: product/views/Vm__restricted.yaml
 _("IP Addresses")
 # TRANSLATORS: file: product/views/GuestApplication.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-vms.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-vms.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 # TRANSLATORS: file: product/views/ProductUpdate.yaml
 _("Architecture")
 # TRANSLATORS: file: product/views/VmdbDatabaseConnection.yaml
@@ -4004,19 +4004,19 @@ _("Size (Bytes)")
 # TRANSLATORS: file: product/views/StorageFile-vm_misc_files.yaml
 # TRANSLATORS: file: product/views/StorageFile-vm_ram_files.yaml
 _("Last Modified Time")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template-all_vms_and_templates.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate-all_archived.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate-all_orphaned.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate-all_vms_and_templates.yaml
 # TRANSLATORS: file: product/views/VmOrTemplate.yaml
 _("VMs and Templates")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 # TRANSLATORS: file: product/views/OrchestrationStack.yaml
 _("Orchestration Stack")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 # TRANSLATORS: file: product/views/OrchestrationStack.yaml
 _("OrchestrationStack")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_OrchestrationStack.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_OrchestrationStack.yaml
 # TRANSLATORS: file: product/views/OrchestrationStack.yaml
 _("Status Reason")
 # TRANSLATORS: file: product/views/MiddlewareDomain.yaml
@@ -4071,7 +4071,7 @@ _("End Port")
 _("Direction")
 # TRANSLATORS: file: product/views/StorageFile-snapshot_files.yaml
 _("Datastore VM Snapshot Files")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfigurationScript.yaml
 _("Job Templates")
 # TRANSLATORS: file: product/views/ArbitrationProfile.yaml
 _("ArbitrationProfiles")
@@ -4152,25 +4152,25 @@ _("Platform")
 _("Service")
 # TRANSLATORS: file: product/views/Vsc.yaml
 _("Created By")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("ConfigurationManagerForeman")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("Provider Name")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("URL")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("Last Refresh Date")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("Region Description")
 # TRANSLATORS: file: product/views/MiqUserRole.yaml
 _("User Roles")
@@ -4181,23 +4181,23 @@ _("Read Only")
 _("VM & Template Access Restriction")
 # TRANSLATORS: file: product/views/MiqUserRole.yaml
 _("Number of Groups")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 _("EmsInfra")
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 # TRANSLATORS: file: product/views/MiqServer.yaml
 # TRANSLATORS: file: product/views/StorageManager.yaml
 _("Hostname")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 _("Discovered IP Address")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 # TRANSLATORS: file: product/views/MiqSchedule.yaml
 # TRANSLATORS: file: product/views/StorageManager.yaml
 _("EVM Zone")
@@ -4205,7 +4205,7 @@ _("EVM Zone")
 # TRANSLATORS: file: product/views/EmsCluster.yaml
 # TRANSLATORS: file: product/views/Host-hosts.yaml
 # TRANSLATORS: file: product/views/Host.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_InfraManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_InfraManager.yaml
 # TRANSLATORS: file: product/views/OntapFileShare.yaml
 # TRANSLATORS: file: product/views/OntapLogicalDisk.yaml
 # TRANSLATORS: file: product/views/OntapStorageSystem.yaml
@@ -4214,8 +4214,8 @@ _("EVM Zone")
 _("Hosts")
 # TRANSLATORS: file: product/views/Host-hosts.yaml
 # TRANSLATORS: file: product/views/Host.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 # TRANSLATORS: file: product/views/MiqServer.yaml
 _("IP Address")
 # TRANSLATORS: file: product/views/Host-hosts.yaml
@@ -4265,31 +4265,31 @@ _("ETag")
 # TRANSLATORS: file: product/views/CloudObjectStoreObject-cloud_object_store_objects.yaml
 # TRANSLATORS: file: product/views/CloudObjectStoreObject.yaml
 _("Cloud Object Store")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
 _("Auth Key Pair")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
 _("AuthKeyPair")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_AuthKeyPair.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_AuthKeyPair.yaml
 _("Fingerprint")
 # TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 _("Azure Orchestration Templates")
 # TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 _("Azure Orchestration Template")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateCfn.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateHot.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateVnfd.yaml
 _("Template Type")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplate.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateAzure.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateCfn.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateHot.yaml
 # TRANSLATORS: file: product/views/OrchestrationTemplateVnfd.yaml
 _("Draft")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager.yaml
 _("Ansible Tower Providers")
 # TRANSLATORS: file: product/views/OpenscapRuleResult.yaml
 _("Openscap Rule Results")
@@ -4304,16 +4304,16 @@ _("Provisions")
 # TRANSLATORS: file: product/views/MiqRequest.yaml
 # TRANSLATORS: file: product/views/ServerBuild.yaml
 _("Last Message")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm.yaml
 _("Load Balancer Status")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
 _("Containers Providers")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ContainerManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ContainerManager.yaml
 _("EmsContainer")
 # TRANSLATORS: file: product/views/InstanceOrImage.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Vm-all_vms_and_templates.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Vm-all_vms_and_templates.yaml
 _("Instances and Images")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_StorageManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_StorageManager.yaml
 _("EmsStorage")
 # TRANSLATORS: file: product/views/Container.yaml
 # TRANSLATORS: file: product/views/ContainerGroup.yaml
@@ -4406,7 +4406,7 @@ _("Cloud")
 _("EVM Server")
 # TRANSLATORS: file: product/views/MiqServer.yaml
 _("EVM Servers")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_ConfigurationManager_InventoryGroup.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_ConfigurationManager_InventoryGroup.yaml
 _("InventoryGroup")
 # TRANSLATORS: file: product/views/ScanHistory.yaml
 _("Analysis History")
@@ -4526,16 +4526,16 @@ _("Network Port")
 _("NetworkPort")
 # TRANSLATORS: file: product/views/NetworkPort.yaml
 _("Mac Address")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 # TRANSLATORS: file: product/views/NetworkPort.yaml
 _("Subnets")
 # TRANSLATORS: file: product/views/ScanItemSet.yaml
 _("ScanItemSet")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager.yaml
 _("EmsCloud")
 # TRANSLATORS: file: product/views/OrchestrationStackParameter.yaml
 _("Parameters")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_NetworkManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_NetworkManager.yaml
 _("EmsNetwork")
 # TRANSLATORS: file: product/views/LdapRegion.yaml
 _("LdapRegion")
@@ -4586,13 +4586,13 @@ _("Registry")
 _("Data")
 # TRANSLATORS: file: product/views/RegistryItem.yaml
 _("Format")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
 _("Virtualization Type")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_CloudManager_Template.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_CloudManager_Template.yaml
 _("Root Device Type")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 _("Middleware Providers")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_MiddlewareManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_MiddlewareManager.yaml
 _("EmsMiddleware")
 # TRANSLATORS: file: product/views/ResourcePool.yaml
 _("Direct VMs")
@@ -4634,9 +4634,9 @@ _("Percent Bloat")
 _("HOT Orchestration Templates")
 # TRANSLATORS: file: product/views/OrchestrationTemplateHot.yaml
 _("HOT Orchestration Template")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 _("vApp Orchestration Templates")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Vmware_CloudManager_OrchestrationTemplate.yaml
 _("vApp Orchestration Template")
 # TRANSLATORS: file: product/views/SniaLocalFileSystem.yaml
 _("Snia Local File System")
@@ -4663,19 +4663,19 @@ _("Container Routes")
 # TRANSLATORS: file: product/views/ContainerProject.yaml
 _("Container Replicators")
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 _("ConfiguredSystem")
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 _("ConfiguredSystems")
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 _("Last Checkin")
 # TRANSLATORS: file: product/views/ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 _("Build State")
 # TRANSLATORS: file: product/views/Tenant.yaml
 _("Parent")
@@ -4816,7 +4816,7 @@ _("Total VM Disk Space Allocated")
 _("Total VM Disk Space Used")
 # TRANSLATORS: file: product/views/Service.yaml
 _("Total VM Memory on Disk")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_AnsibleTower_ConfigurationManager_ConfiguredSystem.yaml
 _("Ansible Tower Configured System")
 # TRANSLATORS: file: product/views/ConditionSet.yaml
 _("Condition Sets")
@@ -4852,7 +4852,7 @@ _("Block Storage Based")
 _("Subnet Required")
 # TRANSLATORS: file: product/views/Policy.yaml
 _("Policy")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager_ConfiguredSystem.yaml
 _("Configuration Profile")
 # TRANSLATORS: file: product/views/EmsCluster.yaml
 _("Clusters")
@@ -4934,7 +4934,7 @@ _("Installed")
 _("Number of Users")
 # TRANSLATORS: file: product/views/MiqGroup.yaml
 _("Sequence")
-# TRANSLATORS: file: product/views/ManageIQ_Providers_Foreman_ConfigurationManager.yaml
+# TRANSLATORS: file: product/views/NOVAHawk_Providers_Foreman_ConfigurationManager.yaml
 _("Total Configuration Profiles")
 # TRANSLATORS: file: product/views/ContainerImage.yaml
 _("Container Images")

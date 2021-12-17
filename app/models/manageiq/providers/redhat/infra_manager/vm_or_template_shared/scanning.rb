@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::VmOrTemplateShared::Scanning
+module NOVAHawk::Providers::Redhat::InfraManager::VmOrTemplateShared::Scanning
   extend ActiveSupport::Concern
 
   included do
@@ -42,8 +42,8 @@ module ManageIQ::Providers::Redhat::InfraManager::VmOrTemplateShared::Scanning
   RHEVM_NO_PROXIES_ERROR_MSG = N_('VMs must be scanned from an EVM server whose host is attached to the same
   storage as the VM unless overridden via SmartProxy affinity.
   Please verify that:
-  1) Direct LUNs are attached to ManageIQ appliance
-  2) Management Relationship is set for the ManageIQ appliance')
+  1) Direct LUNs are attached to NOVAHawk appliance
+  2) Management Relationship is set for the NOVAHawk appliance')
 
   def proxies4job(job = nil)
     _log.debug "Enter (RHEVM)"

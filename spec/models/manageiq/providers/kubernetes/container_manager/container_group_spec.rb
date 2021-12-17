@@ -34,7 +34,7 @@ describe ContainerGroup do
     persistent_volume = FactoryGirl.create(
       :persistent_volume,
       :name   => "persistent_volume",
-      :parent_type => "ManageIQ::Providers::ContainerManager",
+      :parent_type => "NOVAHawk::Providers::ContainerManager",
       :parent => ems
     )
 
@@ -53,7 +53,7 @@ describe ContainerGroup do
     ems.persistent_volumes.destroy_all
     container_volume = group.container_volumes.create(:name => "container_volume")
     persistent_volume = ems.persistent_volumes.create(:name        => "persistent_volume",
-                                                      :parent_type => "ManageIQ::Providers::ContainerManager")
+                                                      :parent_type => "NOVAHawk::Providers::ContainerManager")
     assert_volumes_relations(group, ems, container_volume, persistent_volume)
 
     persistent_volume.destroy
@@ -69,7 +69,7 @@ describe ContainerGroup do
     expect(ems.persistent_volumes.first.name).to eq("persistent_volume")
     expect(container_volume.parent.class).to eq(ContainerGroup)
     expect(container_volume.parent.name).to eq("group")
-    expect(persistent_volume.parent.class).to eq(ManageIQ::Providers::Kubernetes::ContainerManager)
+    expect(persistent_volume.parent.class).to eq(NOVAHawk::Providers::Kubernetes::ContainerManager)
     expect(persistent_volume.parent.name).to eq("ems")
   end
 end

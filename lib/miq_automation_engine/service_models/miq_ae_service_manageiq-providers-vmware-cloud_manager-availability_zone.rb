@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Vmware_CloudManager_AvailabilityZone < MiqAeServiceAvailabilityZone
+  class MiqAeServiceNOVAHawk_Providers_Vmware_CloudManager_AvailabilityZone < MiqAeServiceAvailabilityZone
   end
 end

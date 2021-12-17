@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Vmware::CloudManager::RefreshParser < ManageIQ::Providers::CloudManager::RefreshParser
-  include ManageIQ::Providers::Vmware::RefreshHelperMethods
+class NOVAHawk::Providers::Vmware::CloudManager::RefreshParser < NOVAHawk::Providers::CloudManager::RefreshParser
+  include NOVAHawk::Providers::Vmware::RefreshHelperMethods
 
   # While parsing the VMWare catalog only those vapp templates whose status
   # is reported to be "8" are ready to be used. The documentation says this
@@ -99,7 +99,7 @@ class ManageIQ::Providers::Vmware::CloudManager::RefreshParser < ManageIQ::Provi
     id = vdc.id
 
     new_result = {
-      :type    => "ManageIQ::Providers::Vmware::CloudManager::AvailabilityZone",
+      :type    => "NOVAHawk::Providers::Vmware::CloudManager::AvailabilityZone",
       :ems_ref => id,
       :name    => vdc.name
     }
@@ -135,7 +135,7 @@ class ManageIQ::Providers::Vmware::CloudManager::RefreshParser < ManageIQ::Provi
     end
 
     new_result = {
-      :type                => ManageIQ::Providers::Vmware::CloudManager::Vm.name,
+      :type                => NOVAHawk::Providers::Vmware::CloudManager::Vm.name,
       :uid_ems             => uid,
       :ems_ref             => uid,
       :name                => name,
@@ -170,7 +170,7 @@ class ManageIQ::Providers::Vmware::CloudManager::RefreshParser < ManageIQ::Provi
     name     = vapp.name
 
     new_result = {
-      :type        => ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack.name,
+      :type        => NOVAHawk::Providers::Vmware::CloudManager::OrchestrationStack.name,
       :ems_ref     => uid,
       :name        => name,
       :description => name,
@@ -184,7 +184,7 @@ class ManageIQ::Providers::Vmware::CloudManager::RefreshParser < ManageIQ::Provi
     name = image.name
 
     new_result = {
-      :type               => ManageIQ::Providers::Vmware::CloudManager::Template.name,
+      :type               => NOVAHawk::Providers::Vmware::CloudManager::Template.name,
       :uid_ems            => uid,
       :ems_ref            => uid,
       :name               => name,
@@ -203,7 +203,7 @@ class ManageIQ::Providers::Vmware::CloudManager::RefreshParser < ManageIQ::Provi
     content = @connection.get_vapp_template_ovf_descriptor(uid).body
 
     new_result = {
-      :type        => ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate.name,
+      :type        => NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate.name,
       :ems_ref     => uid,
       :name        => vapp_template.name,
       :description => vapp_template.description,

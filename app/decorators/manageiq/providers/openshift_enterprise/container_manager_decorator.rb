@@ -1,4 +1,4 @@
-class ManageIQ::Providers::OpenshiftEnterprise::ContainerManagerDecorator < Draper::Decorator
+class NOVAHawk::Providers::OpenshiftEnterprise::ContainerManagerDecorator < Draper::Decorator
   delegate_all
 
   def listicon_image

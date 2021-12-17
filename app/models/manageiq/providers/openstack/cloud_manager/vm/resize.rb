@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::Vm::Resize
+module NOVAHawk::Providers::Openstack::CloudManager::Vm::Resize
   extend ActiveSupport::Concern
 
   included do

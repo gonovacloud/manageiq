@@ -4,11 +4,11 @@ version: 1.0
 object:
   attributes:
     display_name: 
-    name: MANAGEIQ
+    name: novahawk
     inherits: 
     description: 
   fields:
   - name:
-      value: manageiq.com
+      value: novahawk.com
   - basedn:
-      value: ou=miq-policy,dc=manageiq,dc=com
+      value: ou=miq-policy,dc=novahawk,dc=com

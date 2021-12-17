@@ -1,11 +1,11 @@
-ManageIQ.angular.app.controller('floatingIpFormController', ['$http', '$scope', 'floatingIpFormId', 'miqService', function($http, $scope, floatingIpFormId, miqService) {
+NOVAHawk.angular.app.controller('floatingIpFormController', ['$http', '$scope', 'floatingIpFormId', 'miqService', function($http, $scope, floatingIpFormId, miqService) {
   $scope.floatingIpModel = { name: '' };
   $scope.formId = floatingIpFormId;
   $scope.afterGet = false;
   $scope.modelCopy = angular.copy( $scope.floatingIpModel );
   $scope.model = "floatingIpModel";
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   if (floatingIpFormId == 'new') {
     $scope.floatingIpModel.name = "";

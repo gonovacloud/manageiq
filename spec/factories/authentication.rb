@@ -19,8 +19,8 @@ FactoryGirl.define do
     authtype    "ws"
   end
 
-  factory :authentication_ssh_keypair, :parent => :authentication, :class => 'ManageIQ::Providers::Openstack::InfraManager::AuthKeyPair' do
-    type        "ManageIQ::Providers::Openstack::InfraManager::AuthKeyPair"
+  factory :authentication_ssh_keypair, :parent => :authentication, :class => 'NOVAHawk::Providers::Openstack::InfraManager::AuthKeyPair' do
+    type        "NOVAHawk::Providers::Openstack::InfraManager::AuthKeyPair"
     authtype    "ssh_keypair"
     userid      "testuser"
     password    nil

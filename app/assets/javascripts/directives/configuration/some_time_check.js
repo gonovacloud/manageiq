@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('someTimeCheck', function() {
+NOVAHawk.angular.app.directive('someTimeCheck', function() {
   return {
     require: 'ngModel',
     link: function (scope, _elem, attrs, ctrl) {

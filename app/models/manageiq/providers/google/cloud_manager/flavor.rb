@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::CloudManager::Flavor < ::Flavor
+class NOVAHawk::Providers::Google::CloudManager::Flavor < ::Flavor
 end

@@ -15,7 +15,7 @@ title: ConfiguredSystem
 name: ConfiguredSystems
 
 # Main DB table report is based on
-db: ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem
+db: NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem
 
 # Columns to fetch from the main table
 cols:

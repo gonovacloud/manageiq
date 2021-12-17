@@ -12,7 +12,7 @@
   * For success functuon @see ToolbarController#onRowSelect()
   */
   function subscribeToSubject() {
-    ManageIQ.angular.rxSubject.subscribe(function(event) {
+    NOVAHawk.angular.rxSubject.subscribe(function(event) {
       if (event.eventType === 'updateToolbarCount') {
         this.MiQToolbarSettingsService.setCount(event.countSelected);
       } else if (event.rowSelect) {
@@ -124,9 +124,9 @@
   ToolbarController.prototype.onViewClick = function(item, $event) {
     if (item.url.indexOf('/') === 0) {
       var delimiter = (item.url === '/') ? '' : '/';
-      var tail = (ManageIQ.record.recordId) ? delimiter + ManageIQ.record.recordId : '';
+      var tail = (NOVAHawk.record.recordId) ? delimiter + NOVAHawk.record.recordId : '';
 
-      location.replace('/' + ManageIQ.controller + item.url + tail + item.url_parms);
+      location.replace('/' + NOVAHawk.controller + item.url + tail + item.url_parms);
     } else {
       miqToolbarOnClick.bind($event.delegateTarget)($event);
     }
@@ -157,6 +157,6 @@
   };
 
   ToolbarController.$inject = ['MiQToolbarSettingsService', 'MiQEndpointsService', '$scope', '$location'];
-  miqHttpInject(angular.module('ManageIQ.toolbar'))
+  miqHttpInject(angular.module('NOVAHawk.toolbar'))
     .controller('miqToolbarController', ToolbarController);
 })();

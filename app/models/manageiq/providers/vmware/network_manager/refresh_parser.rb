@@ -1,6 +1,6 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Vmware::NetworkManager::RefreshParser
-    include ManageIQ::Providers::Vmware::RefreshHelperMethods
+    include NOVAHawk::Providers::Vmware::RefreshHelperMethods
     VappNetwork = Struct.new(:id, :name, :type, :is_shared, :gateway, :dns1, :dns2)
 
     def initialize(ems, options = nil)
@@ -176,23 +176,23 @@ module ManageIQ::Providers
 
     class << self
       def cloud_network_vdc_type
-        "ManageIQ::Providers::Vmware::NetworkManager::CloudNetwork::OrgVdcNet"
+        "NOVAHawk::Providers::Vmware::NetworkManager::CloudNetwork::OrgVdcNet"
       end
 
       def cloud_network_vapp_type
-        "ManageIQ::Providers::Vmware::NetworkManager::CloudNetwork::VappNet"
+        "NOVAHawk::Providers::Vmware::NetworkManager::CloudNetwork::VappNet"
       end
 
       def cloud_subnet_type
-        "ManageIQ::Providers::Vmware::NetworkManager::CloudSubnet"
+        "NOVAHawk::Providers::Vmware::NetworkManager::CloudSubnet"
       end
 
       def network_router_type
-        "ManageIQ::Providers::Vmware::NetworkManager::NetworkRouter"
+        "NOVAHawk::Providers::Vmware::NetworkManager::NetworkRouter"
       end
 
       def network_port_type
-        "ManageIQ::Providers::Vmware::NetworkManager::NetworkPort"
+        "NOVAHawk::Providers::Vmware::NetworkManager::NetworkPort"
       end
     end
   end

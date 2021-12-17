@@ -1,4 +1,4 @@
-class ManageIQ::Providers::BaseManager::MetricsCollectorWorker < MiqQueueWorkerBase
+class NOVAHawk::Providers::BaseManager::MetricsCollectorWorker < MiqQueueWorkerBase
   require_nested :Runner
 
   include PerEmsTypeWorkerMixin

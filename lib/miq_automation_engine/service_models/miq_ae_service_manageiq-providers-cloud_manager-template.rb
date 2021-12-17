@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_CloudManager_Template < MiqAeServiceMiqTemplate
+  class MiqAeServiceNOVAHawk_Providers_CloudManager_Template < MiqAeServiceMiqTemplate
   end
 end

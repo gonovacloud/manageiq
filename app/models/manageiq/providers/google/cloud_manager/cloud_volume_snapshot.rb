@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::CloudManager::CloudVolumeSnapshot < ::CloudVolumeSnapshot
+class NOVAHawk::Providers::Google::CloudManager::CloudVolumeSnapshot < ::CloudVolumeSnapshot
 end

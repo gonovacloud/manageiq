@@ -1,7 +1,7 @@
 class CloudTopologyService < TopologyService
   include UiServiceMixin
 
-  @provider_class = ManageIQ::Providers::CloudManager
+  @provider_class = NOVAHawk::Providers::CloudManager
 
   def entity_type(entity)
     entity.class.name.demodulize
@@ -29,7 +29,7 @@ class CloudTopologyService < TopologyService
   end
 
   def entity_display_type(entity)
-    if entity.kind_of?(ManageIQ::Providers::CloudManager)
+    if entity.kind_of?(NOVAHawk::Providers::CloudManager)
       entity.class.short_token
     else
       name = entity.class.name.demodulize
@@ -54,7 +54,7 @@ class CloudTopologyService < TopologyService
   end
 
   def entity_status(entity)
-    if entity.kind_of?(ManageIQ::Providers::CloudManager)
+    if entity.kind_of?(NOVAHawk::Providers::CloudManager)
       entity.authentications.blank? ? 'Unknown' : entity.authentications.first.status.try(:capitalize)
     elsif entity.kind_of?(Vm)
       entity.power_state.capitalize

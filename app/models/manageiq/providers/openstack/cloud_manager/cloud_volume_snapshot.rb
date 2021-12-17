@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot < ::CloudVolumeSnapshot
+class NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot < ::CloudVolumeSnapshot
   include SupportsFeatureMixin
 
   supports :create

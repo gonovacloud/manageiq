@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Hawkular
+module NOVAHawk::Providers::Hawkular
   class MiddlewareManagerDecorator < Draper::Decorator
     def fonticon
       nil

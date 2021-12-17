@@ -154,7 +154,7 @@
         __iv__@xsiType: :ArrayOfHostVirtualNic
       dnsConfig: !map:VimHash 
         domainName: !str:VimString 
-          str: manageiq.com
+          str: novahawk.com
           "@vimType": 
           "@xsiType": :"SOAP::SOAPString"
         hostName: !str:VimString 
@@ -664,7 +664,7 @@
   summary: !map:VimHash 
     config: !map:VimHash 
       name: !str:VimString 
-        str: vi4esxm2.manageiq.com
+        str: vi4esxm2.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       vmotionEnabled: !str:VimString 
@@ -948,7 +948,7 @@
         __iv__@xsiType: :ArrayOfHostVirtualNic
       dnsConfig: !map:VimHash 
         domainName: !str:VimString 
-          str: manageiq.com
+          str: novahawk.com
           "@vimType": 
           "@xsiType": :"SOAP::SOAPString"
         hostName: !str:VimString 
@@ -1492,7 +1492,7 @@
   summary: !map:VimHash 
     config: !map:VimHash 
       name: !str:VimString 
-        str: vi4esxm1.manageiq.com
+        str: vi4esxm1.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       vmotionEnabled: !str:VimString 
@@ -2163,7 +2163,7 @@
     network: !map:VimHash 
       dnsConfig: !map:VimHash 
         domainName: !str:VimString 
-          str: manageiq.com
+          str: novahawk.com
           "@vimType": 
           "@xsiType": :"SOAP::SOAPString"
         hostName: !str:VimString 
@@ -2719,7 +2719,7 @@
   summary: !map:VimHash 
     config: !map:VimHash 
       name: !str:VimString 
-        str: vi4esxm3.manageiq.com
+        str: vi4esxm3.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       vmotionEnabled: !str:VimString 

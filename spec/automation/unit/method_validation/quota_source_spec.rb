@@ -5,7 +5,7 @@ describe "Quota Validation" do
     attrs = []
     attrs << "MiqProvisionRequest::miq_provision_request=#{provision_request.id}&" \
            "MiqRequest::miq_request=#{provision_request.id}" if provision_request
-    MiqAeEngine.instantiate("/ManageIQ/system/request/Call_Instance?namespace=System/CommonMethods&" \
+    MiqAeEngine.instantiate("/NOVAHawk/system/request/Call_Instance?namespace=System/CommonMethods&" \
                             "class=QuotaMethods&instance=quota_source&" \
                             "quota_source_type=#{type}&#{attrs.join('&')}", @user)
   end

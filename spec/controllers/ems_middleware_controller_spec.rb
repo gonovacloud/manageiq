@@ -57,7 +57,7 @@ describe EmsMiddlewareController do
           "default_password" => "[FILTERED]",
           "default_verify"   => "[FILTERED]"
         }
-      end.to change { ManageIQ::Providers::Hawkular::MiddlewareManager.count }.by(1)
+      end.to change { NOVAHawk::Providers::Hawkular::MiddlewareManager.count }.by(1)
     end
 
     it 'creates and updates an authentication record on post' do
@@ -76,7 +76,7 @@ describe EmsMiddlewareController do
       end.to change { Authentication.count }.by(1)
 
       expect(response.status).to eq(200)
-      hawkular = ManageIQ::Providers::Hawkular::MiddlewareManager.where(:name => "SeaHawks").first
+      hawkular = NOVAHawk::Providers::Hawkular::MiddlewareManager.where(:name => "SeaHawks").first
       expect(hawkular.authentications.size).to eq(1)
 
       expect do

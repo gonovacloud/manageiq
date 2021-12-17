@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Azure::CloudManager::ProvisionWorkflow < ManageIQ::Providers::CloudManager::ProvisionWorkflow
+class NOVAHawk::Providers::Azure::CloudManager::ProvisionWorkflow < NOVAHawk::Providers::CloudManager::ProvisionWorkflow
   def allowed_instance_types(_options = {})
     source = load_ar_obj(get_source_vm)
     ems    = source.try(:ext_management_system)
@@ -33,6 +33,6 @@ class ManageIQ::Providers::Azure::CloudManager::ProvisionWorkflow < ManageIQ::Pr
   end
 
   def self.provider_model
-    ManageIQ::Providers::Azure::CloudManager
+    NOVAHawk::Providers::Azure::CloudManager
   end
 end

@@ -1,10 +1,10 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
+describe NOVAHawk::Providers::Redhat::InfraManager::Refresher do
   let(:ip_address) { '192.168.252.231' }
 
   before(:each) do
     guid, server, zone = EvmSpecHelper.create_guid_miq_server_zone
     @ems = FactoryGirl.create(:ems_redhat, :zone => zone, :hostname => ip_address, :ipaddress => ip_address, :port => 8443)
-    @ems.update_authentication(:default => {:userid => "evm@manageiq.com", :password => "password"})
+    @ems.update_authentication(:default => {:userid => "evm@novahawk.com", :password => "password"})
     allow(@ems).to receive(:supported_api_versions).and_return([3])
     allow(@ems).to receive(:resolve_ip_address).with(ip_address).and_return(ip_address)
   end
@@ -133,11 +133,11 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
   end
 
   def assert_specific_host
-    @host = ManageIQ::Providers::Redhat::InfraManager::Host.find_by_name("rhelvirt.manageiq.com")
+    @host = NOVAHawk::Providers::Redhat::InfraManager::Host.find_by_name("rhelvirt.novahawk.com")
     expect(@host).to have_attributes(
       :ems_ref          => "/api/hosts/ca389dbc-2054-11e1-9241-005056af0085",
       :ems_ref_obj      => "/api/hosts/ca389dbc-2054-11e1-9241-005056af0085",
-      :name             => "rhelvirt.manageiq.com",
+      :name             => "rhelvirt.novahawk.com",
       :hostname         => "192.168.252.119",
       :ipaddress        => "192.168.252.119",
       :uid_ems          => "ca389dbc-2054-11e1-9241-005056af0085",
@@ -235,7 +235,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
   end
 
   def assert_specific_vm_powered_on
-    v = ManageIQ::Providers::Redhat::InfraManager::Vm.find_by_name("EmsRefreshSpec-PoweredOn")
+    v = NOVAHawk::Providers::Redhat::InfraManager::Vm.find_by_name("EmsRefreshSpec-PoweredOn")
     expect(v).to have_attributes(
       :template              => false,
       :ems_ref               => "/api/vms/fe052832-2350-48ce-8e56-c24b4cd91876",
@@ -375,7 +375,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
   end
 
   def assert_specific_vm_powered_off
-    v = ManageIQ::Providers::Redhat::InfraManager::Vm.find_by_name("EmsRefreshSpec-PoweredOff")
+    v = NOVAHawk::Providers::Redhat::InfraManager::Vm.find_by_name("EmsRefreshSpec-PoweredOff")
     expect(v).to have_attributes(
       :template              => false,
       :ems_ref               => "/api/vms/26a050fb-62c3-4645-9088-be6efec860e1",
@@ -530,7 +530,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
   end
 
   def assert_specific_template
-    v = ManageIQ::Providers::Redhat::InfraManager::Template.find_by_name("EmsRefreshSpec")
+    v = NOVAHawk::Providers::Redhat::InfraManager::Template.find_by_name("EmsRefreshSpec")
     expect(v).to have_attributes(
       :template              => true,
       :ems_ref               => "/api/templates/7a6db798-9df9-40ca-8cc3-3baab32e7613",
@@ -639,19 +639,19 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
           [EmsFolder, "host", {:hidden => true}] => {
             [EmsCluster, "Cluster1-iSCSI"] => {
               [ResourcePool, "Default for Cluster Cluster1-iSCSI"] => {
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "Brandon-Clone1"]   => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "CLI-Provision-1"]  => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-RH-5005-test"] => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-v5005"]        => {}
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "Brandon-Clone1"]   => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "CLI-Provision-1"]  => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-RH-5005-test"] => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-v5005"]        => {}
               }
             }
           },
           [EmsFolder, "vm", {:hidden => true}]   => {
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "Template1"]  => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "Brandon-Clone1"]   => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "CLI-Provision-1"]  => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-RH-5005-test"] => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-v5005"]        => {}
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "Template1"]  => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "Brandon-Clone1"]   => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "CLI-Provision-1"]  => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-RH-5005-test"] => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-v5005"]        => {}
           }
         },
         [Datacenter, "DC2"]      => {
@@ -661,43 +661,43 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
             },
             [EmsCluster, "DC2Cluster1"] => {
               [ResourcePool, "Default for Cluster DC2Cluster1"] => {
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-TrunkSVN"] => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-V5001"]    => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "new-server"]   => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "RHEL"]         => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "ULin1"]        => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "V5-test"]      => {}
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-TrunkSVN"] => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-V5001"]    => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "new-server"]   => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "RHEL"]         => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "ULin1"]        => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "V5-test"]      => {}
               }
             }
           },
           [EmsFolder, "vm", {:hidden => true}]   => {
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVM"]         => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVM-V5"]      => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVM-v5-Base"] => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "GM-Template"] => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-TrunkSVN"]      => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-V5001"]         => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "new-server"]        => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "RHEL"]              => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "ULin1"]             => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "V5-test"]           => {}
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVM"]         => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVM-V5"]      => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVM-v5-Base"] => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "GM-Template"] => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-TrunkSVN"]      => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-V5001"]         => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "new-server"]        => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "RHEL"]              => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "ULin1"]             => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "V5-test"]           => {}
           }
         },
         [Datacenter, "Default"]  => {
           [EmsFolder, "host", {:hidden => true}] => {
             [EmsCluster, "Cluster2"] => {
               [ResourcePool, "Default for Cluster Cluster2"] => {
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOff"] => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOn"]  => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-RH-50013"]              => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-RH-50015"]              => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-V50025"]                => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "GM-Ubuntu-1"]               => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "kmwin2k8a"]                 => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "MIQ-PXE"]                   => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "obarenboim_test_01"]        => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "rpo-evm"]                   => {},
-                [ManageIQ::Providers::Redhat::InfraManager::Vm, "rpo-test"]                  => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOff"] => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOn"]  => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-RH-50013"]              => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-RH-50015"]              => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-V50025"]                => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "GM-Ubuntu-1"]               => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "kmwin2k8a"]                 => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "MIQ-PXE"]                   => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "obarenboim_test_01"]        => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "rpo-evm"]                   => {},
+                [NOVAHawk::Providers::Redhat::InfraManager::Vm, "rpo-test"]                  => {},
               }
             },
             [EmsCluster, "Default"]  => {
@@ -705,26 +705,26 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
             }
           },
           [EmsFolder, "vm", {:hidden => true}]   => {
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "empty"]               => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EmsRefreshSpec"]      => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVM-50011"]           => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVM-v50017"]          => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVM-v50025"]          => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVMv5"]               => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "EVMv50015"]           => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "pxe-template"]        => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Template, "pxe-template-wi"]     => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOff"] => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOn"]  => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-RH-50013"]              => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-RH-50015"]              => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "EVM-V50025"]                => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "GM-Ubuntu-1"]               => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "kmwin2k8a"]                 => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "MIQ-PXE"]                   => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "obarenboim_test_01"]        => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "rpo-evm"]                   => {},
-            [ManageIQ::Providers::Redhat::InfraManager::Vm, "rpo-test"]                  => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "empty"]               => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EmsRefreshSpec"]      => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVM-50011"]           => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVM-v50017"]          => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVM-v50025"]          => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVMv5"]               => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "EVMv50015"]           => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "pxe-template"]        => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Template, "pxe-template-wi"]     => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOff"] => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EmsRefreshSpec-PoweredOn"]  => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-RH-50013"]              => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-RH-50015"]              => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "EVM-V50025"]                => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "GM-Ubuntu-1"]               => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "kmwin2k8a"]                 => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "MIQ-PXE"]                   => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "obarenboim_test_01"]        => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "rpo-evm"]                   => {},
+            [NOVAHawk::Providers::Redhat::InfraManager::Vm, "rpo-test"]                  => {},
           }
         }
       }

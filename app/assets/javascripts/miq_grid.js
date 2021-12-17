@@ -24,7 +24,7 @@
         });
 
         sendDataWithRx({rowSelect: e.delegateTarget});
-        ManageIQ.gridChecks = checked;
+        NOVAHawk.gridChecks = checked;
         miqSetButtons(checked.length, 'center_tb');
 
         // if all the checkboxes were checked, make checkall checked too,

@@ -91,7 +91,7 @@
             = hidden_field_tag(:ignore_form_changes)
 
 :javascript
-  ManageIQ.angular.app.value('recordId', '#{@record.id}');
-  ManageIQ.angular.app.value('url', '#{url}');
-  ManageIQ.angular.app.value('categories', '#{@tl_options.management.events.keys.sort}');
+  NOVAHawk.angular.app.value('recordId', '#{@record.id}');
+  NOVAHawk.angular.app.value('url', '#{url}');
+  NOVAHawk.angular.app.value('categories', '#{@tl_options.management.events.keys.sort}');
   miq_bootstrap('#form_div');

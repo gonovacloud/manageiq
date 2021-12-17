@@ -1,15 +1,15 @@
 require "spec_helper"
 require "timecop"
 
-describe ManageIQ::Providers::Vmware::InfraManager::EventCatcher::Runner do
+describe NOVAHawk::Providers::Vmware::InfraManager::EventCatcher::Runner do
   let(:ems)      { FactoryGirl.create(:ems_vmware, :hostname => "hostname") }
-  let(:catcher)  { ManageIQ::Providers::Vmware::InfraManager::EventCatcher::Runner.new(:ems_id => ems.id) }
+  let(:catcher)  { NOVAHawk::Providers::Vmware::InfraManager::EventCatcher::Runner.new(:ems_id => ems.id) }
   let(:settings) { {:flooding_monitor_enabled => false} }
 
   # TODO: need a better way to create a runner for testing without the following mocks
   # And the runner can be reloaded between tests
   before do
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive(:authentication_check).and_return([true, ""])
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive(:authentication_check).and_return([true, ""])
     allow_any_instance_of(MiqWorker::Runner).to receive(:worker_initialization)
     allow_any_instance_of(MiqWorker::Runner).to receive(:worker_settings).and_return(settings)
   end
@@ -90,8 +90,8 @@ describe ManageIQ::Providers::Vmware::InfraManager::EventCatcher::Runner do
     # the following code can be removed. Here the runner is forced to reload because the class level
     # settings need to be changed between tests.
     before do
-      ManageIQ::Providers::Vmware::InfraManager::EventCatcher.send(:remove_const, :Runner)
-      load 'app/models/manageiq/providers/vmware/infra_manager/event_catcher/runner.rb'
+      NOVAHawk::Providers::Vmware::InfraManager::EventCatcher.send(:remove_const, :Runner)
+      load 'app/models/novahawk/providers/vmware/infra_manager/event_catcher/runner.rb'
       Timecop.freeze(0)
     end
 

@@ -2,16 +2,16 @@ class NamespaceEmsForeman < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    ConfigurationManager                        ManageIQ::Providers::ConfigurationManager
-    ProvisioningManager                         ManageIQ::Providers::ProvisioningManager
+    ConfigurationManager                        NOVAHawk::Providers::ConfigurationManager
+    ProvisioningManager                         NOVAHawk::Providers::ProvisioningManager
 
-    ProviderForeman                             ManageIQ::Providers::Foreman::Provider
-    ConfigurationManagerForeman                 ManageIQ::Providers::Foreman::ConfigurationManager
-    ConfigurationProfileForeman                 ManageIQ::Providers::Foreman::ConfigurationManager::ConfigurationProfile
-    ConfiguredSystemForeman                     ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem
-    MiqProvisionConfiguredSystemForemanWorkflow ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionWorkflow
-    MiqProvisionTaskConfiguredSystemForeman     ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionTask
-    ProvisioningManagerForeman                  ManageIQ::Providers::Foreman::ProvisioningManager
+    ProviderForeman                             NOVAHawk::Providers::Foreman::Provider
+    ConfigurationManagerForeman                 NOVAHawk::Providers::Foreman::ConfigurationManager
+    ConfigurationProfileForeman                 NOVAHawk::Providers::Foreman::ConfigurationManager::ConfigurationProfile
+    ConfiguredSystemForeman                     NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem
+    MiqProvisionConfiguredSystemForemanWorkflow NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionWorkflow
+    MiqProvisionTaskConfiguredSystemForeman     NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionTask
+    ProvisioningManagerForeman                  NOVAHawk::Providers::Foreman::ProvisioningManager
   )]
 
   def change

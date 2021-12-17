@@ -7,7 +7,7 @@ class StiConfigurationScript < ActiveRecord::Migration[5.0]
     add_column :configuration_scripts, :type, :string
 
     say_with_time("Setting type on ConfigurationScript") do
-      ConfigurationScript.update_all(:type => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript")
+      ConfigurationScript.update_all(:type => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript")
     end
   end
 

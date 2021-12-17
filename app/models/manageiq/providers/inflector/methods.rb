@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Inflector::Methods
+module NOVAHawk::Providers::Inflector::Methods
   extend ActiveSupport::Concern
 
   included do
@@ -7,11 +7,11 @@ module ManageIQ::Providers::Inflector::Methods
 
   class_methods do
     def provider_name
-      ManageIQ::Providers::Inflector.provider_name(self)
+      NOVAHawk::Providers::Inflector.provider_name(self)
     end
 
     def manager_type
-      ManageIQ::Providers::Inflector.manager_type(self)
+      NOVAHawk::Providers::Inflector.manager_type(self)
     end
   end
 end

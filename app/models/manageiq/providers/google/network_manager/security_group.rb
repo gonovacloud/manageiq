@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::NetworkManager::SecurityGroup < ::SecurityGroup
+class NOVAHawk::Providers::Google::NetworkManager::SecurityGroup < ::SecurityGroup
 end

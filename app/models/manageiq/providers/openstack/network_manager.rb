@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::NetworkManager < ManageIQ::Providers::NetworkManager
+class NOVAHawk::Providers::Openstack::NetworkManager < NOVAHawk::Providers::NetworkManager
   require_nested :CloudNetwork
   require_nested :CloudSubnet
   require_nested :EventCatcher
@@ -13,16 +13,16 @@ class ManageIQ::Providers::Openstack::NetworkManager < ManageIQ::Providers::Netw
   require_nested :Refresher
   require_nested :SecurityGroup
 
-  include ManageIQ::Providers::Openstack::ManagerMixin
+  include NOVAHawk::Providers::Openstack::ManagerMixin
   include SupportsFeatureMixin
 
   supports :create
   supports :create_network_router
 
   has_many :public_networks,  :foreign_key => :ems_id, :dependent => :destroy,
-           :class_name => "ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Public"
+           :class_name => "NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Public"
   has_many :private_networks, :foreign_key => :ems_id, :dependent => :destroy,
-           :class_name => "ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private"
+           :class_name => "NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private"
   alias_method :all_private_networks, :private_networks
 
   # Auth and endpoints delegations, editing of this type of manager must be disabled
@@ -89,7 +89,7 @@ class ManageIQ::Providers::Openstack::NetworkManager < ManageIQ::Providers::Netw
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::Openstack::NetworkManager::EventCatcher
+    NOVAHawk::Providers::Openstack::NetworkManager::EventCatcher
   end
 
   def create_cloud_network(options)

@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Amazon_NetworkManager_LoadBalancer < MiqAeServiceLoadBalancer
+  class MiqAeServiceNOVAHawk_Providers_Amazon_NetworkManager_LoadBalancer < MiqAeServiceLoadBalancer
   end
 end

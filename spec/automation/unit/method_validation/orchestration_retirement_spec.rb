@@ -52,7 +52,7 @@ describe "Orchestration retirement state machine Methods Validation" do
     let(:method_name) { "CheckRemovedFromProvider" }
 
     it "completes the step when stack is removed from provider" do
-      status = ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('DELETE_COMPLETE', nil)
+      status = NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('DELETE_COMPLETE', nil)
       allow_any_instance_of(OrchestrationStack).to receive(:raw_status) { status }
       expect(ws.root['ae_result']).to eq('ok')
     end
@@ -64,7 +64,7 @@ describe "Orchestration retirement state machine Methods Validation" do
     end
 
     it "retries if stack has not been removed from provider" do
-      status = ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('DELETING', nil)
+      status = NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('DELETING', nil)
       allow_any_instance_of(OrchestrationStack).to receive(:raw_status) { status }
       expect(ws.root['ae_result']).to eq('retry')
     end

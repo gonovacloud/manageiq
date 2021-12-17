@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::CloudManager::Refresher do
+describe NOVAHawk::Providers::Vmware::CloudManager::Refresher do
   before do
     @host = Rails.application.secrets.vmware_cloud.try(:[], 'host') || 'vmwarecloudhost'
     host_uri = URI.parse("https://#{@host}")
@@ -111,17 +111,17 @@ describe ManageIQ::Providers::Vmware::CloudManager::Refresher do
   end
 
   def assert_specific_vdc
-    @vdc = ManageIQ::Providers::Vmware::CloudManager::AvailabilityZone.where(:name => "MIQDev-Default-vCD-DualSiteStorage-PAYG").first
+    @vdc = NOVAHawk::Providers::Vmware::CloudManager::AvailabilityZone.where(:name => "MIQDev-Default-vCD-DualSiteStorage-PAYG").first
     expect(@vdc).to have_attributes(
       :ems_id  => @ems.id,
       :name    => "MIQDev-Default-vCD-DualSiteStorage-PAYG",
       :ems_ref => "89ade969-1dc4-4156-abad-e29f79511676",
-      :type    => "ManageIQ::Providers::Vmware::CloudManager::AvailabilityZone"
+      :type    => "NOVAHawk::Providers::Vmware::CloudManager::AvailabilityZone"
     )
   end
 
   def assert_specific_template
-    @template = ManageIQ::Providers::Vmware::CloudManager::Template.where(:name => "CentOS7").first
+    @template = NOVAHawk::Providers::Vmware::CloudManager::Template.where(:name => "CentOS7").first
     expect(@template).not_to be_nil
     expect(@template).to have_attributes(
       :template              => true,
@@ -156,7 +156,7 @@ describe ManageIQ::Providers::Vmware::CloudManager::Refresher do
   end
 
   def assert_specific_vm_powered_on
-    v = ManageIQ::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec1-vm1")
+    v = NOVAHawk::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec1-vm1")
     expect(v).to have_attributes(
       :template              => false,
       :ems_ref               => "vm-f9ceb77c-b9d9-400c-8c06-72c785e884af",
@@ -240,7 +240,7 @@ describe ManageIQ::Providers::Vmware::CloudManager::Refresher do
   end
 
   def assert_specific_vm_powered_off
-    v = ManageIQ::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec2-vm1")
+    v = NOVAHawk::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec2-vm1")
     expect(v).to have_attributes(
       :template              => false,
       :ems_ref               => "vm-a28be0c0-d70d-4047-92f8-fc217bbaa7f6",
@@ -325,19 +325,19 @@ describe ManageIQ::Providers::Vmware::CloudManager::Refresher do
   end
 
   def assert_specific_orchestration_stack
-    @orchestration_stack1 = ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack
+    @orchestration_stack1 = NOVAHawk::Providers::Vmware::CloudManager::OrchestrationStack
                             .find_by(:name => "spec-1")
-    @orchestration_stack2 = ManageIQ::Providers::Vmware::CloudManager::OrchestrationStack
+    @orchestration_stack2 = NOVAHawk::Providers::Vmware::CloudManager::OrchestrationStack
                             .find_by(:name => "spec2")
-    vm1 = ManageIQ::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec1-vm1")
-    vm2 = ManageIQ::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec2-vm1")
+    vm1 = NOVAHawk::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec1-vm1")
+    vm2 = NOVAHawk::Providers::Vmware::CloudManager::Vm.find_by(:name => "spec2-vm1")
 
     expect(vm1.orchestration_stack).to eq(@orchestration_stack1)
     expect(vm2.orchestration_stack).to eq(@orchestration_stack2)
   end
 
   def assert_specific_orchestration_template
-    @template = ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate.where(:name => "vApp_CentOS_and_msWin").first
+    @template = NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate.where(:name => "vApp_CentOS_and_msWin").first
     expect(@template).not_to be_nil
     expect(@template).to have_attributes(
       :ems_ref   => "vappTemplate-a19bdc8f-88fa-4dd6-8436-486590353ed5",

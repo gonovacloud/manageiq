@@ -1,4 +1,4 @@
-ManageIQ.angular.app.service('bootstrapTreeSubscriptionService', ['subscriptionService', function(subscriptionService) {
+NOVAHawk.angular.app.service('bootstrapTreeSubscriptionService', ['subscriptionService', function(subscriptionService) {
   this.subscribeToTreeUpdates = function(callback) {
     subscriptionService.subscribeToEventType('treeUpdated', callback);
   };

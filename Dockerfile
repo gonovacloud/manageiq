@@ -1,6 +1,6 @@
 FROM centos:7
 ENV container docker
-MAINTAINER ManageIQ https://github.com/ManageIQ/manageiq-appliance-build
+MAINTAINER NOVAHawk https://github.com/NOVAHawk/novahawk-appliance-build
 ARG REF=euwe
 
 # Set ENV, LANG only needed if building with docker-1.8
@@ -8,14 +8,14 @@ ENV LANG en_US.UTF-8
 ENV TERM xterm
 ENV RUBY_GEMS_ROOT /opt/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0
 ENV APP_ROOT /var/www/miq/vmdb
-ENV APPLIANCE_ROOT /opt/manageiq/manageiq-appliance
-ENV SUI_ROOT /opt/manageiq/manageiq-ui-service
+ENV APPLIANCE_ROOT /opt/novahawk/novahawk-appliance
+ENV SUI_ROOT /opt/novahawk/novahawk-ui-service
 
-# Fetch pglogical and manageiq repo
+# Fetch pglogical and novahawk repo
 RUN curl -sSLko /etc/yum.repos.d/ncarboni-pglogical-SCL-epel-7.repo \
       https://copr.fedorainfracloud.org/coprs/ncarboni/pglogical-SCL/repo/epel-7/ncarboni-pglogical-SCL-epel-7.repo
-RUN curl -sSLko /etc/yum.repos.d/manageiq-ManageIQ-epel-7.repo \
-      https://copr.fedorainfracloud.org/coprs/manageiq/ManageIQ/repo/epel-7/manageiq-ManageIQ-epel-7.repo
+RUN curl -sSLko /etc/yum.repos.d/novahawk-NOVAHawk-epel-7.repo \
+      https://copr.fedorainfracloud.org/coprs/novahawk/NOVAHawk/repo/epel-7/novahawk-NOVAHawk-epel-7.repo
 
 ## Install EPEL repo, yum necessary packages for the build without docs, clean all caches
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
@@ -94,24 +94,24 @@ RUN curl -sL https://github.com/postmodern/chruby/archive/v0.3.9.tar.gz | tar xz
     rm -rf /usr/local/src/* && \
     yum clean all
 
-## GIT clone manageiq-appliance and service UI repo (SUI)
+## GIT clone novahawk-appliance and service UI repo (SUI)
 RUN mkdir -p ${APP_ROOT} && \
     mkdir -p ${APPLIANCE_ROOT} && \
     mkdir -p ${SUI_ROOT} && \
-    ln -vs ${APP_ROOT} /opt/manageiq/manageiq && \
-    curl -L https://github.com/ManageIQ/manageiq-appliance/tarball/${REF} | tar vxz -C ${APPLIANCE_ROOT} --strip 1 && \
-    curl -L https://github.com/ManageIQ/manageiq-ui-service/tarball/${REF} | tar vxz -C ${SUI_ROOT} --strip 1
+    ln -vs ${APP_ROOT} /opt/novahawk/novahawk && \
+    curl -L https://github.com/NOVAHawk/novahawk-appliance/tarball/${REF} | tar vxz -C ${APPLIANCE_ROOT} --strip 1 && \
+    curl -L https://github.com/NOVAHawk/novahawk-ui-service/tarball/${REF} | tar vxz -C ${SUI_ROOT} --strip 1
 
-## Add ManageIQ source from local directory (dockerfile development) or from Github (official build)
+## Add NOVAHawk source from local directory (dockerfile development) or from Github (official build)
 ADD . ${APP_ROOT}
-#RUN curl -L https://github.com/ManageIQ/manageiq/tarball/${REF} | tar vxz -C ${APP_ROOT} --strip 1
+#RUN curl -L https://github.com/NOVAHawk/novahawk/tarball/${REF} | tar vxz -C ${APP_ROOT} --strip 1
 
 ## Setup environment
 RUN ${APPLIANCE_ROOT}/setup && \
     echo "export PATH=\$PATH:/opt/rubies/ruby-2.3.1/bin" >> /etc/default/evm && \
     mkdir ${APP_ROOT}/log/apache && \
     mv /etc/httpd/conf.d/ssl.conf{,.orig} && \
-    echo "# This file intentionally left blank. ManageIQ maintains its own SSL configuration" > /etc/httpd/conf.d/ssl.conf && \
+    echo "# This file intentionally left blank. NOVAHawk maintains its own SSL configuration" > /etc/httpd/conf.d/ssl.conf && \
     cp ${APP_ROOT}/config/cable.yml.sample ${APP_ROOT}/config/cable.yml && \
     echo "export APP_ROOT=${APP_ROOT}" >> /etc/default/evm && \
     echo "export CONTAINER=true" >> /etc/default/evm
@@ -164,14 +164,14 @@ EXPOSE 80 443
 ## Atomic Labels
 # The UNINSTALL label by DEFAULT will attempt to delete a container (rm) and image (rmi) if the container NAME is the same as the actual IMAGE
 # NAME is set via -n flag to ALL atomic commands (install,run,stop,uninstall)
-LABEL name="manageiq" \
-      vendor="ManageIQ" \
+LABEL name="novahawk" \
+      vendor="NOVAHawk" \
       version="Euwe" \
       release=${REF} \
       architecture="x86_64" \
-      url="http://manageiq.org/" \
-      summary="ManageIQ appliance image" \
-      description="ManageIQ is a management and automation platform for virtual, private, and hybrid cloud infrastructures." \
+      url="http://novahawk.org/" \
+      summary="NOVAHawk appliance image" \
+      description="NOVAHawk is a management and automation platform for virtual, private, and hybrid cloud infrastructures." \
       INSTALL='docker run -ti --privileged \
                 --name ${NAME}_volume \
                 --entrypoint /usr/bin/docker_initdb \
@@ -187,10 +187,10 @@ LABEL name="manageiq" \
       UNINSTALL='docker rm -v ${NAME}_volume ${NAME}_run && echo "Uninstallation complete"'
 
 ## OpenShift Labels
-LABEL io.k8s.description="ManageIQ is a management and automation platform for virtual, private, and hybrid cloud infrastructures." \
-      io.k8s.display-name="ManageIQ" \
+LABEL io.k8s.description="NOVAHawk is a management and automation platform for virtual, private, and hybrid cloud infrastructures." \
+      io.k8s.display-name="NOVAHawk" \
       io.openshift.expose-services="443:https" \
-      io.openshift.tags="ManageIQ,miq,manageiq"
+      io.openshift.tags="NOVAHawk,miq,novahawk"
 
 ## Call systemd to bring up system
 CMD [ "/usr/sbin/init" ]

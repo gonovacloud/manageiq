@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Redhat::InfraManager
-  class Refresher < ManageIQ::Providers::BaseManager::Refresher
+class NOVAHawk::Providers::Redhat::InfraManager
+  class Refresher < NOVAHawk::Providers::BaseManager::Refresher
     include ::EmsRefresh::Refreshers::EmsRefresherMixin
 
     def collect_inventory_for_targets(ems, targets)

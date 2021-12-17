@@ -15,8 +15,8 @@ module ApplianceConsole
       SSSD_CONFIG          = "/etc/sssd/sssd.conf".freeze
       PAM_CONFIG           = "/etc/pam.d/httpd-auth".freeze
       HTTP_KEYTAB          = "/etc/http.keytab".freeze
-      HTTP_REMOTE_USER     = "/etc/httpd/conf.d/manageiq-remote-user.conf".freeze
-      HTTP_EXTERNAL_AUTH   = "/etc/httpd/conf.d/manageiq-external-auth.conf".freeze
+      HTTP_REMOTE_USER     = "/etc/httpd/conf.d/novahawk-remote-user.conf".freeze
+      HTTP_EXTERNAL_AUTH   = "/etc/httpd/conf.d/novahawk-external-auth.conf".freeze
       HTTP_EXTERNAL_AUTH_TEMPLATE = "#{HTTP_EXTERNAL_AUTH}.erb".freeze
 
       GETSEBOOL_COMMAND    = "/usr/sbin/getsebool".freeze

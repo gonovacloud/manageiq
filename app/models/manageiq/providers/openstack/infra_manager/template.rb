@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::InfraManager::Template < ManageIQ::Providers::InfraManager::Template
+class NOVAHawk::Providers::Openstack::InfraManager::Template < NOVAHawk::Providers::InfraManager::Template
   belongs_to :cloud_tenant
 
   supports :smartstate_analysis do

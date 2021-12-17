@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Vm do
+describe NOVAHawk::Providers::Redhat::InfraManager::Vm do
   let(:ip_address) { '192.168.1.31' }
 
   context "#is_available?" do
@@ -50,7 +50,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::Vm do
   end
 
   context "#cloneable?" do
-    let(:vm_redhat) { ManageIQ::Providers::Redhat::InfraManager::Vm.new }
+    let(:vm_redhat) { NOVAHawk::Providers::Redhat::InfraManager::Vm.new }
 
     it "returns true" do
       expect(vm_redhat.cloneable?).to eq(true)

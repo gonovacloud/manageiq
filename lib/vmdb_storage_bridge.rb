@@ -29,7 +29,7 @@ class VmdbStorageBridge
 
     _log.info "entered"
 
-    ManageIQ::Providers::Vmware::InfraManager.where(:zone_id => @zone).find_each do |ems|
+    NOVAHawk::Providers::Vmware::InfraManager.where(:zone_id => @zone).find_each do |ems|
       _log.info "found EmsVmware #{ems.hostname}"
       begin
         begin

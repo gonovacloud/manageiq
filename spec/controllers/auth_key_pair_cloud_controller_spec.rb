@@ -20,10 +20,10 @@ describe AuthKeyPairCloudController do
                                  :name   => "tag2",
                                  :parent => classification)
       allow(Classification).to receive(:find_assigned_entries).with(@kp).and_return([@tag1, @tag2])
-      session[:tag_db] = "ManageIQ::Providers::CloudManager::AuthKeyPair"
+      session[:tag_db] = "NOVAHawk::Providers::CloudManager::AuthKeyPair"
       edit = {
-        :key        => "ManageIQ::Providers::CloudManager::AuthKeyPair_edit_tags__#{@kp.id}",
-        :tagging    => "ManageIQ::Providers::CloudManager::AuthKeyPair",
+        :key        => "NOVAHawk::Providers::CloudManager::AuthKeyPair_edit_tags__#{@kp.id}",
+        :tagging    => "NOVAHawk::Providers::CloudManager::AuthKeyPair",
         :object_ids => [@kp.id],
         :current    => {:assignments => []},
         :new        => {:assignments => [@tag1.id, @tag2.id]}

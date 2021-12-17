@@ -11,7 +11,7 @@ module CloudObjectStoreContainerHelper::TextualSummary
   end
 
   def textual_parent_ems_cloud
-    label = ui_lookup(:model => "ManageIQ::Providers::CloudManager")
+    label = ui_lookup(:model => "NOVAHawk::Providers::CloudManager")
     textual_link(@record.ext_management_system.try(:parent_manager), :label => _("Parent #{label}"))
   end
 

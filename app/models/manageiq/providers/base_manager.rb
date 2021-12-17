@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class BaseManager < ExtManagementSystem
     require_nested :Refresher
 

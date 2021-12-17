@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::Vm
+class NOVAHawk::Providers::Openstack::CloudManager::Vm
   module RemoteConsole
     def console_supported?(type)
       %w(SPICE VNC).include?(type.upcase)

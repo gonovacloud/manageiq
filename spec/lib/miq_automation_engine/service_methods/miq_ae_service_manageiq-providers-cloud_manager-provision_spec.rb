@@ -1,4 +1,4 @@
-module MiqAeServiceManageIQ_Providers_CloudManager_ProvisionSpec
+module MiqAeServiceNOVAHawk_Providers_CloudManager_ProvisionSpec
   describe MiqAeMethodService::MiqAeServiceMiqProvision do
     %w(amazon openstack google azure).each do |t|
       context "for #{t}" do

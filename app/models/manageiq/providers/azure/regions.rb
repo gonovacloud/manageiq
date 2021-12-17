@@ -1,4 +1,4 @@
-module ManageIQ
+module NOVAHawk
   module Providers::Azure
     module Regions
       REGIONS = {

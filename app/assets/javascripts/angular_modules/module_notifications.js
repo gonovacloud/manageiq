@@ -1,2 +1,2 @@
 miqHttpInject(
-  angular.module('miq.notifications', ['ui.bootstrap', 'patternfly', 'ManageIQ', 'miq.util']));
+  angular.module('miq.notifications', ['ui.bootstrap', 'patternfly', 'NOVAHawk', 'miq.util']));

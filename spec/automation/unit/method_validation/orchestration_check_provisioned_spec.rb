@@ -45,7 +45,7 @@ describe "Orchestration check_provisioned Method Validation" do
       .to receive(:orchestration_stack_status) { ['CREATE_COMPLETE', nil] }
     allow_any_instance_of(ServiceOrchestration)
       .to receive(:orchestration_stack) { FactoryGirl.create(:orchestration_stack_amazon) }
-    expect_any_instance_of(ManageIQ::Providers::Amazon::CloudManager).to receive(:refresh_ems)
+    expect_any_instance_of(NOVAHawk::Providers::Amazon::CloudManager).to receive(:refresh_ems)
     expect(ws.root['ae_result']).to eq('retry')
   end
 

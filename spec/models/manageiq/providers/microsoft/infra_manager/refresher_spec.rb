@@ -1,14 +1,14 @@
 
-describe ManageIQ::Providers::Microsoft::InfraManager::Refresher do
+describe NOVAHawk::Providers::Microsoft::InfraManager::Refresher do
   before(:each) do
     _guid, _server, zone = EvmSpecHelper.create_guid_miq_server_zone
     FactoryGirl.create(:miq_region)
     @ems = FactoryGirl.create(:ems_microsoft_with_authentication, :zone => zone,
-        :hostname => "scvmm1111.manageiq.com", :ipaddress => "192.168.252.90", :security_protocol => "ssl")
+        :hostname => "scvmm1111.novahawk.com", :ipaddress => "192.168.252.90", :security_protocol => "ssl")
 
     data_file = Rails.root.join("spec/tools/scvmm_data/get_inventory_output.yml")
     output    = YAML.load_file(data_file)
-    allow(ManageIQ::Providers::Microsoft::InfraManager).to receive(:execute_powershell).and_return(output)
+    allow(NOVAHawk::Providers::Microsoft::InfraManager).to receive(:execute_powershell).and_return(output)
   end
 
   it ".ems_type" do
@@ -109,7 +109,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Refresher do
 
   def assert_specific_host
     hostname = "qeblade33.cfme-qe-vmm-ad.rhq.lab.eng.bos.redhat.com"
-    @host = ManageIQ::Providers::Microsoft::InfraManager::Host.find_by_name(hostname)
+    @host = NOVAHawk::Providers::Microsoft::InfraManager::Host.find_by_name(hostname)
     expect(@host).to have_attributes(
       :ems_ref          => "18060bb0-05b9-40fb-b1e3-dfccb8d85c6b",
       :name             => hostname,
@@ -155,7 +155,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Refresher do
       :controller_type => "ethernet"
     )
 
-    # @host2 = Host.find_by_name("SFBronagh.manageiq.com")
+    # @host2 = Host.find_by_name("SFBronagh.novahawk.com")
     # expect(@host2.ems_cluster).to eq(@cluster)
   end
 
@@ -165,7 +165,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Refresher do
   end
 
   def assert_specific_vm
-    v = ManageIQ::Providers::Microsoft::InfraManager::Vm.find_by_name("WS2008R2Core-JK")
+    v = NOVAHawk::Providers::Microsoft::InfraManager::Vm.find_by_name("WS2008R2Core-JK")
 
     location = "\\ProgramData\\Microsoft\\Windows\\Hyper-V\\Virtual Machines" \
       "\\6D327596-1341-4072-81F1-2658DB7F073B.xml"
@@ -225,7 +225,7 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Refresher do
   end
 
   def assert_specific_snapshot
-    v = ManageIQ::Providers::Microsoft::InfraManager::Vm.find_by_name("WS2008R2Core-JK")
+    v = NOVAHawk::Providers::Microsoft::InfraManager::Vm.find_by_name("WS2008R2Core-JK")
 
     expect(v.snapshots.size).to eq(1)
     snapshot = v.snapshots.first
@@ -240,9 +240,9 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Refresher do
   end
 
   def assert_specific_guest_devices
-    v0 = ManageIQ::Providers::Microsoft::InfraManager::Vm.find_by_name("CFME-56011-JT")
-    v1 = ManageIQ::Providers::Microsoft::InfraManager::Vm.find_by_name("jerrykbiker-dnd")
-    v2 = ManageIQ::Providers::Microsoft::InfraManager::Vm.find_by_name("DualDVDa")
+    v0 = NOVAHawk::Providers::Microsoft::InfraManager::Vm.find_by_name("CFME-56011-JT")
+    v1 = NOVAHawk::Providers::Microsoft::InfraManager::Vm.find_by_name("jerrykbiker-dnd")
+    v2 = NOVAHawk::Providers::Microsoft::InfraManager::Vm.find_by_name("DualDVDa")
 
     expect(v0.hardware.guest_devices.size).to eq(0)
     expect(v1.hardware.guest_devices.size).to eq(1)
@@ -284,16 +284,16 @@ describe ManageIQ::Providers::Microsoft::InfraManager::Refresher do
         [Datacenter, "SCVMM"] => {
           [EmsFolder, "host", {:hidden => true}] => {
             [EmsCluster, "hyperv_cluster"]                                                     => {},
-            [ManageIQ::Providers::Microsoft::InfraManager::Host, "dhcp129-212.brq.redhat.com"] => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Host, "dhcp129-212.brq.redhat.com"] => {},
           },
           [EmsFolder, "vm", {:hidden => true}]   => {
-            [ManageIQ::Providers::Microsoft::InfraManager::Template, "cfme-54402-12011420"] => {},
-            [ManageIQ::Providers::Microsoft::InfraManager::Template, "cfme-hyperv-5.5.0.13-2.x86_64"] => {},
-            [ManageIQ::Providers::Microsoft::InfraManager::Template, "cfme-hyperv-5.5.3.4-1.x86_64"]  => {},
-            [ManageIQ::Providers::Microsoft::InfraManager::Vm, "CFME-56011-JT"]                       => {},
-            [ManageIQ::Providers::Microsoft::InfraManager::Vm, "DualDVDa"]                            => {},
-            [ManageIQ::Providers::Microsoft::InfraManager::Vm, "WS2008R2Core-JK"]                     => {},
-            [ManageIQ::Providers::Microsoft::InfraManager::Vm, "jerrykbiker-dnd"]                     => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Template, "cfme-54402-12011420"] => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Template, "cfme-hyperv-5.5.0.13-2.x86_64"] => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Template, "cfme-hyperv-5.5.3.4-1.x86_64"]  => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Vm, "CFME-56011-JT"]                       => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Vm, "DualDVDa"]                            => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Vm, "WS2008R2Core-JK"]                     => {},
+            [NOVAHawk::Providers::Microsoft::InfraManager::Vm, "jerrykbiker-dnd"]                     => {},
           }
         }
       }

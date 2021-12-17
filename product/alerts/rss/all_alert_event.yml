@@ -15,9 +15,9 @@ item_description: "#{rec.message} was raised on #{rec.timestamp}"
 item_link: |-
     <script>
     case rec.target
-    when ManageIQ::Providers::InfraManager
+    when NOVAHawk::Providers::InfraManager
       "/ems_infra/show/#{rec.target.id}"
-    when ManageIQ::Providers::CloudManager
+    when NOVAHawk::Providers::CloudManager
       "/ems_cloud/show/#{rec.target.id}"
     else
       "/#{rec.target.class.table_name.singularize}/show/#{rec.target.id}"

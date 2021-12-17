@@ -15,7 +15,7 @@ class ApplicationHelper::Toolbar::CloudSubnetsCenter < ApplicationHelper::Toolba
         ),
         separator,
         # TODO: Uncomment until cross controllers show_list issue fully in place
-        # https://github.com/ManageIQ/manageiq/pull/12551
+        # https://github.com/NOVAHawk/novahawk/pull/12551
         # button(
         #  :cloud_subnet_edit,
         #  'pficon pficon-edit fa-lg',

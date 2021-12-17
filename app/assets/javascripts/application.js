@@ -87,6 +87,6 @@
 //= require qs
 //= require miq_timeline
 // Bower packages
-//= require manageiq-ui-components/dist/js/ui-components
+//= require novahawk-ui-components/dist/js/ui-components
 //= require rx-angular/dist/rx.angular
 //= require patternfly-timeline/dist/timeline

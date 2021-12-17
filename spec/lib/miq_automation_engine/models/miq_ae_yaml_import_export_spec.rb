@@ -15,9 +15,9 @@ describe MiqAeDatastore do
                              'meth' => 3, 'field' => 12, 'value' => 8}
     EvmSpecHelper.local_miq_server
     @tenant = Tenant.seed
-    create_factory_data("manageiq", 0, MiqAeDomain::SYSTEM_SOURCE)
+    create_factory_data("novahawk", 0, MiqAeDomain::SYSTEM_SOURCE)
     setup_export_dir
-    set_manageiq_values
+    set_novahawk_values
   end
 
   context "yaml export" do
@@ -32,48 +32,48 @@ describe MiqAeDatastore do
     it "non existing namespace" do
       options = {'namespace' => 'UNKNOWN'}
       options['export_dir'] = @export_dir
-      expect { export_model(@manageiq_domain.name, options) }
+      expect { export_model(@novahawk_domain.name, options) }
         .to raise_error(MiqAeException::NamespaceNotFound)
     end
 
     it "non existing class" do
       options = {'namespace' => @aen1.name, 'class' => 'UNKNOWN'}
       options['export_dir'] = @export_dir
-      expect { export_model(@manageiq_domain.name, options) }
+      expect { export_model(@novahawk_domain.name, options) }
         .to raise_error(MiqAeException::ClassNotFound)
     end
 
     it "missing domain yaml file should raise exception" do
       options = {'overwrite' => true, 'export_dir' => @export_dir}
-      export_model(@manageiq_domain.name, options)
+      export_model(@novahawk_domain.name, options)
       FileUtils.rm Dir.glob("#{@export_dir}/**/__domain__.yaml"), :force => true
-      expect { reset_and_import(@export_dir, @manageiq_domain.name) }
+      expect { reset_and_import(@export_dir, @novahawk_domain.name) }
         .to raise_error(MiqAeException::NamespaceNotFound)
     end
 
     it "invalid zip file should raise exception" do
       create_bogus_zip_file
       export_options = {'zip_file' => @zip_file}
-      expect { reset_and_import(@export_dir, @manageiq_domain.name, export_options) }
+      expect { reset_and_import(@export_dir, @novahawk_domain.name, export_options) }
         .to raise_error(MiqAeException::NamespaceNotFound)
     end
 
     it "invalid yaml file should raise exception" do
       create_bogus_yaml_file
       export_options = {'yaml_file' => @yaml_file}
-      expect { reset_and_import(@export_dir, @manageiq_domain.name, export_options) }
+      expect { reset_and_import(@export_dir, @novahawk_domain.name, export_options) }
         .to raise_error(MiqAeException::NamespaceNotFound)
     end
 
     it "an existing directory should raise exception" do
-      FileUtils.mkdir_p(File.join(@export_dir, @manageiq_domain.name))
-      expect { export_model(@manageiq_domain.name) }.to raise_error(MiqAeException::DirectoryExists)
+      FileUtils.mkdir_p(File.join(@export_dir, @novahawk_domain.name))
+      expect { export_model(@novahawk_domain.name) }.to raise_error(MiqAeException::DirectoryExists)
     end
 
     it "an existing zip file should raise exception" do
       File.open(@zip_file, 'w') { |f| f.write("dummy domain data") }
       options = {'zip_file' => @zip_file}
-      expect { export_model(@manageiq_domain.name, options) }
+      expect { export_model(@novahawk_domain.name, options) }
         .to raise_error(MiqAeException::FileExists)
       expect(File.exist?(@zip_file)).to be_truthy
     end
@@ -81,13 +81,13 @@ describe MiqAeDatastore do
     it "an existing yaml file should raise exception" do
       create_bogus_yaml_file
       options = {'yaml_file' => @yaml_file}
-      expect { export_model(@manageiq_domain.name, options) }
+      expect { export_model(@novahawk_domain.name, options) }
         .to raise_error(MiqAeException::FileExists)
       expect(File.exist?(@yaml_file)).to be_truthy
     end
 
     it "an existing directory with overwrite should not raise exception" do
-      FileUtils.mkdir_p(File.join(@export_dir, @manageiq_domain.name))
+      FileUtils.mkdir_p(File.join(@export_dir, @novahawk_domain.name))
       export_options = {'export_dir' => @export_dir, 'overwrite' => true}
       assert_existing_exported_model(export_options, {})
     end
@@ -107,8 +107,8 @@ describe MiqAeDatastore do
     end
 
     def assert_existing_exported_model(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts(@domain_counts)
     end
   end
@@ -116,18 +116,18 @@ describe MiqAeDatastore do
   context "yaml import" do
     it "an existing domain from zip should fail" do
       export_options = {'zip_file' => @zip_file}
-      import_options = {'zip_file' => @zip_file, 'import_as' => 'ManageIQ'}
+      import_options = {'zip_file' => @zip_file, 'import_as' => 'NOVAHawk'}
       assert_existing_domain_fails(export_options, import_options)
     end
 
     it "an existing domain from yaml should fail" do
       export_options = {'yaml_file' => @yaml_file}
-      import_options = {'yaml_file' => @yaml_file, 'import_as' => 'ManageIQ'}
+      import_options = {'yaml_file' => @yaml_file, 'import_as' => 'NOVAHawk'}
       assert_existing_domain_fails(export_options, import_options)
     end
 
     it "an existing domain from directory should fail" do
-      import_options = {'import_dir' => @export_dir, 'import_as' => 'ManageIQ'}
+      import_options = {'import_dir' => @export_dir, 'import_as' => 'NOVAHawk'}
       assert_existing_domain_fails({}, import_options)
     end
 
@@ -148,8 +148,8 @@ describe MiqAeDatastore do
     end
 
     def assert_existing_domain_fails(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      expect { reset_and_import(@export_dir, @manageiq_domain.name, import_options) }
+      export_model(@novahawk_domain.name, export_options)
+      expect { reset_and_import(@export_dir, @novahawk_domain.name, import_options) }
         .to raise_error(MiqAeException::InvalidDomain)
     end
 
@@ -161,15 +161,15 @@ describe MiqAeDatastore do
 
   context "tenant id" do
     it "validate export data" do
-      export_model(@manageiq_domain.name)
-      domain_file = File.join(@export_dir, @manageiq_domain.name, '__domain__.yaml')
+      export_model(@novahawk_domain.name)
+      domain_file = File.join(@export_dir, @novahawk_domain.name, '__domain__.yaml')
       data = YAML.load_file(domain_file)
       expect(data.fetch_path('object', 'attributes', 'tenant_id')).to eq(@tenant.id)
     end
 
     it "namespace should not contain tenant id" do
-      export_model(@manageiq_domain.name)
-      namespace_file = File.join(@export_dir, @manageiq_domain.name, @aen1.name, '__namespace__.yaml')
+      export_model(@novahawk_domain.name)
+      namespace_file = File.join(@export_dir, @novahawk_domain.name, @aen1.name, '__namespace__.yaml')
       data = YAML.load_file(namespace_file)
       hash = data.fetch_path('object', 'attributes')
       expect(hash.key?('tenant_id')).to be_falsey
@@ -179,8 +179,8 @@ describe MiqAeDatastore do
   context "domain_only_attributes" do
     it "namespace should not contain domain only attributes" do
       domain_only_attrs = %w(source top_level_namespace)
-      export_model(@manageiq_domain.name)
-      namespace_file = File.join(@export_dir, @manageiq_domain.name, @aen1.name, '__namespace__.yaml')
+      export_model(@novahawk_domain.name)
+      namespace_file = File.join(@export_dir, @novahawk_domain.name, @aen1.name, '__namespace__.yaml')
       data = YAML.load_file(namespace_file)
       hash = data.fetch_path('object', 'attributes')
       domain_only_attrs.each do |attr|
@@ -291,14 +291,14 @@ describe MiqAeDatastore do
     end
 
     it "domain, check password field is not in clear text" do
-      export_model(@manageiq_domain.name)
+      export_model(@novahawk_domain.name)
       data = YAML.load_file(@instance_file)
       password_field_hash = data.fetch_path('object', 'fields').detect { |h| h.keys[0] == 'password_field' }
       expect(password_field_hash.fetch_path('password_field', 'value')).to eq(MiqAePassword.encrypt(@clear_password))
     end
 
     it "domain, check default password field is not in clear text" do
-      export_model(@manageiq_domain.name)
+      export_model(@novahawk_domain.name)
       data = YAML.load_file(@class_file)
       password_field_hash = data.fetch_path('object', 'schema').detect { |h| h['field']['name'] == 'default_password_field' }
       expect(password_field_hash.fetch_path('field', 'default_value')).to eq(MiqAePassword.encrypt(@clear_default_password))
@@ -320,21 +320,21 @@ describe MiqAeDatastore do
     end
 
     def assert_export_import_roundtrip(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts(@domain_counts)
-      dom = MiqAeDomain.find_by_fqname(@manageiq_domain.name, false)
+      dom = MiqAeDomain.find_by_fqname(@novahawk_domain.name, false)
       expect(dom.source).to eq(MiqAeDomain::SYSTEM_SOURCE)
       expect(dom).to be_enabled
     end
 
-    it "domain, priority 0 should get retained for manageiq domain" do
-      export_model(@manageiq_domain.name)
-      expect(@manageiq_domain.priority).to equal(0)
-      reset_and_import(@export_dir, @manageiq_domain.name)
+    it "domain, priority 0 should get retained for novahawk domain" do
+      export_model(@novahawk_domain.name)
+      expect(@novahawk_domain.priority).to equal(0)
+      reset_and_import(@export_dir, @novahawk_domain.name)
       check_counts(@domain_counts)
 
-      ns = MiqAeNamespace.find_by_fqname(@manageiq_domain.name, false)
+      ns = MiqAeNamespace.find_by_fqname(@novahawk_domain.name, false)
       expect(ns.priority).to equal(0)
     end
 
@@ -356,8 +356,8 @@ describe MiqAeDatastore do
     end
 
     def assert_import_as(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 2, 'ns'    => 6,  'class' => 8,  'inst'  => 20,
                    'meth' => 6, 'field' => 24, 'value' => 16)
       expect(MiqAeDomain.find_by_fqname(import_options['import_as'])).not_to be_nil
@@ -381,7 +381,7 @@ describe MiqAeDatastore do
     end
 
     def assert_export_as(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
+      export_model(@novahawk_domain.name, export_options)
       reset_and_import(@export_dir, @export_as, import_options)
       check_counts(@domain_counts)
       expect(MiqAeDomain.find_by_fqname(@export_as)).not_to be_nil
@@ -405,8 +405,8 @@ describe MiqAeDatastore do
     end
 
     def assert_import_namespace_only(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1, 'ns'    => 2, 'class' => 3, 'inst'  => 6,
                    'meth' => 2, 'field' => 6, 'value' => 4)
     end
@@ -429,8 +429,8 @@ describe MiqAeDatastore do
     end
 
     def assert_import_multipart_namespace_only(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1, 'ns'    => 2, 'class' => 1, 'inst'  => 1,
                    'meth' => 0, 'field' => 0, 'value' => 0)
     end
@@ -456,8 +456,8 @@ describe MiqAeDatastore do
     end
 
     def assert_import_class_only(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1,  'ns'    => 1, 'class' => 1, 'inst'  => 2,
                    'meth' => 2, 'field' => 6, 'value' => 4)
     end
@@ -481,8 +481,8 @@ describe MiqAeDatastore do
     end
 
     def assert_single_namespace_export(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1, 'ns'    => 2, 'class' => 3, 'inst'  => 6,
                    'meth' => 2, 'field' => 6, 'value' => 4)
     end
@@ -505,8 +505,8 @@ describe MiqAeDatastore do
     end
 
     def assert_multi_namespace_export(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1, 'ns'    => 2, 'class' => 1, 'inst'  => 1,
                    'meth' => 0, 'field' => 0, 'value' => 0)
     end
@@ -514,18 +514,18 @@ describe MiqAeDatastore do
     it "class, with methods, add new instance, export, then import using mode=replace" do
       options = {'namespace' => @aen1.name, 'class' => @aen1_aec1.name}
       options['export_dir'] = @export_dir
-      export_model(@manageiq_domain.name, options)
-      reset_and_import(@export_dir, @manageiq_domain.name)
+      export_model(@novahawk_domain.name, options)
+      reset_and_import(@export_dir, @novahawk_domain.name)
       check_counts('dom'  => 1, 'ns'    => 1, 'class' => 1, 'inst'  => 2,
                    'meth' => 2, 'field' => 6, 'value' => 4)
-      @manageiq_domain = MiqAeNamespace.find_by_fqname('manageiq', false)
-      @aen1_aec1       = MiqAeClass.find_by_name('manageiq_test_class_1')
+      @novahawk_domain = MiqAeNamespace.find_by_fqname('novahawk', false)
+      @aen1_aec1       = MiqAeClass.find_by_name('novahawk_test_class_1')
       @aen1_aec1_aei2  = FactoryGirl.create(:miq_ae_instance,
                                             :name     => 'test_instance3',
                                             :class_id => @aen1_aec1.id)
       setup_export_dir
-      export_model(@manageiq_domain.name, options)
-      MiqAeImport.new(@manageiq_domain.name, 'preview' => false, 'import_dir' => @export_dir).import
+      export_model(@novahawk_domain.name, options)
+      MiqAeImport.new(@novahawk_domain.name, 'preview' => false, 'import_dir' => @export_dir).import
       check_counts('dom'  => 1, 'ns'    => 1, 'class' => 1, 'inst'  => 3,
                    'meth' => 2, 'field' => 6, 'value' => 4)
     end
@@ -551,8 +551,8 @@ describe MiqAeDatastore do
     end
 
     def assert_class_with_methods_export(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1, 'ns'    => 1, 'class' => 1, 'inst'  => 2,
                    'meth' => 2, 'field' => 6, 'value' => 4)
     end
@@ -578,11 +578,11 @@ describe MiqAeDatastore do
     end
 
     def assert_class_with_builtin_methods_export(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1, 'ns'    => 1, 'class' => 1, 'inst'  => 2,
                    'meth' => 2, 'field' => 6, 'value' => 4)
-      aen1_aec1  = MiqAeClass.find_by_name('manageiq_test_class_1')
+      aen1_aec1  = MiqAeClass.find_by_name('novahawk_test_class_1')
       builtin_method = MiqAeMethod.find_by_class_id_and_name(aen1_aec1.id, 'test2')
       expect(builtin_method.location).to eql 'builtin'
       expect(builtin_method.data).to be_nil
@@ -609,8 +609,8 @@ describe MiqAeDatastore do
     end
 
     def assert_class_without_methods(export_options, import_options)
-      export_model(@manageiq_domain.name, export_options)
-      reset_and_import(@export_dir, @manageiq_domain.name, import_options)
+      export_model(@novahawk_domain.name, export_options)
+      reset_and_import(@export_dir, @novahawk_domain.name, import_options)
       check_counts('dom'  => 1, 'ns'    => 1, 'class' => 1, 'inst'  => 3,
                    'meth' => 0, 'field' => 0, 'value' => 0)
     end
@@ -628,7 +628,7 @@ describe MiqAeDatastore do
       @customer_domain.update_attributes(:enabled => true)
       export_model(MiqAeYamlImportExportMixin::ALL_DOMAINS, export_options)
       reset_and_import(@export_dir, MiqAeYamlImportExportMixin::ALL_DOMAINS, import_options)
-      expect(MiqAeDomain.find_by_fqname(@manageiq_domain.name, false).priority).to eql(0)
+      expect(MiqAeDomain.find_by_fqname(@novahawk_domain.name, false).priority).to eql(0)
       cust_domain = MiqAeDomain.find_by_fqname(@customer_domain.name, false)
       expect(cust_domain.priority).to eql(1)
       expect(cust_domain).to be_enabled
@@ -779,15 +779,15 @@ describe MiqAeDatastore do
     create_fields(n2_c1, n2_c1_i1, n2_c1_m1)
   end
 
-  def set_manageiq_values
-    @manageiq_domain = MiqAeDomain.find_by_name("manageiq")
-    @aen1            = MiqAeNamespace.find_by_name('manageiq_namespace_1')
-    @aen1_1          = MiqAeNamespace.find_by_name('manageiq_namespace_1_1')
-    @aen1_aec1       = MiqAeClass.find_by_name('manageiq_test_class_1')
-    @aen1_aec2       = MiqAeClass.find_by_name('manageiq_test_class_2')
+  def set_novahawk_values
+    @novahawk_domain = MiqAeDomain.find_by_name("novahawk")
+    @aen1            = MiqAeNamespace.find_by_name('novahawk_namespace_1')
+    @aen1_1          = MiqAeNamespace.find_by_name('novahawk_namespace_1_1')
+    @aen1_aec1       = MiqAeClass.find_by_name('novahawk_test_class_1')
+    @aen1_aec2       = MiqAeClass.find_by_name('novahawk_test_class_2')
     @class_dir       = "#{@aen1_aec1.fqname}.class"
     @class_file      = File.join(@export_dir, @class_dir, '__class__.yaml')
-    @instance_file   = File.join(@export_dir, @class_dir, 'manageiq_test_instance1.yaml')
+    @instance_file   = File.join(@export_dir, @class_dir, 'novahawk_test_instance1.yaml')
     @class_name      = @aen1_aec1.name
   end
 
@@ -802,7 +802,7 @@ describe MiqAeDatastore do
 
   def setup_export_dir
     @export_dir = File.join(Dir.tmpdir, "rspec_export_tests")
-    @export_as  = "manageiq" * 2
+    @export_as  = "novahawk" * 2
     @zip_file   = File.join(Dir.tmpdir, "yaml_model.zip")
     @yaml_file  = File.join(Dir.tmpdir, "yaml_model.yml")
     FileUtils.rm_rf(@export_dir) if File.exist?(@export_dir)

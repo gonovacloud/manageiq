@@ -1,6 +1,6 @@
 require 'miq-uuid'
 
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Vmware
     module InfraManager::RefreshParser
       #
@@ -267,7 +267,7 @@ module ManageIQ::Providers
           end
 
           new_result = {
-            :type             => %w(esx esxi).include?(product_name.to_s.downcase) ? "ManageIQ::Providers::Vmware::InfraManager::HostEsx" : "ManageIQ::Providers::Vmware::InfraManager::Host",
+            :type             => %w(esx esxi).include?(product_name.to_s.downcase) ? "NOVAHawk::Providers::Vmware::InfraManager::HostEsx" : "NOVAHawk::Providers::Vmware::InfraManager::Host",
             :ems_ref          => mor,
             :ems_ref_obj      => mor,
             :name             => hostname,
@@ -902,7 +902,7 @@ module ManageIQ::Providers
           uid = hardware[:bios]
 
           new_result = {
-            :type                  => template ? ManageIQ::Providers::Vmware::InfraManager::Template.name : ManageIQ::Providers::Vmware::InfraManager::Vm.name,
+            :type                  => template ? NOVAHawk::Providers::Vmware::InfraManager::Template.name : NOVAHawk::Providers::Vmware::InfraManager::Vm.name,
             :ems_ref               => mor,
             :ems_ref_obj           => mor,
             :uid_ems               => uid,

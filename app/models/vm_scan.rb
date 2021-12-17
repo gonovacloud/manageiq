@@ -99,8 +99,8 @@ class VmScan < Job
 
       # TODO: should this logic be moved to a VM subclass implementation?
       #       or, make type-specific Job classes.
-      if vm.kind_of?(ManageIQ::Providers::Openstack::CloudManager::Vm) ||
-         vm.kind_of?(ManageIQ::Providers::Microsoft::InfraManager::Vm)
+      if vm.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::Vm) ||
+         vm.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager::Vm)
         return unless create_snapshot(vm)
       elsif vm.require_snapshot_for_scan?
         host  = Object.const_get(agent_class).find(agent_id)
@@ -240,9 +240,9 @@ class VmScan < Job
         begin
           # TODO: should this logic be moved to a VM subclass implementation?
           #       or, make type-specific Job classes.
-          if vm.kind_of?(ManageIQ::Providers::Openstack::CloudManager::Vm)
+          if vm.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::Vm)
             vm.ext_management_system.vm_delete_evm_snapshot(vm, mor)
-          elsif vm.kind_of?(ManageIQ::Providers::Microsoft::InfraManager::Vm)
+          elsif vm.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager::Vm)
             vm.ext_management_system.vm_delete_evm_snapshot(vm, :snMor => mor)
           else
             delete_snapshot(mor)
@@ -495,9 +495,9 @@ class VmScan < Job
         mor = context[:snapshot_mor]
         context[:snapshot_mor] = nil
         set_status("Deleting snapshot before aborting job")
-        if vm.kind_of?(ManageIQ::Providers::Openstack::CloudManager::Vm)
+        if vm.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::Vm)
           vm.ext_management_system.vm_delete_evm_snapshot(vm, mor)
-        elsif vm.kind_of?(ManageIQ::Providers::Microsoft::InfraManager::Vm)
+        elsif vm.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager::Vm)
           vm.ext_management_system.vm_delete_evm_snapshot(vm, :snMor => mor)
         else
           delete_snapshot(mor)

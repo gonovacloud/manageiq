@@ -54,11 +54,11 @@ RSpec.describe 'Cloud Networks API' do
       expected = {
         'resources' => a_collection_including(
           a_hash_including(
-            'type'           => 'ManageIQ::Providers::Amazon::CloudManager',
+            'type'           => 'NOVAHawk::Providers::Amazon::CloudManager',
             'cloud_networks' => a_collection_including
           ),
           a_hash_including(
-            'type' => 'ManageIQ::Providers::Openshift::ContainerManager'
+            'type' => 'NOVAHawk::Providers::Openshift::ContainerManager'
           )
         )
       }

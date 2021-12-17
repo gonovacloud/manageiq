@@ -1,4 +1,4 @@
-class ManageIQ::Providers::CloudManager::RefreshParser
+class NOVAHawk::Providers::CloudManager::RefreshParser
   private
 
   def parse_key_pair(kp)

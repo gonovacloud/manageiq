@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::CloudManager::RefreshWorker < ManageIQ::Providers::BaseManager::RefreshWorker
+class NOVAHawk::Providers::Vmware::CloudManager::RefreshWorker < NOVAHawk::Providers::BaseManager::RefreshWorker
   require_nested :Runner
 
   def self.settings_name

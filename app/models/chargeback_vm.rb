@@ -67,7 +67,7 @@ class ChargebackVm < Chargeback
 
   def self.extra_resources_without_rollups
     # support hyper-v for which we do not collect metrics yet
-    scope = ManageIQ::Providers::Microsoft::InfraManager::Vm
+    scope = NOVAHawk::Providers::Microsoft::InfraManager::Vm
     if @options[:tag] && (@report_user.nil? || !@report_user.self_service?)
       scope.find_tagged_with(:any => @options[:tag], :ns => '*')
     else

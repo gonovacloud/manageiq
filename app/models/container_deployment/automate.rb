@@ -6,7 +6,7 @@ class ContainerDeployment
     ANSIBLE_LOG = "/tmp/ansible.log".freeze
     ANSIBLE_ERROR_LOG = "/tmp/openshift-ansible.log".freeze
     INVENTORIES_PATH = "/usr/share/ansible/openshift-ansible/".freeze
-    SSH_AGENT_PATH = "/tmp/ssh_manageiq/".freeze
+    SSH_AGENT_PATH = "/tmp/ssh_novahawk/".freeze
 
     def run_playbook_command(cmd)
       ip = roles_addresses("deployment_master")
@@ -36,7 +36,7 @@ class ContainerDeployment
     end
 
     def create_agent(username)
-      output = @ssh.perform_commands { |ssh| ssh.exec!("ssh-agent -a ssh_manageiq_#{id}") }
+      output = @ssh.perform_commands { |ssh| ssh.exec!("ssh-agent -a ssh_novahawk_#{id}") }
       vars = {}
       output.scan(/^(\w+)=([^;\n]+)/) { |k, v| vars[k] = v }
       socket, pid = vars.values_at('SSH_AUTH_SOCK', 'SSH_AGENT_PID')
@@ -110,7 +110,7 @@ class ContainerDeployment
     def check_connection
       deployment_host_ip = roles_addresses("deployment_master")
       username = ssh_user
-      agent = LinuxAdmin::SSHAgent.new(ssh_auth.auth_key, "#{SSH_AGENT_PATH}ssh_manageiq_#{id}")
+      agent = LinuxAdmin::SSHAgent.new(ssh_auth.auth_key, "#{SSH_AGENT_PATH}ssh_novahawk_#{id}")
       nodes_ips = container_deployment_nodes.collect(&:node_address)
       nodes_ips.delete(deployment_host_ip)
       @ssh ||= LinuxAdmin::SSH.new(deployment_host_ip, username, ssh_auth.auth_key)

@@ -13,7 +13,7 @@ describe MiqProvisionWorkflow do
       context "Without a Valid Template," do
         it "should not create an MiqRequest when calling from_ws" do
           expect do
-            ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
+            NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
               "1.0", admin, "template", "target", false, "cc|001|environment|test", "")
           end.to raise_error(RuntimeError)
         end
@@ -39,7 +39,7 @@ describe MiqProvisionWorkflow do
 
         it "should create an MiqRequest when calling from_ws" do
           FactoryGirl.create(:classification_cost_center_with_tags)
-          request = ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
+          request = NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
             "1.0", admin, "template", "target", false, "cc|001|environment|test", "")
           expect(request).to be_a_kind_of(MiqRequest)
 
@@ -48,7 +48,7 @@ describe MiqProvisionWorkflow do
 
         it "should set tags" do
           FactoryGirl.create(:classification_cost_center_with_tags)
-          request = ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
+          request = NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
             "1.1", admin, {'name' => 'template'}, {'vm_name' => 'spec_test'}, nil,
             {'cc' => '001', 'environment' => 'test'}, nil, nil, nil)
           expect(request).to be_a_kind_of(MiqRequest)
@@ -58,7 +58,7 @@ describe MiqProvisionWorkflow do
 
         it "should encrypt fields" do
           password_input = "secret"
-          request = ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
+          request = NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
             "1.1", admin, {'name' => 'template'}, {'vm_name' => 'spec_test', 'root_password' => password_input.dup}, # dup because it's mutated
             {'owner_email' => 'admin'}, {'owner_first_name' => 'test'},
             {'owner_last_name' => 'test'}, nil, nil, nil, nil)
@@ -68,7 +68,7 @@ describe MiqProvisionWorkflow do
         end
 
         it "should set values when extra '|' are passed in for multiple values" do
-          request = ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
+          request = NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
             "1.1", admin, {'name' => 'template'}, {'vm_name' => 'spec_test'},
             nil, nil, {'abc' => 'tr|ue', 'blah' => 'na|h'}, nil, nil)
 
@@ -77,7 +77,7 @@ describe MiqProvisionWorkflow do
 
         it "should set values when only a single key value pair is passed in as a string" do
           Vmdb::Deprecation.silenced do
-            request = ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
+            request = NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
               "1.1", admin, {'name' => 'template'}, {'vm_name' => 'spec_test'},
               nil, nil, "abc=true", nil, nil)
 
@@ -87,7 +87,7 @@ describe MiqProvisionWorkflow do
 
         it "should set values when all args are passed in as a string" do
           Vmdb::Deprecation.silenced do
-            request = ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
+            request = NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow.from_ws(
               "1.1", admin, "name=template", "vm_name=spec_test",
               nil, nil, "abc=true", nil, nil)
 
@@ -129,9 +129,9 @@ describe MiqProvisionWorkflow do
 
   context '.class_for_platform' do
     {
-      "openstack" => ManageIQ::Providers::Openstack::CloudManager::ProvisionWorkflow,
-      "redhat"    => ManageIQ::Providers::Redhat::InfraManager::ProvisionWorkflow,
-      "vmware"    => ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow,
+      "openstack" => NOVAHawk::Providers::Openstack::CloudManager::ProvisionWorkflow,
+      "redhat"    => NOVAHawk::Providers::Redhat::InfraManager::ProvisionWorkflow,
+      "vmware"    => NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow,
     }.each do |k, v|
       it(k) { expect(described_class.class_for_platform(k)).to eq(v) }
     end

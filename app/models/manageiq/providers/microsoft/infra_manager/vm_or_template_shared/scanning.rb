@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Microsoft::InfraManager::VmOrTemplateShared::Scanning
+module NOVAHawk::Providers::Microsoft::InfraManager::VmOrTemplateShared::Scanning
   extend ActiveSupport::Concern
 
   included do

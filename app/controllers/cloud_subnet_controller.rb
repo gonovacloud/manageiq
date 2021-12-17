@@ -57,7 +57,7 @@ class CloudSubnetController < ApplicationController
     @subnet = CloudSubnet.new
     @in_a_form = true
     @network_provider_choices = {}
-    ExtManagementSystem.where(:type => "ManageIQ::Providers::Openstack::NetworkManager").find_each { |ems| @network_provider_choices[ems.name] = ems.id }
+    ExtManagementSystem.where(:type => "NOVAHawk::Providers::Openstack::NetworkManager").find_each { |ems| @network_provider_choices[ems.name] = ems.id }
     # TODO: (gildub) Replace with angular lookup to narrow choice dynamically
     @network_choices = {}
     CloudNetwork.all.each { |network| @network_choices[network.name] = network.ems_ref }

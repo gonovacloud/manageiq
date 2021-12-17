@@ -44,8 +44,8 @@ describe AutomateImportJsonSerializer do
             }
           ]
         }, {
-          'text'       => 'ManageIQ',
-          'key'        => 'ManageIQ',
+          'text'       => 'NOVAHawk',
+          'key'        => 'NOVAHawk',
           'image'      => ActionController::Base.helpers.image_path('100/ae_domain.png'),
           'selectable' => false,
           'nodes'      => [],
@@ -57,11 +57,11 @@ describe AutomateImportJsonSerializer do
       allow(import_file_upload).to receive(:binary_blob).and_return(binary_blob)
       allow(binary_blob).to receive(:binary).and_return('a bunch of junk')
       allow(MiqAeImport).to receive(:new).with('*', 'zip_file' => 'automate_temporary_zip.zip').and_return(miq_ae_yaml_import_zipfs)
-      allow(miq_ae_yaml_import_zipfs).to receive(:domain_entries).with('*').and_return(['Customer/test1.yml', 'ManageIQ/test2.yml'])
+      allow(miq_ae_yaml_import_zipfs).to receive(:domain_entries).with('*').and_return(['Customer/test1.yml', 'NOVAHawk/test2.yml'])
       allow(miq_ae_yaml_import_zipfs).to receive(:namespace_files).with('Customer').and_return(
         ['Customer/EVMApplications/test.yml']
       )
-      allow(miq_ae_yaml_import_zipfs).to receive(:namespace_files).with('ManageIQ').and_return([])
+      allow(miq_ae_yaml_import_zipfs).to receive(:namespace_files).with('NOVAHawk').and_return([])
       allow(miq_ae_yaml_import_zipfs).to receive(:namespace_files).with('Customer/EVMApplications').and_return(
         ['Customer/EVMApplications/Operations/test.yml']
       )
@@ -76,7 +76,7 @@ describe AutomateImportJsonSerializer do
         ['Customer/EVMApplications/Operations/Profile.class/test.yml']
       )
       allow(miq_ae_yaml_import_zipfs).to receive(:class_files).with('Customer/EVMApplications/Operations/Profile').and_return([])
-      allow(miq_ae_yaml_import_zipfs).to receive(:class_files).with('ManageIQ').and_return([])
+      allow(miq_ae_yaml_import_zipfs).to receive(:class_files).with('NOVAHawk').and_return([])
     end
 
     it 'returns the correct json' do

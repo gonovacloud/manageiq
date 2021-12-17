@@ -2,7 +2,7 @@ class ApplicationHelper::Button::VmSnapshotRevert < ApplicationHelper::Button::B
   needs :@record
 
   def visible?
-    return false if @record.kind_of?(ManageIQ::Providers::Openstack::CloudManager::Vm)
+    return false if @record.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::Vm)
     super
   end
 end

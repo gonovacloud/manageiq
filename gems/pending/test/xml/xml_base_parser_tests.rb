@@ -43,8 +43,8 @@ module XmlBaseParserTests
           <cell></cell>
         </row>
         <row id='6'>
-          <cell>JFREY-LAPTOP.manageiq.com^/host/show/6^_self</cell>
-          <cell>JFREY-LAPTOP.manageiq.com</cell>
+          <cell>JFREY-LAPTOP.novahawk.com^/host/show/6^_self</cell>
+          <cell>JFREY-LAPTOP.novahawk.com</cell>
           <cell>192.168.252.143</cell>
           <cell>Unknown</cell>
           <cell></cell>
@@ -55,8 +55,8 @@ module XmlBaseParserTests
           <cell></cell>
         </row>
         <row id='4'>
-          <cell>luke.manageiq.com^/host/show/4^_self</cell>
-          <cell>luke.manageiq.com</cell>
+          <cell>luke.novahawk.com^/host/show/4^_self</cell>
+          <cell>luke.novahawk.com</cell>
           <cell>192.168.252.32</cell>
           <cell>VMware</cell>
           <cell>3.0.1</cell>
@@ -67,8 +67,8 @@ module XmlBaseParserTests
           <cell></cell>
         </row>
         <row id='5'>
-          <cell>yoda.manageiq.com^/host/show/5^_self</cell>
-          <cell>yoda.manageiq.com</cell>
+          <cell>yoda.novahawk.com^/host/show/5^_self</cell>
+          <cell>yoda.novahawk.com</cell>
           <cell>192.168.252.2</cell>
           <cell>VMware</cell>
           <cell>3.0.1</cell>

@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Nuage::NetworkManager::FloatingIp < ::FloatingIp
+class NOVAHawk::Providers::Nuage::NetworkManager::FloatingIp < ::FloatingIp
 end

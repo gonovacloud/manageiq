@@ -1,6 +1,6 @@
 require_relative "refresh_spec_common"
 
-describe ManageIQ::Providers::Openstack::CloudManager::Refresher do
+describe NOVAHawk::Providers::Openstack::CloudManager::Refresher do
   include Openstack::RefreshSpecCommon
 
   before(:each) do
@@ -75,7 +75,7 @@ describe ManageIQ::Providers::Openstack::CloudManager::Refresher do
         EmsRefresh.refresh(@ems.swift_manager)
       end
 
-      ManageIQ::Providers::Openstack::CloudManager::Vm.all.each do |vm|
+      NOVAHawk::Providers::Openstack::CloudManager::Vm.all.each do |vm|
         expect(vm.hardware.cpu_speed).to eq(@cpu_speed) if vm.name !='EmsRefreshSpec-Shelved'
       end
     end

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Redhat::InfraManager::MetricsCapture < ManageIQ::Providers::BaseManager::MetricsCapture
+class NOVAHawk::Providers::Redhat::InfraManager::MetricsCapture < NOVAHawk::Providers::BaseManager::MetricsCapture
   #
   # Connect / Disconnect / Intialize methods
   #

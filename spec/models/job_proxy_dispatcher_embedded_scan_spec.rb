@@ -48,7 +48,7 @@ describe "JobProxyDispatcherEmbeddedScanSpec" do
         allow_any_instance_of(MiqServer).to receive_messages(:is_vix_disk? => true)
         allow_any_instance_of(MiqServer).to receive_messages(:is_a_proxy? => true)
         allow_any_instance_of(MiqServer).to receive_messages(:has_active_role? => true)
-        allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive_messages(:authentication_status_ok? => true)
+        allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive_messages(:authentication_status_ok? => true)
         allow_any_instance_of(Host).to receive_messages(:authentication_status_ok? => true)
 
         @hosts, @proxies, @storages, @vms, @repo_vms = build_entities(
@@ -68,7 +68,7 @@ describe "JobProxyDispatcherEmbeddedScanSpec" do
 
         context "and embedded scans on ems" do
           before(:each) do
-            allow(ManageIQ::Providers::Vmware::InfraManager::Vm).to receive(:scan_via_ems?).and_return(true)
+            allow(NOVAHawk::Providers::Vmware::InfraManager::Vm).to receive(:scan_via_ems?).and_return(true)
           end
 
           context "and scans against ems limited to 2 and up to 10 scans per miqserver" do
@@ -116,7 +116,7 @@ describe "JobProxyDispatcherEmbeddedScanSpec" do
 
         context "and embedded scans on hosts" do
           before(:each) do
-            allow(ManageIQ::Providers::Vmware::InfraManager::Vm).to receive(:scan_via_ems?).and_return(false)
+            allow(NOVAHawk::Providers::Vmware::InfraManager::Vm).to receive(:scan_via_ems?).and_return(false)
           end
 
           context "and scans against host limited to 2 and up to 10 scans per miqserver" do

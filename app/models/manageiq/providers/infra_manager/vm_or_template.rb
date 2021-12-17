@@ -1,4 +1,4 @@
-class ManageIQ::Providers::InfraManager::VmOrTemplate < ActsAsArScope
+class NOVAHawk::Providers::InfraManager::VmOrTemplate < ActsAsArScope
   class << self
     delegate :all_orphaned, :all_archived, :to => :aar_scope
     delegate :klass, :to => :aar_scope, :prefix => true
@@ -9,7 +9,7 @@ class ManageIQ::Providers::InfraManager::VmOrTemplate < ActsAsArScope
   end
 
   def self.vm_descendants
-    ManageIQ::Providers::InfraManager::Vm.descendants +
-      ManageIQ::Providers::InfraManager::Template.descendants
+    NOVAHawk::Providers::InfraManager::Vm.descendants +
+      NOVAHawk::Providers::InfraManager::Template.descendants
   end
 end

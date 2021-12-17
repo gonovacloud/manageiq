@@ -101,7 +101,7 @@ module UiConstants
     [_("Yellow"), "yellow"],
     [_("Green"), "green"],
     [_("Blue"), "blue"],
-    [_("ManageIQ-Blue"), "manageiq-blue"],
+    [_("NOVAHawk-Blue"), "novahawk-blue"],
     [_("Black"), "black"]
   ]
 
@@ -143,7 +143,7 @@ module UiConstants
       :font_color       => "#0c7ad7",
       :background_color => "#0c7ad7"
     },
-    "manageiq-blue" => {
+    "novahawk-blue" => {
       :font_color       => "#0c7ad7",
       :background_color => "#187aa2"
     },
@@ -204,15 +204,15 @@ module UiConstants
       :flavor                                   => "list",
       :host                                     => "grid",
       :job                                      => "list",
-      :manageiq_providers_cloudmanager          => "grid",
-      :manageiq_providers_cloudmanager_template => "list",
-      :manageiq_providers_cloudmanager_vm       => "grid",
-      :manageiq_providers_containermanager      => "grid",
-      :manageiq_providers_inframanager          => "grid",
-      :manageiq_providers_inframanager_vm       => "grid",
-      :manageiq_providers_inframanager_template => "list",
-      :manageiq_providers_middlewaremanager     => "grid",
-      :manageiq_providers_storagemanager        => "list",
+      :novahawk_providers_cloudmanager          => "grid",
+      :novahawk_providers_cloudmanager_template => "list",
+      :novahawk_providers_cloudmanager_vm       => "grid",
+      :novahawk_providers_containermanager      => "grid",
+      :novahawk_providers_inframanager          => "grid",
+      :novahawk_providers_inframanager_vm       => "grid",
+      :novahawk_providers_inframanager_template => "list",
+      :novahawk_providers_middlewaremanager     => "grid",
+      :novahawk_providers_storagemanager        => "list",
       :middlewaredatasource                     => "list",
       :middlewaredeployment                     => "list",
       :middlewaredomain                         => "list",

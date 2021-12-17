@@ -4,7 +4,7 @@ FactoryGirl.define do
     guid            { MiqUUID.new_guid }
   end
 
-  factory :provider_foreman, :class => "ManageIQ::Providers::Foreman::Provider", :parent => :provider do
+  factory :provider_foreman, :class => "NOVAHawk::Providers::Foreman::Provider", :parent => :provider do
     url "example.com"
 
     after(:build) do |provider|
@@ -14,8 +14,8 @@ FactoryGirl.define do
     end
   end
 
-  factory :provider_openstack, :class => "ManageIQ::Providers::Openstack::Provider", :parent => :provider
-  factory(:provider_ansible_tower, :class => "ManageIQ::Providers::AnsibleTower::Provider", :parent => :provider) do
+  factory :provider_openstack, :class => "NOVAHawk::Providers::Openstack::Provider", :parent => :provider
+  factory(:provider_ansible_tower, :class => "NOVAHawk::Providers::AnsibleTower::Provider", :parent => :provider) do
     url "example.com"
   end
 end

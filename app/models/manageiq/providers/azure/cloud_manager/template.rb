@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Azure::CloudManager::Template < ::ManageIQ::Providers::CloudManager::Template
-  include_concern 'ManageIQ::Providers::Azure::CloudManager::VmOrTemplateShared'
+class NOVAHawk::Providers::Azure::CloudManager::Template < ::NOVAHawk::Providers::CloudManager::Template
+  include_concern 'NOVAHawk::Providers::Azure::CloudManager::VmOrTemplateShared'
 
   supports :provisioning do
     if ext_management_system

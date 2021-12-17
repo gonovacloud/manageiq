@@ -1,5 +1,5 @@
 :javascript
-  ManageIQ.gridChecks = [];
+  NOVAHawk.gridChecks = [];
 
 - grid_name  = options[:grid_name]
 - grid_id    = options[:grid_id]
@@ -9,22 +9,22 @@
 - unless @parent.nil?
   - layout = @layout
   :javascript
-    ManageIQ.record.parentId    = "#{@parent.id}";
-    ManageIQ.record.parentClass = "#{j @parent.class.base_class.to_s.underscore}";
+    NOVAHawk.record.parentId    = "#{@parent.id}";
+    NOVAHawk.record.parentClass = "#{j @parent.class.base_class.to_s.underscore}";
 
-    if (ManageIQ.record.parentClass == "policy_set") {
-      ManageIQ.record.parentClass = "policy";
-    } else if (ManageIQ.record.parentClass == "ext_management_system") {
-      ManageIQ.record.parentClass = "#{j layout}";
+    if (NOVAHawk.record.parentClass == "policy_set") {
+      NOVAHawk.record.parentClass = "policy";
+    } else if (NOVAHawk.record.parentClass == "ext_management_system") {
+      NOVAHawk.record.parentClass = "#{j layout}";
     }
 
 - if options[:action_url]
   - action_url = options[:action_url]
   :javascript
-    ManageIQ.actionUrl = "#{j action_url}";
+    NOVAHawk.actionUrl = "#{j action_url}";
 
 :javascript
-  ManageIQ.grids["#{j grid_name}"] = {
+  NOVAHawk.grids["#{j grid_name}"] = {
     g_id: "#{j grid_id}",
     opts: #{raw js_options.to_json},
     hash: #{raw grid_hash.to_json},

@@ -5,7 +5,7 @@ FactoryGirl.define do
   end
 
   factory :cloud_volume_snapshot_openstack,
-          :class  => "ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot",
+          :class  => "NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot",
           :parent => :cloud_volume_snapshot do
     status "available"
   end

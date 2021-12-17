@@ -12,7 +12,7 @@ class VmController < ApplicationController
 
   def show_list
     options = {:association => session[:vm_type]}
-    options[:model] = "ManageIQ::Providers::CloudManager::Vm" if params['sb_controller'] == 'availability_zone'
+    options[:model] = "NOVAHawk::Providers::CloudManager::Vm" if params['sb_controller'] == 'availability_zone'
     process_show_list(options)
   end
 

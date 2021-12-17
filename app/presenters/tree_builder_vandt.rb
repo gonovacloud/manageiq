@@ -2,7 +2,7 @@ class TreeBuilderVandt < TreeBuilder
   include TreeBuilderArchived
 
   def tree_init_options(_tree_name)
-    {:leaf => 'ManageIQ::Providers::InfraManager::VmOrTemplate'}
+    {:leaf => 'NOVAHawk::Providers::InfraManager::VmOrTemplate'}
   end
 
   def set_locals_for_render

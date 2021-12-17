@@ -1,7 +1,7 @@
 describe('emsKeypairController', function() {
   var $scope, $controller, $httpBackend, miqService;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, _$controller_) {
     $scope = $rootScope.$new();

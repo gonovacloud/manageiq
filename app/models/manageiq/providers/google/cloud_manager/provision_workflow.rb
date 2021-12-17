@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Google::CloudManager::ProvisionWorkflow < ::MiqProvisionCloudWorkflow
+class NOVAHawk::Providers::Google::CloudManager::ProvisionWorkflow < ::MiqProvisionCloudWorkflow
   def allowed_instance_types(_options = {})
     source = load_ar_obj(get_source_vm)
     ems = get_targets_for_ems(source, :cloud_filter, Flavor, 'flavors')
@@ -12,6 +12,6 @@ class ManageIQ::Providers::Google::CloudManager::ProvisionWorkflow < ::MiqProvis
   end
 
   def self.provider_model
-    ManageIQ::Providers::Google::CloudManager
+    NOVAHawk::Providers::Google::CloudManager
   end
 end

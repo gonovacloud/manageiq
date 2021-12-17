@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::CloudManager::Provision::VolumeAttachment do
+describe NOVAHawk::Providers::Openstack::CloudManager::Provision::VolumeAttachment do
   before do
     @ems = FactoryGirl.create(:ems_openstack_with_authentication)
     @template = FactoryGirl.create(:template_openstack, :ext_management_system => @ems)

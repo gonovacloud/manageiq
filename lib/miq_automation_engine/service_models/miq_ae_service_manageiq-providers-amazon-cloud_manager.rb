@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Amazon_CloudManager < MiqAeServiceManageIQ_Providers_CloudManager
+  class MiqAeServiceNOVAHawk_Providers_Amazon_CloudManager < MiqAeServiceNOVAHawk_Providers_CloudManager
   end
 end

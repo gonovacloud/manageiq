@@ -731,7 +731,7 @@ class MiqAction < ApplicationRecord
       return
     end
 
-    unless rec.try(:ext_management_system).kind_of?(ManageIQ::Providers::Openshift::ContainerManagerMixin)
+    unless rec.try(:ext_management_system).kind_of?(NOVAHawk::Providers::Openshift::ContainerManagerMixin)
       MiqPolicy.logger.error("#{error_prefix} only applicable for OpenShift Providers")
       return
     end

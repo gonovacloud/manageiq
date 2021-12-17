@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('serviceFormController', ['$http', '$scope', 'serviceFormId', 'miqService', function($http, $scope, serviceFormId, miqService) {
+NOVAHawk.angular.app.controller('serviceFormController', ['$http', '$scope', 'serviceFormId', 'miqService', function($http, $scope, serviceFormId, miqService) {
     var init = function() {
       $scope.serviceModel = {
         name: '',
@@ -9,7 +9,7 @@ ManageIQ.angular.app.controller('serviceFormController', ['$http', '$scope', 'se
       $scope.newRecord = false;
       $scope.modelCopy = angular.copy( $scope.serviceModel );
       $scope.model     = "serviceModel";
-      ManageIQ.angular.scope = $scope;
+      NOVAHawk.angular.scope = $scope;
 
       miqService.sparkleOn();
       $http.get('/service/service_form_fields/' + serviceFormId).success(function(data) {

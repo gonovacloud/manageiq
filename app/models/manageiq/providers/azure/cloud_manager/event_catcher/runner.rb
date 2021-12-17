@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Azure::CloudManager::EventCatcher::Runner <
-  ManageIQ::Providers::BaseManager::EventCatcher::Runner
-  include ManageIQ::Providers::Azure::EventCatcherMixin
+class NOVAHawk::Providers::Azure::CloudManager::EventCatcher::Runner <
+  NOVAHawk::Providers::BaseManager::EventCatcher::Runner
+  include NOVAHawk::Providers::Azure::EventCatcherMixin
 
   def stop_event_monitor
     @event_monitor_handle.try(:stop)
@@ -32,7 +32,7 @@ class ManageIQ::Providers::Azure::CloudManager::EventCatcher::Runner <
   private
 
   def event_monitor_handle
-    @event_monitor_handle ||= ManageIQ::Providers::Azure::CloudManager::EventCatcher::Stream.new(@ems)
+    @event_monitor_handle ||= NOVAHawk::Providers::Azure::CloudManager::EventCatcher::Stream.new(@ems)
   end
 
   def reset_event_monitor_handle

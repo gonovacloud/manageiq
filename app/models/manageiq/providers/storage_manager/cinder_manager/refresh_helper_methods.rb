@@ -1,4 +1,4 @@
-module ManageIQ::Providers::StorageManager::CinderManager::RefreshHelperMethods
+module NOVAHawk::Providers::StorageManager::CinderManager::RefreshHelperMethods
   extend ActiveSupport::Concern
 
   def process_collection(collection, key, &block)

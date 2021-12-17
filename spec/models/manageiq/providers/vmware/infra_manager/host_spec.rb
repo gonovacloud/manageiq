@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Host do
+describe NOVAHawk::Providers::Vmware::InfraManager::Host do
   before(:each) do
     @host = FactoryGirl.create(:host_vmware)
   end

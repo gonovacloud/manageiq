@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('tenantQuotaFormController', ['$http', '$scope', 'tenantQuotaFormId', 'tenantType', 'miqService', function($http, $scope, tenantQuotaFormId, tenantType, miqService) {
+NOVAHawk.angular.app.controller('tenantQuotaFormController', ['$http', '$scope', 'tenantQuotaFormId', 'tenantType', 'miqService', function($http, $scope, tenantQuotaFormId, tenantType, miqService) {
   var init = function() {
     $scope.tenantQuotaModel = {
       name: '',
@@ -9,7 +9,7 @@ ManageIQ.angular.app.controller('tenantQuotaFormController', ['$http', '$scope',
     $scope.modelCopy = angular.copy( $scope.tenantQuotaModel );
     $scope.model = "tenantQuotaModel";
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
     $scope.newRecord = false;
     miqService.sparkleOn();
     $http.get('/ops/tenant_quotas_form_fields/' + tenantQuotaFormId).success(function(data) {

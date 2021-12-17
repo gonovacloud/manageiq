@@ -6,7 +6,7 @@ describe('middlewareAddDatasourceController', function() {
   var miqService;
   var $controller;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function(_$httpBackend_, _$rootScope_, _$controller_, _miqService_) {
     miqService = _miqService_;

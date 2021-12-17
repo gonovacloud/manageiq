@@ -23,8 +23,8 @@ puts "Username: " + opts[:username]
 puts "Port: "     + opts[:port].to_s
 
 puts "Connecting"
-win_rm = ManageIQ::Providers::Microsoft::InfraManager.raw_connect(
-  ManageIQ::Providers::Microsoft::InfraManager.auth_url(opts[:hostname], opts[:port]),
+win_rm = NOVAHawk::Providers::Microsoft::InfraManager.raw_connect(
+  NOVAHawk::Providers::Microsoft::InfraManager.auth_url(opts[:hostname], opts[:port]),
   "ssl",
   :user => opts[:username],
   :pass => password
@@ -32,7 +32,7 @@ win_rm = ManageIQ::Providers::Microsoft::InfraManager.raw_connect(
 
 puts "Collecting"
 
-data = ManageIQ::Providers::Microsoft::InfraManager.execute_powershell(win_rm, ManageIQ::Providers::Microsoft::InfraManager::RefreshParser::INVENTORY_SCRIPT)
+data = NOVAHawk::Providers::Microsoft::InfraManager.execute_powershell(win_rm, NOVAHawk::Providers::Microsoft::InfraManager::RefreshParser::INVENTORY_SCRIPT)
 
 output_yml  = File.expand_path(File.join(File.dirname(__FILE__), "get_inventory_output.yml"))
 output_hash = File.expand_path(File.join(File.dirname(__FILE__), "get_inventory_output_hash.yml"))

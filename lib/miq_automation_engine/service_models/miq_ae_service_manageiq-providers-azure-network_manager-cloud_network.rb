@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Azure_NetworkManager_CloudNetwork < MiqAeServiceCloudNetwork
+  class MiqAeServiceNOVAHawk_Providers_Azure_NetworkManager_CloudNetwork < MiqAeServiceCloudNetwork
   end
 end

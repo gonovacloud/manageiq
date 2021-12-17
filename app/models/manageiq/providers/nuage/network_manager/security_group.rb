@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Nuage::NetworkManager::SecurityGroup < ::SecurityGroup
+class NOVAHawk::Providers::Nuage::NetworkManager::SecurityGroup < ::SecurityGroup
 end

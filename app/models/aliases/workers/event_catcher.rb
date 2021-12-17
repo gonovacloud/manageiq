@@ -1,2 +1,2 @@
-::EventCatcher = ManageIQ::Providers::BaseManager::EventCatcher::Runner
+::EventCatcher = NOVAHawk::Providers::BaseManager::EventCatcher::Runner
 ::EventCatcherHandledException = ::EventCatcher::EventCatcherHandledException

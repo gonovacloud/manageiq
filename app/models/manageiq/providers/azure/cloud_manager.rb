@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Azure::CloudManager < ManageIQ::Providers::CloudManager
+class NOVAHawk::Providers::Azure::CloudManager < NOVAHawk::Providers::CloudManager
   require_nested :AvailabilityZone
   require_nested :EventCatcher
   require_nested :EventParser
@@ -15,7 +15,7 @@ class ManageIQ::Providers::Azure::CloudManager < ManageIQ::Providers::CloudManag
   require_nested :OrchestrationStack
   require_nested :OrchestrationServiceOptionConverter
 
-  include ManageIQ::Providers::Azure::ManagerMixin
+  include NOVAHawk::Providers::Azure::ManagerMixin
 
   alias_attribute :azure_tenant_id, :uid_ems
 
@@ -29,7 +29,7 @@ class ManageIQ::Providers::Azure::CloudManager < ManageIQ::Providers::CloudManag
   before_update :ensure_managers_zone_and_provider_region
 
   def ensure_network_manager
-    build_network_manager(:type => 'ManageIQ::Providers::Azure::NetworkManager') unless network_manager
+    build_network_manager(:type => 'NOVAHawk::Providers::Azure::NetworkManager') unless network_manager
   end
 
   def self.ems_type
@@ -56,7 +56,7 @@ class ManageIQ::Providers::Azure::CloudManager < ManageIQ::Providers::CloudManag
   end
 
   def description
-    ManageIQ::Providers::Azure::Regions.find_by_name(provider_region)[:description]
+    NOVAHawk::Providers::Azure::Regions.find_by_name(provider_region)[:description]
   end
 
   # Operations

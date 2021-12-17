@@ -3,12 +3,12 @@ module EmsRefresh::SaveInventory
     case ems
     when EmsCloud                                           then save_ems_cloud_inventory(ems, hashes, target)
     when EmsInfra                                           then save_ems_infra_inventory(ems, hashes, target)
-    when ManageIQ::Providers::ConfigurationManager          then save_configuration_manager_inventory(ems, hashes, target)
-    when ManageIQ::Providers::ContainerManager              then save_ems_container_inventory(ems, hashes, target)
-    when ManageIQ::Providers::NetworkManager                then save_ems_network_inventory(ems, hashes, target)
-    when ManageIQ::Providers::StorageManager::CinderManager then save_ems_cinder_inventory(ems, hashes, target)
-    when ManageIQ::Providers::StorageManager::SwiftManager  then save_ems_swift_inventory(ems, hashes, target)
-    when ManageIQ::Providers::MiddlewareManager             then save_ems_middleware_inventory(ems, hashes, target)
+    when NOVAHawk::Providers::ConfigurationManager          then save_configuration_manager_inventory(ems, hashes, target)
+    when NOVAHawk::Providers::ContainerManager              then save_ems_container_inventory(ems, hashes, target)
+    when NOVAHawk::Providers::NetworkManager                then save_ems_network_inventory(ems, hashes, target)
+    when NOVAHawk::Providers::StorageManager::CinderManager then save_ems_cinder_inventory(ems, hashes, target)
+    when NOVAHawk::Providers::StorageManager::SwiftManager  then save_ems_swift_inventory(ems, hashes, target)
+    when NOVAHawk::Providers::MiddlewareManager             then save_ems_middleware_inventory(ems, hashes, target)
     end
   end
 
@@ -112,7 +112,7 @@ module EmsRefresh::SaveInventory
           found.raw_power_state = key_backup[:raw_power_state]
 
           link_habtm(found, key_backup[:storages], :storages, Storage)
-          link_habtm(found, key_backup[:key_pairs], :key_pairs, ManageIQ::Providers::CloudManager::AuthKeyPair)
+          link_habtm(found, key_backup[:key_pairs], :key_pairs, NOVAHawk::Providers::CloudManager::AuthKeyPair)
           save_child_inventory(found, key_backup, child_keys)
 
           found.save!

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::Refresher do
+describe NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Refresher do
   let(:auth)                    { FactoryGirl.create(:authentication) }
   let(:configuration_manager)   { provider.configuration_manager }
   let(:expected_counterpart_vm) { FactoryGirl.create(:vm, :uid_ems => "4233080d-7467-de61-76c9-c8307b6e4830") }
@@ -42,7 +42,7 @@ describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::Refresher do
 
   def assert_configured_system
     expect(expected_configured_system).to have_attributes(
-      :type                 => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem",
+      :type                 => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem",
       :hostname             => "Ansible-Host",
       :manager_ref          => "145",
       :virtual_instance_ref => "4233080d-7467-de61-76c9-c8307b6e4830",
@@ -79,7 +79,7 @@ describe ManageIQ::Providers::AnsibleTower::ConfigurationManager::Refresher do
     expect(expected_inventory_root_group).to have_attributes(
       :name    => "Dev VC60",
       :ems_ref => "17",
-      :type    => "ManageIQ::Providers::ConfigurationManager::InventoryRootGroup",
+      :type    => "NOVAHawk::Providers::ConfigurationManager::InventoryRootGroup",
     )
   end
 

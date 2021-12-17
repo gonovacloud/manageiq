@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Azure::CloudManager::MetricsCapture < ManageIQ::Providers::BaseManager::MetricsCapture
+class NOVAHawk::Providers::Azure::CloudManager::MetricsCapture < NOVAHawk::Providers::BaseManager::MetricsCapture
   INTERVAL_1_MINUTE = "PT1M".freeze
 
   # Linux, Windows counters

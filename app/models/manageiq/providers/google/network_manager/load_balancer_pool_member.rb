@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::NetworkManager::LoadBalancerPoolMember < LoadBalancerPoolMember
+class NOVAHawk::Providers::Google::NetworkManager::LoadBalancerPoolMember < LoadBalancerPoolMember
 end

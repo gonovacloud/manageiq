@@ -1,1 +1,1 @@
-::EmsCloud = ::ManageIQ::Providers::CloudManager
+::EmsCloud = ::NOVAHawk::Providers::CloudManager

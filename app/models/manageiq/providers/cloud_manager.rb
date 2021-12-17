@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class CloudManager < BaseManager
     require_nested :AuthKeyPair
     require_nested :RefreshParser

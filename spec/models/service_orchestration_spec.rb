@@ -68,7 +68,7 @@ describe ServiceOrchestration do
 
   describe "#stack_options" do
     before do
-      allow_any_instance_of(ManageIQ::Providers::Amazon::CloudManager::OrchestrationServiceOptionConverter).to(
+      allow_any_instance_of(NOVAHawk::Providers::Amazon::CloudManager::OrchestrationServiceOptionConverter).to(
         receive(:stack_create_options).and_return(dialog_options))
     end
 
@@ -140,7 +140,7 @@ describe ServiceOrchestration do
 
   describe '#deploy_orchestration_stack' do
     it 'creates a stack through cloud manager' do
-      allow(ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack).to receive(:raw_create_stack) do |manager, name, template, opts|
+      allow(NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack).to receive(:raw_create_stack) do |manager, name, template, opts|
         expect(manager).to eq(manager_by_dialog)
         expect(name).to eq('test123')
         expect(template).to be_kind_of OrchestrationTemplate
@@ -152,7 +152,7 @@ describe ServiceOrchestration do
 
     it 'always saves options even when the manager fails to create a stack' do
       provision_error = MiqException::MiqOrchestrationProvisionError
-      allow_any_instance_of(ManageIQ::Providers::Amazon::CloudManager).to receive(:stack_create).and_raise(provision_error, 'test failure')
+      allow_any_instance_of(NOVAHawk::Providers::Amazon::CloudManager).to receive(:stack_create).and_raise(provision_error, 'test failure')
 
       expect(service_with_dialog_options).to receive(:save_create_options)
       expect { service_with_dialog_options.deploy_orchestration_stack }.to raise_error(provision_error)
@@ -195,7 +195,7 @@ describe ServiceOrchestration do
     end
 
     it 'returns current stack status through provider' do
-      status_obj = ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('CREATE_COMPLETE', 'no error')
+      status_obj = NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('CREATE_COMPLETE', 'no error')
       allow(deployed_stack).to receive(:raw_status).and_return(status_obj)
 
       status, message = service_with_deployed_stack.orchestration_stack_status
@@ -237,7 +237,7 @@ describe ServiceOrchestration do
 
   describe '#post_provision_configure' do
     before do
-      allow(ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack).to receive(
+      allow(NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack).to receive(
         :raw_create_stack).and_return("ems_ref")
       @resulting_stack = service.deploy_orchestration_stack
     end

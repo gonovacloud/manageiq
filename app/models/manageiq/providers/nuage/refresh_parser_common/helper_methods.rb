@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Nuage
     module RefreshParserCommon
       module HelperMethods

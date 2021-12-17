@@ -41,7 +41,7 @@ FactoryGirl.define do
 
   factory :orchestration_template_vmware_cloud_with_content,
           :parent => :orchestration_template,
-          :class  => "ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate" do
+          :class  => "NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate" do
     content File.read(Rails.root.join('spec/fixtures/orchestration_templates/vmware_parameters_ovf.xml'))
   end
 end

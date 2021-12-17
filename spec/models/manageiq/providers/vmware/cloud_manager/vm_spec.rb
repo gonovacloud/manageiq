@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::CloudManager::Vm do
+describe NOVAHawk::Providers::Vmware::CloudManager::Vm do
   context "#is_available?" do
     let(:ems)                   { FactoryGirl.create(:ems_vmware_cloud) }
     let(:vm)                    { FactoryGirl.create(:vm_vmware_cloud, :ext_management_system => ems) }

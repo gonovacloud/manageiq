@@ -1,11 +1,11 @@
-ManageIQ.angular.app.controller('cloudNetworkFormController', ['$http', '$scope', 'cloudNetworkFormId', 'miqService', function($http, $scope, cloudNetworkFormId, miqService) {
+NOVAHawk.angular.app.controller('cloudNetworkFormController', ['$http', '$scope', 'cloudNetworkFormId', 'miqService', function($http, $scope, cloudNetworkFormId, miqService) {
   $scope.cloudNetworkModel = { name: '', ems_id: '', cloud_tenant_id: '' };
   $scope.formId = cloudNetworkFormId;
   $scope.afterGet = false;
   $scope.modelCopy = angular.copy( $scope.cloudNetworkModel );
   $scope.model = "cloudNetworkModel";
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   if (cloudNetworkFormId == 'new') {
     $scope.cloudNetworkModel.name = "";

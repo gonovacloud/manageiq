@@ -1,11 +1,11 @@
-ManageIQ.angular.app.controller('securityGroupFormController', ['$http', '$scope', 'securityGroupFormId', 'miqService', function($http, $scope, securityGroupFormId, miqService) {
+NOVAHawk.angular.app.controller('securityGroupFormController', ['$http', '$scope', 'securityGroupFormId', 'miqService', function($http, $scope, securityGroupFormId, miqService) {
   $scope.securityGroupModel = { name: '' };
   $scope.formId = securityGroupFormId;
   $scope.afterGet = false;
   $scope.modelCopy = angular.copy( $scope.securityGroupModel );
   $scope.model = "securityGroupModel";
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   if (securityGroupFormId == 'new') {
     $scope.securityGroupModel.name = "";

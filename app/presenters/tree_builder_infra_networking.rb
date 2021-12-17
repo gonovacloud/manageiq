@@ -1,5 +1,5 @@
 class TreeBuilderInfraNetworking < TreeBuilder
-  has_kids_for ManageIQ::Providers::Vmware::InfraManager, [:x_get_tree_provider_kids]
+  has_kids_for NOVAHawk::Providers::Vmware::InfraManager, [:x_get_tree_provider_kids]
   has_kids_for EmsCluster, [:x_get_tree_cluster_kids]
   has_kids_for Switch, [:x_get_tree_switch_kids]
   has_kids_for EmsFolder, [:x_get_tree_folder_kids]
@@ -24,7 +24,7 @@ class TreeBuilderInfraNetworking < TreeBuilder
   end
 
   def x_get_tree_roots(count_only, _options)
-    objects = Rbac.filtered(ManageIQ::Providers::Vmware::InfraManager.order("lower(name)"))
+    objects = Rbac.filtered(NOVAHawk::Providers::Vmware::InfraManager.order("lower(name)"))
     objects.each do |item|
       item[:load_children => true]
     end

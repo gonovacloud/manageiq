@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::InfraManager::MetricsCapture < ManageIQ::Providers::BaseManager::MetricsCapture
+class NOVAHawk::Providers::Vmware::InfraManager::MetricsCapture < NOVAHawk::Providers::BaseManager::MetricsCapture
   VIM_INTERVAL_NAME_BY_MIQ_INTERVAL_NAME = {'hourly' => 'Past Month'}
   MIQ_INTERVAL_NAME_BY_VIM_INTERVAL_NAME = VIM_INTERVAL_NAME_BY_MIQ_INTERVAL_NAME.invert
 
@@ -90,7 +90,7 @@ class ManageIQ::Providers::Vmware::InfraManager::MetricsCapture < ManageIQ::Prov
     end
 
     # TODO: Move this to some generic parsing class, such as
-    # ManageIQ::Providers::Vmware::InfraManager::RefreshParser
+    # NOVAHawk::Providers::Vmware::InfraManager::RefreshParser
     results = counter_info.each_with_object({}) do |(id, c), h|
       group    = c.fetch_path('groupInfo', 'key').to_s.downcase
       name     = c.fetch_path('nameInfo', 'key').to_s.downcase

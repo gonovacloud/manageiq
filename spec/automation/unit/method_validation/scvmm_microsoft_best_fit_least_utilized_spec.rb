@@ -37,7 +37,7 @@ describe "SCVMM microsoft_best_fit_least_utilized" do
       before do
         host_struct = MiqHashStruct.new(:id               => host.id,
                                         :evm_object_class => host.class.base_class.name.to_sym)
-        allow_any_instance_of(ManageIQ::Providers::Microsoft::InfraManager::ProvisionWorkflow)
+        allow_any_instance_of(NOVAHawk::Providers::Microsoft::InfraManager::ProvisionWorkflow)
           .to receive(:allowed_hosts).and_return([host_struct])
       end
 
@@ -54,7 +54,7 @@ describe "SCVMM microsoft_best_fit_least_utilized" do
           host.storages << storage
           storage_struct = MiqHashStruct.new(:id               => storage.id,
                                              :evm_object_class => storage.class.base_class.name.to_sym)
-          allow_any_instance_of(ManageIQ::Providers::Microsoft::InfraManager::ProvisionWorkflow)
+          allow_any_instance_of(NOVAHawk::Providers::Microsoft::InfraManager::ProvisionWorkflow)
             .to receive(:allowed_storages).and_return([storage_struct])
         end
 
@@ -84,7 +84,7 @@ describe "SCVMM microsoft_best_fit_least_utilized" do
           evm_object_class = storage.class.base_class.name.to_sym
           storage_struct = [MiqHashStruct.new(:id => ro_storage.id, :evm_object_class => evm_object_class),
                             MiqHashStruct.new(:id => storage.id,    :evm_object_class => evm_object_class)]
-          allow_any_instance_of(ManageIQ::Providers::Microsoft::InfraManager::ProvisionWorkflow)
+          allow_any_instance_of(NOVAHawk::Providers::Microsoft::InfraManager::ProvisionWorkflow)
             .to receive(:allowed_storages).and_return(storage_struct)
         end
 

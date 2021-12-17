@@ -27,7 +27,7 @@ describe "Providers API" do
   end
   let(:sample_vmware) do
     {
-      "type"      => "ManageIQ::Providers::Vmware::InfraManager",
+      "type"      => "NOVAHawk::Providers::Vmware::InfraManager",
       "name"      => "sample vmware",
       "hostname"  => "sample_vmware.provider.com",
       "ipaddress" => "100.200.300.1"
@@ -35,7 +35,7 @@ describe "Providers API" do
   end
   let(:sample_rhevm) do
     {
-      "type"              => "ManageIQ::Providers::Redhat::InfraManager",
+      "type"              => "NOVAHawk::Providers::Redhat::InfraManager",
       "name"              => "sample rhevm",
       "port"              => 5000,
       "hostname"          => "sample_rhevm.provider.com",
@@ -45,7 +45,7 @@ describe "Providers API" do
   end
   let(:sample_openshift) do
     {
-      "type"              => "ManageIQ::Providers::Openshift::ContainerManager",
+      "type"              => "NOVAHawk::Providers::Openshift::ContainerManager",
       "name"              => "sample openshift",
       "port"              => 8443,
       "hostname"          => "sample_openshift.provider.com",
@@ -94,7 +94,7 @@ describe "Providers API" do
   end
   let(:sample_openshift_multi_end_point) do
     {
-      "type"                      => "ManageIQ::Providers::Openshift::ContainerManager",
+      "type"                      => "NOVAHawk::Providers::Openshift::ContainerManager",
       "name"                      => "sample openshift with multiple endpoints",
       "connection_configurations" => [default_connection, hawkular_connection]
     }
@@ -237,7 +237,7 @@ describe "Providers API" do
   end
 
   describe "Providers actions on Provider class" do
-    let(:foreman_type) { ManageIQ::Providers::Foreman::Provider }
+    let(:foreman_type) { NOVAHawk::Providers::Foreman::Provider }
     let(:sample_foreman) do
       {
         :name        => 'my-foreman',
@@ -447,7 +447,7 @@ describe "Providers API" do
 
       expect(response).to have_http_status(:ok)
       expected = {"id"   => a_kind_of(Integer),
-                  "type" => "ManageIQ::Providers::Openshift::ContainerManager",
+                  "type" => "NOVAHawk::Providers::Openshift::ContainerManager",
                   "name" => "sample openshift with multiple endpoints"}
       results = response.parsed_body["results"]
       expect(results.first).to include(expected)

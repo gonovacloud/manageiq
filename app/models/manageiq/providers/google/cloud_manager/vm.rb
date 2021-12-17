@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Google::CloudManager::Vm < ManageIQ::Providers::CloudManager::Vm
+class NOVAHawk::Providers::Google::CloudManager::Vm < NOVAHawk::Providers::CloudManager::Vm
   include_concern 'Operations'
 
   virtual_column :preemptible?, :type => :boolean, :uses => :advanced_settings

@@ -1,6 +1,6 @@
-module MiqAeServiceManageIQProvidersAnsibleTowerProviderSpec
+module MiqAeServiceNOVAHawkProvidersAnsibleTowerProviderSpec
   include MiqAeEngine
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_AnsibleTower_Provider do
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_AnsibleTower_Provider do
     let(:provider) { FactoryGirl.create(:provider_ansible_tower) }
     let(:configuration_manager) { FactoryGirl.create(:configuration_manager_ansible_tower) }
 

@@ -2,7 +2,7 @@ describe BottleneckEvent do
   describe ".future_event_definitions_for_obj" do
     it "contains things" do
       MiqEventDefinition.seed_default_definitions
-      expect(BottleneckEvent.future_event_definitions_for_obj(ManageIQ::Providers::Vmware::InfraManager::Host.new)).not_to be_empty
+      expect(BottleneckEvent.future_event_definitions_for_obj(NOVAHawk::Providers::Vmware::InfraManager::Host.new)).not_to be_empty
     end
   end
 

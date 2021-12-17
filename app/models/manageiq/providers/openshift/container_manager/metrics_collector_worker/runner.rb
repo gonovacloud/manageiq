@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Openshift::ContainerManager::MetricsCollectorWorker::Runner < ManageIQ::Providers::BaseManager::MetricsCollectorWorker::Runner
+class NOVAHawk::Providers::Openshift::ContainerManager::MetricsCollectorWorker::Runner < NOVAHawk::Providers::BaseManager::MetricsCollectorWorker::Runner
 end

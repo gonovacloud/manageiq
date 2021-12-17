@@ -43,7 +43,7 @@ describe EmsCloudController do
 
         regions = {
           # FIXME: (durandom) add a mock provider in order to remove this dependency on an actual provider
-          'azure' => ManageIQ::Providers::Azure::Regions.all.sort_by { |r| r[:description] }.map do |r|
+          'azure' => NOVAHawk::Providers::Azure::Regions.all.sort_by { |r| r[:description] }.map do |r|
             [r[:description], r[:name]]
           end
         }
@@ -87,12 +87,12 @@ describe EmsCloudController do
 
         it "when adding cloud EMS" do
           @type = 'openstack'
-          @ems  = ManageIQ::Providers::Openstack::CloudManager.new
+          @ems  = NOVAHawk::Providers::Openstack::CloudManager.new
         end
 
         it "when adding infra EMS" do
           @type = 'rhevm'
-          @ems  = ManageIQ::Providers::Redhat::InfraManager.new
+          @ems  = NOVAHawk::Providers::Redhat::InfraManager.new
         end
       end
     end
@@ -177,8 +177,8 @@ describe EmsCloudController do
         get :show, :id => ems_openstack.id, :display => "download_pdf"
       end
 
-      it "should not contains string 'ManageIQ' in the title of summary report" do
-        expect(pdf_options[:title]).not_to include('ManageIQ')
+      it "should not contains string 'NOVAHawk' in the title of summary report" do
+        expect(pdf_options[:title]).not_to include('NOVAHawk')
       end
 
       it "should match proper title of report" do
@@ -221,12 +221,12 @@ describe EmsContainerController do
 
         it "when adding kubernetes EMS" do
           @type = 'kubernetes'
-          @ems  = ManageIQ::Providers::Kubernetes::ContainerManager.new
+          @ems  = NOVAHawk::Providers::Kubernetes::ContainerManager.new
         end
 
         it "when adding openshift EMS" do
           @type = 'openshift'
-          @ems  = ManageIQ::Providers::Openshift::ContainerManager.new
+          @ems  = NOVAHawk::Providers::Openshift::ContainerManager.new
         end
       end
     end
@@ -274,8 +274,8 @@ describe EmsContainerController do
           get :show, :id => ems_kubernetes_container.id, :display => "download_pdf"
         end
 
-        it "should not contains string 'ManageIQ' in the title of summary report" do
-          expect(pdf_options[:title]).not_to include('ManageIQ')
+        it "should not contains string 'NOVAHawk' in the title of summary report" do
+          expect(pdf_options[:title]).not_to include('NOVAHawk')
         end
 
         it "should match proper title of report" do
@@ -323,8 +323,8 @@ describe EmsInfraController do
         get :show, :id => ems_openstack_infra.id, :display => "download_pdf"
       end
 
-      it "should not contains string 'ManageIQ' in the title of summary report" do
-        expect(pdf_options[:title]).not_to include('ManageIQ')
+      it "should not contains string 'NOVAHawk' in the title of summary report" do
+        expect(pdf_options[:title]).not_to include('NOVAHawk')
       end
 
       it "should match proper title of report" do

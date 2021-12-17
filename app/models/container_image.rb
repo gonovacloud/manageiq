@@ -85,14 +85,14 @@ class ContainerImage < ApplicationRecord
 
   def annotate_deny_execution(causing_policy)
     # TODO: support sti and replace check with inplementing only for OpenShift providers
-    unless ext_management_system.kind_of?(ManageIQ::Providers::Openshift::ContainerManagerMixin)
+    unless ext_management_system.kind_of?(NOVAHawk::Providers::Openshift::ContainerManagerMixin)
       _log.error("#{__method__} only applicable for OpenShift Providers")
       return
     end
     ext_management_system.annotate(
       "image",
       digest,
-      "security.manageiq.org/failed-policy" => causing_policy,
+      "security.novahawk.org/failed-policy" => causing_policy,
       "images.openshift.io/deny-execution"  => "true"
     )
   end

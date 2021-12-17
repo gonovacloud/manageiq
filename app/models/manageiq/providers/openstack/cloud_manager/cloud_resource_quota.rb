@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::CloudResourceQuota < ::CloudResourceQuota
+class NOVAHawk::Providers::Openstack::CloudManager::CloudResourceQuota < ::CloudResourceQuota
   private
 
   # quota_used methods defined for each known quota type

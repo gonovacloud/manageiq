@@ -1,5 +1,5 @@
 /* global miqHttpInject */
-miqHttpInject(angular.module('mwTopologyApp', ['kubernetesUI', 'ui.bootstrap', 'ManageIQ']))
+miqHttpInject(angular.module('mwTopologyApp', ['kubernetesUI', 'ui.bootstrap', 'NOVAHawk']))
   .controller('middlewareTopologyController', MiddlewareTopologyCtrl);
 
 MiddlewareTopologyCtrl.$inject = ['$scope', '$http', '$interval', '$location', 'topologyService'];

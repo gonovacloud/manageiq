@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Hawkular::MiddlewareManager::Refresher do
+describe NOVAHawk::Providers::Hawkular::MiddlewareManager::Refresher do
   before do
     allow(MiqServer).to receive(:my_zone).and_return("default")
     auth = AuthToken.new(:name => "test", :auth_key => "valid-token", :userid => "jdoe", :password => "password")

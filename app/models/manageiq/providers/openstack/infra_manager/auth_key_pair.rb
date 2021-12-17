@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Openstack::InfraManager::AuthKeyPair < ::AuthPrivateKey
+class NOVAHawk::Providers::Openstack::InfraManager::AuthKeyPair < ::AuthPrivateKey
 end

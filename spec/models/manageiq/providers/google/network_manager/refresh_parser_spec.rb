@@ -1,7 +1,7 @@
 require 'digest'
 
-describe ManageIQ::Providers::Google::NetworkManager::RefreshParser do
-  let(:ems) { FactoryGirl.create(:ems_google, :project => "manageiq-dev") }
+describe NOVAHawk::Providers::Google::NetworkManager::RefreshParser do
+  let(:ems) { FactoryGirl.create(:ems_google, :project => "novahawk-dev") }
   let(:az) { FactoryGirl.create(:availability_zone_google) }
   let(:vm) do
     FactoryGirl.create(:vm_google,
@@ -116,7 +116,7 @@ describe ManageIQ::Providers::Google::NetworkManager::RefreshParser do
       it "returns a load balancer" do
         expect(subject[:load_balancers]).to eql(
           [
-            :type    => "ManageIQ::Providers::Google::NetworkManager::LoadBalancer",
+            :type    => "NOVAHawk::Providers::Google::NetworkManager::LoadBalancer",
             :ems_ref => "some-id",
             :name    => "my-forwarding-rule"
           ]
@@ -127,7 +127,7 @@ describe ManageIQ::Providers::Google::NetworkManager::RefreshParser do
         expect(subject[:load_balancer_listeners]).to eql(
           [
             :name                         => "my-forwarding-rule",
-            :type                         => "ManageIQ::Providers::Google::NetworkManager::LoadBalancerListener",
+            :type                         => "NOVAHawk::Providers::Google::NetworkManager::LoadBalancerListener",
             :ems_ref                      => "some-id",
             :load_balancer_protocol       => "TCP",
             :instance_protocol            => "TCP",
@@ -144,12 +144,12 @@ describe ManageIQ::Providers::Google::NetworkManager::RefreshParser do
       it "returns a load balancer pool" do
         expect(subject[:load_balancer_pools]).to eql(
           [
-            :type                            => "ManageIQ::Providers::Google::NetworkManager::LoadBalancerPool",
+            :type                            => "NOVAHawk::Providers::Google::NetworkManager::LoadBalancerPool",
             :ems_ref                         => "some-target-pool-id",
             :name                            => "my-tp",
             :load_balancer_pool_member_pools => [
               :load_balancer_pool_member => {
-                :type    => "ManageIQ::Providers::Google::NetworkManager::LoadBalancerPoolMember",
+                :type    => "NOVAHawk::Providers::Google::NetworkManager::LoadBalancerPoolMember",
                 :ems_ref => Digest::MD5.base64digest(
                   "https://www.googleapis.com/compute/v1/projects/#{ems.project}/zones/#{az.name}/instances/#{vm.name}"),
                 :vm      => vm
@@ -163,7 +163,7 @@ describe ManageIQ::Providers::Google::NetworkManager::RefreshParser do
           [
             :name                               => "my-healthcheck",
             :ems_ref                            => "some-id_some-target-pool-id_some-healthcheck-id",
-            :type                               => "ManageIQ::Providers::Google::NetworkManager::LoadBalancerHealthCheck",
+            :type                               => "NOVAHawk::Providers::Google::NetworkManager::LoadBalancerHealthCheck",
             :protocol                           => "HTTP",
             :port                               => 80,
             :url_path                           => "/foo",

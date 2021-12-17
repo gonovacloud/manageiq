@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Vm::Operations::Guest
+module NOVAHawk::Providers::Vmware::InfraManager::Vm::Operations::Guest
   extend ActiveSupport::Concern
 
   included do

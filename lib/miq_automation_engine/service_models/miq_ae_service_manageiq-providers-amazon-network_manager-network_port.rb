@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Amazon_NetworkManager_NetworkPort < MiqAeServiceNetworkPort
+  class MiqAeServiceNOVAHawk_Providers_Amazon_NetworkManager_NetworkPort < MiqAeServiceNetworkPort
   end
 end

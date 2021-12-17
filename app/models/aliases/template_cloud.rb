@@ -1,1 +1,1 @@
-::TemplateCloud = ManageIQ::Providers::CloudManager::Template
+::TemplateCloud = NOVAHawk::Providers::CloudManager::Template

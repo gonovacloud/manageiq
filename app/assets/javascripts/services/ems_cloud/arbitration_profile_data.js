@@ -1,4 +1,4 @@
-ManageIQ.angular.app.service('arbitrationProfileDataFactory', ['API', function(API) {
+NOVAHawk.angular.app.service('arbitrationProfileDataFactory', ['API', function(API) {
   var urlBase = '/api/arbitration_profiles';
 
   this.getArbitrationProfileData = function (ap_id) {

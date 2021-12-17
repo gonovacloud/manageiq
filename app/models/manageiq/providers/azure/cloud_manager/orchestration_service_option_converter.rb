@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Azure::CloudManager::OrchestrationServiceOptionConverter < ::ServiceOrchestration::OptionConverter
     def stack_create_options
       {

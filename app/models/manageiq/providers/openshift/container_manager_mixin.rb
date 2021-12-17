@@ -1,7 +1,7 @@
-module ManageIQ::Providers::Openshift::ContainerManagerMixin
+module NOVAHawk::Providers::Openshift::ContainerManagerMixin
   extend ActiveSupport::Concern
 
-  include ManageIQ::Providers::Kubernetes::ContainerManagerMixin
+  include NOVAHawk::Providers::Kubernetes::ContainerManagerMixin
 
   DEFAULT_PORT = 8443
 
@@ -16,7 +16,7 @@ module ManageIQ::Providers::Openshift::ContainerManagerMixin
   # (parsers, events, etc.). It should be explicitly selected here and not
   # decided by the user nor out of control in the defaults of openshift gem
   # because it's not guaranteed that the next default version will work with
-  # our specific code in ManageIQ.
+  # our specific code in NOVAHawk.
   delegate :api_version, :to => :class
 
   def api_version=(_value)

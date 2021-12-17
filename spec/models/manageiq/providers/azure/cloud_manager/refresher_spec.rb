@@ -1,6 +1,6 @@
 require 'azure-armrest'
 
-describe ManageIQ::Providers::Azure::CloudManager::Refresher do
+describe NOVAHawk::Providers::Azure::CloudManager::Refresher do
   before do
     _guid, _server, zone = EvmSpecHelper.create_guid_miq_server_zone
     @ems = FactoryGirl.create(:ems_azure, :zone => zone, :provider_region => 'eastus')
@@ -205,11 +205,11 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
                       "resourceGroups/miq-azure-test1/providers/Microsoft.Network/loadBalancers/"\
                       "rspec-lb1/backendAddressPools/rspec-lb-pool"
 
-    @lb = ManageIQ::Providers::Azure::NetworkManager::LoadBalancer.where(
+    @lb = NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer.where(
       :name    => "rspec-lb1").first
-    @lb_no_members = ManageIQ::Providers::Azure::NetworkManager::LoadBalancer.where(
+    @lb_no_members = NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer.where(
       :name    => "rspec-lb2").first
-    @pool          = ManageIQ::Providers::Azure::NetworkManager::LoadBalancerPool.where(
+    @pool          = NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerPool.where(
       :ems_ref => lb_pool_ems_ref).first
 
     expect(@lb).to have_attributes(
@@ -217,7 +217,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
       "name"            => "rspec-lb1",
       "description"     => nil,
       "cloud_tenant_id" => nil,
-      "type"            => "ManageIQ::Providers::Azure::NetworkManager::LoadBalancer")
+      "type"            => "NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer")
 
     expect(@lb.ext_management_system).to eq(@ems.network_manager)
     expect(@lb.vms.count).to eq 2
@@ -242,7 +242,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
                                "miq-azure-test1/providers/Microsoft.Network/networkInterfaces/rspec-lb-b843/"\
                                "ipConfigurations/ipconfig1"
 
-    @listener = ManageIQ::Providers::Azure::NetworkManager::LoadBalancerListener.where(
+    @listener = NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerListener.where(
       :ems_ref => lb_listener_ems_ref).first
 
     expect(@listener).to have_attributes(
@@ -254,7 +254,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
       "instance_protocol"        => "Tcp",
       "instance_port_range"      => 80...81,
       "cloud_tenant_id"          => nil,
-      "type"                     => "ManageIQ::Providers::Azure::NetworkManager::LoadBalancerListener"
+      "type"                     => "NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerListener"
     )
     expect(@listener.ext_management_system).to eq(@ems.network_manager)
     expect(@lb.load_balancer_listeners).to eq [@listener]
@@ -271,7 +271,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
                            "miq-azure-test1/providers/Microsoft.Network/loadBalancers/rspec-lb1/"\
                            "probes/rspec-lb-probe"
 
-    @health_check = ManageIQ::Providers::Azure::NetworkManager::LoadBalancerHealthCheck.where(
+    @health_check = NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerHealthCheck.where(
       :ems_ref => health_check_ems_ref).first
 
     expect(@health_check).to have_attributes(
@@ -282,7 +282,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
       "url_path"        => "/",
       "interval"        => 5,
       "cloud_tenant_id" => nil,
-      "type"            => "ManageIQ::Providers::Azure::NetworkManager::LoadBalancerHealthCheck"
+      "type"            => "NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerHealthCheck"
     )
     expect(@listener.load_balancer_health_checks.first).to eq @health_check
     expect(@health_check.load_balancer).to eq @lb
@@ -292,7 +292,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
   end
 
   def assert_specific_security_group
-    @sg = ManageIQ::Providers::Azure::NetworkManager::SecurityGroup.where(:name => @device_name).first
+    @sg = NOVAHawk::Providers::Azure::NetworkManager::SecurityGroup.where(:name => @device_name).first
 
     expect(@sg).to have_attributes(
       :name        => @device_name,
@@ -316,10 +316,10 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
   end
 
   def assert_specific_flavor
-    @flavor_not_found = ManageIQ::Providers::Azure::CloudManager::Flavor.where(:name => "Basic_A0").first
+    @flavor_not_found = NOVAHawk::Providers::Azure::CloudManager::Flavor.where(:name => "Basic_A0").first
     expect(@flavor_not_found).to eq(nil)
 
-    @flavor = ManageIQ::Providers::Azure::CloudManager::Flavor.where(:name => "basic_a0").first
+    @flavor = NOVAHawk::Providers::Azure::CloudManager::Flavor.where(:name => "basic_a0").first
 
     expect(@flavor).to have_attributes(
       :name                     => "basic_a0",
@@ -341,7 +341,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
   end
 
   def assert_specific_az
-    @avail_zone = ManageIQ::Providers::Azure::CloudManager::AvailabilityZone.first
+    @avail_zone = NOVAHawk::Providers::Azure::CloudManager::AvailabilityZone.first
     expect(@avail_zone).to have_attributes(:name => @ems.name)
   end
 
@@ -353,7 +353,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
                      "/virtualNetworks/#{@resource_group}"
 
     @cn = CloudNetwork.where(:name => name).first
-    @avail_zone = ManageIQ::Providers::Azure::CloudManager::AvailabilityZone.first
+    @avail_zone = NOVAHawk::Providers::Azure::CloudManager::AvailabilityZone.first
 
     expect(@cn).to have_attributes(
       :name    => name,
@@ -385,7 +385,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
   end
 
   def assert_specific_vm_powered_on
-    vm = ManageIQ::Providers::Azure::CloudManager::Vm.where(
+    vm = NOVAHawk::Providers::Azure::CloudManager::Vm.where(
       :name => @device_name, :raw_power_state => "VM running").first
     vm_resource_id = "#{@subscription_id}\\#{@resource_group}\\microsoft.compute/virtualmachines\\#{@device_name}"
 
@@ -439,9 +439,9 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
 
     expect(v.hardware.guest_devices.size).to eql(0)
     expect(v.hardware.nics.size).to eql(0)
-    floating_ip   = ManageIQ::Providers::Azure::NetworkManager::FloatingIp.where(
+    floating_ip   = NOVAHawk::Providers::Azure::NetworkManager::FloatingIp.where(
       :address => @ip_address).first
-    cloud_network = ManageIQ::Providers::Azure::NetworkManager::CloudNetwork.where(
+    cloud_network = NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork.where(
       :name => @resource_group).first
     cloud_subnet  = cloud_network.cloud_subnets.first
     expect(v.floating_ip).to eql(floating_ip)
@@ -498,13 +498,13 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
   def assert_specific_vm_powered_off
     vm_name = 'miqazure-centos1'
 
-    v = ManageIQ::Providers::Azure::CloudManager::Vm.where(
+    v = NOVAHawk::Providers::Azure::CloudManager::Vm.where(
       :name            => vm_name,
       :raw_power_state => 'VM deallocated').first
 
-    az1           = ManageIQ::Providers::Azure::CloudManager::AvailabilityZone.first
-    floating_ip   = ManageIQ::Providers::Azure::NetworkManager::FloatingIp.where(:address => "miqazure-centos1").first
-    cloud_network = ManageIQ::Providers::Azure::NetworkManager::CloudNetwork.where(:name => "miq-azure-test1").first
+    az1           = NOVAHawk::Providers::Azure::CloudManager::AvailabilityZone.first
+    floating_ip   = NOVAHawk::Providers::Azure::NetworkManager::FloatingIp.where(:address => "miqazure-centos1").first
+    cloud_network = NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork.where(:name => "miq-azure-test1").first
     cloud_subnet  = cloud_network.cloud_subnets.first
 
     assert_specific_vm_powered_off_attributes(v)
@@ -574,7 +574,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
                            "Microsoft.Compute/Images/miq-test-container/"\
                            "test-win2k12-img-osDisk.e17a95b0-f4fb-4196-93c5-0c8be7d5c536.vhd"
 
-    @template = ManageIQ::Providers::Azure::CloudManager::Template.find_by(:ems_ref => template_resource_id)
+    @template = NOVAHawk::Providers::Azure::CloudManager::Template.find_by(:ems_ref => template_resource_id)
 
     expect(@template).to have_attributes(
       :template              => true,
@@ -637,7 +637,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
   end
 
   def assert_specific_orchestration_stack
-    @orch_stack = ManageIQ::Providers::Azure::CloudManager::OrchestrationStack.find_by(
+    @orch_stack = NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack.find_by(
       :name => "spec-nested-deployment-dont-delete")
     expect(@orch_stack).to have_attributes(
       :status         => "Succeeded",
@@ -684,7 +684,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
   end
 
   def assert_specific_orchestration_stack_outputs
-    outputs = ManageIQ::Providers::Azure::CloudManager::OrchestrationStack.find_by(
+    outputs = NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack.find_by(
       :name => "spec-deployment-dont-delete").outputs
     expect(outputs.size).to eq(1)
     expect(outputs[0]).to have_attributes(
@@ -705,12 +705,12 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
     expect(@orch_stack.orchestration_template).to eql(@orch_template)
 
     # orchestration stack can be nested
-    parent_stack = ManageIQ::Providers::Azure::CloudManager::OrchestrationStack.find_by(
+    parent_stack = NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack.find_by(
       :name => "spec-deployment-dont-delete")
     expect(@orch_stack.parent).to eql(parent_stack)
 
     # orchestration stack can have vms
-    vm = ManageIQ::Providers::Azure::CloudManager::Vm.find_by(:name => "spec0deply1vm1")
+    vm = NOVAHawk::Providers::Azure::CloudManager::Vm.find_by(:name => "spec0deply1vm1")
     expect(vm.orchestration_stack).to eql(@orch_stack)
 
     # orchestration stack can have cloud networks
@@ -730,8 +730,8 @@ describe ManageIQ::Providers::Azure::CloudManager::Refresher do
                "/#{ip_group}/providers/Microsoft.Network"\
                "/publicIPAddresses/miqmismatch1"
 
-    @network_port = ManageIQ::Providers::Azure::NetworkManager::NetworkPort.where(:name => nic_name).first
-    @floating_ip  = ManageIQ::Providers::Azure::NetworkManager::FloatingIp.where(:ems_ref => ems_ref).first
+    @network_port = NOVAHawk::Providers::Azure::NetworkManager::NetworkPort.where(:name => nic_name).first
+    @floating_ip  = NOVAHawk::Providers::Azure::NetworkManager::FloatingIp.where(:ems_ref => ems_ref).first
 
     expect(@network_port).to have_attributes(
       :status  => 'Succeeded',

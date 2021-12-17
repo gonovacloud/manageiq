@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Vmware::InfraManager::Vm < ManageIQ::Providers::InfraManager::Vm
-  include_concern 'ManageIQ::Providers::Vmware::InfraManager::VmOrTemplateShared'
+class NOVAHawk::Providers::Vmware::InfraManager::Vm < NOVAHawk::Providers::InfraManager::Vm
+  include_concern 'NOVAHawk::Providers::Vmware::InfraManager::VmOrTemplateShared'
 
   include_concern 'Operations'
   include_concern 'RemoteConsole'

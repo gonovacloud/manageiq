@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::VmOrTemplateShared
+module NOVAHawk::Providers::Vmware::InfraManager::VmOrTemplateShared
   extend ActiveSupport::Concern
   include_concern 'RefreshOnScan'
   include_concern 'Scanning'

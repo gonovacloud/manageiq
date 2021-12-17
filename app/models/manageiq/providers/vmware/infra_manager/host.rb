@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::InfraManager::Host < ::Host
+class NOVAHawk::Providers::Vmware::InfraManager::Host < ::Host
   include VimConnectMixin
 
   def provider_object(connection)
@@ -47,7 +47,7 @@ class ManageIQ::Providers::Vmware::InfraManager::Host < ::Host
   end
 
   def refresh_files_on_datastore(datastore)
-    hashes = ManageIQ::Providers::Vmware::InfraManager::RefreshParser.datastore_file_inv_to_hashes(
+    hashes = NOVAHawk::Providers::Vmware::InfraManager::RefreshParser.datastore_file_inv_to_hashes(
       get_files_on_datastore(datastore), datastore.vm_ids_by_path)
     EmsRefresh.save_storage_files_inventory(datastore, hashes)
   end

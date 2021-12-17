@@ -1,11 +1,11 @@
-ManageIQ.angular.app.controller('cloudTenantFormController', ['$http', '$scope', 'cloudTenantFormId', 'miqService', function($http, $scope, cloudTenantFormId, miqService) {
+NOVAHawk.angular.app.controller('cloudTenantFormController', ['$http', '$scope', 'cloudTenantFormId', 'miqService', function($http, $scope, cloudTenantFormId, miqService) {
   $scope.cloudTenantModel = { name: '', ems_id: '' };
   $scope.formId = cloudTenantFormId;
   $scope.afterGet = false;
   $scope.modelCopy = angular.copy( $scope.cloudTenantModel );
   $scope.model = "cloudTenantModel";
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   if (cloudTenantFormId == 'new') {
     $scope.cloudTenantModel.name = "";

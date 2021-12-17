@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private < ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork
+class NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private < NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork
 end

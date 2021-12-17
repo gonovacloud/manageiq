@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Provision::Configuration
+module NOVAHawk::Providers::Redhat::InfraManager::Provision::Configuration
   extend ActiveSupport::Concern
 
   include_concern 'Container'

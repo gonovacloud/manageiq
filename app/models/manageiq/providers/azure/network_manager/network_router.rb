@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Azure::NetworkManager::NetworkRouter < ::NetworkRouter
+class NOVAHawk::Providers::Azure::NetworkManager::NetworkRouter < ::NetworkRouter
 end

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::InfraManager::EmsCluster < ::EmsCluster
+class NOVAHawk::Providers::Openstack::InfraManager::EmsCluster < ::EmsCluster
   def direct_vms
     vms
   end

@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('selectpickerForSelectTag', function() {
+NOVAHawk.angular.app.directive('selectpickerForSelectTag', function() {
   return {
     require: 'ngModel',
     link: function (scope, elem, attr, ctrl) {

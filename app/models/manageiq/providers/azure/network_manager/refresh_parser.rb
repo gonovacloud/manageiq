@@ -1,7 +1,7 @@
 # TODO: Separate collection from parsing (perhaps collecting in parallel a la RHEVM)
 
-class ManageIQ::Providers::Azure::NetworkManager::RefreshParser
-  include ManageIQ::Providers::Azure::RefreshHelperMethods
+class NOVAHawk::Providers::Azure::NetworkManager::RefreshParser
+  include NOVAHawk::Providers::Azure::RefreshHelperMethods
   include Vmdb::Logging
 
   def self.ems_inv_to_hashes(ems, options = nil)
@@ -428,47 +428,47 @@ class ManageIQ::Providers::Azure::NetworkManager::RefreshParser
 
   class << self
     def load_balancer_type
-      ManageIQ::Providers::Azure::NetworkManager::LoadBalancer.name
+      NOVAHawk::Providers::Azure::NetworkManager::LoadBalancer.name
     end
 
     def load_balancer_pool_type
-      ManageIQ::Providers::Azure::NetworkManager::LoadBalancerPool.name
+      NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerPool.name
     end
 
     def load_balancer_pool_member_type
-      ManageIQ::Providers::Azure::NetworkManager::LoadBalancerPoolMember.name
+      NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerPoolMember.name
     end
 
     def load_balancer_listener_type
-      ManageIQ::Providers::Azure::NetworkManager::LoadBalancerListener.name
+      NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerListener.name
     end
 
     def load_balancer_health_check_type
-      ManageIQ::Providers::Azure::NetworkManager::LoadBalancerHealthCheck.name
+      NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerHealthCheck.name
     end
 
     def security_group_type
-      ManageIQ::Providers::Azure::NetworkManager::SecurityGroup.name
+      NOVAHawk::Providers::Azure::NetworkManager::SecurityGroup.name
     end
 
     def network_router_type
-      ManageIQ::Providers::Azure::NetworkManager::NetworkRouter.name
+      NOVAHawk::Providers::Azure::NetworkManager::NetworkRouter.name
     end
 
     def cloud_network_type
-      ManageIQ::Providers::Azure::NetworkManager::CloudNetwork.name
+      NOVAHawk::Providers::Azure::NetworkManager::CloudNetwork.name
     end
 
     def cloud_subnet_type
-      ManageIQ::Providers::Azure::NetworkManager::CloudSubnet.name
+      NOVAHawk::Providers::Azure::NetworkManager::CloudSubnet.name
     end
 
     def floating_ip_type
-      ManageIQ::Providers::Azure::NetworkManager::FloatingIp.name
+      NOVAHawk::Providers::Azure::NetworkManager::FloatingIp.name
     end
 
     def network_port_type
-      ManageIQ::Providers::Azure::NetworkManager::NetworkPort.name
+      NOVAHawk::Providers::Azure::NetworkManager::NetworkPort.name
     end
   end
 end

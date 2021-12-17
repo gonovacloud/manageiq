@@ -192,7 +192,7 @@ describe VmOrTemplateController do
     end
 
     context 'console with remote URL' do
-      let(:url) { 'http://www.manageiq.org' }
+      let(:url) { 'http://www.novahawk.org' }
       let(:task_results) { {:remote_url => url} }
 
       it 'renders javascript to open a popup' do

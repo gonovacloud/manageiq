@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::HostAggregate < ::HostAggregate
+class NOVAHawk::Providers::Openstack::CloudManager::HostAggregate < ::HostAggregate
 
   supports :update_aggregate
   supports :delete_aggregate
@@ -18,7 +18,7 @@ class ManageIQ::Providers::Openstack::CloudManager::HostAggregate < ::HostAggreg
       :userid => userid
     }
     queue_opts = {
-      :class_name  => "ManageIQ::Providers::Openstack::CloudManager::HostAggregate",
+      :class_name  => "NOVAHawk::Providers::Openstack::CloudManager::HostAggregate",
       :method_name => 'create_aggregate',
       :priority    => MiqQueue::HIGH_PRIORITY,
       :role        => 'ems_operations',

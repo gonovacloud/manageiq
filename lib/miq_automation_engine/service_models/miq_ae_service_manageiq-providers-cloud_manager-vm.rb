@@ -1,5 +1,5 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_CloudManager_Vm < MiqAeServiceVm
+  class MiqAeServiceNOVAHawk_Providers_CloudManager_Vm < MiqAeServiceVm
     expose :availability_zone, :association => true
     expose :flavor,            :association => true
     expose :cloud_network,     :association => true

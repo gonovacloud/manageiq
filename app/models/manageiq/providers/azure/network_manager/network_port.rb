@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Azure::NetworkManager::NetworkPort < ::NetworkPort
+class NOVAHawk::Providers::Azure::NetworkManager::NetworkPort < ::NetworkPort
 end

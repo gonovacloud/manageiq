@@ -6,10 +6,10 @@ describe SetCorrectStiTypeOnCloudNetwork do
 
   let!(:empty_cloud_network) { cloud_network_stub.create! }
 
-  let!(:ems_cloud)           { cloud_manager_stub.create!(:type => "ManageIQ::Providers::Openstack::CloudManager") }
+  let!(:ems_cloud)           { cloud_manager_stub.create!(:type => "NOVAHawk::Providers::Openstack::CloudManager") }
   let!(:cloud_cloud_network) { cloud_network_stub.create!(:external_facing => true, :ems_id => ems_cloud.id) }
 
-  let!(:ems_infra)           { cloud_manager_stub.create!(:type => "ManageIQ::Providers::Openstack::InfraManager") }
+  let!(:ems_infra)           { cloud_manager_stub.create!(:type => "NOVAHawk::Providers::Openstack::InfraManager") }
   let!(:infra_cloud_network) { cloud_network_stub.create!(:external_facing => false, :ems_id => ems_infra.id) }
 
   migration_context :up do

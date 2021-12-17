@@ -4131,7 +4131,7 @@ http_interactions:
       - '8159'
     body:
       encoding: ASCII-8BIT
-      string: '{"value":[{"properties":{"vmId":"834a70b5-868d-4466-9dda-14e0f6b2caaf","availabilitySet":{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/availabilitySets/RSPEC-LB"},"hardwareProfile":{"vmSize":"Standard_DS1_v2"},"storageProfile":{"imageReference":{"publisher":"RedHat","offer":"RHEL","sku":"6.7","version":"latest"},"osDisk":{"osType":"Linux","name":"rspec-lb-b","createOption":"FromImage","vhd":{"uri":"https://rspeclb.blob.core.windows.net/vhds/rspec-lb-b201682123650.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"rspec-lb-b","adminUsername":"bronaghs","linuxConfiguration":{"disablePasswordAuthentication":false},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/rspec-lb-b843"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":true,"storageUri":"https://amissteastorage.blob.core.windows.net/"}},"provisioningState":"Succeeded"},"resources":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/rspec-lb-b/extensions/Microsoft.Insights.VMDiagnosticsSettings"}],"type":"Microsoft.Compute/virtualMachines","location":"eastus","id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/rspec-lb-b","name":"rspec-lb-b"},{"properties":{"vmId":"d7022008-f6b1-4f4c-8be8-e2d677ef3261","availabilitySet":{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/availabilitySets/SPEC0DEPLY1AS"},"hardwareProfile":{"vmSize":"Standard_D1"},"storageProfile":{"imageReference":{"publisher":"MicrosoftWindowsServer","offer":"WindowsServer","sku":"2012-R2-Datacenter","version":"latest"},"osDisk":{"osType":"Windows","name":"osdisk","createOption":"FromImage","vhd":{"uri":"http://spec0deply1stor.blob.core.windows.net/vhds/osdisk0.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"spec0deply1vm0","adminUsername":"deploy1admin","windowsConfiguration":{"provisionVMAgent":true,"enableAutomaticUpdates":true},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/spec0deply1nic0"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":true,"storageUri":"http://spec0deply1stor.blob.core.windows.net"}},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{"Shutdown":"true"},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/spec0deply1vm0","name":"spec0deply1vm0"},{"properties":{"vmId":"4d1502d5-351a-42f4-8569-22284f906d68","availabilitySet":{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/availabilitySets/SPEC0DEPLY1AS"},"hardwareProfile":{"vmSize":"Standard_D1"},"storageProfile":{"imageReference":{"publisher":"MicrosoftWindowsServer","offer":"WindowsServer","sku":"2012-R2-Datacenter","version":"latest"},"osDisk":{"osType":"Windows","name":"osdisk","createOption":"FromImage","vhd":{"uri":"http://spec0deply1stor.blob.core.windows.net/vhds/osdisk1.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"spec0deply1vm1","adminUsername":"deploy1admin","windowsConfiguration":{"provisionVMAgent":true,"enableAutomaticUpdates":true},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/spec0deply1nic1"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":true,"storageUri":"http://spec0deply1stor.blob.core.windows.net"}},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{"Shutdown":"true"},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/spec0deply1vm1","name":"spec0deply1vm1"},{"properties":{"vmId":"f7ba2de1-2b33-4585-9a7b-2bad2dadf664","hardwareProfile":{"vmSize":"Standard_A1"},"storageProfile":{"osDisk":{"osType":"Windows","name":"dbergerprov1b3b81234-4416-45e3-9bae-11f4cff98cdd.vhd","createOption":"FromImage","image":{"uri":"https://miqazuretest14047.blob.core.windows.net/system/Microsoft.Compute/Images/miq-test-container/test-win2k12-img-osDisk.e17a95b0-f4fb-4196-93c5-0c8be7d5c536.vhd"},"vhd":{"uri":"https://miqazuretest14047.blob.core.windows.net/manageiq/dbergerprov1_7b727bad-cb83-4aa2-a768-074c877d6b3b.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"dbergerprov1","adminUsername":"dbergerprov1","windowsConfiguration":{"provisionVMAgent":true,"enableAutomaticUpdates":true},"secrets":[]},"networkProfile":{"networkInterfaces":[{"properties":{},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/dbergerprov1"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":false}},"provisioningState":"Succeeded"},"resources":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/dbergerprov1/extensions/IaaSDiagnostics"}],"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/dbergerprov1","name":"dbergerprov1"},{"properties":{"vmId":"61b7c052-1d09-4898-b995-cce5676aaab0","hardwareProfile":{"vmSize":"Basic_A0"},"storageProfile":{"imageReference":{"publisher":"RedHat","offer":"RHEL","sku":"7.3","version":"latest"},"osDisk":{"osType":"Linux","name":"miqazure-linux-managed_OsDisk_1_7b2bdf790a7d4379ace2846d307730cd","createOption":"FromImage","caching":"ReadWrite","managedDisk":{"storageAccountType":"Standard_LRS","id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/disks/miqazure-linux-managed_OsDisk_1_7b2bdf790a7d4379ace2846d307730cd"},"diskSizeGB":32},"dataDisks":[]},"osProfile":{"computerName":"miqazure-linux-managed","adminUsername":"dberger","linuxConfiguration":{"disablePasswordAuthentication":false},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test4/providers/Microsoft.Network/networkInterfaces/miqazure-linux-manag944"}]},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/miqazure-linux-managed","name":"miqazure-linux-managed"},{"properties":{"vmId":"9b746cf3-2e11-4c65-8bd5-4c83b7d9a5a4","hardwareProfile":{"vmSize":"Standard_A1"},"storageProfile":{"imageReference":{"publisher":"canonical","offer":"ubuntuserver","sku":"16.04.0-LTS","version":"16.04.201604203"},"osDisk":{"osType":"Linux","name":"miqazuretest26611","createOption":"FromImage","vhd":{"uri":"https://miqazuretest26611.blob.core.windows.net/manageiq/miqmismatch1_8021743a-5957-4dc1-a645-ca210d5d7fc5.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"miqmismatch1","adminUsername":"dberger","linuxConfiguration":{"disablePasswordAuthentication":false},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/miqmismatch1"}]},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{"Shutdown":"true"},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/miqmismatch1","name":"miqmismatch1"}]}'
+      string: '{"value":[{"properties":{"vmId":"834a70b5-868d-4466-9dda-14e0f6b2caaf","availabilitySet":{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/availabilitySets/RSPEC-LB"},"hardwareProfile":{"vmSize":"Standard_DS1_v2"},"storageProfile":{"imageReference":{"publisher":"RedHat","offer":"RHEL","sku":"6.7","version":"latest"},"osDisk":{"osType":"Linux","name":"rspec-lb-b","createOption":"FromImage","vhd":{"uri":"https://rspeclb.blob.core.windows.net/vhds/rspec-lb-b201682123650.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"rspec-lb-b","adminUsername":"bronaghs","linuxConfiguration":{"disablePasswordAuthentication":false},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/rspec-lb-b843"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":true,"storageUri":"https://amissteastorage.blob.core.windows.net/"}},"provisioningState":"Succeeded"},"resources":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/rspec-lb-b/extensions/Microsoft.Insights.VMDiagnosticsSettings"}],"type":"Microsoft.Compute/virtualMachines","location":"eastus","id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/rspec-lb-b","name":"rspec-lb-b"},{"properties":{"vmId":"d7022008-f6b1-4f4c-8be8-e2d677ef3261","availabilitySet":{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/availabilitySets/SPEC0DEPLY1AS"},"hardwareProfile":{"vmSize":"Standard_D1"},"storageProfile":{"imageReference":{"publisher":"MicrosoftWindowsServer","offer":"WindowsServer","sku":"2012-R2-Datacenter","version":"latest"},"osDisk":{"osType":"Windows","name":"osdisk","createOption":"FromImage","vhd":{"uri":"http://spec0deply1stor.blob.core.windows.net/vhds/osdisk0.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"spec0deply1vm0","adminUsername":"deploy1admin","windowsConfiguration":{"provisionVMAgent":true,"enableAutomaticUpdates":true},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/spec0deply1nic0"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":true,"storageUri":"http://spec0deply1stor.blob.core.windows.net"}},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{"Shutdown":"true"},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/spec0deply1vm0","name":"spec0deply1vm0"},{"properties":{"vmId":"4d1502d5-351a-42f4-8569-22284f906d68","availabilitySet":{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/availabilitySets/SPEC0DEPLY1AS"},"hardwareProfile":{"vmSize":"Standard_D1"},"storageProfile":{"imageReference":{"publisher":"MicrosoftWindowsServer","offer":"WindowsServer","sku":"2012-R2-Datacenter","version":"latest"},"osDisk":{"osType":"Windows","name":"osdisk","createOption":"FromImage","vhd":{"uri":"http://spec0deply1stor.blob.core.windows.net/vhds/osdisk1.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"spec0deply1vm1","adminUsername":"deploy1admin","windowsConfiguration":{"provisionVMAgent":true,"enableAutomaticUpdates":true},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/spec0deply1nic1"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":true,"storageUri":"http://spec0deply1stor.blob.core.windows.net"}},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{"Shutdown":"true"},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST1/providers/Microsoft.Compute/virtualMachines/spec0deply1vm1","name":"spec0deply1vm1"},{"properties":{"vmId":"f7ba2de1-2b33-4585-9a7b-2bad2dadf664","hardwareProfile":{"vmSize":"Standard_A1"},"storageProfile":{"osDisk":{"osType":"Windows","name":"dbergerprov1b3b81234-4416-45e3-9bae-11f4cff98cdd.vhd","createOption":"FromImage","image":{"uri":"https://miqazuretest14047.blob.core.windows.net/system/Microsoft.Compute/Images/miq-test-container/test-win2k12-img-osDisk.e17a95b0-f4fb-4196-93c5-0c8be7d5c536.vhd"},"vhd":{"uri":"https://miqazuretest14047.blob.core.windows.net/novahawk/dbergerprov1_7b727bad-cb83-4aa2-a768-074c877d6b3b.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"dbergerprov1","adminUsername":"dbergerprov1","windowsConfiguration":{"provisionVMAgent":true,"enableAutomaticUpdates":true},"secrets":[]},"networkProfile":{"networkInterfaces":[{"properties":{},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/dbergerprov1"}]},"diagnosticsProfile":{"bootDiagnostics":{"enabled":false}},"provisioningState":"Succeeded"},"resources":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/dbergerprov1/extensions/IaaSDiagnostics"}],"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/dbergerprov1","name":"dbergerprov1"},{"properties":{"vmId":"61b7c052-1d09-4898-b995-cce5676aaab0","hardwareProfile":{"vmSize":"Basic_A0"},"storageProfile":{"imageReference":{"publisher":"RedHat","offer":"RHEL","sku":"7.3","version":"latest"},"osDisk":{"osType":"Linux","name":"miqazure-linux-managed_OsDisk_1_7b2bdf790a7d4379ace2846d307730cd","createOption":"FromImage","caching":"ReadWrite","managedDisk":{"storageAccountType":"Standard_LRS","id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/disks/miqazure-linux-managed_OsDisk_1_7b2bdf790a7d4379ace2846d307730cd"},"diskSizeGB":32},"dataDisks":[]},"osProfile":{"computerName":"miqazure-linux-managed","adminUsername":"dberger","linuxConfiguration":{"disablePasswordAuthentication":false},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test4/providers/Microsoft.Network/networkInterfaces/miqazure-linux-manag944"}]},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/miqazure-linux-managed","name":"miqazure-linux-managed"},{"properties":{"vmId":"9b746cf3-2e11-4c65-8bd5-4c83b7d9a5a4","hardwareProfile":{"vmSize":"Standard_A1"},"storageProfile":{"imageReference":{"publisher":"canonical","offer":"ubuntuserver","sku":"16.04.0-LTS","version":"16.04.201604203"},"osDisk":{"osType":"Linux","name":"miqazuretest26611","createOption":"FromImage","vhd":{"uri":"https://miqazuretest26611.blob.core.windows.net/novahawk/miqmismatch1_8021743a-5957-4dc1-a645-ca210d5d7fc5.vhd"},"caching":"ReadWrite"},"dataDisks":[]},"osProfile":{"computerName":"miqmismatch1","adminUsername":"dberger","linuxConfiguration":{"disablePasswordAuthentication":false},"secrets":[]},"networkProfile":{"networkInterfaces":[{"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/miq-azure-test1/providers/Microsoft.Network/networkInterfaces/miqmismatch1"}]},"provisioningState":"Succeeded"},"type":"Microsoft.Compute/virtualMachines","location":"eastus","tags":{"Shutdown":"true"},"id":"/subscriptions/AZURE_SUBSCRIPTION_ID/resourceGroups/MIQ-AZURE-TEST4/providers/Microsoft.Compute/virtualMachines/miqmismatch1","name":"miqmismatch1"}]}'
     http_version: 
   recorded_at: Wed, 14 Jun 2017 16:06:53 GMT
 - request:
@@ -5672,7 +5672,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:11 GMT
 - request:
     method: get
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq?comp=list&restype=container
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk?comp=list&restype=container
     body:
       encoding: US-ASCII
       string: ''
@@ -6733,7 +6733,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:12 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/azdmu0004_9c7060bb-27f9-4f90-b785-e189716269f8.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/azdmu0004_9c7060bb-27f9-4f90-b785-e189716269f8.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -6808,7 +6808,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:13 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/azdmu0005_b2d91a7e-f4e1-4289-b4e7-1c5fa2dde42e.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/azdmu0005_b2d91a7e-f4e1-4289-b4e7-1c5fa2dde42e.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -6883,7 +6883,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:13 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/azdmu0006_bfa11357-6a80-4de1-b395-67e870c14a91.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/azdmu0006_bfa11357-6a80-4de1-b395-67e870c14a91.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -6958,7 +6958,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:13 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/billy1_20401b27-9da4-4276-a390-d59495aea954.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/billy1_20401b27-9da4-4276-a390-d59495aea954.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7033,7 +7033,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:14 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/billy2_2dfb8613-c1c1-4562-9307-db8c9b1b2426.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/billy2_2dfb8613-c1c1-4562-9307-db8c9b1b2426.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7108,7 +7108,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:14 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bronaghfip714a_4a63df99-9f73-4b8d-923f-dc06617d660d.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bronaghfip714a_4a63df99-9f73-4b8d-923f-dc06617d660d.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7183,7 +7183,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:14 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bronaghnoport_9943a499-b2ec-41e3-9a85-c14494f18cec.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bronaghnoport_9943a499-b2ec-41e3-9a85-c14494f18cec.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7258,7 +7258,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:15 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bronaghreuseip_c33a6549-cc4d-4e3f-945d-28b6ca0880f0.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bronaghreuseip_c33a6549-cc4d-4e3f-945d-28b6ca0880f0.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7333,7 +7333,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:15 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bronaghrspec3_034c938b-eaa9-4399-8ed2-cb7216fabf0b.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bronaghrspec3_034c938b-eaa9-4399-8ed2-cb7216fabf0b.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7408,7 +7408,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:16 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bronaghtest23_e23609fb-9c7c-413c-9be6-9a0e1c9cdbd7.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bronaghtest23_e23609fb-9c7c-413c-9be6-9a0e1c9cdbd7.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7483,7 +7483,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:16 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bronaghwiths_73b9a95a-dde1-43b5-8139-2bb0465d391a.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bronaghwiths_73b9a95a-dde1-43b5-8139-2bb0465d391a.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7558,7 +7558,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:16 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bsmetrics_20753af8-5ab8-45af-8545-4ec096985aa4.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bsmetrics_20753af8-5ab8-45af-8545-4ec096985aa4.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7633,7 +7633,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:16 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/bweitest_0002_a156be9c-2fbe-41eb-9564-fbcb2553ee33.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/bweitest_0002_a156be9c-2fbe-41eb-9564-fbcb2553ee33.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7708,7 +7708,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:17 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/dberger-delete_a2a5d43f-aa05-4d61-8da8-95086a4d357e.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/dberger-delete_a2a5d43f-aa05-4d61-8da8-95086a4d357e.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7783,7 +7783,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:17 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/dberger-deleteme1_eefc1727-019b-4285-a5f8-0869efe8a037.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/dberger-deleteme1_eefc1727-019b-4285-a5f8-0869efe8a037.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7858,7 +7858,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:17 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/dbergerprov1_9a78aa4c-d5f6-4d58-b083-90691eda7b64.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/dbergerprov1_9a78aa4c-d5f6-4d58-b083-90691eda7b64.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -7933,7 +7933,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:18 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/dbergerprov2_a7be6d36-d0ca-4fad-8cd0-fc2f048e0446.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/dbergerprov2_a7be6d36-d0ca-4fad-8cd0-fc2f048e0446.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8008,7 +8008,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:18 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/dbergerx_60873a6e-709e-409f-8048-9dcabc09d467.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/dbergerx_60873a6e-709e-409f-8048-9dcabc09d467.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8083,7 +8083,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:19 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/drew1_5c35f695-b2ae-4d86-937f-fcc6fcbb9fb0.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/drew1_5c35f695-b2ae-4d86-937f-fcc6fcbb9fb0.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8158,7 +8158,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:19 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/jb_win_demo_vm_ad89c080-8b1d-47a2-8a73-ee6d7a53c6cc.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/jb_win_demo_vm_ad89c080-8b1d-47a2-8a73-ee6d7a53c6cc.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8233,7 +8233,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:19 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/lucy_2_eef078a8-9bfe-469e-9340-e0342a4fe3bc.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/lucy_2_eef078a8-9bfe-469e-9340-e0342a4fe3bc.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8308,7 +8308,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:20 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/lucy_4_261857b1-fb35-4ce0-b7b7-fd148c7e6ebd.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/lucy_4_261857b1-fb35-4ce0-b7b7-fd148c7e6ebd.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8383,7 +8383,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:20 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/sectest2_84ad7b2b-9100-40db-8997-a31912cf27c1.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/sectest2_84ad7b2b-9100-40db-8997-a31912cf27c1.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8458,7 +8458,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:20 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billy-azure33_a676ca34-c43f-4f58-a96c-30cf0645f6ea.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billy-azure33_a676ca34-c43f-4f58-a96c-30cf0645f6ea.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8533,7 +8533,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:21 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billy-azure34_3c1cc2b6-174a-43bb-9d30-b3495444d9f6.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billy-azure34_3c1cc2b6-174a-43bb-9d30-b3495444d9f6.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8608,7 +8608,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:21 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billy-azure35_caeaf4af-b486-4edc-9847-b658a0e197c2.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billy-azure35_caeaf4af-b486-4edc-9847-b658a0e197c2.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8683,7 +8683,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:21 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billy-azure36_f88f59a7-cc6f-4464-88ba-61adca792ecc.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billy-azure36_f88f59a7-cc6f-4464-88ba-61adca792ecc.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8758,7 +8758,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:22 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billy-azure38_e934e3f0-f3d8-4b5b-8015-55e5bd392cbc.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billy-azure38_e934e3f0-f3d8-4b5b-8015-55e5bd392cbc.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8833,7 +8833,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:22 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billy-azure40_78c0ae1c-2b12-4aa8-bb3c-bf6270c11d1c.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billy-azure40_78c0ae1c-2b12-4aa8-bb3c-bf6270c11d1c.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8908,7 +8908,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:22 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billy-azure51_d8d15880-191f-4221-99cc-cb102ba4dcf8.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billy-azure51_d8d15880-191f-4221-99cc-cb102ba4dcf8.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -8983,7 +8983,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:23 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/test-billya37_f2f0e962-d3c7-4029-9b2d-14982e667016.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/test-billya37_f2f0e962-d3c7-4029-9b2d-14982e667016.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -9058,7 +9058,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:23 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/testbillyaaa_953e913d-6625-471f-b6f0-4e9353723c39.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/testbillyaaa_953e913d-6625-471f-b6f0-4e9353723c39.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -9133,7 +9133,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:23 GMT
 - request:
     method: head
-    uri: https://miqazuretest14047.blob.core.windows.net/manageiq/testbillyzzzz_43cfa30e-2d72-49af-a72d-1e764dfbf756.vhd
+    uri: https://miqazuretest14047.blob.core.windows.net/novahawk/testbillyzzzz_43cfa30e-2d72-49af-a72d-1e764dfbf756.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -10172,7 +10172,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:31 GMT
 - request:
     method: get
-    uri: https://miqazuretest26611.blob.core.windows.net/manageiq?comp=list&restype=container
+    uri: https://miqazuretest26611.blob.core.windows.net/novahawk?comp=list&restype=container
     body:
       encoding: US-ASCII
       string: ''
@@ -10327,7 +10327,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:32 GMT
 - request:
     method: head
-    uri: https://miqazuretest26611.blob.core.windows.net/manageiq/miqmismatch1_57302eee-442e-4dc5-9b10-890eb29674cd.vhd
+    uri: https://miqazuretest26611.blob.core.windows.net/novahawk/miqmismatch1_57302eee-442e-4dc5-9b10-890eb29674cd.vhd
     body:
       encoding: US-ASCII
       string: ''
@@ -10402,7 +10402,7 @@ http_interactions:
   recorded_at: Wed, 14 Jun 2017 16:07:32 GMT
 - request:
     method: head
-    uri: https://miqazuretest26611.blob.core.windows.net/manageiq/miqmismatch1_818a1f27-01a6-47da-a655-d9b7294834b5.vhd
+    uri: https://miqazuretest26611.blob.core.windows.net/novahawk/miqmismatch1_818a1f27-01a6-47da-a655-d9b7294834b5.vhd
     body:
       encoding: US-ASCII
       string: ''

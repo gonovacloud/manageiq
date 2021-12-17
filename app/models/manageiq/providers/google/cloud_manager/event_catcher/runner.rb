@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Google::CloudManager::EventCatcher::Runner <
-  ManageIQ::Providers::BaseManager::EventCatcher::Runner
-  include ManageIQ::Providers::Google::EventCatcherMixin
+class NOVAHawk::Providers::Google::CloudManager::EventCatcher::Runner <
+  NOVAHawk::Providers::BaseManager::EventCatcher::Runner
+  include NOVAHawk::Providers::Google::EventCatcherMixin
 
   # Request the event monitor to stop running.
   def stop_event_monitor
@@ -37,7 +37,7 @@ class ManageIQ::Providers::Google::CloudManager::EventCatcher::Runner <
   private
 
   def event_monitor_handle
-    @event_monitor_handle ||= ManageIQ::Providers::Google::CloudManager::EventCatcher::Stream.new(@ems)
+    @event_monitor_handle ||= NOVAHawk::Providers::Google::CloudManager::EventCatcher::Stream.new(@ems)
   end
 
   def reset_event_monitor_handle

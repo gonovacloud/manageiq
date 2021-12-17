@@ -1,2 +1,2 @@
-class ManageIQ::Providers::BaseManager::MetricsCollectorWorker::Runner < ::MiqQueueWorkerBase::Runner
+class NOVAHawk::Providers::BaseManager::MetricsCollectorWorker::Runner < ::MiqQueueWorkerBase::Runner
 end

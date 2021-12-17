@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::Vm < ManageIQ::Providers::CloudManager::Vm
+class NOVAHawk::Providers::Openstack::CloudManager::Vm < NOVAHawk::Providers::CloudManager::Vm
   include_concern 'Operations'
   include_concern 'RemoteConsole'
   include_concern 'Resize'
@@ -32,7 +32,7 @@ class ManageIQ::Providers::Openstack::CloudManager::Vm < ManageIQ::Providers::Cl
 
   def floating_ip
     # TODO(lsmola) NetworkProvider Backwards compatibility layer with simplified architecture where VM has only one
-    # network. Put this into ManageIQ::Providers::CloudManager::Vm when NetworkProvider is done in all providers
+    # network. Put this into NOVAHawk::Providers::CloudManager::Vm when NetworkProvider is done in all providers
     floating_ips.first
   end
 

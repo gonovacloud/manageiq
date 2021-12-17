@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::AuthKeyPair < ManageIQ::Providers::CloudManager::AuthKeyPair
+class NOVAHawk::Providers::Openstack::CloudManager::AuthKeyPair < NOVAHawk::Providers::CloudManager::AuthKeyPair
   def self.raw_create_key_pair(ext_management_system, create_options)
     connection_options = {:service => 'Compute'}
     ext_management_system.with_provider_connection(connection_options) do |service|

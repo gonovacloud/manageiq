@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::CloudManager do
+describe NOVAHawk::Providers::Openstack::CloudManager do
   context "Class Methods" do
     it("from mixin") { expect(described_class.methods).to include(:auth_url, :raw_connect) }
   end
@@ -48,7 +48,7 @@ describe ManageIQ::Providers::Openstack::CloudManager do
 
   describe ".metrics_collector_queue_name" do
     it "returns the correct queue name" do
-      worker_queue = ManageIQ::Providers::Openstack::CloudManager::MetricsCollectorWorker.default_queue_name
+      worker_queue = NOVAHawk::Providers::Openstack::CloudManager::MetricsCollectorWorker.default_queue_name
       expect(described_class.metrics_collector_queue_name).to eq(worker_queue)
     end
   end
@@ -117,7 +117,7 @@ describe ManageIQ::Providers::Openstack::CloudManager do
   end
 
   it "event_monitor_options" do
-    allow(ManageIQ::Providers::Openstack::CloudManager::EventCatcher).to receive_messages(:worker_settings => {:amqp_port => 1234})
+    allow(NOVAHawk::Providers::Openstack::CloudManager::EventCatcher).to receive_messages(:worker_settings => {:amqp_port => 1234})
     @ems = FactoryGirl.build(:ems_openstack, :hostname => "host", :ipaddress => "::1")
     @ems.endpoints << Endpoint.create(:role => 'amqp', :hostname => 'amqp_hostname', :port => '5672')
     require 'openstack/openstack_event_monitor'

@@ -1,6 +1,6 @@
 class TreeBuilderInstancesFilter < TreeBuilderVmsFilter
   def tree_init_options(_tree_name)
-    super.update(:leaf => 'ManageIQ::Providers::CloudManager::Vm')
+    super.update(:leaf => 'NOVAHawk::Providers::CloudManager::Vm')
   end
 
   def set_locals_for_render

@@ -19,7 +19,7 @@ describe 'MIQFile' do
     end
 
     it 'accepts an optional hostname and returns the expected result' do
-      hostname = 'dell-r410-01.manageiqwin.lab.example.com'
+      hostname = 'dell-r410-01.novahawkwin.lab.example.com'
       expect(File.path_to_uri('foo', hostname)).to eql("file://#{hostname}/foo")
       expect(File.path_to_uri('foo/bar', hostname)).to eql("file://#{hostname}/foo/bar")
       expect(File.path_to_uri('foo/bar-stuff', hostname)).to eql("file://#{hostname}/foo/bar-stuff")

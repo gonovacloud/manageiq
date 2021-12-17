@@ -80,7 +80,7 @@
           %fieldset
             %h3
               = _('Middleware')
-            - {:manageiq_providers_middlewaremanager => ["ems_middleware_show_list",           _('Middleware Providers')],
+            - {:novahawk_providers_middlewaremanager => ["ems_middleware_show_list",           _('Middleware Providers')],
                :middlewareserver                     => ["middleware_server_show_list",        _('Middleware Servers')],
                :middlewaredeployment                 => ["middleware_deployment_show_list",    _('Middleware Deployments')],
                :middlewaredatasource                 => ["middleware_datasource_show_list",    _('Middleware Datasources')],
@@ -97,14 +97,14 @@
           %fieldset
             %h3
               = _('Clouds')
-            - {:manageiq_providers_cloudmanager => ["ems_cloud_show_list",                    _('Cloud Providers')],
+            - {:novahawk_providers_cloudmanager => ["ems_cloud_show_list",                    _('Cloud Providers')],
                :availabilityzone                => ["availability_zone_show_list",            _('Availability Zones')],
                :hostaggregate                   => ["host_aggregate_show_list",               _('Host Aggregates')],
                :cloudtenant                     => ["cloud_tenant_show_list",                 _('Tenants')],
                :flavor                          => ["flavor_show_list",                       _('Flavors')],
-               :manageiq_providers_cloudmanager_vm       => [["instances_accord",
+               :novahawk_providers_cloudmanager_vm       => [["instances_accord",
                                                               "instances_filter_accord"], _('Instances')],
-               :manageiq_providers_cloudmanager_template => [["images_accord",
+               :novahawk_providers_cloudmanager_template => [["images_accord",
                                                               "images_filter_accord"],    _('Images')],
                :orchestrationstack        => ["orchestration_stack_show_list",          _('Stacks')],
                :cloudvolume               => ["cloud_volume_show_list",                 _('Volumes')],
@@ -120,14 +120,14 @@
           %fieldset
             %h3
               = _('Infrastructure')
-            - {:manageiq_providers_inframanager  => ["ems_infra_show_list",   _('Infrastructure Providers')],
+            - {:novahawk_providers_inframanager  => ["ems_infra_show_list",   _('Infrastructure Providers')],
                :emscluster            => ["ems_cluster_show_list",            _('Clusters')],
                :host                  => ["host_show_list",                   _('Hosts')],
                :vmortemplate          => [["vandt_accord",
                                            "vms_filter_accord"],              _('VMs & Templates')],
-               :manageiq_providers_inframanager_vm       => [["vandt_accord",
+               :novahawk_providers_inframanager_vm       => [["vandt_accord",
                                                               "vms_filter_accord"],       _('VMs')],
-               :manageiq_providers_inframanager_template => [["vandt_accord",
+               :novahawk_providers_inframanager_template => [["vandt_accord",
                                                               "templates_filter_accord"], _('Templates')],
                :resourcepool          => ["resource_pool_show_list",          _('Resource Pools')],
                :storage               => ["storage_show_list",                _('Datastores')],

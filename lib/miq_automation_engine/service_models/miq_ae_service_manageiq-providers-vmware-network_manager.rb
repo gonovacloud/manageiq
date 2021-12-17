@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Vmware_NetworkManager < MiqAeServiceManageIQ_Providers_NetworkManager
+  class MiqAeServiceNOVAHawk_Providers_Vmware_NetworkManager < MiqAeServiceNOVAHawk_Providers_NetworkManager
   end
 end

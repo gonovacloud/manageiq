@@ -52,11 +52,11 @@ module Mixins
     end
 
     def display_instances
-      nested_list("vm_cloud", ManageIQ::Providers::CloudManager::Vm)
+      nested_list("vm_cloud", NOVAHawk::Providers::CloudManager::Vm)
     end
 
     def display_images
-      nested_list("template_cloud", ManageIQ::Providers::CloudManager::Template)
+      nested_list("template_cloud", NOVAHawk::Providers::CloudManager::Template)
     end
 
     def nested_list(table_name, model)

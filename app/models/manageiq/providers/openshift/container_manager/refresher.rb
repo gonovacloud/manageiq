@@ -1,10 +1,10 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Openshift
-    class ContainerManager::Refresher < ManageIQ::Providers::BaseManager::Refresher
+    class ContainerManager::Refresher < NOVAHawk::Providers::BaseManager::Refresher
       include ::EmsRefresh::Refreshers::EmsRefresherMixin
-      include ManageIQ::Providers::Kubernetes::ContainerManager::RefresherMixin
+      include NOVAHawk::Providers::Kubernetes::ContainerManager::RefresherMixin
 
-      KUBERNETES_EMS_TYPE = ManageIQ::Providers::Kubernetes::ContainerManager.ems_type
+      KUBERNETES_EMS_TYPE = NOVAHawk::Providers::Kubernetes::ContainerManager.ems_type
 
       OPENSHIFT_ENTITIES = [
         {:name => 'routes'}, {:name => 'projects'},
@@ -23,7 +23,7 @@ module ManageIQ::Providers
         end
         entities = openshift_entities.merge(kube_entities)
         EmsRefresh.log_inv_debug_trace(entities, "inv_hash:")
-        ManageIQ::Providers::Openshift::ContainerManager::RefreshParser.ems_inv_to_hashes(entities, refresher_options)
+        NOVAHawk::Providers::Openshift::ContainerManager::RefreshParser.ems_inv_to_hashes(entities, refresher_options)
       end
     end
   end

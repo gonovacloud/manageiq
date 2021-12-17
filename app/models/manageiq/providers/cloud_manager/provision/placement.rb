@@ -1,4 +1,4 @@
-module ManageIQ::Providers::CloudManager::Provision::Placement
+module NOVAHawk::Providers::CloudManager::Provision::Placement
   protected
 
   def placement

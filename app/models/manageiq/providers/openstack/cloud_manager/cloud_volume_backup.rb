@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Openstack::CloudManager::CloudVolumeBackup < ::CloudVolumeBackup
+class NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeBackup < ::CloudVolumeBackup
 end

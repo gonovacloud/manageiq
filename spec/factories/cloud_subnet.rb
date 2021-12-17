@@ -4,12 +4,12 @@ FactoryGirl.define do
     sequence(:ems_ref) { |n| "ems_ref_#{seq_padded_for_sorting(n)}" }
   end
 
-  factory :cloud_subnet_openstack, :class  => "ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet",
+  factory :cloud_subnet_openstack, :class  => "NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet",
                                    :parent => :cloud_subnet
-  factory :cloud_subnet_amazon, :class  => "ManageIQ::Providers::Amazon::NetworkManager::CloudSubnet",
+  factory :cloud_subnet_amazon, :class  => "NOVAHawk::Providers::Amazon::NetworkManager::CloudSubnet",
                                 :parent => :cloud_subnet
-  factory :cloud_subnet_azure, :class  => "ManageIQ::Providers::Azure::NetworkManager::CloudSubnet",
+  factory :cloud_subnet_azure, :class  => "NOVAHawk::Providers::Azure::NetworkManager::CloudSubnet",
                                :parent => :cloud_subnet
-  factory :cloud_subnet_google, :class  => "ManageIQ::Providers::Google::NetworkManager::CloudSubnet",
+  factory :cloud_subnet_google, :class  => "NOVAHawk::Providers::Google::NetworkManager::CloudSubnet",
                                 :parent => :cloud_subnet
 end

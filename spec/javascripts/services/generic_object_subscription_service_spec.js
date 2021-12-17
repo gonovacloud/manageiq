@@ -3,7 +3,7 @@ describe('genericObjectSubscriptionService', function() {
   var subscriptionService;
   var callback = function() {};
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function(_subscriptionService_, genericObjectSubscriptionService) {
     testService = genericObjectSubscriptionService;

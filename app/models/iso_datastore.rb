@@ -19,7 +19,7 @@ class IsoDatastore < ApplicationRecord
   end
 
   def advertised_images
-    return [] unless ext_management_system.kind_of?(ManageIQ::Providers::Redhat::InfraManager)
+    return [] unless ext_management_system.kind_of?(NOVAHawk::Providers::Redhat::InfraManager)
 
     begin
       ext_management_system.with_provider_connection do |rhevm|

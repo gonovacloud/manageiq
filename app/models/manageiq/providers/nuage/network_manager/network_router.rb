@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Nuage::NetworkManager::NetworkRouter < ::NetworkRouter
+class NOVAHawk::Providers::Nuage::NetworkManager::NetworkRouter < ::NetworkRouter
 end

@@ -1,8 +1,8 @@
 # TODO: Separate collection from parsing (perhaps collecting in parallel a la RHEVM)
 
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Openstack::NetworkManager::RefreshParser
-    include ManageIQ::Providers::Openstack::RefreshParserCommon::HelperMethods
+    include NOVAHawk::Providers::Openstack::RefreshParserCommon::HelperMethods
 
     def self.ems_inv_to_hashes(ems, options = nil)
       new(ems, options).ems_inv_to_hashes
@@ -48,7 +48,7 @@ module ManageIQ::Providers
     private
 
     def get_inventory_collection(collection_type)
-      if @ems.kind_of?(ManageIQ::Providers::Openstack::CloudManager) && ::Settings.ems.ems_openstack.refresh.is_admin
+      if @ems.kind_of?(NOVAHawk::Providers::Openstack::CloudManager) && ::Settings.ems.ems_openstack.refresh.is_admin
         @network_service.handled_list(collection_type, {}, true)
       else
         @network_service.handled_list(collection_type)
@@ -346,27 +346,27 @@ module ManageIQ::Providers
 
     class << self
       def security_group_type
-        'ManageIQ::Providers::Openstack::NetworkManager::SecurityGroup'
+        'NOVAHawk::Providers::Openstack::NetworkManager::SecurityGroup'
       end
 
       def network_router_type
-        "ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter"
+        "NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter"
       end
 
       def cloud_network_type
-        "ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork"
+        "NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork"
       end
 
       def cloud_subnet_type
-        "ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet"
+        "NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet"
       end
 
       def floating_ip_type
-        "ManageIQ::Providers::Openstack::NetworkManager::FloatingIp"
+        "NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp"
       end
 
       def network_port_type
-        "ManageIQ::Providers::Openstack::NetworkManager::NetworkPort"
+        "NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort"
       end
     end
 

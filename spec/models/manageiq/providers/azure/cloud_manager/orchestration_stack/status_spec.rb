@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Azure::CloudManager::OrchestrationStack::Status do
+describe NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack::Status do
   it 'parses Succeeded' do
     status = described_class.new('Succeeded', '')
     expect(status.completed?).to   be_truthy

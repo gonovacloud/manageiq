@@ -11,10 +11,10 @@ module AutomationExampleGroup
     unless AutomationExampleGroup.fixtures_loaded
       RSpec.configure do |config|
         config.before(:suite) do
-          puts "** Resetting ManageIQ domain"
+          puts "** Resetting NOVAHawk domain"
           Tenant.seed
           MiqAeDatastore.reset
-          MiqAeDatastore.reset_manageiq_domain
+          MiqAeDatastore.reset_novahawk_domain
         end
 
         config.after(:suite) do

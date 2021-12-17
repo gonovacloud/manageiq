@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::Vm::Operations::Guest
+module NOVAHawk::Providers::Openstack::CloudManager::Vm::Operations::Guest
   extend ActiveSupport::Concern
 
   included do

@@ -7,7 +7,7 @@ class MiddlewareMessaging < ApplicationRecord
   include LiveMetricsMixin
 
   def metrics_capture
-    @metrics_capture ||= ManageIQ::Providers::Hawkular::MiddlewareManager::LiveMetricsCapture.new(self)
+    @metrics_capture ||= NOVAHawk::Providers::Hawkular::MiddlewareManager::LiveMetricsCapture.new(self)
   end
 
   def live_metrics_name

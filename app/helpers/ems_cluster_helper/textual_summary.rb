@@ -27,7 +27,7 @@ module EmsClusterHelper::TextualSummary
   end
 
   def textual_group_openstack_status
-    return nil unless @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager::EmsCluster)
+    return nil unless @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager::EmsCluster)
     ret = textual_generate_openstack_status
 
     ret.blank? ? nil : ret
@@ -155,7 +155,7 @@ module EmsClusterHelper::TextualSummary
   end
 
   def textual_total_miq_templates
-    return nil if @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager::EmsCluster)
+    return nil if @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager::EmsCluster)
 
     num = @record.total_miq_templates
     h = {:label => _("All Templates"), :image => "vm", :value => num}
@@ -177,7 +177,7 @@ module EmsClusterHelper::TextualSummary
   end
 
   def textual_rps_size
-    return nil if @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager::EmsCluster)
+    return nil if @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager::EmsCluster)
 
     textual_link(@record.resource_pools,
                  :as   => ResourcePool,

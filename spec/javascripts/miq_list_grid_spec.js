@@ -1,9 +1,9 @@
 describe('miq_list_grid.js', function() {
   describe('#miqGridSort', function() {
     it('returns url with no double id', function() {
-      ManageIQ.actionUrl = 'show/1000000000015';
-      ManageIQ.record.parentClass = 'ems_infra';
-      ManageIQ.record.parentId = '1000000000015';
+      NOVAHawk.actionUrl = 'show/1000000000015';
+      NOVAHawk.record.parentClass = 'ems_infra';
+      NOVAHawk.record.parentId = '1000000000015';
       expect(miqGetSortUrl(1)).toMatch(/^\/ems_infra\/show\/1000000000015\?sortby=1&/);
     });
   });

@@ -1,5 +1,5 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Vmware_InfraManager_HostEsx < MiqAeServiceManageIQ_Providers_Vmware_InfraManager_Host
+  class MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_HostEsx < MiqAeServiceNOVAHawk_Providers_Vmware_InfraManager_Host
     def shutdown(force = false)
       ar_method do
         MiqQueue.put(

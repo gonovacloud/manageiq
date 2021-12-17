@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Openstack::CloudManager::Flavor < ::Flavor
+class NOVAHawk::Providers::Openstack::CloudManager::Flavor < ::Flavor
 end

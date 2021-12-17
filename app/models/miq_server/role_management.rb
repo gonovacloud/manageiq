@@ -38,7 +38,7 @@ module MiqServer::RoleManagement
 
   def apache_needed?
     # TODO: We need to splat the Array into multiple arguments for now
-    # https://github.com/ManageIQ/more_core_extensions/pull/18
+    # https://github.com/NOVAHawk/more_core_extensions/pull/18
     active_role_names.include_any?(*ROLES_NEEDING_APACHE)
   end
 

@@ -3,7 +3,7 @@ describe "Quota Validation" do
   include Spec::Support::ServiceTemplateHelper
 
   def run_automate_method(attrs)
-    MiqAeEngine.instantiate("/ManageIQ/system/request/Call_Instance?namespace=System/CommonMethods&" \
+    MiqAeEngine.instantiate("/NOVAHawk/system/request/Call_Instance?namespace=System/CommonMethods&" \
                             "class=QuotaMethods&instance=requested&#{attrs.join('&')}", @user)
   end
 

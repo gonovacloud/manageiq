@@ -14,7 +14,7 @@ function miqTreeFindNodeByKey(tree, key) {
 
 // OnCheck handler for the checkboxes in tree
 function miqOnCheckHandler(node) {
-  var url = ManageIQ.tree.checkUrl + node.key + '?check=' + (node.state.checked ? '1' : '0');
+  var url = NOVAHawk.tree.checkUrl + node.key + '?check=' + (node.state.checked ? '1' : '0');
   miqJqueryRequest(url);
 }
 
@@ -51,7 +51,7 @@ function miqRemoveNodeChildren(treename, key) {
 function miqMenuEditor(id) {
   var nid = id.split('__');
   if (nid[0] != 'r') {
-    var url = ManageIQ.tree.clickUrl + '?node_id=' + encodeURIComponent(id) + '&node_clicked=1';
+    var url = NOVAHawk.tree.clickUrl + '?node_id=' + encodeURIComponent(id) + '&node_clicked=1';
     miqJqueryRequest(url, {beforeSend: true,
       complete: true,
       no_encoding: true
@@ -62,7 +62,7 @@ function miqMenuEditor(id) {
 // OnClick handler to run tree_select server method
 function miqOnClickSelectTreeNode(id) {
   var rec_id = id.split('__');
-  var url = '/' + ManageIQ.controller + '/tree_select/?id=' + rec_id[0];
+  var url = '/' + NOVAHawk.controller + '/tree_select/?id=' + rec_id[0];
   miqJqueryRequest(url, {beforeSend: true});
 }
 
@@ -104,7 +104,7 @@ function miqOnClickProvLdapOus(id) {
   miqTreeObject('ldap_ous_tree').expandNode(node);
 
   if (id.split('_-_').length > 1) {
-    miqJqueryRequest(ManageIQ.tree.clickUrl + '?ou_id=' + id);
+    miqJqueryRequest(NOVAHawk.tree.clickUrl + '?ou_id=' + id);
     return true;
   }
 }
@@ -132,14 +132,14 @@ function miqOnCheckProvTags(node, treename) {
     return item.key;
   });
 
-  miqJqueryRequest(ManageIQ.tree.checkUrl + '?ids_checked=' + all_checked);
+  miqJqueryRequest(NOVAHawk.tree.checkUrl + '?ids_checked=' + all_checked);
   return true;
 }
 
 function miqOnClickSelectRbacTreeNode(id) {
   var tree = 'rbac_tree';
   miqTreeExpandNode(tree, 'xx-' + id.split('-')[0]);
-  miqJqueryRequest('/' + ManageIQ.controller + '/tree_select/?id=' + id + '&tree=' + tree, {beforeSend: true});
+  miqJqueryRequest('/' + NOVAHawk.controller + '/tree_select/?id=' + id + '&tree=' + tree, {beforeSend: true});
   miqTreeScrollToNode(tree, id);
 }
 
@@ -151,11 +151,11 @@ function miqTreeScrollToNode(tree, id) {
 
 function miqOnClickSelectAETreeNode(id) {
   miqTreeExpandNode('automate_tree', id);
-  miqJqueryRequest('/' + ManageIQ.controller + '/ae_tree_select/?id=' + id + '&tree=automate_tree');
+  miqJqueryRequest('/' + NOVAHawk.controller + '/ae_tree_select/?id=' + id + '&tree=automate_tree');
 }
 
 function miqOnClickIncludeDomainPrefix() {
-  miqJqueryRequest('/' + ManageIQ.controller + '/ae_tree_select_toggle?button=domain');
+  miqJqueryRequest('/' + NOVAHawk.controller + '/ae_tree_select_toggle?button=domain');
 }
 
 function miqOnClickSelectOptimizeTreeNode(id) {
@@ -189,7 +189,7 @@ function miqTreeToggleExpand(treename, expand_mode) {
 // OnCheck handler for the Protect screen
 function miqOnCheckProtect(node, _treename) {
   var ppid = node.key.split('_').pop();
-  var url = ManageIQ.tree.checkUrl + ppid + '?check=' + Number(node.state.checked);
+  var url = NOVAHawk.tree.checkUrl + ppid + '?check=' + Number(node.state.checked);
   miqJqueryRequest(url);
   return true;
 }
@@ -198,7 +198,7 @@ function miqOnCheckProtect(node, _treename) {
 function miqOnClickSnapshotTree(id) {
   var pieces = id.split(/-/);
   var shortId = pieces[pieces.length - 1]
-  miqJqueryRequest('/' + ManageIQ.controller + '/snap_pressed/' + shortId, {beforeSend: true, complete: true});
+  miqJqueryRequest('/' + NOVAHawk.controller + '/snap_pressed/' + shortId, {beforeSend: true, complete: true});
 }
 
 // OnClick handler for Host Network Tree
@@ -227,13 +227,13 @@ function miqOnClickHostNet(id) {
 function miqOnClickTimelineSelection(id) {
   if (id.split('__')[0] != 'p') {
     var rep_id = id.split('__');
-    miqJqueryRequest(ManageIQ.tree.clickUrl + '?id=' + rep_id[0], {beforeSend: true, complete: true});
+    miqJqueryRequest(NOVAHawk.tree.clickUrl + '?id=' + rep_id[0], {beforeSend: true, complete: true});
   }
 }
 
 // OnCheck handler for the belongs to drift/compare sections tree
 function miqOnCheckSections(_tree_name, key, checked, all_checked) {
-  var url = ManageIQ.tree.checkUrl + '?id=' + encodeURIComponent(key) + '&check=' + checked;
+  var url = NOVAHawk.tree.checkUrl + '?id=' + encodeURIComponent(key) + '&check=' + checked;
   miqJqueryRequest(url, {data: {all_checked: all_checked}});
   return true;
 }
@@ -241,21 +241,21 @@ function miqOnCheckSections(_tree_name, key, checked, all_checked) {
 // OnClick handler for catgories Tree
 function miqOnClickTagCat(id) {
   if (id.split('__')[0] == 't') {
-    miqJqueryRequest(ManageIQ.tree.clickUrl + '?id=' + id, {beforeSend: true, complete: true});
+    miqJqueryRequest(NOVAHawk.tree.clickUrl + '?id=' + id, {beforeSend: true, complete: true});
   }
 }
 
 // OnClick handler for Genealogy Tree
 function miqOnClickGenealogyTree(id) {
   if (id[1] === 'v') {
-    miqJqueryRequest(ManageIQ.tree.clickUrl + id, {beforeSend: true, complete: true});
+    miqJqueryRequest(NOVAHawk.tree.clickUrl + id, {beforeSend: true, complete: true});
   }
 }
 
 // OnCheck handler for the SmartProxy Affinity tree
 function miqOnClickSmartProxyAffinityCheck(node) {
   var checked = node.state.checked ? '1' : '0';
-  miqJqueryRequest(ManageIQ.tree.checkUrl + node.key + '?check=' + checked);
+  miqJqueryRequest(NOVAHawk.tree.checkUrl + node.key + '?check=' + checked);
 }
 
 function miqGetChecked(node, treename) {
@@ -269,7 +269,7 @@ function miqGetChecked(node, treename) {
   miqSetButtons(selectedKeys.length, 'center_tb');
   // Inform the backend about the checkbox changes
   if (selectedKeys.length > 0) {
-    miqJqueryRequest(ManageIQ.tree.checkUrl + '?all_checked=' + selectedKeys, {beforeSend: true, complete: true});
+    miqJqueryRequest(NOVAHawk.tree.checkUrl + '?all_checked=' + selectedKeys, {beforeSend: true, complete: true});
   }
 }
 
@@ -289,7 +289,7 @@ function miqCheckAll(cb, treename) {
   miqSetButtons(selectedKeys.length, 'center_tb');
   // Inform the backend about the checkbox changes
   if (selectedKeys.length > 0) {
-    miqJqueryRequest(ManageIQ.tree.checkUrl + '?check_all=' + cb.checked + '&all_checked=' + selectedKeys);
+    miqJqueryRequest(NOVAHawk.tree.checkUrl + '?check_all=' + cb.checked + '&all_checked=' + selectedKeys);
   }
 }
 
@@ -305,7 +305,7 @@ function miqOnClickServerRoles(id) {
     case 'svr':
     case 'role':
     case 'asr':
-      miqJqueryRequest(ManageIQ.tree.clickUrl + '?id=' + id, {beforeSend: true, complete: true});
+      miqJqueryRequest(NOVAHawk.tree.clickUrl + '?id=' + id, {beforeSend: true, complete: true});
       break;
   }
 }
@@ -314,7 +314,7 @@ function miqOnClickServerRoles(id) {
 function miqOnCheckUserFilters(node, tree_name) {
   var tree_typ = tree_name.split('_')[0];
   var checked = Number(node.state.checked);
-  var url = ManageIQ.tree.checkUrl + node.key + "?check=" + checked + "&tree_typ=" + tree_typ;
+  var url = NOVAHawk.tree.checkUrl + node.key + "?check=" + checked + "&tree_typ=" + tree_typ;
   miqJqueryRequest(url);
   return true;
 }
@@ -322,13 +322,13 @@ function miqOnCheckUserFilters(node, tree_name) {
 // OnCheck handler for Check All checkbox on C&U collection trees
 function miqCheckCUAll(cb, treename) {
   cb.checked ? miqTreeObject(treename).checkAll({silent: true}) : miqTreeObject(treename).uncheckAll({silent: true});
-  var url = ManageIQ.tree.checkUrl + '?check_all=' + cb.checked + '&tree_name=' + treename;
+  var url = NOVAHawk.tree.checkUrl + '?check_all=' + cb.checked + '&tree_name=' + treename;
   miqJqueryRequest(url);
 }
 
 // OnCheck handler for the C&U collection trees
 function miqOnCheckCUFilters(tree_name, key, checked) {
-  var url = ManageIQ.tree.checkUrl + '?id=' + key + '&check=' + checked + '&tree_name=' + tree_name;
+  var url = NOVAHawk.tree.checkUrl + '?id=' + key + '&check=' + checked + '&tree_name=' + tree_name;
   miqJqueryRequest(url);
   return true;
 }
@@ -417,16 +417,16 @@ function miqMenuChangeRow(action, elem) {
 }
 
 function miqSquashToggle(treeName) {
-  if (ManageIQ.tree.expandAll) {
+  if (NOVAHawk.tree.expandAll) {
     $('#squash_button i').attr('class', 'fa fa-minus-square-o fa-lg');
     $('#squash_button').prop('title', __('Collapse All'));
     miqTreeToggleExpand(treeName, true);
-    ManageIQ.tree.expandAll = false;
+    NOVAHawk.tree.expandAll = false;
   } else {
     $('#squash_button i').attr('class', 'fa fa-plus-square-o fa-lg');
     $('#squash_button').prop('title', __('Expand All'));
     miqTreeToggleExpand(treeName, false);
-    ManageIQ.tree.expandAll = true;
+    NOVAHawk.tree.expandAll = true;
   }
 }
 
@@ -510,11 +510,11 @@ function miqTreeClearState(tree) {
 
 function miqInitTree(options, tree) {
   if (options.check_url) {
-    ManageIQ.tree.checkUrl = options.check_url;
+    NOVAHawk.tree.checkUrl = options.check_url;
   }
 
   if (options.click_url) {
-    ManageIQ.tree.clickUrl = options.click_url;
+    NOVAHawk.tree.clickUrl = options.click_url;
   }
 
   if (options.group_changed) {

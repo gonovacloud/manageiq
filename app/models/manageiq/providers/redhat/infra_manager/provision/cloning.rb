@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Provision::Cloning
+module NOVAHawk::Providers::Redhat::InfraManager::Provision::Cloning
   def clone_complete?
     # TODO: shouldn't this error out the provision???
     return true if phase_context[:clone_task_ref].nil?
@@ -19,7 +19,7 @@ module ManageIQ::Providers::Redhat::InfraManager::Provision::Cloning
   end
 
   def find_destination_in_vmdb(ems_ref)
-    ManageIQ::Providers::Redhat::InfraManager::Vm.find_by(:name => dest_name, :ems_ref => ems_ref)
+    NOVAHawk::Providers::Redhat::InfraManager::Vm.find_by(:name => dest_name, :ems_ref => ems_ref)
   end
 
   def prepare_for_clone_task
@@ -59,7 +59,7 @@ module ManageIQ::Providers::Redhat::InfraManager::Provision::Cloning
   def start_clone(clone_options)
     source.with_provider_object do |rhevm_template|
       vm = rhevm_template.create_vm(clone_options)
-      phase_context[:new_vm_ems_ref] = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(vm[:href])
+      phase_context[:new_vm_ems_ref] = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(vm[:href])
       phase_context[:clone_task_ref] = vm.creation_status_link
     end
   end

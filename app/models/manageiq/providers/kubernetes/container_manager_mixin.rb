@@ -1,6 +1,6 @@
 require 'MiqContainerGroup/MiqContainerGroup'
 
-module ManageIQ::Providers::Kubernetes::ContainerManagerMixin
+module NOVAHawk::Providers::Kubernetes::ContainerManagerMixin
   extend ActiveSupport::Concern
 
   module ClassMethods
@@ -47,7 +47,7 @@ module ManageIQ::Providers::Kubernetes::ContainerManagerMixin
   PERF_ROLLUP_CHILDREN = :container_nodes
 
   def verify_hawkular_credentials
-    ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::HawkularClient.new(self).hawkular_try_connect
+    NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture::HawkularClient.new(self).hawkular_try_connect
   end
 
   # UI methods for determining availability of fields
@@ -122,7 +122,7 @@ module ManageIQ::Providers::Kubernetes::ContainerManagerMixin
 
   def raw_scan_job_create(entity)
     Job.create_job(
-      "ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job",
+      "NOVAHawk::Providers::Kubernetes::ContainerManager::Scanning::Job",
       :name            => "Container image analysis",
       :target_class    => entity.class.name,
       :target_id       => entity.id,

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
+describe NOVAHawk::Providers::Vmware::InfraManager::Refresher do
   before(:each) do
     EmsRefresh.debug_failures = false
 
@@ -24,7 +24,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
   end
 
   def refresh_ems(ems, error)
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Refresher)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Refresher)
       .to receive(:refresh_targets_for_ems)
       .and_raise(StandardError.new(error))
     expect do

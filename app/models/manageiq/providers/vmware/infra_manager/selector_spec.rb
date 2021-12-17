@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::SelectorSpec
+module NOVAHawk::Providers::Vmware::InfraManager::SelectorSpec
   VIM_SELECTOR_SPEC = {
     :ems_refresh_host        => [
       "MOR",
@@ -201,7 +201,7 @@ module ManageIQ::Providers::Vmware::InfraManager::SelectorSpec
       "host",
       "host.ManagedObjectReference",
       "name",
-      "parent", # Used by ManageIQ::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
+      "parent", # Used by NOVAHawk::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
       "resourcePool",
       "resourcePool.ManagedObjectReference",
       "summary.effectiveCpu",
@@ -211,7 +211,7 @@ module ManageIQ::Providers::Vmware::InfraManager::SelectorSpec
     :ems_refresh_host_res    => [
       "host",
       "host.ManagedObjectReference",
-      "parent", # Used by ManageIQ::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
+      "parent", # Used by NOVAHawk::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
       "resourcePool",
       "resourcePool.ManagedObjectReference",
     ],
@@ -219,7 +219,7 @@ module ManageIQ::Providers::Vmware::InfraManager::SelectorSpec
     :ems_refresh_rp          => [
       "MOR",
       "name",
-      "parent", # Used by ManageIQ::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
+      "parent", # Used by NOVAHawk::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
       "resourcePool",
       "resourcePool.ManagedObjectReference",
       "summary.config.cpuAllocation.expandableReservation",
@@ -241,7 +241,7 @@ module ManageIQ::Providers::Vmware::InfraManager::SelectorSpec
       "childEntity",
       "childEntity.ManagedObjectReference",
       "name",
-      "parent", # Used by ManageIQ::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
+      "parent", # Used by NOVAHawk::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
     ],
 
     :ems_refresh_dc          => [
@@ -251,7 +251,7 @@ module ManageIQ::Providers::Vmware::InfraManager::SelectorSpec
       "hostFolder",
       "hostFolder.ManagedObjectReference",
       "name",
-      "parent", # Used by ManageIQ::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
+      "parent", # Used by NOVAHawk::Providers::Vmware::InfraManager::RefreshParser::Filter#ems_metadata_inv_by_*
       "vmFolder",
       "vmFolder.ManagedObjectReference",
     ],

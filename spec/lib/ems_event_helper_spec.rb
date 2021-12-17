@@ -7,7 +7,7 @@ describe EmsEventHelper do
       @ems       = FactoryGirl.create(:ems_vmware,
                                       :zone      => @zone,
                                       :name      => 'vc7',
-                                      :hostname  => 'vc7.manageiq.com',
+                                      :hostname  => 'vc7.novahawk.com',
                                       :ipaddress => '10.10.10.2'
                                      )
       @storage   = FactoryGirl.create(:storage,
@@ -22,7 +22,7 @@ describe EmsEventHelper do
                                       :vmm_product           => 'ESX',
                                       :vmm_buildnumber       => 261974,
                                       :ipaddress             => '192.168.252.28',
-                                      :hostname              => 'host7.manageiq.com'
+                                      :hostname              => 'host7.novahawk.com'
                                      )
       @vm        = FactoryGirl.create(:vm_vmware,
                                       :ext_management_system => @ems,

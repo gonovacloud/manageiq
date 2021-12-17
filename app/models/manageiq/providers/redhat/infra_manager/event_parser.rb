@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::EventParser
+module NOVAHawk::Providers::Redhat::InfraManager::EventParser
   # Sample RHEVM Event
   #
   # :id: '13060729'
@@ -18,7 +18,7 @@ module ManageIQ::Providers::Redhat::InfraManager::EventParser
   # :vm:
   #   :id: b79de892-655a-455d-b926-4dd620bc1fd4
   #   :href: /api/vms/b79de892-655a-455d-b926-4dd620bc1fd4
-  # :description: ! 'VM shutdown initiated by bdunne on VM bd-s (Host: rhelvirt.manageiq.com).'
+  # :description: ! 'VM shutdown initiated by bdunne on VM bd-s (Host: rhelvirt.novahawk.com).'
   # :severity: normal
   # :code: 73
   # :time: 2012-08-17 12:01:25.555000000 -04:00
@@ -30,7 +30,7 @@ module ManageIQ::Providers::Redhat::InfraManager::EventParser
     _log.debug { "#{log_header}event: [#{event.inspect}]" }
 
     # Connect back to RHEV to get the actual user_name
-    ems       = ManageIQ::Providers::Redhat::InfraManager.find_by_id(ems_id)
+    ems       = NOVAHawk::Providers::Redhat::InfraManager.find_by_id(ems_id)
     user_href = ems_ref_from_object_in_event(event[:user])
     username  = nil
     if ems && user_href
@@ -56,12 +56,12 @@ module ManageIQ::Providers::Redhat::InfraManager::EventParser
 
   def self.ems_ref_from_object_in_event(data)
     return nil unless data.respond_to?(:[])
-    ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(data[:href])
+    NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(data[:href])
   end
 
   def self.parse_new_target(full_data, message, ems, event_type)
     cluster = full_data[:cluster]
-    cluster_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(cluster[:href])
+    cluster_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(cluster[:href])
 
     cluster_name = ems.with_provider_connection do |rhevm|
       Ovirt::Cluster.find_by_href(rhevm, cluster_ref).try(:[], :name)
@@ -77,9 +77,9 @@ module ManageIQ::Providers::Redhat::InfraManager::EventParser
   end
 
   def self.parse_new_vm(vm, message, event_type)
-    ems_ref = ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(vm[:href])
+    ems_ref = NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(vm[:href])
 
-    ManageIQ::Providers::Redhat::InfraManager::RefreshParser.create_vm_hash(
+    NOVAHawk::Providers::Redhat::InfraManager::RefreshParser.create_vm_hash(
       ems_ref.include?('/templates/'), ems_ref, vm[:id], parse_target_name(message, event_type))
   end
 
@@ -111,6 +111,6 @@ module ManageIQ::Providers::Redhat::InfraManager::EventParser
   end
 
   def self.parse_new_dc(dc)
-    {:ems_ref => ManageIQ::Providers::Redhat::InfraManager.make_ems_ref(dc[:href])}
+    {:ems_ref => NOVAHawk::Providers::Redhat::InfraManager.make_ems_ref(dc[:href])}
   end
 end

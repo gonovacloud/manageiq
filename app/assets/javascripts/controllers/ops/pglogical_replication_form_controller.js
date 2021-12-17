@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('pglogicalReplicationFormController', ['$http', '$scope', 'pglogicalReplicationFormId', 'miqService', '$modal', function($http, $scope, pglogicalReplicationFormId, miqService, $modal) {
+NOVAHawk.angular.app.controller('pglogicalReplicationFormController', ['$http', '$scope', 'pglogicalReplicationFormId', 'miqService', '$modal', function($http, $scope, pglogicalReplicationFormId, miqService, $modal) {
   var init = function() {
     $scope.pglogicalReplicationModel = {
       replication_type: 'none',
@@ -11,7 +11,7 @@ ManageIQ.angular.app.controller('pglogicalReplicationFormController', ['$http', 
     $scope.afterGet = false;
     $scope.modelCopy = angular.copy( $scope.pglogicalReplicationModel );
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
     $scope.model = 'pglogicalReplicationModel';
     $scope.newRecord = false;
 

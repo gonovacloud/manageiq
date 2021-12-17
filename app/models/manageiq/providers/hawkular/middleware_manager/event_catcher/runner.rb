@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher::Runner <
-  ManageIQ::Providers::BaseManager::EventCatcher::Runner
+class NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher::Runner <
+  NOVAHawk::Providers::BaseManager::EventCatcher::Runner
 
   TAG_EVENT_TYPE    = "miq.event_type".freeze # required by fetch
   TAG_RESOURCE_TYPE = "miq.resource_type".freeze # optionally provided when linking to a resource
@@ -66,7 +66,7 @@ class ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher::Runner <
   private
 
   def event_monitor_handle
-    @event_monitor_handle ||= ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher::Stream.new(@ems)
+    @event_monitor_handle ||= NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher::Stream.new(@ems)
   end
 
   def whitelist?(event)

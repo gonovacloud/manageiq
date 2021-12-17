@@ -1,4 +1,4 @@
-module ManageIQ::Providers::StorageManager::CinderManager::RefreshParser::CrossLinkers
+module NOVAHawk::Providers::StorageManager::CinderManager::RefreshParser::CrossLinkers
   class Openstack
     include Vmdb::Logging
 

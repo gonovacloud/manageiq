@@ -14,8 +14,8 @@ class MiqExpression
     CloudTenant
     CloudVolume
     Compliance
-    ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem
-    ManageIQ::Providers::ConfigurationManager
+    NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem
+    NOVAHawk::Providers::ConfigurationManager
     Container
     ContainerPerformance
     ContainerGroup
@@ -30,11 +30,11 @@ class MiqExpression
     ContainerRoute
     ContainerService
     ContainerTemplate
-    ManageIQ::Providers::CloudManager
+    NOVAHawk::Providers::CloudManager
     EmsCluster
     EmsClusterPerformance
     EmsEvent
-    ManageIQ::Providers::InfraManager
+    NOVAHawk::Providers::InfraManager
     ExtManagementSystem
     ExtManagementSystemPerformance
     Flavor
@@ -64,14 +64,14 @@ class MiqExpression
     StorageFile
     StoragePerformance
     Switch
-    ManageIQ::Providers::CloudManager::Template
-    ManageIQ::Providers::InfraManager::Template
+    NOVAHawk::Providers::CloudManager::Template
+    NOVAHawk::Providers::InfraManager::Template
     Tenant
     User
     VimPerformanceTrend
     Vm
-    ManageIQ::Providers::CloudManager::Vm
-    ManageIQ::Providers::InfraManager::Vm
+    NOVAHawk::Providers::CloudManager::Vm
+    NOVAHawk::Providers::InfraManager::Vm
     VmPerformance
     Zone
   )
@@ -243,10 +243,10 @@ class MiqExpression
   )
 
   TAG_CLASSES = {
-    'ManageIQ::Providers::CloudManager'           => 'ext_management_system',
+    'NOVAHawk::Providers::CloudManager'           => 'ext_management_system',
     'EmsCluster'                                  => 'ems_cluster',
-    'ManageIQ::Providers::InfraManager'           => 'ext_management_system',
-    'ManageIQ::Providers::ContainerManager'       => 'ext_management_system',
+    'NOVAHawk::Providers::InfraManager'           => 'ext_management_system',
+    'NOVAHawk::Providers::ContainerManager'       => 'ext_management_system',
     'ExtManagementSystem'                         => 'ext_management_system',
     'Host'                                        => 'host',
     'MiqGroup'                                    => 'miq_group',
@@ -254,18 +254,18 @@ class MiqExpression
     'ResourcePool'                                => 'resource_pool',
     'Service'                                     => 'service',
     'Storage'                                     => 'storage',
-    'ManageIQ::Providers::CloudManager::Template' => 'miq_template',
-    'ManageIQ::Providers::InfraManager::Template' => 'miq_template',
+    'NOVAHawk::Providers::CloudManager::Template' => 'miq_template',
+    'NOVAHawk::Providers::InfraManager::Template' => 'miq_template',
     'User'                                        => 'user',
     'Vm'                                          => 'vm',
     'VmOrTemplate'                                => 'vm',
-    'ManageIQ::Providers::CloudManager::Vm'       => 'vm',
-    'ManageIQ::Providers::InfraManager::Vm'       => 'vm',
+    'NOVAHawk::Providers::CloudManager::Vm'       => 'vm',
+    'NOVAHawk::Providers::InfraManager::Vm'       => 'vm',
     'ContainerProject'                            => 'container_project',
     'ContainerImage'                              => 'container_image'
   }
   EXCLUDE_FROM_RELATS = {
-    "ManageIQ::Providers::CloudManager" => ["hosts", "ems_clusters", "resource_pools"]
+    "NOVAHawk::Providers::CloudManager" => ["hosts", "ems_clusters", "resource_pools"]
   }
 
   FORMAT_SUB_TYPES = {

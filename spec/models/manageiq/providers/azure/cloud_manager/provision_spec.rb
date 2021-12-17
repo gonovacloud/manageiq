@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Azure::CloudManager::Provision do
+describe NOVAHawk::Providers::Azure::CloudManager::Provision do
   let(:provider)     { FactoryGirl.create(:ems_azure_with_authentication) }
   let(:template)     { FactoryGirl.create(:template_azure, :ext_management_system => provider) }
   let(:flavor)       { FactoryGirl.create(:flavor_azure) }
@@ -139,7 +139,7 @@ describe ManageIQ::Providers::Azure::CloudManager::Provision do
                                    :status       => 'Ok',
                                    :options      => options)
 
-      workflow_class = ManageIQ::Providers::Azure::CloudManager::ProvisionWorkflow
+      workflow_class = NOVAHawk::Providers::Azure::CloudManager::ProvisionWorkflow
       allow_any_instance_of(workflow_class).to receive(:get_dialogs).and_return(:dialogs => {})
 
       expect(vm_prov.workflow.class).to eq workflow_class

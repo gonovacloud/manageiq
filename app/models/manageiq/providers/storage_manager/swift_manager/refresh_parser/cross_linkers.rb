@@ -1,4 +1,4 @@
-module ManageIQ::Providers::StorageManager::SwiftManager::RefreshParser::CrossLinkers
+module NOVAHawk::Providers::StorageManager::SwiftManager::RefreshParser::CrossLinkers
   def self.cross_link(ems, data)
     parent_manager = ems.parent_manager
     unless parent_manager

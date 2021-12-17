@@ -1,6 +1,6 @@
 require 'azure-armrest'
 
-describe ManageIQ::Providers::Azure::CloudManager::OrchestrationStack do
+describe NOVAHawk::Providers::Azure::CloudManager::OrchestrationStack do
   let(:ems) { FactoryGirl.create(:ems_azure_with_authentication) }
   let(:template) { FactoryGirl.create(:orchestration_template_azure_with_content) }
   let(:orchestration_service) { double }
@@ -14,7 +14,7 @@ describe ManageIQ::Providers::Azure::CloudManager::OrchestrationStack do
 
 
   before do
-    allow(ManageIQ::Providers::Azure::CloudManager).to receive(:raw_connect).and_return(double)
+    allow(NOVAHawk::Providers::Azure::CloudManager).to receive(:raw_connect).and_return(double)
     allow(Azure::Armrest::TemplateDeploymentService).to receive(:new).and_return(orchestration_service)
   end
 
@@ -29,7 +29,7 @@ describe ManageIQ::Providers::Azure::CloudManager::OrchestrationStack do
       it 'creates a stack' do
         expect(orchestration_service).to receive(:create).and_return(the_raw_stack)
 
-        stack = ManageIQ::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, {})
+        stack = NOVAHawk::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, {})
         expect(stack.class).to   eq(described_class)
         expect(stack.name).to    eq('mystack')
         expect(stack.ems_ref).to eq(the_raw_stack.id)
@@ -39,7 +39,7 @@ describe ManageIQ::Providers::Azure::CloudManager::OrchestrationStack do
         expect(orchestration_service).to receive(:create).and_raise('bad request')
 
         expect do
-          ManageIQ::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, {})
+          NOVAHawk::Providers::CloudManager::OrchestrationStack.create_stack(ems, 'mystack', template, {})
         end.to raise_error(MiqException::MiqOrchestrationProvisionError)
       end
     end

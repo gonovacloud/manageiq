@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::CloudVolume::Operations
+module NOVAHawk::Providers::Openstack::CloudManager::CloudVolume::Operations
   def validate_attach_volume
     validate_volume_available
   end

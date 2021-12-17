@@ -8,5 +8,5 @@ SampleEvmGroup-super_administrator:
   - - /managed/environment/dev
     - /managed/environment/test
   belongsto: 
-  - /belongsto/ExtManagementSystem|dev010.manageiq.com/EmsFolder|Datacenters/EmsFolder|Dev010/EmsFolder|host/EmsCluster|GTCluster
-  - /belongsto/ExtManagementSystem|dev010.manageiq.com/EmsFolder|Datacenters/EmsFolder|Dev010/EmsFolder|vm/EmsFolder|Discovered Virtual Machine
+  - /belongsto/ExtManagementSystem|dev010.novahawk.com/EmsFolder|Datacenters/EmsFolder|Dev010/EmsFolder|host/EmsCluster|GTCluster
+  - /belongsto/ExtManagementSystem|dev010.novahawk.com/EmsFolder|Datacenters/EmsFolder|Dev010/EmsFolder|vm/EmsFolder|Discovered Virtual Machine

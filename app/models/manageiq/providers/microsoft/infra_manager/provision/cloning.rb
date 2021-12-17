@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Microsoft::InfraManager::Provision::Cloning
+module NOVAHawk::Providers::Microsoft::InfraManager::Provision::Cloning
   MT_POINT_REGEX = %r{file://.*?/(.*)}i
 
   def log_clone_options(clone_options)
@@ -15,7 +15,7 @@ module ManageIQ::Providers::Microsoft::InfraManager::Provision::Cloning
   end
 
   def find_destination_in_vmdb(ems_ref)
-    ManageIQ::Providers::Microsoft::InfraManager::Vm.find_by(:name => dest_name, :ems_ref => ems_ref)
+    NOVAHawk::Providers::Microsoft::InfraManager::Vm.find_by(:name => dest_name, :ems_ref => ems_ref)
   end
 
   def prepare_for_clone_task
@@ -119,7 +119,7 @@ module ManageIQ::Providers::Microsoft::InfraManager::Provision::Cloning
     <<-PS_SCRIPT
     Import-Module VirtualMachineManager | Out-Null; \
       $template = Get-SCVMTemplate -Name '#{source.name}'; \
-      $vmconfig = New-SCVMConfiguration -VMTemplate $template -Name 'ManageIQConfig-#{dest_name}'; \
+      $vmconfig = New-SCVMConfiguration -VMTemplate $template -Name 'NOVAHawkConfig-#{dest_name}'; \
       $vmhost   = Get-SCVMHost -ComputerName '#{dest_host}'; \
 
       Set-SCVMConfiguration \
@@ -143,7 +143,7 @@ module ManageIQ::Providers::Microsoft::InfraManager::Provision::Cloning
   def start_clone(_clone_options)
     $scvmm_log.debug(build_ps_script)
     json_results = source.ext_management_system.run_powershell_script(build_ps_script)
-    vm_json      = ManageIQ::Providers::Microsoft::InfraManager.parse_json_results(json_results)
+    vm_json      = NOVAHawk::Providers::Microsoft::InfraManager.parse_json_results(json_results)
     phase_context[:new_vm_ems_ref] = vm_json["ID"]
   end
 end

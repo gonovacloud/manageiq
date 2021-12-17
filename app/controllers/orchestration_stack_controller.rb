@@ -34,7 +34,7 @@ class OrchestrationStackController < ApplicationController
       title = ui_lookup(:tables => "vm_cloud")
       drop_breadcrumb(:name => _("%{name} (All %{title})") % {:name => @orchestration_stack.name, :title => title},
                       :url  => "/orchestration_stack/show/#{@orchestration_stack.id}?display=#{@display}")
-      @view, @pages = get_view(ManageIQ::Providers::CloudManager::Vm, :parent => @orchestration_stack)
+      @view, @pages = get_view(NOVAHawk::Providers::CloudManager::Vm, :parent => @orchestration_stack)
       @showtype = @display
     when "children"
       title = ui_lookup(:tables => "orchestration_stack")
@@ -63,7 +63,7 @@ class OrchestrationStackController < ApplicationController
 
   def show_list
     process_show_list(
-      :where_clause => "orchestration_stacks.type != 'ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job'"
+      :where_clause => "orchestration_stacks.type != 'NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job'"
     )
   end
 

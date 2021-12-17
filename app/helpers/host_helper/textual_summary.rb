@@ -54,12 +54,12 @@ module HostHelper::TextualSummary
   end
 
   def textual_group_openstack_service_status
-    return nil unless @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager::Host)
+    return nil unless @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager::Host)
     textual_generate_openstack_status
   end
 
   def textual_group_openstack_hardware_status
-    return nil unless @record.kind_of?(ManageIQ::Providers::Openstack::InfraManager::Host)
+    return nil unless @record.kind_of?(NOVAHawk::Providers::Openstack::InfraManager::Host)
     %i(introspected provision_state)
   end
 

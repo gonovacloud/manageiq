@@ -1,6 +1,6 @@
 describe('validationStatus initialization', function() {
   var $scope, form;
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
   beforeEach(inject(function($compile, $rootScope) {
     $scope = $rootScope;
     $scope.model = "emsCommonModel";

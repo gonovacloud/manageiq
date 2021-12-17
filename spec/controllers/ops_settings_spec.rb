@@ -173,7 +173,7 @@ describe OpsController do
       context 'adding an LDAP Trusted Forest' do
         before(:each) do
           EvmSpecHelper.create_guid_miq_server_zone
-          @user_proxies = {:ldaphost => 'ldap.manageiq1.org',
+          @user_proxies = {:ldaphost => 'ldap.novahawk1.org',
                            :ldapport => '389',
                            :mode     => 'ldap',
                            :basedn   => 'cn=groups,cn=accounts,dc=miq',

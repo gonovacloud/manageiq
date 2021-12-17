@@ -124,11 +124,11 @@ describe MiqRequest do
     context "using Polymorphic Resource" do
       let(:provision_request) { FactoryGirl.create(:miq_provision_request, :requester => fred, :src_vm_id => template.id) }
 
-      it { expect(provision_request.workflow_class).to eq(ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow) }
+      it { expect(provision_request.workflow_class).to eq(NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow) }
 
       it "#workflow" do
         expect(provision_request.workflow({:number_of_vms => 1}, :skip_dialog_load => true))
-          .to be_a ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow
+          .to be_a NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow
       end
 
       describe("#get_options")          { it { expect(provision_request.get_options).to eq(:number_of_vms => 1) } }
@@ -336,7 +336,7 @@ describe MiqRequest do
     let(:host) { double('Host', :id => 1, :name => 'my_host') }
 
     it "calls password_helper when a block is passed in" do
-      expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow).to receive(:password_helper).twice
+      expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow).to receive(:password_helper).twice
       provision_request.workflow({}, {:allowed_hosts => [host], :skip_dialog_load => true}) { |_x| 'test' }
     end
   end

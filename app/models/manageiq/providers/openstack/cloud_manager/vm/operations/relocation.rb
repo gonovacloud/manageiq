@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::Vm::Operations::Relocation
+module NOVAHawk::Providers::Openstack::CloudManager::Vm::Operations::Relocation
   extend ActiveSupport::Concern
 
   included do

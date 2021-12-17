@@ -95,7 +95,7 @@ describe MiqAeDatastore do
   end
 
   it ".default_domain_names" do
-    expect(MiqAeDatastore.default_domain_names).to include("ManageIQ")
+    expect(MiqAeDatastore.default_domain_names).to include("NOVAHawk")
   end
 
   it "temporary file cleanup for unsuccessful import" do

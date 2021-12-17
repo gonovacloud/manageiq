@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google
+module NOVAHawk::Providers::Google
   class Resource
     def initialize(uri)
       @type = parse_resource_type(uri)

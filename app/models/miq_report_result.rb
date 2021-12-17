@@ -123,9 +123,9 @@ class MiqReportResult < ApplicationRecord
   # FIXME:  Hack because userid column is overridden with multiple column info using | character
   #
   # Examples:
-  #    widget_id_12|ulee@manageiq.com|schedule
-  #    ulee@manageiq.com|370709335b2b786aa1d2ac302dada217|adhoc
-  #    ulee@manageiq.com
+  #    widget_id_12|ulee@novahawk.com|schedule
+  #    ulee@novahawk.com|370709335b2b786aa1d2ac302dada217|adhoc
+  #    ulee@novahawk.com
   #
   # Derived Specifications:
   #    widget_id_xx|userid|mode=schedule

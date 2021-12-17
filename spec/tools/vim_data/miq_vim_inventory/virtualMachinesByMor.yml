@@ -8290,7 +8290,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: DEV-JoeR.manageiq.com
+        str: DEV-JoeR.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -10668,7 +10668,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: DEV-GreggT.manageiq.com
+        str: DEV-GreggT.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -28330,7 +28330,7 @@
       annotation: !str:VimString 
         str: |-
           Owner: Roderick Moore
-          Email: rmoore@manageiq.com
+          Email: rmoore@novahawk.com
           Source Template: Win2k8Template
           
           MIQ GUID=bd083bc0-80a4-11e0-88cf-005056910005
@@ -33997,7 +33997,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: DEV-TinaF.manageiq.com
+        str: DEV-TinaF.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -40832,7 +40832,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: Citrix-Mahwah1.manageiq.com
+        str: Citrix-Mahwah1.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -41945,8 +41945,8 @@
         "@xsiType": :"SOAP::SOAPString"
       annotation: !str:VimString 
         str: |-
-          Owner: Rod @ManageIQ
-          Email: rmanageiq@manageiq.com
+          Owner: Rod @NOVAHawk
+          Email: rnovahawk@novahawk.com
           Source Template: Win2k8Template
           
           MIQ GUID=cf37f430-80c6-11e0-a758-005056910005
@@ -44080,7 +44080,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: Citrix-Mahwah2.manageiq.com
+        str: Citrix-Mahwah2.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -55712,7 +55712,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: citrix5.manageiq.com
+        str: citrix5.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -75547,7 +75547,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: DEV-Oleg.manageiq.com
+        str: DEV-Oleg.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -88678,7 +88678,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: DEV-RichO.manageiq.com
+        str: DEV-RichO.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 
@@ -97109,7 +97109,7 @@
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       hostName: !str:VimString 
-        str: DEV-HarpreetK.manageiq.com
+        str: DEV-HarpreetK.novahawk.com
         "@vimType": 
         "@xsiType": :"SOAP::SOAPString"
       __iv__@vimType: 

@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('providerForemanFormController', ['$http', '$scope', 'providerForemanFormId', 'miqService', function($http, $scope, providerForemanFormId, miqService) {
+NOVAHawk.angular.app.controller('providerForemanFormController', ['$http', '$scope', 'providerForemanFormId', 'miqService', function($http, $scope, providerForemanFormId, miqService) {
     var init = function() {
       $scope.providerForemanModel = {
         provtype: '',
@@ -16,7 +16,7 @@ ManageIQ.angular.app.controller('providerForemanFormController', ['$http', '$sco
       $scope.modelCopy = angular.copy( $scope.providerForemanModel );
       $scope.model = 'providerForemanModel';
 
-      ManageIQ.angular.scope = $scope;
+      NOVAHawk.angular.scope = $scope;
 
       if (providerForemanFormId == 'new') {
         $scope.newRecord = true;

@@ -2,7 +2,7 @@ describe PxeMenuIpxe do
   before(:each) do
     @contents = <<-PXEMENU
 #!ipxe
-menu ManageIQ iPXE Boot Menu
+menu NOVAHawk iPXE Boot Menu
 item --gap -- -----Live Images:
 item ud1204 Ubuntu 12.04 Desktop x64
 #item ud1204_commented_in_menu Ubuntu 12.04 Desktop x64
@@ -63,7 +63,7 @@ PXEMENU
 
     @contents2 = <<-PXEMENU
 #!ipxe
-menu ManageIQ iPXE Boot Menu
+menu NOVAHawk iPXE Boot Menu
 item --gap -- -----Live Images:
 item rhel62host   RHEL6.2 Host
 choose os && goto ${os}

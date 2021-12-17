@@ -21,13 +21,13 @@ describe "Widget Chart Content" do
 
   it "#generate_content_for_user" do
     content = widget.generate_one_content_for_user(@group, @user)
-    expect(content.miq_report_result.html_rows.count { |c| c.match("<td>VMware</td>") }).to eq(ManageIQ::Providers::Vmware::InfraManager::Vm.count)
+    expect(content.miq_report_result.html_rows.count { |c| c.match("<td>VMware</td>") }).to eq(NOVAHawk::Providers::Vmware::InfraManager::Vm.count)
     expect(widget.contents_for_user(@user)).to eq(content)
   end
 
   it "#generate_content for group" do
     content = widget.generate_one_content_for_group(@user.current_group, @user.get_timezone)
-    expect(content.miq_report_result.html_rows.count { |c| c.match("<td>VMware</td>") }).to eq(ManageIQ::Providers::Vmware::InfraManager::Vm.count)
+    expect(content.miq_report_result.html_rows.count { |c| c.match("<td>VMware</td>") }).to eq(NOVAHawk::Providers::Vmware::InfraManager::Vm.count)
     expect(widget.contents_for_user(@user)).to eq(content)
   end
 

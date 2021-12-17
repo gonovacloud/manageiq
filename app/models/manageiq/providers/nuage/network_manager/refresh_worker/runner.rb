@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Nuage::NetworkManager::RefreshWorker::Runner < ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+class NOVAHawk::Providers::Nuage::NetworkManager::RefreshWorker::Runner < NOVAHawk::Providers::BaseManager::RefreshWorker::Runner
 end

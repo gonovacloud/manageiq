@@ -1,7 +1,7 @@
 describe('arbitrationProfileFormController', function() {
   var $scope, $controller, postService;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, $location, _$controller_, miqService, _postService_, arbitrationProfileDataFactory) {
     postService = _postService_;

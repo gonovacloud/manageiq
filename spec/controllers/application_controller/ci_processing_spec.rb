@@ -156,7 +156,7 @@ describe ApplicationController do
                                   :supports_discovery? => true,
                                   :ems_type            => 'example',
                                   :description         => 'Example Manager')
-      allow(ManageIQ::Providers::CloudManager).to receive(:subclasses).and_return([cloud_manager_stub])
+      allow(NOVAHawk::Providers::CloudManager).to receive(:subclasses).and_return([cloud_manager_stub])
       controller.send(:discover)
       expect(response.status).to eq(200)
       expect(controller.instance_variable_get(:@discover_type)).to include(["Example Manager", "example"])

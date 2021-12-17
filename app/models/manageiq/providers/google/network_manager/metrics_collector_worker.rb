@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Google::NetworkManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
+class NOVAHawk::Providers::Google::NetworkManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
   self.default_queue_name = "google_network"
 
   def friendly_name
@@ -6,7 +6,7 @@ class ManageIQ::Providers::Google::NetworkManager::MetricsCollectorWorker < ::Mi
   end
 
   def self.ems_class
-    ManageIQ::Providers::Google::NetworkManager
+    NOVAHawk::Providers::Google::NetworkManager
   end
 
   def self.settings_name

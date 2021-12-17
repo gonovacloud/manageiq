@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::NetworkManager::FloatingIp < ::FloatingIp
+class NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp < ::FloatingIp
   include ProviderObjectMixin
   include AsyncDeleteMixin
 

@@ -1,9 +1,9 @@
-require Rails.root.join('db/fixtures/ae_datastore/ManageIQ/ConfigurationManagement/AnsibleTower/Service/Provisioning/StateMachines/Provision.class/__methods__/provision').to_s
+require Rails.root.join('db/fixtures/ae_datastore/NOVAHawk/ConfigurationManagement/AnsibleTower/Service/Provisioning/StateMachines/Provision.class/__methods__/provision').to_s
 
 describe AnsibleTowerProvision do
   let(:admin) { FactoryGirl.create(:user_admin) }
   let(:request) { FactoryGirl.create(:service_template_provision_request, :requester => admin) }
-  let(:job_class) { ManageIQ::Providers::AnsibleTower::ConfigurationManager::Job }
+  let(:job_class) { NOVAHawk::Providers::AnsibleTower::ConfigurationManager::Job }
   let(:ansible_tower_manager) { FactoryGirl.create(:configuration_manager) }
   let(:job_template) { FactoryGirl.create(:ansible_configuration_script, :manager => ansible_tower_manager) }
   let(:service_ansible_tower) { FactoryGirl.create(:service_ansible_tower, :job_template => job_template) }

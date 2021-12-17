@@ -403,7 +403,7 @@ describe AuthenticationMixin do
 
       it "should not raise :changed event or queue authentication_check if creds unchanged" do
         expect(@auth).to receive(:raise_event).with(:changed).never
-        expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive(:authentication_check_types_queue).never
+        expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive(:authentication_check_types_queue).never
         @auth.send(:after_authentication_changed)
       end
 

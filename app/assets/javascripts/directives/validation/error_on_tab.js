@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('errorOnTab', ['$timeout', function($timeout) {
+NOVAHawk.angular.app.directive('errorOnTab', ['$timeout', function($timeout) {
   return {
     link: function (scope, elem, attrs) {
       scope.$on('setErrorOnTab', function(e, args) {

@@ -1,6 +1,6 @@
 require Rails.root.join('spec/tools/vim_data/vim_data_test_helper')
 
-describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
+describe NOVAHawk::Providers::Vmware::InfraManager::Refresher do
   before(:each) do
     guid, server, zone = EvmSpecHelper.create_guid_miq_server_zone
     @ems = FactoryGirl.create(
@@ -10,11 +10,11 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
       :ipaddress => "192.168.252.14"
     )
 
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager)
       .to receive(:connect).and_return(FakeMiqVimHandle.new)
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager)
       .to receive(:disconnect).and_return(true)
-    allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager)
+    allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager)
       .to receive(:has_credentials?).and_return(true)
   end
 
@@ -360,14 +360,14 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
   end
 
   def assert_specific_host
-    @host = ManageIQ::Providers::Vmware::InfraManager::Host.find_by_name("VI4ESXM1.manageiq.com")
+    @host = NOVAHawk::Providers::Vmware::InfraManager::Host.find_by_name("VI4ESXM1.novahawk.com")
     expect(@host).to have_attributes(
       :ems_ref          => "host-9",
       :ems_ref_obj      => VimString.new("host-9", :HostSystem, :ManagedObjectReference),
-      :name             => "VI4ESXM1.manageiq.com",
-      :hostname         => "VI4ESXM1.manageiq.com",
+      :name             => "VI4ESXM1.novahawk.com",
+      :hostname         => "VI4ESXM1.novahawk.com",
       :ipaddress        => "192.168.252.13",
-      :uid_ems          => "vi4esxm1.manageiq.com",
+      :uid_ems          => "vi4esxm1.novahawk.com",
       :vmm_vendor       => "vmware",
       :vmm_version      => "4.1.0",
       :vmm_product      => "ESXi",
@@ -396,7 +396,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
     )
 
     expect(@host.operating_system).to have_attributes(
-      :name         => "VI4ESXM1.manageiq.com",
+      :name         => "VI4ESXM1.novahawk.com",
       :product_name => "ESXi",
       :version      => "4.1.0",
       :build_number => "260247",
@@ -569,7 +569,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
   end
 
   def assert_specific_vm
-    v = ManageIQ::Providers::Vmware::InfraManager::Vm.find_by_name("JoeF 4.0.1")
+    v = NOVAHawk::Providers::Vmware::InfraManager::Vm.find_by_name("JoeF 4.0.1")
     expect(v).to have_attributes(
       :template              => false,
       :ems_ref               => "vm-11342",
@@ -704,7 +704,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
 
   def assert_cpu_layout
     # Test a VM that has numCoresPerSocket = 0
-    v = ManageIQ::Providers::Vmware::InfraManager::Vm.find_by_ems_ref("vm-12443")
+    v = NOVAHawk::Providers::Vmware::InfraManager::Vm.find_by_ems_ref("vm-12443")
     expect(v).to have_attributes(
       :cpu_total_cores => 2,
     )
@@ -715,7 +715,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
     )
 
     # Test a VM that has numCoresPerSocket = 2
-    v = ManageIQ::Providers::Vmware::InfraManager::Vm.find_by_ems_ref("vm-12203")
+    v = NOVAHawk::Providers::Vmware::InfraManager::Vm.find_by_ems_ref("vm-12203")
     expect(v).to have_attributes(
       :cpu_total_cores => 4,
     )
@@ -731,97 +731,97 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
       [EmsFolder, "Datacenters", {:hidden => true}] => {
         [Datacenter, "Dev"]            => {
           [EmsFolder, "host", {:hidden => true}] => {
-            [ManageIQ::Providers::Vmware::InfraManager::HostEsx, "vi4esxm3.manageiq.com"] => {
-              [ResourcePool, "Default for Host / Node vi4esxm3.manageiq.com", {:is_default => true}] => {
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "Dev Cucumber Nightly Appl 2011-05-19"]              => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-GreggT"]                                        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-GregM"]                                         => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-HarpreetK"]                                     => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-JoeR"]                                          => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-Oleg"]                                          => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-RichO"]                                         => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "GM Nightly Appl 2011-05-19"]                        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "GT Nightly Appl 2011-02-19"]                        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "Hennessy ReiserFS ubuntu server"]                   => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "HK-Dev Cucumber Nightly Appl 2011-05-19"]           => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "Jason Nightly Appl 2011-02-19"]                     => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR- Dev Cucumber Nightly Appl 2011-05-19 - backup"] => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandback-testing-April14_backup"]  => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox"]                          => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-for-tina"]                 => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing"]                  => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing-Apr14"]            => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-Cucumber-Capybara-Akephalos unit tester"]        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-2"]                                 => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-centos"]                      => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-redhat"]                      => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-3"]                                 => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-redo"]                              => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4_0_1_9"]                                    => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-9.9-27736-2011-04-01"]                       => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM3_3_2_32_svn_memprof"]                        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM_3_3_2_32_svn_memprof_for_comparison"]        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM_4_0_1_8_svn_memprof"]                        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-Region-5-26665-2011-02-22"]                      => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-Region-99-26665-2011-02-22"]                     => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-SQL2005"]                                        => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-SQL2005-CLONE"]                                  => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-svn-nightly-25707-2010-12-26"]                   => {},
-                [ManageIQ::Providers::Vmware::InfraManager::Vm, "test3"]                                             => {}
+            [NOVAHawk::Providers::Vmware::InfraManager::HostEsx, "vi4esxm3.novahawk.com"] => {
+              [ResourcePool, "Default for Host / Node vi4esxm3.novahawk.com", {:is_default => true}] => {
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Dev Cucumber Nightly Appl 2011-05-19"]              => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-GreggT"]                                        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-GregM"]                                         => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-HarpreetK"]                                     => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-JoeR"]                                          => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-Oleg"]                                          => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-RichO"]                                         => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "GM Nightly Appl 2011-05-19"]                        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "GT Nightly Appl 2011-02-19"]                        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Hennessy ReiserFS ubuntu server"]                   => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "HK-Dev Cucumber Nightly Appl 2011-05-19"]           => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Jason Nightly Appl 2011-02-19"]                     => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR- Dev Cucumber Nightly Appl 2011-05-19 - backup"] => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandback-testing-April14_backup"]  => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox"]                          => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-for-tina"]                 => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing"]                  => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing-Apr14"]            => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-Cucumber-Capybara-Akephalos unit tester"]        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-2"]                                 => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-centos"]                      => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-redhat"]                      => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-3"]                                 => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-redo"]                              => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4_0_1_9"]                                    => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-9.9-27736-2011-04-01"]                       => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM3_3_2_32_svn_memprof"]                        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM_3_3_2_32_svn_memprof_for_comparison"]        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM_4_0_1_8_svn_memprof"]                        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-Region-5-26665-2011-02-22"]                      => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-Region-99-26665-2011-02-22"]                     => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-SQL2005"]                                        => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-SQL2005-CLONE"]                                  => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-svn-nightly-25707-2010-12-26"]                   => {},
+                [NOVAHawk::Providers::Vmware::InfraManager::Vm, "test3"]                                             => {}
               }
             }
           },
           [EmsFolder, "vm", {:hidden => true}]   => {
             [EmsFolder, "Discovered virtual machine", {:hidden => false}]                           => {},
             [EmsFolder, "GreggT", {:hidden => false}]                                               => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-GreggT"]                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "GT Nightly Appl 2011-02-19"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-GreggT"]                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "GT Nightly Appl 2011-02-19"] => {}
             },
             [EmsFolder, "GregM", {:hidden => false}]                                                => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-GregM"]                  => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "GM Nightly Appl 2011-05-19"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-GregM"]                  => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "GM Nightly Appl 2011-05-19"] => {}
             },
             [EmsFolder, "Harpreet", {:hidden => false}]                                             => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-HarpreetK"]                           => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "HK-Dev Cucumber Nightly Appl 2011-05-19"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-HarpreetK"]                           => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "HK-Dev Cucumber Nightly Appl 2011-05-19"] => {}
             },
             [EmsFolder, "Jason", {:hidden => false}]                                                => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Jason Nightly Appl 2011-02-19"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Jason Nightly Appl 2011-02-19"] => {}
             },
             [EmsFolder, "JoeR", {:hidden => false}]                                                 => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-JoeR"]                                          => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR- Dev Cucumber Nightly Appl 2011-05-19 - backup"] => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandback-testing-April14_backup"]  => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox"]                          => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-for-tina"]                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing"]                  => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing-Apr14"]            => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-Cucumber-Capybara-Akephalos unit tester"]        => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-2"]                                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-centos"]                      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-redhat"]                      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-3"]                                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-redo"]                              => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-4_0_1_9"]                                    => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM-9.9-27736-2011-04-01"]                       => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM3_3_2_32_svn_memprof"]                        => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM_3_3_2_32_svn_memprof_for_comparison"]        => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-EVM_4_0_1_8_svn_memprof"]                        => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-Region-5-26665-2011-02-22"]                      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-Region-99-26665-2011-02-22"]                     => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-SQL2005"]                                        => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-SQL2005-CLONE"]                                  => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JR-svn-nightly-25707-2010-12-26"]                   => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-JoeR"]                                          => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR- Dev Cucumber Nightly Appl 2011-05-19 - backup"] => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandback-testing-April14_backup"]  => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox"]                          => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-for-tina"]                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing"]                  => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-cruisecontrol-sandbox-testing-Apr14"]            => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-Cucumber-Capybara-Akephalos unit tester"]        => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-2"]                                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-centos"]                      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-28620-redhat"]                      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-3"]                                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4.0.1.14-redo"]                              => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-4_0_1_9"]                                    => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM-9.9-27736-2011-04-01"]                       => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM3_3_2_32_svn_memprof"]                        => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM_3_3_2_32_svn_memprof_for_comparison"]        => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-EVM_4_0_1_8_svn_memprof"]                        => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-Region-5-26665-2011-02-22"]                      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-Region-99-26665-2011-02-22"]                     => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-SQL2005"]                                        => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-SQL2005-CLONE"]                                  => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JR-svn-nightly-25707-2010-12-26"]                   => {}
             },
-            [ManageIQ::Providers::Vmware::InfraManager::Template, "RcuCloneTestTemplate"]           => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Template, "XavTmpl"]                        => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Template, "xyz"]                            => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Template, "xyz1"]                           => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "Dev Cucumber Nightly Appl 2011-05-19"] => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-Oleg"]                             => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-RichO"]                            => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "Hennessy ReiserFS ubuntu server"]      => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "test3"]                                => {}
+            [NOVAHawk::Providers::Vmware::InfraManager::Template, "RcuCloneTestTemplate"]           => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Template, "XavTmpl"]                        => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Template, "xyz"]                            => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Template, "xyz1"]                           => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Dev Cucumber Nightly Appl 2011-05-19"] => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-Oleg"]                             => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-RichO"]                            => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Hennessy ReiserFS ubuntu server"]      => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "test3"]                                => {}
           }
         },
         [Datacenter, "New Datacenter"] => {
@@ -834,94 +834,94 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
               [ResourcePool, "Default for Cluster / Deployment Role Testing-Production Cluster",
                {:is_default => true}] => {
                  [ResourcePool, "Citrix", {:is_default => false}]                      => {
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "Citrix 5"] => {}
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Citrix 5"] => {}
                  },
                  [ResourcePool, "Citrix VDI VM's", {:is_default => false}]             => {
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah1"] => {},
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah2"] => {}
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah1"] => {},
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah2"] => {}
                  },
                  [ResourcePool, "Production Test environment", {:is_default => false}] => {
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "M-TestDC1"]     => {},
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "VC41Test"]      => {},
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "VC41Test-Prod"] => {}
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "M-TestDC1"]     => {},
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "VC41Test"]      => {},
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "VC41Test-Prod"] => {}
                  },
                  [ResourcePool, "Testing", {:is_default => false}]                     => {
                    [ResourcePool, "Brandon", {:is_default => false}]           => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "BD-EVM-4.0.1.15"]          => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "BD-EVM-Nightly 28939-svn"] => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "BD-EVM-4.0.1.15"]          => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "BD-EVM-Nightly 28939-svn"] => {}
                    },
                    [ResourcePool, "Joe", {:is_default => false}]               => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "JoeF 4.0.1"] => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JoeF 4.0.1"] => {}
                    },
                    [ResourcePool, "Marianne", {:is_default => false}]          => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_3_3_2_34"]               => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_40115_svn_formigrate"]   => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "MGF_Branch_332_svn"]         => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_branch_40115_svn"]       => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_branch_4015_svn"]        => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_build_332_31"]           => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_build_40116"]            => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_build_40116_formigrate"] => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_nightly_trunk_svn"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_trunk_nightly_v4"]       => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_3_3_2_34"]               => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_40115_svn_formigrate"]   => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "MGF_Branch_332_svn"]         => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_branch_40115_svn"]       => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_branch_4015_svn"]        => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_build_332_31"]           => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_build_40116"]            => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_build_40116_formigrate"] => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_nightly_trunk_svn"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_trunk_nightly_v4"]       => {}
                    },
                    [ResourcePool, "Rich", {:is_default => false}]              => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "ESX-TESTVCINTEGRATION"] => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host1"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host2"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host3"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host4"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host5"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent1"]    => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent2"]    => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent3"]    => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetappDsTest2"]         => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest4"]         => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest5"]         => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest6"]         => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest7"]         => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "ESX-TESTVCINTEGRATION"] => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host1"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host2"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host3"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host4"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host5"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent1"]    => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent2"]    => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent3"]    => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetappDsTest2"]         => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest4"]         => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest5"]         => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest6"]         => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest7"]         => {}
                    },
                    [ResourcePool, "Tina", {:is_default => false}]              => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-TinaF"]             => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "TF-Appliance 4.0.1.14"] => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-TinaF"]             => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "TF-Appliance 4.0.1.14"] => {}
                    },
                    [ResourcePool, "TomH", {:is_default => false}]              => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "tch-cos64-nightly-26322"] => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "tch-cos64_19GB_restore_"] => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "tch-cos64-V4_import_tes"] => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "tch-cos64-nightly-26322"] => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "tch-cos64_19GB_restore_"] => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "tch-cos64-V4_import_tes"] => {}
                    },
                    [ResourcePool, "Xav", {:is_default => false}]               => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav 4014"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav 4018"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav Master"]    => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav RH 40114"]  => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav RH 4012"]   => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "xavsmall"]      => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "XL Trunk svn2"] => {},
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "XL V4 svn"]     => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav 4014"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav 4018"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav Master"]    => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav RH 40114"]  => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav RH 4012"]   => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "xavsmall"]      => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "XL Trunk svn2"] => {},
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "XL V4 svn"]     => {}
                    },
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "3.3.2.22"] => {}
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "3.3.2.22"] => {}
                  },
                  [ResourcePool, "Training", {:is_default => false}]                    => {
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "Training Master DB"]        => {},
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "Training Region 10 UI"]     => {},
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "Training Region 10 Worker"] => {}
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Training Master DB"]        => {},
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Training Region 10 UI"]     => {},
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Training Region 10 Worker"] => {}
                  },
                  [ResourcePool, "VMware View VM's", {:is_default => false}]            => {
                    [ResourcePool, "Linked Clones", {:is_default => false}]        => {
-                     [ManageIQ::Providers::Vmware::InfraManager::Vm, "View Windows 7 Parent x64"] => {}
+                     [NOVAHawk::Providers::Vmware::InfraManager::Vm, "View Windows 7 Parent x64"] => {}
                    },
-                   [ManageIQ::Providers::Vmware::InfraManager::Vm, "View Broker"] => {}
+                   [NOVAHawk::Providers::Vmware::InfraManager::Vm, "View Broker"] => {}
                  },
-                 [ManageIQ::Providers::Vmware::InfraManager::Vm, "KPupgrade"]          => {},
-                 [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp_video"]       => {},
-                 [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp_video1"]      => {},
-                 [ManageIQ::Providers::Vmware::InfraManager::Vm, "RM-4.0.1.12C"]       => {},
-                 [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav COS 40114"]      => {}
+                 [NOVAHawk::Providers::Vmware::InfraManager::Vm, "KPupgrade"]          => {},
+                 [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp_video"]       => {},
+                 [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp_video1"]      => {},
+                 [NOVAHawk::Providers::Vmware::InfraManager::Vm, "RM-4.0.1.12C"]       => {},
+                 [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav COS 40114"]      => {}
                }
             },
             [EmsFolder, "Test", {:hidden => false}]    => {
-              [ManageIQ::Providers::Vmware::InfraManager::HostEsx, "localhost"] => {
+              [NOVAHawk::Providers::Vmware::InfraManager::HostEsx, "localhost"] => {
                 [ResourcePool, "Default for Host / Node localhost", {:is_default => true}] => {}
               }
             }
@@ -929,91 +929,91 @@ describe ManageIQ::Providers::Vmware::InfraManager::Refresher do
           [EmsFolder, "vm", {:hidden => true}]   => {
             [EmsFolder, "BHelgeson", {:hidden => false}]                                => {},
             [EmsFolder, "Brandon", {:hidden => false}]                                  => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "BD-EVM-Nightly 28939-svn"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "BD-EVM-Nightly 28939-svn"] => {}
             },
             [EmsFolder, "Discovered virtual machine", {:hidden => false}]               => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "3.3.2.22"]                => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "tch-cos64-nightly-26322"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "3.3.2.22"]                => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "tch-cos64-nightly-26322"] => {}
             },
             [EmsFolder, "Infra", {:hidden => false}]                                    => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "M-TestDC1"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "M-TestDC1"] => {}
             },
             [EmsFolder, "JFitzgerald", {:hidden => false}]                              => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "JoeF 4.0.1"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "JoeF 4.0.1"] => {}
             },
             [EmsFolder, "MFeifer", {:hidden => false}]                                  => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_3_3_2_34"]               => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_40115_svn_formigrate"]   => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "MGF_Branch_332_svn"]         => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_branch_40115_svn"]       => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_branch_4015_svn"]        => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_build_332_31"]           => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_build_40116"]            => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_build_40116_formigrate"] => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_nightly_trunk_svn"]      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "mgf_trunk_nightly_v4"]       => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_3_3_2_34"]               => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_40115_svn_formigrate"]   => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "MGF_Branch_332_svn"]         => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_branch_40115_svn"]       => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_branch_4015_svn"]        => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_build_332_31"]           => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_build_40116"]            => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_build_40116_formigrate"] => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_nightly_trunk_svn"]      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "mgf_trunk_nightly_v4"]       => {}
             },
             [EmsFolder, "Rich", {:hidden => false}]                                     => {
-              [ManageIQ::Providers::Vmware::InfraManager::Template, "netapp-sim-host-template"]   => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Template, "netapp-smis-agent-template"] => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "ESX-TESTVCINTEGRATION"]            => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host1"]                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host2"]                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host3"]                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host4"]                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-sim-host5"]                 => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent1"]               => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent2"]               => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent3"]               => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetappDsTest2"]                    => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest4"]                    => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest5"]                    => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest6"]                    => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "NetAppDsTest7"]                    => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Template, "netapp-sim-host-template"]   => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Template, "netapp-smis-agent-template"] => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "ESX-TESTVCINTEGRATION"]            => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host1"]                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host2"]                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host3"]                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host4"]                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-sim-host5"]                 => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent1"]               => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent2"]               => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp-smis-agent3"]               => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetappDsTest2"]                    => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest4"]                    => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest5"]                    => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest6"]                    => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "NetAppDsTest7"]                    => {}
             },
             [EmsFolder, "RMoore", {:hidden => false}]                                   => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "RM-4.0.1.12C"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "RM-4.0.1.12C"] => {}
             },
             [EmsFolder, "THennessy", {:hidden => false}]                                => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "tch-cos64_19GB_restore_"] => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "tch-cos64-V4_import_tes"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "tch-cos64_19GB_restore_"] => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "tch-cos64-V4_import_tes"] => {}
             },
             [EmsFolder, "Training", {:hidden => false}]                                 => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Training Master DB"]        => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Training Region 10 UI"]     => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Training Region 10 Worker"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Training Master DB"]        => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Training Region 10 UI"]     => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Training Region 10 Worker"] => {}
             },
             [EmsFolder, "VCs", {:hidden => false}]                                      => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "VC41Test"]      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "VC41Test-Prod"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "VC41Test"]      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "VC41Test-Prod"] => {}
             },
             [EmsFolder, "View Environment", {:hidden => false}]                         => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "View Broker"]               => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "View Windows 7 Parent x64"] => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "View Broker"]               => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "View Windows 7 Parent x64"] => {}
             },
             [EmsFolder, "Xlecauchois", {:hidden => false}]                              => {
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav 4014"]      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav 4018"]      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav COS 40114"] => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav Master"]    => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav RH 40114"]  => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "Xav RH 4012"]   => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "xavsmall"]      => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "XL Trunk svn2"] => {},
-              [ManageIQ::Providers::Vmware::InfraManager::Vm, "XL V4 svn"]     => {}
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav 4014"]      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav 4018"]      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav COS 40114"] => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav Master"]    => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav RH 40114"]  => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Xav RH 4012"]   => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "xavsmall"]      => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "XL Trunk svn2"] => {},
+              [NOVAHawk::Providers::Vmware::InfraManager::Vm, "XL V4 svn"]     => {}
             },
-            [ManageIQ::Providers::Vmware::InfraManager::Template, "Citrix-Win7-Temp"]   => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Template, "Win2008Templatex86"] => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Template, "Win2k8Template"]     => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "BD-EVM-4.0.1.15"]          => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "Citrix 5"]                 => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah1"]           => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah2"]           => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "DEV-TinaF"]                => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "KPupgrade"]                => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp_video"]             => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "netapp_video1"]            => {},
-            [ManageIQ::Providers::Vmware::InfraManager::Vm, "TF-Appliance 4.0.1.14"]    => {}
+            [NOVAHawk::Providers::Vmware::InfraManager::Template, "Citrix-Win7-Temp"]   => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Template, "Win2008Templatex86"] => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Template, "Win2k8Template"]     => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "BD-EVM-4.0.1.15"]          => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Citrix 5"]                 => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah1"]           => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "Citrix-Mahwah2"]           => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "DEV-TinaF"]                => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "KPupgrade"]                => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp_video"]             => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "netapp_video1"]            => {},
+            [NOVAHawk::Providers::Vmware::InfraManager::Vm, "TF-Appliance 4.0.1.14"]    => {}
           }
         }
       }

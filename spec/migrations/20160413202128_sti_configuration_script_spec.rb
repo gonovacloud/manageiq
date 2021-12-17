@@ -9,7 +9,7 @@ describe StiConfigurationScript do
 
       migrate
 
-      expect(cs.reload.type).to eq("ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript")
+      expect(cs.reload.type).to eq("NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfigurationScript")
     end
   end
 end

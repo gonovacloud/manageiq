@@ -49,7 +49,7 @@ class JobProxyDispatcher
             next
           end
 
-          if @vm.kind_of?(ManageIQ::Providers::Vmware::InfraManager::Vm) || @vm.kind_of?(ManageIQ::Providers::Vmware::InfraManager::Template)
+          if @vm.kind_of?(NOVAHawk::Providers::Vmware::InfraManager::Vm) || @vm.kind_of?(NOVAHawk::Providers::Vmware::InfraManager::Template)
             unless broker_available
               unless logged_broker_unavailable
                 _log.warn("Skipping dispatch because broker is currently unavailable")

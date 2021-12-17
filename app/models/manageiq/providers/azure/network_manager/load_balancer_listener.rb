@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Azure::NetworkManager::LoadBalancerListener < ::LoadBalancerListener
+class NOVAHawk::Providers::Azure::NetworkManager::LoadBalancerListener < ::LoadBalancerListener
 end

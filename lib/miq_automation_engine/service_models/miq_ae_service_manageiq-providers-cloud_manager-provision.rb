@@ -1,5 +1,5 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_CloudManager_Provision < MiqAeServiceMiqProvision
+  class MiqAeServiceNOVAHawk_Providers_CloudManager_Provision < MiqAeServiceMiqProvision
     expose_eligible_resources :availability_zones
     expose_eligible_resources :instance_types
     expose_eligible_resources :security_groups, :multiple_value => true

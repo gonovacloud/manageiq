@@ -880,7 +880,7 @@ describe ApplicationHelper do
         end
 
         it "record is not cloneable" do
-          @record =  MiqTemplate.create(:type     => "ManageIQ::Providers::Redhat::InfraManager::Template",
+          @record =  MiqTemplate.create(:type     => "NOVAHawk::Providers::Redhat::InfraManager::Template",
                                         :name     => "rh",
                                         :location => "loc1",
                                         :vendor   => "redhat")
@@ -888,7 +888,7 @@ describe ApplicationHelper do
         end
 
         it "record is cloneable" do
-          @record =  MiqTemplate.create(:type     => "ManageIQ::Providers::Vmware::InfraManager::Template",
+          @record =  MiqTemplate.create(:type     => "NOVAHawk::Providers::Vmware::InfraManager::Template",
                                         :name     => "vm",
                                         :location => "loc2",
                                         :vendor   => "vmware")
@@ -1113,7 +1113,7 @@ describe ApplicationHelper do
 
       context "when @record != EmsOpenstackInfra" do
         before do
-          @record = ManageIQ::Providers::Vmware::InfraManager.new
+          @record = NOVAHawk::Providers::Vmware::InfraManager.new
         end
 
         it "user allowed but hide button because wrong provider" do
@@ -1202,7 +1202,7 @@ describe ApplicationHelper do
     end
 
     it 'disables the add new iso datastore button when no EMSes are available' do
-      expect(ManageIQ::Providers::Redhat::InfraManager)
+      expect(NOVAHawk::Providers::Redhat::InfraManager)
         .to(receive(:any_without_iso_datastores?))
         .and_return(false)
 
@@ -2140,7 +2140,7 @@ describe ApplicationHelper do
     end
 
     context "when record is valid" do
-      [ManageIQ::Providers::Redhat::InfraManager::Host].each do |c|
+      [NOVAHawk::Providers::Redhat::InfraManager::Host].each do |c|
         it "and with #{c}" do
           record = c.new
           expect(get_record_cls(record)).to eq(record.class.base_class.to_s)
@@ -2148,7 +2148,7 @@ describe ApplicationHelper do
       end
 
       it "and with 'VmOrTemplate'" do
-        record = ManageIQ::Providers::Vmware::InfraManager::Template.new
+        record = NOVAHawk::Providers::Vmware::InfraManager::Template.new
         expect(get_record_cls(record)).to eq(record.class.base_model.to_s)
       end
 

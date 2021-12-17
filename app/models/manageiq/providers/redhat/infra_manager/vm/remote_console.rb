@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Redhat::InfraManager::Vm
+class NOVAHawk::Providers::Redhat::InfraManager::Vm
   module RemoteConsole
     def console_supported?(type)
       %w(SPICE VNC).include?(type.upcase)

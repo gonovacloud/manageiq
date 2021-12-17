@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Microsoft::InfraManager::Template < ManageIQ::Providers::InfraManager::Template
+class NOVAHawk::Providers::Microsoft::InfraManager::Template < NOVAHawk::Providers::InfraManager::Template
   supports :provisioning do
     if ext_management_system
       unsupported_reason_add(:provisioning, ext_management_system.unsupported_reason(:provisioning)) unless ext_management_system.supports_provisioning?

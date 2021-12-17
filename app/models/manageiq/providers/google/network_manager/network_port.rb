@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::NetworkManager::NetworkPort < ::NetworkPort
+class NOVAHawk::Providers::Google::NetworkManager::NetworkPort < ::NetworkPort
 end

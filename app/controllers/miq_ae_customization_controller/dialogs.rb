@@ -39,15 +39,15 @@ module MiqAeCustomizationController::Dialogs
 
         if params[:field_past_dates]
           if params[:field_past_dates] == "1"
-            page << "ManageIQ.calendar.calDateFrom = undefined ;"
+            page << "NOVAHawk.calendar.calDateFrom = undefined ;"
           else
             date_tz = Time.zone.now.strftime("%Y,%m,%d")
-            page << "ManageIQ.calendar.calDateFrom = new Date('#{date_tz}');"
+            page << "NOVAHawk.calendar.calDateFrom = new Date('#{date_tz}');"
           end
         end
 
         # url to be used in url in miqDropComplete method
-        page << "ManageIQ.widget.dashboardUrl = 'miq_ae_customization/dialog_res_reorder'"
+        page << "NOVAHawk.widget.dashboardUrl = 'miq_ae_customization/dialog_res_reorder'"
 
         # refresh fields div incase select type was DialogFieldDropDownList/DialogFieldRadionButton or
         page.replace("dialog_field_div", :partial => "dialog_field_form") if params[:field_typ] ||
@@ -422,7 +422,7 @@ module MiqAeCustomizationController::Dialogs
       page << javascript_for_miq_button_visibility(changed)
       page.replace_html("custom_left_cell", :partial => "dialog_edit_tree")
       # url to be used in miqDropComplete method
-      page << "ManageIQ.widget.dashboardUrl = 'miq_ae_customization/dialog_res_reorder';"
+      page << "NOVAHawk.widget.dashboardUrl = 'miq_ae_customization/dialog_res_reorder';"
       page << "miqInitDashboardCols();"
       page << "miqSparkle(false);"
     end

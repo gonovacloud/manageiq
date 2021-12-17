@@ -1,5 +1,5 @@
-module ManageIQ::Providers::Azure::CloudManager::EventParser
-  extend ManageIQ::Providers::Azure::EventCatcherMixin
+module NOVAHawk::Providers::Azure::CloudManager::EventParser
+  extend NOVAHawk::Providers::Azure::EventCatcherMixin
 
   INSTANCE_TYPE = "microsoft.compute/virtualmachines".freeze
 

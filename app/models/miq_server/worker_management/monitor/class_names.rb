@@ -2,57 +2,57 @@ module MiqServer::WorkerManagement::Monitor::ClassNames
   extend ActiveSupport::Concern
 
   MONITOR_CLASS_NAMES = %w(
-    ManageIQ::Providers::Azure::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::Amazon::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::Redhat::InfraManager::MetricsCollectorWorker
-    ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openshift::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::Google::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::Vmware::InfraManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openstack::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openstack::NetworkManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openstack::InfraManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Azure::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Amazon::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Redhat::InfraManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openshift::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Google::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Vmware::InfraManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openstack::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openstack::NetworkManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openstack::InfraManager::MetricsCollectorWorker
     MiqEmsMetricsProcessorWorker
     MiqEmsRefreshCoreWorker
-    ManageIQ::Providers::Azure::CloudManager::RefreshWorker
-    ManageIQ::Providers::Azure::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Amazon::CloudManager::RefreshWorker
-    ManageIQ::Providers::Amazon::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Google::CloudManager::RefreshWorker
-    ManageIQ::Providers::Google::NetworkManager::RefreshWorker
-    ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshWorker
-    ManageIQ::Providers::Foreman::ConfigurationManager::RefreshWorker
-    ManageIQ::Providers::Foreman::ProvisioningManager::RefreshWorker
-    ManageIQ::Providers::Hawkular::MiddlewareManager::RefreshWorker
-    ManageIQ::Providers::Kubernetes::ContainerManager::RefreshWorker
-    ManageIQ::Providers::Openshift::ContainerManager::RefreshWorker
-    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker
-    ManageIQ::Providers::Microsoft::InfraManager::RefreshWorker
-    ManageIQ::Providers::Redhat::InfraManager::RefreshWorker
-    ManageIQ::Providers::Openstack::CloudManager::RefreshWorker
-    ManageIQ::Providers::Openstack::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Openstack::InfraManager::RefreshWorker
-    ManageIQ::Providers::StorageManager::CinderManager::RefreshWorker
-    ManageIQ::Providers::StorageManager::SwiftManager::RefreshWorker
-    ManageIQ::Providers::Vmware::CloudManager::RefreshWorker
-    ManageIQ::Providers::Vmware::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Vmware::InfraManager::RefreshWorker
-    ManageIQ::Providers::Nuage::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Amazon::CloudManager::EventCatcher
-    ManageIQ::Providers::Azure::CloudManager::EventCatcher
-    ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher
-    ManageIQ::Providers::Google::CloudManager::EventCatcher
-    ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcher
-    ManageIQ::Providers::Openshift::ContainerManager::EventCatcher
-    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
-    ManageIQ::Providers::Redhat::InfraManager::EventCatcher
-    ManageIQ::Providers::Openstack::CloudManager::EventCatcher
-    ManageIQ::Providers::Openstack::NetworkManager::EventCatcher
-    ManageIQ::Providers::Openstack::InfraManager::EventCatcher
-    ManageIQ::Providers::StorageManager::CinderManager::EventCatcher
-    ManageIQ::Providers::Vmware::InfraManager::EventCatcher
-    ManageIQ::Providers::Vmware::CloudManager::EventCatcher
+    NOVAHawk::Providers::Azure::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Azure::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Amazon::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Amazon::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Google::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Google::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::AnsibleTower::ConfigurationManager::RefreshWorker
+    NOVAHawk::Providers::Foreman::ConfigurationManager::RefreshWorker
+    NOVAHawk::Providers::Foreman::ProvisioningManager::RefreshWorker
+    NOVAHawk::Providers::Hawkular::MiddlewareManager::RefreshWorker
+    NOVAHawk::Providers::Kubernetes::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::Openshift::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::Microsoft::InfraManager::RefreshWorker
+    NOVAHawk::Providers::Redhat::InfraManager::RefreshWorker
+    NOVAHawk::Providers::Openstack::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Openstack::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Openstack::InfraManager::RefreshWorker
+    NOVAHawk::Providers::StorageManager::CinderManager::RefreshWorker
+    NOVAHawk::Providers::StorageManager::SwiftManager::RefreshWorker
+    NOVAHawk::Providers::Vmware::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Vmware::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Vmware::InfraManager::RefreshWorker
+    NOVAHawk::Providers::Nuage::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Amazon::CloudManager::EventCatcher
+    NOVAHawk::Providers::Azure::CloudManager::EventCatcher
+    NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher
+    NOVAHawk::Providers::Google::CloudManager::EventCatcher
+    NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcher
+    NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher
+    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
+    NOVAHawk::Providers::Redhat::InfraManager::EventCatcher
+    NOVAHawk::Providers::Openstack::CloudManager::EventCatcher
+    NOVAHawk::Providers::Openstack::NetworkManager::EventCatcher
+    NOVAHawk::Providers::Openstack::InfraManager::EventCatcher
+    NOVAHawk::Providers::StorageManager::CinderManager::EventCatcher
+    NOVAHawk::Providers::Vmware::InfraManager::EventCatcher
+    NOVAHawk::Providers::Vmware::CloudManager::EventCatcher
     MiqEventHandler
     MiqGenericWorker
     MiqNetappRefreshWorker
@@ -71,17 +71,17 @@ module MiqServer::WorkerManagement::Monitor::ClassNames
 
   MONITOR_CLASS_NAMES_IN_KILL_ORDER = %w(
     MiqEmsMetricsProcessorWorker
-    ManageIQ::Providers::Azure::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::Amazon::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::Redhat::InfraManager::MetricsCollectorWorker
-    ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openshift::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::Google::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker
-    ManageIQ::Providers::Vmware::InfraManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openstack::CloudManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openstack::NetworkManager::MetricsCollectorWorker
-    ManageIQ::Providers::Openstack::InfraManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Azure::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Amazon::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Redhat::InfraManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openshift::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Google::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Vmware::InfraManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openstack::CloudManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openstack::NetworkManager::MetricsCollectorWorker
+    NOVAHawk::Providers::Openstack::InfraManager::MetricsCollectorWorker
     MiqReportingWorker
     MiqSmartProxyWorker
     MiqGenericWorker
@@ -90,49 +90,49 @@ module MiqServer::WorkerManagement::Monitor::ClassNames
     MiqNetappRefreshWorker
     MiqVmdbStorageBridgeWorker
     MiqStorageMetricsCollectorWorker
-    ManageIQ::Providers::Azure::CloudManager::RefreshWorker
-    ManageIQ::Providers::Azure::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Amazon::CloudManager::RefreshWorker
-    ManageIQ::Providers::Amazon::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Google::CloudManager::RefreshWorker
-    ManageIQ::Providers::Google::NetworkManager::RefreshWorker
-    ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshWorker
-    ManageIQ::Providers::Foreman::ConfigurationManager::RefreshWorker
-    ManageIQ::Providers::Foreman::ProvisioningManager::RefreshWorker
-    ManageIQ::Providers::Hawkular::MiddlewareManager::RefreshWorker
-    ManageIQ::Providers::Kubernetes::ContainerManager::RefreshWorker
-    ManageIQ::Providers::Openshift::ContainerManager::RefreshWorker
-    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker
-    ManageIQ::Providers::Microsoft::InfraManager::RefreshWorker
-    ManageIQ::Providers::Redhat::InfraManager::RefreshWorker
-    ManageIQ::Providers::Openstack::CloudManager::RefreshWorker
-    ManageIQ::Providers::Openstack::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Openstack::InfraManager::RefreshWorker
-    ManageIQ::Providers::StorageManager::CinderManager::RefreshWorker
-    ManageIQ::Providers::StorageManager::SwiftManager::RefreshWorker
-    ManageIQ::Providers::Vmware::CloudManager::RefreshWorker
-    ManageIQ::Providers::Vmware::NetworkManager::RefreshWorker
-    ManageIQ::Providers::Vmware::InfraManager::RefreshWorker
-    ManageIQ::Providers::Nuage::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Azure::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Azure::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Amazon::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Amazon::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Google::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Google::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::AnsibleTower::ConfigurationManager::RefreshWorker
+    NOVAHawk::Providers::Foreman::ConfigurationManager::RefreshWorker
+    NOVAHawk::Providers::Foreman::ProvisioningManager::RefreshWorker
+    NOVAHawk::Providers::Hawkular::MiddlewareManager::RefreshWorker
+    NOVAHawk::Providers::Kubernetes::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::Openshift::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker
+    NOVAHawk::Providers::Microsoft::InfraManager::RefreshWorker
+    NOVAHawk::Providers::Redhat::InfraManager::RefreshWorker
+    NOVAHawk::Providers::Openstack::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Openstack::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Openstack::InfraManager::RefreshWorker
+    NOVAHawk::Providers::StorageManager::CinderManager::RefreshWorker
+    NOVAHawk::Providers::StorageManager::SwiftManager::RefreshWorker
+    NOVAHawk::Providers::Vmware::CloudManager::RefreshWorker
+    NOVAHawk::Providers::Vmware::NetworkManager::RefreshWorker
+    NOVAHawk::Providers::Vmware::InfraManager::RefreshWorker
+    NOVAHawk::Providers::Nuage::NetworkManager::RefreshWorker
     MiqScheduleWorker
     MiqPriorityWorker
     MiqWebServiceWorker
     MiqEmsRefreshCoreWorker
     MiqVimBrokerWorker
-    ManageIQ::Providers::Vmware::CloudManager::EventCatcher
-    ManageIQ::Providers::Vmware::InfraManager::EventCatcher
-    ManageIQ::Providers::Redhat::InfraManager::EventCatcher
-    ManageIQ::Providers::Openstack::CloudManager::EventCatcher
-    ManageIQ::Providers::Openstack::NetworkManager::EventCatcher
-    ManageIQ::Providers::Openstack::InfraManager::EventCatcher
-    ManageIQ::Providers::StorageManager::CinderManager::EventCatcher
-    ManageIQ::Providers::Amazon::CloudManager::EventCatcher
-    ManageIQ::Providers::Azure::CloudManager::EventCatcher
-    ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher
-    ManageIQ::Providers::Google::CloudManager::EventCatcher
-    ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcher
-    ManageIQ::Providers::Openshift::ContainerManager::EventCatcher
-    ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
+    NOVAHawk::Providers::Vmware::CloudManager::EventCatcher
+    NOVAHawk::Providers::Vmware::InfraManager::EventCatcher
+    NOVAHawk::Providers::Redhat::InfraManager::EventCatcher
+    NOVAHawk::Providers::Openstack::CloudManager::EventCatcher
+    NOVAHawk::Providers::Openstack::NetworkManager::EventCatcher
+    NOVAHawk::Providers::Openstack::InfraManager::EventCatcher
+    NOVAHawk::Providers::StorageManager::CinderManager::EventCatcher
+    NOVAHawk::Providers::Amazon::CloudManager::EventCatcher
+    NOVAHawk::Providers::Azure::CloudManager::EventCatcher
+    NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher
+    NOVAHawk::Providers::Google::CloudManager::EventCatcher
+    NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcher
+    NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher
+    NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::EventCatcher
     MiqUiWorker
     MiqWebsocketWorker
   ).freeze

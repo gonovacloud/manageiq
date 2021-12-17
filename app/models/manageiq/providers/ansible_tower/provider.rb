@@ -1,7 +1,7 @@
-class ManageIQ::Providers::AnsibleTower::Provider < ::Provider
+class NOVAHawk::Providers::AnsibleTower::Provider < ::Provider
   has_one :configuration_manager,
           :foreign_key => "provider_id",
-          :class_name  => "ManageIQ::Providers::AnsibleTower::ConfigurationManager",
+          :class_name  => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager",
           :dependent   => :destroy,
           :autosave    => true
 

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot do
+describe NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot do
   let(:ems) { FactoryGirl.create(:ems_openstack) }
   let(:tenant) { FactoryGirl.create(:cloud_tenant_openstack, :ext_management_system => ems) }
   let(:cloud_volume) do
@@ -57,7 +57,7 @@ describe ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot do
         allow(the_new_snapshot).to receive("status").and_return('creating')
         allow(raw_snapshots).to receive(:create).and_return(the_new_snapshot)
 
-        snapshot = ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot
+        snapshot = NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot
                    .create_snapshot(cloud_volume, snapshot_options)
         expect(snapshot.class).to        eq described_class
         expect(snapshot.name).to         eq 'new_name'

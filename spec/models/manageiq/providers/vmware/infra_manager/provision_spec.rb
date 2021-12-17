@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Provision do
+describe NOVAHawk::Providers::Vmware::InfraManager::Provision do
   context "A new provision request," do
     before(:each) do
       @os = OperatingSystem.new(:product_name => 'Microsoft Windows')
@@ -24,7 +24,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Provision do
       end
 
       it "#workflow" do
-        workflow_class = ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow
+        workflow_class = NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow
         allow_any_instance_of(workflow_class).to receive(:get_dialogs).and_return(:dialogs => {})
 
         expect(@vm_prov.workflow.class).to eq workflow_class

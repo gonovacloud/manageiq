@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Vm::Reconfigure
+module NOVAHawk::Providers::Vmware::InfraManager::Vm::Reconfigure
   # Show Reconfigure VM task
   def reconfigurable?
     true

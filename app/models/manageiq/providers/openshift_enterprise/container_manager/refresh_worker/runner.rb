@@ -1,2 +1,2 @@
-class ManageIQ::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker::Runner < ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+class NOVAHawk::Providers::OpenshiftEnterprise::ContainerManager::RefreshWorker::Runner < NOVAHawk::Providers::BaseManager::RefreshWorker::Runner
 end

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::DiskAttachmentBuilder do
+describe NOVAHawk::Providers::Redhat::InfraManager::DiskAttachmentBuilder do
   context "#disk_format_for" do
     context "when storage type is file system" do
       let(:storage) { FactoryGirl.build(:storage_nfs) }
@@ -54,7 +54,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::DiskAttachmentBuilder do
     end
   end
 
-  describe ManageIQ::Providers::Redhat::InfraManager::DiskAttachmentBuilder::BooleanParameter do
+  describe NOVAHawk::Providers::Redhat::InfraManager::DiskAttachmentBuilder::BooleanParameter do
     let(:param) { nil }
     subject { described_class.new(param).true? }
 

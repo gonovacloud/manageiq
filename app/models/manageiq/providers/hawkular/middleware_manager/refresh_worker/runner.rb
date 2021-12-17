@@ -1,3 +1,3 @@
-class ManageIQ::Providers::Hawkular::MiddlewareManager::RefreshWorker::Runner <
-  ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+class NOVAHawk::Providers::Hawkular::MiddlewareManager::RefreshWorker::Runner <
+  NOVAHawk::Providers::BaseManager::RefreshWorker::Runner
 end

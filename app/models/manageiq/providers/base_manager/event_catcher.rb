@@ -1,4 +1,4 @@
-class ManageIQ::Providers::BaseManager::EventCatcher < MiqWorker
+class NOVAHawk::Providers::BaseManager::EventCatcher < MiqWorker
   require_nested :Runner
 
   include PerEmsWorkerMixin

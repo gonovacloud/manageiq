@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('networkRouterFormController', ['$http', '$scope', 'networkRouterFormId', 'miqService', function($http, $scope, networkRouterFormId, miqService) {
+NOVAHawk.angular.app.controller('networkRouterFormController', ['$http', '$scope', 'networkRouterFormId', 'miqService', function($http, $scope, networkRouterFormId, miqService) {
   $scope.networkRouterModel = {
     name: '',
     cloud_subnet_id: '',
@@ -8,7 +8,7 @@ ManageIQ.angular.app.controller('networkRouterFormController', ['$http', '$scope
   $scope.modelCopy = angular.copy( $scope.networkRouterModel );
   $scope.model = "networkRouterModel";
 
-  ManageIQ.angular.scope = $scope;
+  NOVAHawk.angular.scope = $scope;
 
   if (networkRouterFormId == 'new') {
     $scope.networkRouterModel.name = "";

@@ -1,6 +1,6 @@
 // global variables
-if (! window.ManageIQ) {
-  window.ManageIQ = {
+if (! window.NOVAHawk) {
+  window.NOVAHawk = {
     actionUrl: null, // action URL used in JS function miqGridSort
     afterOnload: null, // JS code to be evaluated after onload
     angular: {

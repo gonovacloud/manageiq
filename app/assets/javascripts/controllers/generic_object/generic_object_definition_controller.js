@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('genericObjectDefinitionFormController', ['$http', '$scope', 'miqService', 'genericObjectSubscriptionService', function($http, $scope, miqService, genericObjectSubscriptionService) {
+NOVAHawk.angular.app.controller('genericObjectDefinitionFormController', ['$http', '$scope', 'miqService', 'genericObjectSubscriptionService', function($http, $scope, miqService, genericObjectSubscriptionService) {
   var init = function() {
     hideAndClearForm();
 

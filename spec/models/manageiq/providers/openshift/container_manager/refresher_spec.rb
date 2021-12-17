@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openshift::ContainerManager::Refresher do
+describe NOVAHawk::Providers::Openshift::ContainerManager::Refresher do
   let(:all_images_count) { 31 } # including /oapi/v1/images data
   let(:pod_images_count) { 4 }  # only images mentioned by pods
 
@@ -80,7 +80,7 @@ describe ManageIQ::Providers::Openshift::ContainerManager::Refresher do
   context "when refreshing an empty DB" do
     # CREATING FIRST VCR
     # To recreate the tested objects in OpenShift use the template file:
-    # spec/vcr_cassettes/manageiq/providers/openshift/container_manager/test_objects_template.yml
+    # spec/vcr_cassettes/novahawk/providers/openshift/container_manager/test_objects_template.yml
     # and the following commands for 3 projects my-project-X (X=0/1/2):
     # oc new-project my-project-X
     # oc process -f template.yml -v INDEX=X | oc create -f -
@@ -268,7 +268,7 @@ describe ManageIQ::Providers::Openshift::ContainerManager::Refresher do
   def assert_ems
     expect(@ems).to have_attributes(
       :port => 8443,
-      :type => "ManageIQ::Providers::Openshift::ContainerManager"
+      :type => "NOVAHawk::Providers::Openshift::ContainerManager"
     )
   end
 

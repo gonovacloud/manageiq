@@ -58,6 +58,6 @@
     = render :partial => "layouts/angular/x_edit_buttons_angular"
 
 :javascript
-  ManageIQ.angular.app.value('ownershipFormId', '#{"ownership"}');
-  ManageIQ.angular.app.value('objectIds', #{ @ownershipitems.collect(&:id) });
+  NOVAHawk.angular.app.value('ownershipFormId', '#{"ownership"}');
+  NOVAHawk.angular.app.value('objectIds', #{ @ownershipitems.collect(&:id) });
   miq_bootstrap('#form_div');

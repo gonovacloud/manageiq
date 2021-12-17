@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Nuage_NetworkManager_NetworkPort < MiqAeServiceNetworkPort
+  class MiqAeServiceNOVAHawk_Providers_Nuage_NetworkManager_NetworkPort < MiqAeServiceNetworkPort
   end
 end

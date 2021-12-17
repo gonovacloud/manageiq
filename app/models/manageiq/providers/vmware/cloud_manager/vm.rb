@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::CloudManager::Vm < ManageIQ::Providers::CloudManager::Vm
+class NOVAHawk::Providers::Vmware::CloudManager::Vm < NOVAHawk::Providers::CloudManager::Vm
   include_concern 'Operations'
 
   def provider_object(connection = nil)

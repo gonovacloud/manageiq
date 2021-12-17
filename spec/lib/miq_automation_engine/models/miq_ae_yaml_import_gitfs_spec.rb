@@ -159,7 +159,7 @@ describe MiqAeYamlImportGitfs do
 
   context "without top level directory" do
     before do
-      build_git_repository("ManageIQ", nil)
+      build_git_repository("NOVAHawk", nil)
     end
 
     it_should_behave_like "gitfs import"
@@ -167,7 +167,7 @@ describe MiqAeYamlImportGitfs do
 
   context "with top level directory" do
     before do
-      build_git_repository("ManageIQ", "ManageIQ")
+      build_git_repository("NOVAHawk", "NOVAHawk")
     end
 
     it_should_behave_like "gitfs import"

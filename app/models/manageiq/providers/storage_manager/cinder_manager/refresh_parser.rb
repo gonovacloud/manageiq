@@ -1,9 +1,9 @@
 
-module ManageIQ::Providers
-  class StorageManager::CinderManager::RefreshParser < ManageIQ::Providers::CloudManager::RefreshParser
+module NOVAHawk::Providers
+  class StorageManager::CinderManager::RefreshParser < NOVAHawk::Providers::CloudManager::RefreshParser
     require_nested "CrossLinkers"
 
-    include ManageIQ::Providers::StorageManager::CinderManager::RefreshHelperMethods
+    include NOVAHawk::Providers::StorageManager::CinderManager::RefreshHelperMethods
     include Vmdb::Logging
 
     attr_accessor :data
@@ -65,7 +65,7 @@ module ManageIQ::Providers
       new_result = {
         :ems_ref               => uid,
         # TODO: These classes should not be OpenStack specific, but rather Cinder-specific.
-        :type                  => "ManageIQ::Providers::Openstack::CloudManager::CloudVolumeBackup",
+        :type                  => "NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeBackup",
         # Supporting both Cinder v1 and Cinder v2
         :name                  => backup['display_name'] || backup['name'],
         :status                => backup['status'],
@@ -89,7 +89,7 @@ module ManageIQ::Providers
       new_result = {
         :ems_ref       => uid,
         # TODO: These classes should not be OpenStack specific, but rather Cinder-specific.
-        :type          => "ManageIQ::Providers::Openstack::CloudManager::CloudVolumeSnapshot",
+        :type          => "NOVAHawk::Providers::Openstack::CloudManager::CloudVolumeSnapshot",
         # Supporting both Cinder v1 and Cinder v2
         :name          => snap['display_name'] || snap['name'],
         :status        => snap['status'],
@@ -113,7 +113,7 @@ module ManageIQ::Providers
         :ems_ref       => uid,
         # TODO: has its own CloudVolume?
         # TODO: These classes should not be OpenStack specific, but rather Cinder-specific.
-        :type          => "ManageIQ::Providers::Openstack::CloudManager::CloudVolume",
+        :type          => "NOVAHawk::Providers::Openstack::CloudManager::CloudVolume",
         :name          => volume_name(volume),
         :status        => volume.status,
         :bootable      => volume.attributes['bootable'],

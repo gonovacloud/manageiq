@@ -158,11 +158,11 @@ class ExtManagementSystem < ApplicationRecord
       hostname = Socket.getaddrinfo(ip, nil)[0][2]
 
       ems_klass, ems_name = if ost.hypervisor.include?(:scvmm)
-                              [ManageIQ::Providers::Microsoft::InfraManager, 'SCVMM']
+                              [NOVAHawk::Providers::Microsoft::InfraManager, 'SCVMM']
                             elsif ost.hypervisor.include?(:rhevm)
-                              [ManageIQ::Providers::Redhat::InfraManager, 'RHEV-M']
+                              [NOVAHawk::Providers::Redhat::InfraManager, 'RHEV-M']
                             else
-                              [ManageIQ::Providers::Vmware::InfraManager, 'Virtual Center']
+                              [NOVAHawk::Providers::Vmware::InfraManager, 'Virtual Center']
                             end
 
       ems = ems_klass.create(
@@ -197,9 +197,9 @@ class ExtManagementSystem < ApplicationRecord
   end
 
   def self.short_token
-    if self == ManageIQ::Providers::BaseManager
+    if self == NOVAHawk::Providers::BaseManager
       nil
-    elsif parent == ManageIQ::Providers
+    elsif parent == NOVAHawk::Providers
       # "Infra"
       name.demodulize.sub(/Manager$/, '')
     elsif parent != Object
@@ -217,7 +217,7 @@ class ExtManagementSystem < ApplicationRecord
   end
 
   def self.base_manager
-    (ancestors.select { |klass| klass < ::ExtManagementSystem } - [::ManageIQ::Providers::BaseManager]).last
+    (ancestors.select { |klass| klass < ::ExtManagementSystem } - [::NOVAHawk::Providers::BaseManager]).last
   end
 
   def self.db_name

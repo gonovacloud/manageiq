@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::RefreshHelperMethods
+module NOVAHawk::Providers::Vmware::RefreshHelperMethods
   extend ActiveSupport::Concern
 
   def process_collection(collection, key)

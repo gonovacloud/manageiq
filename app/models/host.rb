@@ -912,7 +912,7 @@ class Host < ApplicationRecord
     find_method = :find_by_ipaddress
     if ost.hypervisor.include?(:hyperv)
       self.name        = "Microsoft Hyper-V (#{ipaddr})"
-      self.type        = "ManageIQ::Providers::Microsoft::InfraManager::Host"
+      self.type        = "NOVAHawk::Providers::Microsoft::InfraManager::Host"
       self.ipaddress   = ipaddr
       self.vmm_vendor  = "microsoft"
       self.vmm_product = "Hyper-V"
@@ -934,7 +934,7 @@ class Host < ApplicationRecord
           _log.warn "Cannot connect to ESX Host with IP Address: [#{ipaddr}], Username: [#{authentication_userid(:ws)}] because #{err.message}"
         end
       end
-      self.type = %w(esx esxi).include?(vmm_product.to_s.downcase) ? "ManageIQ::Providers::Vmware::InfraManager::HostEsx" : "ManageIQ::Providers::Vmware::InfraManager::Host"
+      self.type = %w(esx esxi).include?(vmm_product.to_s.downcase) ? "NOVAHawk::Providers::Vmware::InfraManager::HostEsx" : "NOVAHawk::Providers::Vmware::InfraManager::Host"
     elsif ost.hypervisor.include?(:ipmi)
       find_method       = :find_by_ipmi_address
       self.name         = "IPMI (#{ipaddr})"
@@ -1821,17 +1821,17 @@ class Host < ApplicationRecord
   end
 
   def self.openstack_hosts_exists? # TODO: This doesn't belong here
-    ems = ManageIQ::Providers::Openstack::InfraManager.pluck(:id)
+    ems = NOVAHawk::Providers::Openstack::InfraManager.pluck(:id)
     ems.empty? ? false : Host.where(:ems_id => ems).exists?
   end
 
   def self.non_openstack_hosts_exists? # TODO: This doesn't belong here
-    ems = ManageIQ::Providers::Openstack::InfraManager.pluck(:id)
+    ems = NOVAHawk::Providers::Openstack::InfraManager.pluck(:id)
     Host.where.not(:ems_id => ems).exists?
   end
 
   def openstack_host? # TODO: This doesn't belong here
-    ext_management_system.class == ManageIQ::Providers::Openstack::InfraManager
+    ext_management_system.class == NOVAHawk::Providers::Openstack::InfraManager
   end
 
   def writable_storages

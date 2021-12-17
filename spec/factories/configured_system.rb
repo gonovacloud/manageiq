@@ -4,10 +4,10 @@ FactoryGirl.define do
   end
 
   factory :configured_system_foreman,
-          :class  => "ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem",
+          :class  => "NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem",
           :parent => :configured_system
 
   factory :configured_system_ansible_tower,
-          :class  => "ManageIQ::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem",
+          :class  => "NOVAHawk::Providers::AnsibleTower::ConfigurationManager::ConfiguredSystem",
           :parent => :configured_system
 end

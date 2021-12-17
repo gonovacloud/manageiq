@@ -4,7 +4,7 @@ message: !str:VimString
   "@vimType": 
   "@xsiType": SOAP::SOAPString
 userName: !str:VimString 
-  str: MANAGEIQ\thennessy
+  str: novahawk\thennessy
   "@vimType": 
   "@xsiType": SOAP::SOAPString
 vm: !map:VimHash 
@@ -40,7 +40,7 @@ fullFormattedMessage: !str:VimString
   "@xsiType": SOAP::SOAPString
 host: !map:VimHash 
   name: !str:VimString 
-    str: yoda.manageiq.com
+    str: yoda.novahawk.com
     "@vimType": 
     "@xsiType": SOAP::SOAPString
   host: !str:VimString 

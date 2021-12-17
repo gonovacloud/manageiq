@@ -102,7 +102,7 @@ class MiqVimBrokerWorker::Runner < MiqWorker::Runner
     key = [address, userid]
     ret = @ems_ids_for_notify[key] || begin
       zone_id = MiqServer.my_server.zone_id
-      ems = ManageIQ::Providers::Vmware::InfraManager
+      ems = NOVAHawk::Providers::Vmware::InfraManager
             .includes(:authentications, :endpoints)
             .where(:zone_id => zone_id)
             .detect { |e| e.hostname == address && e.authentication_userid == userid }
@@ -162,7 +162,7 @@ class MiqVimBrokerWorker::Runner < MiqWorker::Runner
   }.freeze
 
   def on_create_event(ems_id, event)
-    target_hash = ManageIQ::Providers::Vmware::InfraManager::EventParser.obj_update_to_hash(event)
+    target_hash = NOVAHawk::Providers::Vmware::InfraManager::EventParser.obj_update_to_hash(event)
     if target_hash.nil?
       _log.debug("Ignoring refresh for EMS id: [#{ems_id}] on event [#{event[:objType]}-create]")
     else
@@ -186,7 +186,7 @@ class MiqVimBrokerWorker::Runner < MiqWorker::Runner
     obj = klass.find_by(:ems_ref => mor, :ems_id => ems_id)
     return if obj.nil?
 
-    changed_props.reject! { |p| !ManageIQ::Providers::Vmware::InfraManager::SelectorSpec.selected_property?(type, p) }
+    changed_props.reject! { |p| !NOVAHawk::Providers::Vmware::InfraManager::SelectorSpec.selected_property?(type, p) }
 
     exclude_props = @exclude_props[obj_type]
     if exclude_props
@@ -204,7 +204,7 @@ class MiqVimBrokerWorker::Runner < MiqWorker::Runner
 
     _log.info("#{log_prefix} Attempting to reconnect broker for EMS with address: [#{event[:server]}] due to error: #{event[:error]}")
 
-    ems = ManageIQ::Providers::Vmware::InfraManager.find(ems_id)
+    ems = NOVAHawk::Providers::Vmware::InfraManager.find(ems_id)
     if ems.nil?
       _log.error "#{log_prefix} Unable to find EMS with address: [#{event[:server]}]"
       return
@@ -245,7 +245,7 @@ class MiqVimBrokerWorker::Runner < MiqWorker::Runner
     MiqVimBroker.updateDelay  = nil
     MiqVimBroker.notifyMethod = nil
     MiqVimBroker.cacheScope   = expected_broker_cache_scope
-    MiqVimBroker.setSelector(ManageIQ::Providers::Vmware::InfraManager::SelectorSpec::VIM_SELECTOR_SPEC)
+    MiqVimBroker.setSelector(NOVAHawk::Providers::Vmware::InfraManager::SelectorSpec::VIM_SELECTOR_SPEC)
     MiqVimBroker.maxWait      = worker_settings[:vim_broker_max_wait]
     MiqVimBroker.maxObjects   = worker_settings[:vim_broker_max_objects]
 
@@ -321,7 +321,7 @@ class MiqVimBrokerWorker::Runner < MiqWorker::Runner
     return if args.empty?
     ems_id = args.first.to_i
 
-    ems = ManageIQ::Providers::Vmware::InfraManager.find_by(:id => ems_id)
+    ems = NOVAHawk::Providers::Vmware::InfraManager.find_by(:id => ems_id)
     if ems.nil?
       _log.error "#{log_prefix} Unable to find EMS with id: [#{ems_id}]"
       return

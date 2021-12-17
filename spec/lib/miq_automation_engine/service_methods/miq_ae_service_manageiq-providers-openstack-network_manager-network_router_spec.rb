@@ -1,5 +1,5 @@
 module MiqAeServiceNetworkRouterOpenstackSpec
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_NetworkManager_NetworkRouter do
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_NetworkManager_NetworkRouter do
     it "#update_network_router" do
       expect(described_class.instance_methods).to include(:update_network_router)
     end

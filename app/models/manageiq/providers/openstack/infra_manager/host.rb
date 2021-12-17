@@ -1,12 +1,12 @@
 require 'openstack/openstack_configuration_parser'
 
-class ManageIQ::Providers::Openstack::InfraManager::Host < ::Host
+class NOVAHawk::Providers::Openstack::InfraManager::Host < ::Host
   include HostOperationsMixin
 
   belongs_to :availability_zone
 
   has_many :host_service_group_openstacks, :foreign_key => :host_id, :dependent => :destroy,
-    :class_name => 'ManageIQ::Providers::Openstack::InfraManager::HostServiceGroup'
+    :class_name => 'NOVAHawk::Providers::Openstack::InfraManager::HostServiceGroup'
 
   has_many :network_ports, :as => :device
   has_many :network_routers, :through => :cloud_subnets
@@ -25,7 +25,7 @@ class ManageIQ::Providers::Openstack::InfraManager::Host < ::Host
   # DISTINCT id, with joined tables, id needs to be prefixed with table name. When this is figured out, replace
   # cloud tenant with rails relations
   # in /app/models/miq_report/search.rb:83 there is select(:id) by hard
-  # has_many :vms, :class_name => 'ManageIQ::Providers::Openstack::CloudManager::Vm', :foreign_key => :host_id
+  # has_many :vms, :class_name => 'NOVAHawk::Providers::Openstack::CloudManager::Vm', :foreign_key => :host_id
   # has_many :cloud_tenants, :through => :vms, :uniq => true
 
   def cloud_tenants
@@ -105,7 +105,7 @@ class ManageIQ::Providers::Openstack::InfraManager::Host < ::Host
     # Creating just Auth status placeholder, the credentials are stored in parent or this auth, parent is
     # EmsOpenstackInfra in this case. We will create Auth per Host where we will store state, if it not exists
     auth = authentication_type(:ssh_keypair) ||
-           ManageIQ::Providers::Openstack::InfraManager::AuthKeyPair.create(
+           NOVAHawk::Providers::Openstack::InfraManager::AuthKeyPair.create(
              :name          => "#{self.class.name} #{name}",
              :authtype      => :ssh_keypair,
              :resource_id   => id,
@@ -543,7 +543,7 @@ class ManageIQ::Providers::Openstack::InfraManager::Host < ::Host
         end
 
         hashes << {:name          => network_port[:name] || network_port[:mac_address],
-                   :type          => "ManageIQ::Providers::Openstack::NetworkManager::NetworkPort",
+                   :type          => "NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort",
                    :mac_address   => network_port[:mac_address],
                    :cloud_subnets => cloud_subnets,
                    :device        => self,

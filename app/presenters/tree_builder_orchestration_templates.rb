@@ -52,7 +52,7 @@ class TreeBuilderOrchestrationTemplates < TreeBuilder
       "othot" => OrchestrationTemplateHot,
       "otazu" => OrchestrationTemplateAzure,
       "otvnf" => OrchestrationTemplateVnfd,
-      "otvap" => ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate
+      "otvap" => NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate
     }
     count_only_or_objects_filtered(count_only, classes[object[:id]].where(["orderable=?", true]), "name")
   end

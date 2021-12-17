@@ -1,13 +1,13 @@
-module MiqAeServiceManageIQ_Providers_Google_CloudManagerSpec
+module MiqAeServiceNOVAHawk_Providers_Google_CloudManagerSpec
   include MiqAeEngine
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_Google_CloudManager do
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Google_CloudManager do
     before(:each) do
       @ems                    = FactoryGirl.create(:ems_google)
       @flavor                 = FactoryGirl.create(:flavor)
       @availability_zone      = FactoryGirl.create(:availability_zone)
       @ems.availability_zones << @availability_zone
       @ems.flavors << @flavor
-      @ems_google = MiqAeMethodService::MiqAeServiceManageIQ_Providers_Google_CloudManager.find(@ems.id)
+      @ems_google = MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Google_CloudManager.find(@ems.id)
     end
 
     it "#flavors" do

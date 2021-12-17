@@ -1,6 +1,6 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module AnsibleTower
-    class ConfigurationManager::Refresher < ManageIQ::Providers::BaseManager::Refresher
+    class ConfigurationManager::Refresher < NOVAHawk::Providers::BaseManager::Refresher
       include ::EmsRefresh::Refreshers::EmsRefresherMixin
 
       def parse_legacy_inventory(configuration_manager)
@@ -10,7 +10,7 @@ module ManageIQ::Providers
           configuration_manager.save
         end
 
-        ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshParser.configuration_manager_inv_to_hashes(configuration_manager, refresher_options)
+        NOVAHawk::Providers::AnsibleTower::ConfigurationManager::RefreshParser.configuration_manager_inv_to_hashes(configuration_manager, refresher_options)
       end
     end
   end

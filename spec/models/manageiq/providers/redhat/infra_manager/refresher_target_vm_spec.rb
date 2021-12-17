@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
+describe NOVAHawk::Providers::Redhat::InfraManager::Refresher do
   context 'targeted refresh of a Vm' do
     let(:ip_address) { '192.168.1.31' }
 
@@ -194,7 +194,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::Refresher do
       :evm_owner_id           => nil,
       :linked_clone           => nil,
       :fault_tolerance        => nil,
-      :type                   => "ManageIQ::Providers::Redhat::InfraManager::Vm",
+      :type                   => "NOVAHawk::Providers::Redhat::InfraManager::Vm",
       :ems_cluster_id         => @cluster.id,
       :retirement_warn        => nil,
       :retirement_last_warn   => nil,

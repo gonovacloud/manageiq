@@ -298,7 +298,7 @@
   };
 
   // .foo(val, opt) or .foo.c3(opt)(val) or .foo.jqplot(opt)(_, val)
-  window.ManageIQ.charts.formatters = _.mapValues(format, function(fn) {
+  window.NOVAHawk.charts.formatters = _.mapValues(format, function(fn) {
     fn.c3 = _.curryRight(fn);
 
     fn.jqplot = function(opt) {

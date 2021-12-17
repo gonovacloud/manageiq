@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Microsoft::InfraManager::ProvisionWorkflow < ::MiqProvisionInfraWorkflow
+class NOVAHawk::Providers::Microsoft::InfraManager::ProvisionWorkflow < ::MiqProvisionInfraWorkflow
   def dialog_name_from_automate(message = 'get_dialog_name')
     super(message, {'platform' => 'microsoft'})
   end
@@ -10,7 +10,7 @@ class ManageIQ::Providers::Microsoft::InfraManager::ProvisionWorkflow < ::MiqPro
   end
 
   def self.provider_model
-    ManageIQ::Providers::Microsoft::InfraManager
+    NOVAHawk::Providers::Microsoft::InfraManager
   end
 
   def update_field_visibility(_options = {})

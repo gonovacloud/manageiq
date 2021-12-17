@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::CloudManager::ManagerEventsMixin
+module NOVAHawk::Providers::Vmware::CloudManager::ManagerEventsMixin
   extend ActiveSupport::Concern
 
   def event_monitor_options
@@ -24,6 +24,6 @@ module ManageIQ::Providers::Vmware::CloudManager::ManagerEventsMixin
   end
 
   def verify_amqp_credentials(_options = {})
-    ManageIQ::Providers::Vmware::CloudManager::EventCatcher::Stream.test_amqp_connection(event_monitor_options)
+    NOVAHawk::Providers::Vmware::CloudManager::EventCatcher::Stream.test_amqp_connection(event_monitor_options)
   end
 end

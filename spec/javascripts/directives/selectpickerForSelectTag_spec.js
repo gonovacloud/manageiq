@@ -2,7 +2,7 @@ describe('selectpicker-for-select-tag initialization', function() {
   var $scope;
   var elem, form;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
   beforeEach(inject(function($compile, $rootScope) {
     $scope = $rootScope;
 

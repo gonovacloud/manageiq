@@ -67,7 +67,7 @@ module ApplianceConsole
       self.pgclient = Certificate.new(
         :cert_filename => "#{PSQL_CLIENT_DIR}/postgresql.crt",
         :root_filename => "#{PSQL_CLIENT_DIR}/root.crt",
-        :service       => "manageiq",
+        :service       => "novahawk",
         :extensions    => %w(client),
         :ca_name       => ca_name,
         :hostname      => hostname,

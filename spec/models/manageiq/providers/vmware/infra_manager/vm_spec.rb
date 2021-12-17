@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Vm do
+describe NOVAHawk::Providers::Vmware::InfraManager::Vm do
   context "#is_available?" do
     let(:ems)  { FactoryGirl.create(:ems_vmware) }
     let(:host) { FactoryGirl.create(:host_vmware_esx, :ext_management_system => ems) }
@@ -48,7 +48,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Vm do
   end
 
   context "#cloneable?" do
-    let(:vm_vmware) { ManageIQ::Providers::Vmware::InfraManager::Vm.new }
+    let(:vm_vmware) { NOVAHawk::Providers::Vmware::InfraManager::Vm.new }
 
     it "returns true" do
       expect(vm_vmware.cloneable?).to eq(true)

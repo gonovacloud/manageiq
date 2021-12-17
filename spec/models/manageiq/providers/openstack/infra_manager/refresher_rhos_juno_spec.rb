@@ -1,6 +1,6 @@
 require 'fog/openstack'
 
-describe ManageIQ::Providers::Openstack::InfraManager::Refresher do
+describe NOVAHawk::Providers::Openstack::InfraManager::Refresher do
   before(:each) do
     _guid, _server, zone = EvmSpecHelper.create_guid_miq_server_zone
     @ems = FactoryGirl.create(:ems_openstack_infra, :zone => zone, :hostname => "192.168.24.1",
@@ -48,7 +48,7 @@ describe ManageIQ::Providers::Openstack::InfraManager::Refresher do
       EmsRefresh.refresh(@ems.network_manager)
       @ems.reload
 
-      @host = ManageIQ::Providers::Openstack::InfraManager::Host.all.order(:ems_ref).detect { |x| x.name.include?('(NovaCompute)') }
+      @host = NOVAHawk::Providers::Openstack::InfraManager::Host.all.order(:ems_ref).detect { |x| x.name.include?('(NovaCompute)') }
 
       expect(@host.maintenance).to eq(false)
       expect(@host.maintenance_reason).to eq(nil)
@@ -128,7 +128,7 @@ describe ManageIQ::Providers::Openstack::InfraManager::Refresher do
   end
 
   def assert_specific_host
-    @host = ManageIQ::Providers::Openstack::InfraManager::Host.all.detect { |x| x.name.include?('(Controller)') }
+    @host = NOVAHawk::Providers::Openstack::InfraManager::Host.all.detect { |x| x.name.include?('(Controller)') }
 
     expect(@host.ems_ref).not_to be nil
     expect(@host.ems_ref_obj).not_to be nil
@@ -149,9 +149,9 @@ describe ManageIQ::Providers::Openstack::InfraManager::Refresher do
     )
 
     expect(@host.private_networks.count).to be > 0
-    expect(@host.private_networks.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private)
+    expect(@host.private_networks.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private)
     expect(@host.network_ports.count).to    be > 0
-    expect(@host.network_ports.first).to    be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::NetworkPort)
+    expect(@host.network_ports.first).to    be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort)
 
     expect(@host.operating_system).to have_attributes(
       :product_name     => "linux"
@@ -201,7 +201,7 @@ describe ManageIQ::Providers::Openstack::InfraManager::Refresher do
   end
 
   def assert_specific_template(name, is_public = false)
-    template = ManageIQ::Providers::Openstack::InfraManager::Template.where(:name => name).first
+    template = NOVAHawk::Providers::Openstack::InfraManager::Template.where(:name => name).first
     expect(template).to have_attributes(
       :template              => true,
       :publicly_available    => is_public,

@@ -1,7 +1,7 @@
 class ContainerTopologyService < TopologyService
   include UiServiceMixin
 
-  @provider_class = ManageIQ::Providers::ContainerManager
+  @provider_class = NOVAHawk::Providers::ContainerManager
 
   def build_topology
     topo_items = {}
@@ -23,7 +23,7 @@ class ContainerTopologyService < TopologyService
   end
 
   def entity_display_type(entity)
-    if entity.kind_of?(ManageIQ::Providers::ContainerManager)
+    if entity.kind_of?(NOVAHawk::Providers::ContainerManager)
       entity.class.short_token
     elsif entity.kind_of?(ContainerGroup)
       "Pod"
@@ -76,7 +76,7 @@ class ContainerTopologyService < TopologyService
       status = entity.state.capitalize
     elsif entity.kind_of?(ContainerReplicator)
       status = (entity.current_replicas == entity.replicas) ? 'OK' : 'Warning'
-    elsif entity.kind_of?(ManageIQ::Providers::ContainerManager)
+    elsif entity.kind_of?(NOVAHawk::Providers::ContainerManager)
       status = entity.authentications.empty? ? 'Unknown' : entity.default_authentication.status.capitalize
     else
       status = 'Unknown'

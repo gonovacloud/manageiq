@@ -1,6 +1,6 @@
 class ContainerDeployment < ApplicationRecord
   include_concern "Automate"
-  belongs_to :deployed_ems, :class_name => 'ManageIQ::Providers::ContainerManager'
+  belongs_to :deployed_ems, :class_name => 'NOVAHawk::Providers::ContainerManager'
   belongs_to :deployed_on_ems, :class_name => 'ExtManagementSystem', :inverse_of => :container_deployments
   belongs_to :automation_task
   has_many :container_deployment_nodes, :dependent => :destroy
@@ -336,7 +336,7 @@ EOS
     options["vm_name"] = params["#{type.singularize}_base_name"]
     options["vm_memory"] = params[type + "_vm_memory"] if params[type + "_vm_memory"]
     options["cpu"] = params[type + "_cpu"] if params[type + "_cpu"]
-    if deployed_on_ems.kind_of? ManageIQ::Providers::Amazon::CloudManager
+    if deployed_on_ems.kind_of? NOVAHawk::Providers::Amazon::CloudManager
       options["instance_type"] = 1 || params[type + "_instance_type"]
       options["placement_auto"] = true
     end
@@ -378,7 +378,7 @@ EOS
 
   def create_automation_request(parameters, user)
     uri_parts = {
-      "namespace" => "ManageIQ/Deployment/ContainerProvider/System/StateMachine",
+      "namespace" => "NOVAHawk/Deployment/ContainerProvider/System/StateMachine",
       "class"     => "Deployment",
       "instance"  => "Deployment"
     }

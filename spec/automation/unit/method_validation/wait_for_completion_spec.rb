@@ -1,8 +1,8 @@
-require Rails.root.join('db/fixtures/ae_datastore/ManageIQ/ConfigurationManagement/AnsibleTower/Operations/StateMachines/Job.class/__methods__/wait_for_completion').to_s
+require Rails.root.join('db/fixtures/ae_datastore/NOVAHawk/ConfigurationManagement/AnsibleTower/Operations/StateMachines/Job.class/__methods__/wait_for_completion').to_s
 require Rails.root.join('spec/support/miq_ae_mock_service').to_s
 
 describe WaitForCompletion do
-  let(:job_class) { MiqAeMethodService::MiqAeServiceManageIQ_Providers_AnsibleTower_ConfigurationManager_Job }
+  let(:job_class) { MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job }
   let(:user) { FactoryGirl.create(:user_with_group) }
   let(:vm) { FactoryGirl.create(:vm) }
   let(:svc_vm) { MiqAeMethodService::MiqAeServiceVm.find(vm.id) }

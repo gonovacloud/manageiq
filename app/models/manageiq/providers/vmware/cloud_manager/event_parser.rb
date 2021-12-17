@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::CloudManager::EventParser
+module NOVAHawk::Providers::Vmware::CloudManager::EventParser
   def self.event_to_hash(event, ems_id)
     event_hash = {
       :event_type => event[:type].sub('com/vmware/vcloud/event/', '').gsub('/', '-'),  # normalized

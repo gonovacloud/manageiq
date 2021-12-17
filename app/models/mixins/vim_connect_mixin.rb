@@ -5,7 +5,7 @@ module VimConnectMixin
 
     options[:fault_tolerant] = true unless options.key?(:fault_tolerant)
 
-    options[:use_broker] = (self.class.respond_to?(:use_vim_broker?) ? self.class.use_vim_broker? : ManageIQ::Providers::Vmware::InfraManager.use_vim_broker?) if options[:fault_tolerant] && !options.key?(:use_broker)
+    options[:use_broker] = (self.class.respond_to?(:use_vim_broker?) ? self.class.use_vim_broker? : NOVAHawk::Providers::Vmware::InfraManager.use_vim_broker?) if options[:fault_tolerant] && !options.key?(:use_broker)
     options[:check_broker_worker] = !!options[:use_broker] unless options.key?(:check_broker_worker)
     if options[:check_broker_worker] && !MiqVimBrokerWorker.available?
       msg = "Broker Worker is not available"

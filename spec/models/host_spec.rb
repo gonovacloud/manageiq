@@ -37,7 +37,7 @@ describe Host do
     expect(DriftState.count).to eq(1)
 
     expect(host.drift_states.first.data).to eq({
-      :class                         => "ManageIQ::Providers::Vmware::InfraManager::Host",
+      :class                         => "NOVAHawk::Providers::Vmware::InfraManager::Host",
       :id                            => host.id,
       :name                          => host.name,
       :vmm_vendor_display            => "VMware",
@@ -488,7 +488,7 @@ describe Host do
     end
 
     it "policy passes" do
-      expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Host).to receive(:scan_queue)
+      expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Host).to receive(:scan_queue)
 
       allow(MiqAeEngine).to receive_messages(:deliver => ['ok', 'sucess', MiqAeEngine::MiqAeWorkspaceRuntime.new])
       @host.scan
@@ -497,7 +497,7 @@ describe Host do
     end
 
     it "policy prevented" do
-      expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Host).to_not receive(:scan_queue)
+      expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Host).to_not receive(:scan_queue)
 
       event = {:attributes => {"full_data" => {:policy => {:prevented => true}}}}
       allow_any_instance_of(MiqAeEngine::MiqAeWorkspaceRuntime).to receive(:get_obj_from_path).with("/").and_return(:event_stream => event)

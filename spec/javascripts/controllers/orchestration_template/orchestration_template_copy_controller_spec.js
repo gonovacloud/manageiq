@@ -1,7 +1,7 @@
 describe('orchestrationTemplateCopyController', function() {
   var $scope, $controller, $httpBackend, miqService;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, _$controller_, _$httpBackend_, _miqService_) {
     miqService = _miqService_;
@@ -20,7 +20,7 @@ describe('orchestrationTemplateCopyController', function() {
     $httpBackend = _$httpBackend_;
 
     setFixtures('<html><head></head><body></body></html>');
-    ManageIQ.editor = CodeMirror(document.body);
+    NOVAHawk.editor = CodeMirror(document.body);
 
     $controller = _$controller_('orchestrationTemplateCopyController', {
       $scope: $scope,

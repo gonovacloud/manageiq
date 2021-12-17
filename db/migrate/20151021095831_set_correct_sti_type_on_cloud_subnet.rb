@@ -1,7 +1,7 @@
 class SetCorrectStiTypeOnCloudSubnet < ActiveRecord::Migration
-  CLOUD_SUBNET         = "ManageIQ::Providers::Openstack::CloudManager::CloudSubnet".freeze
-  CLOUD_PUBLIC_CLASS   = "ManageIQ::Providers::Openstack::CloudManager::CloudNetwork::Public".freeze
-  CLOUD_PRIVATE_CLASS  = "ManageIQ::Providers::Openstack::CloudManager::CloudNetwork::Private".freeze
+  CLOUD_SUBNET         = "NOVAHawk::Providers::Openstack::CloudManager::CloudSubnet".freeze
+  CLOUD_PUBLIC_CLASS   = "NOVAHawk::Providers::Openstack::CloudManager::CloudNetwork::Public".freeze
+  CLOUD_PRIVATE_CLASS  = "NOVAHawk::Providers::Openstack::CloudManager::CloudNetwork::Private".freeze
 
   class CloudNetwork < ActiveRecord::Base
     self.inheritance_column = :_type_disabled

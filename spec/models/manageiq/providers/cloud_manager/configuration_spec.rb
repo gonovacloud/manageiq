@@ -1,7 +1,7 @@
-describe ManageIQ::Providers::CloudManager::Provision::Configuration do
+describe NOVAHawk::Providers::CloudManager::Provision::Configuration do
   it "#userdata_payload is clear text" do
     template  = FactoryGirl.build(:customization_template, :script => "#cloud-init")
-    provision = ManageIQ::Providers::CloudManager::Provision.new
+    provision = NOVAHawk::Providers::CloudManager::Provision.new
     allow(provision).to receive(:customization_template).and_return(template)
     allow(provision).to receive(:post_install_callback_url).and_return("")
     expect(provision.userdata_payload).to eq(template.script)

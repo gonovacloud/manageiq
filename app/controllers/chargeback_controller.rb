@@ -699,7 +699,7 @@ class ChargebackController < ApplicationController
     @edit[:current_assignment] = ChargebackRate.get_assignments(x_node.split('-').last)
     unless @edit[:current_assignment].empty?
       @edit[:new][:cbshow_typ] =  case @edit[:current_assignment][0][:object]
-                                  when ManageIQ::Providers::ContainerManager
+                                  when NOVAHawk::Providers::ContainerManager
                                     "ems_container"
                                   when EmsCluster
                                     "ems_cluster"
@@ -799,9 +799,9 @@ class ChargebackController < ApplicationController
       if klass == "enterprise"
         MiqEnterprise.all
       elsif klass == "ext_management_system"
-        ExtManagementSystem.all.reject { |prov| prov.kind_of? ManageIQ::Providers::ContainerManager }
+        ExtManagementSystem.all.reject { |prov| prov.kind_of? NOVAHawk::Providers::ContainerManager }
       elsif klass == "ems_container"
-        ManageIQ::Providers::ContainerManager.all
+        NOVAHawk::Providers::ContainerManager.all
       else
         klass.classify.constantize.all
       end

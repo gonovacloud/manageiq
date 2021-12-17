@@ -8,19 +8,19 @@ describe MoveNetworkPortCloudSubnetIdToNetworkPortsCloudSubnets do
   let(:cloud_subnet_entries) do
     [
       {
-        :type         => "ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet",
+        :type         => "NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet",
         :name         => "cs1"
       },
       {
-        :type         => "ManageIQ::Providers::Azure::CloudManager::CloudSubnet",
+        :type         => "NOVAHawk::Providers::Azure::CloudManager::CloudSubnet",
         :name         => "cs2"
       },
       {
-        :type         => "ManageIQ::Providers::Amazon::CloudManager::CloudSubnet",
+        :type         => "NOVAHawk::Providers::Amazon::CloudManager::CloudSubnet",
         :name         => "cs3"
       },
       {
-        :type         => "ManageIQ::Providers::AnotherManager::CloudManager::CloudSubnet",
+        :type         => "NOVAHawk::Providers::AnotherManager::CloudManager::CloudSubnet",
         :name         => "cs4"
       }
     ]
@@ -29,22 +29,22 @@ describe MoveNetworkPortCloudSubnetIdToNetworkPortsCloudSubnets do
   let(:network_port_entries) do
     [
       {
-        :type         => "ManageIQ::Providers::Openstack::NetworkManager::NetworkPort",
+        :type         => "NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort",
         :cloud_subnet => cloud_subnet_entries[0],
         :name         => "np1"
       },
       {
-        :type         => "ManageIQ::Providers::Azure::CloudManager::NetworkPort",
+        :type         => "NOVAHawk::Providers::Azure::CloudManager::NetworkPort",
         :cloud_subnet => cloud_subnet_entries[1],
         :name         => "np2"
       },
       {
-        :type         => "ManageIQ::Providers::Amazon::CloudManager::NetworkPort",
+        :type         => "NOVAHawk::Providers::Amazon::CloudManager::NetworkPort",
         :cloud_subnet => cloud_subnet_entries[2],
         :name         => "np3"
       },
       {
-        :type         => "ManageIQ::Providers::AnotherManager::CloudManager::NetworkPort",
+        :type         => "NOVAHawk::Providers::AnotherManager::CloudManager::NetworkPort",
         :cloud_subnet => cloud_subnet_entries[3],
         :name         => "np4"
       }

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::ProvisionWorkflow < ::MiqProvisionCloudWorkflow
+class NOVAHawk::Providers::Openstack::CloudManager::ProvisionWorkflow < ::MiqProvisionCloudWorkflow
   include_concern "DialogFieldValidation"
 
   def allowed_instance_types(_options = {})
@@ -89,6 +89,6 @@ class ManageIQ::Providers::Openstack::CloudManager::ProvisionWorkflow < ::MiqPro
   end
 
   def self.provider_model
-    ManageIQ::Providers::Openstack::CloudManager
+    NOVAHawk::Providers::Openstack::CloudManager
   end
 end

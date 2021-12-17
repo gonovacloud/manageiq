@@ -3,8 +3,8 @@ FactoryGirl.define do
   end
 
   factory :kubernetes_container,
-          :aliases => ['app/models/manageiq/providers/kubernetes/container_manager/container'],
-          :class   => 'ManageIQ::Providers::Kubernetes::ContainerManager::Container',
+          :aliases => ['app/models/novahawk/providers/kubernetes/container_manager/container'],
+          :class   => 'NOVAHawk::Providers::Kubernetes::ContainerManager::Container',
           :parent  => :container do
   end
 end

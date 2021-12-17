@@ -67,7 +67,7 @@ config/environments/*.local.yml
 # db/
 db/*.sqlite3
 db/schema.rb
-db/fixtures/ae_datastore/ManageIQ/.manifest.yaml
+db/fixtures/ae_datastore/NOVAHawk/.manifest.yaml
 
 # log/
 log/*.gz

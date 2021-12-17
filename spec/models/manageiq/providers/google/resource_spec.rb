@@ -1,7 +1,7 @@
-describe ManageIQ::Providers::Google::Resource do
+describe NOVAHawk::Providers::Google::Resource do
   context "created with disk uri" do
     let(:resource) do
-      uri = 'https://content.googleapis.com/compute/v1/projects/manageiq-dev/zones/us-central1-a/disks/foobar'
+      uri = 'https://content.googleapis.com/compute/v1/projects/novahawk-dev/zones/us-central1-a/disks/foobar'
       described_class.new(uri)
     end
 
@@ -12,7 +12,7 @@ describe ManageIQ::Providers::Google::Resource do
 
   context 'created with image uri' do
     let(:resource) do
-      uri = 'https://content.googleapis.com/compute/v1/projects/manageiq-dev/global/images/family/centos'
+      uri = 'https://content.googleapis.com/compute/v1/projects/novahawk-dev/global/images/family/centos'
       described_class.new(uri)
     end
 
@@ -23,7 +23,7 @@ describe ManageIQ::Providers::Google::Resource do
 
   context 'created with snapshot uri' do
     let(:resource) do
-      uri = 'https://content.googleapis.com/compute/v1/projects/manageiq-dev/global/snapshots/dev-snapshot-20160324'
+      uri = 'https://content.googleapis.com/compute/v1/projects/novahawk-dev/global/snapshots/dev-snapshot-20160324'
       described_class.new(uri)
     end
 
@@ -57,7 +57,7 @@ describe ManageIQ::Providers::Google::Resource do
   end
 
   context 'created with partial resource path' do
-    let(:resource) { described_class.new("compute/v1/projects/manageiq-dev/zones/us-central1-a/disks/foobar") }
+    let(:resource) { described_class.new("compute/v1/projects/novahawk-dev/zones/us-central1-a/disks/foobar") }
 
     it 'has correct type' do
       expect(resource.disk?).to be(true)
@@ -65,7 +65,7 @@ describe ManageIQ::Providers::Google::Resource do
   end
 
   context 'created with even more partial resource path' do
-    let(:resource) { described_class.new("projects/manageiq-dev/zones/us-central1-a/disks/foobar") }
+    let(:resource) { described_class.new("projects/novahawk-dev/zones/us-central1-a/disks/foobar") }
 
     it 'has correct type' do
       expect(resource.disk?).to be(true)

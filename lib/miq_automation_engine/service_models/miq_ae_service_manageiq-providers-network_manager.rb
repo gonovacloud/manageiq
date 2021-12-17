@@ -1,5 +1,5 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_NetworkManager < MiqAeServiceExtManagementSystem
+  class MiqAeServiceNOVAHawk_Providers_NetworkManager < MiqAeServiceExtManagementSystem
     expose :parent_manager,         :association => true
     expose :cloud_networks,         :association => true
     expose :cloud_subnets,          :association => true

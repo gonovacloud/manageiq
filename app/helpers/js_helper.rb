@@ -90,9 +90,9 @@ module JsHelper
     skip_days = options[:skip_days].nil? ? 'undefined' : options[:skip_days].to_a.to_json
 
     <<EOD
-ManageIQ.calendar.calDateFrom = #{js_format_date(options[:date_from])};
-ManageIQ.calendar.calDateTo = #{js_format_date(options[:date_to])};
-ManageIQ.calendar.calSkipDays = #{skip_days};
+NOVAHawk.calendar.calDateFrom = #{js_format_date(options[:date_from])};
+NOVAHawk.calendar.calDateTo = #{js_format_date(options[:date_to])};
+NOVAHawk.calendar.calSkipDays = #{skip_days};
 miqBuildCalendar();
 EOD
   end

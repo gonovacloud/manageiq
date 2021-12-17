@@ -20,7 +20,7 @@ module MiqAeServiceOrchestrationStackSpec
 
     context "normalized_live_status" do
       it "gets the live status of the stack and normalizes the status" do
-        status = ManageIQ::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('CREATING', nil)
+        status = NOVAHawk::Providers::Amazon::CloudManager::OrchestrationStack::Status.new('CREATING', nil)
         allow_any_instance_of(OrchestrationStack).to receive(:raw_status) { status }
 
         expect(service_stack.normalized_live_status).to eq(['transient', "CREATING"])

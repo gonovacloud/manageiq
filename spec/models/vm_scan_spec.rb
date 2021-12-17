@@ -5,7 +5,7 @@ describe VmScan do
 
       # TODO: We should be able to set values so we don't need to stub behavior
       allow_any_instance_of(MiqServer).to receive_messages(:is_a_proxy? => true, :has_active_role? => true, :is_vix_disk? => true)
-      allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager).to receive_messages(:authentication_status_ok? => true)
+      allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager).to receive_messages(:authentication_status_ok? => true)
       allow(Vm).to receive_messages(:scan_via_ems? => true)
 
       @user      = FactoryGirl.create(:user_with_group, :userid => "tester")
@@ -193,7 +193,7 @@ describe VmScan do
       it "should raise vm_scan_start for Vm" do
         expect(MiqAeEvent).to receive(:raise_evm_event).with(
           "vm_scan_start",
-          an_instance_of(ManageIQ::Providers::Vmware::InfraManager::Vm),
+          an_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Vm),
           an_instance_of(Hash),
           an_instance_of(Hash)
         )
@@ -222,7 +222,7 @@ describe VmScan do
 
         expect(MiqAeEvent).to receive(:raise_evm_event).with(
           "vm_scan_start",
-          an_instance_of(ManageIQ::Providers::Vmware::InfraManager::Template),
+          an_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Template),
           an_instance_of(Hash),
           an_instance_of(Hash)
         )

@@ -3,28 +3,28 @@ require 'evm_application'
 require 'evm_rake_helper'
 
 namespace :evm do
-  desc "Start the ManageIQ EVM Application"
+  desc "Start the NOVAHawk EVM Application"
   task :start => :environment do
     EvmApplication.start
   end
 
-  desc "Restart the ManageIQ EVM Application"
+  desc "Restart the NOVAHawk EVM Application"
   task :restart => :environment do
     EvmApplication.stop
     EvmApplication.start
   end
 
-  desc "Stop the ManageIQ EVM Application"
+  desc "Stop the NOVAHawk EVM Application"
   task :stop => :environment do
     EvmApplication.stop
   end
 
-  desc "Kill the ManageIQ EVM Application"
+  desc "Kill the NOVAHawk EVM Application"
   task :kill => :environment do
     EvmApplication.kill
   end
 
-  desc "Report Status of the ManageIQ EVM Application"
+  desc "Report Status of the NOVAHawk EVM Application"
   task :status => :environment do
     EvmApplication.status
   end

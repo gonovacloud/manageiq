@@ -1,6 +1,6 @@
 require 'MiqContainerGroup/MiqContainerGroup'
 
-describe ManageIQ::Providers::Kubernetes::ContainerManager do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager do
   it ".ems_type" do
     expect(described_class.ems_type).to eq('kubernetes')
   end
@@ -55,7 +55,7 @@ describe ManageIQ::Providers::Kubernetes::ContainerManager do
       expect(job.status).to eq("ok")
       expect(job.target_class).to eq(image.class.name)
       expect(job.target_id).to eq(image.id)
-      expect(job.type).to eq(ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job.name)
+      expect(job.type).to eq(NOVAHawk::Providers::Kubernetes::ContainerManager::Scanning::Job.name)
       expect(job.zone).to eq("default")
     end
   end

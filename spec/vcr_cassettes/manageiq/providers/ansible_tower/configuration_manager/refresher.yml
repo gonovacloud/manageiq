@@ -1281,7 +1281,7 @@ http_interactions:
         \"vmware_guestFullName\": \"Red Hat Enterprise Linux 6 (64-bit)\", \"vmware_staticCpuEntitlement\":
         3675, \"vmware_uncommitted\": 35646447616, \"vmware_distributedMemoryEntitlement\":
         4264, \"vmware_template\": false, \"vmware_overallCpuDemand\": 311, \"vmware_ftSecondaryLatency\":
-        -1, \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": \"ManageIQ SAML
+        -1, \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": \"NOVAHawk SAML
         External Auth Prototype\", \"vmware_maxMemoryUsage\": 16384, \"vmware_recordReplayState\":
         \"inactive\", \"vmware_sharedMemory\": 101, \"vmware_privateMemory\": 6295,
         \"vmware_resourcePool\": \"Resources\", \"vmware_overallCpuUsage\": 287, \"vmware_overallStatus\":
@@ -2807,7 +2807,7 @@ http_interactions:
         \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": null, \"vmware_maxMemoryUsage\":
         6144, \"vmware_overallCpuUsage\": 71, \"vmware_overallStatus\": \"green\",
         \"vmware_toolsInstallerMounted\": false, \"vmware_memoryReservation\": 0,
-        \"vmware_committed\": 49588606995, \"vmware_product_vendor\": \"ManageIQ\",
+        \"vmware_committed\": 49588606995, \"vmware_product_vendor\": \"NOVAHawk\",
         \"vmware_product_vendorUrl\": null, \"vmware_numCpu\": 4, \"vmware_name\":
         \"joev-miq\", \"vmware_cpuReservation\": 0, \"vmware_hostMemoryUsage\": 4984,
         \"vmware_overallCpuDemand\": 71, \"vmware_ftLogBandwidth\": -1, \"vmware_datastores\":
@@ -2821,7 +2821,7 @@ http_interactions:
         \"vmware_staticCpuEntitlement\": 3679, \"vmware_uncommitted\": 502, \"vmware_template\":
         false, \"vmware_ftSecondaryLatency\": -1, \"vmware_recordReplayState\": \"inactive\",
         \"vmware_sharedMemory\": 1696, \"vmware_privateMemory\": 4318, \"vmware_resourcePool\":
-        \"Resources\", \"vmware_product_name\": \"ManageIQ\", \"vmware_suspendInterval\":
+        \"Resources\", \"vmware_product_name\": \"NOVAHawk\", \"vmware_suspendInterval\":
         0, \"vmware_maxCpuUsage\": 9596, \"vmware_numEthernetCards\": 1, \"vmware_product_productUrl\":
         null, \"vmware_hostName\": \"joev-miq.jvlcek.redhat.com\", \"vmware_uptimeSeconds\":
         4897979, \"vmware_memorySizeMB\": 6144, \"vmware_compressedMemory\": 0, \"vmware_installBootRequired\":
@@ -2853,7 +2853,7 @@ http_interactions:
         \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": null, \"vmware_maxMemoryUsage\":
         6144, \"vmware_overallCpuUsage\": 0, \"vmware_overallStatus\": \"green\",
         \"vmware_toolsInstallerMounted\": false, \"vmware_memoryReservation\": 0,
-        \"vmware_numMksConnections\": 0, \"vmware_product_vendor\": \"ManageIQ\",
+        \"vmware_numMksConnections\": 0, \"vmware_product_vendor\": \"NOVAHawk\",
         \"vmware_product_vendorUrl\": null, \"vmware_numCpu\": 4, \"vmware_name\":
         \"joev-miq13_OLD\", \"vmware_cpuReservation\": 0, \"vmware_hostMemoryUsage\":
         0, \"vmware_overallCpuDemand\": 0, \"vmware_ftLogBandwidth\": -1, \"vmware_datastores\":
@@ -2867,7 +2867,7 @@ http_interactions:
         \"vmware_staticCpuEntitlement\": 0, \"vmware_uncommitted\": 49587249152, \"vmware_template\":
         false, \"vmware_ftSecondaryLatency\": -1, \"vmware_recordReplayState\": \"inactive\",
         \"vmware_sharedMemory\": 0, \"vmware_privateMemory\": 0, \"vmware_resourcePool\":
-        \"Resources\", \"vmware_product_name\": \"ManageIQ\", \"vmware_suspendInterval\":
+        \"Resources\", \"vmware_product_name\": \"NOVAHawk\", \"vmware_suspendInterval\":
         0, \"vmware_maxCpuUsage\": 8796, \"vmware_numEthernetCards\": 1, \"vmware_product_productUrl\":
         null, \"vmware_hostName\": \"joev-miq13.jvlcek.redhat.com\", \"vmware_uptimeSeconds\":
         0, \"vmware_memorySizeMB\": 6144, \"vmware_compressedMemory\": 0, \"vmware_installBootRequired\":
@@ -2907,7 +2907,7 @@ http_interactions:
         \"vmware_product_fullVersion\": null, \"vmware_numVirtualDisks\": 1, \"vmware_annotation\":
         null, \"vmware_maxMemoryUsage\": 6144, \"vmware_overallCpuUsage\": 0, \"vmware_overallStatus\":
         \"green\", \"vmware_toolsInstallerMounted\": false, \"vmware_memoryReservation\":
-        0, \"vmware_committed\": 42950239702, \"vmware_product_vendor\": \"ManageIQ\",
+        0, \"vmware_committed\": 42950239702, \"vmware_product_vendor\": \"NOVAHawk\",
         \"vmware_product_vendorUrl\": null, \"vmware_numCpu\": 4, \"vmware_name\":
         \"joev-miq2\", \"vmware_cpuReservation\": 0, \"vmware_hostMemoryUsage\": 0,
         \"vmware_overallCpuDemand\": 0, \"vmware_ftLogBandwidth\": -1, \"vmware_datastores\":
@@ -2922,7 +2922,7 @@ http_interactions:
         0, \"vmware_uncommitted\": 6637666838, \"vmware_template\": false, \"vmware_ftSecondaryLatency\":
         -1, \"vmware_recordReplayState\": \"inactive\", \"vmware_sharedMemory\": 0,
         \"vmware_privateMemory\": 0, \"vmware_resourcePool\": \"Resources\", \"vmware_product_name\":
-        \"ManageIQ\", \"vmware_suspendInterval\": 0, \"vmware_maxCpuUsage\": 9596,
+        \"NOVAHawk\", \"vmware_suspendInterval\": 0, \"vmware_maxCpuUsage\": 9596,
         \"vmware_numEthernetCards\": 1, \"vmware_product_productUrl\": null, \"vmware_hostName\":
         \"joev-miq2.jvlcek.redhat.com\", \"vmware_uptimeSeconds\": 0, \"vmware_memorySizeMB\":
         6144, \"vmware_compressedMemory\": 0, \"vmware_installBootRequired\": false,
@@ -2955,7 +2955,7 @@ http_interactions:
         \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": null, \"vmware_maxMemoryUsage\":
         6144, \"vmware_overallCpuUsage\": 263, \"vmware_overallStatus\": \"green\",
         \"vmware_toolsInstallerMounted\": false, \"vmware_memoryReservation\": 0,
-        \"vmware_committed\": 11234490713, \"vmware_product_vendor\": \"ManageIQ\",
+        \"vmware_committed\": 11234490713, \"vmware_product_vendor\": \"NOVAHawk\",
         \"vmware_product_vendorUrl\": null, \"vmware_numCpu\": 4, \"vmware_name\":
         \"joev-miq-23052016-16\", \"vmware_cpuReservation\": 0, \"vmware_hostMemoryUsage\":
         3364, \"vmware_overallCpuDemand\": 287, \"vmware_ftLogBandwidth\": -1, \"vmware_datastores\":
@@ -2969,7 +2969,7 @@ http_interactions:
         \"vmware_staticCpuEntitlement\": 3679, \"vmware_uncommitted\": 42588143616,
         \"vmware_template\": false, \"vmware_ftSecondaryLatency\": -1, \"vmware_recordReplayState\":
         \"inactive\", \"vmware_sharedMemory\": 56, \"vmware_privateMemory\": 3298,
-        \"vmware_resourcePool\": \"Resources\", \"vmware_product_name\": \"ManageIQ\",
+        \"vmware_resourcePool\": \"Resources\", \"vmware_product_name\": \"NOVAHawk\",
         \"vmware_suspendInterval\": 0, \"vmware_maxCpuUsage\": 9596, \"vmware_numEthernetCards\":
         1, \"vmware_product_productUrl\": null, \"vmware_hostName\": \"joev-miq16.jvlcek.redhat.com\",
         \"vmware_uptimeSeconds\": 2076, \"vmware_memorySizeMB\": 6144, \"vmware_compressedMemory\":
@@ -3008,11 +3008,11 @@ http_interactions:
         \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": null, \"vmware_maxMemoryUsage\":
         6144, \"vmware_recordReplayState\": \"inactive\", \"vmware_sharedMemory\":
         0, \"vmware_privateMemory\": 0, \"vmware_resourcePool\": \"Resources\", \"vmware_product_name\":
-        \"ManageIQ\", \"vmware_overallCpuUsage\": 0, \"vmware_suspendInterval\": 0,
+        \"NOVAHawk\", \"vmware_overallCpuUsage\": 0, \"vmware_suspendInterval\": 0,
         \"vmware_toolsInstallerMounted\": false, \"vmware_memoryReservation\": 0,
         \"vmware_maxCpuUsage\": 9596, \"vmware_numMksConnections\": 0, \"vmware_numEthernetCards\":
         1, \"vmware_product_productUrl\": null, \"vmware_hostName\": \"joev-miq13.jvlcek.redhat.com\",
-        \"vmware_product_vendor\": \"ManageIQ\", \"vmware_uptimeSeconds\": 0, \"vmware_memorySizeMB\":
+        \"vmware_product_vendor\": \"NOVAHawk\", \"vmware_uptimeSeconds\": 0, \"vmware_memorySizeMB\":
         6144, \"vmware_instanceUuid\": \"500c98cb-ccfb-316f-c779-453c3a959bd6\", \"vmware_compressedMemory\":
         0, \"vmware_product_vendorUrl\": null, \"vmware_numCpu\": 4, \"vmware_installBootRequired\":
         false, \"vmware_committed\": 17602705266, \"vmware_name\": \"joev-miq-5-13\",
@@ -3716,11 +3716,11 @@ http_interactions:
         \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": null, \"vmware_maxMemoryUsage\":
         6144, \"vmware_recordReplayState\": \"inactive\", \"vmware_sharedMemory\":
         0, \"vmware_privateMemory\": 0, \"vmware_resourcePool\": \"Resources\", \"vmware_product_name\":
-        \"ManageIQ\", \"vmware_overallCpuUsage\": 0, \"vmware_suspendInterval\": 0,
+        \"NOVAHawk\", \"vmware_overallCpuUsage\": 0, \"vmware_suspendInterval\": 0,
         \"vmware_toolsInstallerMounted\": false, \"vmware_memoryReservation\": 0,
         \"vmware_maxCpuUsage\": 9596, \"vmware_numMksConnections\": 0, \"vmware_numEthernetCards\":
         1, \"vmware_product_productUrl\": null, \"vmware_hostName\": \"dhcp-8-99-243.example.com\",
-        \"vmware_product_vendor\": \"ManageIQ\", \"vmware_uptimeSeconds\": 0, \"vmware_memorySizeMB\":
+        \"vmware_product_vendor\": \"NOVAHawk\", \"vmware_uptimeSeconds\": 0, \"vmware_memorySizeMB\":
         6144, \"vmware_instanceUuid\": \"500c7cd8-567f-505f-afbf-4e99fe7ad0fc\", \"vmware_compressedMemory\":
         0, \"vmware_product_vendorUrl\": null, \"vmware_numCpu\": 4, \"vmware_installBootRequired\":
         false, \"vmware_committed\": 42949874014, \"vmware_name\": \"lucy_master_0510\",
@@ -3822,7 +3822,7 @@ http_interactions:
         69, "hosts_with_active_failures": 8, "total_groups": 23, "groups_with_active_failures":
         14, "has_inventory_sources": true, "total_inventory_sources": 1, "inventory_sources_with_failures":
         1}, "recent_jobs": []}, "created": "2016-04-18T20:26:31.055Z", "modified":
-        "2016-05-25T15:12:39.211Z", "name": "nc-ManageIQ-pglogical-region-0", "description":
+        "2016-05-25T15:12:39.211Z", "name": "nc-NOVAHawk-pglogical-region-0", "description":
         "imported", "inventory": 17, "enabled": true, "instance_id": "420c6f1b-69c3-fd1a-6f41-3f401d7d997f",
         "variables": "{\"vmware_networks\": [\"VM Network\"], \"vmware_balloonedMemory\":
         0, \"vmware_hostSystem\": \"ibm-x3550m4-01.example.com\",
@@ -3834,13 +3834,13 @@ http_interactions:
         \"vmware_numVirtualDisks\": 1, \"vmware_annotation\": null, \"vmware_maxMemoryUsage\":
         6144, \"vmware_overallCpuUsage\": 191, \"vmware_overallStatus\": \"green\",
         \"vmware_toolsInstallerMounted\": false, \"vmware_memoryReservation\": 0,
-        \"vmware_numMksConnections\": 0, \"vmware_product_vendor\": \"ManageIQ\",
+        \"vmware_numMksConnections\": 0, \"vmware_product_vendor\": \"NOVAHawk\",
         \"vmware_product_vendorUrl\": null, \"vmware_numCpu\": 4, \"vmware_name\":
-        \"nc-ManageIQ-pglogical-region-0\", \"vmware_cpuReservation\": 0, \"vmware_hostMemoryUsage\":
+        \"nc-NOVAHawk-pglogical-region-0\", \"vmware_cpuReservation\": 0, \"vmware_hostMemoryUsage\":
         6034, \"vmware_overallCpuDemand\": 215, \"vmware_ftLogBandwidth\": -1, \"vmware_datastores\":
         [\"datastore1\"], \"vmware_swappedMemory\": 0, \"vmware_consumedOverheadMemory\":
         53, \"vmware_ftLatencyStatus\": \"gray\", \"vmware_vmPathName\": \"[datastore1]
-        nc-ManageIQ-pglogical-region-0/nc-ManageIQ-pglogical-region-0.vmx\", \"vmware_ipAddress\":
+        nc-NOVAHawk-pglogical-region-0/nc-NOVAHawk-pglogical-region-0.vmx\", \"vmware_ipAddress\":
         \"10.8.99.201\", \"vmware_guestMemoryUsage\": 1843, \"vmware_guestFullName\":
         \"Red Hat Enterprise Linux 6 (64-bit)\", \"vmware_product_instanceId\": null,
         \"vmware_product_classId\": null, \"ansible_ssh_host\": \"10.8.99.201\", \"vmware_product_key\":
@@ -3849,7 +3849,7 @@ http_interactions:
         \"vmware_staticCpuEntitlement\": 3679, \"vmware_uncommitted\": 39626736529,
         \"vmware_template\": false, \"vmware_ftSecondaryLatency\": -1, \"vmware_recordReplayState\":
         \"inactive\", \"vmware_sharedMemory\": 38, \"vmware_privateMemory\": 5976,
-        \"vmware_resourcePool\": \"Resources\", \"vmware_product_name\": \"ManageIQ\",
+        \"vmware_resourcePool\": \"Resources\", \"vmware_product_name\": \"NOVAHawk\",
         \"vmware_suspendInterval\": 0, \"vmware_maxCpuUsage\": 9596, \"vmware_numEthernetCards\":
         1, \"vmware_product_productUrl\": null, \"vmware_hostName\": \"dhcp-8-99-201.example.com\",
         \"vmware_uptimeSeconds\": 3444440, \"vmware_memorySizeMB\": 6144, \"vmware_compressedMemory\":

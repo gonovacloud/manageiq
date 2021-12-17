@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Microsoft::InfraManager
+class NOVAHawk::Providers::Microsoft::InfraManager
   module Powershell
     extend ActiveSupport::Concern
 

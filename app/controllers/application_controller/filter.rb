@@ -132,12 +132,12 @@ module ApplicationController::Filter
 
         if @edit[@expkey][:exp_key] && @edit[@expkey][:exp_field]
           if @edit[@expkey][:val1][:type]
-            page << "ManageIQ.expEditor.first.type = '#{@edit[@expkey][:val1][:type]}';"
-            page << "ManageIQ.expEditor.first.title = '#{@edit[@expkey][:val1][:title]}';"
+            page << "NOVAHawk.expEditor.first.type = '#{@edit[@expkey][:val1][:type]}';"
+            page << "NOVAHawk.expEditor.first.title = '#{@edit[@expkey][:val1][:title]}';"
           end
           if @edit[@expkey][:val2][:type]
-            page << "ManageIQ.expEditor.second.type = '#{@edit[@expkey][:val2][:type]}';"
-            page << "ManageIQ.expEditor.second.title = '#{@edit[@expkey][:val2][:title]}';"
+            page << "NOVAHawk.expEditor.second.type = '#{@edit[@expkey][:val2][:type]}';"
+            page << "NOVAHawk.expEditor.second.title = '#{@edit[@expkey][:val2][:title]}';"
           end
         end
         page << "miqSparkle(false);"  # Need to turn off sparkle in case original ajax element gets replaced
@@ -437,12 +437,12 @@ module ApplicationController::Filter
 
           page << ENABLE_CALENDAR if calendar_needed?
           if @edit.fetch_path(@expkey, :val1, :type)
-            page << "ManageIQ.expEditor.first.type = '#{@edit[@expkey][:val1][:type]}';"
-            page << "ManageIQ.expEditor.first.title = '#{@edit[@expkey][:val1][:title]}';"
+            page << "NOVAHawk.expEditor.first.type = '#{@edit[@expkey][:val1][:type]}';"
+            page << "NOVAHawk.expEditor.first.title = '#{@edit[@expkey][:val1][:title]}';"
           end
           if @edit.fetch_path(@expkey, :val2, :type)
-            page << "ManageIQ.expEditor.second.type = '#{@edit[@expkey][:val2][:type]}';"
-            page << "ManageIQ.expEditor.second.title = '#{@edit[@expkey][:val2][:title]}';"
+            page << "NOVAHawk.expEditor.second.type = '#{@edit[@expkey][:val2][:type]}';"
+            page << "NOVAHawk.expEditor.second.title = '#{@edit[@expkey][:val2][:title]}';"
           end
           page << "miqSparkle(false);"  # Need to turn off sparkle in case original ajax element gets replaced
         end
@@ -466,18 +466,18 @@ module ApplicationController::Filter
         page << javascript_hide("blocker_div")
       else
         @edit[:adv_search_open] = true
-        page << "ManageIQ.explorer.clearSearchToggle(#{clear_search_status});"
+        page << "NOVAHawk.explorer.clearSearchToggle(#{clear_search_status});"
         page.replace("adv_search_body", :partial => "layouts/adv_search_body")
         page.replace("adv_search_footer", :partial => "layouts/adv_search_footer")
         page << "$('#adv_search_img').prop('src', '#{ActionController::Base.helpers.image_path('toolbars/squashed-false.png')}')"
         page << ENABLE_CALENDAR if calendar_needed?
         if @edit.fetch_path(@expkey, :val1, :type)
-          page << "ManageIQ.expEditor.first.type = '#{@edit[@expkey][:val1][:type]}';"
-          page << "ManageIQ.expEditor.first.title = '#{@edit[@expkey][:val1][:title]}';"
+          page << "NOVAHawk.expEditor.first.type = '#{@edit[@expkey][:val1][:type]}';"
+          page << "NOVAHawk.expEditor.first.title = '#{@edit[@expkey][:val1][:title]}';"
         end
         if @edit.fetch_path(@expkey, :val2, :type)
-          page << "ManageIQ.expEditor.second.type = '#{@edit[@expkey][:val2][:type]}';"
-          page << "ManageIQ.expEditor.second.title = '#{@edit[@expkey][:val2][:title]}';"
+          page << "NOVAHawk.expEditor.second.type = '#{@edit[@expkey][:val2][:type]}';"
+          page << "NOVAHawk.expEditor.second.title = '#{@edit[@expkey][:val2][:title]}';"
         end
       end
       page << set_spinner_off

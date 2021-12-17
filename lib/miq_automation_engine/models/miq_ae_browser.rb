@@ -17,7 +17,7 @@ class MiqAeBrowser
   #       when true, return the Hash serialized objects including fqname, domain_fqname and klass
   #       i.e.
   #         {
-  #           "fqname": "/ManageIQ/System/Request",
+  #           "fqname": "/NOVAHawk/System/Request",
   #           "domain_fqname": "/System/Request",       # fqname relative to /domain
   #           "klass": "MiqAeClass",
   #           "id": 75,

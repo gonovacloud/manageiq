@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem do
+describe NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem do
   subject { described_class.new }
 
   describe "#configuration_tags" do

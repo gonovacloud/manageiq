@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('orchestrationTemplateCopyController', ['$http', '$scope', 'stackId', 'miqService', function($http, $scope, stackId, miqService) {
+NOVAHawk.angular.app.controller('orchestrationTemplateCopyController', ['$http', '$scope', 'stackId', 'miqService', function($http, $scope, stackId, miqService) {
   $scope.stackId = stackId;
   $scope.templateInfo = {
     templateId: null,
@@ -26,9 +26,9 @@ ManageIQ.angular.app.controller('orchestrationTemplateCopyController', ['$http',
 
   $scope.$watch('templateInfo.templateContent', function() {
     if ($scope.templateInfo.templateContent != null) {
-      var cursor = ManageIQ.editor.getDoc().getCursor();
-      ManageIQ.editor.getDoc().setValue($scope.templateInfo.templateContent);
-      ManageIQ.editor.getDoc().setCursor(cursor);
+      var cursor = NOVAHawk.editor.getDoc().getCursor();
+      NOVAHawk.editor.getDoc().setValue($scope.templateInfo.templateContent);
+      NOVAHawk.editor.getDoc().setCursor(cursor);
     }
   });
 

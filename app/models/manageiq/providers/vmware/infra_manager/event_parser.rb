@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::EventParser
+module NOVAHawk::Providers::Vmware::InfraManager::EventParser
   def self.event_to_hash(event, ems_id = nil)
     log_header = "ems_id: [#{ems_id}] " unless ems_id.nil?
 

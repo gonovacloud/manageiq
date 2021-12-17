@@ -15,7 +15,7 @@ title: Orchestration Stack
 name: OrchestrationStack
 
 # Main DB table report is based on
-db: ManageIQ::Providers::CloudManager::OrchestrationStack
+db: NOVAHawk::Providers::CloudManager::OrchestrationStack
 
 # Columns to fetch from the main table
 cols:

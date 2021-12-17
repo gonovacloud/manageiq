@@ -32,22 +32,22 @@ function jqplot_process_options(data) {
 }
 
 function load_jqplot_charts() {
-  for (var set in ManageIQ.charts.chartData) {
-    for (var i = 0; i < ManageIQ.charts.chartData[set].length; i++) {
+  for (var set in NOVAHawk.charts.chartData) {
+    for (var i = 0; i < NOVAHawk.charts.chartData[set].length; i++) {
       load_jqplot_chart(set, i);
     }
   }
 }
 
 function load_jqplot_chart(chart_set, index) {
-  if (ManageIQ.charts.chartData[chart_set][index] == null) {
+  if (NOVAHawk.charts.chartData[chart_set][index] == null) {
     return;
   }
 
   var chart_id = "miq_chart_" + chart_set + "_" + index;
   var chart2_id = "miq_chart_" + chart_set + "_" + index + "_2";
-  var data = ManageIQ.charts.chartData[chart_set][index].xml;
-  var data2 = ManageIQ.charts.chartData[chart_set][index].xml2;
+  var data = NOVAHawk.charts.chartData[chart_set][index].xml;
+  var data2 = NOVAHawk.charts.chartData[chart_set][index].xml2;
 
   if ($('#' + chart_id).is(":visible")) {
     $.jqplot(chart_id, data.data, jqplot_process_options(data.options)).replot();
@@ -58,19 +58,19 @@ function load_jqplot_chart(chart_set, index) {
 }
 
 function jqplot_register_chart(chart_id, chart) {
-  ManageIQ.charts.charts[chart_id] = chart;
+  NOVAHawk.charts.charts[chart_id] = chart;
 }
 
 function jqplot_redraw_charts() {
-  if (ManageIQ.charts.charts === null) {
+  if (NOVAHawk.charts.charts === null) {
     return;
   }
-  for (var chart in ManageIQ.charts.charts)
-    if (ManageIQ.charts.charts.hasOwnProperty(chart)) {
+  for (var chart in NOVAHawk.charts.charts)
+    if (NOVAHawk.charts.charts.hasOwnProperty(chart)) {
       // We are passing in the foobar option to fool jqplot into doing full reInitialize()
       // instead of quickInit() to properly recalculate the bar charts.
       try {
-        ManageIQ.charts.charts[chart].replot({resetAxes: true, foobar: true});
+        NOVAHawk.charts.charts[chart].replot({resetAxes: true, foobar: true});
       } catch (_e) {};
     }
 }
@@ -119,6 +119,6 @@ function jqplot_bind_events(chart_set, chart_index) {
 
 $(document).ready(function() {
   $(window).resize(function() {
-    if (ManageIQ.charts.provider == 'jqplot') setTimeout(jqplot_redraw_charts, 500);
+    if (NOVAHawk.charts.provider == 'jqplot') setTimeout(jqplot_redraw_charts, 500);
   });
 });

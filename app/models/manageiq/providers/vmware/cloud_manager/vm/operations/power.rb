@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::CloudManager::Vm::Operations::Power
+module NOVAHawk::Providers::Vmware::CloudManager::Vm::Operations::Power
   def validate_pause
     validate_unsupported("Pause operation")
   end

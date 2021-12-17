@@ -11,7 +11,7 @@ class NetappRcu < StorageManager
   def self.find_rcu_vcs
     zoneId = MiqServer.my_server.zone.id
     ra = []
-    ManageIQ::Providers::Vmware::InfraManager.where(:zone_id => zoneId).each do |vc|
+    NOVAHawk::Providers::Vmware::InfraManager.where(:zone_id => zoneId).each do |vc|
       begin
         # TODO: Use hostname, not ipaddress
         rcu = RcuClientBase.new(vc.ipaddress, *vc.auth_user_pwd(:default))
@@ -25,7 +25,7 @@ class NetappRcu < StorageManager
   end
 
   def self.add_from_ems(ems)
-    unless ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    unless ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
       raise _("NetappRcu.add_from_ems: unsupported ems type: %{type}") % {:type => ems.type}
     end
     # TODO: Use hostname, not ipaddress

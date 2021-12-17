@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::CloudManager::Provision::StateMachine
+module NOVAHawk::Providers::Azure::CloudManager::Provision::StateMachine
   def customize_destination
     message = "Customizing #{for_destination}"
     _log.info("#{message} #{for_destination}")

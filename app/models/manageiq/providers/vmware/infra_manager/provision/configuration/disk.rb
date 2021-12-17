@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Vmware::InfraManager::Provision::Configuration::Disk
+module NOVAHawk::Providers::Vmware::InfraManager::Provision::Configuration::Disk
   def build_config_disk_spec(vmcs)
     new_disks = get_new_disks
     return if new_disks.blank?

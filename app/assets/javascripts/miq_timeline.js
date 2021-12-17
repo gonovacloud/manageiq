@@ -62,7 +62,7 @@
     });
   }
 
-  ManageIQ.Timeline = {
+  NOVAHawk.Timeline = {
     load: function (json, start, end) {
       var data = [],
         one_hour = 60 * 60 * 1000,
@@ -116,4 +116,4 @@
       $(window).on('resize', createTooltip);
     }
   };
-})(ManageIQ);
+})(NOVAHawk);

@@ -1,7 +1,7 @@
 describe('tenantFormController', function() {
   var $scope, $controller, $httpBackend, tenantType, miqService;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, _$controller_, _$httpBackend_, _miqService_) {
     miqService = _miqService_;

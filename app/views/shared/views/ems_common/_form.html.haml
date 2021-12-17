@@ -76,7 +76,7 @@
           :javascript
             miqInitSelectPicker();
             miqSelectPickerEvent("server_zone", "#{url}");
-    - if @ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    - if @ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
       .form-group
         %label.control-label.col-md-2
           = _('Host Default VNC Port Range')

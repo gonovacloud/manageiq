@@ -1,9 +1,9 @@
-class ManageIQ::Providers::Foreman::ConfigurationManager::ProvisionTask < MiqProvisionTask
+class NOVAHawk::Providers::Foreman::ConfigurationManager::ProvisionTask < MiqProvisionTask
   include_concern 'OptionsHelper'
   include_concern 'StateMachine'
 
   def model_class
-    ManageIQ::Providers::Foreman::ConfigurationManager::ConfiguredSystem
+    NOVAHawk::Providers::Foreman::ConfigurationManager::ConfiguredSystem
   end
 
   def self.request_class

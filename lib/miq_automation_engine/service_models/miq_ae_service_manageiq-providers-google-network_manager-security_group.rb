@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Google_NetworkManager_SecurityGroup < MiqAeServiceSecurityGroup
+  class MiqAeServiceNOVAHawk_Providers_Google_NetworkManager_SecurityGroup < MiqAeServiceSecurityGroup
   end
 end

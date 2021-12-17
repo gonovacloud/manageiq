@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate < OrchestrationTemplate
+class NOVAHawk::Providers::Vmware::CloudManager::OrchestrationTemplate < OrchestrationTemplate
   def parameter_groups
     [OrchestrationTemplate::OrchestrationParameterGroup.new(
       :label      => "vApp Parameters",
@@ -30,7 +30,7 @@ class ManageIQ::Providers::Vmware::CloudManager::OrchestrationTemplate < Orchest
   end
 
   def self.eligible_manager_types
-    [ManageIQ::Providers::Vmware::CloudManager]
+    [NOVAHawk::Providers::Vmware::CloudManager]
   end
 
   def validate_format

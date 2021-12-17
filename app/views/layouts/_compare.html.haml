@@ -25,6 +25,6 @@
           var item = $(e.target).parent().parent();
           var exp_id = item.data('exp-id');
           var state = item.hasClass('collapsed') ? '1' : '-1';
-          miqJqueryRequest('/' + ManageIQ.controller + '/compare_set_state?rowId=' + exp_id + '&state=' + state);
+          miqJqueryRequest('/' + NOVAHawk.controller + '/compare_set_state?rowId=' + exp_id + '&state=' + state);
         }
       });

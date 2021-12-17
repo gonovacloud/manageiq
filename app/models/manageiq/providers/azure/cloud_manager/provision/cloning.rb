@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::CloudManager::Provision::Cloning
+module NOVAHawk::Providers::Azure::CloudManager::Provision::Cloning
   def do_clone_task_check(clone_task_ref)
     source.with_provider_connection do |azure|
       vms      = Azure::Armrest::VirtualMachineService.new(azure)
@@ -11,7 +11,7 @@ module ManageIQ::Providers::Azure::CloudManager::Provision::Cloning
 
   def find_destination_in_vmdb(vm_uid_hash)
     ems_ref = vm_uid_hash.values.join("\\")
-    ManageIQ::Providers::Azure::CloudManager::Vm.find_by(:ems_ref => ems_ref.downcase)
+    NOVAHawk::Providers::Azure::CloudManager::Vm.find_by(:ems_ref => ems_ref.downcase)
   end
 
   def gather_storage_account_properties
@@ -34,7 +34,7 @@ module ManageIQ::Providers::Azure::CloudManager::Provision::Cloning
       endpoint   = image.storage_account.properties.primary_endpoints.blob
       source_uri = image.uri
 
-      target_uri = File.join(endpoint, "manageiq", dest_name + "_" + SecureRandom.uuid + ".vhd")
+      target_uri = File.join(endpoint, "novahawk", dest_name + "_" + SecureRandom.uuid + ".vhd")
     rescue Azure::Armrest::ResourceNotFoundException => err
       _log.error("Error Class=#{err.class.name}, Message=#{err.message}")
     end

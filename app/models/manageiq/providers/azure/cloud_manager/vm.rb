@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Azure::CloudManager::Vm < ManageIQ::Providers::CloudManager::Vm
+class NOVAHawk::Providers::Azure::CloudManager::Vm < NOVAHawk::Providers::CloudManager::Vm
   include_concern 'Operations'
-  include_concern 'ManageIQ::Providers::Azure::CloudManager::VmOrTemplateShared'
+  include_concern 'NOVAHawk::Providers::Azure::CloudManager::VmOrTemplateShared'
 
   def provider_service(connection = nil)
     connection ||= ext_management_system.connect

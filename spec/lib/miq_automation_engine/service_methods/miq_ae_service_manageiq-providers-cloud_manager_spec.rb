@@ -1,5 +1,5 @@
 module MiqAeServiceEmsCloudSpec
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_CloudManager do
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_CloudManager do
     it "#availability_zones" do
       expect(described_class.instance_methods).to include(:availability_zones)
     end

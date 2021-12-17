@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('bootstrapTreeController', ['$http', '$scope', 'bootstrapTreeSubscriptionService', 'initialTreeData', 'railsControllerName', function($http, $scope, bootstrapTreeSubscriptionService, initialTreeData, railsControllerName) {
+NOVAHawk.angular.app.controller('bootstrapTreeController', ['$http', '$scope', 'bootstrapTreeSubscriptionService', 'initialTreeData', 'railsControllerName', function($http, $scope, bootstrapTreeSubscriptionService, initialTreeData, railsControllerName) {
   var init = function() {
     updateTree(initialTreeData);
 

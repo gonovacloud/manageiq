@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('timelineOptionsController', ['$http', '$scope', 'miqService', 'url', 'categories', function($http, $scope, miqService, url, categories) {
+NOVAHawk.angular.app.controller('timelineOptionsController', ['$http', '$scope', 'miqService', 'url', 'categories', function($http, $scope, miqService, url, categories) {
     var init = function() {
         $scope.reportModel = {
             tl_show: 'timeline',
@@ -7,7 +7,7 @@ ManageIQ.angular.app.controller('timelineOptionsController', ['$http', '$scope',
             tl_timepivot: 'ending',
             tl_result: 'success',
             tl_range_count: 1,
-            tl_date: new Date(ManageIQ.calendar.calDateTo)
+            tl_date: new Date(NOVAHawk.calendar.calDateTo)
         };
 
         $scope.afterGet  = true;
@@ -16,7 +16,7 @@ ManageIQ.angular.app.controller('timelineOptionsController', ['$http', '$scope',
             todayHighlight: true,
             orientation: 'bottom'
         };
-        ManageIQ.angular.scope = $scope;
+        NOVAHawk.angular.scope = $scope;
         $scope.availableCategories = categories;
     };
 
@@ -69,8 +69,8 @@ ManageIQ.angular.app.controller('timelineOptionsController', ['$http', '$scope',
             startDay.subtract($scope.reportModel.tl_days, 'days');
             $scope.reportModel.miq_date = endDay.format('MM/DD/YYYY');
         }
-        ManageIQ.calendar.calDateFrom = startDay.toDate();
-        ManageIQ.calendar.calDateTo = endDay.toDate();
+        NOVAHawk.calendar.calDateFrom = startDay.toDate();
+        NOVAHawk.calendar.calDateTo = endDay.toDate();
         if($scope.reportModel.tl_show === 'timeline') {
             if($scope.reportModel.showDetailedEvents) {
                 $scope.reportModel.tl_fl_typ = 'detail';

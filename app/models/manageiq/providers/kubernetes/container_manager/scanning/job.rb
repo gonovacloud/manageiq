@@ -1,8 +1,8 @@
 require 'image-inspector-client'
 require 'kubeclient'
 
-class ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job < Job
-  PROVIDER_CLASS = ManageIQ::Providers::Kubernetes::ContainerManager
+class NOVAHawk::Providers::Kubernetes::ContainerManager::Scanning::Job < Job
+  PROVIDER_CLASS = NOVAHawk::Providers::Kubernetes::ContainerManager
   INSPECTOR_NAMESPACE_FALLBACK = 'management-infra'
   INSPECTOR_PORT = 8080
   DOCKER_SOCKET = '/var/run/docker.sock'
@@ -55,7 +55,7 @@ class ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job < Job
     update!(:options => options.merge(
       :docker_image_id => image.docker_id,
       :image_full_name => image.full_name,
-      :pod_name        => "manageiq-img-scan-#{guid[0..4]}",
+      :pod_name        => "novahawk-img-scan-#{guid[0..4]}",
       :pod_port        => INSPECTOR_PORT,
       :pod_namespace   => namespace
     ))
@@ -207,10 +207,10 @@ class ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job < Job
       raise
     end
 
-    pod_jobid = pod.metadata.annotations['manageiq.org/jobid']
+    pod_jobid = pod.metadata.annotations['novahawk.org/jobid']
 
     # If the job id is not matching the pod was not created by this
-    # job and ManageIQ instance.
+    # job and NOVAHawk instance.
     if pod_jobid != jobid
       _log.info("skipping delete for pod #{pod_full_name} with " \
                 "job id #{pod_jobid}")
@@ -350,13 +350,13 @@ class ManageIQ::Providers::Kubernetes::ContainerManager::Scanning::Job < Job
         :namespace   => options[:pod_namespace],
         :labels      => {
           'name'         => options[:pod_name],
-          'manageiq.org' => "true"
+          'novahawk.org' => "true"
         },
         :annotations => {
-          'manageiq.org/hostname' => options[:miq_server_host],
-          'manageiq.org/guid'     => options[:miq_server_guid],
-          'manageiq.org/image'    => options[:image_full_name],
-          'manageiq.org/jobid'    => jobid,
+          'novahawk.org/hostname' => options[:miq_server_host],
+          'novahawk.org/guid'     => options[:miq_server_guid],
+          'novahawk.org/image'    => options[:image_full_name],
+          'novahawk.org/jobid'    => jobid,
         }
       },
       :spec       => {

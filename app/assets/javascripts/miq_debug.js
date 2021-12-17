@@ -91,7 +91,7 @@ angular.module('miq.debug', [])
       var $ctrl = this;
       this.items = [];
 
-      ManageIQ.angular.rxSubject.subscribe(function(event) {
+      NOVAHawk.angular.rxSubject.subscribe(function(event) {
         if (!event.error || !event.error.data) {
           return;
         }

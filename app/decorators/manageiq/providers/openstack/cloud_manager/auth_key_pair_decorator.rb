@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::CloudManager::AuthKeyPairDecorator < Draper::Decorator
+class NOVAHawk::Providers::Openstack::CloudManager::AuthKeyPairDecorator < Draper::Decorator
   delegate_all
 
   def fonticon

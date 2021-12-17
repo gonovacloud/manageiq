@@ -3,7 +3,7 @@ describe('genericObjectDefinitionFormController', function() {
   var showAddFormCallback, treeClickCallback, rootTreeClickCallback;
   var treeData = {the: 'tree_data'};
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   beforeEach(inject(function($rootScope, _$controller_, _$httpBackend_, _miqService_, _genericObjectSubscriptionService_) {
     $scope = $rootScope.$new();

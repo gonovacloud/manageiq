@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Openstack::NetworkManager::RefreshWorker::Runner < ManageIQ::Providers::BaseManager::RefreshWorker::Runner
+class NOVAHawk::Providers::Openstack::NetworkManager::RefreshWorker::Runner < NOVAHawk::Providers::BaseManager::RefreshWorker::Runner
 end

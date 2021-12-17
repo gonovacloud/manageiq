@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('tenantFormController', ['$http', '$scope', 'tenantFormId', 'tenantType', 'miqService', function($http, $scope, tenantFormId, tenantType, miqService) {
+NOVAHawk.angular.app.controller('tenantFormController', ['$http', '$scope', 'tenantFormId', 'tenantType', 'miqService', function($http, $scope, tenantFormId, tenantType, miqService) {
     var init = function() {
       $scope.tenantModel = {
         name: '',
@@ -11,7 +11,7 @@ ManageIQ.angular.app.controller('tenantFormController', ['$http', '$scope', 'ten
       $scope.modelCopy = angular.copy( $scope.tenantModel );
       $scope.model = "tenantModel";
 
-      ManageIQ.angular.scope = $scope;
+      NOVAHawk.angular.scope = $scope;
 
       if (tenantFormId == 'new') {
         $scope.newRecord                             = true;

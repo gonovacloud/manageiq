@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Provision::Disk
+module NOVAHawk::Providers::Redhat::InfraManager::Provision::Disk
   def configure_dialog_disks
     added_disks = options[:disk_scsi]
     return nil if added_disks.blank?
@@ -53,7 +53,7 @@ module ManageIQ::Providers::Redhat::InfraManager::Provision::Disk
       :interface        => disk_spec[:interface]
     }
 
-    disk_attachment_builder = ManageIQ::Providers::Redhat::InfraManager::DiskAttachmentBuilder.new(da_options)
+    disk_attachment_builder = NOVAHawk::Providers::Redhat::InfraManager::DiskAttachmentBuilder.new(da_options)
     disk_attachment_builder.disk_attachment
   end
 end

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Google::CloudManager::MetricsCapture < ManageIQ::Providers::BaseManager::MetricsCapture
+class NOVAHawk::Providers::Google::CloudManager::MetricsCapture < NOVAHawk::Providers::BaseManager::MetricsCapture
   # List of counters we expose to the caller
   VIM_STYLE_COUNTERS = {
     "cpu_usage_rate_average"  => {
@@ -31,7 +31,7 @@ class ManageIQ::Providers::Google::CloudManager::MetricsCapture < ManageIQ::Prov
   }.freeze
 
   # Mapping from VIM counter name to our local descriptor. This describes how
-  # to translate a google metric into the corresponding ManageIQ metric.
+  # to translate a google metric into the corresponding NOVAHawk metric.
   #
   # See the first schema for a description of each field.
   VIM_COUNTER_SCHEMAS = [
@@ -84,7 +84,7 @@ class ManageIQ::Providers::Google::CloudManager::MetricsCapture < ManageIQ::Prov
     raise "No EMS defined" if target.ext_management_system.nil?
 
     # Currently we only know how to capture VMs
-    return [{}, {}] unless target.type == ManageIQ::Providers::Google::CloudManager::Vm.name
+    return [{}, {}] unless target.type == NOVAHawk::Providers::Google::CloudManager::Vm.name
 
     end_time   ||= Time.now.utc
     end_time     = end_time.utc

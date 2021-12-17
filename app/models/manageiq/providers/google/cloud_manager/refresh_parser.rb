@@ -1,10 +1,10 @@
 require 'fog/google'
 
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Google
-    class CloudManager::RefreshParser < ManageIQ::Providers::CloudManager::RefreshParser
+    class CloudManager::RefreshParser < NOVAHawk::Providers::CloudManager::RefreshParser
       include Vmdb::Logging
-      include ManageIQ::Providers::Google::RefreshHelperMethods
+      include NOVAHawk::Providers::Google::RefreshHelperMethods
 
       def initialize(ems, options = nil)
         @ems               = ems
@@ -96,7 +96,7 @@ module ManageIQ::Providers
 
       def parse_zone(zone)
         name = uid = zone.name
-        type = ManageIQ::Providers::Google::CloudManager::AvailabilityZone.name
+        type = NOVAHawk::Providers::Google::CloudManager::AvailabilityZone.name
 
         new_result = {
           :type    => type,
@@ -110,7 +110,7 @@ module ManageIQ::Providers
       def parse_flavor(flavor)
         uid = flavor.name
 
-        type = ManageIQ::Providers::Google::CloudManager::Flavor.name
+        type = NOVAHawk::Providers::Google::CloudManager::Flavor.name
         new_result = {
           :type        => type,
           :ems_ref     => flavor.name,
@@ -150,7 +150,7 @@ module ManageIQ::Providers
       def parse_snapshot(snapshot)
         new_result = {
           :ems_ref       => snapshot.id,
-          :type          => "ManageIQ::Providers::Google::CloudManager::CloudVolumeSnapshot",
+          :type          => "NOVAHawk::Providers::Google::CloudManager::CloudVolumeSnapshot",
           :name          => snapshot.name,
           :status        => snapshot.status,
           :creation_time => snapshot.creation_timestamp,
@@ -166,7 +166,7 @@ module ManageIQ::Providers
         uid    = storage.id
         name   = storage.name
         name ||= uid
-        type   = ManageIQ::Providers::Google::CloudManager::Template.name
+        type   = NOVAHawk::Providers::Google::CloudManager::Template.name
 
         deprecated = (storage.kind == "compute#image") ? !storage.deprecated.nil? : false
 
@@ -197,7 +197,7 @@ module ManageIQ::Providers
       def parse_ssh_key(ssh_key)
         uid = "#{ssh_key[:name]}:#{ssh_key[:fingerprint]}"
 
-        type = ManageIQ::Providers::Google::CloudManager::AuthKeyPair.name
+        type = NOVAHawk::Providers::Google::CloudManager::AuthKeyPair.name
         new_result = {
           :type        => type,
           :name        => ssh_key[:name],
@@ -227,7 +227,7 @@ module ManageIQ::Providers
 
         operating_system = parent_image[:operating_system] unless parent_image.nil?
 
-        type = ManageIQ::Providers::Google::CloudManager::Vm.name
+        type = NOVAHawk::Providers::Google::CloudManager::Vm.name
         new_result = {
           :type              => type,
           :uid_ems           => uid,

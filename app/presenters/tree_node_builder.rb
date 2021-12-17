@@ -330,7 +330,7 @@ class TreeNodeBuilder
   end
 
   def domain_png(object)
-    return 'miq.png' if object.name == MiqAeDatastore::MANAGEIQ_DOMAIN
+    return 'miq.png' if object.name == MiqAeDatastore::novahawk_DOMAIN
     object.top_level_namespace ? "vendor-#{object.top_level_namespace.downcase}.png" : "ae_domain.png"
   end
 
@@ -482,8 +482,8 @@ class TreeNodeBuilder
     else
       base_class = object.class.base_model.name           # i.e. Vm or MiqTemplate
       base_class = "Datacenter" if base_class == "EmsFolder" && object.kind_of?(Datacenter)
-      base_class = "ManageIQ::Providers::Foreman::ConfigurationManager" if object.kind_of?(ManageIQ::Providers::Foreman::ConfigurationManager)
-      base_class = "ManageIQ::Providers::AnsibleTower::ConfigurationManager" if object.kind_of?(ManageIQ::Providers::AnsibleTower::ConfigurationManager)
+      base_class = "NOVAHawk::Providers::Foreman::ConfigurationManager" if object.kind_of?(NOVAHawk::Providers::Foreman::ConfigurationManager)
+      base_class = "NOVAHawk::Providers::AnsibleTower::ConfigurationManager" if object.kind_of?(NOVAHawk::Providers::AnsibleTower::ConfigurationManager)
       prefix = TreeBuilder.get_prefix_for_model(base_class)
       cid = ApplicationRecord.compress_id(object.id)
       "#{format_parent_id}#{prefix}-#{cid}"

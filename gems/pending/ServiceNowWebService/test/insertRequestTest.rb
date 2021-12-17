@@ -1,7 +1,7 @@
 require_relative '../../bundler_setup'
 require 'ServiceNowWebService/SnEccqClientBase'
 
-server = "manageiqdev.service-now.com"
+server = "novahawkdev.service-now.com"
 agent = "EVM Automate"
 queue = "input"
 topic = "Open Incident"

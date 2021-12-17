@@ -31,7 +31,7 @@ module AuthenticationMixin
   end
 
   def authentication_key_pairs
-    authentications.select { |a| a.kind_of?(ManageIQ::Providers::Openstack::InfraManager::AuthKeyPair) }
+    authentications.select { |a| a.kind_of?(NOVAHawk::Providers::Openstack::InfraManager::AuthKeyPair) }
   end
 
   def authentication_for_providers
@@ -152,9 +152,9 @@ module AuthenticationMixin
 
       # Update or create
       if cred.nil?
-        if self.kind_of?(ManageIQ::Providers::Openstack::InfraManager) && value[:auth_key]
+        if self.kind_of?(NOVAHawk::Providers::Openstack::InfraManager) && value[:auth_key]
           # TODO(lsmola) investigate why build throws an exception, that it needs to be subclass of AuthUseridPassword
-          cred = ManageIQ::Providers::Openstack::InfraManager::AuthKeyPair.new(:name => "#{self.class.name} #{name}", :authtype => type.to_s,
+          cred = NOVAHawk::Providers::Openstack::InfraManager::AuthKeyPair.new(:name => "#{self.class.name} #{name}", :authtype => type.to_s,
                                                :resource_id => id, :resource_type => "ExtManagementSystem")
           authentications << cred
         elsif value[:auth_key]

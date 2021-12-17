@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Azure::CloudManager::ProvisionWorkflow do
+describe NOVAHawk::Providers::Azure::CloudManager::ProvisionWorkflow do
   include Spec::Support::WorkflowHelper
 
   let(:admin)    { FactoryGirl.create(:user_with_group) }
@@ -7,7 +7,7 @@ describe ManageIQ::Providers::Azure::CloudManager::ProvisionWorkflow do
   let(:workflow) do
     stub_dialog
     allow_any_instance_of(User).to receive(:get_timezone).and_return(Time.zone)
-    allow_any_instance_of(ManageIQ::Providers::CloudManager::ProvisionWorkflow).to receive(:update_field_visibility)
+    allow_any_instance_of(NOVAHawk::Providers::CloudManager::ProvisionWorkflow).to receive(:update_field_visibility)
 
     wf = described_class.new({:src_vm_id => template.id}, admin.userid)
     wf.instance_variable_set("@ems_xml_nodes", {})

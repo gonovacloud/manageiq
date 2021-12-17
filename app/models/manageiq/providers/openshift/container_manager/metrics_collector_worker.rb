@@ -1,4 +1,4 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Openshift::ContainerManager::MetricsCollectorWorker < BaseManager::MetricsCollectorWorker
     require_nested :Runner
 
@@ -9,7 +9,7 @@ module ManageIQ::Providers
     end
 
     def self.ems_class
-      ManageIQ::Providers::Openshift::ContainerManager
+      NOVAHawk::Providers::Openshift::ContainerManager
     end
   end
 end

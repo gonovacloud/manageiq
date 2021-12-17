@@ -1,7 +1,7 @@
 class MiddlewareTopologyService < TopologyService
   include UiServiceMixin
 
-  @provider_class = ManageIQ::Providers::MiddlewareManager
+  @provider_class = NOVAHawk::Providers::MiddlewareManager
 
   def build_topology
     topo_items = {}
@@ -38,7 +38,7 @@ class MiddlewareTopologyService < TopologyService
   end
 
   def entity_display_type(entity)
-    if entity.kind_of?(ManageIQ::Providers::MiddlewareManager)
+    if entity.kind_of?(NOVAHawk::Providers::MiddlewareManager)
       entity.class.short_token
     elsif entity.kind_of?(MiddlewareDeployment)
       suffix = if entity.name.end_with? '.ear'

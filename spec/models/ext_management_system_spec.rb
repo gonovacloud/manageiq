@@ -332,14 +332,14 @@ describe ExtManagementSystem do
 
     context "within the same sub-classes" do
       described_class.leaf_subclasses.each do |ems|
-        next if ems == ManageIQ::Providers::Amazon::CloudManager # Amazon is tested in ems_amazon_spec.rb
+        next if ems == NOVAHawk::Providers::Amazon::CloudManager # Amazon is tested in ems_amazon_spec.rb
         # TODO(lsmola) NetworkManager, test this if NetworkManager becomes not dependent on cloud manager
-        next if [ManageIQ::Providers::Openstack::NetworkManager,
-                 ManageIQ::Providers::Amazon::NetworkManager,
-                 ManageIQ::Providers::Azure::NetworkManager,
-                 ManageIQ::Providers::Google::NetworkManager,
-                 ManageIQ::Providers::StorageManager::CinderManager,
-                 ManageIQ::Providers::StorageManager::SwiftManager].include? ems
+        next if [NOVAHawk::Providers::Openstack::NetworkManager,
+                 NOVAHawk::Providers::Amazon::NetworkManager,
+                 NOVAHawk::Providers::Azure::NetworkManager,
+                 NOVAHawk::Providers::Google::NetworkManager,
+                 NOVAHawk::Providers::StorageManager::CinderManager,
+                 NOVAHawk::Providers::StorageManager::SwiftManager].include? ems
         t = ems.name.underscore
 
         context t do
@@ -394,12 +394,12 @@ describe ExtManagementSystem do
       described_class.leaf_subclasses.collect do |ems|
         t = ems.name.underscore
         # TODO(lsmola) NetworkManager, test this when we have a standalone NetworkManager
-        next if [ManageIQ::Providers::Openstack::NetworkManager,
-                 ManageIQ::Providers::Amazon::NetworkManager,
-                 ManageIQ::Providers::Azure::NetworkManager,
-                 ManageIQ::Providers::Google::NetworkManager,
-                 ManageIQ::Providers::StorageManager::CinderManager,
-                 ManageIQ::Providers::StorageManager::SwiftManager].include? ems
+        next if [NOVAHawk::Providers::Openstack::NetworkManager,
+                 NOVAHawk::Providers::Amazon::NetworkManager,
+                 NOVAHawk::Providers::Azure::NetworkManager,
+                 NOVAHawk::Providers::Google::NetworkManager,
+                 NOVAHawk::Providers::StorageManager::CinderManager,
+                 NOVAHawk::Providers::StorageManager::SwiftManager].include? ems
 
         context t do
           it "duplicate name" do

@@ -63,12 +63,12 @@ class EmsCluster < ApplicationRecord
   # TODO: Vmware specific - Fix when we subclass EmsCluster
 
   def provider_object(connection)
-    raise NotImplementedError unless ext_management_system.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    raise NotImplementedError unless ext_management_system.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
     connection.getVimClusterByMor(ems_ref_obj)
   end
 
   def provider_object_release(handle)
-    raise NotImplementedError unless ext_management_system.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    raise NotImplementedError unless ext_management_system.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
     handle.release if handle rescue nil
   end
 
@@ -352,16 +352,16 @@ class EmsCluster < ApplicationRecord
   end
 
   def self.openstack_clusters_exists?
-    ems = ManageIQ::Providers::Openstack::InfraManager.pluck(:id)
+    ems = NOVAHawk::Providers::Openstack::InfraManager.pluck(:id)
     ems.empty? ? false : EmsCluster.where(:ems_id => ems).exists?
   end
 
   def self.non_openstack_clusters_exists?
-    ems = ManageIQ::Providers::Openstack::InfraManager.pluck(:id)
+    ems = NOVAHawk::Providers::Openstack::InfraManager.pluck(:id)
     EmsCluster.where.not(:ems_id => ems).exists?
   end
 
   def openstack_cluster?
-    ext_management_system.class == ManageIQ::Providers::Openstack::InfraManager
+    ext_management_system.class == NOVAHawk::Providers::Openstack::InfraManager
   end
 end

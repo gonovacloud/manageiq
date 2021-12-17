@@ -1,4 +1,4 @@
-class ManageIQ::Providers::AnsibleTower::ConfigurationManager::RefreshWorker < MiqEmsRefreshWorker
+class NOVAHawk::Providers::AnsibleTower::ConfigurationManager::RefreshWorker < MiqEmsRefreshWorker
   require_nested :Runner
 
   def self.ems_class

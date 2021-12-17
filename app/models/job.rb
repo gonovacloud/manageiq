@@ -190,8 +190,8 @@ class Job < ApplicationRecord
   def timeout_adjustment
     timeout_adjustment = 1
     target = target_entity
-    if target.kind_of?(ManageIQ::Providers::Microsoft::InfraManager::Vm) ||
-       target.kind_of?(ManageIQ::Providers::Microsoft::InfraManager::Template)
+    if target.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager::Vm) ||
+       target.kind_of?(NOVAHawk::Providers::Microsoft::InfraManager::Template)
       timeout_adjustment = 4
     end
     timeout_adjustment

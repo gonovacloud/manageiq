@@ -40,9 +40,9 @@ describe('miq_grid.js', function () {
 
   it('appends checked elements to the list of selected items', function () {
     $(".noclick > input[type='checkbox']").first().trigger('click');
-    expect(ManageIQ.gridChecks.join(',')).toEqual('check_1');
+    expect(NOVAHawk.gridChecks.join(',')).toEqual('check_1');
     $(".noclick > input[type='checkbox']").last().trigger('click');
-    expect(ManageIQ.gridChecks.join(',')).toEqual('check_1,check_3');
+    expect(NOVAHawk.gridChecks.join(',')).toEqual('check_1,check_3');
   });
 
   it('sends an ajax POST request when clicking on a table row', function () {

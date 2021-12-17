@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Foreman::ConfigurationManager < ManageIQ::Providers::ConfigurationManager
+class NOVAHawk::Providers::Foreman::ConfigurationManager < NOVAHawk::Providers::ConfigurationManager
   require_nested :ConfigurationProfile
   require_nested :ConfiguredSystem
   require_nested :ProvisionTask

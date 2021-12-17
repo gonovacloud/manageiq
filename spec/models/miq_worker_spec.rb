@@ -150,7 +150,7 @@ describe MiqWorker do
     end
 
     context "at a concrete subclass" do
-      let(:actual) { ManageIQ::Providers::Amazon::CloudManager::RefreshWorker.worker_settings[:memory_threshold] }
+      let(:actual) { NOVAHawk::Providers::Amazon::CloudManager::RefreshWorker.worker_settings[:memory_threshold] }
 
       it "with overrides" do
         expect(actual).to eq(700.megabytes)
@@ -165,7 +165,7 @@ describe MiqWorker do
     end
 
     context "at the BaseManager level" do
-      let(:actual) { ManageIQ::Providers::BaseManager::RefreshWorker.worker_settings[:memory_threshold] }
+      let(:actual) { NOVAHawk::Providers::BaseManager::RefreshWorker.worker_settings[:memory_threshold] }
       it "with overrides" do
         expect(actual).to eq(500.megabytes)
       end
@@ -202,7 +202,7 @@ describe MiqWorker do
       stub_settings(settings)
 
       config = VMDB::Config.new("vmdb")
-      actual = ManageIQ::Providers::Amazon::CloudManager::RefreshWorker.worker_settings(:config => config)[:memory_threshold]
+      actual = NOVAHawk::Providers::Amazon::CloudManager::RefreshWorker.worker_settings(:config => config)[:memory_threshold]
       expect(actual).to eq(1.terabyte)
     end
   end
@@ -301,7 +301,7 @@ describe MiqWorker do
 
   describe ".config_settings_path" do
     let(:capu_worker) do
-      ManageIQ::Providers::Amazon::CloudManager::MetricsCollectorWorker
+      NOVAHawk::Providers::Amazon::CloudManager::MetricsCollectorWorker
     end
 
     it "include parent entries" do

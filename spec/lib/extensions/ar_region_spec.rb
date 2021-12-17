@@ -1,5 +1,5 @@
 describe "AR Regions extension" do
-  let(:base_class) { ManageIQ::Providers::Vmware::InfraManager::Vm }
+  let(:base_class) { NOVAHawk::Providers::Vmware::InfraManager::Vm }
 
   before(:each) do
     allow(base_class).to receive(:rails_sequence_factor).and_return(10)

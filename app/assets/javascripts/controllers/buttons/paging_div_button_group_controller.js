@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('pagingDivButtonGroupController', ['$scope', 'miqService', '$compile', '$attrs', '$timeout', function($scope, miqService, $compile, $attrs, $timeout) {
+NOVAHawk.angular.app.controller('pagingDivButtonGroupController', ['$scope', 'miqService', '$compile', '$attrs', '$timeout', function($scope, miqService, $compile, $attrs, $timeout) {
   var init = function() {
     $scope.addBtnText = __("Add");
     $scope.saveBtnText = __("Save");

@@ -25,7 +25,7 @@ describe BlacklistedEvent do
       User.current_user = FactoryGirl.create(:user)
       filter = FactoryGirl.create(:blacklisted_event,
                                   :event_name     => 'AlarmActionTriggeredEvent',
-                                  :provider_model => 'ManageIQ::Providers::Vmware::InfraManager'
+                                  :provider_model => 'NOVAHawk::Providers::Vmware::InfraManager'
                                  )
       filter_attrs = filter.attributes
 

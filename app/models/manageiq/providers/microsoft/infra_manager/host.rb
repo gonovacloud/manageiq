@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Microsoft::InfraManager::Host < ::Host
+class NOVAHawk::Providers::Microsoft::InfraManager::Host < ::Host
   def verify_credentials(auth_type = nil, _options = {})
     raise MiqException::MiqHostError "No credentials defined" if missing_credentials?(auth_type)
     options                        = {}

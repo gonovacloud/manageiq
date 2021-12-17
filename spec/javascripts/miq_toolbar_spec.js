@@ -28,21 +28,21 @@ describe('miq_toolbar.js', function () {
                 '</div>');
   });
 
-  it('initializes ManageIQ.toolbars', function () {
-    expect(typeof ManageIQ.toolbars).toEqual('object');
+  it('initializes NOVAHawk.toolbars', function () {
+    expect(typeof NOVAHawk.toolbars).toEqual('object');
   });
 
   describe('.findByDataClick', function () {
     it('finds a dropdown button', function () {
-      expect( ManageIQ.toolbars.findByDataClick('#test_tb', 'vm_power_choice')[0].id ).toEqual('button0');
+      expect( NOVAHawk.toolbars.findByDataClick('#test_tb', 'vm_power_choice')[0].id ).toEqual('button0');
     });
 
     it('finds a dropdown item', function () {
-      expect( ManageIQ.toolbars.findByDataClick('#test_tb', 'vm_power_choice__vm_guest_shutdown')[0].id ).toEqual('button1');
+      expect( NOVAHawk.toolbars.findByDataClick('#test_tb', 'vm_power_choice__vm_guest_shutdown')[0].id ).toEqual('button1');
     });
 
     it('finds an ordinary button', function () {
-      expect( ManageIQ.toolbars.findByDataClick('#test_tb', 'vm_vnc_console')[0].id ).toEqual('button3');
+      expect( NOVAHawk.toolbars.findByDataClick('#test_tb', 'vm_vnc_console')[0].id ).toEqual('button3');
     });
   })
 });

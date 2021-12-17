@@ -8,8 +8,8 @@ RSpec.describe MiqExpression::Field do
     end
 
     it "can parse a namespaced model name" do
-      field = "ManageIQ::Providers::CloudManager::Vm-name"
-      expect(described_class.parse(field).model).to be(ManageIQ::Providers::CloudManager::Vm)
+      field = "NOVAHawk::Providers::CloudManager::Vm-name"
+      expect(described_class.parse(field).model).to be(NOVAHawk::Providers::CloudManager::Vm)
     end
 
     it "can parse the model name with associations present" do

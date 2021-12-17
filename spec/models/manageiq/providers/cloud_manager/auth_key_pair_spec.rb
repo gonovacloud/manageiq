@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::CloudManager::AuthKeyPair do
+describe NOVAHawk::Providers::CloudManager::AuthKeyPair do
   let(:ems) { FactoryGirl.build(:ems_cloud) }
 
   context 'create and delete actions' do
@@ -23,10 +23,10 @@ describe ManageIQ::Providers::CloudManager::AuthKeyPair do
     it "fails by default" do
       expect(subject.class.validate_create_key_pair ems, {}).to eq(
         :available => false,
-        :message   => "Create KeyPair Operation is not available for ManageIQ::Providers::CloudManager::AuthKeyPair.")
+        :message   => "Create KeyPair Operation is not available for NOVAHawk::Providers::CloudManager::AuthKeyPair.")
       expect(subject.validate_delete_key_pair).to eq(
         :available => false,
-        :message   => "Delete KeyPair Operation is not available for ManageIQ::Providers::CloudManager::AuthKeyPair.")
+        :message   => "Delete KeyPair Operation is not available for NOVAHawk::Providers::CloudManager::AuthKeyPair.")
     end
   end
 end

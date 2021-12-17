@@ -120,7 +120,7 @@ describe MiqReport::ImportExport do
 
     it "should return VmCloud view yaml for non-restricted user" do
       user.current_group.miq_user_role.update_attributes(:settings => {})
-      expect(MiqReport.view_yaml_filename(VmCloud.name, user, {})).to include("ManageIQ_Providers_CloudManager_Vm.yaml")
+      expect(MiqReport.view_yaml_filename(VmCloud.name, user, {})).to include("NOVAHawk_Providers_CloudManager_Vm.yaml")
     end
   end
 end

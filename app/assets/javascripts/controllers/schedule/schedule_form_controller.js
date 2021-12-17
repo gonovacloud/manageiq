@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('scheduleFormController', ['$http', '$scope', 'scheduleFormId', 'oneMonthAgo', 'miqService', 'timerOptionService', function($http, $scope, scheduleFormId, oneMonthAgo, miqService, timerOptionService) {
+NOVAHawk.angular.app.controller('scheduleFormController', ['$http', '$scope', 'scheduleFormId', 'oneMonthAgo', 'miqService', 'timerOptionService', function($http, $scope, scheduleFormId, oneMonthAgo, miqService, timerOptionService) {
   var init = function() {
     $scope.scheduleModel = {
       action_typ: '',
@@ -26,7 +26,7 @@ ManageIQ.angular.app.controller('scheduleFormController', ['$http', '$scope', 's
     $scope.modelCopy = angular.copy( $scope.scheduleModel );
     $scope.model = "scheduleModel";
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
 
     if (scheduleFormId == 'new') {
       $scope.newRecord                = true;

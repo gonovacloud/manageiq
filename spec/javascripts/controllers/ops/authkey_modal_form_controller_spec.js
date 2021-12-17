@@ -1,6 +1,6 @@
 describe('authkeyModalFormController', function () {
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
 
   var Ctrl;
   var scope;

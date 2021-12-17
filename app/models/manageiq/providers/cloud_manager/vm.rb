@@ -1,4 +1,4 @@
-class ManageIQ::Providers::CloudManager::Vm < ::Vm
+class NOVAHawk::Providers::CloudManager::Vm < ::Vm
   belongs_to :availability_zone
   belongs_to :flavor
   belongs_to :orchestration_stack
@@ -23,7 +23,7 @@ class ManageIQ::Providers::CloudManager::Vm < ::Vm
   has_and_belongs_to_many :key_pairs, :join_table              => :key_pairs_vms,
                                       :foreign_key             => :vm_id,
                                       :association_foreign_key => :authentication_id,
-                                      :class_name              => "ManageIQ::Providers::CloudManager::AuthKeyPair"
+                                      :class_name              => "NOVAHawk::Providers::CloudManager::AuthKeyPair"
 
   has_many   :host_aggregates,        :through => :host
 

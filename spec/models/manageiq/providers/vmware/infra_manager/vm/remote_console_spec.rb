@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Vmware::InfraManager::Vm::RemoteConsole do
+describe NOVAHawk::Providers::Vmware::InfraManager::Vm::RemoteConsole do
   let(:user) { FactoryGirl.create(:user) }
   let(:ems) do
     FactoryGirl.create(:ems_vmware,
@@ -168,7 +168,7 @@ describe ManageIQ::Providers::Vmware::InfraManager::Vm::RemoteConsole do
     end
 
     it 'will reclaim the port number from old VMs' do
-      allow_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Vm).to receive(:with_provider_object)
+      allow_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Vm).to receive(:with_provider_object)
       vm_old = FactoryGirl.create(:vm_with_ref, :host => host, :vnc_port => 5901)
 
       vm.remote_console_vnc_acquire_ticket(user.userid, 1)

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::ProvisionWorkflow do
+describe NOVAHawk::Providers::Redhat::InfraManager::ProvisionWorkflow do
   include Spec::Support::WorkflowHelper
 
   let(:admin)    { FactoryGirl.create(:user_with_group) }

@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture do
+describe NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture do
   before do
     @ems_kubernetes = FactoryGirl.create(:ems_kubernetes)
 

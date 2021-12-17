@@ -561,7 +561,7 @@
   :instances:
     :description: Instances
     :identifier: instance
-    :klass: ManageIQ::Providers::CloudManager::Vm
+    :klass: NOVAHawk::Providers::CloudManager::Vm
     :verbs: *gp
     :options:
     - :collection
@@ -1901,7 +1901,7 @@
     :options:
     - :collection
     :verbs: *gp
-    :klass: ManageIQ::Providers::CloudManager::VirtualTemplate
+    :klass: NOVAHawk::Providers::CloudManager::VirtualTemplate
     :collection_actions:
       :get:
       - :name: read

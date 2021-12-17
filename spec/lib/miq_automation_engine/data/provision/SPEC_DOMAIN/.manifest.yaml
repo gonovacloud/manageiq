@@ -63,7 +63,7 @@ EVMApplications/Provisioning/DHCP_SERVER.class/GALAXY_dhcp1.yaml:
   updated_on: 2014-05-19 16:29:37.282902000 Z
   size: 293
   sha1: 6OIPoe6+geEidLHamHgBOX+0evc=
-EVMApplications/Provisioning/DHCP_SERVER.class/MANAGEIQ_dhcp1.yaml:
+EVMApplications/Provisioning/DHCP_SERVER.class/novahawk_dhcp1.yaml:
   created_on: 2014-05-19 16:29:37.296503000 Z
   updated_on: 2014-05-19 16:29:37.296503000 Z
   size: 286
@@ -78,7 +78,7 @@ EVMApplications/Provisioning/DOMAIN.class/GALAXY.yaml:
   updated_on: 2014-05-19 16:29:37.364615000 Z
   size: 227
   sha1: EEhVzXZ34CYBZMz99xWL/gsLrrM=
-EVMApplications/Provisioning/DOMAIN.class/MANAGEIQ.yaml:
+EVMApplications/Provisioning/DOMAIN.class/novahawk.yaml:
   created_on: 2014-05-19 16:29:37.375164000 Z
   updated_on: 2014-05-19 16:29:37.375164000 Z
   size: 236

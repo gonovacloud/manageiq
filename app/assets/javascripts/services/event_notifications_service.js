@@ -4,8 +4,8 @@ angular.module('miq.notifications')
 eventNotifications.$inject = ['$timeout'];
 
 function eventNotifications($timeout) {
-  if (!ManageIQ.angular.eventNotificationsData) {
-    ManageIQ.angular.eventNotificationsData = {
+  if (!NOVAHawk.angular.eventNotificationsData) {
+    NOVAHawk.angular.eventNotificationsData = {
       state: {
         groups: [],
         unreadNotifications: false,
@@ -26,8 +26,8 @@ function eventNotifications($timeout) {
   this.INFO = 'info';
   this.SUCCESS = 'success';
 
-  var state = ManageIQ.angular.eventNotificationsData.state;
-  var observerCallbacks = ManageIQ.angular.eventNotificationsData.observerCallbacks;
+  var state = NOVAHawk.angular.eventNotificationsData.state;
+  var observerCallbacks = NOVAHawk.angular.eventNotificationsData.observerCallbacks;
   var _this = this;
 
   var updateUnreadCount = function(group) {
@@ -297,7 +297,7 @@ function eventNotifications($timeout) {
         if (!notification.viewing) {
           $this.removeToast(notification);
         }
-      }, ManageIQ.angular.eventNotificationsData.toastDelay);
+      }, NOVAHawk.angular.eventNotificationsData.toastDelay);
     }
   };
 
@@ -315,7 +315,7 @@ function eventNotifications($timeout) {
 
   this.doReset(true);
 
-  ManageIQ.angular.rxSubject.subscribe(function (data) {
+  NOVAHawk.angular.rxSubject.subscribe(function (data) {
     if (data.notification) {
       var msg = miqFormatNotification(data.notification.text, data.notification.bindings);
       _this.add('event', data.notification.level, msg, {message: msg}, data.notification.id);

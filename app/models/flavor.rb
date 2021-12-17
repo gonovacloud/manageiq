@@ -4,7 +4,7 @@ class Flavor < ApplicationRecord
 
   acts_as_miq_taggable
 
-  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "ManageIQ::Providers::CloudManager"
+  belongs_to :ext_management_system, :foreign_key => :ems_id, :class_name => "NOVAHawk::Providers::CloudManager"
   has_many   :vms
   has_many   :cloud_tenant_flavors, :dependent => :destroy
   has_many   :cloud_tenants, :through => :cloud_tenant_flavors

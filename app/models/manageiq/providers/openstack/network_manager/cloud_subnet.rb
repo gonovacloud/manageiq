@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet < ::CloudSubnet
+class NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet < ::CloudSubnet
   include ProviderObjectMixin
   include SupportsFeatureMixin
 

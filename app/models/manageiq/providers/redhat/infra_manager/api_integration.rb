@@ -1,6 +1,6 @@
 require 'resolv'
 
-module ManageIQ::Providers::Redhat::InfraManager::ApiIntegration
+module NOVAHawk::Providers::Redhat::InfraManager::ApiIntegration
   extend ActiveSupport::Concern
 
   require 'ovirtsdk4'

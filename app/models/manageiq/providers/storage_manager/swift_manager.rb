@@ -1,4 +1,4 @@
-class ManageIQ::Providers::StorageManager::SwiftManager < ManageIQ::Providers::StorageManager
+class NOVAHawk::Providers::StorageManager::SwiftManager < NOVAHawk::Providers::StorageManager
   require_nested :RefreshParser
   require_nested :RefreshWorker
   require_nested :Refresher
@@ -62,6 +62,6 @@ class ManageIQ::Providers::StorageManager::SwiftManager < ManageIQ::Providers::S
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::StorageManager::SwiftManager::EventCatcher
+    NOVAHawk::Providers::StorageManager::SwiftManager::EventCatcher
   end
 end

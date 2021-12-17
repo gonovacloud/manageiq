@@ -1,4 +1,4 @@
-class ManageIQ::Providers::CloudManager::ProvisionWorkflow < ::MiqProvisionVirtWorkflow
+class NOVAHawk::Providers::CloudManager::ProvisionWorkflow < ::MiqProvisionVirtWorkflow
   include_concern "DialogFieldValidation"
   include CloudInitTemplateMixin
 

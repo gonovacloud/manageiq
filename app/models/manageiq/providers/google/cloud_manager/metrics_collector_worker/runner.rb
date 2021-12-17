@@ -1,3 +1,3 @@
-class ManageIQ::Providers::Google::CloudManager::MetricsCollectorWorker::Runner <
-  ManageIQ::Providers::BaseManager::MetricsCollectorWorker::Runner
+class NOVAHawk::Providers::Google::CloudManager::MetricsCollectorWorker::Runner <
+  NOVAHawk::Providers::BaseManager::MetricsCollectorWorker::Runner
 end

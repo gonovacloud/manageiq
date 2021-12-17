@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('mwAddJdbcDriverController', MwAddJdbcDriverController);
+NOVAHawk.angular.app.controller('mwAddJdbcDriverController', MwAddJdbcDriverController);
 
 MwAddJdbcDriverController.$inject = ['$scope', '$http', 'miqService'];
 

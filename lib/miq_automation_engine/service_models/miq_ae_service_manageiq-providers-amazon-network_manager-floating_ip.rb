@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Amazon_NetworkManager_FloatingIp < MiqAeServiceFloatingIp
+  class MiqAeServiceNOVAHawk_Providers_Amazon_NetworkManager_FloatingIp < MiqAeServiceFloatingIp
   end
 end

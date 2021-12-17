@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Google::CloudManager::Template < ManageIQ::Providers::CloudManager::Template
+class NOVAHawk::Providers::Google::CloudManager::Template < NOVAHawk::Providers::CloudManager::Template
   supports :provisioning do
     if ext_management_system
       unsupported_reason_add(:provisioning, ext_management_system.unsupported_reason(:provisioning)) unless ext_management_system.supports_provisioning?

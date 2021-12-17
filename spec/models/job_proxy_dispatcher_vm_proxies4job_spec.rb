@@ -83,7 +83,7 @@ describe "JobProxyDispatcherVmProxies4Job" do
 
         context "with VmAmazon, " do
           before(:each) do
-            @vm.type = "ManageIQ::Providers::Amazon::CloudManager::Vm"
+            @vm.type = "NOVAHawk::Providers::Amazon::CloudManager::Vm"
             @vm.save
             @vm = VmOrTemplate.find(@vm.id)
             allow(MiqServer).to receive_messages(:my_server => @server1)

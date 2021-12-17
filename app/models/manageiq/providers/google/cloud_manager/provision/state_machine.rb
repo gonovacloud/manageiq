@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google::CloudManager::Provision::StateMachine
+module NOVAHawk::Providers::Google::CloudManager::Provision::StateMachine
   def determine_placement
     availability_zone = placement
     options[:dest_availability_zone] = [availability_zone.try(:id), availability_zone.try(:name)]
@@ -8,7 +8,7 @@ module ManageIQ::Providers::Google::CloudManager::Provision::StateMachine
   def prepare_instance_disks
     boot_disk_size = get_option(:boot_disk_size).to_i
 
-    resource = ManageIQ::Providers::Google::Resource.new(source.location)
+    resource = NOVAHawk::Providers::Google::Resource.new(source.location)
 
     phase_context[:boot_disk_attrs] = {
       :name      => dest_name,

@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::InfraManager::HostOperationsMixin
+module NOVAHawk::Providers::Openstack::InfraManager::HostOperationsMixin
   include Vmdb::Logging
 
   def ironic_set_power_state_queue(userid = "system",

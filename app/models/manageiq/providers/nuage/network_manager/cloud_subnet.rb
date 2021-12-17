@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Nuage::NetworkManager::CloudSubnet < ::CloudSubnet
+class NOVAHawk::Providers::Nuage::NetworkManager::CloudSubnet < ::CloudSubnet
 end

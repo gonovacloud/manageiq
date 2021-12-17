@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('keyPairCloudFormController', ['$http', '$scope', 'keyPairFormId', 'miqService', function($http, $scope, keyPairFormId, miqService) {
+NOVAHawk.angular.app.controller('keyPairCloudFormController', ['$http', '$scope', 'keyPairFormId', 'miqService', function($http, $scope, keyPairFormId, miqService) {
     var init = function() {
         $scope.keyPairModel = {
             name: '',
@@ -10,7 +10,7 @@ ManageIQ.angular.app.controller('keyPairCloudFormController', ['$http', '$scope'
         $scope.modelCopy = angular.copy( $scope.keyPairModel );
         $scope.model = 'keyPairModel';
         $scope.ems_choices = [];
-        ManageIQ.angular.scope = $scope;
+        NOVAHawk.angular.scope = $scope;
 
         miqService.sparkleOn();
         $http.get('/auth_key_pair_cloud/ems_form_choices').success(function(data) {

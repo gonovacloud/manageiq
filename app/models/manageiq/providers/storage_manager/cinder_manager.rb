@@ -1,7 +1,7 @@
 #
 #
 
-class ManageIQ::Providers::StorageManager::CinderManager < ManageIQ::Providers::StorageManager
+class NOVAHawk::Providers::StorageManager::CinderManager < NOVAHawk::Providers::StorageManager
   require_nested :EventCatcher
   require_nested :EventParser
   require_nested :RefreshParser
@@ -69,6 +69,6 @@ class ManageIQ::Providers::StorageManager::CinderManager < ManageIQ::Providers::
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::StorageManager::CinderManager::EventCatcher
+    NOVAHawk::Providers::StorageManager::CinderManager::EventCatcher
   end
 end

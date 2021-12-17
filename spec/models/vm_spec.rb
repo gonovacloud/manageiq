@@ -3,14 +3,14 @@ describe Vm do
 
   it "#corresponding_model" do
     expect(Vm.corresponding_model).to eq(MiqTemplate)
-    expect(ManageIQ::Providers::Vmware::InfraManager::Vm.corresponding_model).to eq(ManageIQ::Providers::Vmware::InfraManager::Template)
-    expect(ManageIQ::Providers::Redhat::InfraManager::Vm.corresponding_model).to eq(ManageIQ::Providers::Redhat::InfraManager::Template)
+    expect(NOVAHawk::Providers::Vmware::InfraManager::Vm.corresponding_model).to eq(NOVAHawk::Providers::Vmware::InfraManager::Template)
+    expect(NOVAHawk::Providers::Redhat::InfraManager::Vm.corresponding_model).to eq(NOVAHawk::Providers::Redhat::InfraManager::Template)
   end
 
   it "#corresponding_template_model" do
     expect(Vm.corresponding_template_model).to eq(MiqTemplate)
-    expect(ManageIQ::Providers::Vmware::InfraManager::Vm.corresponding_template_model).to eq(ManageIQ::Providers::Vmware::InfraManager::Template)
-    expect(ManageIQ::Providers::Redhat::InfraManager::Vm.corresponding_template_model).to eq(ManageIQ::Providers::Redhat::InfraManager::Template)
+    expect(NOVAHawk::Providers::Vmware::InfraManager::Vm.corresponding_template_model).to eq(NOVAHawk::Providers::Vmware::InfraManager::Template)
+    expect(NOVAHawk::Providers::Redhat::InfraManager::Vm.corresponding_template_model).to eq(NOVAHawk::Providers::Redhat::InfraManager::Template)
   end
 
   context "#template=" do
@@ -18,20 +18,20 @@ describe Vm do
 
     it "false" do
       @vm.update_attribute(:template, false)
-      expect(@vm.type).to eq("ManageIQ::Providers::Vmware::InfraManager::Vm")
+      expect(@vm.type).to eq("NOVAHawk::Providers::Vmware::InfraManager::Vm")
       expect(@vm.template).to eq(false)
       expect(@vm.state).to eq("on")
       expect { @vm.reload }.not_to raise_error
-      expect { ManageIQ::Providers::Vmware::InfraManager::Template.find(@vm.id) }.to raise_error ActiveRecord::RecordNotFound
+      expect { NOVAHawk::Providers::Vmware::InfraManager::Template.find(@vm.id) }.to raise_error ActiveRecord::RecordNotFound
     end
 
     it "true" do
       @vm.update_attribute(:template, true)
-      expect(@vm.type).to eq("ManageIQ::Providers::Vmware::InfraManager::Template")
+      expect(@vm.type).to eq("NOVAHawk::Providers::Vmware::InfraManager::Template")
       expect(@vm.template).to eq(true)
       expect(@vm.state).to eq("never")
       expect { @vm.reload }.to raise_error ActiveRecord::RecordNotFound
-      expect { ManageIQ::Providers::Vmware::InfraManager::Template.find(@vm.id) }.not_to raise_error
+      expect { NOVAHawk::Providers::Vmware::InfraManager::Template.find(@vm.id) }.not_to raise_error
     end
   end
 
@@ -170,7 +170,7 @@ describe Vm do
     end
 
     it "policy passes" do
-      expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Vm).to receive(:raw_start)
+      expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Vm).to receive(:raw_start)
 
       allow(MiqAeEngine).to receive_messages(:deliver => ['ok', 'sucess', MiqAeEngine::MiqAeWorkspaceRuntime.new])
       @vm.start
@@ -179,7 +179,7 @@ describe Vm do
     end
 
     it "policy prevented" do
-      expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Vm).to_not receive(:raw_start)
+      expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Vm).to_not receive(:raw_start)
 
       event = {:attributes => {"full_data" => {:policy => {:prevented => true}}}}
       allow_any_instance_of(MiqAeEngine::MiqAeWorkspaceRuntime).to receive(:get_obj_from_path).with("/").and_return(:event_stream => event)
@@ -205,7 +205,7 @@ describe Vm do
     end
 
     it "policy passes" do
-      expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Vm).to receive(:raw_scan)
+      expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Vm).to receive(:raw_scan)
 
       allow(MiqAeEngine).to receive_messages(:deliver => ['ok', 'sucess', MiqAeEngine::MiqAeWorkspaceRuntime.new])
       @vm.scan
@@ -214,7 +214,7 @@ describe Vm do
     end
 
     it "policy prevented" do
-      expect_any_instance_of(ManageIQ::Providers::Vmware::InfraManager::Vm).to_not receive(:raw_scan)
+      expect_any_instance_of(NOVAHawk::Providers::Vmware::InfraManager::Vm).to_not receive(:raw_scan)
 
       event = {:attributes => {"full_data" => {:policy => {:prevented => true}}}}
       allow_any_instance_of(MiqAeEngine::MiqAeWorkspaceRuntime).to receive(:get_obj_from_path).with("/").and_return(:event_stream => event)
@@ -234,7 +234,7 @@ describe Vm do
     expect(DriftState.count).to eq(1)
 
     expect(vm.drift_states.first.data).to eq({
-      :class               => "ManageIQ::Providers::Vmware::InfraManager::Vm",
+      :class               => "NOVAHawk::Providers::Vmware::InfraManager::Vm",
       :id                  => vm.id,
       :location            => vm.location,
       :name                => vm.name,

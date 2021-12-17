@@ -4,8 +4,8 @@ raise "Ruby versions less than 2.2.2 are unsupported!" if RUBY_VERSION < "2.2.2"
 #
 
 # when using this Gemfile inside a providers Gemfile, the dependency for the provider is already declared
-unless dependencies.detect { |d| d.name == "manageiq-providers-amazon" }
-  gem "manageiq-providers-amazon", :git => "https://github.com/ManageIQ/manageiq-providers-amazon", :branch => "euwe"
+unless dependencies.detect { |d| d.name == "novahawk-providers-amazon" }
+  gem "novahawk-providers-amazon", :git => "https://github.com/NOVAHawk/novahawk-providers-amazon", :branch => "euwe"
 end
 
 # Unmodified gems
@@ -34,7 +34,7 @@ gem "high_voltage",                   "~>2.4.0"
 gem "htauth",                         "2.0.0",         :require => false
 gem "inifile",                        "~>3.0",         :require => false
 gem "jbuilder",                       "~>2.5.0" # For the REST API
-gem "manageiq-api-client",            "~>0.1.0",       :require => false
+gem "novahawk-api-client",            "~>0.1.0",       :require => false
 gem "mime-types",                     "~>2.6.1",       :require => "mime/types/columnar"
 gem "more_core_extensions",           "~>3.2"
 gem "nakayoshi_fork",                 "~>0.0.3"  # provides a more CoW friendly fork (GC a few times before fork)
@@ -71,8 +71,8 @@ gem "uglifier",                       "~>3.0.0"
 gem "websocket-driver",               "~>0.6.3"
 
 # Modified gems (forked on Github)
-gem "foreman_api_client",             ">=0.1.0",   :require => false, :git => "https://github.com/ManageIQ/foreman_api_client.git", :branch => "master"
-gem "ruport",                         "=1.7.0",                       :git => "https://github.com/ManageIQ/ruport.git", :tag => "v1.7.0-3"
+gem "foreman_api_client",             ">=0.1.0",   :require => false, :git => "https://github.com/NOVAHawk/foreman_api_client.git", :branch => "master"
+gem "ruport",                         "=1.7.0",                       :git => "https://github.com/NOVAHawk/ruport.git", :tag => "v1.7.0-3"
 
 # In 1.9.3: Time.parse uses british version dd/mm/yyyy instead of american version mm/dd/yyyy
 # american_date fixes this to be compatible with 1.8.7 until all callers can be converted to the 1.9.3 format prior to parsing.
@@ -94,7 +94,7 @@ group :ui_dependencies do # Added to Bundler.require in config/application.rb
   gem "coffee-rails"
 
   # Modified gems (forked on Github)
-  gem "jquery-rjs",                   "=0.1.1",                       :git => "https://github.com/ManageIQ/jquery-rjs.git", :tag => "v0.1.1-1"
+  gem "jquery-rjs",                   "=0.1.1",                       :git => "https://github.com/NOVAHawk/jquery-rjs.git", :tag => "v0.1.1-1"
 end
 
 ### Start of gems excluded from the appliances.
@@ -134,7 +134,7 @@ eval_gemfile(File.expand_path("gems/pending/Gemfile", __dir__))
 # To develop a gem locally and override its source to a checked out repo
 #   you can use this helper method in Gemfile.dev.rb e.g.
 #
-# override_gem 'manageiq-ui-classic', :path => File.expand_path("../manageiq-ui-classic", __dir__))
+# override_gem 'novahawk-ui-classic', :path => File.expand_path("../novahawk-ui-classic", __dir__))
 #
 def override_gem(name, *args)
   if dependencies.any?

@@ -20,7 +20,7 @@ sub SOAP::Transport::HTTP::Client::get_basic_credentials {
 }
 
 my $soap = SOAP::Lite
-    -> proxy('https://manageiqdev.service-now.com/ecc_queue.do?SOAP');
+    -> proxy('https://novahawkdev.service-now.com/ecc_queue.do?SOAP');
 
 my $method = SOAP::Data->name('insert')
     ->attr({xmlns => 'http://www.service-now.com/'});

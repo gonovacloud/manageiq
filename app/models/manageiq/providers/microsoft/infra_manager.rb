@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Microsoft::InfraManager < ManageIQ::Providers::InfraManager
+class NOVAHawk::Providers::Microsoft::InfraManager < NOVAHawk::Providers::InfraManager
   require_nested :Host
   require_nested :Provision
   require_nested :ProvisionWorkflow

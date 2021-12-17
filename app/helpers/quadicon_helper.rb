@@ -356,7 +356,7 @@ module QuadiconHelper
                      item.class.name.underscore
                    elsif item.kind_of?(VmOrTemplate)
                      item.class.base_model.to_s.underscore
-                   elsif item.kind_of?(ManageIQ::Providers::ConfigurationManager)
+                   elsif item.kind_of?(NOVAHawk::Providers::ConfigurationManager)
                      "single_quad"
                    elsif quadicon_named_for_base_class?(item)
                      item.class.base_class.name.underscore

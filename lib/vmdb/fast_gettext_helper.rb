@@ -54,7 +54,7 @@ module Vmdb
     end
 
     def self.register_locales
-      Vmdb::Gettext::Domains.add_domain(Vmdb::Gettext::Domains::TEXT_DOMAIN, locale_path, :po) # Default ManageIQ domain
+      Vmdb::Gettext::Domains.add_domain(Vmdb::Gettext::Domains::TEXT_DOMAIN, locale_path, :po) # Default NOVAHawk domain
       Vmdb::Gettext::Domains.initialize_chain_repo
 
       FastGettext.default_available_locales = find_available_locales

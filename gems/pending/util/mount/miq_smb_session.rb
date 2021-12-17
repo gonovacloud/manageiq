@@ -44,7 +44,7 @@ class MiqSmbSession < MiqGenericMountSession
     mount << " -r" if settings_read_only?
 
     logger.info("#{log_header} Connecting to host: [#{@host}], share: [#{@mount_path}], domain: [#{domain}], user: [#{user}], using mount point: [#{@mnt_point}]...")
-    # mount -t cifs //192.168.252.140/temp /media/windows_share/ -o rw,username=jrafaniello,password=blah,domain=manageiq.com
+    # mount -t cifs //192.168.252.140/temp /media/windows_share/ -o rw,username=jrafaniello,password=blah,domain=novahawk.com
 
     # Quote the hostname and share and username since they have spaces in it
     runcmd("#{mount} -t cifs '//#{File.join(@host, @mount_path)}' #{@mnt_point} -o rw,username='#{user}',password='#{@settings[:password]}',domain='#{domain}'")

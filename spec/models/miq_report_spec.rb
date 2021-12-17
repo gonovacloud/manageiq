@@ -19,7 +19,7 @@ shared_examples "custom_report_with_custom_attributes" do |base_report, custom_a
       :title     => "Custom VM report",
       :rpt_group => "Custom",
       :rpt_type  => "Custom",
-      :db        => base_report == "Host" ? "Host" : "ManageIQ::Providers::InfraManager::Vm",
+      :db        => base_report == "Host" ? "Host" : "NOVAHawk::Providers::InfraManager::Vm",
       :cols      => %w(name),
       :include   => {custom_attributes_field.to_s => {"columns" => %w(name value)}},
       :col_order => %w(miq_custom_attributes.name miq_custom_attributes.value name),
@@ -82,7 +82,7 @@ describe MiqReport do
   context "report with virtual dynamic custom attributes" do
     let(:options)              { {:targets_hash => true, :userid => "admin"} }
     let(:custom_column_key_1)  { 'kubernetes.io/hostname' }
-    let(:custom_column_key_2)  { 'manageiq.org' }
+    let(:custom_column_key_2)  { 'novahawk.org' }
     let(:custom_column_key_3)  { 'ATTR_Name_3' }
     let(:custom_column_value)  { 'value1' }
     let(:user)                 { FactoryGirl.create(:user_with_group) }
@@ -90,7 +90,7 @@ describe MiqReport do
     let!(:vm_1)                { FactoryGirl.create(:vm_vmware) }
     let!(:vm_2)                { FactoryGirl.create(:vm_vmware, :retired => false, :ext_management_system => ems) }
     let(:virtual_column_key_1) { "#{CustomAttributeMixin::CUSTOM_ATTRIBUTES_PREFIX}kubernetes.io/hostname" }
-    let(:virtual_column_key_2) { "#{CustomAttributeMixin::CUSTOM_ATTRIBUTES_PREFIX}manageiq.org" }
+    let(:virtual_column_key_2) { "#{CustomAttributeMixin::CUSTOM_ATTRIBUTES_PREFIX}novahawk.org" }
     let(:virtual_column_key_3) { "#{CustomAttributeMixin::CUSTOM_ATTRIBUTES_PREFIX}ATTR_Name_3" }
     let(:miq_task)             { FactoryGirl.create(:miq_task) }
 
@@ -110,10 +110,10 @@ describe MiqReport do
     let(:report) do
       MiqReport.new(
         :name => "Custom VM report", :title => "Custom VM report", :rpt_group => "Custom", :rpt_type => "Custom",
-        :db        => "ManageIQ::Providers::InfraManager::Vm",
-        :cols      => %w(name virtual_custom_attribute_kubernetes.io/hostname virtual_custom_attribute_manageiq.org),
+        :db        => "NOVAHawk::Providers::InfraManager::Vm",
+        :cols      => %w(name virtual_custom_attribute_kubernetes.io/hostname virtual_custom_attribute_novahawk.org),
         :include   => {:custom_attributes => {}},
-        :col_order => %w(name virtual_custom_attribute_kubernetes.io/hostname virtual_custom_attribute_manageiq.org),
+        :col_order => %w(name virtual_custom_attribute_kubernetes.io/hostname virtual_custom_attribute_novahawk.org),
         :headers   => ["Name", custom_column_key_1, custom_column_key_1],
         :order     => "Ascending"
       )
@@ -244,7 +244,7 @@ describe MiqReport do
   end
 
   it "attr_accessors are serializable via yaml" do
-    result = [{"id" => 5, "vmm_vendor" => "vmware", "vmm_vendor_display" => "VMware", "vmm_product" => "ESXi", "ipaddress" => "192.168.252.13", "vmm_buildnumber" => "260247", "vmm_version" => "4.1.0", "name" => "VI4ESXM1.manageiq.com"}, {"id" => 3, "vmm_vendor" => "VMware", "vmm_product" => "ESXi", "ipaddress" => "192.168.252.9", "vmm_buildnumber" => "348481", "vmm_version" => "4.1.0", "name" => "vi4esxm2.manageiq.com"}, {"id" => 4, "vmm_vendor" => "VMware", "vmm_product" => "ESX", "ipaddress" => "192.168.252.10", "vmm_buildnumber" => "502767", "vmm_version" => "4.1.0", "name" => "vi4esxm3.manageiq.com"}, {"id" => 1, "vmm_vendor" => "VMware", "vmm_product" => "ESXi", "ipaddress" => "192.168.252.4", "vmm_buildnumber" => "504850", "vmm_version" => "4.0.0", "name" => "per410a-t5.manageiq.com"}]
+    result = [{"id" => 5, "vmm_vendor" => "vmware", "vmm_vendor_display" => "VMware", "vmm_product" => "ESXi", "ipaddress" => "192.168.252.13", "vmm_buildnumber" => "260247", "vmm_version" => "4.1.0", "name" => "VI4ESXM1.novahawk.com"}, {"id" => 3, "vmm_vendor" => "VMware", "vmm_product" => "ESXi", "ipaddress" => "192.168.252.9", "vmm_buildnumber" => "348481", "vmm_version" => "4.1.0", "name" => "vi4esxm2.novahawk.com"}, {"id" => 4, "vmm_vendor" => "VMware", "vmm_product" => "ESX", "ipaddress" => "192.168.252.10", "vmm_buildnumber" => "502767", "vmm_version" => "4.1.0", "name" => "vi4esxm3.novahawk.com"}, {"id" => 1, "vmm_vendor" => "VMware", "vmm_product" => "ESXi", "ipaddress" => "192.168.252.4", "vmm_buildnumber" => "504850", "vmm_version" => "4.0.0", "name" => "per410a-t5.novahawk.com"}]
     column_names = ["name", "ipaddress", "vmm_vendor", "vmm_vendor_display", "vmm_product", "vmm_version", "vmm_buildnumber", "id"]
     fake_ruport_data_table = {:data => result, :column_names => column_names}
     before = MiqReport.new

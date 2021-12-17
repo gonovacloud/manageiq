@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google::ManagerMixin
+module NOVAHawk::Providers::Google::ManagerMixin
   extend ActiveSupport::Concern
 
   def verify_credentials(auth_type = nil, options = {})

@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Openshift::ContainerManager::EventCatcher < ManageIQ::Providers::BaseManager::EventCatcher
+class NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher < NOVAHawk::Providers::BaseManager::EventCatcher
   require_nested :Runner
   def self.ems_class
-    ManageIQ::Providers::Openshift::ContainerManager
+    NOVAHawk::Providers::Openshift::ContainerManager
   end
 end

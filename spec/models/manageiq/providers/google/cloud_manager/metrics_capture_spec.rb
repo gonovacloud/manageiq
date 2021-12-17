@@ -1,6 +1,6 @@
 require 'fog/google'
 
-describe ManageIQ::Providers::Google::CloudManager::MetricsCapture do
+describe NOVAHawk::Providers::Google::CloudManager::MetricsCapture do
   let(:ems) { FactoryGirl.create(:ems_google) }
   let(:vm) { FactoryGirl.build(:vm_google, :ext_management_system => ems, :ems_ref => "my_ems_ref") }
 

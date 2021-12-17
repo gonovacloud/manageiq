@@ -304,8 +304,8 @@ module Openstack
       expect(@ems.cloud_networks.size).to     eq network_data.networks.count
 
       if neutron_networking?
-        expect(@ems.public_networks.first).to  be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Public)
-        expect(@ems.private_networks.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private)
+        expect(@ems.public_networks.first).to  be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Public)
+        expect(@ems.private_networks.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private)
       end
     end
 
@@ -315,7 +315,7 @@ module Openstack
       # Disks are supported from havana and above apparently
       blacklisted_attributes += [:disk, :ephemeral, :swap] if environment_release_number < 4
 
-      assert_objects_with_hashes(ManageIQ::Providers::Openstack::CloudManager::Flavor.all,
+      assert_objects_with_hashes(NOVAHawk::Providers::Openstack::CloudManager::Flavor.all,
                                  compute_data.flavors,
                                  compute_data.flavor_translate_table,
                                  {:ram       => -> (x) { x * 1_024 * 1_024 },
@@ -324,7 +324,7 @@ module Openstack
                                   :swap      => -> (x) { x.megabyte }},
                                  blacklisted_attributes)
 
-      ManageIQ::Providers::Openstack::CloudManager::Flavor.all.each do |flavor|
+      NOVAHawk::Providers::Openstack::CloudManager::Flavor.all.each do |flavor|
         # TODO(lsmola) expose below to Builder's data
         expected_ephemeral_disk_count =
           if flavor.ephemeral_disk_size.nil?
@@ -344,21 +344,21 @@ module Openstack
     end
 
     def assert_public_flavor_tenant_mapping
-      @other_flavors = ManageIQ::Providers::Openstack::CloudManager::Flavor.where(:publicly_available => true)
+      @other_flavors = NOVAHawk::Providers::Openstack::CloudManager::Flavor.where(:publicly_available => true)
       @other_flavors.each do |f|
         expect(f.cloud_tenants.length).to eq CloudTenant.count
       end
     end
 
     def assert_private_flavor_tenant_mapping
-      @private_flavor = ManageIQ::Providers::Openstack::CloudManager::Flavor.where(:publicly_available => false).first
+      @private_flavor = NOVAHawk::Providers::Openstack::CloudManager::Flavor.where(:publicly_available => false).first
       expect(@private_flavor.cloud_tenants.length).to eq 1
     end
 
     def assert_specific_az
-      # This tests OpenStack functionality more than ManageIQ
-      @nova_az = ManageIQ::Providers::Openstack::CloudManager::AvailabilityZone.where(
-        :type => ManageIQ::Providers::Openstack::CloudManager::AvailabilityZone.name, :ems_id => @ems.id).first
+      # This tests OpenStack functionality more than NOVAHawk
+      @nova_az = NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZone.where(
+        :type => NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZone.name, :ems_id => @ems.id).first
       # standard openstack AZs have their ems_ref set to their name ("nova" in the test case)...
       # the "null" openstack AZ has a unique ems_ref and name
       expect(@nova_az).to have_attributes(
@@ -367,8 +367,8 @@ module Openstack
     end
 
     def assert_availability_zone_null
-      # This tests OpenStack functionality more than ManageIQ
-      @az_null = ManageIQ::Providers::Openstack::CloudManager::AvailabilityZoneNull.where(:ems_id => @ems.id).first
+      # This tests OpenStack functionality more than NOVAHawk
+      @az_null = NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZoneNull.where(:ems_id => @ems.id).first
       expect(@az_null).to have_attributes(
         :ems_ref => "null_az"
       )
@@ -392,7 +392,7 @@ module Openstack
     end
 
     def assert_key_pairs
-      assert_objects_with_hashes(ManageIQ::Providers::Openstack::CloudManager::AuthKeyPair.all, compute_data.key_pairs)
+      assert_objects_with_hashes(NOVAHawk::Providers::Openstack::CloudManager::AuthKeyPair.all, compute_data.key_pairs)
     end
 
     def firewall_without_defaults
@@ -512,27 +512,27 @@ module Openstack
       end
 
       specific_networks.each do |network|
-        expect(network.cloud_tenant).to          be_kind_of(ManageIQ::Providers::Openstack::CloudManager::CloudTenant)
-        expect(network.ext_management_system).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager)
+        expect(network.cloud_tenant).to          be_kind_of(NOVAHawk::Providers::Openstack::CloudManager::CloudTenant)
+        expect(network.ext_management_system).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager)
         expect(network.cloud_subnets.count).to   be > 0
-        expect(network.cloud_subnets.first).to   be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet)
+        expect(network.cloud_subnets.first).to   be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet)
         expect(network.vms.count).to             be > 0
-        expect(network.vms.first).to             be_kind_of(ManageIQ::Providers::Openstack::CloudManager::Vm)
+        expect(network.vms.first).to             be_kind_of(NOVAHawk::Providers::Openstack::CloudManager::Vm)
         expect(network.network_routers.count).to be > 0
-        expect(network.network_routers.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter)
+        expect(network.network_routers.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter)
         if network.external_facing?
           # It's a public network
-          expect(network).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Public)
+          expect(network).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Public)
           expect(network.private_networks.count).to be > 0
           expect(network.floating_ips.count).to     be > 0
-          expect(network.private_networks.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private)
+          expect(network.private_networks.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private)
 
           assert_objects_with_hashes(network.network_routers, network_data.routers(network.name))
         else
           # It's a private network
-          expect(network).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private)
+          expect(network).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private)
           expect(network.public_networks.count).to be > 0
-          expect(network.public_networks.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Public)
+          expect(network.public_networks.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Public)
         end
       end
     end
@@ -572,15 +572,15 @@ module Openstack
 
       specific_routers.each do |network_router|
         expect(network_router.floating_ips.count).to   be > 0
-        expect(network_router.floating_ips.first).to   be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::FloatingIp)
+        expect(network_router.floating_ips.first).to   be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp)
         expect(network_router.network_ports.count).to  be > 0
-        expect(network_router.network_ports.first).to  be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::NetworkPort)
+        expect(network_router.network_ports.first).to  be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort)
         expect(network_router.cloud_networks.count).to be > 0
-        expect(network_router.cloud_networks.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private)
+        expect(network_router.cloud_networks.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private)
         expect(network_router.cloud_networks).to match_array network_router.private_networks
-        expect(network_router.cloud_network).to        be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Public)
+        expect(network_router.cloud_network).to        be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Public)
         expect(network_router.cloud_network).to        be == network_router.public_network
-        expect(network_router.vms.first).to            be_kind_of(ManageIQ::Providers::Openstack::CloudManager::Vm)
+        expect(network_router.vms.first).to            be_kind_of(NOVAHawk::Providers::Openstack::CloudManager::Vm)
         expect(network_router.vms.count).to            be > 0
       end
     end
@@ -611,7 +611,7 @@ module Openstack
 
     def assert_templates
       # Ignoring shelved VMs, which are generating Image of the same name with suffix ''-shelved'
-      templates = ManageIQ::Providers::Openstack::CloudManager::Template.all.reject { |x| x.name.include?("-shelved") }
+      templates = NOVAHawk::Providers::Openstack::CloudManager::Template.all.reject { |x| x.name.include?("-shelved") }
 
       assert_objects_with_hashes(templates,
                                  image_data.images + image_data.servers_snapshots,
@@ -620,7 +620,7 @@ module Openstack
     end
 
     def assert_specific_templates
-      specific_templates = ManageIQ::Providers::Openstack::CloudManager::Template.all.select do |x|
+      specific_templates = NOVAHawk::Providers::Openstack::CloudManager::Template.all.select do |x|
         [image_data.class::IMAGE_NAME].include?(x.name)
       end
 
@@ -673,7 +673,7 @@ module Openstack
     end
 
     def assert_specific_vms
-      all_vms = ManageIQ::Providers::Openstack::CloudManager::Vm.all
+      all_vms = NOVAHawk::Providers::Openstack::CloudManager::Vm.all
       if orchestration_supported?
         # When there are orchestration stacks, we will delete them from vm comparing, vm name contains unique
         # id, so it's hard to build it from stack
@@ -699,7 +699,7 @@ module Openstack
     end
 
     def assert_specific_vm(vm_name, attributes)
-      vm = ManageIQ::Providers::Openstack::CloudManager::Vm.where(:name => vm_name).first
+      vm = NOVAHawk::Providers::Openstack::CloudManager::Vm.where(:name => vm_name).first
       vm_expected = compute_data.servers.detect { |x| x[:name] == vm_name }
 
       expect(vm).to have_attributes({
@@ -728,8 +728,8 @@ module Openstack
 
       expect(vm.ext_management_system).to  eq @ems
       # TODO(lsmola) expose to Builder's data
-      expect(vm.availability_zone).to      be_kind_of(ManageIQ::Providers::Openstack::CloudManager::AvailabilityZone)
-      expect(vm.floating_ip).to            be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::FloatingIp)
+      expect(vm.availability_zone).to      be_kind_of(NOVAHawk::Providers::Openstack::CloudManager::AvailabilityZone)
+      expect(vm.floating_ip).to            be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp)
       expect(vm.flavor.name).to            eq vm_expected[:__flavor_name]
       expect(vm.key_pairs.map(&:name)).to  eq [vm_expected[:key_name]]
       expect(vm.genealogy_parent.name).to  eq vm_expected[:__image_name]
@@ -739,18 +739,18 @@ module Openstack
 
       if neutron_networking?
         expect(vm.floating_ips.count).to    be > 0
-        expect(vm.floating_ips.first).to    be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::FloatingIp)
+        expect(vm.floating_ips.first).to    be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::FloatingIp)
         expect(vm.network_ports.count).to   be > 0
-        expect(vm.network_ports.first).to   be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::NetworkPort)
+        expect(vm.network_ports.first).to   be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::NetworkPort)
         expect(vm.cloud_networks.count).to  be > 0
         expect(vm.cloud_networks).to match_array vm.private_networks
-        expect(vm.cloud_networks.first).to  be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Private)
+        expect(vm.cloud_networks.first).to  be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Private)
         expect(vm.cloud_subnets.count).to   be > 0
-        expect(vm.cloud_subnets.first).to   be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudSubnet)
+        expect(vm.cloud_subnets.first).to   be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudSubnet)
         expect(vm.network_routers.count).to be > 0
-        expect(vm.network_routers.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::NetworkRouter)
+        expect(vm.network_routers.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::NetworkRouter)
         expect(vm.public_networks.count).to be > 0
-        expect(vm.public_networks.first).to be_kind_of(ManageIQ::Providers::Openstack::NetworkManager::CloudNetwork::Public)
+        expect(vm.public_networks.first).to be_kind_of(NOVAHawk::Providers::Openstack::NetworkManager::CloudNetwork::Public)
 
         expect(vm.fixed_ip_addresses.count).to    be > 0
         expect(vm.floating_ip_addresses.count).to be > 0
@@ -817,14 +817,14 @@ module Openstack
 
     # TODO(lsmola) specific checks below, do we need them?
     def assert_specific_template_created_from_vm
-      @snap = ManageIQ::Providers::Openstack::CloudManager::Template.where(
+      @snap = NOVAHawk::Providers::Openstack::CloudManager::Template.where(
         :name => "EmsRefreshSpec-PoweredOn-SnapShot").first
       expect(@snap).not_to be_nil
       # FIXME: @snap.parent.should == @vm
     end
 
     def assert_specific_vm_created_from_snapshot_template
-      t = ManageIQ::Providers::Openstack::CloudManager::Vm.where(:name => "EmsRefreshSpec-PoweredOn-FromSnapshot").first
+      t = NOVAHawk::Providers::Openstack::CloudManager::Vm.where(:name => "EmsRefreshSpec-PoweredOn-FromSnapshot").first
       expect(t.parent).to eq(@snap)
     end
 

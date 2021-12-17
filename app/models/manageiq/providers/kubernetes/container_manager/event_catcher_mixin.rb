@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Kubernetes::ContainerManager::EventCatcherMixin
+module NOVAHawk::Providers::Kubernetes::ContainerManager::EventCatcherMixin
   extend ActiveSupport::Concern
 
   # https://github.com/kubernetes/kubernetes/blob/master/pkg/kubelet/container/event.go

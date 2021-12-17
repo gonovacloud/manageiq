@@ -30,8 +30,8 @@
         :prefix                     => "/miq_request/",
         :keys                       => keys})
   - when :service
-    - keys = wf.kind_of?(ManageIQ::Providers::Redhat::InfraManager::ProvisionWorkflow) ? [:src_vm_id, :provision_type, :linked_clone] : [:vm_filter, :src_vm_id, :provision_type, :linked_clone, :snapshot]
-    - label = wf.kind_of?(ManageIQ::Providers::Redhat::InfraManager::ProvisionWorkflow) ? _("Selected VM") : _("Select")
+    - keys = wf.kind_of?(NOVAHawk::Providers::Redhat::InfraManager::ProvisionWorkflow) ? [:src_vm_id, :provision_type, :linked_clone] : [:vm_filter, :src_vm_id, :provision_type, :linked_clone, :snapshot]
+    - label = wf.kind_of?(NOVAHawk::Providers::Redhat::InfraManager::ProvisionWorkflow) ? _("Selected VM") : _("Select")
     = render(:partial => "/miq_request/prov_dialog_fieldset",
       :locals         => {:workflow => wf,
         :dialog                     => dialog,
@@ -55,7 +55,7 @@
           :prefix                     => "/miq_request/",
           :keys                       => keys})
     - keys = [:number_of_vms]
-    - label = wf.kind_of?(ManageIQ::Providers::CloudManager::ProvisionWorkflow) ? _("Number of Instances") : _("Number of VMs")
+    - label = wf.kind_of?(NOVAHawk::Providers::CloudManager::ProvisionWorkflow) ? _("Number of Instances") : _("Number of VMs")
     = render(:partial => "/miq_request/prov_dialog_fieldset",
       :locals         => {:workflow => wf,
         :dialog                     => dialog,
@@ -86,7 +86,7 @@
         :prefix                     => "/miq_request/",
         :keys                       => keys})
     - if (@edit && @edit[:new] && @edit[:new][:placement_auto] && !@edit[:new][:placement_auto][0]) || (@options && !@options[:placement_auto][0])
-      - unless wf.kind_of?(ManageIQ::Providers::CloudManager::ProvisionWorkflow)
+      - unless wf.kind_of?(NOVAHawk::Providers::CloudManager::ProvisionWorkflow)
         - keys = [:placement_dc_name]
         = render(:partial => "/miq_request/prov_dialog_fieldset",
           :locals         => {:workflow => wf,
@@ -101,7 +101,7 @@
             :label                      => title_for_cluster,
             :prefix                     => "/miq_request/",
             :keys                       => keys})
-      - if wf.kind_of?(ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow)
+      - if wf.kind_of?(NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow)
         - keys = [:rp_filter, :placement_rp_name]
         = render(:partial => "/miq_request/prov_dialog_fieldset",
           :locals         => {:workflow => wf,
@@ -123,7 +123,7 @@
           :label                      => title_for_host,
           :prefix                     => "/miq_request/",
           :keys                       => keys})
-      - unless wf.kind_of?(ManageIQ::Providers::CloudManager::ProvisionWorkflow)
+      - unless wf.kind_of?(NOVAHawk::Providers::CloudManager::ProvisionWorkflow)
         - keys = [:ds_filter, :placement_storage_profile, :placement_ds_name]
         = render(:partial => "/miq_request/prov_dialog_fieldset",
           :locals         => {:workflow => wf,
@@ -131,7 +131,7 @@
             :label                      => _("Datastore"),
             :prefix                     => "/miq_request/",
             :keys                       => keys})
-      - if wf.kind_of?(ManageIQ::Providers::CloudManager::ProvisionWorkflow)
+      - if wf.kind_of?(NOVAHawk::Providers::CloudManager::ProvisionWorkflow)
         - keys = [:cloud_tenant, :availability_zone_filter, :placement_availability_zone, :cloud_network, :cloud_subnet, :security_groups, :floating_ip_address, :resource_group]
         = render(:partial => "/miq_request/prov_dialog_fieldset",
           :locals         => {:workflow => wf,
@@ -143,14 +143,14 @@
     - keys = [:instance_type, :number_of_cpus, :number_of_sockets, :cores_per_socket,
               :vm_memory, :network_adapters, :disk_format, :guest_access_key_pair, :monitoring,
               :vm_dynamic_memory, :vm_minimum_memory, :vm_maximum_memory, :boot_disk_size, :is_preemptible]
-    - label = wf.kind_of?(ManageIQ::Providers::CloudManager::ProvisionWorkflow) ? _("Properties") : _("Hardware")
+    - label = wf.kind_of?(NOVAHawk::Providers::CloudManager::ProvisionWorkflow) ? _("Properties") : _("Hardware")
     = render(:partial => "/miq_request/prov_dialog_fieldset",
       :locals         => {:workflow => wf,
         :dialog                     => dialog,
         :label                      => label,
         :prefix                     => "/miq_request/",
         :keys                       => keys})
-    - unless wf.kind_of?(ManageIQ::Providers::CloudManager::ProvisionWorkflow)
+    - unless wf.kind_of?(NOVAHawk::Providers::CloudManager::ProvisionWorkflow)
       - keys = [:cpu_limit, :memory_limit]
       = render(:partial => "/miq_request/prov_dialog_fieldset",
         :locals         => {:workflow => wf,
@@ -165,7 +165,7 @@
           :label        => _("VM Reservations"),
           :prefix       => "/miq_request/",
           :keys         => keys})
-    - if wf.kind_of?(ManageIQ::Providers::Openstack::CloudManager::ProvisionWorkflow)
+    - if wf.kind_of?(NOVAHawk::Providers::Openstack::CloudManager::ProvisionWorkflow)
       = render(:partial => "/miq_request/prov_dialog_cloud_quota",
         :locals         => {:workflow => wf,
           :dialog                     => dialog,
@@ -180,7 +180,7 @@
         :prefix                     => "/miq_request/",
         :keys                       => keys})
   - when :customize
-    - if wf.kind_of?(ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow) && !wf.supports_pxe? && !wf.supports_iso?
+    - if wf.kind_of?(NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow) && !wf.supports_pxe? && !wf.supports_iso?
       - keys = [:sysprep_enabled]
       = render(:partial => "/miq_request/prov_dialog_fieldset",
         :locals         => {:workflow => wf,

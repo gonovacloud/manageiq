@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('reconfigureFormController', ['$http', '$scope', 'reconfigureFormId', 'objectIds', 'miqService', function($http, $scope, reconfigureFormId, objectIds, miqService) {
+NOVAHawk.angular.app.controller('reconfigureFormController', ['$http', '$scope', 'reconfigureFormId', 'objectIds', 'miqService', function($http, $scope, reconfigureFormId, objectIds, miqService) {
     var init = function() {
       $scope.reconfigureModel = {
         memory:                  '0',
@@ -29,7 +29,7 @@ ManageIQ.angular.app.controller('reconfigureFormController', ['$http', '$scope',
       $scope.modelCopy = angular.copy( $scope.reconfigureModel );
       $scope.model = 'reconfigureModel';
 
-      ManageIQ.angular.scope = $scope;
+      NOVAHawk.angular.scope = $scope;
 
       if (reconfigureFormId == 'new')
         $scope.newRecord = true;

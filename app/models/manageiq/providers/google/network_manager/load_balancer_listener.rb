@@ -1,2 +1,2 @@
-class ManageIQ::Providers::Google::NetworkManager::LoadBalancerListener < ::LoadBalancerListener
+class NOVAHawk::Providers::Google::NetworkManager::LoadBalancerListener < ::LoadBalancerListener
 end

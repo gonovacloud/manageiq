@@ -1,7 +1,7 @@
 class InfraTopologyService < TopologyService
   include UiServiceMixin
 
-  @provider_class = ManageIQ::Providers::InfraManager
+  @provider_class = NOVAHawk::Providers::InfraManager
 
   def entity_type(entity)
     entity.class.name.demodulize
@@ -30,7 +30,7 @@ class InfraTopologyService < TopologyService
   end
 
   def entity_display_type(entity)
-    if entity.kind_of?(ManageIQ::Providers::InfraManager)
+    if entity.kind_of?(NOVAHawk::Providers::InfraManager)
       entity.class.short_token
     else
       name = entity.class.name.demodulize
@@ -56,7 +56,7 @@ class InfraTopologyService < TopologyService
 
   def entity_status(entity)
     case entity
-    when ManageIQ::Providers::InfraManager
+    when NOVAHawk::Providers::InfraManager
       entity.authentications.blank? ? 'Unknown' : entity.authentications.first.status.try(:capitalize)
     when Host
       entity.state ? entity.state.downcase.capitalize : 'Unknown'

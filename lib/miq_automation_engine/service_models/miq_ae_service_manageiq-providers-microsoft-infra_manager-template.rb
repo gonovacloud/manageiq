@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Microsoft_InfraManager_Template < MiqAeServiceManageIQ_Providers_InfraManager_Template
+  class MiqAeServiceNOVAHawk_Providers_Microsoft_InfraManager_Template < MiqAeServiceNOVAHawk_Providers_InfraManager_Template
   end
 end

@@ -3,7 +3,7 @@ describe "task_finished_status" do
 
   def build_resolve_path
     instance  = "/System/Request/Call_Method"
-    namespace = "namespace=/ManageIQ/System/CommonMethods"
+    namespace = "namespace=/NOVAHawk/System/CommonMethods"
     klass     = "class=StateMachineMethods"
     method    = "method=task_finished"
     "#{instance}?#{namespace}&#{klass}&#{method}"

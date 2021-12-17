@@ -112,8 +112,8 @@ module ReportFormatter
           if rec[:ems_id] && ExtManagementSystem.exists?(rec[:ems_id])
             ems = ExtManagementSystem.find(rec[:ems_id])
             ems_cloud =  true if ems.kind_of?(EmsCloud)
-            ems_container = true if ems.kind_of?(::ManageIQ::Providers::ContainerManager)
-            ems_mw = true if ems.kind_of?(::ManageIQ::Providers::MiddlewareManager)
+            ems_container = true if ems.kind_of?(::NOVAHawk::Providers::ContainerManager)
+            ems_mw = true if ems.kind_of?(::NOVAHawk::Providers::MiddlewareManager)
           end
           if !(ems_cloud || ems_mw)
             e_title = if rec[:vm_name] # Create the title using VM name

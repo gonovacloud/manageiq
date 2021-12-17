@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://evm%40manageiq.com:password@192.168.252.230/ovirt-engine/api
+    uri: https://evm%40novahawk.com:password@192.168.252.230/ovirt-engine/api
     body:
       encoding: US-ASCII
       string: ''
@@ -562,7 +562,7 @@ http_interactions:
         rel=\"tags\"/>\n        <link href=\"/ovirt-engine/api/hosts/2f1d11cc-e269-11e2-839c-005056a217db/permissions\"
         rel=\"permissions\"/>\n        <link href=\"/ovirt-engine/api/hosts/2f1d11cc-e269-11e2-839c-005056a217db/statistics\"
         rel=\"statistics\"/>\n        <address>192.168.252.232</address>\n        <certificate>\n
-        \           <organization>manageiq.com</organization>\n            <subject>O=manageiq.com,CN=192.168.252.232</subject>\n
+        \           <organization>novahawk.com</organization>\n            <subject>O=novahawk.com,CN=192.168.252.232</subject>\n
         \       </certificate>\n        <status>\n            <state>up</state>\n
         \       </status>\n        <cluster href=\"/ovirt-engine/api/clusters/99408929-82cf-4dc7-a532-9d998063fa95\"
         id=\"99408929-82cf-4dc7-a532-9d998063fa95\"/>\n        <port>54321</port>\n
@@ -594,7 +594,7 @@ http_interactions:
         rel=\"tags\"/>\n        <link href=\"/ovirt-engine/api/hosts/6ab50456-d4f9-11e2-931e-005056a217db/permissions\"
         rel=\"permissions\"/>\n        <link href=\"/ovirt-engine/api/hosts/6ab50456-d4f9-11e2-931e-005056a217db/statistics\"
         rel=\"statistics\"/>\n        <address>192.168.252.233</address>\n        <certificate>\n
-        \           <organization>manageiq.com</organization>\n            <subject>O=manageiq.com,CN=192.168.252.233</subject>\n
+        \           <organization>novahawk.com</organization>\n            <subject>O=novahawk.com,CN=192.168.252.233</subject>\n
         \       </certificate>\n        <status>\n            <state>up</state>\n
         \       </status>\n        <cluster href=\"/ovirt-engine/api/clusters/5be5d08a-a60b-11e2-bee6-005056a217db\"
         id=\"5be5d08a-a60b-11e2-bee6-005056a217db\"/>\n        <port>54321</port>\n
@@ -1729,7 +1729,7 @@ http_interactions:
         id=\"b14e3c9f-a171-4d23-b3e2-da423d1d2a23\">\n        <actions>\n            <link
         href=\"/ovirt-engine/api/templates/b14e3c9f-a171-4d23-b3e2-da423d1d2a23/export\" rel=\"export\"/>\n
         \       </actions>\n        <name>757e824d-6d97-4568-be29-9346c354e802</name>\n
-        \       <description>ManageIQ</description>\n        <link href=\"/ovirt-engine/api/templates/b14e3c9f-a171-4d23-b3e2-da423d1d2a23/disks\"
+        \       <description>NOVAHawk</description>\n        <link href=\"/ovirt-engine/api/templates/b14e3c9f-a171-4d23-b3e2-da423d1d2a23/disks\"
         rel=\"disks\"/>\n        <link href=\"/ovirt-engine/api/templates/b14e3c9f-a171-4d23-b3e2-da423d1d2a23/nics\"
         rel=\"nics\"/>\n        <link href=\"/ovirt-engine/api/templates/b14e3c9f-a171-4d23-b3e2-da423d1d2a23/cdroms\"
         rel=\"cdroms\"/>\n        <link href=\"/ovirt-engine/api/templates/b14e3c9f-a171-4d23-b3e2-da423d1d2a23/permissions\"

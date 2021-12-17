@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('retirementFormController', ['$http', '$scope', 'objectIds', 'miqService', function($http, $scope, objectIds, miqService) {
+NOVAHawk.angular.app.controller('retirementFormController', ['$http', '$scope', 'objectIds', 'miqService', function($http, $scope, objectIds, miqService) {
   $scope.objectIds = objectIds;
   $scope.retirementInfo = {
     retirementDate: null,

@@ -5,7 +5,7 @@ describe "Automate API" do
   context "Automate Queries" do
     before(:each) do
       MiqAeDatastore.reset
-      FactoryGirl.create(:miq_ae_domain, :name => "ManageIQ", :tenant_id => @group.tenant.id)
+      FactoryGirl.create(:miq_ae_domain, :name => "NOVAHawk", :tenant_id => @group.tenant.id)
       FactoryGirl.create(:miq_ae_domain, :name => "Custom",   :tenant_id => @group.tenant.id)
       system_class = FactoryGirl.create(:miq_ae_class, :name => "System", :namespace => "Custom")
       FactoryGirl.create(:miq_ae_field, :name    => "on_entry", :class_id => system_class.id,
@@ -23,7 +23,7 @@ describe "Automate API" do
         "subcount"  => 2,
         "resources" => a_collection_containing_exactly(
           a_hash_including("name" => "Custom",   "fqname" => "/Custom"),
-          a_hash_including("name" => "ManageIQ", "fqname" => "/ManageIQ")
+          a_hash_including("name" => "NOVAHawk", "fqname" => "/NOVAHawk")
         )
       )
     end
@@ -58,7 +58,7 @@ describe "Automate API" do
 
       expect(response).to have_http_status(:ok)
       expect(response.parsed_body["resources"]).to match_array(
-        [a_hash_including("name" => "ManageIQ", "fqname" => "/ManageIQ"),
+        [a_hash_including("name" => "NOVAHawk", "fqname" => "/NOVAHawk"),
          a_hash_including("name" => "Custom",   "fqname" => "/Custom"),
          a_hash_including("name" => "System",   "fqname" => "/Custom/System")]
       )

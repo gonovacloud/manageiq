@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_Hawkular_MiddlewareManager < MiqAeServiceModelBase
+  class MiqAeServiceNOVAHawk_Providers_Hawkular_MiddlewareManager < MiqAeServiceModelBase
   end
 end

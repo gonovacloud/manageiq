@@ -1,4 +1,4 @@
-module Manageiq
+module novahawk
   class BlackBox
     METADATA_CONFIG_FILE = "/metadata/xmldata.yml"
 

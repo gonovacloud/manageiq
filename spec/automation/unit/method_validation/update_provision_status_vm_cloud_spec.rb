@@ -1,7 +1,7 @@
 describe "update_provision_status" do
   def build_resolve_path
     instance  = "/System/Request/Call_Method"
-    namespace = "namespace=/ManageIQ/Cloud/VM/Provisioning/StateMachines"
+    namespace = "namespace=/NOVAHawk/Cloud/VM/Provisioning/StateMachines"
     klass     = "class=VMProvision_VM"
     method    = "method=update_provision_status"
     "#{instance}?#{namespace}&#{klass}&#{method}"

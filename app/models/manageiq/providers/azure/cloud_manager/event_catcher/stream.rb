@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Azure::CloudManager::EventCatcher::Stream
+class NOVAHawk::Providers::Azure::CloudManager::EventCatcher::Stream
   #
   # Creates an event monitor
   #

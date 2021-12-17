@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Openshift::ContainerManager < ManageIQ::Providers::ContainerManager
-  include ManageIQ::Providers::Openshift::ContainerManagerMixin
+class NOVAHawk::Providers::Openshift::ContainerManager < NOVAHawk::Providers::ContainerManager
+  include NOVAHawk::Providers::Openshift::ContainerManagerMixin
 
   require_nested :EventCatcher
   require_nested :EventParser
@@ -17,7 +17,7 @@ class ManageIQ::Providers::Openshift::ContainerManager < ManageIQ::Providers::Co
   end
 
   def self.event_monitor_class
-    ManageIQ::Providers::Openshift::ContainerManager::EventCatcher
+    NOVAHawk::Providers::Openshift::ContainerManager::EventCatcher
   end
 
   def supported_auth_attributes

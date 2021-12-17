@@ -31,7 +31,7 @@ class VmOrTemplate < ApplicationRecord
   include TenancyMixin
 
   include AvailabilityMixin
-  include ManageIQ::Providers::Inflector::Methods
+  include NOVAHawk::Providers::Inflector::Methods
 
   has_many :ems_custom_attributes, -> { where(:source => 'VC') }, :as => :resource, :dependent => :destroy,
            :class_name => "CustomAttribute"
@@ -1203,7 +1203,7 @@ class VmOrTemplate < ApplicationRecord
     #   available, to determine the VM create time
     ems = vms_to_update.first.ext_management_system
     # TODO: Vmware specific
-    return unless ems && ems.kind_of?(ManageIQ::Providers::Vmware::InfraManager)
+    return unless ems && ems.kind_of?(NOVAHawk::Providers::Vmware::InfraManager)
 
     vms_list = vms_to_update.collect { |v| {:id => v.id, :name => v.name, :uid_ems => v.uid_ems} }
     found = ems.find_vm_create_events(vms_list)

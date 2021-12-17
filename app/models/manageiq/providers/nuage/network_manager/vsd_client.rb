@@ -1,7 +1,7 @@
 require 'rest-client'
 require 'rubygems'
 require 'json'
-module ManageIQ::Providers
+module NOVAHawk::Providers
   class Nuage::NetworkManager::VsdClient
     include Vmdb::Logging
     def initialize(server, user, password)

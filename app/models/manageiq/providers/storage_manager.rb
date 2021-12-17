@@ -3,14 +3,14 @@
 #
 #
 
-module ManageIQ::Providers
-  class StorageManager < ManageIQ::Providers::BaseManager
+module NOVAHawk::Providers
+  class StorageManager < NOVAHawk::Providers::BaseManager
     include SupportsFeatureMixin
     supports_not :smartstate_analysis
 
     belongs_to :parent_manager,
                :foreign_key => :parent_ems_id,
-               :class_name  => "ManageIQ::Providers::BaseManager",
+               :class_name  => "NOVAHawk::Providers::BaseManager",
                :autosave    => true
   end
 end

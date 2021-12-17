@@ -1,5 +1,5 @@
 require 'azure-armrest'
-describe ManageIQ::Providers::Azure::CloudManager do
+describe NOVAHawk::Providers::Azure::CloudManager do
   it ".ems_type" do
     expect(described_class.ems_type).to eq('azure')
   end
@@ -85,12 +85,12 @@ describe ManageIQ::Providers::Azure::CloudManager do
 
     context "#validation" do
       it "handles unknown error" do
-        allow(ManageIQ::Providers::Azure::CloudManager).to receive(:raw_connect).and_raise(StandardError)
+        allow(NOVAHawk::Providers::Azure::CloudManager).to receive(:raw_connect).and_raise(StandardError)
         expect { @e.verify_credentials }.to raise_error(MiqException::MiqInvalidCredentialsError, /Unexpected response returned*/)
       end
 
       it "handles incorrect password" do
-        allow(ManageIQ::Providers::Azure::CloudManager).to receive(:raw_connect).and_raise(
+        allow(NOVAHawk::Providers::Azure::CloudManager).to receive(:raw_connect).and_raise(
           Azure::Armrest::UnauthorizedException.new(nil, nil, nil))
         expect { @e.verify_credentials }.to raise_error(MiqException::MiqInvalidCredentialsError, /Incorrect credentials*/)
       end
@@ -130,7 +130,7 @@ describe ManageIQ::Providers::Azure::CloudManager do
       cassette_name = example.description.tr(" ", "_").delete(",").underscore
       name = "#{described_class.name.underscore}/discover/#{cassette_name}"
       VCR.use_cassette(name, :allow_unused_http_interactions => true, :decode_compressed_response => true) do
-        ManageIQ::Providers::Azure::CloudManager.discover(@client_id, @client_key, @tenant_id, @subscription)
+        NOVAHawk::Providers::Azure::CloudManager.discover(@client_id, @client_key, @tenant_id, @subscription)
       end
     end
 
@@ -165,7 +165,7 @@ describe ManageIQ::Providers::Azure::CloudManager do
       found = recorded_discover(example)
       expect(found.count).to eq(3)
 
-      emses = ManageIQ::Providers::Azure::CloudManager.order(:name)
+      emses = NOVAHawk::Providers::Azure::CloudManager.order(:name)
       expect(emses.count).to eq(3)
       assert_region(emses[1], "Azure-eastus")
       assert_region(emses[2], "Azure-westus")
@@ -177,7 +177,7 @@ describe ManageIQ::Providers::Azure::CloudManager do
       found = recorded_discover(example)
       expect(found.count).to eq(2)
 
-      emses = ManageIQ::Providers::Azure::CloudManager.order(:name)
+      emses = NOVAHawk::Providers::Azure::CloudManager.order(:name)
       expect(emses.count).to eq(3)
       assert_region(emses[1], "Azure-eastus")
       assert_region(emses[2], "Azure-westus")
@@ -190,7 +190,7 @@ describe ManageIQ::Providers::Azure::CloudManager do
       found = recorded_discover(example)
       expect(found.count).to eq(1)
 
-      emses = ManageIQ::Providers::Azure::CloudManager.order(:name)
+      emses = NOVAHawk::Providers::Azure::CloudManager.order(:name)
       expect(emses.count).to eq(3)
       assert_region(emses[1], "Azure-eastus")
       assert_region(emses[2], "Azure-westus")
@@ -203,7 +203,7 @@ describe ManageIQ::Providers::Azure::CloudManager do
         found = recorded_discover(example)
         expect(found.count).to eq(3)
 
-        emses = ManageIQ::Providers::Azure::CloudManager.order(:name).includes(:authentications)
+        emses = NOVAHawk::Providers::Azure::CloudManager.order(:name).includes(:authentications)
         expect(emses.count).to eq(4)
         assert_region(emses[0], "Azure-centralus")
         assert_region(emses[1], "Azure-eastus")
@@ -224,7 +224,7 @@ describe ManageIQ::Providers::Azure::CloudManager do
         found = recorded_discover(example)
         expect(found.count).to eq(3)
 
-        emses = ManageIQ::Providers::Azure::CloudManager.order(:name).includes(:authentications)
+        emses = NOVAHawk::Providers::Azure::CloudManager.order(:name).includes(:authentications)
         expect(emses.count).to eq(5)
 
         assert_region(emses[1], "Azure-eastus")
@@ -244,7 +244,7 @@ describe ManageIQ::Providers::Azure::CloudManager do
         found = recorded_discover(example)
         expect(found.count).to eq(3)
 
-        emses = ManageIQ::Providers::Azure::CloudManager.order(:name).includes(:authentications)
+        emses = NOVAHawk::Providers::Azure::CloudManager.order(:name).includes(:authentications)
         expect(emses.count).to eq(6)
 
         assert_region(emses[1], "Azure-eastus")

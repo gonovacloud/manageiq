@@ -37,11 +37,11 @@ class SeparateOpenstackNetworkManagerFromOpenstackCloudManager < ActiveRecord::M
     ExtManagementSystem.reset_column_information
     ExtManagementSystem
       .joins('left join ext_management_systems as network_manager on network_manager.parent_ems_id = ext_management_systems.id')
-      .where(:ext_management_systems => {:type          => ['ManageIQ::Providers::Openstack::CloudManager',
-                                                            'ManageIQ::Providers::Openstack::InfraManager']},
+      .where(:ext_management_systems => {:type          => ['NOVAHawk::Providers::Openstack::CloudManager',
+                                                            'NOVAHawk::Providers::Openstack::InfraManager']},
              :network_manager        => {:parent_ems_id => nil}).each do |cloud_manager|
       network_manager = ExtManagementSystem.create!(
-        :type          => 'ManageIQ::Providers::Openstack::NetworkManager',
+        :type          => 'NOVAHawk::Providers::Openstack::NetworkManager',
         :name          => "#{cloud_manager.name} Network Manager",
         :parent_ems_id => cloud_manager.id,
         :guid          => MiqUUID.new_guid)
@@ -49,7 +49,7 @@ class SeparateOpenstackNetworkManagerFromOpenstackCloudManager < ActiveRecord::M
       affected_classes.each do |network_model_class|
         network_model_class
           .where(:ems_id => cloud_manager.id)
-          .update_all("type = 'ManageIQ::Providers::Openstack::NetworkManager::#{network_model_class.name.demodulize}', ems_id = '#{network_manager.id}'")
+          .update_all("type = 'NOVAHawk::Providers::Openstack::NetworkManager::#{network_model_class.name.demodulize}', ems_id = '#{network_manager.id}'")
       end
     end
   end
@@ -58,13 +58,13 @@ class SeparateOpenstackNetworkManagerFromOpenstackCloudManager < ActiveRecord::M
     # Move NetworkManager models back from CloudManager and delete NetworkManager
     ExtManagementSystem
       .joins('join ext_management_systems as network_manager on network_manager.parent_ems_id = ext_management_systems.id')
-      .where(:ext_management_systems => {:type => 'ManageIQ::Providers::Openstack::CloudManager'}).each do |cloud_manager|
+      .where(:ext_management_systems => {:type => 'NOVAHawk::Providers::Openstack::CloudManager'}).each do |cloud_manager|
 
       network_manager = ExtManagementSystem.where(:parent_ems_id => cloud_manager.id).first
       affected_classes.each do |network_model_class|
         network_model_class
           .where(:ems_id => network_manager.id)
-          .update_all("type = 'ManageIQ::Providers::Openstack::CloudManager::#{network_model_class.name.demodulize}', ems_id = '#{cloud_manager.id}'")
+          .update_all("type = 'NOVAHawk::Providers::Openstack::CloudManager::#{network_model_class.name.demodulize}', ems_id = '#{cloud_manager.id}'")
       end
 
       network_manager.destroy
@@ -73,13 +73,13 @@ class SeparateOpenstackNetworkManagerFromOpenstackCloudManager < ActiveRecord::M
     # Move NetworkManager models back from InfraManager and delete NetworkManager
     ExtManagementSystem
       .joins('join ext_management_systems as network_manager on network_manager.parent_ems_id = ext_management_systems.id')
-      .where(:ext_management_systems => {:type => 'ManageIQ::Providers::Openstack::InfraManager'}).each do |cloud_manager|
+      .where(:ext_management_systems => {:type => 'NOVAHawk::Providers::Openstack::InfraManager'}).each do |cloud_manager|
       network_manager = ExtManagementSystem.where(:parent_ems_id => cloud_manager.id).first
 
       affected_classes.each do |network_model_class|
         network_model_class
           .where(:ems_id => network_manager.id)
-          .update_all("type = 'ManageIQ::Providers::Openstack::InfraManager::#{network_model_class.name.demodulize}', ems_id = '#{cloud_manager.id}'")
+          .update_all("type = 'NOVAHawk::Providers::Openstack::InfraManager::#{network_model_class.name.demodulize}', ems_id = '#{cloud_manager.id}'")
       end
 
       network_manager.destroy

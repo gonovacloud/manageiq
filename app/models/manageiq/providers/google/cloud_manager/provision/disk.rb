@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google::CloudManager::Provision::Disk
+module NOVAHawk::Providers::Google::CloudManager::Provision::Disk
   def create_disks(disks_attrs)
     disk_results = []
     source.with_provider_connection do |google|

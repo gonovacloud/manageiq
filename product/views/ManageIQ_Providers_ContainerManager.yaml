@@ -15,7 +15,7 @@ title: Containers Providers
 name: EmsContainer
 
 # Main DB table report is based on
-db: ManageIQ::Providers::ContainerManager
+db: NOVAHawk::Providers::ContainerManager
 
 # Columns to fetch from the main table
 cols:

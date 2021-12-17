@@ -128,9 +128,9 @@ describe('miq_application.js', function() {
 
   describe('miqShowAE_Tree', function () {
     it('uses url with the current controller', function() {
-      ManageIQ.controller = 'catalog';
+      NOVAHawk.controller = 'catalog';
       spyOn(window, 'miqJqueryRequest');
-      ae_url = "/" + ManageIQ.controller + "/ae_tree_select_toggle";
+      ae_url = "/" + NOVAHawk.controller + "/ae_tree_select_toggle";
       miqShowAE_Tree('field_entry_point');
       expect(miqJqueryRequest).toHaveBeenCalledWith('/catalog/ae_tree_select_toggle?typ=field_entry_point');
     });
@@ -181,7 +181,7 @@ describe('miq_application.js', function() {
     });
 
     it('updates element Id with new order', function () {
-      ManageIQ.widget.dashboardUrl = 'dialog_res_reorder';
+      NOVAHawk.widget.dashboardUrl = 'dialog_res_reorder';
       miqUpdateElementsId($('.col-md-4'));
       var str = $('.col-md-4 > *').map(function(i, e) {
         return e.id;
@@ -192,8 +192,8 @@ describe('miq_application.js', function() {
 
   describe('miqSendOneTrans', function () {
     beforeEach(function() {
-      ManageIQ.oneTransition.oneTrans = undefined;
-      ManageIQ.oneTransition.IEButtonPressed = false;
+      NOVAHawk.oneTransition.oneTrans = undefined;
+      NOVAHawk.oneTransition.IEButtonPressed = false;
 
       spyOn(window, 'miqObserveRequest');
       spyOn(window, 'miqJqueryRequest');
@@ -216,8 +216,8 @@ describe('miq_application.js', function() {
     it('queues itself when already processing', function() {
       spyOn(window, 'setTimeout');
 
-      ManageIQ.observe.processing = true;
-      ManageIQ.observe.queue = [{}];
+      NOVAHawk.observe.processing = true;
+      NOVAHawk.observe.queue = [{}];
 
       miqProcessObserveQueue();
 
@@ -232,9 +232,9 @@ describe('miq_application.js', function() {
           return { then: function(a, b) { /* nope */ } };
         });
 
-        ManageIQ.observe.processing = false;
+        NOVAHawk.observe.processing = false;
 
-        ManageIQ.observe.queue = [{
+        NOVAHawk.observe.queue = [{
           url: '/foo',
           options: obj,
         }];
@@ -242,7 +242,7 @@ describe('miq_application.js', function() {
 
       it('sets processing', function() {
         miqProcessObserveQueue();
-        expect(ManageIQ.observe.processing).toBe(true);
+        expect(NOVAHawk.observe.processing).toBe(true);
       });
 
       it('calls miqJqueryRequest', function() {
@@ -255,8 +255,8 @@ describe('miq_application.js', function() {
 
     context('on success', function() {
       beforeEach(function() {
-        ManageIQ.observe.processing = false;
-        ManageIQ.observe.queue = [{ deferred: deferred }];
+        NOVAHawk.observe.processing = false;
+        NOVAHawk.observe.queue = [{ deferred: deferred }];
 
         spyOn(window, 'miqJqueryRequest').and.callFake(function() {
           return { then: function(ok, err) { ok() } };
@@ -265,7 +265,7 @@ describe('miq_application.js', function() {
 
       it('unsets processing', function() {
         miqProcessObserveQueue();
-        expect(ManageIQ.observe.processing).toBe(false);
+        expect(NOVAHawk.observe.processing).toBe(false);
       });
 
       it('resolves the promise', function() {
@@ -278,8 +278,8 @@ describe('miq_application.js', function() {
 
     context('on failure', function() {
       beforeEach(function() {
-        ManageIQ.observe.processing = false;
-        ManageIQ.observe.queue = [{ deferred: deferred }];
+        NOVAHawk.observe.processing = false;
+        NOVAHawk.observe.queue = [{ deferred: deferred }];
 
         spyOn(window, 'miqJqueryRequest').and.callFake(function() {
           return { then: function(ok, err) { err() } };
@@ -288,7 +288,7 @@ describe('miq_application.js', function() {
 
       it('unsets processing', function() {
         miqProcessObserveQueue();
-        expect(ManageIQ.observe.processing).toBe(false);
+        expect(NOVAHawk.observe.processing).toBe(false);
       });
 
       it('rejects the promise', function() {
@@ -311,23 +311,23 @@ describe('miq_application.js', function() {
     beforeEach(function() {
       spyOn(window, 'miqProcessObserveQueue');
 
-      ManageIQ.observe.processing = false;
-      ManageIQ.observe.queue = [];
+      NOVAHawk.observe.processing = false;
+      NOVAHawk.observe.queue = [];
     });
 
     it('sets observe: true on options', function() {
       miqObserveRequest('/foo', {});
-      expect(ManageIQ.observe.queue[0].options.observe).toBe(true);
+      expect(NOVAHawk.observe.queue[0].options.observe).toBe(true);
     });
 
     it('sets observe: true on options even without options', function() {
       miqObserveRequest('/foo');
-      expect(ManageIQ.observe.queue[0].options.observe).toBe(true);
+      expect(NOVAHawk.observe.queue[0].options.observe).toBe(true);
     });
 
     it('adds to queue', function() {
       miqObserveRequest('/foo');
-      expect(ManageIQ.observe.queue[0].url).toBe('/foo');
+      expect(NOVAHawk.observe.queue[0].url).toBe('/foo');
     });
 
     it('calls miqProcessObserveQueue', function() {
@@ -368,8 +368,8 @@ describe('miq_application.js', function() {
     });
 
     it('queues itself when processing observe queue', function() {
-      ManageIQ.observe.processing = true;
-      ManageIQ.observe.queue = [];
+      NOVAHawk.observe.processing = true;
+      NOVAHawk.observe.queue = [];
 
       spyOn(window, 'setTimeout');
       miqJqueryRequest('/foo');
@@ -378,8 +378,8 @@ describe('miq_application.js', function() {
     });
 
     it('queues itself when observe queue nonempty', function() {
-      ManageIQ.observe.processing = false;
-      ManageIQ.observe.queue = [{}];
+      NOVAHawk.observe.processing = false;
+      NOVAHawk.observe.queue = [{}];
 
       spyOn(window, 'setTimeout');
       miqJqueryRequest('/foo');
@@ -388,8 +388,8 @@ describe('miq_application.js', function() {
     });
 
     it('doesn\'t try to queue when passed options.observe', function() {
-      ManageIQ.observe.processing = true;
-      ManageIQ.observe.queue = [{}];
+      NOVAHawk.observe.processing = true;
+      NOVAHawk.observe.queue = [{}];
 
       spyOn(window, 'setTimeout');
       miqJqueryRequest('/foo', { observe: true });

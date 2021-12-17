@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Redhat::InfraManager::ProvisionWorkflow < MiqProvisionInfraWorkflow
+class NOVAHawk::Providers::Redhat::InfraManager::ProvisionWorkflow < MiqProvisionInfraWorkflow
   include CloudInitTemplateMixin
 
   def self.default_dialog_file
@@ -6,7 +6,7 @@ class ManageIQ::Providers::Redhat::InfraManager::ProvisionWorkflow < MiqProvisio
   end
 
   def self.provider_model
-    ManageIQ::Providers::Redhat::InfraManager
+    NOVAHawk::Providers::Redhat::InfraManager
   end
 
   def supports_pxe?

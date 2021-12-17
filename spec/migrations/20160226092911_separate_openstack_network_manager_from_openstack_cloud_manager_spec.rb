@@ -59,29 +59,29 @@ describe SeparateOpenstackNetworkManagerFromOpenstackCloudManager do
         :ems_in   => ems_row_entries[0],
         :ems_out  => 'new_ems',
         :name     => "name_0",
-        :type_in  => "ManageIQ::Providers::Openstack::CloudManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::Openstack::NetworkManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::Openstack::CloudManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::Openstack::NetworkManager::#{model_class_name}",
       },
       {
         :ems_in   => ems_row_entries[1],
         :ems_out  => 'new_ems_infra',
         :name     => "name_1",
-        :type_in  => "ManageIQ::Providers::Openstack::InfraManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::Openstack::NetworkManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::Openstack::InfraManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::Openstack::NetworkManager::#{model_class_name}",
       },
       {
         :ems_in   => ems_row_entries[2],
         :ems_out  => ems_row_entries[2],
         :name     => "name_2",
-        :type_in  => "ManageIQ::Providers::Amazon::CloudManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::Amazon::CloudManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::Amazon::CloudManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::Amazon::CloudManager::#{model_class_name}",
       },
       {
         :ems_in   => ems_row_entries[3],
         :ems_out  => ems_row_entries[3],
         :name     => "name_3",
-        :type_in  => "ManageIQ::Providers::AnotherManager::CloudManager::#{model_class_name}",
-        :type_out => "ManageIQ::Providers::AnotherManager::CloudManager::#{model_class_name}",
+        :type_in  => "NOVAHawk::Providers::AnotherManager::CloudManager::#{model_class_name}",
+        :type_out => "NOVAHawk::Providers::AnotherManager::CloudManager::#{model_class_name}",
       },
     ]
   end
@@ -115,10 +115,10 @@ describe SeparateOpenstackNetworkManagerFromOpenstackCloudManager do
 
   let(:ems_row_entries) do
     [
-      {:type => "ManageIQ::Providers::Openstack::CloudManager"},
-      {:type => "ManageIQ::Providers::Openstack::InfraManager"},
-      {:type => "ManageIQ::Providers::Amazon::CloudManager"},
-      {:type => "ManageIQ::Providers::AnotherManager::CloudManager"}
+      {:type => "NOVAHawk::Providers::Openstack::CloudManager"},
+      {:type => "NOVAHawk::Providers::Openstack::InfraManager"},
+      {:type => "NOVAHawk::Providers::Amazon::CloudManager"},
+      {:type => "NOVAHawk::Providers::AnotherManager::CloudManager"}
     ]
   end
 
@@ -152,12 +152,12 @@ describe SeparateOpenstackNetworkManagerFromOpenstackCloudManager do
 
       network_manager = ext_management_system_stub.create!(
         :name          => "cloud_network",
-        :type          => "ManageIQ::Providers::Openstack::NetworkManager",
+        :type          => "NOVAHawk::Providers::Openstack::NetworkManager",
         :parent_ems_id => ems_row_entries[0][:ems].id)
 
       network_manager_infra = ext_management_system_stub.create!(
         :name          => "infra_network",
-        :type          => "ManageIQ::Providers::Openstack::NetworkManager",
+        :type          => "NOVAHawk::Providers::Openstack::NetworkManager",
         :parent_ems_id => ems_row_entries[1][:ems].id)
 
       all_model_names.each do |model_name|

@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('detectSpaces', function() {
+NOVAHawk.angular.app.directive('detectSpaces', function() {
   return {
     require: 'ngModel',
     link: function (_scope, _elem, _attrs, ctrl) {

@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Vm::Operations::Snapshot
+module NOVAHawk::Providers::Redhat::InfraManager::Vm::Operations::Snapshot
   extend ActiveSupport::Concern
 
   included do

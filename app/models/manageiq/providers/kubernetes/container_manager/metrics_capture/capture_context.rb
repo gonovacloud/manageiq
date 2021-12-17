@@ -1,6 +1,6 @@
-class ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture
+class NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture
   class CaptureContext
-    include ManageIQ::Providers::Kubernetes::ContainerManager::MetricsCapture::HawkularClientMixin
+    include NOVAHawk::Providers::Kubernetes::ContainerManager::MetricsCapture::HawkularClientMixin
 
     def initialize(target, start_time, end_time, interval)
       @target = target

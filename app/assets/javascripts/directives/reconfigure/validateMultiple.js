@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('validateMultiple', function() {
+NOVAHawk.angular.app.directive('validateMultiple', function() {
   return {
     require: 'ngModel',
     link: function(_scope, _elm, attrs, ctrl) {

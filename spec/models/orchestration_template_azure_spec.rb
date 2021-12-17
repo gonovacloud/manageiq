@@ -2,7 +2,7 @@ describe OrchestrationTemplateAzure do
   describe ".eligible_manager_types" do
     it "lists the classes of eligible managers" do
       OrchestrationTemplateAzure.eligible_manager_types.each do |klass|
-        expect(klass <= ManageIQ::Providers::Azure::CloudManager).to be_truthy
+        expect(klass <= NOVAHawk::Providers::Azure::CloudManager).to be_truthy
       end
     end
   end

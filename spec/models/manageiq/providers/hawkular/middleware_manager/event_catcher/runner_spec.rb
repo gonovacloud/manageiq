@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher::Runner do
+describe NOVAHawk::Providers::Hawkular::MiddlewareManager::EventCatcher::Runner do
   subject do
     _guid, _server, zone = EvmSpecHelper.create_guid_miq_server_zone
     auth                 = AuthToken.new(:name     => "jdoe",
@@ -14,7 +14,7 @@ describe ManageIQ::Providers::Hawkular::MiddlewareManager::EventCatcher::Runner 
   end
 
   before do
-    allow_any_instance_of(ManageIQ::Providers::Hawkular::MiddlewareManager)
+    allow_any_instance_of(NOVAHawk::Providers::Hawkular::MiddlewareManager)
       .to receive_messages(:authentication_check => [true, ""])
     allow_any_instance_of(MiqWorker::Runner).to receive(:worker_initialization)
   end

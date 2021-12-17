@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Azure::CloudManager::Provision::OptionsHelper
+module NOVAHawk::Providers::Azure::CloudManager::Provision::OptionsHelper
   def root_password
     MiqPassword.decrypt(options[:root_password]) if options[:root_password]
   end

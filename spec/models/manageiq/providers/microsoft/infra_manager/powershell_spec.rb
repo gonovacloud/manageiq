@@ -1,11 +1,11 @@
-describe ManageIQ::Providers::Microsoft::InfraManager::Powershell do
+describe NOVAHawk::Providers::Microsoft::InfraManager::Powershell do
   before(:all) do
     class PowershellTemp; end
   end
 
   before(:each) do
     @powershell = PowershellTemp.new
-    @powershell.extend(ManageIQ::Providers::Microsoft::InfraManager::Powershell::ClassMethods)
+    @powershell.extend(NOVAHawk::Providers::Microsoft::InfraManager::Powershell::ClassMethods)
   end
 
   let(:powershell) { @powershell }

@@ -1,8 +1,8 @@
-class ManageIQ::Providers::StorageManager::CinderManager::RefreshWorker < ::MiqEmsRefreshWorker
+class NOVAHawk::Providers::StorageManager::CinderManager::RefreshWorker < ::MiqEmsRefreshWorker
   require_nested :Runner
 
   def self.ems_class
-    ManageIQ::Providers::StorageManager::CinderManager
+    NOVAHawk::Providers::StorageManager::CinderManager
   end
 
   def self.settings_name

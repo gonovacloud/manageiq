@@ -39,7 +39,7 @@ class HostAggregateController < ApplicationController
                                                              :table => ui_lookup(:table => "ems_cloud")},
                       :url  => "/host_aggregate/show/#{@host_aggregate.id}?display=ems_cloud")
       # Get the records (into a view) and the paginator
-      @view, @pages = get_view(ManageIQ::Providers::CloudManager, :parent => @host_aggregate)
+      @view, @pages = get_view(NOVAHawk::Providers::CloudManager, :parent => @host_aggregate)
       @showtype = "ems_cloud"
 
     when "instances"
@@ -47,7 +47,7 @@ class HostAggregateController < ApplicationController
       drop_breadcrumb(:name => _("%{name} (All %{title})") % {:name => @host_aggregate.name, :title => title},
                       :url  => "/host_aggregate/show/#{@host_aggregate.id}?display=#{@display}")
       # Get the records (into a view) and the paginator
-      @view, @pages = get_view(ManageIQ::Providers::CloudManager::Vm, :parent => @host_aggregate)
+      @view, @pages = get_view(NOVAHawk::Providers::CloudManager::Vm, :parent => @host_aggregate)
       @showtype = @display
 
     when "hosts"
@@ -180,7 +180,7 @@ class HostAggregateController < ApplicationController
     @host_aggregate = HostAggregate.new
     @in_a_form = true
     @ems_choices = {}
-    ManageIQ::Providers::CloudManager.select { |ems| ems.supports?(:create_host_aggregate) }.each do |ems|
+    NOVAHawk::Providers::CloudManager.select { |ems| ems.supports?(:create_host_aggregate) }.each do |ems|
       @ems_choices[ems.name] = ems.id
     end
 
@@ -202,7 +202,7 @@ class HostAggregateController < ApplicationController
     when "add"
       @host_aggregate = HostAggregate.new
       options = form_params(params)
-      ext_management_system = find_record_with_rbac(ManageIQ::Providers::CloudManager,
+      ext_management_system = find_record_with_rbac(NOVAHawk::Providers::CloudManager,
                                                   options[:ems_id])
       if ext_management_system.supports?(:create_host_aggregate)
         task_id = ext_management_system.create_host_aggregate_queue(session[:userid], options)

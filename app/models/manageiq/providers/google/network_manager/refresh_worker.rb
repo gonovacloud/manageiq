@@ -1,8 +1,8 @@
-class ManageIQ::Providers::Google::NetworkManager::RefreshWorker < ::MiqEmsRefreshWorker
+class NOVAHawk::Providers::Google::NetworkManager::RefreshWorker < ::MiqEmsRefreshWorker
   require_nested :Runner
 
   def self.ems_class
-    ManageIQ::Providers::Google::NetworkManager
+    NOVAHawk::Providers::Google::NetworkManager
   end
 
   def self.settings_name

@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('allTimeCheck', function() {
+NOVAHawk.angular.app.directive('allTimeCheck', function() {
   return {
     require: 'ngModel',
     link: function (scope, _elem, attrs, ctrl) {

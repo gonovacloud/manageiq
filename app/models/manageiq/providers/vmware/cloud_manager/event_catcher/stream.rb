@@ -2,7 +2,7 @@ require 'bunny'
 require 'thread'
 
 # Listens to RabbitMQ events
-class ManageIQ::Providers::Vmware::CloudManager::EventCatcher::Stream
+class NOVAHawk::Providers::Vmware::CloudManager::EventCatcher::Stream
   include Vmdb::Logging
 
   def self.test_amqp_connection(options = {})
@@ -87,7 +87,7 @@ class ManageIQ::Providers::Vmware::CloudManager::EventCatcher::Stream
         begin
 
           # Parse amqp message
-          event = ManageIQ::Providers::Vmware::CloudManager::EventCatcher::Event.new(payload, metadata, delivery_info)
+          event = NOVAHawk::Providers::Vmware::CloudManager::EventCatcher::Event.new(payload, metadata, delivery_info)
 
           # Ignore message if not related to event, see link below
           if event.type.start_with? "com/vmware/vcloud/event/"

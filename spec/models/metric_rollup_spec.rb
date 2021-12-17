@@ -9,7 +9,7 @@ describe MetricRollup do
           .references(:time_profile => {}).last
       end.not_to raise_error
 
-      # TODO: Also, there is a bug that exists in only the manageiq repo and not rails
+      # TODO: Also, there is a bug that exists in only the novahawk repo and not rails
       # TODO: that causes the error "ActiveRecord::ConfigurationError: nil"
       # TODO: instead of the expected "ActiveRecord::EagerLoadPolymorphicError" error.
       expect do

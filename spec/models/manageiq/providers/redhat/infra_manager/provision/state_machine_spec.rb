@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Redhat::InfraManager::Provision::StateMachine do
+describe NOVAHawk::Providers::Redhat::InfraManager::Provision::StateMachine do
   include MiqProvision::StateMachineSpecHelper
 
   let(:cluster)  { FactoryGirl.create(:ems_cluster, :ext_management_system => ems) }
@@ -99,7 +99,7 @@ describe ManageIQ::Providers::Redhat::InfraManager::Provision::StateMachine do
   end
 
   def test_customize_destination
-    expect(task.destination).to be_kind_of(ManageIQ::Providers::Redhat::InfraManager::Vm) # TODO: For previous state
+    expect(task.destination).to be_kind_of(NOVAHawk::Providers::Redhat::InfraManager::Vm) # TODO: For previous state
 
     @test_customize_destination_setup ||= begin
       expect(task).to receive(:requeue_phase).twice { requeue_phase }

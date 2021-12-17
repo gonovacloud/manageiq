@@ -1,4 +1,4 @@
-ManageIQ.angular.app.directive('resetValidationStatus', ['$rootScope', function($rootScope) {
+NOVAHawk.angular.app.directive('resetValidationStatus', ['$rootScope', function($rootScope) {
   return {
     require: 'ngModel',
     link: function (scope, elem, attrs, ctrl) {

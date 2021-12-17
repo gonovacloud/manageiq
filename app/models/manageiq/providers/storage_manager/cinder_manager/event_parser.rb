@@ -1,6 +1,6 @@
 #
 #
-module ManageIQ::Providers::StorageManager::CinderManager::EventParser
+module NOVAHawk::Providers::StorageManager::CinderManager::EventParser
   def self.event_to_hash(event, ems_id)
     log_header = "ems_id: [#{ems_id}] " unless ems_id.nil?
 

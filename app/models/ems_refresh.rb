@@ -25,7 +25,7 @@ module EmsRefresh
 
   # Development helper method for setting up the selector specs for VC
   def self.init_console(use_vim_broker = false)
-    ManageIQ::Providers::Vmware::InfraManager::Refresher.init_console(use_vim_broker)
+    NOVAHawk::Providers::Vmware::InfraManager::Refresher.init_console(use_vim_broker)
   end
 
   cache_with_timeout(:queue_timeout) { MiqEmsRefreshWorker.worker_settings[:queue_timeout] || 60.minutes }

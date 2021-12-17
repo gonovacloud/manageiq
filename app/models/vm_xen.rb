@@ -1,3 +1,3 @@
-class VmXen < ManageIQ::Providers::InfraManager::Vm
+class VmXen < NOVAHawk::Providers::InfraManager::Vm
   supports :migrate
 end

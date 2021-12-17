@@ -16,7 +16,7 @@ describe AddPersistentVolumesToContainerVolumes do
   migration_context :down do
     it "down" do
       container_volume = container_volume_stub.create!(:parent_type => "ContainerGroup")
-      persistent_volume = container_volume_stub.create!(:parent_type => "ManageIQ::Providers::Kubernetes::ContainerManager")
+      persistent_volume = container_volume_stub.create!(:parent_type => "NOVAHawk::Providers::Kubernetes::ContainerManager")
 
       migrate
 

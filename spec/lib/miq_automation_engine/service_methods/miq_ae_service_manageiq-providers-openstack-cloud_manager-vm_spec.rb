@@ -1,5 +1,5 @@
 module MiqAeServiceVmOpenstackSpec
-  describe MiqAeMethodService::MiqAeServiceManageIQ_Providers_Openstack_CloudManager_Vm do
+  describe MiqAeMethodService::MiqAeServiceNOVAHawk_Providers_Openstack_CloudManager_Vm do
     let(:vm)         { FactoryGirl.create(:vm_openstack) }
     let(:service_vm) { described_class.find(vm.id) }
 

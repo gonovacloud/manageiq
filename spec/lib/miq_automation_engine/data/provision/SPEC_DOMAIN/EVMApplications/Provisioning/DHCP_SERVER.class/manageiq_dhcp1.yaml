@@ -4,7 +4,7 @@ version: 1.0
 object:
   attributes:
     display_name: 
-    name: MANAGEIQ_dhcp1
+    name: novahawk_dhcp1
     inherits: 
     description: 
   fields:
@@ -13,4 +13,4 @@ object:
   - ip:
       value: 192.168.252.6
   - domain:
-      value: /EVMApplications/Provisioning/DOMAIN/MANAGEIQ
+      value: /EVMApplications/Provisioning/DOMAIN/novahawk

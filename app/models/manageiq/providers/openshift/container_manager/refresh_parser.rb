@@ -1,6 +1,6 @@
-module ManageIQ::Providers
+module NOVAHawk::Providers
   module Openshift
-    class ContainerManager::RefreshParser < ManageIQ::Providers::Kubernetes::ContainerManager::RefreshParser
+    class ContainerManager::RefreshParser < NOVAHawk::Providers::Kubernetes::ContainerManager::RefreshParser
       def ems_inv_to_hashes(inventory, options = Config::Options.new)
         super(inventory, options)
         get_projects(inventory)

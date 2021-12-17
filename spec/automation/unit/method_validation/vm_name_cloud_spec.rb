@@ -1,4 +1,4 @@
-require Rails.root.join('db/fixtures/ae_datastore/ManageIQ/Cloud/VM/Provisioning/Naming.class/__methods__/vmname').to_s
+require Rails.root.join('db/fixtures/ae_datastore/NOVAHawk/Cloud/VM/Provisioning/Naming.class/__methods__/vmname').to_s
 
 describe VmName do
   let(:template) { FactoryGirl.create(:template) }

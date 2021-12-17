@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::InfraManager::MetricsCollectorWorker < ManageIQ::Providers::BaseManager::MetricsCollectorWorker
+class NOVAHawk::Providers::Vmware::InfraManager::MetricsCollectorWorker < NOVAHawk::Providers::BaseManager::MetricsCollectorWorker
   require_nested :Runner
 
   self.default_queue_name = "vmware"

@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :vm_azure, :class => "ManageIQ::Providers::Azure::CloudManager::Vm", :parent => :vm_cloud do
+  factory :vm_azure, :class => "NOVAHawk::Providers::Azure::CloudManager::Vm", :parent => :vm_cloud do
     location "westus"
     vendor   "azure"
     uid_ems  "01234567890\\test_resource_group\\microsoft.resources\\vm_1"

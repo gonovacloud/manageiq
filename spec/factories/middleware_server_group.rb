@@ -4,8 +4,8 @@ FactoryGirl.define do
   end
 
   factory :hawkular_middleware_server_group,
-          :aliases => ['app/models/manageiq/providers/hawkular/middleware_manager/middleware_server_group'],
-          :class   => 'ManageIQ::Providers::Hawkular::MiddlewareManager::MiddlewareServerGroup',
+          :aliases => ['app/models/novahawk/providers/hawkular/middleware_manager/middleware_server_group'],
+          :class   => 'NOVAHawk::Providers::Hawkular::MiddlewareManager::MiddlewareServerGroup',
           :parent  => :middleware_server_group do
   end
 end

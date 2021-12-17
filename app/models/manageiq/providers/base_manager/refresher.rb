@@ -1,4 +1,4 @@
-module ManageIQ
+module NOVAHawk
   module Providers
     class BaseManager::Refresher
       include Vmdb::Logging

@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Openstack::InfraManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
+class NOVAHawk::Providers::Openstack::InfraManager::MetricsCollectorWorker < ::MiqEmsMetricsCollectorWorker
   require_nested :Runner
 
   self.default_queue_name = "openstack_infra"
@@ -8,7 +8,7 @@ class ManageIQ::Providers::Openstack::InfraManager::MetricsCollectorWorker < ::M
   end
 
   def self.ems_class
-    ManageIQ::Providers::Openstack::InfraManager
+    NOVAHawk::Providers::Openstack::InfraManager
   end
 
   def self.settings_name

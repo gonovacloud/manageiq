@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Google::RefreshHelperMethods
+module NOVAHawk::Providers::Google::RefreshHelperMethods
   extend ActiveSupport::Concern
 
   def process_collection(collection, key)

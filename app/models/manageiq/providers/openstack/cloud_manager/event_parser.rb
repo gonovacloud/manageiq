@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Openstack::CloudManager::EventParser
+module NOVAHawk::Providers::Openstack::CloudManager::EventParser
   def self.event_to_hash(event, ems_id)
     content = message_content(event, ems_id)
     event_type = content["event_type"]

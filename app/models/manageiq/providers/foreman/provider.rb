@@ -1,12 +1,12 @@
-class ManageIQ::Providers::Foreman::Provider < ::Provider
+class NOVAHawk::Providers::Foreman::Provider < ::Provider
   has_one :configuration_manager,
           :foreign_key => "provider_id",
-          :class_name  => "ManageIQ::Providers::Foreman::ConfigurationManager",
+          :class_name  => "NOVAHawk::Providers::Foreman::ConfigurationManager",
           :dependent   => :destroy,
           :autosave    => true
   has_one :provisioning_manager,
           :foreign_key => "provider_id",
-          :class_name  => "ManageIQ::Providers::Foreman::ProvisioningManager",
+          :class_name  => "NOVAHawk::Providers::Foreman::ProvisioningManager",
           :dependent   => :destroy,
           :autosave    => true
 

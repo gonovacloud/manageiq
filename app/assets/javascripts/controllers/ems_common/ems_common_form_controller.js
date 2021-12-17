@@ -1,4 +1,4 @@
-ManageIQ.angular.app.controller('emsCommonFormController', ['$http', '$scope', '$attrs', 'emsCommonFormId', 'miqService', function($http, $scope, $attrs, emsCommonFormId, miqService) {
+NOVAHawk.angular.app.controller('emsCommonFormController', ['$http', '$scope', '$attrs', 'emsCommonFormId', 'miqService', function($http, $scope, $attrs, emsCommonFormId, miqService) {
   var init = function() {
     $scope.emsCommonModel = {
       name: '',
@@ -65,7 +65,7 @@ ManageIQ.angular.app.controller('emsCommonFormController', ['$http', '$scope', '
 
     $scope.model = 'emsCommonModel';
 
-    ManageIQ.angular.scope = $scope;
+    NOVAHawk.angular.scope = $scope;
 
     if (emsCommonFormId == 'new') {
       $scope.newRecord                  = true;

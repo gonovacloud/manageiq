@@ -1,5 +1,5 @@
-module ManageIQ::Providers::Google::CloudManager::EventParser
-  extend ManageIQ::Providers::Google::EventCatcherMixin
+module NOVAHawk::Providers::Google::CloudManager::EventParser
+  extend NOVAHawk::Providers::Google::EventCatcherMixin
 
   def self.event_to_hash(event, ems_id)
     log_header = "ems_id: [#{ems_id}] " unless ems_id.nil?

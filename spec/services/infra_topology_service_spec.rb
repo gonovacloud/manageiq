@@ -35,10 +35,10 @@ describe InfraTopologyService do
       ems = FactoryGirl.create(:ems_openstack_infra)
 
       allow(infra_topology_service).to receive(:retrieve_providers)
-        .with(anything, ManageIQ::Providers::InfraManager)
+        .with(anything, NOVAHawk::Providers::InfraManager)
         .and_return([ems])
 
-      infra_topology_service.instance_variable_set(:@providers, ManageIQ::Providers::InfraManager
+      infra_topology_service.instance_variable_set(:@providers, NOVAHawk::Providers::InfraManager
         .where(:id => ems.id))
 
       expect(subject[:items]).to eq(

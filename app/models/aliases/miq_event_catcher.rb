@@ -1,1 +1,1 @@
-::MiqEventCatcher = ManageIQ::Providers::BaseManager::EventCatcher
+::MiqEventCatcher = NOVAHawk::Providers::BaseManager::EventCatcher

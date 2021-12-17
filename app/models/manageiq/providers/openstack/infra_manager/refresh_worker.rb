@@ -1,8 +1,8 @@
-class ManageIQ::Providers::Openstack::InfraManager::RefreshWorker < ::MiqEmsRefreshWorker
+class NOVAHawk::Providers::Openstack::InfraManager::RefreshWorker < ::MiqEmsRefreshWorker
   require_nested :Runner
 
   def self.ems_class
-    ManageIQ::Providers::Openstack::InfraManager
+    NOVAHawk::Providers::Openstack::InfraManager
   end
 
   def self.settings_name

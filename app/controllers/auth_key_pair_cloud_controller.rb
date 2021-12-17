@@ -17,14 +17,14 @@ class AuthKeyPairCloudController < ApplicationController
   end
 
   def self.model
-    ManageIQ::Providers::CloudManager::AuthKeyPair
+    NOVAHawk::Providers::CloudManager::AuthKeyPair
   end
 
   # handle buttons pressed on the button bar
   def button
     @edit = session[:edit] # Restore @edit for adv search box
     params[:page] = @current_page unless @current_page.nil? # Save current page for list refresh
-    return tag("ManageIQ::Providers::CloudManager::AuthKeyPair") if params[:pressed] == 'auth_key_pair_cloud_tag'
+    return tag("NOVAHawk::Providers::CloudManager::AuthKeyPair") if params[:pressed] == 'auth_key_pair_cloud_tag'
     delete_auth_key_pairs if params[:pressed] == 'auth_key_pair_cloud_delete'
     new if params[:pressed] == 'auth_key_pair_cloud_new'
 
@@ -51,7 +51,7 @@ class AuthKeyPairCloudController < ApplicationController
     @edit[:new] = {}
 
     @edit[:ems_choices] = {}
-    ManageIQ::Providers::CloudManager.all.each do |ems|
+    NOVAHawk::Providers::CloudManager.all.each do |ems|
       @edit[:ems_choices][ems.name] = ems.id if ems.class::AuthKeyPair.is_available?(:create_key_pair, ems)
     end
     @edit[:new][:ems_id] = @edit[:ems_choices].values[0] unless @edit[:ems_choices].empty?
@@ -64,7 +64,7 @@ class AuthKeyPairCloudController < ApplicationController
   # REST call for provider choices
   def ems_form_choices
     assert_privileges("auth_key_pair_cloud_new")
-    ems_choices = ManageIQ::Providers::CloudManager.select do |ems|
+    ems_choices = NOVAHawk::Providers::CloudManager.select do |ems|
       ems.class::AuthKeyPair.is_available?(:create_key_pair, ems)
     end
     ems_choices.each do |ems|
@@ -75,7 +75,7 @@ class AuthKeyPairCloudController < ApplicationController
 
   def new
     assert_privileges("auth_key_pair_cloud_new")
-    @key_pair = ManageIQ::Providers::CloudManager::AuthKeyPair.new
+    @key_pair = NOVAHawk::Providers::CloudManager::AuthKeyPair.new
     set_form_vars
     @in_a_form = true
     session[:changed] = nil
@@ -88,7 +88,7 @@ class AuthKeyPairCloudController < ApplicationController
   def create
     assert_privileges("auth_key_pair_cloud_new")
 
-    kls = ManageIQ::Providers::CloudManager::AuthKeyPair
+    kls = NOVAHawk::Providers::CloudManager::AuthKeyPair
     options = {
       :name       => params[:name],
       :public_key => params[:public_key],
@@ -101,7 +101,7 @@ class AuthKeyPairCloudController < ApplicationController
                           :flash_msg => _("Add of new %{model} was cancelled by the user") %
                           {:model => ui_lookup(:table => 'auth_key_pair_cloud')}
     when "save"
-      ext_management_system = find_record_with_rbac(ManageIQ::Providers::CloudManager, options[:ems_id])
+      ext_management_system = find_record_with_rbac(NOVAHawk::Providers::CloudManager, options[:ems_id])
       kls = kls.class_by_ems(ext_management_system)
       if kls.is_available?(:create_key_pair, ext_management_system, options)
         begin
@@ -130,7 +130,7 @@ class AuthKeyPairCloudController < ApplicationController
       end
     when "validate"
       @in_a_form = true
-      ext_management_system = find_record_with_rbac(ManageIQ::Providers::CloudManager, options[:ems_id])
+      ext_management_system = find_record_with_rbac(NOVAHawk::Providers::CloudManager, options[:ems_id])
       kls = kls.class_by_ems(ext_management_system)
       if kls.is_available?(:create_key_pair, ext_management_system, options)
         add_flash(_("Validation successful"))
@@ -166,7 +166,7 @@ class AuthKeyPairCloudController < ApplicationController
       set_summary_pdf_data if %w(download_pdf summary_only).include?(@display)
     when "instances"
       title = ui_lookup(:tables => 'vm_cloud')
-      kls   = ManageIQ::Providers::CloudManager::Vm
+      kls   = NOVAHawk::Providers::CloudManager::Vm
       drop_breadcrumb(
         :name => _("%{name} (All %{title})") % {:name => @auth_key_pair_cloud.name, :title => title},
         :url  => "/auth_key_pair_cloud/show/#{@auth_key_pair_cloud.id}?display=instances"
@@ -191,9 +191,9 @@ class AuthKeyPairCloudController < ApplicationController
     key_pairs = []
 
     if @lastaction == "show_list" || (@lastaction == "show" && @layout != "auth_key_pair_cloud")
-      key_pairs = find_checked_records_with_rbac(ManageIQ::Providers::CloudManager::AuthKeyPair)
+      key_pairs = find_checked_records_with_rbac(NOVAHawk::Providers::CloudManager::AuthKeyPair)
     else
-      key_pairs = [find_record_with_rbac(ManageIQ::Providers::CloudManager::AuthKeyPair, params[:id])]
+      key_pairs = [find_record_with_rbac(NOVAHawk::Providers::CloudManager::AuthKeyPair, params[:id])]
     end
 
     if key_pairs.empty?
@@ -229,12 +229,12 @@ class AuthKeyPairCloudController < ApplicationController
   def process_deletions(key_pairs)
     return if key_pairs.empty?
 
-    ManageIQ::Providers::CloudManager::AuthKeyPair.where(:id => key_pairs).order('lower(name)').each do |kp|
+    NOVAHawk::Providers::CloudManager::AuthKeyPair.where(:id => key_pairs).order('lower(name)').each do |kp|
       audit = {
         :event        => "auth_key_pair_cloud_record_delete_initiateed",
         :message      => "[#{kp.name}] Record delete initiated",
         :target_id    => kp.id,
-        :target_class => "ManageIQ::Providers::CloudManager::AuthKeyPair",
+        :target_class => "NOVAHawk::Providers::CloudManager::AuthKeyPair",
         :userid       => session[:userid]
       }
       AuditEvent.success(audit)

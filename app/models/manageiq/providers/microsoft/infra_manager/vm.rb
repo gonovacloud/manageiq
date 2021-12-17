@@ -1,5 +1,5 @@
-class ManageIQ::Providers::Microsoft::InfraManager::Vm < ManageIQ::Providers::InfraManager::Vm
-  include_concern 'ManageIQ::Providers::Microsoft::InfraManager::VmOrTemplateShared'
+class NOVAHawk::Providers::Microsoft::InfraManager::Vm < NOVAHawk::Providers::InfraManager::Vm
+  include_concern 'NOVAHawk::Providers::Microsoft::InfraManager::VmOrTemplateShared'
 
   supports_not :migrate, :reason => _("Migrate operation is not supported.")
 

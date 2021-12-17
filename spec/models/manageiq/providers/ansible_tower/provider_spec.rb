@@ -1,6 +1,6 @@
 require "ansible_tower_client"
 
-describe ManageIQ::Providers::AnsibleTower::Provider do
+describe NOVAHawk::Providers::AnsibleTower::Provider do
   subject { FactoryGirl.build(:provider_ansible_tower) }
 
   describe "#connect" do

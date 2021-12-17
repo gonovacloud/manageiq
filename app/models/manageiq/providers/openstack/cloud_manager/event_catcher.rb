@@ -1,8 +1,8 @@
-class ManageIQ::Providers::Openstack::CloudManager::EventCatcher < ::MiqEventCatcher
+class NOVAHawk::Providers::Openstack::CloudManager::EventCatcher < ::MiqEventCatcher
   require_nested :Runner
 
   def self.ems_class
-    ManageIQ::Providers::Openstack::CloudManager
+    NOVAHawk::Providers::Openstack::CloudManager
   end
 
   def self.all_valid_ems_in_zone

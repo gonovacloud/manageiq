@@ -2,7 +2,7 @@
 # Description: Given a Ansible Job Id, check it's status
 #
 class WaitForCompletion
-  JOB_CLASS = 'ManageIQ_Providers_AnsibleTower_ConfigurationManager_Job'.freeze
+  JOB_CLASS = 'NOVAHawk_Providers_AnsibleTower_ConfigurationManager_Job'.freeze
   def initialize(handle)
     @handle = handle
   end

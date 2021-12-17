@@ -2,7 +2,7 @@ class FixForemanProviderType < ActiveRecord::Migration
   include MigrationHelper
 
   NAME_MAP = Hash[*%w(
-    ProviderForeman                    ManageIQ::Providers::Foreman::Provider
+    ProviderForeman                    NOVAHawk::Providers::Foreman::Provider
   )]
 
   def change

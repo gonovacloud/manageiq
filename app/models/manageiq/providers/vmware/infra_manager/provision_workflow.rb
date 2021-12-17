@@ -1,4 +1,4 @@
-class ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow < ManageIQ::Providers::InfraManager::ProvisionWorkflow
+class NOVAHawk::Providers::Vmware::InfraManager::ProvisionWorkflow < NOVAHawk::Providers::InfraManager::ProvisionWorkflow
   include_concern "DialogFieldValidation"
 
   def self.default_dialog_file
@@ -111,7 +111,7 @@ class ManageIQ::Providers::Vmware::InfraManager::ProvisionWorkflow < ManageIQ::P
   end
 
   def self.provider_model
-    ManageIQ::Providers::Vmware::InfraManager
+    NOVAHawk::Providers::Vmware::InfraManager
   end
 
   def update_field_visibility

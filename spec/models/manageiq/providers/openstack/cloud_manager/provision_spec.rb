@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::Openstack::CloudManager::Provision do
+describe NOVAHawk::Providers::Openstack::CloudManager::Provision do
   let(:options)      { {:src_vm_id => [template.id, template.name]} }
   let(:provider)     { FactoryGirl.create(:ems_openstack_with_authentication) }
   let(:template)     { FactoryGirl.create(:template_openstack, :ext_management_system => provider) }
@@ -91,7 +91,7 @@ describe ManageIQ::Providers::Openstack::CloudManager::Provision do
   end
 
   it "#workflow" do
-    workflow_class = ManageIQ::Providers::Openstack::CloudManager::ProvisionWorkflow
+    workflow_class = NOVAHawk::Providers::Openstack::CloudManager::ProvisionWorkflow
     allow_any_instance_of(workflow_class).to receive(:get_dialogs).and_return(:dialogs => {})
 
     expect(vm_prov.workflow.class).to eq workflow_class

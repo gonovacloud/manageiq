@@ -203,7 +203,7 @@ class MiqAeDomain < MiqAeNamespace
 
   def self.reset_priority_of_system_domains
     domains = MiqAeDomain.where('source = ? AND name <> ?',
-                                SYSTEM_SOURCE,  MiqAeDatastore::MANAGEIQ_DOMAIN).order('name DESC')
+                                SYSTEM_SOURCE,  MiqAeDatastore::novahawk_DOMAIN).order('name DESC')
     domains.each_with_index { |dom, index| dom.update_attributes(:priority => index + 1) }
   end
 
@@ -211,7 +211,7 @@ class MiqAeDomain < MiqAeNamespace
 
   def self.reset_priority_of_non_system_domains
     base = MiqAeDomain.where('source = ? AND name <> ?',
-                             SYSTEM_SOURCE,  MiqAeDatastore::MANAGEIQ_DOMAIN).count
+                             SYSTEM_SOURCE,  MiqAeDatastore::novahawk_DOMAIN).count
     domains = MiqAeDomain.where('source <> ?', SYSTEM_SOURCE)
     domains.each { |dom| dom.update_attributes(:priority => base + dom.priority) }
   end

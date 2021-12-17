@@ -1,4 +1,4 @@
-class ManageIQ::Providers::BaseManager::MetricsCapture
+class NOVAHawk::Providers::BaseManager::MetricsCapture
   include Vmdb::Logging
 
   attr_reader :target

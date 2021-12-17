@@ -1,4 +1,4 @@
-describe ManageIQ::Providers::CloudManager::VmOrTemplate do
+describe NOVAHawk::Providers::CloudManager::VmOrTemplate do
   describe "#all" do
     it "scopes" do
       vm = FactoryGirl.create(:vm_openstack)

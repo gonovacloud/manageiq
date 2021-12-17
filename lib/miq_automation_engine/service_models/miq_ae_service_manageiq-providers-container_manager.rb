@@ -1,4 +1,4 @@
 module MiqAeMethodService
-  class MiqAeServiceManageIQ_Providers_ContainerManager < MiqAeServiceManageIQ_Providers_BaseManager
+  class MiqAeServiceNOVAHawk_Providers_ContainerManager < MiqAeServiceNOVAHawk_Providers_BaseManager
   end
 end

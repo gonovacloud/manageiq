@@ -2,7 +2,7 @@ describe('update-drop-down-for-filter initialization', function() {
   var $scope, $timeout;
   var elem, form;
 
-  beforeEach(module('ManageIQ'));
+  beforeEach(module('NOVAHawk'));
   beforeEach(inject(function($compile, $rootScope, _$timeout_) {
     $scope = $rootScope;
     $timeout = _$timeout_;

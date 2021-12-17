@@ -57,7 +57,7 @@ namespace :evm do
       end
     end
 
-    desc 'Reset the default automate domain(s) (ManageIQ and others)'
+    desc 'Reset the default automate domain(s) (NOVAHawk and others)'
     task :reset => :environment do
       puts "Resetting the default domains in the automation model"
       MiqAeDatastore.reset_to_defaults

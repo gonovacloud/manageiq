@@ -1,4 +1,4 @@
-module ManageIQ::Providers::Redhat::InfraManager::Vm::Reconfigure
+module NOVAHawk::Providers::Redhat::InfraManager::Vm::Reconfigure
   # Show Reconfigure VM task
   def reconfigurable?
     true
